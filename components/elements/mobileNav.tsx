@@ -9,7 +9,7 @@ const MobileNav: React.FC = () => {
 
   return (
     <nav className="fixed z-40 border-t bottom-0 w-full bg-background shadow-md sm:hidden">
-      <ul className="flex justify-around p-4">
+      <ul className="flex justify-around p-2">
         {NAVLIST.map((item) => (
           <li
             key={item.name}
