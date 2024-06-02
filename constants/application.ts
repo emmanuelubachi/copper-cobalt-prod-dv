@@ -1,10 +1,10 @@
-import { Home, LineChart, Package, Package2, Users2 } from "lucide-react";
+import { LineChart, Map, Pickaxe, Ship } from "lucide-react";
 
 export const NAVLIST: NavItem[] = [
   {
     name: "Map",
     path: "/",
-    icon: Home,
+    icon: Map,
   },
   {
     name: "Overview",
@@ -14,16 +14,11 @@ export const NAVLIST: NavItem[] = [
   {
     name: "Project",
     path: "/dashboard-05",
-    icon: Package,
+    icon: Pickaxe,
   },
   {
     name: "Exports",
     path: "/dashboard-06",
-    icon: Package2,
+    icon: Ship,
   },
-  // {
-  //   name: "Company",
-  //   path: "/companies",
-  //   icon: Users2,
-  // },
 ];
