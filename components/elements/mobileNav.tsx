@@ -15,8 +15,8 @@ const MobileNav: React.FC = () => {
             key={item.name}
             className={`flex flex-col min-w-[72px] items-center justify-center gap-0.5 cursor-pointer p-2 rounded-md ${
               pathname === item.path
-                ? "text-neutral-900 dark:text-neutral-100 bg-neutral-200/70 dark:bg-muted/90"
-                : "text-neutral-400 dark:text-neutral-700"
+                ? "text-foreground bg-muted"
+                : "text-muted-foreground"
             }`}
             onClick={() => router.push(item.path)}
           >

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   Package2,
@@ -19,7 +20,6 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import useNavStore from "@/store/navstore";
 import useFilterStore from "@/store/filterstore";
 
 import {
@@ -35,8 +35,8 @@ import { NAVLIST } from "@/constants/application";
 import ModeToggle from "../mode-toggle";
 
 export default function Header() {
+  const pathname = usePathname();
   const { toggleFilter } = useFilterStore();
-  const openNav = useNavStore((state) => state.openNav);
 
   return (
     <header className=" w-full z-30 absolute items-center gap-4 px-4 sm:px-6 sm:gap-4 py-4">
@@ -48,14 +48,13 @@ export default function Header() {
                 size="icon"
                 variant="outline"
                 className="hidden sm:flex __muted"
-                onClick={openNav}
               >
                 <PanelLeft className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="sm:max-w-xs">
-              <nav className="grid gap-6 text-lg font-medium">
+              <nav className="grid gap-4 text-lg font-medium">
                 <Link
                   href="#"
                   className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
@@ -66,7 +65,15 @@ export default function Header() {
 
                 {NAVLIST.map((item) => (
                   <Link key={item.name} href={item.path}>
-                    <SheetClose className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                    <SheetClose
+                      className={`flex items-center w-full rounded-lg p-2 gap-4 px-2.5 hover:text-foreground
+                    ${
+                      pathname === item.path
+                        ? "text-foreground bg-muted"
+                        : "text-muted-foreground"
+                    }
+                    `}
+                    >
                       <item.icon className="h-5 w-5" />
                       {item.name}
                     </SheetClose>
