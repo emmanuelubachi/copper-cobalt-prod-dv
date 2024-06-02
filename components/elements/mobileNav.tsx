@@ -13,16 +13,18 @@ const MobileNav: React.FC = () => {
         {NAVLIST.map((item) => (
           <li
             key={item.name}
-            className={`flex flex-col min-w-16 items-center justify-center gap-0.5 cursor-pointer p-2 rounded-md ${
+            className={`flex flex-col min-w-[72px] items-center justify-center gap-0.5 cursor-pointer p-2 rounded-md ${
               pathname === item.path
                 ? "text-neutral-900 dark:text-neutral-100 bg-neutral-200/70 dark:bg-muted/90"
                 : "text-neutral-400 dark:text-neutral-700"
             }`}
             onClick={() => router.push(item.path)}
           >
-            <span className="text-2xl">{<item.icon />}</span>
+            <span className="text-2xl">
+              {<item.icon className="h-4 w-4" />}
+            </span>
             {pathname === item.path && (
-              <span className="text-xs">{item.name}</span>
+              <span className="text-[0.7rem]">{item.name}</span>
             )}
           </li>
         ))}
