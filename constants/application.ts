@@ -2,12 +2,12 @@ import { Home, LineChart, Package, Package2, Users2 } from "lucide-react";
 
 export const NAVLIST: NavItem[] = [
   {
-    name: "Projects Map",
+    name: "Map",
     path: "/",
     icon: Home,
   },
   {
-    name: "Production",
+    name: "Overview",
     path: "/dashboard-01",
     icon: LineChart,
   },
@@ -21,9 +21,9 @@ export const NAVLIST: NavItem[] = [
     path: "/dashboard-06",
     icon: Package2,
   },
-  {
-    name: "Companies",
-    path: "#",
-    icon: Users2,
-  },
+  // {
+  //   name: "Company",
+  //   path: "/companies",
+  //   icon: Users2,
+  // },
 ];
