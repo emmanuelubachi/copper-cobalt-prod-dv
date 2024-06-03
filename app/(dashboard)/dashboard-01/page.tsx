@@ -35,7 +35,7 @@ import {
 
 export default function Dashboard() {
   return (
-    <main className="grid items-start gap-4 p-4 sm:px-6 sm:gap-4 sm:py-4 sm:mt-14 sm:mb-20 mt-10 mb-24">
+    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:gap-4 sm:px-6 sm:py-4">
       <div>
         <Breadcrumb className="hidden md:flex">
           <BreadcrumbList>
@@ -57,7 +57,7 @@ export default function Dashboard() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="flex flex-1 flex-col gap-4  md:gap-8">
+      <div className="flex flex-1 flex-col gap-4 md:gap-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <Card x-chunk="dashboard-01-chunk-0">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

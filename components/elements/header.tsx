@@ -39,15 +39,15 @@ export default function Header() {
   const { toggleFilter } = useFilterStore();
 
   return (
-    <header className=" w-full z-30 absolute items-center gap-4 px-4 sm:px-6 sm:gap-4 py-4">
-      <div className="flex flex-row w-full gap-2 justify-between">
+    <header className="absolute z-30 w-full items-center gap-4 px-4 py-4 sm:gap-4 sm:px-6">
+      <div className="flex w-full flex-row justify-between gap-2">
         <div className="flex items-center gap-2">
           <Sheet>
             <SheetTrigger asChild>
               <Button
                 size="icon"
                 variant="outline"
-                className="hidden sm:flex __muted"
+                className="__muted hidden sm:flex"
               >
                 <PanelLeft className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
@@ -66,13 +66,11 @@ export default function Header() {
                 {NAVLIST.map((item) => (
                   <Link key={item.name} href={item.path}>
                     <SheetClose
-                      className={`flex items-center w-full rounded-lg p-2 gap-4 px-2.5 hover:text-foreground
-                    ${
-                      pathname === item.path
-                        ? "text-foreground bg-muted"
-                        : "text-muted-foreground"
-                    }
-                    `}
+                      className={`flex w-full items-center gap-4 rounded-lg p-2 px-2.5 hover:text-foreground ${
+                        pathname === item.path
+                          ? "bg-muted text-foreground"
+                          : "text-muted-foreground"
+                      } `}
                     >
                       <item.icon className="h-5 w-5" />
                       {item.name}
@@ -99,7 +97,7 @@ export default function Header() {
             <Input
               type="search"
               placeholder="Search..."
-              className="w-full rounded-lg bg-background pl-8 md:w-[320px] __muted"
+              className="__muted w-full rounded-lg bg-background pl-8 md:w-[320px]"
             />
           </div>
 

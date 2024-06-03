@@ -8,17 +8,19 @@ import MobileNav from "@/components/elements/mobileNav";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="flex bg-muted/40">
+      <div className="flex bg-muted/40 sm:flex-row">
         <aside>
           <Nav />
           <Drawer />
         </aside>
-        <MobileNav />
-        <div className="flex min-h-screen w-screen flex-col ">
+
+        <div className="flex min-h-screen w-screen flex-col">
           <div className="relative">
             <Header />
           </div>
-          {children}
+
+          <div>{children}</div>
+          <MobileNav />
         </div>
       </div>
     </>

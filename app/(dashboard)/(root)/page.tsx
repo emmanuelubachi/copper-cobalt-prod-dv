@@ -22,7 +22,7 @@ const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
 export default function Home() {
   return (
-    <main className="fixed w-screen h-screen">
+    <main className="fixed h-full w-full pb-16 sm:pb-0 sm:pr-16">
       <Map1 token={TOKEN} />
       {/* <Sidepanel /> */}
     </main>

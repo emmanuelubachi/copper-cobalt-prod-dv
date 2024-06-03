@@ -41,7 +41,7 @@ import {
 
 export default function Dashboard06() {
   return (
-    <main className="grid items-start gap-4 p-4 sm:px-6 sm:py-4 sm:mt-14 sm:mb-20 mt-10 mb-24 ">
+    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <div>
         <Breadcrumb className="hidden md:flex">
           <BreadcrumbList>
@@ -120,7 +120,7 @@ export default function Dashboard06() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="hidden  sm:table-cell">
+                      <TableHead className="hidden sm:table-cell">
                         <span className="sr-only">Image</span>
                       </TableHead>
                       <TableHead>Name</TableHead>

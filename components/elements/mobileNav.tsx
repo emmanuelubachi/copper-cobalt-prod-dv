@@ -8,14 +8,14 @@ const MobileNav: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed z-40 border-t bottom-0 w-full bg-background shadow-md sm:hidden">
+    <nav className="fixed bottom-0 z-40 w-full border-t bg-background shadow-md sm:hidden">
       <ul className="flex justify-around p-2">
         {NAVLIST.map((item) => (
           <li
             key={item.name}
-            className={`flex flex-col min-w-[72px] items-center justify-center gap-0.5 cursor-pointer p-2 rounded-md ${
+            className={`flex min-w-[72px] cursor-pointer flex-col items-center justify-center gap-0.5 rounded-md p-2 ${
               pathname === item.path
-                ? "text-foreground bg-muted"
+                ? "bg-muted text-foreground"
                 : "text-muted-foreground"
             }`}
             onClick={() => router.push(item.path)}
