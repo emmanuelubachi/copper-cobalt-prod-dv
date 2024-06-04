@@ -72,6 +72,27 @@
   }
   body {
     @apply bg-background text-foreground;
+
+    /* TYPOGRAPHY */
+    /* 100% of root, desktop 4rem, mobile 2.5rem, screen 1440 - 320  */
+    --h1: clamp(2.5rem, 2.143vw + 2.071rem, 4rem);
+
+    /* 100% of root, 3rem to 2.25rem */
+    --h2: clamp(2.25rem, 1.071vw + 2.036rem, 3rem);
+
+    /* 100% of root, 2.5rem to 2rem */
+    --h3: clamp(2rem, 0.714vw + 1.857rem, 2.5rem);
+
+    /* 100% of root, 2rem to 1.5rem */
+    --h4: clamp(1.5rem, 0.714vw + 1.357rem, 2rem);
+
+    /* 100% of root, 1.5rem to 1.25rem */
+    --h5: clamp(1.25rem, 0.357vw + 1.179rem, 1.5rem);
+
+    /* 100% of root, 1.25rem to 1.125rem */
+    --h6: clamp(1.125rem, 0.179vw + 1.089rem, 1.25rem);
+
+    --p: 1rem;
   }
 }
 
