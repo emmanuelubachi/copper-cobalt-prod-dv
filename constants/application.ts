@@ -8,12 +8,12 @@ export const NAVLIST: NavItem[] = [
   },
   {
     name: "Overview",
-    path: "/dashboard-01",
+    path: "/production-overview",
     icon: LineChart,
   },
   {
     name: "Project",
-    path: "/dashboard-05",
+    path: "/projects",
     icon: Pickaxe,
   },
   {
