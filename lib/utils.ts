@@ -9,6 +9,17 @@ export function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
+// Data Processing
+// -------------------------------------------------------
 export function sliceData<T>(data: T[], count: number): T[] {
   return data.slice(0, count);
 }
+
+export function currencyFormatter(amount: number): string {
+  return `$${amount.toLocaleString("en-US")}`;
+}
+
+export function quantityFormatter(value: number): string {
+  return `${value.toLocaleString()} T`;
+}
+// -------------------------------------------------------
