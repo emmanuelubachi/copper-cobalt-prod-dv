@@ -92,19 +92,10 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search..."
-              className="__muted w-full rounded-lg bg-background pl-8 md:w-[320px]"
-            />
-          </div>
-
-          {/* <DropdownMenu>
-            <DropdownMenuTrigger>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
               <Button size="icon" variant="outline" className="__muted">
-                <Languages className="h-5 w-5" />
+                <Languages className="h-5 w-5" strokeWidth={1.5} />
                 <span className="sr-only">Translation</span>
               </Button>
             </DropdownMenuTrigger>
@@ -114,7 +105,7 @@ export default function Header() {
               <DropdownMenuItem>English</DropdownMenuItem>
               <DropdownMenuItem>French</DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu> */}
+          </DropdownMenu>
 
           <ModeToggle />
         </div>

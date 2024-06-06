@@ -2,28 +2,28 @@ import { DollarSign, Weight } from "lucide-react";
 
 export const kpiCard = [
   {
-    title: "Quantities Copper (T)",
-    description: "+20.1% from last year. Quantities Copper (T)",
+    title: "Quantities Copper",
+    description: "+20.1% from last year. Total Quantities Copper (T)",
     category: "copper",
     value: "2.9M",
     icon: Weight,
   },
   {
-    title: "Total Copper Transaction (USD)",
+    title: "Copper Transaction",
     description: "+180.1% from last year, Total Copper Transaction (USD)",
     category: "copper",
     value: "$20.0bn",
     icon: DollarSign,
   },
   {
-    title: "Quantities Copper (T)",
-    description: "+19% from last year, Quantities Copper (T)",
+    title: "Quantities Copper",
+    description: "+19% from last year, Total Quantities Copper (T)",
     category: "cobalt",
     value: "507.9K",
     icon: Weight,
   },
   {
-    title: "Total Copper Transaction (USD)",
+    title: "Copper Transaction",
     description: "+201 since last year, Total Copper Transaction (USD)",
     category: "cobalt",
     value: "$8.6bn",
@@ -184,7 +184,7 @@ export const companyData = [
     email: "a.stone@gmail.com",
     textColor: "text-fuchsia-800 dark:text-fuchsia-500",
     bgColor: "bg-fuchsia-100 dark:bg-fuchsia-500/20",
-    href: "#",
+    project_id: "shituru",
   },
   {
     name: "Anvil Mining",
@@ -192,7 +192,7 @@ export const companyData = [
     email: "e.bern@gmail.com",
     textColor: "text-blue-800 dark:text-blue-500",
     bgColor: "bg-blue-100 dark:bg-blue-500/20",
-    href: "#",
+    project_id: "anvil",
   },
   {
     name: "MMG Kinsevere",
@@ -200,7 +200,7 @@ export const companyData = [
     email: "a.flow@acme.com",
     textColor: "text-pink-800 dark:text-pink-500",
     bgColor: "bg-pink-100 dark:bg-pink-500/20",
-    href: "#",
+    project_id: "mmg",
   },
   {
     name: "Mutanda Mining",
@@ -208,7 +208,7 @@ export const companyData = [
     email: "t.palstein@acme.com",
     textColor: "text-emerald-800 dark:text-emerald-500",
     bgColor: "bg-emerald-100 dark:bg-emerald-500/20",
-    href: "#",
+    project_id: "mutanda",
   },
   {
     name: "Shituru Mining",
@@ -216,7 +216,7 @@ export const companyData = [
     email: "s.johnson@gmail.com",
     textColor: "text-orange-800 dark:text-orange-500",
     bgColor: "bg-orange-100 dark:bg-orange-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Musonoi Project",
@@ -224,7 +224,7 @@ export const companyData = [
     email: "d.smith@gmail.com",
     textColor: "text-indigo-800 dark:text-indigo-500",
     bgColor: "bg-indigo-100 dark:bg-indigo-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Megan Brown",
@@ -232,7 +232,7 @@ export const companyData = [
     email: "m.brown@gmail.com",
     textColor: "text-yellow-800 dark:text-yellow-500",
     bgColor: "bg-yellow-100 dark:bg-yellow-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Shituru Mining",
@@ -240,7 +240,7 @@ export const companyData = [
     email: "a.stone@gmail.com",
     textColor: "text-fuchsia-800 dark:text-fuchsia-500",
     bgColor: "bg-fuchsia-100 dark:bg-fuchsia-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Anvil Mining",
@@ -248,7 +248,7 @@ export const companyData = [
     email: "e.bern@gmail.com",
     textColor: "text-blue-800 dark:text-blue-500",
     bgColor: "bg-blue-100 dark:bg-blue-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "MMG Kinsevere",
@@ -256,7 +256,7 @@ export const companyData = [
     email: "a.flow@acme.com",
     textColor: "text-pink-800 dark:text-pink-500",
     bgColor: "bg-pink-100 dark:bg-pink-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Mutanda Mining",
@@ -264,7 +264,7 @@ export const companyData = [
     email: "t.palstein@acme.com",
     textColor: "text-emerald-800 dark:text-emerald-500",
     bgColor: "bg-emerald-100 dark:bg-emerald-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Shituru Mining",
@@ -272,7 +272,7 @@ export const companyData = [
     email: "s.johnson@gmail.com",
     textColor: "text-orange-800 dark:text-orange-500",
     bgColor: "bg-orange-100 dark:bg-orange-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Musonoi Project",
@@ -280,7 +280,7 @@ export const companyData = [
     email: "d.smith@gmail.com",
     textColor: "text-indigo-800 dark:text-indigo-500",
     bgColor: "bg-indigo-100 dark:bg-indigo-500/20",
-    href: "#",
+    project_id: "#",
   },
   {
     name: "Megan Brown",
@@ -288,6 +288,6 @@ export const companyData = [
     email: "m.brown@gmail.com",
     textColor: "text-yellow-800 dark:text-yellow-500",
     bgColor: "bg-yellow-100 dark:bg-yellow-500/20",
-    href: "#",
+    project_id: "#",
   },
 ];

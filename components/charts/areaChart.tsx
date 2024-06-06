@@ -1,19 +1,38 @@
 "use client";
 import { AreaChart } from "@tremor/react";
+import { currencyFormatter, quantityFormatter } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
-export function AreaChartHero(prop: any) {
-  // const data = chartdata;
+// Define the props interface
+interface AreaChartHeroProps {
+  data: any[];
+  valueFormatter?: "currencyFormatter" | "quantityFormatter";
+}
+
+export function AreaChartRender({ data, valueFormatter }: AreaChartHeroProps) {
+  const [format, setFormat] = useState<((value: any) => string) | undefined>(
+    undefined,
+  );
+
+  // Use effect to set the formatter
+  useEffect(() => {
+    if (valueFormatter === "currencyFormatter") {
+      setFormat(() => currencyFormatter);
+    } else if (valueFormatter === "quantityFormatter") {
+      setFormat(() => quantityFormatter);
+    } else {
+      setFormat(undefined);
+    }
+  }, [valueFormatter]);
 
   return (
     <AreaChart
       className="h-80"
-      data={prop.data}
+      data={data}
       index="date"
       categories={["Copper", "Cobalt"]}
       colors={["amber", "blue"]}
-      valueFormatter={(number: number) =>
-        `$${Intl.NumberFormat("us").format(number).toString()}`
-      }
+      valueFormatter={format}
       yAxisWidth={60}
       onValueChange={(v) => console.log(v)}
       showGradient={false}
