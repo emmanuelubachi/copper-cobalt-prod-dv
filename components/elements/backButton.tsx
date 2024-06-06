@@ -11,7 +11,7 @@ export default function BackButton() {
     <div>
       <Button
         className="flex gap-2 text-muted-foreground"
-        variant={"link"}
+        variant={"ghost"}
         onClick={() => router.back()}
       >
         <RiArrowLeftLine /> Back
