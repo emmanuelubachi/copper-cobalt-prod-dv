@@ -54,10 +54,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import FilterButton from "@/components/elements/filterButton";
 
 export default function Dashboard05() {
   return (
-    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
+    <section className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <div>
         <Breadcrumb className="hidden md:flex">
           <BreadcrumbList>
@@ -493,7 +494,7 @@ export default function Dashboard05() {
           </Card>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
 
