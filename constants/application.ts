@@ -18,7 +18,7 @@ export const NAVLIST: NavItem[] = [
   },
   {
     name: "Exports",
-    path: "/dashboard-06",
+    path: "/export-flow",
     icon: Ship,
   },
 ];
