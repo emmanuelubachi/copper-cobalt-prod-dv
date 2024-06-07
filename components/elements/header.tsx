@@ -3,14 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import {
-  Package2,
-  PanelLeft,
-  Search,
-  Filter,
-  Languages,
-  icons,
-} from "lucide-react";
+import { Package2, PanelLeft, Languages } from "lucide-react";
 import {
   Sheet,
   SheetClose,
@@ -19,7 +12,6 @@ import {
 } from "@/components/ui/sheet";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import useFilterStore from "@/store/filterstore";
 
 import {
@@ -36,7 +28,6 @@ import ModeToggle from "../mode-toggle";
 
 export default function Header() {
   const pathname = usePathname();
-  const { toggleFilter } = useFilterStore();
 
   return (
     <header className="absolute z-30 w-full items-center gap-4 px-4 py-4 sm:gap-4 sm:px-6">
@@ -80,15 +71,6 @@ export default function Header() {
               </nav>
             </SheetContent>
           </Sheet>
-
-          <Button
-            variant="outline"
-            className="__muted gap-2"
-            onClick={toggleFilter}
-          >
-            <Filter className="h-5 w-5" />
-            <span className="">Filter</span>
-          </Button>
         </div>
 
         <div className="flex items-center gap-2">
@@ -99,7 +81,7 @@ export default function Header() {
                 <span className="sr-only">Translation</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="center">
               <DropdownMenuLabel>Translations</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>English</DropdownMenuItem>
