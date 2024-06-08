@@ -5,7 +5,13 @@ import Header from "@/components/elements/header";
 import Drawer from "@/components/elements/drawer";
 import MobileNav from "@/components/elements/mobileNav";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  modal,
+}: {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}) {
   return (
     <>
       <div className="flex bg-muted/40 sm:flex-row">
@@ -19,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Header />
           </div>
 
+          {modal}
           {children}
           <MobileNav />
         </div>

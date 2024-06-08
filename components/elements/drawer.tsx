@@ -1,8 +1,9 @@
 "use client";
 import useFilterStore from "@/store/filterstore";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
-import { FilterX, Search } from "lucide-react";
+import { FilterX, Search, ArrowUpRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 const Drawer = () => {
@@ -42,6 +43,16 @@ const Drawer = () => {
                       className="__muted w-full rounded-lg bg-background pl-8 md:w-[320px]"
                     />
                   </div>
+                  <Button asChild>
+                    <Link
+                      href="/companies"
+                      className="mb-auto gap-2 p-2"
+                      onClick={closeFilter}
+                    >
+                      <span className="">All Projects</span>
+                      <ArrowUpRight className="h-5 w-5" />
+                    </Link>
+                  </Button>
                 </div>
               )}
             </div>

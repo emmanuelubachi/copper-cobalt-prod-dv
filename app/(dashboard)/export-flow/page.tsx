@@ -39,11 +39,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export default function Dashboard06() {
+export default function Page() {
   return (
     <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <div>
-        <Breadcrumb className="hidden md:flex">
+        <h1>Export Flows</h1>
+        {/* <Breadcrumb className="hidden md:flex">
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
@@ -61,7 +62,7 @@ export default function Dashboard06() {
               <BreadcrumbPage>Recent Orders</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
-        </Breadcrumb>
+        </Breadcrumb> */}
       </div>
       <div className="grid flex-1 items-start gap-4 md:gap-8">
         <Tabs defaultValue="all">
