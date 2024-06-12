@@ -4,14 +4,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { FilterX, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useMediaQuery } from "react-responsive";
 
 const Drawer = () => {
-  const { isFilterOpen, closeFilter } = useFilterStore();
+  const { isFilterOpen, closeFilter, filterDrawerContent } = useFilterStore();
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const handleOverlayClick = () => {
+    if (isFilterOpen) {
+      closeFilter();
+    }
+  };
 
   return (
     <AnimatePresence>
       {isFilterOpen && (
         <>
+          {isMobile && (
+            <div
+              className="fixed inset-0 z-[45] bg-black opacity-50"
+              onClick={handleOverlayClick}
+            />
+          )}
+
           <motion.div
             className="fixed left-0 top-0 z-50 h-screen w-96 overflow-y-auto bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-96"
             initial="initial"
@@ -34,14 +48,15 @@ const Drawer = () => {
                     <FilterX className="h-5 w-5" />
                     <span className="sr-only">Close</span>
                   </Button>
-                  <div className="relative mr-auto flex-1 md:grow-0">
+                  <div className="relative mr-auto w-full flex-1 grow-0">
                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                     <Input
                       type="search"
                       placeholder="Search..."
-                      className="__muted w-full rounded-lg bg-background pl-8 md:w-[320px]"
+                      className="__muted w-full rounded-lg bg-background pl-8"
                     />
                   </div>
+                  <div>{filterDrawerContent}</div>
                 </div>
               )}
             </div>

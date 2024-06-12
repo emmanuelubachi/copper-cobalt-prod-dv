@@ -18,7 +18,7 @@ const MobileNav: React.FC = () => {
                 ? "bg-muted text-foreground"
                 : "text-muted-foreground"
             }`}
-            onClick={() => router.push(item.path)}
+            onClick={() => router.push(item.link)}
           >
             <span className="text-2xl">
               {<item.icon className="h-4 w-4" />}

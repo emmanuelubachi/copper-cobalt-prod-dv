@@ -1,9 +1,10 @@
-// 'use client';
+"use client";
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
 import { Card, Divider } from "@tremor/react";
 import { companyData } from "@/data/chartData";
+import useFilterStore from "@/store/filterstore";
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
@@ -11,6 +12,8 @@ function classNames(...classes: string[]): string {
 
 export default function GridList() {
   const data = companyData;
+  const { closeFilter } = useFilterStore();
+
   return (
     <>
       <div className="flex items-center space-x-2">
@@ -22,7 +25,8 @@ export default function GridList() {
         </span>
       </div>
       <Divider className="my-4" />
-      <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
+      <div className="mt-4 grid grid-cols-1 gap-6">
         {data.map((member) => (
           <Card key={member.name} className="group">
             <div className="flex items-center space-x-4">
@@ -41,6 +45,7 @@ export default function GridList() {
                   <Link
                     href={`/projects?project_id=${member.project_id}`}
                     className="focus:outline-none"
+                    onClick={closeFilter}
                   >
                     {/* Extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />

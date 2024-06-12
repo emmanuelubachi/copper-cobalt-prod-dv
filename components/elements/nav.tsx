@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 
 import { NAVLIST } from "@/constants/application";
+import Image from "next/image";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -21,10 +22,11 @@ export default function Nav() {
       <div className={`item-center flex flex-col gap-6 px-4 sm:py-2`}>
         <div className={`flex h-14 w-full items-center justify-center`}>
           <Link
-            href="#"
-            className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+            href="/"
+            // className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
           >
-            <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
+            <Image src="/favicon-32x32.png" alt="logo" width={32} height={32} />
+            {/* <Package2 className="h-4 w-4 transition-all group-hover:scale-110" /> */}
             <span className="sr-only">Acme Inc</span>
           </Link>
         </div>
@@ -34,8 +36,8 @@ export default function Nav() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={item.path}
-                  className={`flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors hover:text-foreground md:h-8 md:w-8 md:text-sm ${
+                  href={item.link}
+                  className={`flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors hover:text-foreground md:text-sm ${
                     pathname === item.path
                       ? "bg-muted text-foreground"
                       : "text-muted-foreground"
