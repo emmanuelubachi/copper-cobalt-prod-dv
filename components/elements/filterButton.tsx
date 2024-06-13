@@ -1,37 +1,31 @@
 "use client";
-import { useCallback } from "react";
+import { useCallback, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import { Filter } from "lucide-react";
 import useFilterStore from "@/store/filterstore";
-
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import GridList from "../sections/gridList";
 
-export default function FilterButton({
+type FilterButtonProps = {
+  content: ReactNode;
+  label: string;
+  tooltip: string;
+};
+
+const FilterButton: React.FC<FilterButtonProps> = ({
   content,
-}: {
-  content: React.ReactNode;
-}) {
+  label,
+  tooltip,
+}) => {
   const { toggleFilter, setFilterContent } = useFilterStore();
-  const handleClick = () => {
+
+  const handleClick = useCallback(() => {
     setFilterContent(content);
     toggleFilter();
-  };
-
-  // const handleDrawer = useCallback(
-  //   (content: React.ReactNode) => {
-  //     return () => {
-  //       setDrawerContent(content)
-  //       toggleDrawer()
-  //     }
-  //   },
-  //   [setDrawerContent, toggleDrawer]
-  // )
+  }, [content, setFilterContent, toggleFilter]);
 
   return (
     <TooltipProvider>
@@ -39,15 +33,16 @@ export default function FilterButton({
         <TooltipTrigger asChild>
           <Button
             variant="outline"
-            className="__muted gap-2 px-2"
+            className="__muted gap-2 rounded-2xl px-4"
             onClick={handleClick}
           >
-            <Filter className="h-5 w-5" />
-            <span className="sr-only">Filter</span>
+            <span className="">{label}</span>
           </Button>
         </TooltipTrigger>
-        <TooltipContent side="right">Filter</TooltipContent>
+        <TooltipContent side="right">{tooltip}</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
-}
+};
+
+export default FilterButton;

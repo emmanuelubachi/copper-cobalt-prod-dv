@@ -10,8 +10,6 @@ export default async function Page({
 }: {
   searchParams: SearchParams;
 }) {
-  console.log("searchParams", searchParams);
-
   const result = await fetchData(searchParams);
 
   return <ProjectPage searchParams={searchParams} {...result} />;

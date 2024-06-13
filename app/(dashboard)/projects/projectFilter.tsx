@@ -1,15 +1,25 @@
 "use client";
+import { useEffect } from "react";
 import Link from "next/link";
-
-import { ArrowUpRight } from "lucide-react";
-import { Card, Divider } from "@tremor/react";
+import { useSearchParams } from "next/navigation";
 import useFilterStore from "@/store/filterstore";
-
+import { Card, Divider } from "@tremor/react";
+import { ArrowUpRight } from "lucide-react";
 import { industralProjectName } from "@/data/industral-projects";
 
 export default function ProjectFilter() {
-  const data = industralProjectName;
+  const searchParams = useSearchParams();
   const { closeFilter } = useFilterStore();
+
+  const project_id = searchParams.get("project_id");
+
+  useEffect(() => {
+    console.log("ProjectFilter component mounted");
+    console.log("searchParams:", searchParams);
+    console.log("project_id:", project_id);
+  }, [project_id, searchParams]);
+
+  const data = industralProjectName;
 
   return (
     <>
@@ -24,7 +34,10 @@ export default function ProjectFilter() {
       <Divider className="my-4" />
       <div className="mt-4 grid grid-cols-1 gap-4 p-2">
         {data.map((member) => (
-          <Card key={member["project-name"]} className="group px-6 py-4">
+          <Card
+            key={member["project-name"]}
+            className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["short-name"] && "border border-primary dark:border-primary"}`}
+          >
             <div className="flex items-center space-x-4">
               <div className="truncate">
                 <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">

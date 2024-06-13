@@ -20,9 +20,6 @@ export default function ProjectPage({
   errorType,
 }: PageProps) {
   const router = useRouter();
-  console.log("searchParams", searchParams);
-  console.log("projectData", projectInfo);
-  console.log("errorType", errorType);
 
   React.useEffect(() => {
     if (errorType === "invalidParams" && !searchParams.project_id) {
