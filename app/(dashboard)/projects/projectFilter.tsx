@@ -48,12 +48,15 @@ export default function ProjectFilter() {
                   >
                     {/* Extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
-                    {member["short-name"]}
+                    {/* {member["short-name"]} */}
+                    <p className="line-clamp-2 truncate text-wrap pr-4 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+                      {member["project-name"]}
+                    </p>
                   </Link>
                 </p>
-                <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+                {/* <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   {member["project-name"]}
-                </p>
+                </p> */}
               </div>
             </div>
             <span
