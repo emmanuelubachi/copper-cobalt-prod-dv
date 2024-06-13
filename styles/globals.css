@@ -93,6 +93,8 @@
     --h6: clamp(1.125rem, 0.179vw + 1.089rem, 1.25rem);
 
     --p: 1rem;
+
+    --pxs: 0.75rem;
   }
 }
 

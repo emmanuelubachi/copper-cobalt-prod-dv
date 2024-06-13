@@ -36,7 +36,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({
             className="__muted gap-2 rounded-2xl px-4"
             onClick={handleClick}
           >
-            <span className="">{label}</span>
+            <span className="text-pxs sm:text-sm">{label}</span>
           </Button>
         </TooltipTrigger>
         <TooltipContent side="right">{tooltip}</TooltipContent>
