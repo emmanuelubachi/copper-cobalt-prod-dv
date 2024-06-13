@@ -1,8 +1,10 @@
-interface NavItem {
+import { LucideProps } from "lucide-react";
+
+export interface NavItem {
   name: string;
   path: string;
   link: string;
-  icon: React.N<
+  icon: React.FC<
     React.PropsWithoutRef<LucideProps> & React.RefAttributes<SVGSVGElement>
   >;
 }
@@ -15,7 +17,7 @@ export type SearchParams = {
 // Define the possible error types
 export type ErrorType = "invalidParams" | "projectNotFound" | "serverError";
 
-export type ProjectData = {
+export type OldProjectData = {
   name: string;
   initials: string;
   email: string;
@@ -31,3 +33,9 @@ export type ProjectData = {
     project_id: string;
   }[];
 };
+
+export type IndustralProjectName = {
+  no: number;
+  "project-name": string;
+  "short-name": string;
+}[];

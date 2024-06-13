@@ -27,7 +27,7 @@ const Drawer = () => {
           )}
 
           <motion.div
-            className="fixed left-0 top-0 z-50 h-screen w-96 overflow-y-auto bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-96"
+            className="fixed left-0 top-0 z-50 h-screen w-96 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-96"
             initial="initial"
             animate="animate"
             exit="exit"
@@ -56,7 +56,7 @@ const Drawer = () => {
                       className="__muted w-full rounded-lg bg-background pl-8"
                     />
                   </div>
-                  <div>{filterDrawerContent}</div>
+                  <div className="overflow-y-auto">{filterDrawerContent}</div>
                 </div>
               )}
             </div>

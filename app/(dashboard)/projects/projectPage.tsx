@@ -6,22 +6,22 @@ import { useRouter } from "next/navigation";
 import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
 import ProjectSection from "@/components/sections/projectSection";
 
-import { ProjectData, SearchParams, ErrorType } from "@/types";
+import { IndustralProjectName, SearchParams, ErrorType } from "@/types";
 
 type PageProps = {
   searchParams: SearchParams;
-  projectData?: ProjectData;
+  projectInfo?: IndustralProjectName;
   errorType?: ErrorType;
 };
 
 export default function ProjectPage({
   searchParams,
-  projectData,
+  projectInfo,
   errorType,
 }: PageProps) {
   const router = useRouter();
   console.log("searchParams", searchParams);
-  console.log("projectData", projectData);
+  console.log("projectData", projectInfo);
   console.log("errorType", errorType);
 
   React.useEffect(() => {
@@ -39,13 +39,13 @@ export default function ProjectPage({
     router.push(`/companies`);
   }
 
-  if (errorType === "invalidParams" && !projectData) {
+  if (errorType === "invalidParams" && !projectInfo) {
     router.push(`/companies`);
   }
 
-  if (!projectData || projectData.data.length === 0) {
+  if (!projectInfo || projectInfo.length === 0) {
     return <ErrorProjectNotFound />;
   }
 
-  return <ProjectSection projectData={projectData} />;
+  return <ProjectSection projectInfo={projectInfo} />;
 }

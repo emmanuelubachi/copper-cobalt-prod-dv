@@ -1,5 +1,5 @@
 import { LineChart, Map, Pickaxe, Ship } from "lucide-react";
-import { NavItem } from "../types/index.d";
+import { NavItem } from "@/types";
 
 export const NAVLIST: NavItem[] = [
   {
@@ -17,7 +17,7 @@ export const NAVLIST: NavItem[] = [
   {
     name: "Project",
     path: "/projects",
-    link: "/projects?project_id=shituru",
+    link: "/projects?project_id=anvil-mining",
     icon: Pickaxe,
   },
   {

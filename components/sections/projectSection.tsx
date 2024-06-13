@@ -44,13 +44,18 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { IndustralProjectName } from "@/types";
 
-export default function ProjectSection({ projectData }: any) {
+export default function ProjectSection({
+  projectInfo,
+}: {
+  projectInfo: IndustralProjectName;
+}) {
   return (
     <section className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <div>
         <h1 className="text-h4 font-medium tracking-tight">
-          {projectData.name} Project
+          {projectInfo[0]["project-name"]} Project
         </h1>
       </div>
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">

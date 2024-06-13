@@ -5,14 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import { Card, Divider } from "@tremor/react";
 import useFilterStore from "@/store/filterstore";
 
-import { companyData } from "@/data/chartData";
 import { industralProjectName } from "@/data/industral-projects";
 
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function GridList() {
+export default function ProjectFilter() {
   const data = industralProjectName;
   const { closeFilter } = useFilterStore();
 
@@ -27,21 +22,10 @@ export default function GridList() {
         </span>
       </div>
       <Divider className="my-4" />
-      {/* <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
-      <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 p-2">
         {data.map((member) => (
-          <Card key={member["project-name"]} className="group">
+          <Card key={member["project-name"]} className="group px-6 py-4">
             <div className="flex items-center space-x-4">
-              {/* <span
-                className={classNames(
-                  // member.bgColor,
-                  // member.textColor,
-                  "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-tremor-default font-medium",
-                )}
-                aria-hidden={true}
-              >
-                {member.Code}
-              </span> */}
               <div className="truncate">
                 <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
                   <Link

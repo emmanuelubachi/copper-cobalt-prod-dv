@@ -1,7 +1,11 @@
 // lib/fetchData.ts
 import * as z from "zod";
 import { companyData } from "@/data/chartData";
-import { ErrorType, ProjectData, SearchParams } from "@/types";
+import {
+  industralProjectName,
+  industralProjects,
+} from "@/data/industral-projects";
+import { ErrorType, IndustralProjectName, SearchParams } from "@/types";
 
 type ValidatedProps = {
   projectId?: string;
@@ -27,33 +31,35 @@ async function validateSearchParam(query: any): Promise<ValidatedProps> {
   return { projectId: project_id };
 }
 
-async function getProjectData(projectId: string): Promise<ProjectData | null> {
-  const filteredData = companyData.filter(
-    (data) => data.project_id === projectId,
+async function getProjectData(
+  projectId: string,
+): Promise<IndustralProjectName | null> {
+  const filteredData = industralProjectName.filter(
+    (data) => data["short-name"] === projectId,
   );
 
   if (filteredData.length === 0) {
     return null;
   }
 
-  return filteredData[0];
+  return filteredData;
 }
 
 export async function fetchData(
   searchParams: SearchParams,
-): Promise<{ projectData?: ProjectData; errorType?: ErrorType }> {
+): Promise<{ projectInfo?: IndustralProjectName; errorType?: ErrorType }> {
   const props = await validateSearchParam(searchParams);
   if (props.errorType === "invalidParams") {
     return { errorType: "invalidParams" };
   }
 
   try {
-    const projectData = await getProjectData(props.projectId as string);
-    if (!projectData) {
+    const projectInfo = await getProjectData(props.projectId as string);
+    if (!projectInfo) {
       return { errorType: "projectNotFound" };
     }
     return {
-      projectData,
+      projectInfo,
       errorType: undefined,
     };
   } catch (err) {
