@@ -1,19 +1,18 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 
-import { Package2, PanelLeft, Languages } from "lucide-react";
+import { PanelLeft, Languages } from "lucide-react";
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 import { Button } from "@/components/ui/button";
-import useFilterStore from "@/store/filterstore";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,6 +27,7 @@ import ModeToggle from "../mode-toggle";
 
 export default function Header() {
   const pathname = usePathname();
+  const { theme } = useTheme();
 
   return (
     <header className="absolute z-30 w-full items-center gap-4 px-4 py-4 sm:gap-4 sm:px-6">
@@ -46,16 +46,28 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="sm:max-w-xs">
               <nav className="grid gap-4 text-lg font-medium">
-                <Link
-                  href="#"
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
-                >
-                  <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
+                <Link href="/">
+                  {theme === "dark" ? (
+                    <Image
+                      src="/logos/CGSP_dark.png"
+                      alt="logo"
+                      width={240}
+                      height={52}
+                    />
+                  ) : (
+                    <Image
+                      src="/logos/CGSP_light.png"
+                      alt="logo"
+                      width={240}
+                      height={52}
+                    />
+                  )}
+
+                  <span className="sr-only">China Global South Project</span>
                 </Link>
 
                 {NAVLIST.map((item) => (
-                  <Link key={item.name} href={item.path}>
+                  <Link key={item.name} href={item.link}>
                     <SheetClose
                       className={`flex w-full items-center gap-4 rounded-lg p-2 px-2.5 hover:text-foreground ${
                         pathname === item.path

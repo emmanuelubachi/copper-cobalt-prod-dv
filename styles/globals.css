@@ -99,5 +99,5 @@
 }
 
 .__muted {
-  @apply bg-muted/70 dark:bg-muted/100;
+  @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 data-[state=on]:dark:bg-muted/100;
 }
