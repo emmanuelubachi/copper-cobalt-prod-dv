@@ -6,6 +6,8 @@ import { ArrowUpRight, File, ListFilter, MoreHorizontal } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+
 import {
   Card,
   CardContent,
@@ -24,13 +26,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { AreaChartRender } from "@/components/charts/areaChart";
-import {
-  exportQuantityData,
-  exportTransactionData,
-  kpiCard,
-  companyData,
-} from "@/data/chartData";
-import { classNames, sliceData } from "@/lib/utils";
 import { BarListChart } from "@/components/charts/barListChart";
 import {
   DropdownMenu,
@@ -42,16 +37,45 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import {
+  exportQuantityData,
+  exportTransactionData,
+  kpiCard,
+  companyData,
+} from "@/data/chartData";
+
+import { classNames, sliceData } from "@/lib/utils";
+import { Years } from "@/data/chartData";
+
 // import { currencyFormatter } from "@/lib/utils";
 
 export default function Dashboard() {
   const Company = sliceData(companyData, 9);
   return (
     <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:gap-4 sm:px-6 sm:py-4">
-      <header>
+      <header className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
           Copper and Cobalt Production Overview
         </h1>
+        <div className="flex items-start">
+          <ToggleGroup
+            type="single"
+            size={"sm"}
+            defaultValue="2023"
+            className="rounded-md bg-accent p-1"
+          >
+            {Years.map((year) => (
+              <ToggleGroupItem
+                key={year}
+                value={year}
+                aria-label="Toggle bold"
+                className="data-[state=on]:bg-background"
+              >
+                {year}
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
+        </div>
       </header>
 
       <div className="flex flex-1 flex-col gap-4 md:gap-8">
