@@ -7,6 +7,7 @@ export const kpiCard = [
     category: "copper",
     value: "2.9M",
     icon: Weight,
+    process: 30,
   },
   {
     title: "Copper Transaction",
@@ -14,6 +15,7 @@ export const kpiCard = [
     category: "copper",
     value: "$20.0bn",
     icon: DollarSign,
+    process: 50,
   },
   {
     title: "Quantities Copper",
@@ -21,6 +23,7 @@ export const kpiCard = [
     category: "cobalt",
     value: "507.9K",
     icon: Weight,
+    process: 70,
   },
   {
     title: "Copper Transaction",
@@ -28,6 +31,7 @@ export const kpiCard = [
     category: "cobalt",
     value: "$8.6bn",
     icon: DollarSign,
+    process: 9,
   },
 ];
 
@@ -278,3 +282,5 @@ export const companyData = [
     data: [],
   },
 ];
+
+export const Years = ["2019", "2020", "2021", "2022", "2023"];

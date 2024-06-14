@@ -22,4 +22,8 @@ export function currencyFormatter(amount: number): string {
 export function quantityFormatter(value: number): string {
   return `${value.toLocaleString()} T`;
 }
+
+export function formatNumberWithCommas(num: number) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 // -------------------------------------------------------
