@@ -20,8 +20,6 @@ export default function BarChart() {
         data: [120, 200, 150, 80, 70, 110, 130],
         type: "bar",
         realtimeSort: true,
-        tooltip: true,
-        onclick,
       },
     ],
   };
