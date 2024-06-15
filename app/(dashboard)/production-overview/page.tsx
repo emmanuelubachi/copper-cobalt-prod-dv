@@ -50,7 +50,7 @@ import { Years } from "@/data/chartData";
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import BarChartRender from "@/components/charts/barChart";
 import { SparkAreaChart } from "@tremor/react";
-import BarChart from "@/components/charts/echarts/barchart";
+import BarChart from "@/components/charts/echarts/barChart";
 
 const chartdata = [
   {
