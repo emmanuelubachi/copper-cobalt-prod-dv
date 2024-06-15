@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { FilterX, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useMediaQuery } from "react-responsive";
+import { ScrollArea } from "../ui/scroll-area";
 
 const Drawer = () => {
   const { isFilterOpen, closeFilter, filterDrawerContent } = useFilterStore();
@@ -56,7 +57,10 @@ const Drawer = () => {
                       className="__muted w-full rounded-lg bg-background pl-8"
                     />
                   </div>
-                  <div className="overflow-y-auto">{filterDrawerContent}</div>
+                  {/* <div className="overflow-y-auto">{filterDrawerContent}</div> */}
+                  <ScrollArea className="h-full p-2">
+                    {filterDrawerContent}
+                  </ScrollArea>
                 </div>
               )}
             </div>

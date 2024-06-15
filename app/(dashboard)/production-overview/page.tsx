@@ -47,7 +47,39 @@ import {
 import { classNames, sliceData } from "@/lib/utils";
 import { Years } from "@/data/chartData";
 
-// import { currencyFormatter } from "@/lib/utils";
+import { currencyFormatter, quantityFormatter } from "@/lib/utils";
+import BarChartRender from "@/components/charts/barChart";
+
+const chartdata = [
+  {
+    name: "Amphibians",
+    "Number of threatened species": 2488,
+  },
+  {
+    name: "Birds",
+    "Number of threatened species": 1445,
+  },
+  {
+    name: "Crustaceans",
+    "Number of threatened species": 743,
+  },
+  {
+    name: "Ferns",
+    "Number of threatened species": 281,
+  },
+  {
+    name: "Arachnids",
+    "Number of threatened species": 251,
+  },
+  {
+    name: "Corals",
+    "Number of threatened species": 232,
+  },
+  {
+    name: "Algae",
+    "Number of threatened species": 98,
+  },
+];
 
 export default function Dashboard() {
   const Company = sliceData(companyData, 9);
@@ -97,6 +129,7 @@ export default function Dashboard() {
             </Card>
           ))}
         </section>
+
         <section className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <Tabs className="lg:col-span-2" defaultValue="quantity">
             <div className="flex items-center">
@@ -105,14 +138,14 @@ export default function Dashboard() {
                 <TabsTrigger value="transaction">Transaction</TabsTrigger>
               </TabsList>
               <div className="ml-auto flex items-center gap-2">
-                <Button
+                {/* <Button
                   size="sm"
                   variant="outline"
                   className="h-7 gap-1 text-sm"
                 >
                   <File className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only">Export</span>
-                </Button>
+                </Button> */}
               </div>
             </div>
 
@@ -156,46 +189,18 @@ export default function Dashboard() {
             </TabsContent>
           </Tabs>
 
-          <Card
-            className="hidden lg:col-span-2 xl:col-span-1 xl:grid"
-            x-chunk="dashboard-01-chunk-5"
-          >
-            <CardHeader className="flex flex-row items-center">
-              <CardTitle>Copper and Cobalt Companies</CardTitle>
-              <Button asChild size="sm" className="ml-auto gap-1">
-                <Link href="/companies">
-                  View All
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </Button>
+          <Card x-chunk="dashboard-01-chunk-5">
+            <CardHeader className="min-h-14">
+              <CardTitle className="flex min-h-14 items-start pt-2">
+                Countries present in the copper and cobalt sector in the DRC
+              </CardTitle>
             </CardHeader>
-            <CardContent className="grid grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-2">
-              {Company.map((company) => (
-                <div key={company.name} className="flex items-center gap-4">
-                  <Avatar
-                    className={classNames(
-                      company.bgColor,
-                      company.textColor,
-                      "h-9 w-9 sm:flex",
-                    )}
-                  >
-                    <AvatarImage alt="Avatar" />
-                    <AvatarFallback>{company.initials}</AvatarFallback>
-                  </Avatar>
-                  <div className="grid gap-1">
-                    <p className="line-clamp-1 text-sm font-medium leading-none">
-                      {company.name}
-                    </p>
-                    {/* <p className="line-clamp-2 hidden text-sm text-muted-foreground md:flex xl:hidden 2xl:flex">
-                      {company.email}
-                    </p> */}
-                  </div>
-                  {/* <div className="ml-auto font-medium">+$1,999.00</div> */}
-                </div>
-              ))}
+            <CardContent className="grid gap-8">
+              <BarListChart title={"DRC"} />
             </CardContent>
           </Card>
         </section>
+
         <section className="grid gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
           <Card x-chunk="dashboard-01-chunk-5">
             <CardHeader className="min-h-14">
@@ -220,12 +225,12 @@ export default function Dashboard() {
                 </Link>
               </Button>
             </CardHeader>
-            <CardContent className="grid gap-8 md:grid-cols-2">
-              <BarListChart title={"Copper"} />
-              <BarListChart title={"Cobalt"} />
+            <CardContent className="">
+              <BarChartRender data={chartdata} />
             </CardContent>
           </Card>
         </section>
+
         {/* TODO: Make table responsive for Fold mobile devices */}
         <section className="grid flex-1 items-start gap-4 md:gap-8">
           <Tabs defaultValue="all">
@@ -511,6 +516,7 @@ export default function Dashboard() {
             </TabsContent>
           </Tabs>
         </section>
+
         <section>
           <Card
             className="lg:col-span-2 xl:col-span-1 xl:hidden"

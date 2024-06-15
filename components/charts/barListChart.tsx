@@ -132,7 +132,7 @@ export function BarListChart({ title }: { title: string }) {
         <span>Nationality</span>
         <span>Share</span>
       </p>
-      <BarList data={data} className="mt-2" />
+      <BarList data={data} className="mt-2 border-none bg-transparent ring-0" />
     </Card>
   );
 }
