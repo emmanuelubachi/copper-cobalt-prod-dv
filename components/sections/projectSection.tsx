@@ -93,7 +93,7 @@ export default function ProjectSection({
       </header>
 
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-        <div className="lg:order-2">
+        <div className="">
           <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
             <CardHeader className="flex flex-row items-start bg-muted/50">
               <div className="grid gap-0.5">
