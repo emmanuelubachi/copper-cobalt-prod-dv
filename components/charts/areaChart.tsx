@@ -27,7 +27,7 @@ export function AreaChartRender({ data, valueFormatter }: AreaChartHeroProps) {
 
   return (
     <AreaChart
-      className="h-80"
+      className="h-96"
       data={data}
       index="date"
       categories={["Copper", "Cobalt"]}

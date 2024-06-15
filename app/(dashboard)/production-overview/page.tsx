@@ -49,36 +49,72 @@ import { Years } from "@/data/chartData";
 
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import BarChartRender from "@/components/charts/barChart";
+import { SparkAreaChart } from "@tremor/react";
+import BarChart from "@/components/charts/echarts/barchart";
 
 const chartdata = [
   {
-    name: "Amphibians",
+    name: "A",
     "Number of threatened species": 2488,
   },
   {
-    name: "Birds",
+    name: "B",
     "Number of threatened species": 1445,
   },
   {
-    name: "Crustaceans",
+    name: "C",
     "Number of threatened species": 743,
   },
   {
-    name: "Ferns",
+    name: "D",
     "Number of threatened species": 281,
   },
   {
-    name: "Arachnids",
+    name: "E",
     "Number of threatened species": 251,
   },
   {
-    name: "Corals",
+    name: "F",
     "Number of threatened species": 232,
   },
   {
-    name: "Algae",
+    name: "G",
+    "Number of threatened species": 198,
+  },
+  {
+    name: "H",
+    "Number of threatened species": 248,
+  },
+  {
+    name: "I",
+    "Number of threatened species": 145,
+  },
+  {
+    name: "J",
+    "Number of threatened species": 74,
+  },
+  {
+    name: "K",
+    "Number of threatened species": 81,
+  },
+  {
+    name: "L",
+    "Number of threatened species": 51,
+  },
+  {
+    name: "M",
+    "Number of threatened species": 22,
+  },
+  {
+    name: "N",
     "Number of threatened species": 98,
   },
+];
+
+const Product = [
+  { category: "all", labal: "All" },
+  { category: "copper", labal: "Copper" },
+  { category: "cobalt", labal: "Cobalt" },
 ];
 
 export default function Dashboard() {
@@ -111,6 +147,7 @@ export default function Dashboard() {
       </header>
 
       <div className="flex flex-1 flex-col gap-4 md:gap-8">
+        {/* KPI Cards */}
         <section className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4 lg:gap-8">
           {kpiCard.map((kpi) => (
             <Card key={kpi.title} x-chunk="dashboard-01-chunk-0">
@@ -122,6 +159,13 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-h3 font-bold">{kpi.value}</div>
+                {/* <SparkAreaChart
+                  data={chartdata}
+                  categories={["Performance"]}
+                  index={"date"}
+                  colors={["emerald"]}
+                  className="h-8 w-20 sm:h-10 sm:w-36"
+                /> */}
                 <p className="text-xs text-muted-foreground">
                   {kpi.description}
                 </p>
@@ -130,23 +174,14 @@ export default function Dashboard() {
           ))}
         </section>
 
-        <section className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
-          <Tabs className="lg:col-span-2" defaultValue="quantity">
+        {/* Eport Trend Cards */}
+        <section className="grid">
+          <Tabs className="" defaultValue="quantity">
             <div className="flex items-center">
               <TabsList>
                 <TabsTrigger value="quantity">Quantity</TabsTrigger>
                 <TabsTrigger value="transaction">Transaction</TabsTrigger>
               </TabsList>
-              <div className="ml-auto flex items-center gap-2">
-                {/* <Button
-                  size="sm"
-                  variant="outline"
-                  className="h-7 gap-1 text-sm"
-                >
-                  <File className="h-3.5 w-3.5" />
-                  <span className="sr-only sm:not-sr-only">Export</span>
-                </Button> */}
-              </div>
             </div>
 
             <TabsContent value="quantity">
@@ -189,7 +224,7 @@ export default function Dashboard() {
             </TabsContent>
           </Tabs>
 
-          <Card x-chunk="dashboard-01-chunk-5">
+          {/* <Card x-chunk="dashboard-01-chunk-5">
             <CardHeader className="min-h-14">
               <CardTitle className="flex min-h-14 items-start pt-2">
                 Countries present in the copper and cobalt sector in the DRC
@@ -198,39 +233,63 @@ export default function Dashboard() {
             <CardContent className="grid gap-8">
               <BarListChart title={"DRC"} />
             </CardContent>
-          </Card>
+          </Card> */}
         </section>
 
-        <section className="grid gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-          <Card x-chunk="dashboard-01-chunk-5">
-            <CardHeader className="min-h-14">
-              <CardTitle className="flex min-h-14 items-start pt-2">
-                Countries present in the copper and cobalt sector in the DRC
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-8">
-              <BarListChart title={"DRC"} />
-            </CardContent>
-          </Card>
+        {/* Countries/Projects */}
+        <section className="grid gap-2">
+          <div className="flex items-start">
+            <ToggleGroup
+              type="single"
+              size={"sm"}
+              defaultValue="all"
+              className="rounded-lg bg-accent p-1"
+            >
+              {Product.map((product) => (
+                <ToggleGroupItem
+                  key={product.category}
+                  value={product.category}
+                  aria-label="Toggle bold"
+                  className="data-[state=on]:bg-background"
+                >
+                  {product.labal}
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
+          </div>
 
-          <Card className="lg:col-span-2" x-chunk="dashboard-01-chunk-4">
-            <CardHeader className="flex min-h-14 flex-row items-start">
-              <CardTitle className="flex min-h-14 items-start pt-2">
-                Shares of mining production by project groups
-              </CardTitle>
-              <Button asChild size="sm" className="ml-auto hidden gap-1">
-                <Link href="#">
-                  View All
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </CardHeader>
-            <CardContent className="">
-              <BarChartRender data={chartdata} />
-            </CardContent>
-          </Card>
+          <div className="grid gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+            <Card x-chunk="dashboard-01-chunk-5">
+              <CardHeader className="min-h-14">
+                <CardTitle className="flex min-h-14 items-start pt-2">
+                  Countries present in the copper and cobalt sector in the DRC
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-8">
+                <BarChart />
+              </CardContent>
+            </Card>
+
+            <Card className="lg:col-span-2" x-chunk="dashboard-01-chunk-4">
+              <CardHeader className="flex min-h-14 flex-row items-start">
+                <CardTitle className="flex min-h-14 items-start pt-2">
+                  Shares of mining production by project groups
+                </CardTitle>
+                <Button asChild size="sm" className="ml-auto hidden gap-1">
+                  <Link href="#">
+                    View All
+                    <ArrowUpRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardHeader>
+              <CardContent className="">
+                <BarChartRender data={chartdata} />
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
+        {/* Table */}
         {/* TODO: Make table responsive for Fold mobile devices */}
         <section className="grid flex-1 items-start gap-4 md:gap-8">
           <Tabs defaultValue="all">
@@ -517,6 +576,7 @@ export default function Dashboard() {
           </Tabs>
         </section>
 
+        {/* Projects/Companies */}
         <section>
           <Card
             className="lg:col-span-2 xl:col-span-1 xl:hidden"

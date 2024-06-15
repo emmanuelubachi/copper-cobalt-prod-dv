@@ -1,5 +1,4 @@
 "use client";
-
 import { BarChart } from "@tremor/react";
 import { quantityFormatter } from "@/lib/utils";
 
@@ -10,7 +9,7 @@ export default function BarChartRender(chartdata: any) {
       data={chartdata.data}
       index="name"
       categories={["Number of threatened species"]}
-      colors={["red"]}
+      colors={["blue"]}
       valueFormatter={quantityFormatter}
       //   yAxisWidth={48}
     />
