@@ -20,10 +20,10 @@ export const NAVLIST: NavItem[] = [
     link: "/projects?project_id=anvil-mining",
     icon: Pickaxe,
   },
-  {
-    name: "Exports",
-    path: "/export-flow",
-    link: "/export-flow",
-    icon: Ship,
-  },
+  // {
+  //   name: "Exports",
+  //   path: "/export-flow",
+  //   link: "/export-flow",
+  //   icon: Ship,
+  // },
 ];
