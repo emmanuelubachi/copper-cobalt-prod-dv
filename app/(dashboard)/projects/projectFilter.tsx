@@ -22,7 +22,7 @@ export default function ProjectFilter() {
   const data = industralProjectName;
 
   return (
-    <>
+    <div className="px-2">
       <div className="flex items-center space-x-2">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
@@ -31,8 +31,8 @@ export default function ProjectFilter() {
           {data.length}
         </span>
       </div>
-      <Divider className="my-4" />
-      <div className="mt-4 grid grid-cols-1 gap-4 p-2">
+      <Divider className="my-4 pr-2" />
+      <div className="mt-4 grid grid-cols-1 gap-4 pb-4 pr-2">
         {data.map((member) => (
           <Card
             key={member["project-name"]}
@@ -68,6 +68,6 @@ export default function ProjectFilter() {
           </Card>
         ))}
       </div>
-    </>
+    </div>
   );
 }
