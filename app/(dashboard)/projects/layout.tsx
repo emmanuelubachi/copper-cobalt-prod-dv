@@ -10,7 +10,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <FilterButton
           content={<ProjectFilter />}
           label="Projects"
-          tooltip="Select Projects"
+          type="tooltip"
+          tooltip="Select a project"
         />
       </div>
       {children}

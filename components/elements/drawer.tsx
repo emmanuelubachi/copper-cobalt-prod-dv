@@ -49,16 +49,16 @@ const Drawer = () => {
                     <FilterX className="h-5 w-5" />
                     <span className="sr-only">Close</span>
                   </Button>
-                  <div className="relative mr-auto w-full flex-1 grow-0">
+                  {/* <div className="relative mr-auto w-full flex-1 grow-0">
                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                     <Input
                       type="search"
                       placeholder="Search..."
                       className="__muted w-full rounded-lg bg-background pl-8"
                     />
-                  </div>
+                  </div> */}
                   {/* <div className="overflow-y-auto">{filterDrawerContent}</div> */}
-                  <ScrollArea className="h-full p-2">
+                  <ScrollArea className="h-full">
                     {filterDrawerContent}
                   </ScrollArea>
                 </div>

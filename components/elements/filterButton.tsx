@@ -12,12 +12,14 @@ import {
 type FilterButtonProps = {
   content: ReactNode;
   label: string;
-  tooltip: string;
+  type: "tooltip" | "button";
+  tooltip?: string;
 };
 
 const FilterButton: React.FC<FilterButtonProps> = ({
   content,
   label,
+  type,
   tooltip,
 }) => {
   const { toggleFilter, setFilterContent } = useFilterStore();
@@ -27,21 +29,33 @@ const FilterButton: React.FC<FilterButtonProps> = ({
     toggleFilter();
   }, [content, setFilterContent, toggleFilter]);
 
+  if (type === "tooltip") {
+    return (
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="outline"
+              className="__muted gap-2 rounded-2xl px-4"
+              onClick={handleClick}
+            >
+              <span className="text-pxs sm:text-sm">{label}</span>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent side="right">{tooltip}</TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    );
+  }
+
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            variant="outline"
-            className="__muted gap-2 rounded-2xl px-4"
-            onClick={handleClick}
-          >
-            <span className="text-pxs sm:text-sm">{label}</span>
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent side="right">{tooltip}</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Button
+      variant="outline"
+      className="__muted gap-2 rounded-2xl px-4"
+      onClick={handleClick}
+    >
+      <span className="text-pxs sm:text-sm">{label}</span>
+    </Button>
   );
 };
 

@@ -9,12 +9,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <FilterButton
           content={<MapFilter />}
           label="Mining Activities"
-          tooltip=""
+          type="button"
         />
         <FilterButton
           content={<MapFilter />}
-          label="Geographical Information"
-          tooltip=""
+          label="Additional Information"
+          type="button"
         />
       </div>
       {children}
