@@ -7,12 +7,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="absolute left-4 top-4 z-40 space-x-2 sm:left-[68px] sm:top-4">
         {/* <div className="absolute left-4 top-4 z-40 sm:left-6 sm:top-[60px]"> */}
         <FilterButton
-          content={<MapFilter />}
+          content={<MapFilter defaultValue="mining-activities" />}
           label="Mining Activities"
           type="button"
         />
         <FilterButton
-          content={<MapFilter />}
+          content={<MapFilter defaultValue="additional-information" />}
           label="Additional Information"
           type="button"
         />
