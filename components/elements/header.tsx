@@ -27,7 +27,10 @@ import ModeToggle from "../mode-toggle";
 
 export default function Header() {
   const pathname = usePathname();
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+
+  const isDark =
+    theme === "dark" || (theme === "system" && systemTheme === "dark");
 
   return (
     <header className="absolute z-30 w-full items-center gap-4 px-4 py-4 sm:gap-4 sm:px-6">
@@ -47,7 +50,7 @@ export default function Header() {
             <SheetContent side="left" className="sm:max-w-xs">
               <nav className="grid gap-4 text-lg font-medium">
                 <Link href="/">
-                  {theme === "dark" ? (
+                  {isDark ? (
                     <Image
                       src="/logos/CGSP_dark.png"
                       alt="logo"

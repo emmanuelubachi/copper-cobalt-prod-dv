@@ -16,7 +16,10 @@ import Image from "next/image";
 
 export default function Nav() {
   const pathname = usePathname();
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+
+  const isDark =
+    theme === "dark" || (theme === "system" && systemTheme === "dark");
 
   return (
     <nav className="inset-y-0 left-0 z-10 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
@@ -26,7 +29,7 @@ export default function Nav() {
             href="/"
             // className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
           >
-            {theme === "dark" ? (
+            {isDark ? (
               <Image
                 src="/logos/CGSP_icon_dark.png"
                 alt="logo"
