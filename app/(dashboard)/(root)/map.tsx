@@ -5,6 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 export function Map1({ token }: { token: string | undefined }) {
   const TOKEN = token;
+
   return (
     <Map
       mapboxAccessToken={TOKEN}
@@ -25,25 +26,3 @@ export function Map1({ token }: { token: string | undefined }) {
     </Map>
   );
 }
-
-// export function Map2({ token }: { token: string | undefined }) {
-//   const TOKEN = token;
-//   return (
-//     <Map
-//       mapboxAccessToken={TOKEN}
-//       mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
-//       initialViewState={{
-//         longitude: 26.187232,
-//         latitude: -10.563779,
-//         zoom: 15,
-//       }}
-//       style={{
-//         width: 400,
-//         height: 300,
-//         borderRadius: "12px 12px 0px 0px",
-//       }}
-//       maxZoom={18}
-//       minZoom={10}
-//     ></Map>
-//   );
-// }

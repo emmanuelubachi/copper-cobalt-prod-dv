@@ -1,9 +1,13 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function MapFilter() {
+type MapFilterProps = {
+  defaultValue: "mining-activities" | "additional-information";
+};
+
+export default function MapFilter({ defaultValue }: MapFilterProps) {
   return (
-    <Tabs defaultValue="mining-activities" className="w-full">
+    <Tabs defaultValue={defaultValue} className="w-full">
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="mining-activities">Mining Activities</TabsTrigger>
         <TabsTrigger value="additional-information">
@@ -11,10 +15,10 @@ export default function MapFilter() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="mining-activities" className="px-2">
-        Make changes to your account here.
+        Mining activities filter content will go here.
       </TabsContent>
       <TabsContent value="additional-information" className="px-2">
-        Change your password here.
+        Additional information filter content will go here.
       </TabsContent>
     </Tabs>
   );
