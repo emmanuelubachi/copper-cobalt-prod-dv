@@ -31,7 +31,7 @@ export default function Nav() {
           >
             {isDark ? (
               <Image
-                src="/logos/CGSP_icon_dark.png"
+                src="/logos/CGSP_icon_light.png"
                 alt="logo"
                 width={30}
                 height={30}
