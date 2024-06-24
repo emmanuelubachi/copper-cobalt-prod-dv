@@ -13,39 +13,21 @@ import {
 
 import { NAVLIST } from "@/constants/application";
 import Image from "next/image";
+import { CGSPRedSvgIcon } from "../svg/icons/cdsp_logo";
 
 export default function Nav() {
   const pathname = usePathname();
-  const { theme, systemTheme } = useTheme();
+  // const { theme, systemTheme } = useTheme();
 
-  const isDark =
-    theme === "dark" || (theme === "system" && systemTheme === "dark");
+  // const isDark =
+  //   theme === "dark" || (theme === "system" && systemTheme === "dark");
 
   return (
     <nav className="inset-y-0 left-0 z-10 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
       <div className={`item-center flex flex-col gap-6 px-4 sm:py-2`}>
         <div className={`flex h-14 w-full items-center justify-center`}>
-          <Link
-            href="/"
-            // className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
-          >
-            {isDark ? (
-              <Image
-                src="/logos/CGSP_icon_light.png"
-                alt="logo"
-                width={30}
-                height={30}
-              />
-            ) : (
-              <Image
-                src="/logos/CGSP_icon_light.png"
-                alt="logo"
-                width={30}
-                height={30}
-              />
-            )}
-            {/* <Image src="/favicon-32x32.png" alt="logo" width={32} height={32} /> */}
-            {/* <Package2 className="h-4 w-4 transition-all group-hover:scale-110" /> */}
+          <Link href="/">
+            <CGSPRedSvgIcon className="h-8 w-8" />
             <span className="sr-only">China Global South Project</span>
           </Link>
         </div>
