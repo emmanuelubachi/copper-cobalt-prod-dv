@@ -89,24 +89,28 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="outline" className="__muted">
-                <Languages className="h-5 w-5" strokeWidth={1.5} />
-                <span className="sr-only">Translation</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="center">
-              <DropdownMenuLabel>Translations</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>English</DropdownMenuItem>
-              <DropdownMenuItem>French</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           <ModeToggle />
         </div>
       </div>
     </header>
+  );
+}
+
+export function TranslationToggle() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button size="icon" variant="outline" className="__muted">
+          <Languages className="h-5 w-5" strokeWidth={1.5} />
+          <span className="sr-only">Translation</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="center">
+        <DropdownMenuLabel>Translations</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>English</DropdownMenuItem>
+        <DropdownMenuItem>French</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
