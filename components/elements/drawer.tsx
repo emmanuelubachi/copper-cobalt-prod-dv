@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { FilterX, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { useMediaQuery } from "react-responsive";
 import { ScrollArea } from "../ui/scroll-area";
+import useDeviceType from "@/hooks/useDeviceType";
 
 const Drawer = () => {
   const { isFilterOpen, closeFilter, filterDrawerContent } = useFilterStore();
-  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const { isMobile } = useDeviceType();
+
   const handleOverlayClick = () => {
     if (isFilterOpen) {
       closeFilter();
@@ -28,7 +29,7 @@ const Drawer = () => {
           )}
 
           <motion.div
-            className="fixed left-0 top-0 z-50 h-screen w-96 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-96"
+            className="fixed left-0 top-0 z-50 h-screen w-80 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-96"
             initial="initial"
             animate="animate"
             exit="exit"
