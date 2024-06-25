@@ -2,10 +2,16 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-import Map, { NavigationControl } from "react-map-gl";
+import Map, {
+  AttributionControl,
+  NavigationControl,
+  FullscreenControl,
+  Marker,
+} from "react-map-gl";
 import useDeviceType from "@/hooks/useDeviceType";
 
 import "mapbox-gl/dist/mapbox-gl.css";
+import Pin from "@/components/svg/pin";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -37,18 +43,48 @@ export default function Home() {
         style={{ position: "absolute" }}
         maxZoom={15}
         minZoom={3}
-        customAttribution={
-          '<a href="https://www.ubachi.com/" target="_blank">© Ubachi</a>'
-        }
+        attributionControl={false}
       >
         {isMobile ? (
-          <NavigationControl
-            position="bottom-right"
-            style={{ position: "absolute", bottom: "64px", right: "0px" }}
-          />
+          <>
+            <AttributionControl
+              style={{ position: "absolute", bottom: "64px", right: "0px" }}
+              position="bottom-right"
+              customAttribution={
+                '<a href="https://www.ubachi.com/" target="_blank">© Ubachi</a>'
+              }
+            />
+            <FullscreenControl
+              position="bottom-right"
+              style={{ position: "absolute", bottom: "192px", right: "0px" }}
+            />
+            <NavigationControl
+              position="bottom-right"
+              style={{ position: "absolute", bottom: "96px", right: "0px" }}
+            />
+          </>
         ) : (
-          <NavigationControl position="bottom-right" />
+          <>
+            <AttributionControl
+              position="bottom-right"
+              customAttribution={
+                '<a href="https://www.ubachi.com/" target="_blank">© Ubachi</a>'
+              }
+            />
+            <NavigationControl position="bottom-right" />
+            <FullscreenControl position="bottom-right" />
+          </>
         )}
+
+        <Marker
+          style={{ color: "red" }}
+          longitude={23.52741376552}
+          latitude={-3.050471588628}
+          anchor="bottom"
+        >
+          {/* <Image src="./pin.png" /> */}
+          <Pin className="fill-red-500" />
+        </Marker>
       </Map>
     </main>
   );
