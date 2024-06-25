@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import { CGSPRedSvgIcon } from "./svg/icons/cdsp_logo";
+import { CGSPRedSvgIcon } from "./svg/cdsp_logo";
 
 export function LoadingSpinner() {
   return (
@@ -14,7 +14,7 @@ export function LoadingSpinner() {
 export function PageLoadingFallback() {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-2">
-      <CGSPRedSvgIcon className="animate-spin-slow h-14 w-14" />
+      <CGSPRedSvgIcon className="h-14 w-14 animate-spin-slow" />
       <p className="animate-pulse text-p">Loading...</p>
     </div>
   );

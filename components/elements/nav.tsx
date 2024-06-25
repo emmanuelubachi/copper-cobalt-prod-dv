@@ -13,7 +13,7 @@ import {
 
 import { NAVLIST } from "@/constants/application";
 import Image from "next/image";
-import { CGSPRedSvgIcon } from "../svg/icons/cdsp_logo";
+import { CGSPRedSvgIcon } from "../svg/cdsp_logo";
 
 export default function Nav() {
   const pathname = usePathname();
