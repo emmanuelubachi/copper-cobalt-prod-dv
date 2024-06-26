@@ -1,3 +1,4 @@
+// this store is not in use
 import { create } from "zustand";
 
 type NavState = {

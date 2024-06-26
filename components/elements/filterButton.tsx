@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import useFilterStore from "@/store/filterstore";
+import useFilterStore from "@/store/filterStore";
 import {
   Tooltip,
   TooltipContent,

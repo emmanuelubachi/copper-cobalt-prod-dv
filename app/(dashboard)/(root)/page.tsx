@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 import Map, {
+  MapRef,
   AttributionControl,
   NavigationControl,
   FullscreenControl,
@@ -17,6 +18,9 @@ import { ArtisanalSite } from "@/types";
 import { fetchTinybirdData } from "@/lib/fetchData";
 
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
+import useMapDetailsStore from "@/store/mapDetailsStore";
+
+import MapDetailsContent from "./mapDetailsContent";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 const ACTIVE_SITES_API_URL =
@@ -32,6 +36,9 @@ export default function Home() {
   const [inactivesites, setInactivesites] = useState<ArtisanalSite[]>([]);
 
   const { showActiveMarkers, showInactiveMarkers } = useMarkerVisibilityStore();
+  const { openMapDetails, setMapDetailsContent } = useMapDetailsStore();
+
+  const mapRef = useRef<MapRef | null>(null);
 
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
@@ -55,15 +62,28 @@ export default function Home() {
       );
       setActivesites(active_sites_data);
 
-      console.table(inactive_sites_data);
       setInactivesites(inactive_sites_data);
     }
     getData();
   }, []);
 
+  const handleMapDetailsClick = useCallback(
+    (site: string, latitude: number, longitude: number) => {
+      openMapDetails();
+      setMapDetailsContent(<MapDetailsContent name={site} />);
+      mapRef.current?.flyTo({
+        center: [longitude, latitude],
+        duration: 2000,
+        zoom: 12,
+      });
+    },
+    [openMapDetails, setMapDetailsContent],
+  );
+
   return (
     <main className="relative h-screen sm:mb-0 sm:ml-0 sm:pr-16">
       <Map
+        ref={mapRef}
         mapboxAccessToken={TOKEN}
         mapStyle={mapStyle}
         {...viewState}
@@ -111,6 +131,13 @@ export default function Home() {
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
+              onClick={() =>
+                handleMapDetailsClick(
+                  site.site_name,
+                  site.latitude,
+                  site.longitude,
+                )
+              }
             >
               <Pin className="fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white" />
             </Marker>
@@ -123,6 +150,13 @@ export default function Home() {
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
+              onClick={() =>
+                handleMapDetailsClick(
+                  site.site_name,
+                  site.latitude,
+                  site.longitude,
+                )
+              }
             >
               <Pin className="fill-neutral-500 stroke-gray-50 dark:fill-neutral-400 dark:stroke-white" />
             </Marker>

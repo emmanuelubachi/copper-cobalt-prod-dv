@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
 import { Card, Divider } from "@tremor/react";
-import useFilterStore from "@/store/filterstore";
+import useFilterStore from "@/store/filterStore";
 
 import { companyData } from "@/data/chartData";
 import { industralProjectName } from "@/data/industral-projects";

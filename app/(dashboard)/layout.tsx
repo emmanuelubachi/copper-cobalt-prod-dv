@@ -2,8 +2,9 @@ import React from "react";
 
 import Nav from "@/components/elements/nav";
 import Header from "@/components/elements/header";
-import Drawer from "@/components/elements/drawer";
+import FilterDrawer from "@/components/elements/filterDrawer";
 import MobileNav from "@/components/elements/mobileNav";
+import MapDetailsDrawer from "@/components/elements/mapDetailsDrawer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="flex bg-muted/40 sm:flex-row">
         <aside>
           <Nav />
-          <Drawer />
+          <FilterDrawer />
         </aside>
 
         <div className="flex min-h-screen w-screen flex-col">
@@ -23,6 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <MobileNav />
         </div>
       </div>
+      <MapDetailsDrawer />
     </>
   );
 }

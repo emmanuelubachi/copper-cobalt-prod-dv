@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import useFilterStore from "@/store/filterstore";
+import useFilterStore from "@/store/filterStore";
 import { Card, Divider } from "@tremor/react";
 import { ArrowUpRight } from "lucide-react";
 import { industralProjectName } from "@/data/industral-projects";
