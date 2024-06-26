@@ -13,12 +13,26 @@ import useDeviceType from "@/hooks/useDeviceType";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "@/components/svg/pin";
 
+import { ArtisanalSite } from "@/types";
+import { fetchTinybirdData } from "@/lib/fetchData";
+
+import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
+
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+const ACTIVE_SITES_API_URL =
+  "https://api.tinybird.co/v0/pipes/artisanal_sites_active.json";
+const INACTIVE_SITES_API_URL =
+  "https://api.tinybird.co/v0/pipes/artisanal_sites_inactive.json";
 
 export default function Home() {
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
-  const { isMobile, isTablet, isDesktop } = useDeviceType();
+  const { isMobile } = useDeviceType();
+  const [activesites, setActivesites] = useState<ArtisanalSite[]>([]);
+  const [inactivesites, setInactivesites] = useState<ArtisanalSite[]>([]);
+
+  const { showActiveMarkers, showInactiveMarkers } = useMarkerVisibilityStore();
+
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
     latitude: -3.050471588628,
@@ -32,6 +46,20 @@ export default function Home() {
       setMapStyle("mapbox://styles/mapbox/streets-v10");
     }
   }, [theme, systemTheme]);
+
+  useEffect(() => {
+    async function getData() {
+      const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
+      const inactive_sites_data = await fetchTinybirdData(
+        INACTIVE_SITES_API_URL,
+      );
+      setActivesites(active_sites_data);
+
+      console.table(inactive_sites_data);
+      setInactivesites(inactive_sites_data);
+    }
+    getData();
+  }, []);
 
   return (
     <main className="relative h-screen sm:mb-0 sm:ml-0 sm:pr-16">
@@ -76,15 +104,29 @@ export default function Home() {
           </>
         )}
 
-        <Marker
-          style={{ color: "red" }}
-          longitude={23.52741376552}
-          latitude={-3.050471588628}
-          anchor="bottom"
-        >
-          {/* <Image src="./pin.png" /> */}
-          <Pin className="fill-red-500" />
-        </Marker>
+        {showActiveMarkers &&
+          activesites.map((site, index) => (
+            <Marker
+              key={`active-${index}`}
+              longitude={site.longitude}
+              latitude={site.latitude}
+              anchor="bottom"
+            >
+              <Pin className="fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white" />
+            </Marker>
+          ))}
+
+        {showInactiveMarkers &&
+          inactivesites.map((site, index) => (
+            <Marker
+              key={`inactive-${index}`}
+              longitude={site.longitude}
+              latitude={site.latitude}
+              anchor="bottom"
+            >
+              <Pin className="fill-neutral-500 stroke-gray-50 dark:fill-neutral-400 dark:stroke-white" />
+            </Marker>
+          ))}
       </Map>
     </main>
   );
