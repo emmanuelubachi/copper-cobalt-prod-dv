@@ -39,3 +39,9 @@ export type IndustralProjectName = {
   "project-name": string;
   "short-name": string;
 }[];
+
+export type ArtisanalSite = {
+  longitude: number;
+  latitude: number;
+  [key: string]: any;
+};

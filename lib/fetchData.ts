@@ -1,12 +1,9 @@
 // lib/fetchData.ts
 import * as z from "zod";
-import { companyData } from "@/data/chartData";
-import {
-  industralProjectName,
-  industralProjects,
-} from "@/data/industral-projects";
+import { industralProjectName } from "@/data/industral-projects";
 import { ErrorType, IndustralProjectName, SearchParams } from "@/types";
 
+// lib fetch local data ---------------------------------------------------------------
 type ValidatedProps = {
   projectId?: string;
   errorType?: ErrorType;
@@ -65,5 +62,33 @@ export async function fetchData(
   } catch (err) {
     console.error("Error fetching project data:", err);
     return { errorType: "serverError" };
+  }
+}
+
+// --------------------------------------------------------------------------------------
+
+// lib fetch remote data ---------------------------------------------------------------
+export async function fetchTinybirdData(url: string) {
+  const authorizationToken = process.env.NEXT_PUBLIC_API_AUTHORIZATION;
+
+  if (!authorizationToken) {
+    throw new Error("API authorization token is not defined");
+  }
+
+  try {
+    const result = await fetch(url, {
+      headers: {
+        Authorization: authorizationToken,
+      },
+    }).then((r) => r.json());
+
+    if (!result.data) {
+      console.error(`There is a problem running the query: ${result}`);
+    } else {
+      return result.data;
+    }
+  } catch (e: any) {
+    console.error(e.toString());
+    return [];
   }
 }
