@@ -1,5 +1,5 @@
 "use client";
-import useFilterStore from "@/store/filterstore";
+import useFilterStore from "@/store/filterStore";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { FilterX, Search } from "lucide-react";
@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "../ui/scroll-area";
 import useDeviceType from "@/hooks/useDeviceType";
 
-const Drawer = () => {
+const FilterDrawer = () => {
   const { isFilterOpen, closeFilter, filterDrawerContent } = useFilterStore();
   const { isMobile } = useDeviceType();
 
@@ -72,7 +72,7 @@ const Drawer = () => {
   );
 };
 
-export default Drawer;
+export default FilterDrawer;
 
 const getAnimationVariants = () => {
   return {
