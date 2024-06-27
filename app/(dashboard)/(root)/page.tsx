@@ -16,7 +16,7 @@ import { ArtisanalSite } from "@/types";
 import { fetchTinybirdData } from "@/lib/fetchData";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import MapDetailsContent from "./mapDetailsContent";
+import MapDetailsContent from "./components/mapDetailsContent";
 import Link from "next/link";
 import { active_sites, inactive_sites } from "@/data/mapData";
 
@@ -38,11 +38,12 @@ export default function Home() {
   const mapRef = useRef<MapRef | null>(null);
   const searchParams = useSearchParams();
   const artisanal_site_id = searchParams.get("artisanal_site_id");
+  const [selectedSite, setSelectedSite] = useState<string | null>(null);
 
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
     latitude: -3.050471588628,
-    zoom: 4,
+    zoom: 5,
   });
 
   useEffect(() => {
@@ -85,21 +86,23 @@ export default function Home() {
         mapRef.current.flyTo({
           center: [artisanal_site.longitude, artisanal_site.latitude],
           duration: 1500,
-          zoom: 12,
+          zoom: 13,
         });
       }
     }
-  }, [artisanal_site_id, activeSites, inactiveSites]);
+  }, [artisanal_site_id, activeSites, inactiveSites, theme]);
 
   const handleMapDetailsClick = useCallback(
-    (latitude: number, longitude: number) => {
+    (site_name: string, latitude: number, longitude: number) => {
+      setSelectedSite(site_name);
       openMapDetails();
-      setMapDetailsContent(<MapDetailsContent />);
+      setMapDetailsContent(<MapDetailsContent site_name={site_name} />);
+
       if (mapRef.current) {
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 12,
+          zoom: 13,
         });
       }
     },
@@ -158,16 +161,20 @@ export default function Home() {
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(site.latitude, site.longitude)
+                handleMapDetailsClick(
+                  site.site_name,
+                  site.latitude,
+                  site.longitude,
+                )
               }
             >
               <Link href={`/?artisanal_site_id=${site.site_name}`}>
                 <Pin
                   className={`${
-                    artisanal_site_id === site.site_name
-                      ? "h-12 w-12 animate-pulse fill-cyan-700 stroke-cyan-50"
+                    selectedSite === site.site_name
+                      ? "h-12 w-12 animate-bounce fill-red-700"
                       : "h-6 w-6 fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white"
-                  }`}
+                  } ${artisanal_site_id === site.site_name && "fill-red-300 stroke-none dark:fill-red-900"}`}
                 />
               </Link>
             </Marker>
@@ -181,16 +188,20 @@ export default function Home() {
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(site.latitude, site.longitude)
+                handleMapDetailsClick(
+                  site.site_name,
+                  site.latitude,
+                  site.longitude,
+                )
               }
             >
               <Link href={`/?artisanal_site_id=${site.site_name}`}>
                 <Pin
                   className={`${
-                    artisanal_site_id === site.site_name
-                      ? "h-12 w-12 animate-pulse fill-neutral-700 stroke-neutral-50"
+                    selectedSite === site.site_name
+                      ? "h-12 w-12 animate-bounce fill-red-400 dark:fill-red-800"
                       : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
-                  } `}
+                  } ${artisanal_site_id === site.site_name && "fill-red-500 stroke-none dark:fill-red-800"} `}
                 />
               </Link>
             </Marker>
