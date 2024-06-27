@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-
+import { useSearchParams } from "next/navigation";
 import Map, {
   MapRef,
   AttributionControl,
@@ -10,19 +10,17 @@ import Map, {
   Marker,
 } from "react-map-gl";
 import useDeviceType from "@/hooks/useDeviceType";
-
 import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "@/components/svg/pin";
-
 import { ArtisanalSite } from "@/types";
 import { fetchTinybirdData } from "@/lib/fetchData";
-
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-
 import MapDetailsContent from "./mapDetailsContent";
+import Link from "next/link";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+
 const ACTIVE_SITES_API_URL =
   "https://api.tinybird.co/v0/pipes/artisanal_sites_active.json";
 const INACTIVE_SITES_API_URL =
@@ -34,11 +32,11 @@ export default function Home() {
   const { isMobile } = useDeviceType();
   const [activesites, setActivesites] = useState<ArtisanalSite[]>([]);
   const [inactivesites, setInactivesites] = useState<ArtisanalSite[]>([]);
-
   const { showActiveMarkers, showInactiveMarkers } = useMarkerVisibilityStore();
   const { openMapDetails, setMapDetailsContent } = useMapDetailsStore();
-
   const mapRef = useRef<MapRef | null>(null);
+  const searchParams = useSearchParams();
+  const [markerLink, setMarkerLink] = useState("");
 
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
@@ -70,10 +68,10 @@ export default function Home() {
   const handleMapDetailsClick = useCallback(
     (site: string, latitude: number, longitude: number) => {
       openMapDetails();
-      setMapDetailsContent(<MapDetailsContent name={site} />);
+      setMapDetailsContent(<MapDetailsContent />);
       mapRef.current?.flyTo({
         center: [longitude, latitude],
-        duration: 2000,
+        duration: 1500,
         zoom: 12,
       });
     },
@@ -139,7 +137,9 @@ export default function Home() {
                 )
               }
             >
-              <Pin className="fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white" />
+              <Link href={`/?artisanal_site_id=${site.site_name}`}>
+                <Pin className="fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white" />
+              </Link>
             </Marker>
           ))}
 
@@ -158,7 +158,9 @@ export default function Home() {
                 )
               }
             >
-              <Pin className="fill-neutral-500 stroke-gray-50 dark:fill-neutral-400 dark:stroke-white" />
+              <Link href={`/?artisanal_site_id=${site.site_name}`}>
+                <Pin className="fill-neutral-500 stroke-gray-50 dark:fill-neutral-400 dark:stroke-white" />
+              </Link>
             </Marker>
           ))}
       </Map>
