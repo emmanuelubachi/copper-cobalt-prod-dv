@@ -70,9 +70,9 @@ export default function Home() {
 
   useEffect(() => {
     if (artisanal_site_id) {
-      const artisanal_site = activeSites.find(
-        (site) => site.site_name === artisanal_site_id,
-      );
+      const artisanal_site =
+        activeSites.find((site) => site.site_name === artisanal_site_id) ||
+        inactiveSites.find((site) => site.site_name === artisanal_site_id);
       if (artisanal_site && mapRef.current) {
         mapRef.current.flyTo({
           center: [artisanal_site.longitude, artisanal_site.latitude],
@@ -81,7 +81,7 @@ export default function Home() {
         });
       }
     }
-  }, [artisanal_site_id, activeSites]);
+  }, [artisanal_site_id, activeSites, inactiveSites]);
 
   const handleMapDetailsClick = useCallback(
     (latitude: number, longitude: number) => {
@@ -177,7 +177,13 @@ export default function Home() {
               }
             >
               <Link href={`/?artisanal_site_id=${site.site_name}`}>
-                <Pin className="fill-neutral-500 stroke-gray-50 dark:fill-neutral-400 dark:stroke-white" />
+                <Pin
+                  className={`${
+                    artisanal_site_id === site.site_name
+                      ? "h-12 w-12 animate-pulse fill-neutral-700 stroke-neutral-50"
+                      : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
+                  } `}
+                />
               </Link>
             </Marker>
           ))}
