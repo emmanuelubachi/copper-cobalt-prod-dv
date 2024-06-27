@@ -30,13 +30,13 @@ export default function Home() {
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
-  const [activesites, setActivesites] = useState<ArtisanalSite[]>([]);
-  const [inactivesites, setInactivesites] = useState<ArtisanalSite[]>([]);
+  const [activeSites, setActiveSites] = useState<ArtisanalSite[]>([]);
+  const [inactiveSites, setInactiveSites] = useState<ArtisanalSite[]>([]);
   const { showActiveMarkers, showInactiveMarkers } = useMarkerVisibilityStore();
   const { openMapDetails, setMapDetailsContent } = useMapDetailsStore();
   const mapRef = useRef<MapRef | null>(null);
   const searchParams = useSearchParams();
-  const [markerLink, setMarkerLink] = useState("");
+  const artisanal_site_id = searchParams.get("artisanal_site_id");
 
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
@@ -54,26 +54,46 @@ export default function Home() {
 
   useEffect(() => {
     async function getData() {
-      const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
-      const inactive_sites_data = await fetchTinybirdData(
-        INACTIVE_SITES_API_URL,
-      );
-      setActivesites(active_sites_data);
-
-      setInactivesites(inactive_sites_data);
+      try {
+        const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
+        const inactive_sites_data = await fetchTinybirdData(
+          INACTIVE_SITES_API_URL,
+        );
+        setActiveSites(active_sites_data);
+        setInactiveSites(inactive_sites_data);
+      } catch (error) {
+        console.error("Error fetching site data:", error);
+      }
     }
     getData();
   }, []);
 
+  useEffect(() => {
+    if (artisanal_site_id) {
+      const artisanal_site = activeSites.find(
+        (site) => site.site_name === artisanal_site_id,
+      );
+      if (artisanal_site && mapRef.current) {
+        mapRef.current.flyTo({
+          center: [artisanal_site.longitude, artisanal_site.latitude],
+          duration: 1500,
+          zoom: 12,
+        });
+      }
+    }
+  }, [artisanal_site_id, activeSites]);
+
   const handleMapDetailsClick = useCallback(
-    (site: string, latitude: number, longitude: number) => {
+    (latitude: number, longitude: number) => {
       openMapDetails();
       setMapDetailsContent(<MapDetailsContent />);
-      mapRef.current?.flyTo({
-        center: [longitude, latitude],
-        duration: 1500,
-        zoom: 12,
-      });
+      if (mapRef.current) {
+        mapRef.current.flyTo({
+          center: [longitude, latitude],
+          duration: 1500,
+          zoom: 12,
+        });
+      }
     },
     [openMapDetails, setMapDetailsContent],
   );
@@ -123,39 +143,37 @@ export default function Home() {
         )}
 
         {showActiveMarkers &&
-          activesites.map((site, index) => (
+          activeSites.map((site, index) => (
             <Marker
               key={`active-${index}`}
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(
-                  site.site_name,
-                  site.latitude,
-                  site.longitude,
-                )
+                handleMapDetailsClick(site.latitude, site.longitude)
               }
             >
               <Link href={`/?artisanal_site_id=${site.site_name}`}>
-                <Pin className="fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white" />
+                <Pin
+                  className={`${
+                    artisanal_site_id === site.site_name
+                      ? "h-12 w-12 animate-pulse fill-cyan-700 stroke-cyan-50"
+                      : "h-6 w-6 fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white"
+                  }`}
+                />
               </Link>
             </Marker>
           ))}
 
         {showInactiveMarkers &&
-          inactivesites.map((site, index) => (
+          inactiveSites.map((site, index) => (
             <Marker
               key={`inactive-${index}`}
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(
-                  site.site_name,
-                  site.latitude,
-                  site.longitude,
-                )
+                handleMapDetailsClick(site.latitude, site.longitude)
               }
             >
               <Link href={`/?artisanal_site_id=${site.site_name}`}>
