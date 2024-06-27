@@ -18,6 +18,7 @@ import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import MapDetailsContent from "./mapDetailsContent";
 import Link from "next/link";
+import { active_sites, inactive_sites } from "@/data/mapData";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -55,10 +56,17 @@ export default function Home() {
   useEffect(() => {
     async function getData() {
       try {
-        const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
-        const inactive_sites_data = await fetchTinybirdData(
-          INACTIVE_SITES_API_URL,
-        );
+        // using tinybird api ----------------------------------------------
+
+        // const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
+        // const inactive_sites_data = await fetchTinybirdData(
+        //   INACTIVE_SITES_API_URL,
+        // );
+
+        // using local data ------------------------------------------------
+        const active_sites_data = active_sites.data;
+        const inactive_sites_data = inactive_sites.data;
+
         setActiveSites(active_sites_data);
         setInactiveSites(inactive_sites_data);
       } catch (error) {
