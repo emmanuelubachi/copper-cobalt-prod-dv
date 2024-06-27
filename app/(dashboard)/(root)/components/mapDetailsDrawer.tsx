@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "../ui/button";
+import { Button } from "../../../../components/ui/button";
 import { X } from "lucide-react";
-import { ScrollArea } from "../ui/scroll-area";
+import { ScrollArea } from "../../../../components/ui/scroll-area";
 import useDeviceType from "@/hooks/useDeviceType";
 
 const MapDetailsDrawer = () => {
@@ -35,7 +35,7 @@ const MapDetailsDrawer = () => {
           )}
 
           <motion.div
-            className="fixed right-0 top-0 z-50 h-screen w-80 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-[40rem]"
+            className="fixed right-0 top-0 z-50 h-screen w-80 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-[25rem] xl:w-[30rem]"
             initial="initial"
             animate="animate"
             exit="exit"

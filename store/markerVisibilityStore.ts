@@ -9,7 +9,7 @@ interface MarkerVisibilityState {
 
 const useMarkerVisibilityStore = create<MarkerVisibilityState>((set) => ({
   showActiveMarkers: true,
-  showInactiveMarkers: false,
+  showInactiveMarkers: true,
   toggleActiveMarkers: () =>
     set((state) => ({ showActiveMarkers: !state.showActiveMarkers })),
   toggleInactiveMarkers: () =>

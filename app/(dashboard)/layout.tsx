@@ -4,7 +4,7 @@ import Nav from "@/components/elements/nav";
 import Header from "@/components/elements/header";
 import FilterDrawer from "@/components/elements/filterDrawer";
 import MobileNav from "@/components/elements/mobileNav";
-import MapDetailsDrawer from "@/components/elements/mapDetailsDrawer";
+import MapDetailsDrawer from "./(root)/components/mapDetailsDrawer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
