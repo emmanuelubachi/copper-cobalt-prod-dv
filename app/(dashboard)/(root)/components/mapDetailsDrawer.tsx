@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../../../../components/ui/button";
-import { X } from "lucide-react";
-import { ScrollArea } from "../../../../components/ui/scroll-area";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import useDeviceType from "@/hooks/useDeviceType";
+import { ScrollArea } from "../../../../components/ui/scroll-area";
 
-const MapDetailsDrawer = () => {
+export default function MapDetailsDrawer() {
   const { isMapDetailsOpen, closeMapDetails, mapDetailsDrawerContent } =
     useMapDetailsStore();
   const { isMobile, isTablet } = useDeviceType();
@@ -17,25 +17,25 @@ const MapDetailsDrawer = () => {
     setMounted(true);
   }, []);
 
-  const handleOverlayClick = () => {
-    if (isMapDetailsOpen) {
-      closeMapDetails();
-    }
-  };
+  // const handleOverlayClick = () => {
+  //   if (isMapDetailsOpen) {
+  //     closeMapDetails();
+  //   }
+  // };
 
   return (
     <AnimatePresence>
       {isMapDetailsOpen && mounted && (
         <>
-          {isMobile && (
+          {/* {isMobile && (
             <div
               className="fixed inset-0 z-[45] bg-black opacity-50"
               onClick={handleOverlayClick}
             />
-          )}
+          )} */}
 
           <motion.div
-            className="fixed right-0 top-0 z-50 h-screen w-80 bg-neutral-50 p-5 shadow-lg dark:bg-neutral-900 lg:w-[25rem] xl:w-[30rem]"
+            className="fixed bottom-0 z-50 h-2/4 w-screen rounded-t-2xl bg-neutral-50 shadow-lg dark:bg-neutral-900 sm:right-0 sm:top-0 sm:h-screen sm:w-[25rem] sm:rounded-none xl:w-[30rem]"
             initial="initial"
             animate="animate"
             exit="exit"
@@ -47,13 +47,17 @@ const MapDetailsDrawer = () => {
           >
             <div className="flex h-full w-full">
               {isMapDetailsOpen && (
-                <div className="flex h-full w-full flex-col gap-4">
+                <div className="mt-10 flex h-full w-full flex-col gap-4 sm:mt-0">
                   <Button
-                    variant="ghost"
-                    className="mr-auto p-2"
+                    variant="secondary"
+                    className={`absolute m-0 p-0 ${isMobile ? "left-1/2 top-2 h-6 w-16 -translate-x-1/2 transform" : "left-0 top-1/2 -m-[calc(24px/2)] h-16 -translate-y-1/2 transform"}`}
                     onClick={closeMapDetails}
                   >
-                    <X className="h-5 w-5" />
+                    {isMobile ? (
+                      <ChevronDown className="h-6 w-6 text-foreground/60" />
+                    ) : (
+                      <ChevronRight className="h-6 w-6 text-foreground/60 hover:animate-[pulse_3s_infinite]" />
+                    )}
                     <span className="sr-only">Close</span>
                   </Button>
                   <ScrollArea className="h-full">
@@ -67,14 +71,22 @@ const MapDetailsDrawer = () => {
       )}
     </AnimatePresence>
   );
-};
-
-export default MapDetailsDrawer;
+}
 
 const getAnimationVariants = () => {
-  return {
-    initial: { x: "100%" },
-    animate: { x: 0 },
-    exit: { x: "100%" },
-  };
+  // Check if the device width is less than or equal to 640px (mobile)
+  if (window.innerWidth <= 639) {
+    return {
+      initial: { y: "100%" },
+      animate: { y: 0 },
+      exit: { y: "100%" },
+    };
+  } else {
+    // For larger screens, animate horizontally
+    return {
+      initial: { x: "100%" },
+      animate: { x: 0 },
+      exit: { x: "100%" },
+    };
+  }
 };

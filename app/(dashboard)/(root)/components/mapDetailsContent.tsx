@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { active_sites, inactive_sites } from "@/data/mapData";
+
+import Map from "react-map-gl";
+
+const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
 interface SiteDetailsProps {
   sources: string;
@@ -20,57 +25,75 @@ interface SiteDetailsProps {
   status_in_2023: string;
 }
 
-const SiteDetails = ({ site }: { site: SiteDetailsProps }) => {
+const siteDetailsLabels: { key: keyof SiteDetailsProps; label: string }[] = [
+  { key: "sources", label: "Sources" },
+  { key: "visit_date", label: "Visit Date" },
+  { key: "site_visit__bgr", label: "Visited by BGR" },
+  { key: "site_visit__cgsp", label: "Visited by CGSP" },
+  { key: "longitude", label: "Longitude" },
+  { key: "latitude", label: "Latitude" },
+  { key: "location_origin", label: "Location Origin" },
+  { key: "province__territory", label: "Province/Territory" },
+  { key: "cooperative_in_charge", label: "Cooperative in Charge" },
+  { key: "employees", label: "Employees" },
+  { key: "minerals_extracted", label: "Minerals Extracted" },
+  { key: "point_of_sale__purchasing_station", label: "Point of Sale" },
+  { key: "status_in_2023", label: "Status in 2023" },
+];
+
+const SiteDetails = ({
+  site,
+  className,
+}: {
+  site: SiteDetailsProps;
+  className?: string;
+}) => {
   return (
-    <div className="mb-4 space-y-4 rounded-lg border p-4 shadow-lg">
+    <div className={`grid gap-2 ${className}`}>
       <h2 className="text-xl font-bold">{site.site_name}</h2>
-      <p>
-        <span className="font-semibold">Sources:</span> {site.sources}
-      </p>
-      <p>
-        <span className="font-semibold">Visit Date:</span> {site.visit_date}
-      </p>
-      <p>
-        <span className="font-semibold">Visited by BGR:</span>
-        {site.site_visit__bgr}
-      </p>
-      <p>
-        <span className="font-semibold">Visited by CGSP:</span>
-        {site.site_visit__cgsp}
-      </p>
-      <p>
-        <span className="font-semibold">Longitude:</span> {site.longitude}
-      </p>
-      <p>
-        <span className="font-semibold">Latitude:</span> {site.latitude}
-      </p>
-      <p>
-        <span className="font-semibold">Location Origin:</span>
-        {site.location_origin}
-      </p>
-      <p>
-        <span className="font-semibold">Province/Territory:</span>
-        {site.province__territory}
-      </p>
-      <p>
-        <span className="font-semibold">Cooperative in Charge:</span>
-        {site.cooperative_in_charge || "N/A"}
-      </p>
-      <p>
-        <span className="font-semibold">Employees:</span> {site.employees}
-      </p>
-      <p>
-        <span className="font-semibold">Minerals Extracted:</span>
-        {site.minerals_extracted}
-      </p>
-      <p>
-        <span className="font-semibold">Point of Sale:</span>
-        {site.point_of_sale__purchasing_station || "N/A"}
-      </p>
-      <p>
-        <span className="font-semibold">Status in 2023:</span>
-        {site.status_in_2023}
-      </p>
+      <div className="mb-4 flex shrink grow flex-col space-y-4 rounded-lg border p-2 shadow-lg">
+        {siteDetailsLabels.map(({ key, label }) => (
+          <p key={key}>
+            <span className="font-semibold">{label}:</span> {site[key] ?? "N/A"}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const SiteMap = ({
+  site_latitude,
+  site_longitude,
+}: {
+  site_latitude?: number;
+  site_longitude?: number;
+}) => {
+  const [viewState, setViewState] = useState({
+    longitude: 23.52741376552,
+    latitude: -3.050471588628,
+    zoom: 4,
+  });
+
+  useEffect(() => {
+    if (site_latitude && site_longitude) {
+      setViewState({
+        longitude: site_longitude,
+        latitude: site_latitude,
+        zoom: 14,
+      });
+    }
+  }, [site_latitude, site_longitude]);
+
+  return (
+    <div className="relative h-48 w-full sm:h-80">
+      <Map
+        mapboxAccessToken={TOKEN}
+        mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
+        {...viewState}
+        style={{ position: "absolute" }}
+        attributionControl={false}
+      ></Map>
     </div>
   );
 };
@@ -81,7 +104,6 @@ export default function MapDetailsContent({
   site_name: string;
 }) {
   const searchParams = useSearchParams();
-  // const artisanal_site_id = searchParams.get("artisanal_site_id");
   const artisanal_site_id = site_name;
 
   if (!artisanal_site_id) {
@@ -96,8 +118,15 @@ export default function MapDetailsContent({
     inactiveSites.find((site) => site.site_name === artisanal_site_id);
 
   return (
-    <div className="container mx-auto px-2">
-      <SiteDetails site={artisanal_site_details as SiteDetailsProps} />
+    <div className="mx-auto">
+      <SiteMap
+        site_latitude={artisanal_site_details?.latitude}
+        site_longitude={artisanal_site_details?.longitude}
+      />
+      <SiteDetails
+        className="p-4 sm:p-6"
+        site={artisanal_site_details as SiteDetailsProps}
+      />
     </div>
   );
 }
