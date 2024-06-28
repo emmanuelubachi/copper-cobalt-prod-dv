@@ -43,7 +43,7 @@ export default function Home() {
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
     latitude: -3.050471588628,
-    zoom: 5,
+    zoom: 4,
   });
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function Home() {
         mapRef.current.flyTo({
           center: [artisanal_site.longitude, artisanal_site.latitude],
           duration: 1500,
-          zoom: 13,
+          zoom: 12,
         });
       }
     }
@@ -102,7 +102,7 @@ export default function Home() {
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 13,
+          zoom: 12,
         });
       }
     },
