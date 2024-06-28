@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { active_sites, inactive_sites } from "@/data/mapData";
-
 import Map from "react-map-gl";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -72,7 +71,7 @@ const SiteMap = ({
   const [viewState, setViewState] = useState({
     longitude: 23.52741376552,
     latitude: -3.050471588628,
-    zoom: 4,
+    zoom: 15,
   });
 
   useEffect(() => {
@@ -80,7 +79,7 @@ const SiteMap = ({
       setViewState({
         longitude: site_longitude,
         latitude: site_latitude,
-        zoom: 14,
+        zoom: 15,
       });
     }
   }, [site_latitude, site_longitude]);
@@ -91,6 +90,9 @@ const SiteMap = ({
         mapboxAccessToken={TOKEN}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
         {...viewState}
+        onMove={(evt) => setViewState(evt.viewState)}
+        maxZoom={16}
+        minZoom={14}
         style={{ position: "absolute" }}
         attributionControl={false}
       ></Map>
