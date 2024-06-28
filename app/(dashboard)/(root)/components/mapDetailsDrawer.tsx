@@ -50,13 +50,13 @@ export default function MapDetailsDrawer() {
                 <div className="mt-10 flex h-full w-full flex-col gap-4 sm:mt-0">
                   <Button
                     variant="secondary"
-                    className={`absolute m-0 p-0 ${isMobile ? "left-1/2 top-2 h-6 w-16 -translate-x-1/2 transform" : "left-0 top-1/2 -m-[calc(24px/2)] h-16 -translate-y-1/2 transform"}`}
+                    className={`group absolute z-[60] m-0 p-0 ${isMobile ? "left-1/2 top-2 h-6 w-16 -translate-x-1/2 transform" : "left-0 top-1/2 -m-[calc(24px/2)] h-16 -translate-y-1/2 transform"}`}
                     onClick={closeMapDetails}
                   >
                     {isMobile ? (
                       <ChevronDown className="h-6 w-6 text-foreground/60" />
                     ) : (
-                      <ChevronRight className="h-6 w-6 text-foreground/60 hover:animate-[pulse_3s_infinite]" />
+                      <ChevronRight className="h-6 w-6 text-foreground/60 group-hover:animate-[pulse_2s_infinite]" />
                     )}
                     <span className="sr-only">Close</span>
                   </Button>
