@@ -1,9 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 
 const useDeviceType = () => {
-  const isMobile = useMediaQuery({ maxWidth: 640 });
-  const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
-  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isMobile = useMediaQuery({ maxWidth: 639 });
+  const isTablet = useMediaQuery({ minWidth: 640, maxWidth: 1023 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return { isMobile, isTablet, isDesktop };
 };
