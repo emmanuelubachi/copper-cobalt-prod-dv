@@ -108,7 +108,7 @@ export default function Home() {
         });
       }
     }
-  }, [artisanal_site_id, activeSites, inactiveSites, theme]);
+  }, [artisanal_site_id, activeSites, inactiveSites]);
 
   const handleArtisanalSiteClick = useCallback(
     (site_name: string, latitude: number, longitude: number) => {
