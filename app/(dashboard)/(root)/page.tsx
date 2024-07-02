@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Map, {
   MapRef,
   AttributionControl,
@@ -11,7 +11,12 @@ import Map, {
 } from "react-map-gl";
 import useDeviceType from "@/hooks/useDeviceType";
 import "mapbox-gl/dist/mapbox-gl.css";
+
 import Pin from "@/components/svg/pin";
+import { MapPin } from "lucide-react";
+import { SewingPinFilledIcon } from "@radix-ui/react-icons";
+import { RiMapPin2Fill, RiMapPin3Fill } from "@remixicon/react";
+
 import { ArtisanalSite, ProcessingEntities } from "@/types";
 import { fetchTinybirdData } from "@/lib/fetchData";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
@@ -37,6 +42,7 @@ export default function Home() {
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
+  const router = useRouter();
 
   const [activeSites, setActiveSites] = useState<ArtisanalSite[]>([]);
   const [inactiveSites, setInactiveSites] = useState<ArtisanalSite[]>([]);
@@ -112,7 +118,9 @@ export default function Home() {
 
   const handleArtisanalSiteClick = useCallback(
     (site_name: string, latitude: number, longitude: number) => {
+      router.push(`/?artisanal_site_id=${site_name}`);
       setSelectedSite(site_name);
+
       openMapDetails();
       setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
@@ -124,7 +132,7 @@ export default function Home() {
         });
       }
     },
-    [openMapDetails, setMapDetailsContent],
+    [openMapDetails, setMapDetailsContent, router],
   );
 
   const handleMapDetailsClick = useCallback(
@@ -195,6 +203,7 @@ export default function Home() {
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 handleArtisanalSiteClick(
                   site.site_name,
@@ -203,15 +212,13 @@ export default function Home() {
                 )
               }
             >
-              <Link href={`/?artisanal_site_id=${site.site_name}`}>
-                <Pin
-                  className={`${
-                    selectedSite === site.site_name
-                      ? "h-12 w-12 animate-bounce fill-red-700"
-                      : "h-6 w-6 fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white"
-                  } ${artisanal_site_id === site.site_name && ""}`}
-                />
-              </Link>
+              <RiMapPin2Fill
+                className={` ${
+                  selectedSite === site.site_name
+                    ? "dark:fill-red-70 h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
+                    : "h-8 w-8 fill-cyan-600 stroke-cyan-700 dark:fill-cyan-500 dark:stroke-cyan-600"
+                } ${artisanal_site_id === site.site_name && ""}`}
+              />
             </Marker>
           ))}
 
@@ -222,6 +229,7 @@ export default function Home() {
               longitude={site.longitude}
               latitude={site.latitude}
               anchor="bottom"
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 handleArtisanalSiteClick(
                   site.site_name,
@@ -230,15 +238,13 @@ export default function Home() {
                 )
               }
             >
-              <Link href={`/?artisanal_site_id=${site.site_name}`}>
-                <Pin
-                  className={`${
-                    selectedSite === site.site_name
-                      ? "h-12 w-12 animate-bounce fill-red-400 dark:fill-red-800"
-                      : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
-                  } ${artisanal_site_id === site.site_name && ""} `}
-                />
-              </Link>
+              <RiMapPin2Fill
+                className={`${
+                  selectedSite === site.site_name
+                    ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
+                    : "h-8 w-8 fill-neutral-500 stroke-neutral-600 dark:fill-neutral-400 dark:stroke-neutral-500"
+                } ${artisanal_site_id === site.site_name && ""} `}
+              />
             </Marker>
           ))}
 
@@ -249,7 +255,7 @@ export default function Home() {
               longitude={parseFloat(site.longitude)}
               latitude={parseFloat(site.latitude)}
               anchor="bottom"
-              color="rgb(22 163 74)"
+              color={"rgb(22 163 74)"}
               style={{ cursor: "pointer" }}
               onClick={() =>
                 handleMapDetailsClick(
@@ -259,7 +265,22 @@ export default function Home() {
                 )
               }
             >
-              {/* <Link href={`/?artisanal_site_id=${site.site_name}`}>
+              <RiMapPin2Fill
+                className={`${
+                  selectedSite === site.project_name
+                    ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
+                    : "h-8 w-8 fill-green-700 stroke-green-50 dark:fill-green-500 dark:stroke-green-700"
+                } ${artisanal_site_id === site.project_name && ""} `}
+              />
+            </Marker>
+          ))}
+      </Map>
+    </main>
+  );
+}
+
+{
+  /* <Link href={`/?artisanal_site_id=${site.site_name}`}>
             <Pin
               className={`${
                 selectedSite === site.site_name
@@ -267,10 +288,5 @@ export default function Home() {
                   : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
               } ${artisanal_site_id === site.site_name && ""} `}
             />
-          </Link> */}
-            </Marker>
-          ))}
-      </Map>
-    </main>
-  );
+          </Link> */
 }
