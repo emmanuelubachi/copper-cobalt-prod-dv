@@ -60,3 +60,7 @@ export type ProcessingEntities = {
   affiliation: string | null;
   sources: string | null;
 };
+
+export type PopopInfo = {
+  ProcessingEntities: ProcessingEntities;
+};
