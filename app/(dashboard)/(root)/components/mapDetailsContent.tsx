@@ -100,7 +100,7 @@ const SiteMap = ({
   );
 };
 
-export default function MapDetailsContent({
+export default function ArtisanalSiteContent({
   site_name,
 }: {
   site_name: string;
@@ -131,4 +131,12 @@ export default function MapDetailsContent({
       />
     </div>
   );
+}
+
+export function ProcessingEntitiesContent({
+  site_name,
+}: {
+  site_name: string;
+}) {
+  return <div> {site_name}</div>;
 }

@@ -10,10 +10,12 @@ type MapFilterProps = {
 
 export default function MapFilter({ defaultValue }: MapFilterProps) {
   const {
-    showActiveMarkers,
-    showInactiveMarkers,
-    toggleActiveMarkers,
-    toggleInactiveMarkers,
+    showActiveSiteMarkers,
+    showInactiveSiteMarkers,
+    showProcessingEntiteMarkers,
+    toggleActiveSiteMarkers,
+    toggleInactiveSiteMarkers,
+    toggleProcessingEntiteMarkers,
   } = useMarkerVisibilityStore();
 
   return (
@@ -43,9 +45,9 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
 
           <div className="flex gap-2">
             <Button
-              onClick={toggleActiveMarkers}
+              onClick={toggleActiveSiteMarkers}
               className={`w-full rounded px-4 py-2 ${
-                showActiveMarkers
+                showActiveSiteMarkers
                   ? "bg-cyan-500 hover:bg-cyan-500/90 dark:bg-cyan-600 dark:hover:bg-cyan-600/80"
                   : "bg-accent text-cyan-500 ring-1 ring-cyan-500 hover:bg-accent hover:ring-2"
               }`}
@@ -54,9 +56,9 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
             </Button>
 
             <Button
-              onClick={toggleInactiveMarkers}
+              onClick={toggleInactiveSiteMarkers}
               className={`w-full rounded px-4 py-2 ${
-                showInactiveMarkers
+                showInactiveSiteMarkers
                   ? "bg-neutral-500 hover:bg-neutral-500/90 dark:bg-neutral-400 dark:hover:bg-neutral-400/80"
                   : "bg-accent text-foreground ring-1 ring-neutral-500 hover:bg-accent hover:ring-2"
               }`}
@@ -77,9 +79,9 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
           </div>
           <div className="flex gap-2">
             <Button
-              // onClick={}
+              onClick={toggleProcessingEntiteMarkers}
               className={`w-full rounded px-4 py-2 ${
-                showActiveMarkers
+                showProcessingEntiteMarkers
                   ? "bg-green-500 hover:bg-green-500/90 dark:bg-green-600 dark:hover:bg-green-600/80"
                   : "bg-accent text-green-500 ring-1 ring-green-500 hover:bg-accent hover:ring-2"
               }`}

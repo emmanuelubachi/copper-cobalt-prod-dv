@@ -1,19 +1,30 @@
 import { create } from "zustand";
 
 interface MarkerVisibilityState {
-  showActiveMarkers: boolean;
-  showInactiveMarkers: boolean;
-  toggleActiveMarkers: () => void;
-  toggleInactiveMarkers: () => void;
+  showActiveSiteMarkers: boolean;
+  showInactiveSiteMarkers: boolean;
+  showProcessingEntiteMarkers: boolean;
+
+  toggleActiveSiteMarkers: () => void;
+  toggleInactiveSiteMarkers: () => void;
+  toggleProcessingEntiteMarkers: () => void;
 }
 
 const useMarkerVisibilityStore = create<MarkerVisibilityState>((set) => ({
-  showActiveMarkers: true,
-  showInactiveMarkers: true,
-  toggleActiveMarkers: () =>
-    set((state) => ({ showActiveMarkers: !state.showActiveMarkers })),
-  toggleInactiveMarkers: () =>
-    set((state) => ({ showInactiveMarkers: !state.showInactiveMarkers })),
+  showActiveSiteMarkers: true,
+  showInactiveSiteMarkers: true,
+  showProcessingEntiteMarkers: false,
+
+  toggleActiveSiteMarkers: () =>
+    set((state) => ({ showActiveSiteMarkers: !state.showActiveSiteMarkers })),
+  toggleInactiveSiteMarkers: () =>
+    set((state) => ({
+      showInactiveSiteMarkers: !state.showInactiveSiteMarkers,
+    })),
+  toggleProcessingEntiteMarkers: () =>
+    set((state) => ({
+      showProcessingEntiteMarkers: !state.showProcessingEntiteMarkers,
+    })),
 }));
 
 export default useMarkerVisibilityStore;
