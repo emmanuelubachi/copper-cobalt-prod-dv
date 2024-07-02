@@ -12,13 +12,19 @@ import Map, {
 import useDeviceType from "@/hooks/useDeviceType";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "@/components/svg/pin";
-import { ArtisanalSite } from "@/types";
+import { ArtisanalSite, ProcessingEntities } from "@/types";
 import { fetchTinybirdData } from "@/lib/fetchData";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import MapDetailsContent from "./components/mapDetailsContent";
+import ArtisanalSiteContent, {
+  ProcessingEntitiesContent,
+} from "./components/mapDetailsContent";
 import Link from "next/link";
-import { active_sites, inactive_sites } from "@/data/mapData";
+import {
+  active_sites,
+  inactive_sites,
+  processing_entities,
+} from "@/data/mapData";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -31,10 +37,20 @@ export default function Home() {
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
+
   const [activeSites, setActiveSites] = useState<ArtisanalSite[]>([]);
   const [inactiveSites, setInactiveSites] = useState<ArtisanalSite[]>([]);
-  const { showActiveMarkers, showInactiveMarkers } = useMarkerVisibilityStore();
-  const { openMapDetails, setMapDetailsContent } = useMapDetailsStore();
+  const [processingEntities, setProcessingEntities] = useState<
+    ProcessingEntities[]
+  >([]);
+
+  const {
+    showActiveSiteMarkers,
+    showInactiveSiteMarkers,
+    showProcessingEntiteMarkers,
+  } = useMarkerVisibilityStore();
+  const { openMapDetails, closeMapDetails, setMapDetailsContent } =
+    useMapDetailsStore();
   const mapRef = useRef<MapRef | null>(null);
   const searchParams = useSearchParams();
   const artisanal_site_id = searchParams.get("artisanal_site_id");
@@ -67,9 +83,11 @@ export default function Home() {
         // using local data ------------------------------------------------
         const active_sites_data = active_sites.data;
         const inactive_sites_data = inactive_sites.data;
+        const processing_entities_data = processing_entities.data;
 
         setActiveSites(active_sites_data);
         setInactiveSites(inactive_sites_data);
+        setProcessingEntities(processing_entities_data);
       } catch (error) {
         console.error("Error fetching site data:", error);
       }
@@ -92,11 +110,11 @@ export default function Home() {
     }
   }, [artisanal_site_id, activeSites, inactiveSites, theme]);
 
-  const handleMapDetailsClick = useCallback(
+  const handleArtisanalSiteClick = useCallback(
     (site_name: string, latitude: number, longitude: number) => {
       setSelectedSite(site_name);
       openMapDetails();
-      setMapDetailsContent(<MapDetailsContent site_name={site_name} />);
+      setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
       if (mapRef.current) {
         mapRef.current.flyTo({
@@ -107,6 +125,23 @@ export default function Home() {
       }
     },
     [openMapDetails, setMapDetailsContent],
+  );
+
+  const handleMapDetailsClick = useCallback(
+    (site_name: string, latitude: number, longitude: number) => {
+      setSelectedSite(site_name);
+      closeMapDetails();
+      // setMapDetailsContent(<ProcessingEntitiesContent site_name={site_name} />);
+
+      if (mapRef.current) {
+        mapRef.current.flyTo({
+          center: [longitude, latitude],
+          duration: 1500,
+          zoom: 12,
+        });
+      }
+    },
+    [closeMapDetails],
   );
 
   return (
@@ -153,7 +188,7 @@ export default function Home() {
           </>
         )}
 
-        {showActiveMarkers &&
+        {showActiveSiteMarkers &&
           activeSites.map((site, index) => (
             <Marker
               key={`active-${index}`}
@@ -161,7 +196,7 @@ export default function Home() {
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(
+                handleArtisanalSiteClick(
                   site.site_name,
                   site.latitude,
                   site.longitude,
@@ -174,13 +209,13 @@ export default function Home() {
                     selectedSite === site.site_name
                       ? "h-12 w-12 animate-bounce fill-red-700"
                       : "h-6 w-6 fill-cyan-700 stroke-cyan-50 dark:fill-cyan-500 dark:stroke-white"
-                  } ${artisanal_site_id === site.site_name && "fill-red-300 stroke-none dark:fill-red-900"}`}
+                  } ${artisanal_site_id === site.site_name && ""}`}
                 />
               </Link>
             </Marker>
           ))}
 
-        {showInactiveMarkers &&
+        {showInactiveSiteMarkers &&
           inactiveSites.map((site, index) => (
             <Marker
               key={`inactive-${index}`}
@@ -188,7 +223,7 @@ export default function Home() {
               latitude={site.latitude}
               anchor="bottom"
               onClick={() =>
-                handleMapDetailsClick(
+                handleArtisanalSiteClick(
                   site.site_name,
                   site.latitude,
                   site.longitude,
@@ -201,9 +236,38 @@ export default function Home() {
                     selectedSite === site.site_name
                       ? "h-12 w-12 animate-bounce fill-red-400 dark:fill-red-800"
                       : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
-                  } ${artisanal_site_id === site.site_name && "fill-red-500 stroke-none dark:fill-red-800"} `}
+                  } ${artisanal_site_id === site.site_name && ""} `}
                 />
               </Link>
+            </Marker>
+          ))}
+
+        {showProcessingEntiteMarkers &&
+          processingEntities.map((site, index) => (
+            <Marker
+              key={`inactive-${index}`}
+              longitude={parseFloat(site.longitude)}
+              latitude={parseFloat(site.latitude)}
+              anchor="bottom"
+              color="rgb(22 163 74)"
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                handleMapDetailsClick(
+                  site.project_name,
+                  parseFloat(site.latitude),
+                  parseFloat(site.longitude),
+                )
+              }
+            >
+              {/* <Link href={`/?artisanal_site_id=${site.site_name}`}>
+            <Pin
+              className={`${
+                selectedSite === site.site_name
+                  ? "h-12 w-12 animate-bounce fill-red-400 dark:fill-red-800"
+                  : "h-6 w-6 fill-neutral-700 stroke-neutral-50 dark:fill-neutral-500 dark:stroke-white"
+              } ${artisanal_site_id === site.site_name && ""} `}
+            />
+          </Link> */}
             </Marker>
           ))}
       </Map>
