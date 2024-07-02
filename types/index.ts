@@ -45,3 +45,18 @@ export type ArtisanalSite = {
   latitude: number;
   [key: string]: any;
 };
+
+export type ProcessingEntities = {
+  project_name: string;
+  geographic_coordinates: string;
+  latitude_longitude: string;
+  longitude: string;
+  latitude: string;
+  characteristics: string | null;
+  annual_production: string | null;
+  owners_shareholders: string | null;
+  nationality: string | null;
+  iso3: string | null;
+  affiliation: string | null;
+  sources: string | null;
+};
