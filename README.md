@@ -1,6 +1,6 @@
-# Nobilai Web Application Frontend Development.
+# Copper and Cobalt Production - Data Visualization Frontend Development
 
-Technologies and Tools used for development
+## Tech Stack
 
 ### Programming Language
 
@@ -13,6 +13,14 @@ Technologies and Tools used for development
 ### Framework: For serverside rendering, improved performance, and ease of use.
 
 - Next.js: https://nextjs.org/
+
+### Interactive Visualization and Map
+
+- Recharts: https://recharts.org
+- Tremor (rechart under the hood): https://www.tremor.so/
+- Echarts (for TreeMap): https://echarts.apache.org/en/index.html
+- Echarts-for-react: https://git.hust.cc/echarts-for-react/
+- Mapbox: https://www.mapbox.com/
 
 ### Styling
 
@@ -39,6 +47,7 @@ Technologies and Tools used for development
 
 - Radix Icons: https://www.radix-ui.com/icons
 - Lucide: https://lucide.dev/
+- Remix Icon: https://remixicon.com/
 
 ### Text Validation
 
