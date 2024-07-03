@@ -1,5 +1,5 @@
 import FilterButton from "@/components/elements/filterButton";
-import MapFilter from "./mapFilter";
+import MapFilter from "./components/mapFilter";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
