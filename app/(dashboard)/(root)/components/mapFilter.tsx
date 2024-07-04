@@ -1,8 +1,10 @@
 "use client";
+import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import { Toggle } from "@/components/ui/toggle";
+import ProjectTree from "./ProjectTree";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
@@ -90,6 +92,8 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
             </Button>
           </div>
         </div>
+
+        <ProjectTree />
       </TabsContent>
       <TabsContent value="additional-information" className="px-2 text-sm">
         Additional information filter content will go here.

@@ -101,3 +101,30 @@
 .__muted {
   @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 dark:hover:bg-background data-[state=on]:dark:bg-muted/100;
 }
+
+.tree {
+  list-style-type: none;
+}
+
+.tree li {
+  margin: 10px 0;
+}
+
+.border-start-gray {
+  border-left: 5px solid gray;
+}
+.border-start-java {
+  border-left: 5px solid teal;
+}
+.border-start-carnation {
+  border-left: 5px solid pink;
+}
+.border-start-desert-sand {
+  border-left: 5px solid sandybrown;
+}
+.border-start-pharlap {
+  border-left: 5px solid peru;
+}
+.border-start-neon-carrot {
+  border-left: 5px solid orange;
+}
