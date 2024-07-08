@@ -27,11 +27,20 @@ export default function MainMap({ dataCsv }: MapProps) {
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
   const mapRef = useRef<MapRef | null>(null);
-  const [viewState, setViewState] = useState({
-    longitude: 23.52741376552,
-    latitude: -3.050471588628,
-    zoom: 4,
-  });
+
+  const [viewState, setViewState] = useState(
+    isMobile
+      ? {
+          longitude: 23.52741376552,
+          latitude: -3.050471588628,
+          zoom: 3,
+        }
+      : {
+          longitude: 23.52741376552,
+          latitude: -3.050471588628,
+          zoom: 5,
+        },
+  );
 
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
