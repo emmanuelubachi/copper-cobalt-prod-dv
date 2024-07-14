@@ -23,7 +23,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { NAVLIST } from "@/constants/application";
-import ModeToggle from "../mode-toggle";
 
 export default function Header() {
   const pathname = usePathname();
@@ -86,10 +85,6 @@ export default function Header() {
               </nav>
             </SheetContent>
           </Sheet>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <ModeToggle />
         </div>
       </div>
     </header>

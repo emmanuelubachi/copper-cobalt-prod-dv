@@ -1,11 +1,11 @@
+"use client";
 import React from "react";
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import { useSearchParams, useRouter } from "next/navigation";
 import { RiMapPin2Fill } from "@remixicon/react";
-import { Popup, Marker } from "react-map-gl";
-import { MapRef } from "react-map-gl";
+import { MapRef, Popup, Marker, Source, Layer } from "react-map-gl";
 import ArtisanalSiteContent from "./components/mapDetailsContent";
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
@@ -21,23 +21,26 @@ interface MapContentsProps {
 
 export default function MapContents({ reference }: MapContentsProps) {
   const mapRef = reference;
+
   const router = useRouter();
   const searchParams = useSearchParams();
+  const artisanal_site_id = searchParams.get("artisanal_site_id");
+
+  const [selectedSite, setSelectedSite] = useState<string | null>(null);
+  const [popupInfo, setPopupInfo] = useState<ProcessingEntities | null>(null);
   const [activeSites, setActiveSites] = useState<ArtisanalSite[]>([]);
   const [inactiveSites, setInactiveSites] = useState<ArtisanalSite[]>([]);
   const [processingEntities, setProcessingEntities] = useState<
     ProcessingEntities[]
   >([]);
-  const artisanal_site_id = searchParams.get("artisanal_site_id");
+
+  const { openMapDetails, closeMapDetails, setMapDetailsContent } =
+    useMapDetailsStore();
   const {
     showActiveSiteMarkers,
     showInactiveSiteMarkers,
     showProcessingEntiteMarkers,
   } = useMarkerVisibilityStore();
-  const { openMapDetails, closeMapDetails, setMapDetailsContent } =
-    useMapDetailsStore();
-  const [selectedSite, setSelectedSite] = useState<string | null>(null);
-  const [popupInfo, setPopupInfo] = useState<ProcessingEntities | null>(null);
 
   useEffect(() => {
     async function getData() {
@@ -147,6 +150,7 @@ export default function MapContents({ reference }: MapContentsProps) {
             />
           </Marker>
         ))}
+
       {showInactiveSiteMarkers &&
         inactiveSites.map((site, index) => (
           <Marker
@@ -172,6 +176,7 @@ export default function MapContents({ reference }: MapContentsProps) {
             />
           </Marker>
         ))}
+
       {showProcessingEntiteMarkers &&
         processingEntities.map((site, index) => (
           <Marker
@@ -200,6 +205,7 @@ export default function MapContents({ reference }: MapContentsProps) {
             />
           </Marker>
         ))}
+
       {popupInfo && (
         <Popup
           longitude={Number(popupInfo.longitude)}
@@ -215,7 +221,7 @@ export default function MapContents({ reference }: MapContentsProps) {
         >
           <PopupContent {...popupInfo} />
         </Popup>
-      )}{" "}
+      )}
     </>
   );
 }
