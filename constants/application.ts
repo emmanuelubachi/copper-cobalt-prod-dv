@@ -27,3 +27,16 @@ export const NAVLIST: NavItem[] = [
   //   icon: Ship,
   // },
 ];
+
+export const NATIONALITYLIST: string[] = [
+  "Australia",
+  "China",
+  "China and Canada",
+  "DR Congo",
+  "India",
+  "Kazakhstan",
+  "South Africa",
+  "Switzerland",
+  "Unknown",
+  "USA",
+];

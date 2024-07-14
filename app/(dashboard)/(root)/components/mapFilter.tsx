@@ -1,10 +1,7 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  ArtisanalMiningActivities,
-  ProcessingEntities,
-  IndustralProjects,
-} from "./MiningActivities";
+import { ArtisanalSites, IndustralProjects } from "./MiningActivities";
+import { ProcessingEntities } from "./AdditionalInformation";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
@@ -26,7 +23,14 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="mining-activities" className="grid gap-8 px-2 py-4">
-        <ArtisanalMiningActivities />
+        <div>
+          <h6 className="text-h6 font-bold">Mining Activities</h6>
+          <p className="text-xs italic text-foreground/40">
+            Beatae quia excepturi dignissimos autem natus inventore quas amet
+            praesentium earum iste, perspiciatis dolores, ea ipsam.
+          </p>
+        </div>
+        <ArtisanalSites />
         <IndustralProjects />
       </TabsContent>
       <TabsContent value="additional-information" className="px-2 text-sm">
