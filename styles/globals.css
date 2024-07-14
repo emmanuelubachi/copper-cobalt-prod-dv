@@ -6,63 +6,46 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-
+    --primary: 0 72.2% 50.6%;
+    --primary-foreground: 0 85.7% 97.3%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-
-    --radius: 0.5rem;
+    --ring: 0 72.2% 50.6%;
+    --radius: 0.75rem;
   }
 
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
-
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
-
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-
+    --primary: 0 72.2% 50.6%;
+    --primary-foreground: 0 85.7% 97.3%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --ring: 0 72.2% 50.6%;
   }
 }
 
@@ -106,7 +89,7 @@
   @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 dark:hover:bg-background data-[state=on]:dark:bg-muted/100;
 }
 
-.tree {
+/* .tree {
   list-style-type: none;
 }
 
@@ -131,4 +114,39 @@
 }
 .border-start-neon-carrot {
   border-left: 5px solid orange;
+} */
+
+.react-checkbox-tree {
+  @apply !flex-col gap-1;
+}
+.rct-node-parent {
+  @apply mb-2 w-full rounded-lg border bg-muted px-4 py-2 ring-2 ring-muted-foreground/10;
+}
+
+.rct-text {
+  @apply items-center;
+}
+
+.rct-collapse,
+.rct-checkbox,
+.rct-node-icon {
+  @apply !flex;
+}
+
+.rct-collapse *,
+.rct-checkbox *,
+.rct-node-icon * {
+  @apply !h-5 !w-5;
+}
+
+.react-checkbox-tree label {
+  @apply flex flex-row items-center gap-2;
+}
+
+.rct-collapse.rct-collapse-btn {
+  /* @apply !items-center !justify-center ; */
+}
+
+.rct-node .rct-node-leaf .rct-text {
+  @apply my-2 w-full rounded-lg border bg-muted py-2 ring-2 ring-muted-foreground/10;
 }

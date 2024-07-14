@@ -1854,3 +1854,323 @@ export const dataCsv = {
     bytes_read: 86245,
   },
 };
+
+export const industralProjectsNationality = {
+  meta: [
+    {
+      name: "nationality",
+      type: "String",
+    },
+    {
+      name: "short_name",
+      type: "String",
+    },
+    {
+      name: "name",
+      type: "String",
+    },
+  ],
+  data: [
+    {
+      nationality: "Australia",
+      short_name: "SEK",
+      name: "SOCIETE D'EXPLOITATION DE KIPOI",
+    },
+    {
+      nationality: "China",
+      short_name: "ANVIL",
+      name: "ANVIL MINING CONGO SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "CCR",
+      name: "CHENGTUN CONGO RESSOURCES SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "CDM",
+      name: "CONGO DONGFANG INTERNATIONAL MINING",
+    },
+    {
+      nationality: "China",
+      short_name: "CJCMC",
+      name: "CONGO JINJUN CHENG",
+    },
+    {
+      nationality: "China",
+      short_name: "CNMC CONGO",
+      name: "SOCIETE CNMC CONGO COMPAGNIE MINIER",
+    },
+    {
+      nationality: "China",
+      short_name: "COMIKA",
+      name: "COMPAGNIE MINIERE DE KAMBOVE SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "COMILU",
+      name: "COMPAGNIE MINIERE DE LUISHA",
+    },
+    {
+      nationality: "China",
+      short_name: "COMMUS",
+      name: "LA COMPAGNIE MINIERE DE MUSONOIE GL",
+    },
+    {
+      nationality: "China",
+      short_name: "DIVINE LAND",
+      name: "DIVINE LAND MINING SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "EVERBRIGHT",
+      name: "EVERBRIGHT MINING SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "EXCELLEN",
+      name: "JIN XUN CONGO MINING SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "HANRUI METAL",
+      name: "SABWE MINING SARLSABWE MINING SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "HUACHIN MABENDE",
+      name: "CNMC HUACHIN MABENDE MINING SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "HUACHIN METAL",
+      name: "HUACHIN METAL LEACH SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "JXCOM",
+      name: "JIN XUN CONGO MINING SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "KAI PENG",
+      name: "SOCIETE KAI PENG MINING",
+    },
+    {
+      nationality: "China",
+      short_name: "KAMBOVE MINING",
+      name: "KAMBOVE MINING SAS",
+    },
+    {
+      nationality: "China",
+      short_name: "KFM",
+      name: "KISANFU MINING",
+    },
+    {
+      nationality: "China",
+      short_name: "KICC",
+      name: "KINSENDA COPPER COMPANY SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "LAMIKAL",
+      name: "LA MINIERE DE KALUNKUNDI",
+    },
+    {
+      nationality: "China",
+      short_name: "LCS",
+      name: "LUALABA COPPER SMELTER SAS",
+    },
+    {
+      nationality: "China",
+      short_name: "LR SAS",
+      name: "LUILU RESSOURCES SAS",
+    },
+    {
+      nationality: "China",
+      short_name: "MIKAS",
+      name: "LA  MINIERE  DE  KASOMBO",
+    },
+    {
+      nationality: "China",
+      short_name: "MJM",
+      name: "MACROLINK JIAYUAN MINING SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "MKM SAS",
+      name: "LA MINIERE DE KALUNBWE MYUNGA",
+    },
+    {
+      nationality: "China",
+      short_name: "MM",
+      name: "METAL MINES SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "MMG",
+      name: "MMG KINSEVERE SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "NEW MINERALS",
+      name: "NEW MINERALS",
+    },
+    {
+      nationality: "China",
+      short_name: "RUASHI MINING",
+      name: "RUASHI MINING SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "SHITURU MINING",
+      name: "SHITURU MINING CORPORATION SPRL",
+    },
+    {
+      nationality: "China",
+      short_name: "SICOMINES",
+      name: "SINO CONGOLAISE DES MINES SARL",
+    },
+    {
+      nationality: "China",
+      short_name: "SOMIDEZ",
+      name: "SOCIETE MINIERE DE DEZIWA SAS",
+    },
+    {
+      nationality: "China",
+      short_name: "TCC",
+      name: "TENGYUAN COBALT & COPPER RESOURCES",
+    },
+    {
+      nationality: "China",
+      short_name: "TFM",
+      name: "TENKE FUNGURUME MINING",
+    },
+    {
+      nationality: "China",
+      short_name: "THOMAS",
+      name: "THOMAS MINING SARL",
+    },
+    {
+      nationality: "China and Canada",
+      short_name: "KAMOA",
+      name: "KAMOA COPPER SA",
+    },
+    {
+      nationality: "DR Congo",
+      short_name: "CHEMAF",
+      name: "CHEMAF SA",
+    },
+    {
+      nationality: "DR Congo",
+      short_name: "GECAMINES",
+      name: "KISANFU MINING",
+    },
+    {
+      nationality: "DR Congo",
+      short_name: "KALONGWE",
+      name: "KALONGWE MINING S.A",
+    },
+    {
+      nationality: "DR Congo",
+      short_name: "MMT",
+      name: "MINERAL METAL TECHNOLOGY SARL",
+    },
+    {
+      nationality: "DR Congo",
+      short_name: "STL",
+      name: "SOCIETE POUR LE TRAITEMENT DU TERRIL DE LUBUMBASHI",
+    },
+    {
+      nationality: "India",
+      short_name: "CHEMAF",
+      name: "CHEMICAL OF AFRICA SPRL",
+    },
+    {
+      nationality: "India",
+      short_name: "GOLDEN AFRICAN",
+      name: "MINERAL METAL TECHNOLOGY SARL",
+    },
+    {
+      nationality: "India",
+      short_name: "KATANGA STRATEGIC",
+      name: "KATANGA STRATEGIC RESOURCES",
+    },
+    {
+      nationality: "India",
+      short_name: "KIMIN",
+      name: "KISANFU MINING SPRL",
+    },
+    {
+      nationality: "India",
+      short_name: "OMR",
+      name: "OM METAL RESSOURCES SPRL",
+    },
+    {
+      nationality: "India",
+      short_name: "RUBAMIN",
+      name: "RUBAMIN SARL",
+    },
+    {
+      nationality: "India",
+      short_name: "SOMIKA",
+      name: "SOCIETE MINIERE DU KATANGA",
+    },
+    {
+      nationality: "Kazakhstan",
+      short_name: "BOSS MINING",
+      name: "BOSS MINING SPRL",
+    },
+    {
+      nationality: "Kazakhstan",
+      short_name: "COMIDE",
+      name: "LA CONGOLAISE DES MINES ET DE DEVEL",
+    },
+    {
+      nationality: "Kazakhstan",
+      short_name: "FRONTIER",
+      name: "KALONGWE MINING S.A",
+    },
+    {
+      nationality: "Kazakhstan",
+      short_name: "METALKOL",
+      name: "COMPAGNIE DE TRAITEMENT DES REJETS KINGYAMBO",
+    },
+    {
+      nationality: "South Africa",
+      short_name: "MPC",
+      name: "MINING PROGRESS COMPAGNY SARL",
+    },
+    {
+      nationality: "Switzerland",
+      short_name: "KCC",
+      name: "KAMOTO COPPER COMPANY SARL",
+    },
+    {
+      nationality: "Switzerland",
+      short_name: "MUTANDA",
+      name: "MUTANDA MINING",
+    },
+    {
+      nationality: "USA",
+      short_name: "SABWE",
+      name: "SABWE MINING SARLSABWE MINING SARL",
+    },
+    {
+      nationality: "Unknown",
+      short_name: "AMICAL KAKANA",
+      name: "AMICAL KAKANA MINING SPRL",
+    },
+    {
+      nationality: "Unknown",
+      short_name: "CONGO MOON",
+      name: "CONGO MOON MINING",
+    },
+  ],
+  rows: 59,
+  statistics: {
+    elapsed: 0.025856749,
+    rows_read: 59,
+    bytes_read: 3851,
+  },
+};
