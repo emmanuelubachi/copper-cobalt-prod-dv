@@ -1,18 +1,22 @@
 import { create } from "zustand";
 
-interface MarkerVisibilityState {
+type MarkerVisibilityState = {
   showActiveSiteMarkers: boolean;
   showInactiveSiteMarkers: boolean;
   showProcessingEntiteMarkers: boolean;
+};
 
+type MarkerVisibilityActions = {
   toggleActiveSiteMarkers: () => void;
   toggleInactiveSiteMarkers: () => void;
   toggleProcessingEntiteMarkers: () => void;
-}
+};
 
-const useMarkerVisibilityStore = create<MarkerVisibilityState>((set) => ({
-  showActiveSiteMarkers: true,
-  showInactiveSiteMarkers: true,
+const useMarkerVisibilityStore = create<
+  MarkerVisibilityState & MarkerVisibilityActions
+>((set) => ({
+  showActiveSiteMarkers: false,
+  showInactiveSiteMarkers: false,
   showProcessingEntiteMarkers: false,
 
   toggleActiveSiteMarkers: () =>

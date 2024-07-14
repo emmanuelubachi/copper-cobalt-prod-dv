@@ -94,8 +94,12 @@
 
     --p: 1rem;
 
-    --pxs: 0.75rem;
+    --pxs: 0.7rem;
   }
+}
+
+.__button_pressed {
+  @apply transition-all duration-300 active:scale-95 dark:transition-all;
 }
 
 .__muted {
