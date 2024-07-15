@@ -10,7 +10,7 @@ import { ScrollArea } from "../../../../components/ui/scroll-area";
 export default function MapDetailsDrawer() {
   const { isMapDetailsOpen, closeMapDetails, mapDetailsDrawerContent } =
     useMapDetailsStore();
-  const { isMobile, isTablet } = useDeviceType();
+  const { isMobile } = useDeviceType();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
