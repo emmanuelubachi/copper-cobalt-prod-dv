@@ -22,7 +22,7 @@ const FilterDrawer = () => {
         <>
           {isMobile && (
             <div
-              className="fixed inset-0 z-[45] bg-black opacity-50"
+              className="fixed inset-0 z-[25] bg-black opacity-50"
               onClick={handleOverlayClick}
             />
           )}
