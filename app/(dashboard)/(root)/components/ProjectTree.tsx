@@ -1,3 +1,4 @@
+// not used
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
 import { dataCsv } from "@/data/mapData";
