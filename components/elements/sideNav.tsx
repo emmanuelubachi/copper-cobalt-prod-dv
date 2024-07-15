@@ -15,11 +15,11 @@ import { NAVLIST } from "@/constants/application";
 import { CGSPRedSvgIcon } from "../svg/cdsp_logo";
 import ModeToggle from "../mode-toggle";
 
-export default function Nav() {
+export default function SideNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="inset-y-0 left-0 z-10 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
+    <nav className="inset-y-0 left-0 z-40 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
       <div className="flex h-full w-full flex-col justify-between">
         <div className={`item-center flex flex-col gap-6 px-4 sm:py-2`}>
           <div className={`flex h-14 w-full items-center justify-center`}>

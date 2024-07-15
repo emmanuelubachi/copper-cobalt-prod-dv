@@ -12,6 +12,7 @@ import {
   ChevronDown,
   CheckSquare2,
 } from "lucide-react";
+import { ScrollArea } from "../ui/scroll-area";
 
 // Define props interface
 interface CheckBoxTreeWithFilterProps {
@@ -71,9 +72,11 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   };
 
   const icons = {
-    check: <Check className="h-4 w-4" />,
-    uncheck: <Square className="h-5 w-5" />,
-    halfCheck: <CheckSquare className="h-4 w-4" />,
+    check: (
+      <Check className="h-4 w-4 rounded-[2px] bg-red-500 text-background" />
+    ),
+    uncheck: <Square className="h-4 w-4 text-muted-foreground" />,
+    halfCheck: <CheckSquare className="h-4 w-4 text-red-300" />,
     expandClose: <ChevronRight className="h-4 w-4" />,
     expandOpen: <ChevronDown className="h-4 w-4" />,
     parentClose: null,
@@ -83,18 +86,37 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   };
 
   return (
-    <div className="flex w-full flex-col gap-2">
-      <div className="relative flex-1 md:grow-0">
+    <div className="mb-2 flex w-full flex-col gap-2">
+      <div className="group relative flex-1 md:grow-0">
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
-          type="search"
+          // type="search"
           placeholder="Search..."
-          className="w-full rounded-2xl bg-muted pl-8 focus:border-0 md:w-[200px] lg:w-[320px]"
+          className="custom-search w-full rounded-2xl bg-muted pl-8 focus:border-0"
           value={filterText}
           onChange={onFilterChange}
         />
+        {/* <button
+          type="button"
+          className="absolute right-4 top-1/2 hidden -translate-y-1/2 transform text-red-500 group-hover:block"
+          onClick={() => {
+            const searchInput = document.querySelector(
+              ".custom-search",
+            ) as HTMLInputElement;
+            if (searchInput) {
+              searchInput.value = "";
+              searchInput.focus();
+            }
+            const inputElement = document.querySelector(
+              ".custom-search",
+            ) as HTMLInputElement;
+            inputElement.focus();
+          }}
+        >
+          &times;
+        </button> */}
       </div>
-      <div className="w-full">
+      <div className="overflow-y-auto">
         <CheckboxTree
           checked={checked}
           expanded={expanded}

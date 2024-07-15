@@ -9,20 +9,26 @@ type MapFilterProps = {
 
 export default function MapFilter({ defaultValue }: MapFilterProps) {
   return (
-    <Tabs defaultValue={defaultValue} className="w-full">
+    <Tabs
+      defaultValue={defaultValue}
+      className="sm:80 w-72 overflow-hidden pb-16 xl:w-96"
+    >
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="mining-activities" className="text-pxs lg:text-sm">
+        <TabsTrigger value="mining-activities" className="text-pxs lg:text-xs">
           Mining Activities
         </TabsTrigger>
 
         <TabsTrigger
           value="additional-information"
-          className="text-pxs lg:text-sm"
+          className="text-pxs lg:text-xs"
         >
           Additional Information
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="mining-activities" className="grid gap-8 px-2 py-4">
+      <TabsContent
+        value="mining-activities"
+        className="mt-5 h-full gap-8 space-y-8 overflow-y-auto px-2 pb-5"
+      >
         <div>
           <h6 className="text-h6 font-bold">Mining Activities</h6>
           <p className="text-xs italic text-foreground/40">

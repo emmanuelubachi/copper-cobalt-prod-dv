@@ -117,14 +117,45 @@
 } */
 
 .react-checkbox-tree {
-  @apply !flex-col gap-1;
-}
-.rct-node-parent {
-  @apply mb-2 w-full rounded-lg border bg-muted px-4 py-2 ring-2 ring-muted-foreground/10;
+  @apply !flex-col gap-1 p-2;
 }
 
+/* ---------------------------------------------------------------------------------- */
+
+.rct-node-parent {
+  @apply mb-2 w-full rounded-md bg-muted/30 px-4 py-2 shadow-md;
+}
+
+.rct-node-parent:hover {
+  @apply bg-muted/40 ring-1 ring-red-500/20;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.rct-node .rct-node-leaf .rct-text {
+  @apply mb-2 mt-2 w-full rounded-md bg-muted/40 px-2;
+}
+
+.rct-node .rct-node-leaf .rct-text:hover {
+  @apply bg-muted;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.react-checkbox-tree label {
+  /* @apply !bg-transparent; */
+  @apply w-full rounded-md px-2 py-2;
+}
+
+.react-checkbox-tree label:hover {
+  @apply !bg-transparent;
+  /* @apply bg-muted; */
+}
+
+/* ---------------------------------------------------------------------------------- */
+
 .rct-text {
-  @apply items-center;
+  @apply line-clamp-1 flex-row-reverse items-center justify-between;
 }
 
 .rct-collapse,
@@ -136,7 +167,7 @@
 .rct-collapse *,
 .rct-checkbox *,
 .rct-node-icon * {
-  @apply !h-5 !w-5;
+  @apply !h-4 !w-4;
 }
 
 .react-checkbox-tree label {
@@ -144,9 +175,14 @@
 }
 
 .rct-collapse.rct-collapse-btn {
-  /* @apply !items-center !justify-center ; */
+  @apply !items-center !justify-center;
 }
 
-.rct-node .rct-node-leaf .rct-text {
-  @apply my-2 w-full rounded-lg border bg-muted py-2 ring-2 ring-muted-foreground/10;
+.rct-title {
+  @apply line-clamp-2 text-wrap text-xs;
+}
+
+.custom-search::-webkit-search-cancel-button {
+  /* -webkit-appearance: none;
+  appearance: none; */
 }

@@ -3,91 +3,7 @@ import { Button } from "@/components/ui/button";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import ProjectTree from "./ProjectTree";
 import CheckBoxTreeWithFilter from "@/components/m-ui/checkbox-tree";
-
-const fileSystem = [
-  {
-    value: "/app",
-    label: "app",
-    children: [
-      {
-        value: "/app/Http",
-        label: "Http",
-        children: [
-          {
-            value: "/app/Http/Controllers",
-            label: "Controllers",
-            children: [
-              {
-                value: "/app/Http/Controllers/WelcomeController.js",
-                label: "WelcomeController.js",
-              },
-            ],
-          },
-          {
-            value: "/app/Http/routes.js",
-            label: "routes.js",
-          },
-        ],
-      },
-      {
-        value: "/app/Providers",
-        label: "Providers",
-        children: [
-          {
-            value: "/app/Providers/EventServiceProvider.js",
-            label: "EventServiceProvider.js",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    value: "/config",
-    label: "config",
-    children: [
-      {
-        value: "/config/app.js",
-        label: "app.js",
-      },
-      {
-        value: "/config/database.js",
-        label: "database.js",
-      },
-    ],
-  },
-  {
-    value: "/public",
-    label: "public",
-    children: [
-      {
-        value: "/public/assets/",
-        label: "assets",
-        children: [
-          {
-            value: "/public/assets/style.css",
-            label: "style.css",
-          },
-        ],
-      },
-      {
-        value: "/public/index.html",
-        label: "index.html",
-      },
-    ],
-  },
-  {
-    value: "/.env",
-    label: ".env",
-  },
-  {
-    value: "/.gitignore",
-    label: ".gitignore",
-  },
-  {
-    value: "/README.md",
-    label: "README.md",
-  },
-];
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const industralProjectsNode = [
   {
@@ -97,6 +13,16 @@ const industralProjectsNode = [
       {
         value: "SEK",
         label: "SOCIETE D'EXPLOITATION DE KIPOI",
+      },
+    ],
+  },
+  {
+    value: "Canada",
+    label: "Canada",
+    children: [
+      {
+        value: "KAMOA",
+        label: "KAMOA COPPER SA",
       },
     ],
   },
@@ -247,16 +173,6 @@ const industralProjectsNode = [
     ],
   },
   {
-    value: "China and Canada",
-    label: "China and Canada",
-    children: [
-      {
-        value: "KAMOA",
-        label: "KAMOA COPPER SA",
-      },
-    ],
-  },
-  {
     value: "DR Congo",
     label: "DR Congo",
     children: [
@@ -396,12 +312,13 @@ export function ArtisanalSites() {
     toggleInactiveSiteMarkers,
   } = useMarkerVisibilityStore();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex w-full flex-col gap-4">
       <h6 className="text-p font-semibold">Artisanal Mining Sites</h6>
-      <div className="flex gap-3">
+      <div className="flex gap-3 px-1">
         <Button
+          size="sm"
           onClick={toggleActiveSiteMarkers}
-          className={`__button_pressed w-full rounded-full px-4 py-2 ${
+          className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
             showActiveSiteMarkers
               ? "bg-cyan-500/80 hover:bg-cyan-500/90 dark:bg-cyan-600 dark:hover:bg-cyan-600/90"
               : "bg-accent text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:ring-cyan-500/90"
@@ -410,11 +327,12 @@ export function ArtisanalSites() {
           Active Sites
         </Button>
         <Button
+          size="sm"
           onClick={toggleInactiveSiteMarkers}
-          className={`__button_pressed w-full rounded-full px-4 py-2 ${
+          className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
             showInactiveSiteMarkers
-              ? "bg-neutral-500/80 hover:bg-neutral-500/90 dark:bg-neutral-400 dark:hover:bg-neutral-400/90"
-              : "bg-accent text-foreground ring-2 ring-neutral-500 hover:bg-accent hover:ring-neutral-500/90"
+              ? "bg-neutral-500/80 hover:bg-neutral-500/90 dark:bg-neutral-500 dark:hover:bg-neutral-500/90"
+              : "bg-accent text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:ring-neutral-500/90 dark:text-foreground"
           }`}
         >
           Inactive Sites
