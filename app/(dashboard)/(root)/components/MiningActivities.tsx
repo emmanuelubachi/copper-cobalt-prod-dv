@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
-import ProjectTree from "./ProjectTree";
+import useMapFilterStore from "@/store/mapFilterStore";
 import CheckBoxTreeWithFilter from "@/components/m-ui/checkbox-tree";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+import { Toggle } from "@/components/ui/toggle";
+import useFilterStore from "@/store/filterStore";
 
 const industralProjectsNode = [
   {
@@ -305,38 +308,90 @@ const checked = ["Australia"];
 const expanded = [""];
 
 export function ArtisanalSites() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const createQueryString = useUpdateSearchParams();
+  const active_site_sParams = searchParams.get("active_site");
+  const inactive_site_sParams = searchParams.get("inactive_site");
   const {
     showActiveSiteMarkers,
-    showInactiveSiteMarkers,
     toggleActiveSiteMarkers,
+
+    showInactiveSiteMarkers,
     toggleInactiveSiteMarkers,
   } = useMarkerVisibilityStore();
+  const {
+    isActiveSitesButtonVisible,
+    toggleActiveSiteButton,
+    showActiveSiteButton,
+
+    isInactiveSitesButtonVisible,
+    toggleInactiveSiteButton,
+    showInactiveSiteButton,
+  } = useMapFilterStore();
+
+  useEffect(() => {
+    if (active_site_sParams === "true") {
+      showActiveSiteButton();
+      showActiveSiteMarkers();
+    }
+  }, [active_site_sParams, showActiveSiteButton, showActiveSiteMarkers]);
+
+  useEffect(() => {
+    if (inactive_site_sParams === "true") {
+      showInactiveSiteButton();
+      showInactiveSiteMarkers();
+    }
+  }, [inactive_site_sParams, showInactiveSiteButton, showInactiveSiteMarkers]);
+
   return (
     <div className="flex w-full flex-col gap-4">
       <h6 className="text-p font-semibold">Artisanal Mining Sites</h6>
       <div className="flex gap-3 px-1">
-        <Button
+        <Toggle
           size="sm"
-          onClick={toggleActiveSiteMarkers}
-          className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
-            showActiveSiteMarkers
-              ? "bg-cyan-500/80 hover:bg-cyan-500/90 dark:bg-cyan-600 dark:hover:bg-cyan-600/90"
-              : "bg-accent text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:ring-cyan-500/90"
-          }`}
+          pressed={isActiveSitesButtonVisible}
+          onPressedChange={() => {
+            const new_active_site = !isActiveSitesButtonVisible;
+            toggleActiveSiteButton();
+            toggleActiveSiteMarkers(),
+              router.push(
+                pathname +
+                  "?" +
+                  createQueryString("active_site", new_active_site.toString()),
+              );
+          }}
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-full bg-accent px-2 py-1 text-sm text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:text-cyan-600 hover:ring-cyan-600 data-[state=on]:bg-cyan-500 data-[state=on]:text-background data-[state=on]:hover:bg-cyan-600"
         >
           Active Sites
-        </Button>
-        <Button
+        </Toggle>
+        <Toggle
           size="sm"
-          onClick={toggleInactiveSiteMarkers}
-          className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
-            showInactiveSiteMarkers
-              ? "bg-neutral-500/80 hover:bg-neutral-500/90 dark:bg-neutral-500 dark:hover:bg-neutral-500/90"
-              : "bg-accent text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:ring-neutral-500/90 dark:text-foreground"
-          }`}
+          pressed={isInactiveSitesButtonVisible}
+          onPressedChange={() => {
+            const new_inactive_site = !isInactiveSitesButtonVisible;
+            toggleInactiveSiteButton();
+            toggleInactiveSiteMarkers(),
+              router.push(
+                pathname +
+                  "?" +
+                  createQueryString(
+                    "inactive_site",
+                    new_inactive_site.toString(),
+                  ),
+              );
+          }}
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-full bg-accent px-2 py-1 text-sm text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:text-neutral-600 hover:ring-neutral-600 data-[state=on]:bg-neutral-500 data-[state=on]:text-background data-[state=on]:hover:bg-neutral-600"
+
+          // className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
+          //   isInactiveSiteMarkersVisible
+          //     ? "bg-neutral-500/80 hover:bg-neutral-500/90 dark:bg-neutral-500 dark:hover:bg-neutral-500/90"
+          //     : "bg-accent text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:ring-neutral-500/90 dark:text-foreground"
+          // }`}
         >
           Inactive Sites
-        </Button>
+        </Toggle>
       </div>
     </div>
   );

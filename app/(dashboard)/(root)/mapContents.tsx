@@ -3,7 +3,7 @@ import React from "react";
 import { useCallback, useEffect, useState } from "react";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { RiMapPin2Fill } from "@remixicon/react";
 import { MapRef, Popup, Marker, Source, Layer } from "react-map-gl";
 import ArtisanalSiteContent from "./components/mapDetailsContent";
@@ -14,6 +14,7 @@ import {
   inactive_sites,
   processing_entities,
 } from "@/data/mapData";
+import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 
 interface MapContentsProps {
   reference: React.RefObject<MapRef>;
@@ -21,26 +22,54 @@ interface MapContentsProps {
 
 export default function MapContents({ reference }: MapContentsProps) {
   const mapRef = reference;
-
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const createQueryString = useUpdateSearchParams();
   const artisanal_site_id = searchParams.get("artisanal_site_id");
-
-  const [selectedSite, setSelectedSite] = useState<string | null>(null);
+  const selected_site_sParam = searchParams.get("selected_site");
   const [popupInfo, setPopupInfo] = useState<ProcessingEntities | null>(null);
   const [activeSites, setActiveSites] = useState<ArtisanalSite[]>([]);
   const [inactiveSites, setInactiveSites] = useState<ArtisanalSite[]>([]);
+  const active_site_sParams = searchParams.get("active_site");
+  const inactive_site_sParams = searchParams.get("inactive_site");
   const [processingEntities, setProcessingEntities] = useState<
     ProcessingEntities[]
   >([]);
-
-  const { openMapDetails, closeMapDetails, setMapDetailsContent } =
-    useMapDetailsStore();
   const {
+    openMapDetails,
+    closeMapDetails,
+    setMapDetailsContent,
+    selectedSite,
+    setSelectedSite,
+  } = useMapDetailsStore();
+  const {
+    isActiveSiteMarkersVisible,
+    isInactiveSiteMarkersVisible,
+    showProcessingEntiteMarkers,
     showActiveSiteMarkers,
     showInactiveSiteMarkers,
-    showProcessingEntiteMarkers,
   } = useMarkerVisibilityStore();
+
+  const selected_site =
+    activeSites.find((site) => site.site_name === selected_site_sParam) ||
+    inactiveSites.find((site) => site.site_name === selected_site_sParam);
+
+  useEffect(() => {
+    if (active_site_sParams === "true") {
+      showActiveSiteMarkers();
+    }
+    if (inactive_site_sParams === "true") {
+      showInactiveSiteMarkers();
+    }
+  }, [
+    active_site_sParams,
+    showActiveSiteMarkers,
+    inactive_site_sParams,
+    showInactiveSiteMarkers,
+  ]);
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     async function getData() {
@@ -68,23 +97,37 @@ export default function MapContents({ reference }: MapContentsProps) {
   }, []);
 
   useEffect(() => {
-    if (artisanal_site_id) {
-      const artisanal_site =
-        activeSites.find((site) => site.site_name === artisanal_site_id) ||
-        inactiveSites.find((site) => site.site_name === artisanal_site_id);
-      if (artisanal_site && mapRef.current) {
+    if (selected_site_sParam) {
+      if (selected_site && mapRef.current) {
         mapRef.current.flyTo({
-          center: [artisanal_site.longitude, artisanal_site.latitude],
+          center: [selected_site.longitude, selected_site.latitude],
           duration: 1500,
-          zoom: 12,
+          zoom: 11,
         });
+        openMapDetails();
+        setSelectedSite(selected_site_sParam);
+        setMapDetailsContent(
+          <ArtisanalSiteContent site_name={selected_site_sParam} />,
+        );
       }
     }
-  }, [artisanal_site_id, activeSites, inactiveSites, mapRef]);
+  }, [
+    selected_site_sParam,
+    selected_site,
+    mapRef,
+    setSelectedSite,
+    openMapDetails,
+    setMapDetailsContent,
+  ]);
 
   const handleArtisanalSiteClick = useCallback(
     (site_name: string, latitude: number, longitude: number) => {
-      router.push(`/?artisanal_site_id=${site_name}`);
+      // router.push(`/?selected_site=${site_name}`);
+      router.push(
+        pathname +
+          "?" +
+          createQueryString("selected_site", site_name.toString()),
+      );
       setSelectedSite(site_name);
 
       openMapDetails();
@@ -94,11 +137,19 @@ export default function MapContents({ reference }: MapContentsProps) {
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 12,
+          zoom: 11,
         });
       }
     },
-    [openMapDetails, setMapDetailsContent, router, mapRef],
+    [
+      openMapDetails,
+      setMapDetailsContent,
+      router,
+      mapRef,
+      setSelectedSite,
+      createQueryString,
+      pathname,
+    ],
   );
 
   const handleProcessingEntityClick = useCallback(
@@ -121,11 +172,11 @@ export default function MapContents({ reference }: MapContentsProps) {
         });
       }
     },
-    [closeMapDetails, mapRef],
+    [closeMapDetails, mapRef, setSelectedSite],
   );
   return (
     <>
-      {showActiveSiteMarkers &&
+      {isActiveSiteMarkersVisible &&
         activeSites.map((site, index) => (
           <Marker
             key={`active-${index}`}
@@ -151,7 +202,7 @@ export default function MapContents({ reference }: MapContentsProps) {
           </Marker>
         ))}
 
-      {showInactiveSiteMarkers &&
+      {isInactiveSiteMarkersVisible &&
         inactiveSites.map((site, index) => (
           <Marker
             key={`inactive-${index}`}
@@ -225,3 +276,32 @@ export default function MapContents({ reference }: MapContentsProps) {
     </>
   );
 }
+
+// useEffect(() => {
+//   if (artisanal_site_id) {
+//     const artisanal_site =
+//       activeSites.find((site) => site.site_name === artisanal_site_id) ||
+//       inactiveSites.find((site) => site.site_name === artisanal_site_id);
+//     if (artisanal_site && mapRef.current) {
+//       mapRef.current.flyTo({
+//         center: [
+//           artisanal_site.longitude,
+//           artisanal_site.latitude,
+//         ],
+//         duration: 1500,
+//         zoom: 11,
+//       });
+//       openMapDetails();
+//       setMapDetailsContent(
+//         <ArtisanalSiteContent site_name={artisanal_site_id} />,
+//       );
+//     }
+//   }
+// }, [
+//   artisanal_site_id,
+//   activeSites,
+//   inactiveSites,
+//   mapRef,
+//   openMapDetails,
+//   setMapDetailsContent,
+// ]);

@@ -1,30 +1,46 @@
 import { create } from "zustand";
 
 type MarkerVisibilityState = {
-  showActiveSiteMarkers: boolean;
-  showInactiveSiteMarkers: boolean;
+  isActiveSiteMarkersVisible: boolean;
+  isInactiveSiteMarkersVisible: boolean;
   showProcessingEntiteMarkers: boolean;
 };
 
 type MarkerVisibilityActions = {
   toggleActiveSiteMarkers: () => void;
+  showActiveSiteMarkers: () => void;
+  closeActiveSiteMarkers: () => void;
+
   toggleInactiveSiteMarkers: () => void;
+  showInactiveSiteMarkers: () => void;
+  closeInactiveSiteMarkers: () => void;
+
   toggleProcessingEntiteMarkers: () => void;
 };
 
 const useMarkerVisibilityStore = create<
   MarkerVisibilityState & MarkerVisibilityActions
 >((set) => ({
-  showActiveSiteMarkers: false,
-  showInactiveSiteMarkers: false,
-  showProcessingEntiteMarkers: false,
-
+  // active sites
+  isActiveSiteMarkersVisible: false,
   toggleActiveSiteMarkers: () =>
-    set((state) => ({ showActiveSiteMarkers: !state.showActiveSiteMarkers })),
+    set((state) => ({
+      isActiveSiteMarkersVisible: !state.isActiveSiteMarkersVisible,
+    })),
+  showActiveSiteMarkers: () => set({ isActiveSiteMarkersVisible: true }),
+  closeActiveSiteMarkers: () => set({ isActiveSiteMarkersVisible: false }),
+
+  // inactive sites
+  isInactiveSiteMarkersVisible: false,
   toggleInactiveSiteMarkers: () =>
     set((state) => ({
-      showInactiveSiteMarkers: !state.showInactiveSiteMarkers,
+      isInactiveSiteMarkersVisible: !state.isInactiveSiteMarkersVisible,
     })),
+  showInactiveSiteMarkers: () => set({ isInactiveSiteMarkersVisible: true }),
+  closeInactiveSiteMarkers: () => set({ isInactiveSiteMarkersVisible: false }),
+
+  // processing entities
+  showProcessingEntiteMarkers: false,
   toggleProcessingEntiteMarkers: () =>
     set((state) => ({
       showProcessingEntiteMarkers: !state.showProcessingEntiteMarkers,

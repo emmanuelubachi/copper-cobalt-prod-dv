@@ -106,6 +106,8 @@ export default function ArtisanalSiteContent({
   site_name: string;
 }) {
   const searchParams = useSearchParams();
+  // const selectedSite = searchParams.get("selected_site");
+
   const artisanal_site_id = site_name;
 
   if (!artisanal_site_id) {
@@ -121,6 +123,7 @@ export default function ArtisanalSiteContent({
 
   return (
     <div className="mx-auto">
+      {/* <h1 className="text-3xl font-bold">selected site: {selectedSite}</h1> */}
       <SiteMap
         site_latitude={artisanal_site_details?.latitude}
         site_longitude={artisanal_site_details?.longitude}
