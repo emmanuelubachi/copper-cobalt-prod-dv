@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import { dataCsv } from "@/data/mapData";
 import MainMap from "./map";
 
