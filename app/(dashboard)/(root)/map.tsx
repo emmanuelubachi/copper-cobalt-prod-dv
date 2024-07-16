@@ -50,30 +50,6 @@ export default function MainMap({ dataCsv }: MapProps) {
     }
   }, [theme, systemTheme]);
 
-  // useEffect(() => {
-  //   if (mapRef.current) {
-  //     const projectNameLabel = "Project name";
-  //     const dataToZoom = dataCsv.filter((d) =>
-  //       projectFilter.includes(d[projectNameLabel]),
-  //     );
-
-  //     if (dataToZoom.length > 0) {
-  //       const bbox = turf.bbox(
-  //         turf.featureCollection(
-  //           dataToZoom.map((d) => turf.point([d.longitude, d.latitude])),
-  //         ),
-  //       );
-  //       mapRef.current.fitBounds(
-  //         [
-  //           [bbox[0], bbox[1]],
-  //           [bbox[2], bbox[3]],
-  //         ],
-  //         { duration: 2000, maxZoom: 8 },
-  //       );
-  //     }
-  //   }
-  // }, [projectFilter, dataCsv]);
-
   return (
     <Map
       ref={mapRef}
@@ -120,3 +96,27 @@ export default function MainMap({ dataCsv }: MapProps) {
     </Map>
   );
 }
+
+// useEffect(() => {
+//   if (mapRef.current) {
+//     const projectNameLabel = "Project name";
+//     const dataToZoom = dataCsv.filter((d) =>
+//       projectFilter.includes(d[projectNameLabel]),
+//     );
+
+//     if (dataToZoom.length > 0) {
+//       const bbox = turf.bbox(
+//         turf.featureCollection(
+//           dataToZoom.map((d) => turf.point([d.longitude, d.latitude])),
+//         ),
+//       );
+//       mapRef.current.fitBounds(
+//         [
+//           [bbox[0], bbox[1]],
+//           [bbox[2], bbox[3]],
+//         ],
+//         { duration: 2000, maxZoom: 8 },
+//       );
+//     }
+//   }
+// }, [projectFilter, dataCsv]);
