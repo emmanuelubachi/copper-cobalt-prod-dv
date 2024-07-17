@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import { useTheme } from "next-themes";
 import Map, {
   MapRef,
@@ -10,24 +10,21 @@ import Map, {
   FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import * as turf from "@turf/turf";
-
 import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
+import { GeoJSONFeatureCollection } from "@/types/geojson";
 
-interface MapProps {
-  // projectFilter: string[];
-  dataCsv: any[]; // adjust the type based on your actual data structure
-}
+type MapProps = {
+  geojsonData: GeoJSONFeatureCollection;
+};
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-export default function MainMap({ dataCsv }: MapProps) {
+export default function MainMap({ geojsonData }: MapProps) {
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
   const mapRef = useRef<MapRef | null>(null);
-
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -41,6 +38,11 @@ export default function MainMap({ dataCsv }: MapProps) {
           zoom: 5,
         },
   );
+  const [hoveredFeature, setHoveredFeature] = useState<{
+    feature: any;
+    x: number;
+    y: number;
+  } | null>(null);
 
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
@@ -49,6 +51,25 @@ export default function MainMap({ dataCsv }: MapProps) {
       setMapStyle("mapbox://styles/mapbox/streets-v10");
     }
   }, [theme, systemTheme]);
+
+  useEffect(() => {
+    console.log("geojsonData:", geojsonData);
+  });
+
+  const onHover = useCallback((event: any) => {
+    const {
+      features,
+      point: { x, y },
+    } = event;
+    const hovered = features && features[0];
+    setHoveredFeature(hovered ? { feature: hovered, x, y } : null);
+  }, []);
+
+  console.log("event:", hoveredFeature);
+
+  const onLeave = useCallback(() => {
+    setHoveredFeature(null);
+  }, []);
 
   return (
     <Map
@@ -61,6 +82,8 @@ export default function MainMap({ dataCsv }: MapProps) {
       maxZoom={15}
       minZoom={3}
       attributionControl={false}
+      onMouseMove={onHover}
+      onMouseLeave={onLeave}
     >
       {isMobile ? (
         <>
@@ -93,30 +116,56 @@ export default function MainMap({ dataCsv }: MapProps) {
         </>
       )}
       <MapContents reference={mapRef} />
+      {geojsonData && (
+        <Source id="geojson-data" type="geojson" data={geojsonData}>
+          <Layer
+            id="data-layer"
+            type="fill"
+            paint={{
+              "fill-color": [
+                "match",
+                ["get", "nat-0"],
+                "australie",
+                "#546475",
+                "canada",
+                "#13B8B1",
+                "chine",
+                "#F16067",
+                "rdcongo",
+                "#ADBCDD",
+                "inde",
+                "#ECC0A7",
+                "kazakhstan",
+                "#A28882",
+                "suisse",
+                "#FB9635",
+                "#033550",
+              ],
+              "fill-opacity": [
+                "case",
+                ["boolean", ["feature-state", "hover"], false],
+                0.95,
+                0.6,
+              ],
+            }}
+            interactive={true}
+          />
+        </Source>
+      )}
+      {hoveredFeature && (
+        <div
+          style={{
+            position: "absolute",
+            left: hoveredFeature.x,
+            top: hoveredFeature.y,
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "3px",
+          }}
+        >
+          <div>{hoveredFeature.feature.properties.name}</div>
+        </div>
+      )}
     </Map>
   );
 }
-
-// useEffect(() => {
-//   if (mapRef.current) {
-//     const projectNameLabel = "Project name";
-//     const dataToZoom = dataCsv.filter((d) =>
-//       projectFilter.includes(d[projectNameLabel]),
-//     );
-
-//     if (dataToZoom.length > 0) {
-//       const bbox = turf.bbox(
-//         turf.featureCollection(
-//           dataToZoom.map((d) => turf.point([d.longitude, d.latitude])),
-//         ),
-//       );
-//       mapRef.current.fitBounds(
-//         [
-//           [bbox[0], bbox[1]],
-//           [bbox[2], bbox[3]],
-//         ],
-//         { duration: 2000, maxZoom: 8 },
-//       );
-//     }
-//   }
-// }, [projectFilter, dataCsv]);
