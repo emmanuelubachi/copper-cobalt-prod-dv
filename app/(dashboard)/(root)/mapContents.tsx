@@ -10,7 +10,7 @@ import { RiMapPin2Fill } from "@remixicon/react";
 
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { PopupContent } from "./components/popupContent";
-import ArtisanalSiteContent from "./components/mapDetailsContent";
+import { ArtisanalSiteContent } from "./components/mapDetailsContent";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
 
 // Import map data
