@@ -1,0 +1,45 @@
+export type ArtisanalSiteDetailsProps = {
+  sources: string;
+  site_name: string;
+  visit_date: string;
+  site_visit__bgr: string;
+  site_visit__cgsp: string;
+  geom: string;
+  longitude: number;
+  latitude: number;
+  location_origin: string;
+  province__territory: string;
+  cooperative_in_charge: string | null;
+  employees: number;
+  minerals_extracted: string;
+  point_of_sale__purchasing_station: string | null;
+  status_in_2023: string;
+};
+
+export type IndustralProjectDetailsProps = {
+  N: string;
+  ProjectName: string;
+  ShortName: string;
+  PermitID: string;
+  Code: string;
+  Ownership: string;
+  Nationality: string;
+  AnnualProduction2022: string;
+  ISOA3: string;
+  Province: string;
+  GeographicalCoordinates: string;
+  LatitudeLongitude: string;
+  GeographicalDescription: string;
+  ProjectSize: string;
+  DepositSize?: string;
+  MineLifePermitValidity: string;
+  MineType: string;
+  ContractType: string;
+  ShareAllocation: string;
+  ProjectBackground?: string;
+  Management?: string;
+  NumberOfEmployees?: string;
+  SourcesLinks?: string;
+  Nat0: string;
+  Nat1: string;
+};

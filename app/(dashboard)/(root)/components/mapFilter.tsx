@@ -1,98 +1,46 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
-import { Toggle } from "@/components/ui/toggle";
+import { ArtisanalSites, IndustralProjects } from "./MiningActivities";
+import { ProcessingEntities } from "./AdditionalInformation";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
 };
 
 export default function MapFilter({ defaultValue }: MapFilterProps) {
-  const {
-    showActiveSiteMarkers,
-    showInactiveSiteMarkers,
-    showProcessingEntiteMarkers,
-    toggleActiveSiteMarkers,
-    toggleInactiveSiteMarkers,
-    toggleProcessingEntiteMarkers,
-  } = useMarkerVisibilityStore();
-
   return (
-    <Tabs defaultValue={defaultValue} className="w-full">
+    <Tabs
+      defaultValue={defaultValue}
+      className="sm:80 w-72 overflow-hidden pb-16 xl:w-96"
+    >
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="mining-activities" className="text-xs lg:text-sm">
+        <TabsTrigger value="mining-activities" className="text-pxs lg:text-xs">
           Mining Activities
         </TabsTrigger>
 
         <TabsTrigger
           value="additional-information"
-          className="text-xs lg:text-sm"
+          className="text-pxs lg:text-xs"
         >
           Additional Information
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="mining-activities" className="grid gap-8 px-2 py-4">
-        {/* Artisanal Mining Activities */}
-        <div className="flex flex-col gap-4">
-          <div>
-            <h6 className="text-h6">Artisanal Mining Activities</h6>
-            <p className="text-xs italic text-foreground/40">
-              Beatae quia excepturi dignissimos autem natus inventore quas amet
-              praesentium earum iste, perspiciatis dolores, ea ipsam.
-            </p>
-          </div>
-
-          <div className="flex gap-2">
-            <Button
-              onClick={toggleActiveSiteMarkers}
-              className={`w-full rounded px-4 py-2 ${
-                showActiveSiteMarkers
-                  ? "bg-cyan-500 hover:bg-cyan-500/90 dark:bg-cyan-600 dark:hover:bg-cyan-600/80"
-                  : "bg-accent text-cyan-500 ring-1 ring-cyan-500 hover:bg-accent hover:ring-2"
-              }`}
-            >
-              Active Sites
-            </Button>
-
-            <Button
-              onClick={toggleInactiveSiteMarkers}
-              className={`w-full rounded px-4 py-2 ${
-                showInactiveSiteMarkers
-                  ? "bg-neutral-500 hover:bg-neutral-500/90 dark:bg-neutral-400 dark:hover:bg-neutral-400/80"
-                  : "bg-accent text-foreground ring-1 ring-neutral-500 hover:bg-accent hover:ring-2"
-              }`}
-            >
-              Inactive Sites
-            </Button>
-          </div>
+      <TabsContent
+        value="mining-activities"
+        className="mt-5 h-full gap-8 space-y-8 overflow-y-auto px-2 pb-5"
+      >
+        <div>
+          <h6 className="text-h6 font-bold">Mining Activities</h6>
+          <p className="text-xs italic text-foreground/40">
+            Beatae quia excepturi dignissimos autem natus inventore quas amet
+            praesentium earum iste, perspiciatis dolores, ea ipsam.
+          </p>
         </div>
-
-        {/* Processing Entities */}
-        <div className="flex flex-col gap-4">
-          <div>
-            <h6 className="text-h6">Processing Entities</h6>
-            <p className="text-xs italic text-foreground/40">
-              Autem natus inventore quas amet praesentium earum iste,
-              perspiciatis dolores, ea ipsam.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              onClick={toggleProcessingEntiteMarkers}
-              className={`w-full rounded px-4 py-2 ${
-                showProcessingEntiteMarkers
-                  ? "bg-green-500 hover:bg-green-500/90 dark:bg-green-600 dark:hover:bg-green-600/80"
-                  : "bg-accent text-green-500 ring-1 ring-green-500 hover:bg-accent hover:ring-2"
-              }`}
-            >
-              Processing Entities
-            </Button>
-          </div>
-        </div>
+        <ArtisanalSites />
+        <IndustralProjects />
       </TabsContent>
       <TabsContent value="additional-information" className="px-2 text-sm">
-        Additional information filter content will go here.
+        <ProcessingEntities />
       </TabsContent>
     </Tabs>
   );

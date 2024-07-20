@@ -10,6 +10,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/react-checkbox-tree/lib/react-checkbox-tree.css",
   ],
   prefix: "",
   theme: {

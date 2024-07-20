@@ -1,29 +1,67 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import Map, {
   MapRef,
+  Source,
+  Layer,
   AttributionControl,
   NavigationControl,
   FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+
+import useMapDetailsStore from "@/store/mapDetailsStore";
+
 import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
-import { ArtisanalSite, ProcessingEntities } from "@/types";
+import { IndustrialProjectsContent } from "./components/mapDetailsContent";
+import { GeoJSONFeatureCollection } from "@/types/geojson";
+
+import { IndustralProjectDetailsProps } from "@/types/miningActivities";
+import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+
+type MapProps = {
+  geojsonData: GeoJSONFeatureCollection;
+};
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-export default function MainMap() {
+export default function MainMap({ geojsonData }: MapProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const createQueryString = useUpdateSearchParams();
+
   const { theme, systemTheme } = useTheme();
   const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
   const mapRef = useRef<MapRef | null>(null);
-  const [viewState, setViewState] = useState({
-    longitude: 23.52741376552,
-    latitude: -3.050471588628,
-    zoom: 4,
-  });
+  const [viewState, setViewState] = useState(
+    isMobile
+      ? {
+          longitude: 23.52741376552,
+          latitude: -3.050471588628,
+          zoom: 3,
+        }
+      : {
+          longitude: 23.52741376552,
+          latitude: -3.050471588628,
+          zoom: 5,
+        },
+  );
+  const [hoveredFeature, setHoveredFeature] = useState<{
+    feature: any;
+    x: number;
+    y: number;
+  } | null>(null);
+  const {
+    openMapDetails,
+    closeMapDetails,
+    setMapDetailsContent,
+    selectedSite,
+    setSelectedSite,
+  } = useMapDetailsStore();
 
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
@@ -32,6 +70,75 @@ export default function MainMap() {
       setMapStyle("mapbox://styles/mapbox/streets-v10");
     }
   }, [theme, systemTheme]);
+
+  const onHover = useCallback((event: any) => {
+    const {
+      features,
+      point: { x, y },
+    } = event;
+    const hovered = features && features[0];
+    setHoveredFeature(hovered ? { feature: hovered, x, y } : null);
+    if (mapRef.current) {
+      if (hovered) {
+        mapRef.current.getCanvas().style.cursor = "pointer";
+      } else {
+        mapRef.current.getCanvas().style.cursor = "";
+      }
+    }
+  }, []);
+
+  const onLeave = useCallback(() => {
+    setHoveredFeature(null);
+    if (mapRef.current) {
+      mapRef.current.getCanvas().style.cursor = "";
+    }
+  }, []);
+
+  // const onHover = useCallback((event: any) => {
+  //   const {
+  //     features,
+  //     point: { x, y },
+  //   } = event;
+  //   const hovered = features && features[0];
+  //   setHoveredFeature(hovered ? { feature: hovered, x, y } : null);
+  // }, []);
+
+  const onClick = useCallback(
+    (event: any) => {
+      const { point } = event;
+      const features = mapRef.current?.queryRenderedFeatures(point);
+      const clickedFeature = features && features[0];
+      if (clickedFeature && clickedFeature.properties) {
+        if (clickedFeature.properties.Code) {
+          const site_name = clickedFeature.properties.Short_name;
+          router.push(
+            pathname +
+              "?" +
+              createQueryString("selected_site", site_name.toString()),
+          );
+          setSelectedSite(clickedFeature.properties.Short_name);
+          openMapDetails();
+          setMapDetailsContent(
+            <IndustrialProjectsContent
+              data={clickedFeature.properties as IndustralProjectDetailsProps}
+            />,
+          );
+        }
+      }
+    },
+    [
+      router,
+      pathname,
+      openMapDetails,
+      setSelectedSite,
+      createQueryString,
+      setMapDetailsContent,
+    ],
+  );
+
+  // const onLeave = useCallback(() => {
+  //   setHoveredFeature(null);
+  // }, []);
 
   return (
     <Map
@@ -44,6 +151,10 @@ export default function MainMap() {
       maxZoom={15}
       minZoom={3}
       attributionControl={false}
+      interactiveLayerIds={["data-layer"]}
+      onMouseMove={onHover}
+      onMouseLeave={onLeave}
+      onClick={onClick}
     >
       {isMobile ? (
         <>
@@ -76,6 +187,60 @@ export default function MainMap() {
         </>
       )}
       <MapContents reference={mapRef} />
+      {geojsonData && (
+        <Source id="geojson-data" type="geojson" data={geojsonData}>
+          <Layer
+            id="data-layer"
+            type="fill"
+            paint={{
+              "fill-color": [
+                "match",
+                ["get", "nat-0"],
+                "australie",
+                "#546475",
+                "canada",
+                "#13B8B1",
+                "chine",
+                "#F16067",
+                "rdcongo",
+                "#ADBCDD",
+                "inde",
+                "#ECC0A7",
+                "kazakhstan",
+                "#A28882",
+                "suisse",
+                "#FB9635",
+                "#033550",
+              ],
+              "fill-opacity": [
+                "case",
+                ["boolean", ["feature-state", "hover"], false],
+                0.95,
+                0.6,
+              ],
+            }}
+            interactive={true}
+          />
+        </Source>
+      )}
+      {hoveredFeature && (
+        <div
+          style={{
+            position: "absolute",
+            left: hoveredFeature.x + 10,
+            top: hoveredFeature.y + 10,
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "3px",
+            fontFamily: "var(--font-sans)",
+            fontSize: "0.875rem" /* 14px */,
+            lineHeight: "1.25rem" /* 20px */,
+            color: "black",
+          }}
+        >
+          <div>{hoveredFeature.feature.properties.Project_name}</div>
+        </div>
+      )}
     </Map>
   );
 }
