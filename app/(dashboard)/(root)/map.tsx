@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import Map, {
   MapRef,
@@ -11,14 +11,11 @@ import Map, {
   FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-
 import useMapDetailsStore from "@/store/mapDetailsStore";
-
 import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
 import { IndustrialProjectsContent } from "./components/mapDetailsContent";
 import { GeoJSONFeatureCollection } from "@/types/geojson";
-
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 
@@ -31,12 +28,11 @@ const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 export default function MainMap({ geojsonData }: MapProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const createQueryString = useUpdateSearchParams();
-
-  const { theme, systemTheme } = useTheme();
-  const [mapStyle, setMapStyle] = useState("");
   const { isMobile } = useDeviceType();
+  const { theme, systemTheme } = useTheme();
+
   const mapRef = useRef<MapRef | null>(null);
+  const [mapStyle, setMapStyle] = useState("");
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -55,6 +51,7 @@ export default function MainMap({ geojsonData }: MapProps) {
     x: number;
     y: number;
   } | null>(null);
+
   const {
     openMapDetails,
     closeMapDetails,
@@ -62,6 +59,7 @@ export default function MainMap({ geojsonData }: MapProps) {
     selectedSite,
     setSelectedSite,
   } = useMapDetailsStore();
+  const createQueryString = useUpdateSearchParams();
 
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
@@ -93,15 +91,6 @@ export default function MainMap({ geojsonData }: MapProps) {
       mapRef.current.getCanvas().style.cursor = "";
     }
   }, []);
-
-  // const onHover = useCallback((event: any) => {
-  //   const {
-  //     features,
-  //     point: { x, y },
-  //   } = event;
-  //   const hovered = features && features[0];
-  //   setHoveredFeature(hovered ? { feature: hovered, x, y } : null);
-  // }, []);
 
   const onClick = useCallback(
     (event: any) => {
@@ -135,10 +124,6 @@ export default function MainMap({ geojsonData }: MapProps) {
       setMapDetailsContent,
     ],
   );
-
-  // const onLeave = useCallback(() => {
-  //   setHoveredFeature(null);
-  // }, []);
 
   return (
     <Map
@@ -186,7 +171,9 @@ export default function MainMap({ geojsonData }: MapProps) {
           <FullscreenControl position="bottom-right" />
         </>
       )}
+
       <MapContents reference={mapRef} />
+
       {geojsonData && (
         <Source id="geojson-data" type="geojson" data={geojsonData}>
           <Layer

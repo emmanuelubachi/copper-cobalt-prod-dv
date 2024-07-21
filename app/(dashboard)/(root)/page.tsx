@@ -1,7 +1,4 @@
-import fs from "fs";
-import path from "path";
 import MainMap from "./map";
-
 var csv2geojson = require("csv2geojson");
 import {
   filterFeatures,
@@ -9,21 +6,19 @@ import {
   processNationality,
   filterOutPoints,
 } from "@/lib/geojsonProcessing";
-
+import { readCsvFile, readGeoJsonFile } from "@/lib/readFiles";
 import { GeoJSONFeatureCollection } from "@/types/geojson";
 
 export default async function Page() {
-  const csvFilePath = path.join(process.cwd(), "data/industrial_projects.csv");
-  const overlayFilePath = path.join(
-    process.cwd(),
+  // get industral projects csv data from server
+  const csvData = readCsvFile("data/industrial_projects.csv");
+
+  // get geojson data from server
+  const overlayData = readGeoJsonFile(
     "data/democratic_republic_of_the_congo_mining_permits.geojson",
   );
 
-  const csvData = fs.readFileSync(csvFilePath, "utf8");
-  const overlayData: GeoJSONFeatureCollection = JSON.parse(
-    fs.readFileSync(overlayFilePath, "utf8"),
-  );
-
+  // convert csv data to geojson
   let geojsonData: GeoJSONFeatureCollection = await new Promise(
     (resolve, reject) => {
       csv2geojson.csv2geojson(
@@ -41,6 +36,7 @@ export default async function Page() {
     },
   );
 
+  // process geojson
   geojsonData = filterFeatures(geojsonData);
   geojsonData = matchAndCombineFeatures(geojsonData, overlayData);
   geojsonData = processNationality(geojsonData, "en");

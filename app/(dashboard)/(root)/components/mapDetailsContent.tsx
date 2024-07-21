@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-
 import Map from "react-map-gl";
 import { active_sites, inactive_sites } from "@/data/mapData";
 import {
@@ -75,38 +74,6 @@ const ArtisanalSiteDetails = ({
   );
 };
 
-export function ArtisanalSiteContent({ site_name }: { site_name: string }) {
-  const searchParams = useSearchParams();
-  // const selectedSite = searchParams.get("selected_site");
-
-  const artisanal_site_id = site_name;
-
-  if (!artisanal_site_id) {
-    return <div>No artisanal site selected</div>;
-  }
-
-  const activeSites = active_sites.data;
-  const inactiveSites = inactive_sites.data;
-
-  const artisanal_site_details =
-    activeSites.find((site) => site.site_name === artisanal_site_id) ||
-    inactiveSites.find((site) => site.site_name === artisanal_site_id);
-
-  return (
-    <div className="mx-auto">
-      {/* <h1 className="text-3xl font-bold">selected site: {selectedSite}</h1> */}
-      <SiteMap
-        site_latitude={artisanal_site_details?.latitude}
-        site_longitude={artisanal_site_details?.longitude}
-      />
-      <ArtisanalSiteDetails
-        className="p-4 sm:p-6"
-        site={artisanal_site_details as ArtisanalSiteDetailsProps}
-      />
-    </div>
-  );
-}
-
 const mapDataToProjectInfo = (data: any): IndustralProjectDetailsProps => ({
   N: data["N°"],
   ProjectName: data["Project_name"],
@@ -163,6 +130,38 @@ const IndustrialProjectDetails = ({
     </div>
   );
 };
+
+export function ArtisanalSiteContent({ site_name }: { site_name: string }) {
+  const searchParams = useSearchParams();
+  // const selectedSite = searchParams.get("selected_site");
+
+  const artisanal_site_id = site_name;
+
+  if (!artisanal_site_id) {
+    return <div>No artisanal site selected</div>;
+  }
+
+  const activeSites = active_sites.data;
+  const inactiveSites = inactive_sites.data;
+
+  const artisanal_site_details =
+    activeSites.find((site) => site.site_name === artisanal_site_id) ||
+    inactiveSites.find((site) => site.site_name === artisanal_site_id);
+
+  return (
+    <div className="mx-auto">
+      {/* <h1 className="text-3xl font-bold">selected site: {selectedSite}</h1> */}
+      <SiteMap
+        site_latitude={artisanal_site_details?.latitude}
+        site_longitude={artisanal_site_details?.longitude}
+      />
+      <ArtisanalSiteDetails
+        className="p-4 sm:p-6"
+        site={artisanal_site_details as ArtisanalSiteDetailsProps}
+      />
+    </div>
+  );
+}
 
 export function IndustrialProjectsContent({
   data,
