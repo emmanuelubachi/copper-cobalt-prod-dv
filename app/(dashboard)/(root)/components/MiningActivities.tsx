@@ -383,12 +383,6 @@ export function ArtisanalSites() {
               );
           }}
           className="__button_pressed data-[state=on]:__button_pressed w-full rounded-full bg-accent px-2 py-1 text-sm text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:text-neutral-600 hover:ring-neutral-600 data-[state=on]:bg-neutral-500 data-[state=on]:text-background data-[state=on]:hover:bg-neutral-600"
-
-          // className={`__button_pressed w-full rounded-full px-2 py-1 text-sm ${
-          //   isInactiveSiteMarkersVisible
-          //     ? "bg-neutral-500/80 hover:bg-neutral-500/90 dark:bg-neutral-500 dark:hover:bg-neutral-500/90"
-          //     : "bg-accent text-neutral-500 ring-2 ring-neutral-500 hover:bg-accent hover:ring-neutral-500/90 dark:text-foreground"
-          // }`}
         >
           Inactive Sites
         </Toggle>
