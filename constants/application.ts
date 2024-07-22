@@ -101,7 +101,7 @@ export const IndustralProjectsNode = [
     label: "Australia",
     children: [
       {
-        value: "SEK",
+        value: "SEK (Kipoi Mines)",
         label: "SOCIETE D'EXPLOITATION DE KIPOI",
       },
     ],
@@ -111,7 +111,7 @@ export const IndustralProjectsNode = [
     label: "Canada",
     children: [
       {
-        value: "KAMOA",
+        value: "KAMOA-KAKULA",
         label: "KAMOA COPPER SA",
       },
     ],
@@ -391,8 +391,8 @@ export const IndustralProjectsNode = [
 ];
 
 export const CheckAllIndustralProjects = [
-  "SEK",
-  "KAMOA",
+  "SEK (Kipoi Mines)",
+  "KAMOA-KAKULA",
   "ANVIL",
   "CCR",
   "CDM",
