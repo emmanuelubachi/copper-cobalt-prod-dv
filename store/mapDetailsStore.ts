@@ -7,6 +7,7 @@ type DetailsState = {
 
   // map state
   selectedSite: string | null;
+  checkedLayers: string[];
 };
 
 type DetailsActions = {
@@ -16,12 +17,15 @@ type DetailsActions = {
   closeMapDetails: () => void;
 
   setSelectedSite: (site: string | null) => void;
+  setCheckedLayers: (layers: string[]) => void;
 };
 
 const useMapDetailsStore = create<DetailsState & DetailsActions>((set) => ({
   // initial state
   isMapDetailsOpen: false,
   mapDetailsDrawerContent: null,
+  checkedLayers: [],
+
   toggleDetails: () =>
     set((state) => ({ isMapDetailsOpen: !state.isMapDetailsOpen })),
 
@@ -33,6 +37,8 @@ const useMapDetailsStore = create<DetailsState & DetailsActions>((set) => ({
 
   selectedSite: null,
   setSelectedSite: (site) => set({ selectedSite: site }),
+
+  setCheckedLayers: (layers) => set({ checkedLayers: layers }),
 }));
 
 export default useMapDetailsStore;

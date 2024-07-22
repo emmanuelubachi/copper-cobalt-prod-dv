@@ -4,27 +4,33 @@ import CheckboxTree, { Node } from "react-checkbox-tree";
 import "react-checkbox-tree/lib/react-checkbox-tree.css";
 import { Input } from "../ui/input";
 import {
-  Search,
-  CheckSquare,
-  Square,
-  ChevronRight,
   Check,
+  Search,
+  Square,
+  FilterX,
+  CheckCheck,
   ChevronDown,
+  CheckSquare,
+  ChevronRight,
 } from "lucide-react";
+import useMapDetailsStore from "@/store/mapDetailsStore";
+import { Button } from "../ui/button";
+import { CheckAllIndustralProjects } from "@/constants/application";
 
 // Define props interface
 interface CheckBoxTreeWithFilterProps {
   nodes: Node[];
-  checkedNodes: string[];
+  // checkedNodes: string[];
   expandedNodes: string[];
 }
 
 const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   nodes,
-  checkedNodes,
+  // checkedNodes,
   expandedNodes,
 }) => {
-  const [checked, setChecked] = useState<string[]>(checkedNodes);
+  const { checkedLayers, setCheckedLayers } = useMapDetailsStore();
+  // const [checked, setChecked] = useState<string[]>(checkedNodes);
   const [expanded, setExpanded] = useState(expandedNodes);
   const [filterText, setFilterText] = useState("");
   const [filteredNodes, setFilteredNodes] = useState<Node[]>(nodes);
@@ -58,7 +64,7 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   }, [filterText, nodes, filterNodes]);
 
   const onCheck = (checked: string[]) => {
-    setChecked(checked);
+    setCheckedLayers(checked);
   };
 
   const onExpand = (expanded: string[]) => {
@@ -95,16 +101,37 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
           onChange={onFilterChange}
         />
       </div>
+      <div className="w-full">
+        <div className="flex items-center justify-end gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-fit gap-1"
+            onClick={() => setCheckedLayers(CheckAllIndustralProjects)}
+          >
+            <CheckCheck className="h-4 w-4 text-primary" />
+            Select All
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-fit gap-1"
+            onClick={() => setCheckedLayers([])}
+          >
+            <FilterX className="h-4 w-4 text-primary" />
+            Clear All
+          </Button>
+        </div>
+      </div>
       <div className="overflow-y-auto">
         <CheckboxTree
-          checked={checked}
+          checked={checkedLayers}
           expanded={expanded}
           nodes={filteredNodes}
           onCheck={onCheck}
           onExpand={onExpand}
           icons={icons}
           showNodeIcon={false}
-          showExpandAll
         />
       </div>
     </div>

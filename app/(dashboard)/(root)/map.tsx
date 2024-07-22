@@ -53,11 +53,12 @@ export default function MainMap({ geojsonData }: MapProps) {
   } | null>(null);
 
   const {
-    openMapDetails,
-    closeMapDetails,
-    setMapDetailsContent,
     selectedSite,
+    checkedLayers,
+    openMapDetails,
+    // closeMapDetails,
     setSelectedSite,
+    setMapDetailsContent,
   } = useMapDetailsStore();
   const createQueryString = useUpdateSearchParams();
 
@@ -91,6 +92,13 @@ export default function MainMap({ geojsonData }: MapProps) {
       mapRef.current.getCanvas().style.cursor = "";
     }
   }, []);
+
+  const filteredGeojsonData = {
+    ...geojsonData,
+    features: geojsonData.features.filter((feature) =>
+      checkedLayers.includes(feature.properties.Short_name),
+    ),
+  };
 
   const onClick = useCallback(
     (event: any) => {
@@ -175,7 +183,7 @@ export default function MainMap({ geojsonData }: MapProps) {
       <MapContents reference={mapRef} />
 
       {geojsonData && (
-        <Source id="geojson-data" type="geojson" data={geojsonData}>
+        <Source id="geojson-data" type="geojson" data={filteredGeojsonData}>
           <Layer
             id="data-layer"
             type="fill"
