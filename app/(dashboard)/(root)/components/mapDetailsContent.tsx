@@ -86,7 +86,7 @@ const mapDataToProjectInfo = (data: any): IndustralProjectDetailsProps => ({
   ISOA3: data["ISO_A3"],
   Province: data["Province"],
   GeographicalCoordinates: data["Geographical_coordinates"],
-  LatitudeLongitude: data["latitude,longitude"],
+  LatitudeLongitude: data["latitude_longitude"],
   GeographicalDescription:
     data["Geographical_description_&_project_description"],
   ProjectSize: data["Project_size"],

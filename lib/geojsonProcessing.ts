@@ -72,3 +72,32 @@ export const filterOutPoints = (
     features: data.features.filter((d) => d.geometry.type !== "Point"),
   };
 };
+
+export function parseCoordinates(coordinateString: string): {
+  latitude: number;
+  longitude: number;
+} {
+  // if (typeof coordinateString !== "string") {
+  //   throw new Error("Input must be a string");
+  // }
+
+  const [latitudeStr, longitudeStr] = coordinateString
+    .split(",")
+    .map((s) => s.trim());
+
+  if (latitudeStr === undefined || longitudeStr === undefined) {
+    throw new Error("Invalid coordinate format");
+  }
+
+  const latitude = parseFloat(latitudeStr);
+  const longitude = parseFloat(longitudeStr);
+
+  if (isNaN(latitude) || isNaN(longitude)) {
+    throw new Error("Invalid coordinate format");
+  }
+
+  return {
+    latitude,
+    longitude,
+  };
+}
