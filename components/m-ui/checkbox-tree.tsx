@@ -10,9 +10,7 @@ import {
   ChevronRight,
   Check,
   ChevronDown,
-  CheckSquare2,
 } from "lucide-react";
-import { ScrollArea } from "../ui/scroll-area";
 
 // Define props interface
 interface CheckBoxTreeWithFilterProps {
@@ -90,31 +88,12 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
       <div className="group relative flex-1 md:grow-0">
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
-          // type="search"
+          type="search"
           placeholder="Search..."
           className="custom-search w-full rounded-2xl bg-muted pl-8 focus:border-0"
           value={filterText}
           onChange={onFilterChange}
         />
-        {/* <button
-          type="button"
-          className="absolute right-4 top-1/2 hidden -translate-y-1/2 transform text-red-500 group-hover:block"
-          onClick={() => {
-            const searchInput = document.querySelector(
-              ".custom-search",
-            ) as HTMLInputElement;
-            if (searchInput) {
-              searchInput.value = "";
-              searchInput.focus();
-            }
-            const inputElement = document.querySelector(
-              ".custom-search",
-            ) as HTMLInputElement;
-            inputElement.focus();
-          }}
-        >
-          &times;
-        </button> */}
       </div>
       <div className="overflow-y-auto">
         <CheckboxTree

@@ -2,18 +2,16 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MapRef, Popup, Marker } from "react-map-gl";
-
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-
 import { RiMapPin2Fill } from "@remixicon/react";
-
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mapDetailsContent";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
 
 // Import map data
+// TODO: use tinybird api or local data
 import {
   active_sites,
   inactive_sites,
@@ -276,32 +274,3 @@ export default function MapContents({ reference }: MapContentsProps) {
     </>
   );
 }
-
-// useEffect(() => {
-//   if (artisanal_site_id) {
-//     const artisanal_site =
-//       activeSites.find((site) => site.site_name === artisanal_site_id) ||
-//       inactiveSites.find((site) => site.site_name === artisanal_site_id);
-//     if (artisanal_site && mapRef.current) {
-//       mapRef.current.flyTo({
-//         center: [
-//           artisanal_site.longitude,
-//           artisanal_site.latitude,
-//         ],
-//         duration: 1500,
-//         zoom: 11,
-//       });
-//       openMapDetails();
-//       setMapDetailsContent(
-//         <ArtisanalSiteContent site_name={artisanal_site_id} />,
-//       );
-//     }
-//   }
-// }, [
-//   artisanal_site_id,
-//   activeSites,
-//   inactiveSites,
-//   mapRef,
-//   openMapDetails,
-//   setMapDetailsContent,
-// ]);
