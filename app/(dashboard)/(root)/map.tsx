@@ -18,6 +18,7 @@ import { IndustrialProjectsContent } from "./components/mapDetailsContent";
 import { GeoJSONFeatureCollection } from "@/types/geojson";
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+import { parseCoordinates } from "@/lib/geojsonProcessing";
 
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
@@ -53,10 +54,8 @@ export default function MainMap({ geojsonData }: MapProps) {
   } | null>(null);
 
   const {
-    selectedSite,
     checkedLayers,
     openMapDetails,
-    // closeMapDetails,
     setSelectedSite,
     setMapDetailsContent,
   } = useMapDetailsStore();
@@ -113,6 +112,8 @@ export default function MainMap({ geojsonData }: MapProps) {
               "?" +
               createQueryString("selected_site", site_name.toString()),
           );
+
+          // set selected site
           setSelectedSite(clickedFeature.properties.Short_name);
           openMapDetails();
           setMapDetailsContent(
@@ -120,6 +121,21 @@ export default function MainMap({ geojsonData }: MapProps) {
               data={clickedFeature.properties as IndustralProjectDetailsProps}
             />,
           );
+
+          const { latitude, longitude } = parseCoordinates(
+            clickedFeature.properties.latitude_longitude,
+          );
+
+          console.log("latitude", latitude);
+          console.log("longitude", longitude);
+
+          if (mapRef.current) {
+            mapRef.current.flyTo({
+              center: [longitude, latitude],
+              duration: 1500,
+              zoom: 10,
+            });
+          }
         }
       }
     },
@@ -180,8 +196,6 @@ export default function MainMap({ geojsonData }: MapProps) {
         </>
       )}
 
-      <MapContents reference={mapRef} />
-
       {geojsonData && (
         <Source id="geojson-data" type="geojson" data={filteredGeojsonData}>
           <Layer
@@ -236,6 +250,7 @@ export default function MainMap({ geojsonData }: MapProps) {
           <div>{hoveredFeature.feature.properties.Project_name}</div>
         </div>
       )}
+      <MapContents reference={mapRef} />
     </Map>
   );
 }

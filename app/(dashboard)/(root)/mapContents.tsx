@@ -92,7 +92,7 @@ export default function MapContents({ reference }: MapContentsProps) {
         mapRef.current.flyTo({
           center: [selected_site.longitude, selected_site.latitude],
           duration: 1500,
-          zoom: 11,
+          zoom: 10,
         });
         openMapDetails();
         setSelectedSite(selected_site_sParam);
@@ -133,15 +133,15 @@ export default function MapContents({ reference }: MapContentsProps) {
           createQueryString("selected_site", site_name.toString()),
       );
 
-      openMapDetails();
       setSelectedSite(site_name);
+      openMapDetails();
       setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
       if (mapRef.current) {
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 11,
+          zoom: 10,
         });
       }
     },
@@ -166,7 +166,7 @@ export default function MapContents({ reference }: MapContentsProps) {
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 11,
+          zoom: 10,
         });
       }
     },
