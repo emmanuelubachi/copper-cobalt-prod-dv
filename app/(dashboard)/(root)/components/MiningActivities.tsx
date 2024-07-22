@@ -104,7 +104,7 @@ export function IndustralProjects() {
 
       <CheckBoxTreeWithFilter
         nodes={nodes}
-        checkedNodes={checked}
+        // checkedNodes={checked}
         expandedNodes={expanded}
       />
     </div>
