@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { CheckAllIndustralProjects } from "@/constants/application";
 
 type DetailsState = {
   // initial state
@@ -24,7 +25,7 @@ const useMapDetailsStore = create<DetailsState & DetailsActions>((set) => ({
   // initial state
   isMapDetailsOpen: false,
   mapDetailsDrawerContent: null,
-  checkedLayers: [],
+  checkedLayers: CheckAllIndustralProjects,
 
   toggleDetails: () =>
     set((state) => ({ isMapDetailsOpen: !state.isMapDetailsOpen })),
