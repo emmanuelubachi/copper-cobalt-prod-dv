@@ -1,7 +1,10 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArtisanalSites, IndustralProjects } from "./MiningActivities";
-import { ProcessingEntities } from "./AdditionalInformation";
+import {
+  ArtisanalSites,
+  IndustralProjects,
+} from "./mining-activites/mining-activities-filter";
+import { ProcessingEntities } from "./additional-information/AdditionalInformation";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
