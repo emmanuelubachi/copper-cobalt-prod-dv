@@ -5,6 +5,7 @@ import { MapRef, Popup, Marker } from "react-map-gl";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import { RiMapPin2Fill } from "@remixicon/react";
+import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mapDetailsContent";
@@ -17,6 +18,7 @@ import {
   inactive_sites,
   processing_entities,
 } from "@/data/mapData";
+import { Input } from "@/components/ui/input";
 
 type MapContentsProps = {
   reference: React.RefObject<MapRef>;
@@ -27,6 +29,7 @@ export default function MapContents({ reference }: MapContentsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
+  const { isMobile } = useDeviceType();
   const createQueryString = useUpdateSearchParams();
 
   const selected_site_sParam = searchParams.get("selected_site");
@@ -89,20 +92,46 @@ export default function MapContents({ reference }: MapContentsProps) {
   useEffect(() => {
     if (selected_site_sParam) {
       if (selected_site && mapRef.current) {
-        mapRef.current.flyTo({
-          center: [selected_site.longitude, selected_site.latitude],
-          duration: 1500,
-          zoom: 10,
-        });
+        const handleZoom = () => {
+          if (mapRef.current) {
+            isMobile
+              ? mapRef.current.flyTo({
+                  center: [
+                    selected_site.longitude,
+                    selected_site.latitude - 0.1,
+                  ],
+                  duration: 1500,
+                  zoom: 9,
+                })
+              : mapRef.current.flyTo({
+                  center: [selected_site.longitude, selected_site.latitude],
+                  duration: 1500,
+                  zoom: 10,
+                });
+          }
+        };
+
+        const timeoutId = setTimeout(() => {
+          if (mapRef.current) {
+            // mapRef.current.on("load", handleZoom);
+            handleZoom();
+          }
+        }, 600);
+
         openMapDetails();
         setSelectedSite(selected_site_sParam);
         setMapDetailsContent(
           <ArtisanalSiteContent site_name={selected_site_sParam} />,
         );
+
+        return () => {
+          clearTimeout(timeoutId);
+        };
       }
     }
   }, [
     mapRef,
+    isMobile,
     selected_site,
     selected_site_sParam,
     openMapDetails,
@@ -138,16 +167,23 @@ export default function MapContents({ reference }: MapContentsProps) {
       setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
       if (mapRef.current) {
-        mapRef.current.flyTo({
-          center: [longitude, latitude],
-          duration: 1500,
-          zoom: 10,
-        });
+        isMobile
+          ? mapRef.current.flyTo({
+              center: [longitude, latitude - 0.1],
+              duration: 1500,
+              zoom: 9,
+            })
+          : mapRef.current.flyTo({
+              center: [longitude, latitude],
+              duration: 1500,
+              zoom: 10,
+            });
       }
     },
     [
       mapRef,
       router,
+      isMobile,
       pathname,
       openMapDetails,
       setSelectedSite,
