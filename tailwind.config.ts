@@ -11,6 +11,7 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
     "./node_modules/react-checkbox-tree/lib/react-checkbox-tree.css",
+    "./node_modules/mapbox-gl/dist/mapbox-gl.css",
   ],
   prefix: "",
   theme: {

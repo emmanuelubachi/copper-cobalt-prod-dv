@@ -40,11 +40,15 @@ export default function MainMap({ geojsonData }: MapProps) {
           longitude: 23.52741376552,
           latitude: -3.050471588628,
           zoom: 3,
+          bearing: 0,
+          pitch: 0,
         }
       : {
           longitude: 23.52741376552,
           latitude: -3.050471588628,
           zoom: 3,
+          bearing: 0,
+          pitch: 0,
         },
   );
   const [hoveredFeature, setHoveredFeature] = useState<{
@@ -60,13 +64,11 @@ export default function MainMap({ geojsonData }: MapProps) {
   } = useMapDetailsStore();
   const createQueryString = useUpdateSearchParams();
 
-  const selected_site_sParam = searchParams.get("selected_site");
-
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
       setMapStyle("mapbox://styles/mapbox/dark-v10");
     } else {
-      setMapStyle("mapbox://styles/mapbox/streets-v10");
+      setMapStyle("mapbox://styles/mapbox/outdoors-v11");
     }
   }, [theme, systemTheme]);
 
