@@ -18,7 +18,6 @@ import {
   inactive_sites,
   processing_entities,
 } from "@/data/mapData";
-import { Input } from "@/components/ui/input";
 
 type MapContentsProps = {
   reference: React.RefObject<MapRef>;

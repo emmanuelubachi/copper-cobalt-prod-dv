@@ -1,10 +1,11 @@
+// not used any more
 "use client";
 import { useEffect, useState } from "react";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import { Button } from "../../../../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import useDeviceType from "@/hooks/useDeviceType";
-import { ScrollArea } from "../../../../components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function MapDetailsDrawer() {
   const {
@@ -44,7 +45,7 @@ export default function MapDetailsDrawer() {
                   }}
                 >
                   {isMobile ? (
-                    <ChevronDown className="h-6 w-6 text-foreground/60" />
+                    <ChevronDown className="hidden h-6 w-6 text-foreground/60" />
                   ) : (
                     <ChevronRight className="h-5 w-5 text-foreground/60 group-hover:animate-[pulse_2s_infinite]" />
                   )}
