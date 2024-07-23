@@ -14,7 +14,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
-import { IndustrialProjectsContent } from "./components/mapDetailsContent";
+import { IndustrialProjectsContent } from "./components/mining-activites/industral-content";
 import { GeoJSONFeatureCollection } from "@/types/geojson";
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
@@ -79,7 +79,7 @@ export default function MainMap({ geojsonData }: MapProps) {
         isMobile
           ? mapRef.current.flyTo({
               center: [26.321, -11.366],
-              zoom: 5.2,
+              zoom: 6,
               duration: 6000,
             })
           : mapRef.current.flyTo({
