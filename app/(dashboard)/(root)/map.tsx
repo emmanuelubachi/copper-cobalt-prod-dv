@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useTheme } from "next-themes";
 import Map, {
   MapRef,
@@ -29,9 +29,9 @@ const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 export default function MainMap({ geojsonData }: MapProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const { isMobile } = useDeviceType();
   const { theme, systemTheme } = useTheme();
-
   const mapRef = useRef<MapRef | null>(null);
   const [mapStyle, setMapStyle] = useState("");
   const [viewState, setViewState] = useState(
@@ -44,7 +44,7 @@ export default function MainMap({ geojsonData }: MapProps) {
       : {
           longitude: 23.52741376552,
           latitude: -3.050471588628,
-          zoom: 5,
+          zoom: 3,
         },
   );
   const [hoveredFeature, setHoveredFeature] = useState<{
@@ -52,7 +52,6 @@ export default function MainMap({ geojsonData }: MapProps) {
     x: number;
     y: number;
   } | null>(null);
-
   const {
     checkedLayers,
     openMapDetails,
@@ -61,6 +60,8 @@ export default function MainMap({ geojsonData }: MapProps) {
   } = useMapDetailsStore();
   const createQueryString = useUpdateSearchParams();
 
+  const selected_site_sParam = searchParams.get("selected_site");
+
   useEffect(() => {
     if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
       setMapStyle("mapbox://styles/mapbox/dark-v10");
@@ -68,6 +69,39 @@ export default function MainMap({ geojsonData }: MapProps) {
       setMapStyle("mapbox://styles/mapbox/streets-v10");
     }
   }, [theme, systemTheme]);
+
+  // Trigger zoom-in animation on map load
+  useEffect(() => {
+    const handleZoomIn = () => {
+      if (mapRef.current) {
+        isMobile
+          ? mapRef.current.flyTo({
+              center: [26.321, -11.366],
+              zoom: 5.2,
+              duration: 6000,
+            })
+          : mapRef.current.flyTo({
+              center: [25.413, -10.5],
+              zoom: 6.5,
+              duration: 8000,
+            });
+      }
+    };
+
+    const timeoutId = setTimeout(() => {
+      if (mapRef.current) {
+        // console.log("Attaching load event listener to the map.");
+        // mapRef.current.on("load", handleZoomIn);
+        handleZoomIn();
+      } else {
+        // console.log(
+        //   "mapRef.current is null. Unable to attach load event listener.",
+        // );
+      }
+    }, 500); // 1 second delay
+
+    return () => clearTimeout(timeoutId);
+  }, [isMobile]);
 
   const onHover = useCallback((event: any) => {
     const {
@@ -126,21 +160,25 @@ export default function MainMap({ geojsonData }: MapProps) {
             clickedFeature.properties.latitude_longitude,
           );
 
-          console.log("latitude", latitude);
-          console.log("longitude", longitude);
-
           if (mapRef.current) {
-            mapRef.current.flyTo({
-              center: [longitude, latitude],
-              duration: 1500,
-              zoom: 10,
-            });
+            isMobile
+              ? mapRef.current.flyTo({
+                  center: [longitude, latitude - 0.3],
+                  duration: 1500,
+                  zoom: 9,
+                })
+              : mapRef.current.flyTo({
+                  center: [longitude, latitude - 0.1],
+                  duration: 1500,
+                  zoom: 10,
+                });
           }
         }
       }
     },
     [
       router,
+      isMobile,
       pathname,
       openMapDetails,
       setSelectedSite,
