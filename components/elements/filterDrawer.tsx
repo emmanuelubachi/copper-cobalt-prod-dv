@@ -22,13 +22,13 @@ const FilterDrawer = () => {
         <>
           {isMobile && (
             <div
-              className="fixed inset-0 z-[25] bg-black opacity-50"
+              className="fixed inset-0 z-[45] bg-black opacity-50"
               onClick={handleOverlayClick}
             />
           )}
 
           <motion.div
-            className="fixed left-0 top-0 z-30 h-screen overflow-hidden bg-background p-8 shadow-lg dark:bg-background sm:left-16"
+            className="fixed left-0 top-0 z-50 h-screen overflow-hidden bg-background p-4 shadow-lg dark:bg-background sm:left-16 sm:px-4 sm:py-10"
             initial="initial"
             animate="animate"
             exit="exit"
@@ -44,7 +44,7 @@ const FilterDrawer = () => {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="absolute right-3 top-3 h-4 w-4 rounded-full p-0 opacity-70 ring-offset-background transition-opacity hover:bg-transparent hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+                    className="absolute right-3 top-3 hidden h-4 w-4 rounded-full p-0 opacity-70 ring-offset-background transition-opacity hover:bg-transparent hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary sm:block"
                     onClick={closeFilter}
                   >
                     <Cross2Icon className="h-4 w-4" />

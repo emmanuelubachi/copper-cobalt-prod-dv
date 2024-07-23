@@ -24,7 +24,7 @@ export default function MapDetailsDrawer() {
     <>
       {mounted && (
         <div
-          className={`fixed bottom-0 z-50 h-2/4 w-screen rounded-t-2xl bg-neutral-50 shadow-lg dark:bg-neutral-900 sm:right-0 sm:top-0 sm:h-screen sm:w-[25rem] sm:rounded-none xl:w-[30rem] ${
+          className={`fixed bottom-0 z-40 h-2/4 w-screen rounded-t-2xl bg-neutral-50 shadow-lg dark:bg-neutral-900 sm:right-0 sm:top-0 sm:h-screen sm:w-[25rem] sm:rounded-none xl:w-[30rem] ${
             isMobile ? "slide-up" : "slide-right"
           } ${isMapDetailsOpen ? "open" : ""}`}
         >
@@ -36,7 +36,7 @@ export default function MapDetailsDrawer() {
                   className={`group absolute z-[60] m-0 p-0 ${
                     isMobile
                       ? "left-1/2 top-2 h-6 w-16 -translate-x-1/2 transform"
-                      : "left-0 top-1/2 -m-[calc(24px/2)] h-16 -translate-y-1/2 transform"
+                      : "__button_pressed left-0 top-1/2 -m-[25px] h-16 w-6 -translate-y-1/2 transform rounded-none rounded-l-md bg-background/70 shadow-md" // -m-[calc(24px/2)]
                   }`}
                   onClick={() => {
                     closeMapDetails();
@@ -46,7 +46,7 @@ export default function MapDetailsDrawer() {
                   {isMobile ? (
                     <ChevronDown className="h-6 w-6 text-foreground/60" />
                   ) : (
-                    <ChevronRight className="h-6 w-6 text-foreground/60 group-hover:animate-[pulse_2s_infinite]" />
+                    <ChevronRight className="h-5 w-5 text-foreground/60 group-hover:animate-[pulse_2s_infinite]" />
                   )}
                   <span className="sr-only">Close</span>
                 </Button>

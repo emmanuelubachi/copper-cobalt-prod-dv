@@ -8,7 +8,7 @@ const MobileNav: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 z-40 w-full border-t bg-background shadow-md sm:hidden">
+    <nav className="fixed bottom-0 z-30 w-full border-t bg-background shadow-md sm:hidden">
       <ul className="flex justify-around p-2">
         {NAVLIST.map((item) => (
           <Link
