@@ -9,8 +9,6 @@ import { IndustralProjectsNode } from "@/constants/application";
 
 const nodes = IndustralProjectsNode;
 
-const checked = ["Australia"];
-
 const expanded = [""];
 
 export function ArtisanalSites() {
@@ -101,12 +99,7 @@ export function IndustralProjects() {
   return (
     <div className="flex flex-col gap-4">
       <h6 className="text-p font-semibold">Industral Projects</h6>
-
-      <CheckBoxTreeWithFilter
-        nodes={nodes}
-        // checkedNodes={checked}
-        expandedNodes={expanded}
-      />
+      <CheckBoxTreeWithFilter nodes={nodes} expandedNodes={expanded} />
     </div>
   );
 }

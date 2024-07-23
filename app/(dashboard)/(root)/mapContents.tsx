@@ -8,7 +8,7 @@ import { RiMapPin2Fill } from "@remixicon/react";
 import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { PopupContent } from "./components/popupContent";
-import { ArtisanalSiteContent } from "./components/mapDetailsContent";
+import { ArtisanalSiteContent } from "./components/mining-activites/artisanal-content";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
 
 // Import map data
