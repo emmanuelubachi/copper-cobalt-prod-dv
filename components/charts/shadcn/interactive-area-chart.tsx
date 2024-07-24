@@ -25,6 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
@@ -119,23 +120,17 @@ const chartData = [
   { date: "2024-06-30", desktop: 446, mobile: 400 },
 ];
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig;
+type InteractiveAreaChartProps = {
+  title: string;
+  description: string;
+  config: ChartConfig;
+  // data: { date: string; desktop: number; mobile: number }[];
+};
 
-export default function InteractiveAreaChart() {
+export default function InteractiveAreaChart({
+  ...props
+}: InteractiveAreaChartProps) {
   const [timeRange, setTimeRange] = React.useState("90d");
-
   const filteredData = chartData.filter((item) => {
     const date = new Date(item.date);
     const now = new Date();
@@ -148,17 +143,16 @@ export default function InteractiveAreaChart() {
     now.setDate(now.getDate() - daysToSubtract);
     return date >= now;
   });
+  const chartConfig = props.config satisfies ChartConfig;
 
   return (
     <Card className="m-0 border-b border-none bg-muted/50 shadow-none">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b px-4 py-5 sm:flex-row">
         <div className="grid flex-1 gap-1 text-center sm:text-left">
-          <CardTitle>Area Chart - Interactive</CardTitle>
-          <CardDescription>
-            Showing total visitors for the last 3 months
-          </CardDescription>
+          <CardTitle>{props.title}</CardTitle>
+          <CardDescription>{props.description}</CardDescription>
         </div>
-        <Select value={timeRange} onValueChange={setTimeRange}>
+        {/* <Select value={timeRange} onValueChange={setTimeRange}>
           <SelectTrigger
             className="w-[160px] rounded-lg sm:ml-auto"
             aria-label="Select a value"
@@ -176,7 +170,7 @@ export default function InteractiveAreaChart() {
               Last 7 days
             </SelectItem>
           </SelectContent>
-        </Select>
+        </Select> */}
       </CardHeader>
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer

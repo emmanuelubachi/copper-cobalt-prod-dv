@@ -25,38 +25,20 @@ const chartData = [
   { browser: "other", visitors: 90, fill: "var(--color-other)" },
 ];
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig;
+type MixedBarChartProps = {
+  title: string;
+  description: string;
+  config: ChartConfig;
+};
 
-export default function MixedBarChart() {
+export default function MixedBarChart({ ...props }: MixedBarChartProps) {
+  const chartConfig = props.config satisfies ChartConfig;
+
   return (
     <Card className="m-0 border-none bg-muted/50 shadow-none">
       <CardHeader className="border-b px-4">
-        <CardTitle>Bar Chart - Mixed</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{props.title}</CardTitle>
+        <CardDescription>{props.description}</CardDescription>
       </CardHeader>
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer config={chartConfig}>
@@ -75,7 +57,9 @@ export default function MixedBarChart() {
               tickMargin={10}
               axisLine={false}
               tickFormatter={(value) =>
-                chartConfig[value as keyof typeof chartConfig]?.label
+                (
+                  chartConfig[value as keyof typeof chartConfig]?.label || ""
+                ).toString()
               }
             />
             <XAxis dataKey="visitors" type="number" hide />

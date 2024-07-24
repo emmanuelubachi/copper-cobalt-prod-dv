@@ -1,9 +1,19 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+
 import Map from "react-map-gl";
-import { IndustralProjectDetailsProps } from "@/types/miningActivities";
+import { ArrowUpRight } from "lucide-react";
+
+import useMapDetailsStore from "@/store/mapDetailsStore";
+
+import { Button } from "@/components/ui/button";
+
 import InteractiveAreaChart from "@/components/charts/shadcn/interactive-area-chart";
 import MixedBarChart from "@/components/charts/shadcn/bar-chart/mixed-bar-chart";
+
+import { IndustralProjectDetailsProps } from "@/types/miningActivities";
+import LinkButton from "@/components/m-ui/link-button";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -46,6 +56,235 @@ const SiteMap = ({
   );
 };
 
+const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
+  const { closeMapDetails } = useMapDetailsStore();
+  const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
+  const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
+
+  const areaChartConfig = {
+    visitors: {
+      label: "Visitors",
+    },
+    desktop: {
+      label: "Desktop",
+      color: "hsl(var(--chart-1))",
+    },
+    mobile: {
+      label: "Mobile",
+      color: "hsl(var(--chart-2))",
+    },
+  };
+
+  const barChartConfig = {
+    visitors: {
+      label: "Visitors",
+    },
+    chrome: {
+      label: "Chrome",
+      color: "hsl(var(--chart-1))",
+    },
+    safari: {
+      label: "Safari",
+      color: "hsl(var(--chart-2))",
+    },
+    firefox: {
+      label: "Firefox",
+      color: "hsl(var(--chart-3))",
+    },
+    edge: {
+      label: "Edge",
+      color: "hsl(var(--chart-4))",
+    },
+    other: {
+      label: "Other",
+      color: "hsl(var(--chart-5))",
+    },
+  };
+
+  return (
+    <div className="mx-auto">
+      <SiteMap site_latitude={latitude} site_longitude={longitude} />
+      <div className={`grid gap-4 p-4 sm:p-6`}>
+        <h2 className="text-xl font-medium">{data.Project_name}</h2>
+
+        <div className="mb-4 flex shrink grow flex-col space-y-6 p-1 text-sm font-medium text-foreground">
+          {/* Geographical Details */}
+          <div className="grid gap-2">
+            {data.Nationality && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Nationality:{" "}
+                  </span>
+                  {data.Nationality}
+                </p>
+              </div>
+            )}
+
+            {data.Province && (
+              <div>
+                <span className="font-medium text-foreground/70">
+                  Province:{" "}
+                </span>
+                {data.Province}
+              </div>
+            )}
+
+            {data.Geographical_coordinates && (
+              <div className="flex items-center gap-1">
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Geographical Coordinates:{" "}
+                  </span>
+                  {data.Geographical_coordinates}
+                </p>
+              </div>
+            )}
+
+            {data.Geographical_description_project_description && (
+              <div className="">
+                <span className="font-medium text-foreground/70">
+                  Geographical Description:
+                </span>
+                <p className="font-medium">
+                  {data.Geographical_description_project_description}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Mining Details */}
+          <div className="grid gap-2">
+            {data["Copper/Cobalt_annual_production_(2022)"] && (
+              <div className="">
+                <span className="font-medium text-foreground/70">
+                  Annual Production 2022:
+                </span>
+                <p className="text-xl font-bold text-blue-600">
+                  {data["Copper/Cobalt_annual_production_(2022)"]}
+                </p>
+              </div>
+            )}
+
+            <InteractiveAreaChart
+              title="Copper/Cobalt"
+              description="Production"
+              config={areaChartConfig}
+            />
+            <MixedBarChart
+              title="Copper/Cobalt"
+              description="Production"
+              config={barChartConfig}
+            />
+          </div>
+
+          {/* Mine Details */}
+          <div className="grid gap-2">
+            {data["Deposit_size_(official_reserves)"] && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Deposit Size:{" "}
+                  </span>
+                  {data["Deposit_size_(official_reserves)"]}
+                </p>
+              </div>
+            )}
+            {data.Project_size && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Project Size:{" "}
+                  </span>
+                  {data.Project_size}
+                </p>
+              </div>
+            )}
+            {data.Permit_ID && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Permit ID:{" "}
+                  </span>
+                  {data.Permit_ID}
+                </p>
+              </div>
+            )}
+
+            {data["Mine_life/permit_validity"] && (
+              <div className="">
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Mine Life/Permit Validity:{" "}
+                  </span>
+                  {data["Mine_life/permit_validity"]}
+                </p>
+              </div>
+            )}
+
+            {data.Mine_type && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Mine Type:{" "}
+                  </span>
+                  {data.Mine_type}
+                </p>
+              </div>
+            )}
+
+            {data.Ownership && (
+              <div className="">
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Ownership:{" "}
+                  </span>
+                  {data.Ownership}
+                </p>
+              </div>
+            )}
+
+            {data.Share_allocation && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Share Allocation:{" "}
+                  </span>
+                  {data.Share_allocation}
+                </p>
+              </div>
+            )}
+
+            {data.Contract_type && (
+              <div>
+                <p>
+                  <span className="font-medium text-foreground/70">
+                    Contract Type:{" "}
+                  </span>
+                  {data.Contract_type}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/*Navigate to Project Page */}
+        <div>
+          <LinkButton
+            href={`/projects?project_id=${data.Short_name}`}
+            variant="default"
+            size={"lg"}
+            onClick={closeMapDetails}
+          >
+            View Project
+            <ArrowUpRight className="h-4 w-4" />
+          </LinkButton>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export function IndustrialProjectsContent({
   data,
 }: {
@@ -54,171 +293,6 @@ export function IndustrialProjectsContent({
   if (!data) {
     return <div>No industral projects selected</div>;
   }
-
   const projectData = data;
-
-  const latitude = parseFloat(projectData.latitude_longitude?.split(",")[0]);
-  const longitude = parseFloat(projectData.latitude_longitude?.split(",")[1]);
-
-  return (
-    <div className="mx-auto">
-      <SiteMap site_latitude={latitude} site_longitude={longitude} />
-      <div className={`grid gap-4 p-4 sm:p-6`}>
-        <h2 className="text-xl font-semibold">{projectData.Project_name}</h2>
-
-        <div className="mb-4 flex shrink grow flex-col space-y-6 p-1 text-sm font-semibold text-foreground">
-          {/* Geographical Details */}
-          <div className="grid gap-2">
-            {projectData.Nationality && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Nationality:{" "}
-                  </span>
-                  {projectData.Nationality}
-                </p>
-              </div>
-            )}
-
-            {projectData.Province && (
-              <div>
-                <span className="font-semibold text-foreground/70">
-                  Province:{" "}
-                </span>
-                {projectData.Province}
-              </div>
-            )}
-
-            {projectData.Geographical_coordinates && (
-              <div className="flex items-center gap-1">
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Geographical Coordinates:{" "}
-                  </span>
-                  {projectData.Geographical_coordinates}
-                </p>
-              </div>
-            )}
-
-            {projectData.Geographical_description_project_description && (
-              <div className="">
-                <span className="font-semibold text-foreground/70">
-                  Geographical Description:
-                </span>
-                <p className="font-semibold">
-                  {projectData.Geographical_description_project_description}
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Mining Details */}
-          <div className="grid gap-2">
-            {projectData["Copper/Cobalt_annual_production_(2022)"] && (
-              <div className="">
-                <span className="font-semibold text-foreground/70">
-                  Annual Production 2022:
-                </span>
-                <p className="text-xl font-bold text-blue-600">
-                  {projectData["Copper/Cobalt_annual_production_(2022)"]}
-                </p>
-              </div>
-            )}
-
-            <InteractiveAreaChart />
-            <MixedBarChart />
-          </div>
-
-          {/* Mine Details */}
-          <div className="grid gap-2">
-            {projectData["Deposit_size_(official_reserves)"] && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Deposit Size:{" "}
-                  </span>
-                  {projectData["Deposit_size_(official_reserves)"]}
-                </p>
-              </div>
-            )}
-            {projectData.Project_size && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Project Size:{" "}
-                  </span>
-                  {projectData.Project_size}
-                </p>
-              </div>
-            )}
-            {projectData.Permit_ID && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Permit ID:{" "}
-                  </span>
-                  {projectData.Permit_ID}
-                </p>
-              </div>
-            )}
-
-            {projectData["Mine_life/permit_validity"] && (
-              <div className="">
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Mine Life/Permit Validity:{" "}
-                  </span>
-                  {projectData["Mine_life/permit_validity"]}
-                </p>
-              </div>
-            )}
-
-            {projectData.Mine_type && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Mine Type:{" "}
-                  </span>
-                  {projectData.Mine_type}
-                </p>
-              </div>
-            )}
-
-            {projectData.Ownership && (
-              <div className="">
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Ownership:{" "}
-                  </span>
-                  {projectData.Ownership}
-                </p>
-              </div>
-            )}
-
-            {projectData.Share_allocation && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Share Allocation:{" "}
-                  </span>
-                  {projectData.Share_allocation}
-                </p>
-              </div>
-            )}
-
-            {projectData.Contract_type && (
-              <div>
-                <p>
-                  <span className="font-semibold text-foreground/70">
-                    Contract Type:{" "}
-                  </span>
-                  {projectData.Contract_type}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <SiteDetails data={projectData} />;
 }
