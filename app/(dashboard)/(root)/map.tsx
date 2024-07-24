@@ -189,6 +189,27 @@ export default function MainMap({ geojsonData }: MapProps) {
     ],
   );
 
+  const fr_countriesWithColors = [
+    { country: "australie", color: "#546475" },
+    { country: "canada", color: "#13B8B1" },
+    { country: "chine", color: "#F16067" },
+    { country: "rdcongo", color: "#ADBCDD" },
+    { country: "inde", color: "#ECC0A7" },
+    { country: "kazakhstan", color: "#A28882" },
+    { country: "suisse", color: "#FB9635" },
+    { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
+  ];
+  const countriesWithColors = [
+    { country: "Australia", color: "#546475" },
+    { country: "Canada", color: "#13B8B1" },
+    { country: "China", color: "#F16067" },
+    { country: "DR Congo", color: "#ADBCDD" },
+    { country: "India", color: "#ECC0A7" },
+    { country: "Kazakhstan", color: "#A28882" },
+    { country: "Switzerland", color: "#FB9635" },
+    { country: "Unknown", color: "#033550" }, // Placeholder for the unmatched color
+  ];
+
   return (
     <Map
       ref={mapRef}
@@ -208,31 +229,37 @@ export default function MainMap({ geojsonData }: MapProps) {
       {isMobile ? (
         <>
           <AttributionControl
-            style={{ position: "absolute", bottom: "64px", right: "0px" }}
-            position="bottom-right"
+            style={{ position: "absolute", bottom: "64px", left: "0px" }}
+            position="bottom-left"
             customAttribution={
               '<a href="https://www.ubachi.com/" target="_blank">© Ubachi</a>'
             }
           />
           <FullscreenControl
-            position="bottom-right"
-            style={{ position: "absolute", bottom: "192px", right: "0px" }}
+            position="bottom-left"
+            style={{ position: "absolute", bottom: "192px", left: "0px" }}
           />
           <NavigationControl
-            position="bottom-right"
-            style={{ position: "absolute", bottom: "96px", right: "0px" }}
+            position="bottom-left"
+            style={{ position: "absolute", bottom: "96px", left: "0px" }}
           />
         </>
       ) : (
         <>
           <AttributionControl
-            position="bottom-right"
+            position="bottom-left"
+            style={{
+              bottom: "12px",
+              left: "3px",
+              fontFamily: "var(--font-sans)",
+            }}
+            compact={true}
             customAttribution={
               '<a href="https://www.ubachi.com/" target="_blank">© Ubachi</a>'
             }
           />
-          <NavigationControl position="bottom-right" />
-          <FullscreenControl position="bottom-right" />
+          <NavigationControl position="bottom-left" />
+          <FullscreenControl position="bottom-left" />
         </>
       )}
 
@@ -291,6 +318,21 @@ export default function MainMap({ geojsonData }: MapProps) {
         </div>
       )}
       <MapContents reference={mapRef} />
+      <div className="absolute bottom-20 right-4 rounded-lg bg-background/40 p-2 sm:bottom-4">
+        <div className="flex-wrap">
+          {countriesWithColors.map(({ country, color }) => (
+            <div key={country} className="m-2 flex items-center space-x-2 p-1">
+              <div
+                className="h-4 w-4 rounded-full"
+                style={{ backgroundColor: color }}
+              ></div>
+              <span className="font-sans text-sm font-semibold text-foreground/80">
+                {country}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
     </Map>
   );
 }
