@@ -6,7 +6,10 @@ import { parse } from "csv-parse/sync";
 export async function readCsvFile(filename: string) {
   try {
     const filePath = path.join(process.cwd(), filename);
+    console.log(`Reading file from: ${filePath}`);
+
     const csvData = await fs.promises.readFile(filePath, "utf8");
+    console.log("File read successfully.");
 
     // Parse CSV data
     const records = parse(csvData, {

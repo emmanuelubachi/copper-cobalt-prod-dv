@@ -355,18 +355,6 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 barLabelDataKey="label"
               />
             )}
-
-            {/* <MixedBarChart
-              title="Copper/Cobalt"
-              description="Production"
-              config={mixedBarChartConfig}
-            /> */}
-
-            {/* <InteractiveAreaChart
-              title="Copper/Cobalt"
-              description="Production"
-              config={areaChartConfig}
-            /> */}
           </div>
 
           {/* Mine Details */}
