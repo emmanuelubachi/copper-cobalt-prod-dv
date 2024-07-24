@@ -43,3 +43,17 @@ export type IndustralProjectDetailsProps = {
   Nat0: string;
   Nat1: string;
 };
+
+export type MonthlyProductionData = {
+  short_name: string;
+  month: string;
+  quantity_tons: string;
+  product: string;
+};
+
+// T in TMonthlyProductionData means transformed
+export type TMonthlyProductionData = {
+  month: string;
+  Cobalt: number;
+  Copper: number;
+};

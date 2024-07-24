@@ -31,6 +31,7 @@
     "@types/mapbox-gl": "^3.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "csv-parse": "^5.5.6",
     "csv2geojson": "^5.1.2",
     "echarts": "^5.5.0",
     "echarts-for-react": "^3.0.2",

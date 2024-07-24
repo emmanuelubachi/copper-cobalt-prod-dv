@@ -1,19 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 
 import Map from "react-map-gl";
 import { ArrowUpRight } from "lucide-react";
 
 import useMapDetailsStore from "@/store/mapDetailsStore";
 
-import { Button } from "@/components/ui/button";
-
-import InteractiveAreaChart from "@/components/charts/shadcn/interactive-area-chart";
+import LinkButton from "@/components/m-ui/link-button";
 import MixedBarChart from "@/components/charts/shadcn/bar-chart/mixed-bar-chart";
+import InteractiveAreaChart from "@/components/charts/shadcn/interactive-area-chart";
+import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
+
+import { readCsvFile } from "@/app/actions/actions";
 
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
-import LinkButton from "@/components/m-ui/link-button";
+import { transformData } from "@/lib/dataProcessing";
+
+import {
+  MonthlyProductionData,
+  TMonthlyProductionData,
+} from "@/types/miningActivities";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -61,6 +67,52 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
   const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
 
+  const [filteredData, setFilteredData] = useState<MonthlyProductionData[]>([]);
+  const [transformesData, setTransformesData] = useState<
+    TMonthlyProductionData[]
+  >([]);
+
+  useEffect(() => {
+    const fetchMonthlyData = async () => {
+      try {
+        const csvData: MonthlyProductionData[] = await readCsvFile(
+          "data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv",
+        );
+
+        // Filter data based on short_name
+        const filtered = csvData.filter(
+          (row) => row.short_name === data.Short_name,
+        );
+
+        setTransformesData([]);
+        setFilteredData(filtered);
+      } catch (error) {
+        console.error("Error fetching and processing production data:", error);
+      }
+    };
+
+    fetchMonthlyData();
+  }, [data.Short_name]);
+
+  useEffect(() => {
+    if (filteredData.length > 0) {
+      // transform data into required format
+      const transformedData = transformData(filteredData);
+      setTransformesData(transformedData);
+    }
+  }, [filteredData]);
+
+  const multipleBarchartConfig = {
+    desktop: {
+      label: "Cobalt",
+      color: "hsl(var(--chart-1))",
+    },
+    mobile: {
+      label: "Copper",
+      color: "hsl(var(--chart-2))",
+    },
+  };
+
   const areaChartConfig = {
     visitors: {
       label: "Visitors",
@@ -75,7 +127,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
     },
   };
 
-  const barChartConfig = {
+  const mixedBarChartConfig = {
     visitors: {
       label: "Visitors",
     },
@@ -154,7 +206,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
           </div>
 
           {/* Mining Details */}
-          <div className="grid gap-2">
+          <div className="grid gap-4">
             {data["Copper/Cobalt_annual_production_(2022)"] && (
               <div className="">
                 <span className="font-medium text-foreground/70">
@@ -166,15 +218,27 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
               </div>
             )}
 
-            <InteractiveAreaChart
+            {transformesData.length > 0 && (
+              <MultipleBarChart
+                title="Monthly Production of Copper and Cobalt in 2023"
+                description="Quantity in Tonnes"
+                config={multipleBarchartConfig}
+                chartData={transformesData}
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+              />
+            )}
+
+            {/* <InteractiveAreaChart
               title="Copper/Cobalt"
               description="Production"
               config={areaChartConfig}
-            />
+            /> */}
+
             <MixedBarChart
               title="Copper/Cobalt"
               description="Production"
-              config={barChartConfig}
+              config={mixedBarChartConfig}
             />
           </div>
 
