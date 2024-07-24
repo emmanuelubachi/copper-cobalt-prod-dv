@@ -57,3 +57,15 @@ export type TMonthlyProductionData = {
   Cobalt: number;
   Copper: number;
 };
+
+export type DestinationData = {
+  short_name: string;
+  quantity_tons: string; //  Sum of dry_weight_decl
+  destination: string;
+};
+
+export type TDestinationData = {
+  destination: string;
+  quantity_tons: string;
+  label: string;
+};

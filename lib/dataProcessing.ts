@@ -1,9 +1,11 @@
 import {
   MonthlyProductionData,
   TMonthlyProductionData,
+  DestinationData,
+  TDestinationData,
 } from "@/types/miningActivities";
 
-export function transformData(
+export function transformMonthlyData(
   data: MonthlyProductionData[],
 ): TMonthlyProductionData[] {
   const result: TMonthlyProductionData[] = [];
@@ -45,4 +47,45 @@ export function transformData(
 
   // Remove months without any data for Cobalt or Copper
   return result.filter((monthData) => monthData.Cobalt || monthData.Copper);
+}
+
+export function transformDestinationData(
+  data: DestinationData[],
+): TDestinationData[] {
+  return data
+    .map((entry) => {
+      const weight = parseFloat(entry["quantity_tons"]);
+      const roundedWeight = weight.toFixed(1);
+      return {
+        destination: entry.destination,
+        quantity_tons: roundedWeight.toLocaleString(),
+        label: `${roundedWeight}T`,
+      };
+    })
+    .sort(
+      (a, b) =>
+        parseFloat(b["quantity_tons"].replace(/,/g, "")) -
+        parseFloat(a["quantity_tons"].replace(/,/g, "")),
+    );
+}
+
+export function transformSortTopDestination(
+  data: DestinationData[],
+): TDestinationData[] {
+  return data
+    .map((entry) => {
+      const weight = parseFloat(entry["quantity_tons"]);
+      const roundedWeight = weight.toFixed(1);
+      return {
+        destination: entry.destination,
+        quantity_tons: roundedWeight.toLocaleString(),
+        label: `${roundedWeight}T`,
+      };
+    })
+    .sort(
+      (a, b) =>
+        parseFloat(b["quantity_tons"].replace(/,/g, "")) -
+        parseFloat(a["quantity_tons"].replace(/,/g, "")),
+    )
+    .slice(0, 5);
 }

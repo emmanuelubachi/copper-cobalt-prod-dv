@@ -14,12 +14,19 @@ import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-
 import { readCsvFile } from "@/app/actions/actions";
 
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
-import { transformData } from "@/lib/dataProcessing";
+import {
+  transformMonthlyData,
+  transformDestinationData,
+  transformSortTopDestination,
+} from "@/lib/dataProcessing";
 
 import {
   MonthlyProductionData,
   TMonthlyProductionData,
+  DestinationData,
+  TDestinationData,
 } from "@/types/miningActivities";
+import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -66,10 +73,22 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const { closeMapDetails } = useMapDetailsStore();
   const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
   const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
+  const [filteredMonthlyData, setFilteredMonthlyData] = useState<
+    MonthlyProductionData[]
+  >([]);
+  const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
 
-  const [filteredData, setFilteredData] = useState<MonthlyProductionData[]>([]);
-  const [transformesData, setTransformesData] = useState<
-    TMonthlyProductionData[]
+  const [filteredDestinationData, setFilteredDestinationData] = useState<
+    DestinationData[]
+  >([]);
+  const [destinationData, setDestinationData] = useState<TDestinationData[]>(
+    [],
+  );
+  const [filteredCoDestinationData, setFilteredCoDestinationData] = useState<
+    DestinationData[]
+  >([]);
+  const [coDestinationData, setCoDestinationData] = useState<
+    TDestinationData[]
   >([]);
 
   useEffect(() => {
@@ -84,32 +103,113 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
           (row) => row.short_name === data.Short_name,
         );
 
-        setTransformesData([]);
-        setFilteredData(filtered);
+        setMonthlyData([]);
+        setFilteredMonthlyData(filtered);
+      } catch (error) {
+        console.error("Error fetching and processing production data:", error);
+      }
+    };
+
+    const fetchDestinationData = async () => {
+      try {
+        const csvData: DestinationData[] = await readCsvFile(
+          "data/Industral projects 2023 copper destination - origin situation des.csv",
+        );
+        // Filter data based on short_name
+        const filtered = csvData.filter(
+          (row) => row.short_name === data.Short_name,
+        );
+
+        console.log("filtered", filtered);
+
+        setDestinationData([]);
+        setFilteredDestinationData(filtered);
+      } catch (error) {
+        console.error("Error fetching and processing production data:", error);
+      }
+    };
+
+    const fetchCoDestinationData = async () => {
+      try {
+        const csvData: DestinationData[] = await readCsvFile(
+          "data/Industral projects 2023 cobalt destination - origin situation des.csv",
+        );
+        // Filter data based on short_name
+        const filtered = csvData.filter(
+          (row) => row.short_name === data.Short_name,
+        );
+
+        console.log("filtered", filtered);
+
+        setCoDestinationData([]);
+        setFilteredCoDestinationData(filtered);
       } catch (error) {
         console.error("Error fetching and processing production data:", error);
       }
     };
 
     fetchMonthlyData();
+    fetchDestinationData();
+    fetchCoDestinationData();
   }, [data.Short_name]);
 
   useEffect(() => {
-    if (filteredData.length > 0) {
+    if (filteredMonthlyData.length > 0) {
       // transform data into required format
-      const transformedData = transformData(filteredData);
-      setTransformesData(transformedData);
+      const transformedData = transformMonthlyData(filteredMonthlyData);
+      setMonthlyData(transformedData);
     }
-  }, [filteredData]);
+  }, [filteredMonthlyData]);
 
-  const multipleBarchartConfig = {
-    desktop: {
+  useEffect(() => {
+    if (filteredDestinationData.length > 0) {
+      // transform data into required format
+      // const transformedData = transformDestinationData(filteredDestinationData);
+      const transformedData = transformSortTopDestination(
+        filteredDestinationData,
+      );
+      setDestinationData(transformedData);
+    }
+  }, [filteredDestinationData]);
+
+  useEffect(() => {
+    if (filteredCoDestinationData.length > 0) {
+      // transform data into required format
+      const transformedData = transformSortTopDestination(
+        filteredCoDestinationData,
+      );
+      setCoDestinationData(transformedData);
+    }
+  }, [filteredCoDestinationData]);
+
+  const monthlyProdChartConfig = {
+    Cobalt: {
       label: "Cobalt",
-      color: "hsl(var(--chart-1))",
-    },
-    mobile: {
-      label: "Copper",
       color: "hsl(var(--chart-2))",
+    },
+    Copper: {
+      label: "Copper",
+      color: "hsl(var(--chart-5))",
+    },
+  };
+
+  const coDestChartConfig = {
+    quantity_tons: {
+      label: `Quantity ${" "}`,
+      color: "hsl(var(--chart-2))",
+    },
+    label: {
+      color: "hsl(var(--background))",
+    },
+  };
+
+  const cuDestChartConfig = {
+    quantity_tons: {
+      label: `Quantity ${" "}`,
+      color: "hsl(var(--chart-5))",
+    },
+    label: {
+      color: "hsl(var(--background))",
     },
   };
 
@@ -126,7 +226,6 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       color: "hsl(var(--chart-2))",
     },
   };
-
   const mixedBarChartConfig = {
     visitors: {
       label: "Visitors",
@@ -218,28 +317,56 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
               </div>
             )}
 
-            {transformesData.length > 0 && (
+            {monthlyData.length > 0 && (
               <MultipleBarChart
-                title="Monthly Production of Copper and Cobalt in 2023"
+                title="Production of Copper and Cobalt in 2023"
                 description="Quantity in Tonnes"
-                config={multipleBarchartConfig}
-                chartData={transformesData}
+                config={monthlyProdChartConfig}
+                chartData={monthlyData}
                 firstDataKey="Cobalt"
                 secondDataKey="Copper"
               />
             )}
+
+            {coDestinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Cobalt Production in 2023"
+                description="Quantity in Tonnes"
+                config={coDestChartConfig}
+                chartData={coDestinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                barDataKey="quantity_tons"
+                yAxisLabelDataKey="Cobalt"
+                barLabelDataKey="label"
+              />
+            )}
+
+            {destinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Copper Production in 2023"
+                description="Quantity in Tonnes"
+                config={cuDestChartConfig}
+                chartData={destinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                barDataKey="quantity_tons"
+                yAxisLabelDataKey="Cobalt"
+                barLabelDataKey="label"
+              />
+            )}
+
+            {/* <MixedBarChart
+              title="Copper/Cobalt"
+              description="Production"
+              config={mixedBarChartConfig}
+            /> */}
 
             {/* <InteractiveAreaChart
               title="Copper/Cobalt"
               description="Production"
               config={areaChartConfig}
             /> */}
-
-            <MixedBarChart
-              title="Copper/Cobalt"
-              description="Production"
-              config={mixedBarChartConfig}
-            />
           </div>
 
           {/* Mine Details */}

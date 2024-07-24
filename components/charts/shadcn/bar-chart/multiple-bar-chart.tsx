@@ -14,6 +14,8 @@ import {
 import {
   ChartConfig,
   ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
@@ -32,15 +34,13 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
 
   const chartData = props.chartData;
 
-  console.log(chartData);
-
   return (
     <Card className="m-0 border-none bg-muted/50 shadow-none">
       <CardHeader className="border-b px-4">
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
@@ -55,14 +55,15 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
               cursor={false}
               content={<ChartTooltipContent indicator="dashed" />}
             />
+            <ChartLegend content={<ChartLegendContent />} />
             <Bar
               dataKey={props.firstDataKey}
-              fill="var(--color-desktop)"
+              fill={`var(--color-${props.firstDataKey}`}
               radius={4}
             />
             <Bar
               dataKey={props.secondDataKey}
-              fill="var(--color-mobile)"
+              fill={`var(--color-${props.secondDataKey}`}
               radius={4}
             />
           </BarChart>
