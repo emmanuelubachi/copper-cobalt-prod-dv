@@ -11,7 +11,7 @@ import MixedBarChart from "@/components/charts/shadcn/bar-chart/mixed-bar-chart"
 import InteractiveAreaChart from "@/components/charts/shadcn/interactive-area-chart";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 
-import { readCsvFile } from "@/lib/fetchData";
+import { readCsvFile } from "@/lib/fetchCsvData";
 
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import {
