@@ -13,6 +13,10 @@ export async function readCsvFile(filename: string) {
     //   filename,
     // );
 
+    // console.info(`Current working directory: ${process.cwd()}`);
+    // console.info(`Process.env.FILE_DIRECTORY: ${process.env.FILE_DIRECTORY}`);
+    // console.info(`Reading file from: ${filePath}`);
+
     console.info(`Current working directory: ${process.cwd()}`);
     // console.info(`Reading file from: ${filePath}`);
 

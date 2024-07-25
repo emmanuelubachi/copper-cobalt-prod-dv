@@ -1,6 +1,7 @@
 "use server";
 // import fs from "fs";
 import { promises as fs } from "fs";
+import path from "path";
 
 import { parse } from "csv-parse/sync";
 import process from "process"; // Ensure process is imported
@@ -12,11 +13,12 @@ export async function readCsvFile(filename: string) {
     //   filename,
     // );
 
-    console.info(`Current working directory: ${process.cwd()}`);
-    // console.info(`Reading file from: ${filePath}`);
-
-    const csvData = await fs.readFile(process.cwd() + "/" + filename, "utf8");
-    console.info("File read successfully.");
+    console.info("Reading file from: ", path.join(process.cwd(), filename));
+    const csvData = await fs.readFile(
+      path.join(process.cwd(), filename),
+      "utf8",
+    );
+    // console.info("File read successfully.");
 
     // Parse CSV data
     const records = parse(csvData, {
