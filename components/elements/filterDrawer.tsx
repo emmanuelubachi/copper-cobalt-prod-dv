@@ -28,7 +28,7 @@ const FilterDrawer = () => {
           )}
 
           <motion.div
-            className="fixed left-0 top-0 z-50 h-screen overflow-hidden bg-background p-4 shadow-lg dark:bg-background sm:left-16 sm:px-4 sm:py-10"
+            className="fixed left-0 top-0 z-50 h-screen overflow-hidden bg-background shadow-lg dark:bg-background sm:left-16 sm:py-10"
             initial="initial"
             animate="animate"
             exit="exit"
