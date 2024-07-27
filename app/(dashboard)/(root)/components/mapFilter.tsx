@@ -16,21 +16,27 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
       defaultValue={defaultValue}
       className="sm:80 w-72 overflow-hidden pb-16 xl:w-96"
     >
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="mining-activities" className="text-pxs lg:text-xs">
-          Mining Activities
-        </TabsTrigger>
+      <div className="px-2 py-3 sm:px-3 sm:py-1">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger
+            value="mining-activities"
+            className="text-pxs lg:text-xs"
+          >
+            Mining Activities
+          </TabsTrigger>
 
-        <TabsTrigger
-          value="additional-information"
-          className="text-pxs lg:text-xs"
-        >
-          Additional Information
-        </TabsTrigger>
-      </TabsList>
+          <TabsTrigger
+            value="additional-information"
+            className="text-pxs lg:text-xs"
+          >
+            Additional Information
+          </TabsTrigger>
+        </TabsList>
+      </div>
+
       <TabsContent
         value="mining-activities"
-        className="mt-5 h-full gap-8 space-y-8 overflow-y-auto px-2 pb-5"
+        className="mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 sm:mt-5 sm:space-y-8 sm:px-5"
       >
         <div>
           <h6 className="text-h6 font-bold">Mining Activities</h6>
@@ -42,7 +48,11 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
         <ArtisanalSites />
         <IndustralProjects />
       </TabsContent>
-      <TabsContent value="additional-information" className="px-2 text-sm">
+
+      <TabsContent
+        value="additional-information"
+        className="mt-0 h-full gap-8 space-y-8 overflow-y-auto px-4 pb-5 sm:mt-5 sm:px-5"
+      >
         <ProcessingEntities />
       </TabsContent>
     </Tabs>

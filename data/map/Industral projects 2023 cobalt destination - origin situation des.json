@@ -1,0 +1,227 @@
+[
+    {
+        "short_name": "CCR",
+        "quantity_tons": "9583.279999999995",
+        "destination": "China"
+    },
+    {
+        "short_name": "CCR",
+        "quantity_tons": "408.496",
+        "destination": "Durban"
+    },
+    {
+        "short_name": "COMMUS",
+        "quantity_tons": "7195.266999999999",
+        "destination": "China"
+    },
+    {
+        "short_name": "HMC",
+        "quantity_tons": "860.2510000000002",
+        "destination": "China"
+    },
+    {
+        "short_name": "HMC",
+        "quantity_tons": "6786.81156",
+        "destination": "Singapore"
+    },
+    {
+        "short_name": "KALONGWE",
+        "quantity_tons": "11629.625999999997",
+        "destination": "China"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "25.278",
+        "destination": "Beira"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "7299.311330000003",
+        "destination": "China"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "2206.833000000001",
+        "destination": "Durban"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "1938.12115",
+        "destination": "Johannesburg"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "539.516",
+        "destination": "Lusaka"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "23248.955630000008",
+        "destination": "Mozambique"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "9284.6514",
+        "destination": "South Africa"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "26.002",
+        "destination": "Unknown"
+    },
+    {
+        "short_name": "KCC",
+        "quantity_tons": "4416.54787",
+        "destination": "Zambia"
+    },
+    {
+        "short_name": "KIMIN",
+        "quantity_tons": "685.1468",
+        "destination": "China"
+    },
+    {
+        "short_name": "KIMIN",
+        "quantity_tons": "422.00079999999997",
+        "destination": "Tanzania"
+    },
+    {
+        "short_name": "LAMIKAL",
+        "quantity_tons": "14218.118999999997",
+        "destination": "China"
+    },
+    {
+        "short_name": "LUILU RESSOURCES",
+        "quantity_tons": "10695.839999999995",
+        "destination": "China"
+    },
+    {
+        "short_name": "LUILU RESSOURCES",
+        "quantity_tons": "62.846999999999994",
+        "destination": "Unknown"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "4046.2336276699994",
+        "destination": "China"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "20520.3345139",
+        "destination": "Durban"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "178.732",
+        "destination": "Ndola/Zambia"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "3749.6790899999996",
+        "destination": "South Africa"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "263.956",
+        "destination": "Unknown"
+    },
+    {
+        "short_name": "METALKOL",
+        "quantity_tons": "19974.52749070001",
+        "destination": "Zambia"
+    },
+    {
+        "short_name": "MKM",
+        "quantity_tons": "675.4566000000001",
+        "destination": "China"
+    },
+    {
+        "short_name": "MKM",
+        "quantity_tons": "96.22746000000001",
+        "destination": "Durban"
+    },
+    {
+        "short_name": "MKM",
+        "quantity_tons": "64.34087",
+        "destination": "South Africa"
+    },
+    {
+        "short_name": "MKM",
+        "quantity_tons": "32.20534",
+        "destination": "Zambia"
+    },
+    {
+        "short_name": "MMT",
+        "quantity_tons": "357.002",
+        "destination": "China"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "187.29499",
+        "destination": "Beira"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "4166.37593",
+        "destination": "China"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "2721.3462699999995",
+        "destination": "Durban"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "6939.939980000001",
+        "destination": "Johannesburg"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "9228.664336999998",
+        "destination": "Mozambique"
+    },
+    {
+        "short_name": "MUMI",
+        "quantity_tons": "938.2989699999999",
+        "destination": "South Africa"
+    },
+    {
+        "short_name": "S M DEZIWA",
+        "quantity_tons": "22823.079999999987",
+        "destination": "China"
+    },
+    {
+        "short_name": "S M DEZIWA",
+        "quantity_tons": "275.734",
+        "destination": "Mozambique"
+    },
+    {
+        "short_name": "SCM",
+        "quantity_tons": "19362.808",
+        "destination": "China"
+    },
+    {
+        "short_name": "SCM",
+        "quantity_tons": "543.2760000000001",
+        "destination": "Unknown"
+    },
+    {
+        "short_name": "TCC",
+        "quantity_tons": "8476.406551999997",
+        "destination": "China"
+    },
+    {
+        "short_name": "TCC",
+        "quantity_tons": "45.97767",
+        "destination": "Unknown"
+    },
+    {
+        "short_name": "THOMAS",
+        "quantity_tons": "7972.3821499999995",
+        "destination": "China"
+    },
+    {
+        "short_name": "THOMAS",
+        "quantity_tons": "92.32608",
+        "destination": "Hono"
+    }
+]

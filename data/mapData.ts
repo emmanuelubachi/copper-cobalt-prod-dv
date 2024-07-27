@@ -1185,7 +1185,7 @@ export const processing_entities = {
   },
 };
 
-export const dataCsv = {
+export const Obsolete_dataCsv = {
   meta: [
     {
       name: "n_",
@@ -1855,7 +1855,7 @@ export const dataCsv = {
   },
 };
 
-export const industralProjectsNationality = {
+export const obsolete_industralProjectsNationality = {
   meta: [
     {
       name: "nationality",

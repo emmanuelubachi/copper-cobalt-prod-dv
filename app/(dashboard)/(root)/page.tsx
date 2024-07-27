@@ -11,11 +11,11 @@ import { GeoJSONFeatureCollection } from "@/types/geojson";
 
 export default async function Page() {
   // get industral projects csv data from server
-  const csvData = readCsvFile("data/industrial_projects.csv");
+  const csvData = readCsvFile("data/map/industrial_projects.csv");
 
   // get geojson data from server
   const overlayData = readGeoJsonFile(
-    "data/democratic_republic_of_the_congo_mining_permits.geojson",
+    "data/map/democratic_republic_of_the_congo_mining_permits.geojson",
   );
 
   // convert csv data to geojson
