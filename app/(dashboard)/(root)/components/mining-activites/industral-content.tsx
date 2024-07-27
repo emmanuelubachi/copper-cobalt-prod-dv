@@ -17,9 +17,9 @@ import {
   transformSortTopDestination,
 } from "@/lib/dataProcessing";
 
-import montlyProductionData from "@/data/map/Industral Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-import cobaltDestinationData from "@/data/map/Industral projects 2023 cobalt destination - origin situation des.json";
-import cubaltDestinationData from "@/data/map/Industral projects 2023 copper destination - origin situation des.json";
+import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
+import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 
 import {
   TMonthlyProductionData,
@@ -86,9 +86,9 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
-        // Filter data based on short_name
+        // Filter data based on _project_id
         const filtered = montlyProductionData.filter(
-          (row) => row.short_name === data.Short_name,
+          (row) => row._project_id === data._project_id,
         );
 
         // Process data for chart
@@ -107,7 +107,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       try {
         // Filter data based on short_name
         const filtered = cobaltDestinationData.filter(
-          (row) => row.short_name === data.Short_name,
+          (row) => row._project_id === data._project_id,
         );
 
         // Process data for chart - sort for top destinations
@@ -126,7 +126,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       try {
         // Filter data based on short_name
         const filtered = cubaltDestinationData.filter(
-          (row) => row.short_name === data.Short_name,
+          (row) => row._project_id === data._project_id,
         );
 
         // Process data for chart - sort for top destinations
@@ -144,7 +144,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
     fetchMonthlyData();
     fetchCoDestinationData();
     fetchCuDestinationData();
-  }, [data.Short_name]);
+  }, [data._project_id]);
 
   const monthlyProdChartConfig = {
     Cobalt: {

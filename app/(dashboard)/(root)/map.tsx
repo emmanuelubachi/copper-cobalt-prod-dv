@@ -131,7 +131,7 @@ export default function MainMap({ geojsonData }: MapProps) {
   const filteredGeojsonData = {
     ...geojsonData,
     features: geojsonData.features.filter((feature) =>
-      checkedLayers.includes(feature.properties.Short_name),
+      checkedLayers.includes(feature.properties._project_id),
     ),
   };
 
@@ -142,7 +142,7 @@ export default function MainMap({ geojsonData }: MapProps) {
       const clickedFeature = features && features[0];
       if (clickedFeature && clickedFeature.properties) {
         if (clickedFeature.properties.Code) {
-          const site_name = clickedFeature.properties.Short_name;
+          const site_name = clickedFeature.properties._project_id;
           router.push(
             pathname +
               "?" +
@@ -150,7 +150,7 @@ export default function MainMap({ geojsonData }: MapProps) {
           );
 
           // set selected site
-          setSelectedSite(clickedFeature.properties.Short_name);
+          setSelectedSite(clickedFeature.properties._project_id);
           openMapDetails();
           setMapDetailsContent(
             <IndustrialProjectsContent
