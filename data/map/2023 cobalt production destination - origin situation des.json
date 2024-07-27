@@ -1,0 +1,227 @@
+[
+    {
+        "_project_id": "ccr",
+        "destination": "China",
+        "quantity_tons": "9583.279999999995"
+    },
+    {
+        "_project_id": "ccr",
+        "destination": "Durban",
+        "quantity_tons": "408.496"
+    },
+    {
+        "_project_id": "commus",
+        "destination": "China",
+        "quantity_tons": "7195.266999999999"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "destination": "China",
+        "quantity_tons": "860.2510000000002"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "destination": "Singapore",
+        "quantity_tons": "6786.81156"
+    },
+    {
+        "_project_id": "kalongwe",
+        "destination": "China",
+        "quantity_tons": "11629.625999999997"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Beira",
+        "quantity_tons": "25.278"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "China",
+        "quantity_tons": "7299.311330000003"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Durban",
+        "quantity_tons": "2206.833000000001"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Johannesburg",
+        "quantity_tons": "1938.12115"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Lusaka",
+        "quantity_tons": "539.516"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Mozambique",
+        "quantity_tons": "23248.955630000008"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "South Africa",
+        "quantity_tons": "9284.6514"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Unknown",
+        "quantity_tons": "26.002"
+    },
+    {
+        "_project_id": "kcc",
+        "destination": "Zambia",
+        "quantity_tons": "4416.54787"
+    },
+    {
+        "_project_id": "kimin",
+        "destination": "China",
+        "quantity_tons": "685.1468"
+    },
+    {
+        "_project_id": "kimin",
+        "destination": "Tanzania",
+        "quantity_tons": "422.0008"
+    },
+    {
+        "_project_id": "lamikal",
+        "destination": "China",
+        "quantity_tons": "14218.118999999995"
+    },
+    {
+        "_project_id": "lr_sas",
+        "destination": "China",
+        "quantity_tons": "10695.839999999997"
+    },
+    {
+        "_project_id": "lr_sas",
+        "destination": "Unknown",
+        "quantity_tons": "62.847"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "China",
+        "quantity_tons": "4046.23362767"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "Durban",
+        "quantity_tons": "20520.3345139"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "Ndola/Zambia",
+        "quantity_tons": "178.732"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "South Africa",
+        "quantity_tons": "3749.67909"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "Unknown",
+        "quantity_tons": "263.956"
+    },
+    {
+        "_project_id": "metalkol",
+        "destination": "Zambia",
+        "quantity_tons": "19974.52749070001"
+    },
+    {
+        "_project_id": "mkm",
+        "destination": "China",
+        "quantity_tons": "675.4566000000001"
+    },
+    {
+        "_project_id": "mkm",
+        "destination": "Durban",
+        "quantity_tons": "96.22746"
+    },
+    {
+        "_project_id": "mkm",
+        "destination": "South Africa",
+        "quantity_tons": "64.34087"
+    },
+    {
+        "_project_id": "mkm",
+        "destination": "Zambia",
+        "quantity_tons": "32.20534"
+    },
+    {
+        "_project_id": "mmt",
+        "destination": "China",
+        "quantity_tons": "357.002"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "Beira",
+        "quantity_tons": "187.29499"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "China",
+        "quantity_tons": "4166.37593"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "Durban",
+        "quantity_tons": "2721.3462699999995"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "Johannesburg",
+        "quantity_tons": "6939.939980000001"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "Mozambique",
+        "quantity_tons": "9228.664336999998"
+    },
+    {
+        "_project_id": "mumi",
+        "destination": "South Africa",
+        "quantity_tons": "938.29897"
+    },
+    {
+        "_project_id": "somidez",
+        "destination": "China",
+        "quantity_tons": "22823.079999999987"
+    },
+    {
+        "_project_id": "somidez",
+        "destination": "Mozambique",
+        "quantity_tons": "275.734"
+    },
+    {
+        "_project_id": "sicomines",
+        "destination": "China",
+        "quantity_tons": "19362.808"
+    },
+    {
+        "_project_id": "sicomines",
+        "destination": "Unknown",
+        "quantity_tons": "543.2760000000001"
+    },
+    {
+        "_project_id": "tcc",
+        "destination": "China",
+        "quantity_tons": "8476.406551999997"
+    },
+    {
+        "_project_id": "tcc",
+        "destination": "Unknown",
+        "quantity_tons": "45.97767"
+    },
+    {
+        "_project_id": "thomas",
+        "destination": "China",
+        "quantity_tons": "7972.382149999999"
+    },
+    {
+        "_project_id": "thomas",
+        "destination": "Hono",
+        "quantity_tons": "92.32608"
+    }
+]
