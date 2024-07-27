@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
-import ProjectSection from "@/components/sections/projectSection";
+import ProjectDetails from "./components/project-details";
 
 import { IndustralProjectName, SearchParams, ErrorType } from "@/types";
 
@@ -44,5 +44,5 @@ export default function ProjectPage({
     return <ErrorProjectNotFound />;
   }
 
-  return <ProjectSection projectInfo={projectInfo} />;
+  return <ProjectDetails projectInfo={projectInfo} />;
 }

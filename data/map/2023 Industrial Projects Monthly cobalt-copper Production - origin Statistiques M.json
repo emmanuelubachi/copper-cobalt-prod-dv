@@ -1,0 +1,5192 @@
+[
+    {
+        "_project_id": "amical",
+        "month": "December",
+        "quantity_tons": "6.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "amical",
+        "month": "April",
+        "quantity_tons": "47.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "amical",
+        "month": "May",
+        "quantity_tons": "169.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "amical",
+        "month": "December",
+        "quantity_tons": "16.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "January",
+        "quantity_tons": "592.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "February",
+        "quantity_tons": "990.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "March",
+        "quantity_tons": "1407.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "April",
+        "quantity_tons": "1083.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "May",
+        "quantity_tons": "765.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "June",
+        "quantity_tons": "541.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "anvil",
+        "month": "August",
+        "quantity_tons": "468.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "benco",
+        "month": "April",
+        "quantity_tons": "201.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "January",
+        "quantity_tons": "626.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "February",
+        "quantity_tons": "419.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "March",
+        "quantity_tons": "1520.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "April",
+        "quantity_tons": "764.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "May",
+        "quantity_tons": "1117.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "June",
+        "quantity_tons": "1930.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "July",
+        "quantity_tons": "42.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "August",
+        "quantity_tons": "0.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "boss",
+        "month": "September",
+        "quantity_tons": "0.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "January",
+        "quantity_tons": "474.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "February",
+        "quantity_tons": "704.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "March",
+        "quantity_tons": "235.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "April",
+        "quantity_tons": "138.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "May",
+        "quantity_tons": "156.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "June",
+        "quantity_tons": "207.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "July",
+        "quantity_tons": "133.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "August",
+        "quantity_tons": "107.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "September",
+        "quantity_tons": "107.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "October",
+        "quantity_tons": "42.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "November",
+        "quantity_tons": "184.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "December",
+        "quantity_tons": "49.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "January",
+        "quantity_tons": "5228.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "February",
+        "quantity_tons": "5521.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "March",
+        "quantity_tons": "5363.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "April",
+        "quantity_tons": "4136.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "May",
+        "quantity_tons": "5050.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "June",
+        "quantity_tons": "5927.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "July",
+        "quantity_tons": "3164.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "August",
+        "quantity_tons": "4724.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "September",
+        "quantity_tons": "4739.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "October",
+        "quantity_tons": "6980.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "November",
+        "quantity_tons": "4197.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ccr",
+        "month": "December",
+        "quantity_tons": "5109.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "January",
+        "quantity_tons": "125.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "February",
+        "quantity_tons": "96.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "March",
+        "quantity_tons": "82.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "April",
+        "quantity_tons": "251.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "May",
+        "quantity_tons": "297.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "June",
+        "quantity_tons": "239.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "July",
+        "quantity_tons": "234.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "August",
+        "quantity_tons": "278.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "September",
+        "quantity_tons": "86.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "October",
+        "quantity_tons": "7.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "December",
+        "quantity_tons": "161.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "January",
+        "quantity_tons": "2767.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "February",
+        "quantity_tons": "4286.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "March",
+        "quantity_tons": "4030.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "April",
+        "quantity_tons": "4124.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "May",
+        "quantity_tons": "5889.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "June",
+        "quantity_tons": "4147.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "July",
+        "quantity_tons": "5517.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "August",
+        "quantity_tons": "5550.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "September",
+        "quantity_tons": "2469.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "October",
+        "quantity_tons": "2123.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "November",
+        "quantity_tons": "5241.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cdm",
+        "month": "December",
+        "quantity_tons": "3429.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "January",
+        "quantity_tons": "78.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "February",
+        "quantity_tons": "146.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "March",
+        "quantity_tons": "59.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "April",
+        "quantity_tons": "103.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "May",
+        "quantity_tons": "279.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "June",
+        "quantity_tons": "62.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "July",
+        "quantity_tons": "108.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "August",
+        "quantity_tons": "217.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "September",
+        "quantity_tons": "125.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "October",
+        "quantity_tons": "226.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "November",
+        "quantity_tons": "129.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "December",
+        "quantity_tons": "239.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "January",
+        "quantity_tons": "1260.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "February",
+        "quantity_tons": "855.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "March",
+        "quantity_tons": "1165.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "April",
+        "quantity_tons": "1710.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "May",
+        "quantity_tons": "1295.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "June",
+        "quantity_tons": "1927.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "July",
+        "quantity_tons": "1762.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "August",
+        "quantity_tons": "865.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "September",
+        "quantity_tons": "12767.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "October",
+        "quantity_tons": "1660.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "November",
+        "quantity_tons": "900.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "chemaf",
+        "month": "December",
+        "quantity_tons": "1700.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "January",
+        "quantity_tons": "1262.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "February",
+        "quantity_tons": "1714.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "March",
+        "quantity_tons": "1463.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "April",
+        "quantity_tons": "1772.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "May",
+        "quantity_tons": "687.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "June",
+        "quantity_tons": "3015.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "July",
+        "quantity_tons": "2914.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "August",
+        "quantity_tons": "3885.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "September",
+        "quantity_tons": "2239.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "October",
+        "quantity_tons": "2011.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "November",
+        "quantity_tons": "714.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cnmc",
+        "month": "December",
+        "quantity_tons": "1523.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "January",
+        "quantity_tons": "2643.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "February",
+        "quantity_tons": "3453.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "March",
+        "quantity_tons": "3678.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "April",
+        "quantity_tons": "2997.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "May",
+        "quantity_tons": "3213.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "June",
+        "quantity_tons": "2179.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "July",
+        "quantity_tons": "3025.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "August",
+        "quantity_tons": "3623.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "September",
+        "quantity_tons": "3085.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "October",
+        "quantity_tons": "2958.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "November",
+        "quantity_tons": "4149.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_mabende",
+        "month": "December",
+        "quantity_tons": "2406.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "January",
+        "quantity_tons": "191.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "February",
+        "quantity_tons": "358.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "March",
+        "quantity_tons": "565.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "April",
+        "quantity_tons": "279.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "May",
+        "quantity_tons": "156.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "August",
+        "quantity_tons": "114.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "September",
+        "quantity_tons": "241.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "October",
+        "quantity_tons": "622.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "November",
+        "quantity_tons": "408.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "December",
+        "quantity_tons": "204.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comika",
+        "month": "January",
+        "quantity_tons": "1410.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "February",
+        "quantity_tons": "6003.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "March",
+        "quantity_tons": "3022.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "April",
+        "quantity_tons": "3037.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "May",
+        "quantity_tons": "784.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "June",
+        "quantity_tons": "3258.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "July",
+        "quantity_tons": "3351.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "August",
+        "quantity_tons": "3094.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "September",
+        "quantity_tons": "3369.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "October",
+        "quantity_tons": "5182.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "November",
+        "quantity_tons": "4020.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comika",
+        "month": "December",
+        "quantity_tons": "3749.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "February",
+        "quantity_tons": "87.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "March",
+        "quantity_tons": "55.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "April",
+        "quantity_tons": "18.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "August",
+        "quantity_tons": "114.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "September",
+        "quantity_tons": "221.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "January",
+        "quantity_tons": "2162.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "February",
+        "quantity_tons": "3563.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "March",
+        "quantity_tons": "2712.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "April",
+        "quantity_tons": "1450.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "May",
+        "quantity_tons": "2677.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "June",
+        "quantity_tons": "2117.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "July",
+        "quantity_tons": "2869.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "August",
+        "quantity_tons": "1981.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "September",
+        "quantity_tons": "4188.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "October",
+        "quantity_tons": "4051.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "November",
+        "quantity_tons": "2225.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "comilu",
+        "month": "December",
+        "quantity_tons": "1946.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "January",
+        "quantity_tons": "165.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "February",
+        "quantity_tons": "75.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "March",
+        "quantity_tons": "165.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "April",
+        "quantity_tons": "27.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "June",
+        "quantity_tons": "37.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "July",
+        "quantity_tons": "595.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "August",
+        "quantity_tons": "369.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "September",
+        "quantity_tons": "133.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "October",
+        "quantity_tons": "254.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "November",
+        "quantity_tons": "110.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "December",
+        "quantity_tons": "244.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "commus",
+        "month": "January",
+        "quantity_tons": "7295.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "February",
+        "quantity_tons": "7951.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "March",
+        "quantity_tons": "14531.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "April",
+        "quantity_tons": "10057.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "May",
+        "quantity_tons": "12555.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "June",
+        "quantity_tons": "11424.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "July",
+        "quantity_tons": "8770.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "August",
+        "quantity_tons": "12397.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "September",
+        "quantity_tons": "10446.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "October",
+        "quantity_tons": "8576.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "November",
+        "quantity_tons": "14355.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "commus",
+        "month": "December",
+        "quantity_tons": "10786.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "January",
+        "quantity_tons": "2137.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "February",
+        "quantity_tons": "1429.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "March",
+        "quantity_tons": "1195.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "April",
+        "quantity_tons": "1063.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "May",
+        "quantity_tons": "1716.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "June",
+        "quantity_tons": "1530.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "July",
+        "quantity_tons": "1648.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "August",
+        "quantity_tons": "1092.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "September",
+        "quantity_tons": "2089.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "October",
+        "quantity_tons": "1512.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "November",
+        "quantity_tons": "1493.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "cjcmc",
+        "month": "December",
+        "quantity_tons": "795.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "congo_moon",
+        "month": "April",
+        "quantity_tons": "3410.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "January",
+        "quantity_tons": "738.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "February",
+        "quantity_tons": "912.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "March",
+        "quantity_tons": "1096.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "April",
+        "quantity_tons": "1230.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "May",
+        "quantity_tons": "403.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "June",
+        "quantity_tons": "887.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "July",
+        "quantity_tons": "1435.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "August",
+        "quantity_tons": "3418.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "September",
+        "quantity_tons": "809.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "October",
+        "quantity_tons": "2028.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "November",
+        "quantity_tons": "724.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "divine",
+        "month": "December",
+        "quantity_tons": "1182.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "everbright",
+        "month": "March",
+        "quantity_tons": "46.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "everbright",
+        "month": "April",
+        "quantity_tons": "1959.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "everbright",
+        "month": "July",
+        "quantity_tons": "1144.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "everbright",
+        "month": "August",
+        "quantity_tons": "3628.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "September",
+        "quantity_tons": "141.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "October",
+        "quantity_tons": "104.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "November",
+        "quantity_tons": "132.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "December",
+        "quantity_tons": "103.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "January",
+        "quantity_tons": "3174.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "February",
+        "quantity_tons": "2871.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "March",
+        "quantity_tons": "3556.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "April",
+        "quantity_tons": "2603.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "May",
+        "quantity_tons": "3446.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "June",
+        "quantity_tons": "1758.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "July",
+        "quantity_tons": "4564.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "August",
+        "quantity_tons": "2628.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "September",
+        "quantity_tons": "3258.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "October",
+        "quantity_tons": "2531.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "November",
+        "quantity_tons": "2257.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "excellen",
+        "month": "December",
+        "quantity_tons": "2645.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "January",
+        "quantity_tons": "9022.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "February",
+        "quantity_tons": "6400.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "March",
+        "quantity_tons": "10350.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "April",
+        "quantity_tons": "8854.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "May",
+        "quantity_tons": "8433.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "June",
+        "quantity_tons": "8533.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "July",
+        "quantity_tons": "9396.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "August",
+        "quantity_tons": "9276.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "September",
+        "quantity_tons": "7759.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "October",
+        "quantity_tons": "10272.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "November",
+        "quantity_tons": "4148.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "frontier",
+        "month": "December",
+        "quantity_tons": "10755.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "January",
+        "quantity_tons": "272.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "February",
+        "quantity_tons": "847.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "March",
+        "quantity_tons": "262.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "April",
+        "quantity_tons": "571.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "May",
+        "quantity_tons": "284.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "June",
+        "quantity_tons": "1205.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "July",
+        "quantity_tons": "204.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "August",
+        "quantity_tons": "369.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "September",
+        "quantity_tons": "395.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "October",
+        "quantity_tons": "392.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "November",
+        "quantity_tons": "276.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "gcm",
+        "month": "December",
+        "quantity_tons": "1239.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "January",
+        "quantity_tons": "501.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "February",
+        "quantity_tons": "847.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "March",
+        "quantity_tons": "730.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "April",
+        "quantity_tons": "635.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "May",
+        "quantity_tons": "928.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "June",
+        "quantity_tons": "563.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "July",
+        "quantity_tons": "916.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "August",
+        "quantity_tons": "554.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "September",
+        "quantity_tons": "1061.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "October",
+        "quantity_tons": "1028.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "November",
+        "quantity_tons": "972.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "golden",
+        "month": "December",
+        "quantity_tons": "554.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "January",
+        "quantity_tons": "335.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "February",
+        "quantity_tons": "165.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "March",
+        "quantity_tons": "120.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "April",
+        "quantity_tons": "296.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "May",
+        "quantity_tons": "170.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "June",
+        "quantity_tons": "94.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "July",
+        "quantity_tons": "108.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "August",
+        "quantity_tons": "30.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "September",
+        "quantity_tons": "144.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "November",
+        "quantity_tons": "12.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "December",
+        "quantity_tons": "168.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "January",
+        "quantity_tons": "3793.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "February",
+        "quantity_tons": "2041.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "March",
+        "quantity_tons": "2814.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "April",
+        "quantity_tons": "2462.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "May",
+        "quantity_tons": "2400.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "June",
+        "quantity_tons": "2005.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "July",
+        "quantity_tons": "2039.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "August",
+        "quantity_tons": "2383.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "September",
+        "quantity_tons": "3452.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "October",
+        "quantity_tons": "4185.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "November",
+        "quantity_tons": "2291.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "hanrui_metal",
+        "month": "December",
+        "quantity_tons": "2040.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "January",
+        "quantity_tons": "53.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "March",
+        "quantity_tons": "104.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "June",
+        "quantity_tons": "79.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "November",
+        "quantity_tons": "25.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "December",
+        "quantity_tons": "73.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "January",
+        "quantity_tons": "1421.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "February",
+        "quantity_tons": "1996.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "March",
+        "quantity_tons": "2410.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "April",
+        "quantity_tons": "1651.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "May",
+        "quantity_tons": "2588.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "June",
+        "quantity_tons": "836.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "July",
+        "quantity_tons": "1450.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "August",
+        "quantity_tons": "1742.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "September",
+        "quantity_tons": "2264.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "October",
+        "quantity_tons": "2142.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "November",
+        "quantity_tons": "1353.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "huachin_metal",
+        "month": "December",
+        "quantity_tons": "1317.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "jxcom",
+        "month": "September",
+        "quantity_tons": "56.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "jxcom",
+        "month": "October",
+        "quantity_tons": "1023.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "jxcom",
+        "month": "November",
+        "quantity_tons": "309.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "jxcom",
+        "month": "December",
+        "quantity_tons": "576.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "January",
+        "quantity_tons": "10.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "January",
+        "quantity_tons": "4363.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "February",
+        "quantity_tons": "3244.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "March",
+        "quantity_tons": "4256.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "April",
+        "quantity_tons": "4455.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "May",
+        "quantity_tons": "4595.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "June",
+        "quantity_tons": "4219.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "July",
+        "quantity_tons": "3804.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "August",
+        "quantity_tons": "2875.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "September",
+        "quantity_tons": "5972.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "October",
+        "quantity_tons": "4403.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "November",
+        "quantity_tons": "3589.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kaipeng",
+        "month": "December",
+        "quantity_tons": "2943.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "July",
+        "quantity_tons": "425.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "August",
+        "quantity_tons": "365.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "September",
+        "quantity_tons": "683.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "October",
+        "quantity_tons": "379.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "November",
+        "quantity_tons": "809.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "December",
+        "quantity_tons": "264.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "April",
+        "quantity_tons": "96.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "May",
+        "quantity_tons": "4812.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "June",
+        "quantity_tons": "5222.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "July",
+        "quantity_tons": "4110.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "August",
+        "quantity_tons": "2688.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "September",
+        "quantity_tons": "5569.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "October",
+        "quantity_tons": "4179.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "November",
+        "quantity_tons": "4552.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kalongwe",
+        "month": "December",
+        "quantity_tons": "4576.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "July",
+        "quantity_tons": "123.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "August",
+        "quantity_tons": "119.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "September",
+        "quantity_tons": "25.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "October",
+        "quantity_tons": "272.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "November",
+        "quantity_tons": "111.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "December",
+        "quantity_tons": "248.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "March",
+        "quantity_tons": "5878.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "April",
+        "quantity_tons": "3176.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "May",
+        "quantity_tons": "3071.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "June",
+        "quantity_tons": "3434.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "July",
+        "quantity_tons": "2375.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "August",
+        "quantity_tons": "1174.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "September",
+        "quantity_tons": "6669.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "October",
+        "quantity_tons": "2338.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "November",
+        "quantity_tons": "2157.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kambove",
+        "month": "December",
+        "quantity_tons": "2586.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "January",
+        "quantity_tons": "39491.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "February",
+        "quantity_tons": "30557.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "March",
+        "quantity_tons": "36243.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "April",
+        "quantity_tons": "36250.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "May",
+        "quantity_tons": "41435.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "June",
+        "quantity_tons": "40287.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "July",
+        "quantity_tons": "30664.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "August",
+        "quantity_tons": "39216.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "September",
+        "quantity_tons": "28967.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "October",
+        "quantity_tons": "40788.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "November",
+        "quantity_tons": "36878.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kamoa",
+        "month": "December",
+        "quantity_tons": "36535.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kansonga",
+        "month": "November",
+        "quantity_tons": "17047.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "January",
+        "quantity_tons": "1903.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "February",
+        "quantity_tons": "1497.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "March",
+        "quantity_tons": "1654.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "April",
+        "quantity_tons": "1274.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "May",
+        "quantity_tons": "313.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "June",
+        "quantity_tons": "1222.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "July",
+        "quantity_tons": "1279.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "August",
+        "quantity_tons": "756.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "September",
+        "quantity_tons": "1085.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "October",
+        "quantity_tons": "1725.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "November",
+        "quantity_tons": "1953.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "December",
+        "quantity_tons": "1288.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "January",
+        "quantity_tons": "20919.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "February",
+        "quantity_tons": "13563.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "March",
+        "quantity_tons": "10518.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "April",
+        "quantity_tons": "8121.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "May",
+        "quantity_tons": "16342.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "June",
+        "quantity_tons": "20586.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "July",
+        "quantity_tons": "18965.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "August",
+        "quantity_tons": "11399.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "September",
+        "quantity_tons": "20859.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "October",
+        "quantity_tons": "23199.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "November",
+        "quantity_tons": "15506.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kcc",
+        "month": "December",
+        "quantity_tons": "20309.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "June",
+        "quantity_tons": "1418.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "July",
+        "quantity_tons": "1159.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "August",
+        "quantity_tons": "1742.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "September",
+        "quantity_tons": "4288.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "October",
+        "quantity_tons": "3792.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "November",
+        "quantity_tons": "4932.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "December",
+        "quantity_tons": "12158.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "May",
+        "quantity_tons": "13566.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "June",
+        "quantity_tons": "8393.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "July",
+        "quantity_tons": "2748.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "August",
+        "quantity_tons": "17269.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "September",
+        "quantity_tons": "14360.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "October",
+        "quantity_tons": "33635.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "November",
+        "quantity_tons": "14544.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kfm",
+        "month": "December",
+        "quantity_tons": "40071.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "January",
+        "quantity_tons": "2985.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "February",
+        "quantity_tons": "2983.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "March",
+        "quantity_tons": "3043.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "April",
+        "quantity_tons": "1623.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "May",
+        "quantity_tons": "2120.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "June",
+        "quantity_tons": "3305.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "July",
+        "quantity_tons": "2291.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "August",
+        "quantity_tons": "1452.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "September",
+        "quantity_tons": "1777.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "October",
+        "quantity_tons": "3342.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "November",
+        "quantity_tons": "1906.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kicc",
+        "month": "December",
+        "quantity_tons": "1305.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "January",
+        "quantity_tons": "1834.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "February",
+        "quantity_tons": "1622.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "March",
+        "quantity_tons": "2468.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "April",
+        "quantity_tons": "2520.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "May",
+        "quantity_tons": "1866.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "June",
+        "quantity_tons": "3178.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "July",
+        "quantity_tons": "1604.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "August",
+        "quantity_tons": "2668.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "September",
+        "quantity_tons": "2142.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "October",
+        "quantity_tons": "1830.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "November",
+        "quantity_tons": "2986.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "kimin",
+        "month": "December",
+        "quantity_tons": "1578.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "January",
+        "quantity_tons": "141.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "February",
+        "quantity_tons": "630.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "March",
+        "quantity_tons": "751.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "April",
+        "quantity_tons": "281.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "May",
+        "quantity_tons": "628.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "June",
+        "quantity_tons": "240.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "July",
+        "quantity_tons": "386.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "August",
+        "quantity_tons": "52.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "September",
+        "quantity_tons": "576.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "October",
+        "quantity_tons": "366.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "November",
+        "quantity_tons": "537.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "December",
+        "quantity_tons": "210.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "January",
+        "quantity_tons": "2669.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "February",
+        "quantity_tons": "5649.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "March",
+        "quantity_tons": "4239.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "April",
+        "quantity_tons": "3286.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "May",
+        "quantity_tons": "4542.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "June",
+        "quantity_tons": "2851.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "July",
+        "quantity_tons": "2440.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "August",
+        "quantity_tons": "1327.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "September",
+        "quantity_tons": "6508.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "October",
+        "quantity_tons": "7157.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "November",
+        "quantity_tons": "5078.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lamikal",
+        "month": "December",
+        "quantity_tons": "2508.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "January",
+        "quantity_tons": "11172.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "February",
+        "quantity_tons": "6614.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "March",
+        "quantity_tons": "6416.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "April",
+        "quantity_tons": "6302.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "May",
+        "quantity_tons": "5159.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "June",
+        "quantity_tons": "11174.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "July",
+        "quantity_tons": "5918.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "August",
+        "quantity_tons": "11130.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "September",
+        "quantity_tons": "5612.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "October",
+        "quantity_tons": "6804.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "November",
+        "quantity_tons": "6368.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lcs",
+        "month": "December",
+        "quantity_tons": "11354.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "January",
+        "quantity_tons": "129.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "February",
+        "quantity_tons": "97.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "March",
+        "quantity_tons": "109.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "April",
+        "quantity_tons": "60.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "May",
+        "quantity_tons": "269.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "June",
+        "quantity_tons": "142.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "July",
+        "quantity_tons": "231.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "August",
+        "quantity_tons": "293.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "September",
+        "quantity_tons": "184.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "October",
+        "quantity_tons": "160.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "November",
+        "quantity_tons": "333.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "December",
+        "quantity_tons": "136.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "January",
+        "quantity_tons": "3693.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "February",
+        "quantity_tons": "4205.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "March",
+        "quantity_tons": "2980.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "April",
+        "quantity_tons": "3472.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "May",
+        "quantity_tons": "2300.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "June",
+        "quantity_tons": "3575.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "July",
+        "quantity_tons": "5111.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "August",
+        "quantity_tons": "3797.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "September",
+        "quantity_tons": "2686.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "October",
+        "quantity_tons": "3694.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "November",
+        "quantity_tons": "4392.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "lr_sas",
+        "month": "December",
+        "quantity_tons": "3220.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "January",
+        "quantity_tons": "365.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "February",
+        "quantity_tons": "104.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "March",
+        "quantity_tons": "94.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "April",
+        "quantity_tons": "63.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "May",
+        "quantity_tons": "71.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "June",
+        "quantity_tons": "39.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "July",
+        "quantity_tons": "118.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "August",
+        "quantity_tons": "142.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "September",
+        "quantity_tons": "63.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "October",
+        "quantity_tons": "94.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "November",
+        "quantity_tons": "39.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mm",
+        "month": "January",
+        "quantity_tons": "1309.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "February",
+        "quantity_tons": "1575.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "March",
+        "quantity_tons": "1402.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "April",
+        "quantity_tons": "1317.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "May",
+        "quantity_tons": "1490.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "June",
+        "quantity_tons": "2009.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "July",
+        "quantity_tons": "1547.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "August",
+        "quantity_tons": "1397.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "September",
+        "quantity_tons": "1457.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "October",
+        "quantity_tons": "1388.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "November",
+        "quantity_tons": "1253.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mm",
+        "month": "December",
+        "quantity_tons": "1555.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "January",
+        "quantity_tons": "1278.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "February",
+        "quantity_tons": "1202.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "March",
+        "quantity_tons": "1132.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "April",
+        "quantity_tons": "1019.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "May",
+        "quantity_tons": "1522.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "June",
+        "quantity_tons": "1211.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "July",
+        "quantity_tons": "1370.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "August",
+        "quantity_tons": "1484.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "September",
+        "quantity_tons": "1072.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "October",
+        "quantity_tons": "1332.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "November",
+        "quantity_tons": "1157.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "December",
+        "quantity_tons": "929.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "January",
+        "quantity_tons": "7358.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "February",
+        "quantity_tons": "8498.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "March",
+        "quantity_tons": "8105.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "April",
+        "quantity_tons": "8065.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "May",
+        "quantity_tons": "9198.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "June",
+        "quantity_tons": "7204.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "July",
+        "quantity_tons": "10078.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "August",
+        "quantity_tons": "9199.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "September",
+        "quantity_tons": "8359.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "October",
+        "quantity_tons": "8816.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "November",
+        "quantity_tons": "7687.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "metalkol",
+        "month": "December",
+        "quantity_tons": "7115.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "January",
+        "quantity_tons": "99.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "February",
+        "quantity_tons": "146.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "March",
+        "quantity_tons": "201.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "April",
+        "quantity_tons": "157.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "May",
+        "quantity_tons": "80.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "June",
+        "quantity_tons": "16.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "July",
+        "quantity_tons": "23.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "August",
+        "quantity_tons": "24.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "September",
+        "quantity_tons": "15.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "January",
+        "quantity_tons": "1327.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "February",
+        "quantity_tons": "4083.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "March",
+        "quantity_tons": "2594.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "April",
+        "quantity_tons": "3075.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "May",
+        "quantity_tons": "2373.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "June",
+        "quantity_tons": "1777.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "July",
+        "quantity_tons": "1460.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "August",
+        "quantity_tons": "2182.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "September",
+        "quantity_tons": "2291.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "October",
+        "quantity_tons": "3006.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "November",
+        "quantity_tons": "2563.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mikas",
+        "month": "December",
+        "quantity_tons": "1366.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "January",
+        "quantity_tons": "1478.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "February",
+        "quantity_tons": "1016.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "March",
+        "quantity_tons": "1337.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "April",
+        "quantity_tons": "669.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "May",
+        "quantity_tons": "1173.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "June",
+        "quantity_tons": "842.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "July",
+        "quantity_tons": "1626.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "August",
+        "quantity_tons": "1028.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "September",
+        "quantity_tons": "1515.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "October",
+        "quantity_tons": "718.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "November",
+        "quantity_tons": "1059.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mjm",
+        "month": "December",
+        "quantity_tons": "779.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "January",
+        "quantity_tons": "158.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "February",
+        "quantity_tons": "19.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "March",
+        "quantity_tons": "88.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "January",
+        "quantity_tons": "1224.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "February",
+        "quantity_tons": "1162.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "March",
+        "quantity_tons": "1263.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "April",
+        "quantity_tons": "1677.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "May",
+        "quantity_tons": "1616.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "June",
+        "quantity_tons": "1161.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "July",
+        "quantity_tons": "1778.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "August",
+        "quantity_tons": "1396.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "September",
+        "quantity_tons": "1131.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "October",
+        "quantity_tons": "2564.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "November",
+        "quantity_tons": "2123.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mkm",
+        "month": "December",
+        "quantity_tons": "1419.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "January",
+        "quantity_tons": "3691.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "February",
+        "quantity_tons": "2412.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "March",
+        "quantity_tons": "4509.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "April",
+        "quantity_tons": "3892.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "May",
+        "quantity_tons": "3756.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "June",
+        "quantity_tons": "3145.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "July",
+        "quantity_tons": "3612.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "August",
+        "quantity_tons": "3467.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "September",
+        "quantity_tons": "2960.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "October",
+        "quantity_tons": "5033.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "November",
+        "quantity_tons": "3403.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmg",
+        "month": "December",
+        "quantity_tons": "3253.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "August",
+        "quantity_tons": "81.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "January",
+        "quantity_tons": "543.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "February",
+        "quantity_tons": "862.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "March",
+        "quantity_tons": "836.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "April",
+        "quantity_tons": "736.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "May",
+        "quantity_tons": "1172.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "June",
+        "quantity_tons": "1051.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "July",
+        "quantity_tons": "1448.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "August",
+        "quantity_tons": "1401.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "September",
+        "quantity_tons": "1001.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "October",
+        "quantity_tons": "2667.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "November",
+        "quantity_tons": "2490.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mmt",
+        "month": "December",
+        "quantity_tons": "1691.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mpc",
+        "month": "June",
+        "quantity_tons": "20.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mpc",
+        "month": "July",
+        "quantity_tons": "103.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mpc",
+        "month": "October",
+        "quantity_tons": "50.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "msl",
+        "month": "June",
+        "quantity_tons": "363.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "msl",
+        "month": "September",
+        "quantity_tons": "0.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "January",
+        "quantity_tons": "777.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "February",
+        "quantity_tons": "38.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "March",
+        "quantity_tons": "563.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "April",
+        "quantity_tons": "584.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "May",
+        "quantity_tons": "479.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "June",
+        "quantity_tons": "598.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "July",
+        "quantity_tons": "773.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "August",
+        "quantity_tons": "585.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "September",
+        "quantity_tons": "657.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "October",
+        "quantity_tons": "828.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "November",
+        "quantity_tons": "909.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "December",
+        "quantity_tons": "622.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "January",
+        "quantity_tons": "2706.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "February",
+        "quantity_tons": "1481.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "March",
+        "quantity_tons": "3078.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "April",
+        "quantity_tons": "3291.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "May",
+        "quantity_tons": "3203.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "June",
+        "quantity_tons": "3404.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "July",
+        "quantity_tons": "2290.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "August",
+        "quantity_tons": "2183.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "September",
+        "quantity_tons": "3773.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "October",
+        "quantity_tons": "2702.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "November",
+        "quantity_tons": "3823.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "mumi",
+        "month": "December",
+        "quantity_tons": "1824.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "December",
+        "quantity_tons": "109.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "January",
+        "quantity_tons": "1872.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "February",
+        "quantity_tons": "3012.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "March",
+        "quantity_tons": "2521.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "April",
+        "quantity_tons": "1704.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "May",
+        "quantity_tons": "1753.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "June",
+        "quantity_tons": "2501.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "July",
+        "quantity_tons": "3160.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "August",
+        "quantity_tons": "2312.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "September",
+        "quantity_tons": "3242.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "October",
+        "quantity_tons": "2471.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "November",
+        "quantity_tons": "2899.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "new_minerals",
+        "month": "December",
+        "quantity_tons": "2889.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "January",
+        "quantity_tons": "270.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "February",
+        "quantity_tons": "510.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "March",
+        "quantity_tons": "240.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "April",
+        "quantity_tons": "390.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "May",
+        "quantity_tons": "395.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "June",
+        "quantity_tons": "490.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "July",
+        "quantity_tons": "315.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "August",
+        "quantity_tons": "250.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "September",
+        "quantity_tons": "582.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "October",
+        "quantity_tons": "210.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "November",
+        "quantity_tons": "540.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "omr",
+        "month": "December",
+        "quantity_tons": "375.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "April",
+        "quantity_tons": "291.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "May",
+        "quantity_tons": "264.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "June",
+        "quantity_tons": "99.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "August",
+        "quantity_tons": "119.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "September",
+        "quantity_tons": "194.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "October",
+        "quantity_tons": "546.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "November",
+        "quantity_tons": "584.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "December",
+        "quantity_tons": "104.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "January",
+        "quantity_tons": "2597.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "February",
+        "quantity_tons": "1765.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "March",
+        "quantity_tons": "1122.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "April",
+        "quantity_tons": "2468.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "May",
+        "quantity_tons": "738.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "June",
+        "quantity_tons": "1695.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "July",
+        "quantity_tons": "4916.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "August",
+        "quantity_tons": "2815.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "September",
+        "quantity_tons": "287.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "October",
+        "quantity_tons": "4624.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "November",
+        "quantity_tons": "2352.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "ruashi",
+        "month": "December",
+        "quantity_tons": "2146.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "January",
+        "quantity_tons": "1245.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "February",
+        "quantity_tons": "4357.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "March",
+        "quantity_tons": "2203.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "April",
+        "quantity_tons": "1522.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "May",
+        "quantity_tons": "19389.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "June",
+        "quantity_tons": "18974.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "July",
+        "quantity_tons": "14112.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "August",
+        "quantity_tons": "1229.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "September",
+        "quantity_tons": "2302.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "October",
+        "quantity_tons": "1292.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "November",
+        "quantity_tons": "31967.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "rubamin",
+        "month": "December",
+        "quantity_tons": "9605.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "June",
+        "quantity_tons": "52.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "July",
+        "quantity_tons": "922.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "August",
+        "quantity_tons": "1304.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "September",
+        "quantity_tons": "1504.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "October",
+        "quantity_tons": "1007.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "November",
+        "quantity_tons": "798.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "December",
+        "quantity_tons": "1196.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "January",
+        "quantity_tons": "6046.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "February",
+        "quantity_tons": "11704.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "March",
+        "quantity_tons": "8173.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "April",
+        "quantity_tons": "8207.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "May",
+        "quantity_tons": "6843.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "June",
+        "quantity_tons": "6811.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "July",
+        "quantity_tons": "7548.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "August",
+        "quantity_tons": "4239.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "September",
+        "quantity_tons": "6406.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "October",
+        "quantity_tons": "4342.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "November",
+        "quantity_tons": "7914.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somidez",
+        "month": "December",
+        "quantity_tons": "5269.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sabwe",
+        "month": "December",
+        "quantity_tons": "1500.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "January",
+        "quantity_tons": "195.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "February",
+        "quantity_tons": "56.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "March",
+        "quantity_tons": "2400.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "April",
+        "quantity_tons": "1388.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "June",
+        "quantity_tons": "232.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "July",
+        "quantity_tons": "464.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "August",
+        "quantity_tons": "564.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "September",
+        "quantity_tons": "11.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "November",
+        "quantity_tons": "309.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "December",
+        "quantity_tons": "327.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "January",
+        "quantity_tons": "18905.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "February",
+        "quantity_tons": "15900.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "March",
+        "quantity_tons": "22034.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "April",
+        "quantity_tons": "33468.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "May",
+        "quantity_tons": "14076.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "June",
+        "quantity_tons": "15263.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "July",
+        "quantity_tons": "20267.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "August",
+        "quantity_tons": "9377.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "September",
+        "quantity_tons": "17733.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "November",
+        "quantity_tons": "28012.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sicomines",
+        "month": "December",
+        "quantity_tons": "11572.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "January",
+        "quantity_tons": "2924.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "February",
+        "quantity_tons": "2613.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "March",
+        "quantity_tons": "2067.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "April",
+        "quantity_tons": "2863.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "May",
+        "quantity_tons": "3059.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "June",
+        "quantity_tons": "2338.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "July",
+        "quantity_tons": "2989.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "August",
+        "quantity_tons": "2695.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "September",
+        "quantity_tons": "3086.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "October",
+        "quantity_tons": "2664.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "November",
+        "quantity_tons": "2761.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "sek",
+        "month": "December",
+        "quantity_tons": "2988.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "semhkat",
+        "month": "January",
+        "quantity_tons": "207.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "semhkat",
+        "month": "February",
+        "quantity_tons": "207.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "semhkat",
+        "month": "March",
+        "quantity_tons": "103.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "January",
+        "quantity_tons": "3403.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "February",
+        "quantity_tons": "2658.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "March",
+        "quantity_tons": "2223.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "April",
+        "quantity_tons": "3915.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "May",
+        "quantity_tons": "3490.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "June",
+        "quantity_tons": "2729.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "July",
+        "quantity_tons": "916.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "August",
+        "quantity_tons": "2438.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "September",
+        "quantity_tons": "2747.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "October",
+        "quantity_tons": "2449.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "November",
+        "quantity_tons": "2614.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "shituru",
+        "month": "December",
+        "quantity_tons": "3441.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "January",
+        "quantity_tons": "287.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "February",
+        "quantity_tons": "219.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "March",
+        "quantity_tons": "263.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "April",
+        "quantity_tons": "201.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "May",
+        "quantity_tons": "330.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "June",
+        "quantity_tons": "382.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "July",
+        "quantity_tons": "455.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "societe_kasonta",
+        "month": "August",
+        "quantity_tons": "253.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "June",
+        "quantity_tons": "49.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "somika",
+        "month": "January",
+        "quantity_tons": "4162.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "February",
+        "quantity_tons": "3244.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "March",
+        "quantity_tons": "3520.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "April",
+        "quantity_tons": "2070.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "May",
+        "quantity_tons": "4829.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "June",
+        "quantity_tons": "3913.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "July",
+        "quantity_tons": "2472.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "August",
+        "quantity_tons": "5354.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "September",
+        "quantity_tons": "2568.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "October",
+        "quantity_tons": "4312.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "November",
+        "quantity_tons": "2484.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "somika",
+        "month": "December",
+        "quantity_tons": "47507.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "January",
+        "quantity_tons": "191.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "February",
+        "quantity_tons": "47.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "March",
+        "quantity_tons": "277.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "April",
+        "quantity_tons": "310.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "May",
+        "quantity_tons": "297.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "June",
+        "quantity_tons": "234.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "July",
+        "quantity_tons": "271.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "August",
+        "quantity_tons": "279.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "September",
+        "quantity_tons": "62.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "October",
+        "quantity_tons": "145.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "November",
+        "quantity_tons": "86.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "December",
+        "quantity_tons": "153.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "stl",
+        "month": "January",
+        "quantity_tons": "221.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "February",
+        "quantity_tons": "55.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "March",
+        "quantity_tons": "320.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "April",
+        "quantity_tons": "357.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "May",
+        "quantity_tons": "343.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "June",
+        "quantity_tons": "270.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "July",
+        "quantity_tons": "313.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "August",
+        "quantity_tons": "322.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "September",
+        "quantity_tons": "72.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "October",
+        "quantity_tons": "167.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "November",
+        "quantity_tons": "99.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "stl",
+        "month": "December",
+        "quantity_tons": "176.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "January",
+        "quantity_tons": "136.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "February",
+        "quantity_tons": "83.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "March",
+        "quantity_tons": "239.4",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "April",
+        "quantity_tons": "216.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "May",
+        "quantity_tons": "53.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "June",
+        "quantity_tons": "201.6",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "July",
+        "quantity_tons": "105.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "August",
+        "quantity_tons": "158.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "September",
+        "quantity_tons": "103.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "October",
+        "quantity_tons": "47.9",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "November",
+        "quantity_tons": "171.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "December",
+        "quantity_tons": "95.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "January",
+        "quantity_tons": "2017.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "February",
+        "quantity_tons": "1814.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "March",
+        "quantity_tons": "3334.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "April",
+        "quantity_tons": "4136.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "May",
+        "quantity_tons": "4947.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "June",
+        "quantity_tons": "3368.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "July",
+        "quantity_tons": "7192.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "August",
+        "quantity_tons": "3050.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "September",
+        "quantity_tons": "4719.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "October",
+        "quantity_tons": "5321.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "November",
+        "quantity_tons": "5042.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tcc",
+        "month": "December",
+        "quantity_tons": "2296.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "May",
+        "quantity_tons": "1179.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "June",
+        "quantity_tons": "2425.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "July",
+        "quantity_tons": "582.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "August",
+        "quantity_tons": "3849.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "September",
+        "quantity_tons": "4038.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "October",
+        "quantity_tons": "6467.0",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "November",
+        "quantity_tons": "2303.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "December",
+        "quantity_tons": "1968.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "May",
+        "quantity_tons": "82588.3",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "June",
+        "quantity_tons": "54147.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "July",
+        "quantity_tons": "14865.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "August",
+        "quantity_tons": "57916.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "September",
+        "quantity_tons": "39505.0",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "October",
+        "quantity_tons": "42362.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "November",
+        "quantity_tons": "30139.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "tfm",
+        "month": "December",
+        "quantity_tons": "39062.1",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "January",
+        "quantity_tons": "288.2",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "March",
+        "quantity_tons": "607.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "April",
+        "quantity_tons": "482.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "May",
+        "quantity_tons": "193.7",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "June",
+        "quantity_tons": "183.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "July",
+        "quantity_tons": "118.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "August",
+        "quantity_tons": "131.5",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "September",
+        "quantity_tons": "107.8",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "October",
+        "quantity_tons": "86.1",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "November",
+        "quantity_tons": "87.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "December",
+        "quantity_tons": "525.3",
+        "product": "Cobalt"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "January",
+        "quantity_tons": "2080.7",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "February",
+        "quantity_tons": "1898.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "March",
+        "quantity_tons": "2199.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "April",
+        "quantity_tons": "2104.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "May",
+        "quantity_tons": "2597.6",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "June",
+        "quantity_tons": "3298.8",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "July",
+        "quantity_tons": "2412.2",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "August",
+        "quantity_tons": "2080.5",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "September",
+        "quantity_tons": "2021.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "October",
+        "quantity_tons": "3151.4",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "November",
+        "quantity_tons": "3231.9",
+        "product": "Copper"
+    },
+    {
+        "_project_id": "thomas",
+        "month": "December",
+        "quantity_tons": "1958.7",
+        "product": "Copper"
+    }
+]

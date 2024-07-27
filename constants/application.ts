@@ -107,18 +107,18 @@ export const IndustralProjectsNode = [
     label: "Australia",
     children: [
       {
-        value: "SEK (Kipoi Mines)",
-        label: "SOCIETE D'EXPLOITATION DE KIPOI",
+        value: "sek",
+        label: "Societe D'Exploitation De Kipoi",
       },
     ],
   },
   {
     value: "Canada",
-    label: "Canada",
+    label: "Canada & China",
     children: [
       {
-        value: "KAMOA-KAKULA",
-        label: "KAMOA COPPER SA",
+        value: "kamoa",
+        label: "Kamoa Copper SA",
       },
     ],
   },
@@ -127,144 +127,144 @@ export const IndustralProjectsNode = [
     label: "China",
     children: [
       {
-        value: "ANVIL",
-        label: "ANVIL MINING CONGO SARL",
+        value: "anvil",
+        label: "Anvil Mining Congo SARL",
       },
       {
-        value: "CCR",
-        label: "CHENGTUN CONGO RESSOURCES SARL",
+        value: "ccr",
+        label: "Chengtun Congo Ressources SARL",
       },
       {
-        value: "CDM",
-        label: "CONGO DONGFANG INTERNATIONAL MINING",
+        value: "cdm",
+        label: "Congo Dongfang International Mining",
       },
       {
-        value: "CJCMC",
-        label: "CONGO JINJUN CHENG",
+        value: "cjcmc",
+        label: "Congo Jinjun Cheng",
       },
       {
-        value: "CNMC CONGO",
-        label: "SOCIETE CNMC CONGO COMPAGNIE MINIER",
+        value: "cnmc",
+        label: "Societe Cnmc Congo Compagnie Minier",
       },
       {
-        value: "COMIKA",
-        label: "COMPAGNIE MINIERE DE KAMBOVE SPRL",
+        value: "comika",
+        label: "Compagnie Miniere De Kambove SPRL",
       },
       {
-        value: "COMILU",
-        label: "COMPAGNIE MINIERE DE LUISHA",
+        value: "comilu",
+        label: "Compagnie Miniere De Luisha",
       },
       {
-        value: "COMMUS",
-        label: "LA COMPAGNIE MINIERE DE MUSONOIE GL",
+        value: "commus",
+        label: "La Compagnie Miniere De Musonoie Gl",
       },
       {
-        value: "DIVINE LAND",
-        label: "DIVINE LAND MINING SARL",
+        value: "divine",
+        label: "Divine Land Mining SARL",
       },
       {
-        value: "EVERBRIGHT",
-        label: "EVERBRIGHT MINING SARL",
+        value: "everbright",
+        label: "Everbright Mining SARL",
       },
       {
-        value: "EXCELLEN",
-        label: "JIN XUN CONGO MINING SARL",
+        value: "excellen",
+        label: "Excelent Minerals SARL",
       },
       {
-        value: "HANRUI METAL",
-        label: "SABWE MINING SARLSABWE MINING SARL",
+        value: "hanrui_metal",
+        label: "Hanuri Metal Congo",
       },
       {
-        value: "HUACHIN MABENDE",
-        label: "CNMC HUACHIN MABENDE MINING SPRL",
+        value: "huachin_mabende",
+        label: "CNMC Huachin Mabende Mining SPRL",
       },
       {
-        value: "HUACHIN METAL",
-        label: "HUACHIN METAL LEACH SPRL",
+        value: "huachin metal",
+        label: "Huachin Metal Leach SPRL",
       },
       {
-        value: "JXCOM",
-        label: "JIN XUN CONGO MINING SARL",
+        value: "jxcom",
+        label: "Jin Xun Congo Mining SARL",
       },
       {
-        value: "KAI PENG",
-        label: "SOCIETE KAI PENG MINING",
+        value: "kaipeng",
+        label: "Societe Kai Peng Mining",
       },
       {
-        value: "KAMBOVE MINING",
-        label: "KAMBOVE MINING SAS",
+        value: "kambove",
+        label: "Kambove Mining SAS",
       },
       {
-        value: "KFM",
-        label: "KISANFU MINING",
+        value: "kfm",
+        label: "Kisanfu Mining",
       },
       {
-        value: "KICC",
-        label: "KINSENDA COPPER COMPANY SARL",
+        value: "kicc",
+        label: "Kinsenda Copper Company SARL",
       },
       {
-        value: "LAMIKAL",
-        label: "LA MINIERE DE KALUNKUNDI",
+        value: "lamikal",
+        label: "La Miniere De Kalunkundi",
       },
       {
-        value: "LCS",
-        label: "LUALABA COPPER SMELTER SAS",
+        value: "lcs",
+        label: "Lualaba Copper Smelter SAS",
       },
       {
-        value: "LR SAS",
-        label: "LUILU RESSOURCES SAS",
+        value: "lr_sas",
+        label: "Luilu Ressources SAS",
       },
       {
-        value: "MM",
-        label: "METAL MINES SPRL",
+        value: "mm",
+        label: "Metal Mines SPRL",
       },
       {
-        value: "MIKAS",
-        label: "LA  MINIERE  DE  KASOMBO",
+        value: "mikas",
+        label: "La Miniere De Kasombo",
       },
       {
-        value: "MJM",
-        label: "MACROLINK JIAYUAN MINING SPRL",
+        value: "mjm",
+        label: "Macrolink Jiayuan Mining SPRL",
       },
       {
-        value: "MKM SAS",
-        label: "LA MINIERE DE KALUNBWE MYUNGA",
+        value: "mkm",
+        label: "La Miniere De Kalunbwe Myunga",
       },
       {
-        value: "MMG",
-        label: "MMG KINSEVERE SARL",
+        value: "mmg",
+        label: "MMG Kinsevere SARL",
       },
       {
-        value: "NEW MINERALS",
-        label: "NEW MINERALS",
+        value: "new_minerals",
+        label: "New Minerals",
       },
       {
-        value: "RUASHI MINING",
-        label: "RUASHI MINING SPRL",
+        value: "ruashi",
+        label: "Ruashi Mining SPRL",
       },
       {
-        value: "SHITURU MINING",
-        label: "SHITURU MINING CORPORATION SPRL",
+        value: "shituru",
+        label: "Shituru Mining Corporation SPRL",
       },
       {
-        value: "SICOMINES",
-        label: "SINO CONGOLAISE DES MINES SARL",
+        value: "sicomines",
+        label: "Sino Congolaise Des Mines SARL",
       },
       {
-        value: "SOMIDEZ",
-        label: "SOCIETE MINIERE DE DEZIWA SAS",
+        value: "somidez",
+        label: "Societe Miniere De Deziwa SAS",
       },
       {
-        value: "TCC",
-        label: "TENGYUAN COBALT & COPPER RESOURCES",
+        value: "tcc",
+        label: "Tengyuan Cobalt & Copper Resources",
       },
       {
-        value: "TFM",
-        label: "TENKE FUNGURUME MINING",
+        value: "tfm",
+        label: "Tenke Fungurume Mining",
       },
       {
-        value: "THOMAS",
-        label: "THOMAS MINING SARL",
+        value: "thomas",
+        label: "Thomas Mining SARL",
       },
     ],
   },
@@ -273,24 +273,20 @@ export const IndustralProjectsNode = [
     label: "DR Congo",
     children: [
       {
-        value: "GECAMINES",
-        label: "KISANFU MINING",
+        value: "gcm",
+        label: "GECAMINES",
       },
       {
-        value: "KALONGWE",
-        label: "KALONGWE MINING S.A",
+        value: "kalongwe",
+        label: "Kalongwe Mining S.A",
       },
       {
-        value: "MMT",
-        label: "MINERAL METAL TECHNOLOGY SARL",
+        value: "mmt",
+        label: "Mineral Metal Technology SARL",
       },
       {
-        value: "STL",
-        label: "SOCIETE POUR LE TRAITEMENT DU TERRIL DE LUBUMBASHI",
-      },
-      {
-        value: "CHEMAF",
-        label: "CHEMICAL OF AFRICA SPRL",
+        value: "stl",
+        label: "Societe Pour Le Traitement Du Terril De Lubumbashi",
       },
     ],
   },
@@ -299,28 +295,32 @@ export const IndustralProjectsNode = [
     label: "India",
     children: [
       {
-        value: "GOLDEN AFRICAN",
-        label: "MINERAL METAL TECHNOLOGY SARL",
+        value: "chemaf",
+        label: "Chemical Of Africa SPRL",
       },
       {
-        value: "KIMIN",
-        label: "KISANFU MINING SPRL",
+        value: "golden",
+        label: "Golden Africa Resources SPRL",
       },
       {
-        value: "OMR",
-        label: "OM METAL RESSOURCES SPRL",
+        value: "kimin",
+        label: "Kisanfu Mining SPRL",
       },
       {
-        value: "RUBAMIN",
-        label: "RUBAMIN SARL",
+        value: "omr",
+        label: "Om Metal Ressources SPRL",
       },
       {
-        value: "SOMIKA",
-        label: "SOCIETE MINIERE DU KATANGA",
+        value: "rubamin",
+        label: "Rubamin SARL",
       },
       {
-        value: "KATANGA STRATEGIC",
-        label: "KATANGA STRATEGIC RESOURCES",
+        value: "somika",
+        label: "Societe Miniere Du Katanga",
+      },
+      {
+        value: "kastro",
+        label: "Katanga Strategic Resources",
       },
     ],
   },
@@ -329,20 +329,20 @@ export const IndustralProjectsNode = [
     label: "Kazakhstan",
     children: [
       {
-        value: "BOSS MINING",
-        label: "BOSS MINING SPRL",
+        value: "boss",
+        label: "Boss Mining SPRL",
       },
       {
-        value: "COMIDE",
-        label: "LA CONGOLAISE DES MINES ET DE DEVEL",
+        value: "comide",
+        label: "La Congolaise Des Mines Et De Devel",
       },
       {
-        value: "FRONTIER",
-        label: "KALONGWE MINING S.A",
+        value: "frontier",
+        label: "Kalongwe Mining S.A",
       },
       {
-        value: "METALKOL",
-        label: "COMPAGNIE DE TRAITEMENT DES REJETS KINGYAMBO",
+        value: "metalkol",
+        label: "Compagnie De Traitement Des Rejets KingyamBo",
       },
     ],
   },
@@ -351,8 +351,8 @@ export const IndustralProjectsNode = [
     label: "South Africa",
     children: [
       {
-        value: "MPC",
-        label: "MINING PROGRESS COMPAGNY SARL",
+        value: "mpc",
+        label: "Mining Progress Company SARL",
       },
     ],
   },
@@ -361,12 +361,12 @@ export const IndustralProjectsNode = [
     label: "Switzerland",
     children: [
       {
-        value: "KCC",
-        label: "KAMOTO COPPER COMPANY SARL",
+        value: "kcc",
+        label: "Kamoto Copper Company SARL",
       },
       {
-        value: "MUTANDA",
-        label: "MUTANDA MINING",
+        value: "mutanda",
+        label: "Mutanda Mining",
       },
     ],
   },
@@ -375,12 +375,16 @@ export const IndustralProjectsNode = [
     label: "Unknown",
     children: [
       {
-        value: "AMICAL KAKANA",
-        label: "AMICAL KAKANA MINING SPRL",
+        value: "amical",
+        label: "Amical Kakana Mining SPRL",
       },
       {
-        value: "CONGO MOON",
-        label: "CONGO MOON MINING",
+        value: "congo_moon",
+        label: "Congo Moon Mining SARL",
+      },
+      {
+        value: "societe_kasonta",
+        label: "Societe Miniere De Kasonta",
       },
     ],
   },
@@ -389,70 +393,731 @@ export const IndustralProjectsNode = [
     label: "USA",
     children: [
       {
-        value: "SABWE",
-        label: "SABWE MINING SARLSABWE MINING SARL",
+        value: "sabwe",
+        label: "Sabwe Mining SARL",
       },
     ],
   },
 ];
 
 export const CheckAllIndustralProjects = [
-  "SEK (Kipoi Mines)",
-  "KAMOA-KAKULA",
-  "ANVIL",
-  "CCR",
-  "CDM",
-  "CJCMC",
-  "CNMC CONGO",
-  "COMIKA",
-  "COMILU",
-  "COMMUS",
-  "DIVINE LAND",
-  "EVERBRIGHT",
-  "EXCELLEN",
-  "HANRUI METAL",
-  "HUACHIN MABENDE",
-  "HUACHIN METAL",
-  "JXCOM",
-  "KAI PENG",
-  "KAMBOVE MINING",
-  "KFM",
-  "KICC",
-  "LAMIKAL",
-  "LCS",
-  "LR SAS",
-  "MM",
-  "MIKAS",
-  "MJM",
-  "MKM SAS",
-  "MMG",
-  "NEW MINERALS",
-  "RUASHI MINING",
-  "SHITURU MINING",
-  "SICOMINES",
-  "SOMIDEZ",
-  "TCC",
-  "TFM",
-  "THOMAS",
-  "GECAMINES",
-  "KALONGWE",
-  "MMT",
-  "STL",
-  "CHEMAF",
-  "GOLDEN AFRICAN",
-  "KIMIN",
-  "OMR",
-  "RUBAMIN",
-  "SOMIKA",
-  "KATANGA STRATEGIC",
-  "BOSS MINING",
-  "COMIDE",
-  "FRONTIER",
-  "METALKOL",
-  "MPC",
-  "KCC",
-  "MUTANDA",
-  "AMICAL KAKANA",
-  "CONGO MOON",
-  "SABWE",
+  "amical",
+  "anvil",
+  "benco",
+  "boss",
+  "ccr",
+  "cdm",
+  "chemaf",
+  "cjcmc",
+  "cnmc",
+  "comide",
+  "comika",
+  "comilu",
+  "commus",
+  "congo_moon",
+  "divine",
+  "everbright",
+  "excellen",
+  "frontier",
+  "gcm",
+  "golden",
+  "hanrui_metal",
+  "huachin_mabende",
+  "huachin metal",
+  "jxcom",
+  "kaipeng",
+  "kalongwe",
+  "kambove",
+  "kamoa",
+  "kansonga",
+  "kastro",
+  "kcc",
+  "kfm",
+  "kicc",
+  "kimin",
+  "lamikal",
+  "lcs",
+  "lr_sas",
+  "metalkol",
+  "mikas",
+  "mjm",
+  "mkm",
+  "mm",
+  "mmg",
+  "mmt",
+  "mpc",
+  "msl",
+  "mutanda",
+  "new_minerals",
+  "omr",
+  "ruashi",
+  "rubamin",
+  "sabwe",
+  "sek",
+  "semhkat",
+  "shituru",
+  "sicomines",
+  "societe_kasonta",
+  "somidez",
+  "somika",
+  "stl",
+  "tcc",
+  "tfm",
+  "thomas",
 ];
+
+// export const IndustralProjectsNode = [
+//   {
+//     value: "Australia",
+//     label: "Australia",
+//     children: [
+//       {
+//         value: "SEK (Kipoi Mines)",
+//         label: "SOCIETE D'EXPLOITATION DE KIPOI",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Canada",
+//     label: "Canada",
+//     children: [
+//       {
+//         value: "KAMOA-KAKULA",
+//         label: "KAMOA COPPER SA",
+//       },
+//     ],
+//   },
+//   {
+//     value: "China",
+//     label: "China",
+//     children: [
+//       {
+//         value: "ANVIL",
+//         label: "ANVIL MINING CONGO SARL",
+//       },
+//       {
+//         value: "CCR",
+//         label: "CHENGTUN CONGO RESSOURCES SARL",
+//       },
+//       {
+//         value: "CDM",
+//         label: "CONGO DONGFANG INTERNATIONAL MINING",
+//       },
+//       {
+//         value: "CJCMC",
+//         label: "CONGO JINJUN CHENG",
+//       },
+//       {
+//         value: "CNMC CONGO",
+//         label: "SOCIETE CNMC CONGO COMPAGNIE MINIER",
+//       },
+//       {
+//         value: "COMIKA",
+//         label: "COMPAGNIE MINIERE DE KAMBOVE SPRL",
+//       },
+//       {
+//         value: "COMILU",
+//         label: "COMPAGNIE MINIERE DE LUISHA",
+//       },
+//       {
+//         value: "COMMUS",
+//         label: "LA COMPAGNIE MINIERE DE MUSONOIE GL",
+//       },
+//       {
+//         value: "DIVINE LAND",
+//         label: "DIVINE LAND MINING SARL",
+//       },
+//       {
+//         value: "EVERBRIGHT",
+//         label: "EVERBRIGHT MINING SARL",
+//       },
+//       {
+//         value: "EXCELLEN",
+//         label: "JIN XUN CONGO MINING SARL",
+//       },
+//       {
+//         value: "HANRUI METAL",
+//         label: "SABWE MINING SARLSABWE MINING SARL",
+//       },
+//       {
+//         value: "HUACHIN MABENDE",
+//         label: "CNMC HUACHIN MABENDE MINING SPRL",
+//       },
+//       {
+//         value: "HUACHIN METAL",
+//         label: "HUACHIN METAL LEACH SPRL",
+//       },
+//       {
+//         value: "JXCOM",
+//         label: "JIN XUN CONGO MINING SARL",
+//       },
+//       {
+//         value: "KAI PENG",
+//         label: "SOCIETE KAI PENG MINING",
+//       },
+//       {
+//         value: "KAMBOVE MINING",
+//         label: "KAMBOVE MINING SAS",
+//       },
+//       {
+//         value: "KFM",
+//         label: "KISANFU MINING",
+//       },
+//       {
+//         value: "KICC",
+//         label: "KINSENDA COPPER COMPANY SARL",
+//       },
+//       {
+//         value: "LAMIKAL",
+//         label: "LA MINIERE DE KALUNKUNDI",
+//       },
+//       {
+//         value: "LCS",
+//         label: "LUALABA COPPER SMELTER SAS",
+//       },
+//       {
+//         value: "LR SAS",
+//         label: "LUILU RESSOURCES SAS",
+//       },
+//       {
+//         value: "MM",
+//         label: "METAL MINES SPRL",
+//       },
+//       {
+//         value: "MIKAS",
+//         label: "LA  MINIERE  DE  KASOMBO",
+//       },
+//       {
+//         value: "MJM",
+//         label: "MACROLINK JIAYUAN MINING SPRL",
+//       },
+//       {
+//         value: "MKM SAS",
+//         label: "LA MINIERE DE KALUNBWE MYUNGA",
+//       },
+//       {
+//         value: "MMG",
+//         label: "MMG KINSEVERE SARL",
+//       },
+//       {
+//         value: "NEW MINERALS",
+//         label: "NEW MINERALS",
+//       },
+//       {
+//         value: "RUASHI MINING",
+//         label: "RUASHI MINING SPRL",
+//       },
+//       {
+//         value: "SHITURU MINING",
+//         label: "SHITURU MINING CORPORATION SPRL",
+//       },
+//       {
+//         value: "SICOMINES",
+//         label: "SINO CONGOLAISE DES MINES SARL",
+//       },
+//       {
+//         value: "SOMIDEZ",
+//         label: "SOCIETE MINIERE DE DEZIWA SAS",
+//       },
+//       {
+//         value: "TCC",
+//         label: "TENGYUAN COBALT & COPPER RESOURCES",
+//       },
+//       {
+//         value: "TFM",
+//         label: "TENKE FUNGURUME MINING",
+//       },
+//       {
+//         value: "THOMAS",
+//         label: "THOMAS MINING SARL",
+//       },
+//     ],
+//   },
+//   {
+//     value: "DR Congo",
+//     label: "DR Congo",
+//     children: [
+//       {
+//         value: "GECAMINES",
+//         label: "KISANFU MINING",
+//       },
+//       {
+//         value: "KALONGWE",
+//         label: "KALONGWE MINING S.A",
+//       },
+//       {
+//         value: "MMT",
+//         label: "MINERAL METAL TECHNOLOGY SARL",
+//       },
+//       {
+//         value: "STL",
+//         label: "SOCIETE POUR LE TRAITEMENT DU TERRIL DE LUBUMBASHI",
+//       },
+//       {
+//         value: "CHEMAF",
+//         label: "CHEMICAL OF AFRICA SPRL",
+//       },
+//     ],
+//   },
+//   {
+//     value: "India",
+//     label: "India",
+//     children: [
+//       {
+//         value: "GOLDEN AFRICAN",
+//         label: "MINERAL METAL TECHNOLOGY SARL",
+//       },
+//       {
+//         value: "KIMIN",
+//         label: "KISANFU MINING SPRL",
+//       },
+//       {
+//         value: "OMR",
+//         label: "OM METAL RESSOURCES SPRL",
+//       },
+//       {
+//         value: "RUBAMIN",
+//         label: "RUBAMIN SARL",
+//       },
+//       {
+//         value: "SOMIKA",
+//         label: "SOCIETE MINIERE DU KATANGA",
+//       },
+//       {
+//         value: "KATANGA STRATEGIC",
+//         label: "KATANGA STRATEGIC RESOURCES",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Kazakhstan",
+//     label: "Kazakhstan",
+//     children: [
+//       {
+//         value: "BOSS MINING",
+//         label: "BOSS MINING SPRL",
+//       },
+//       {
+//         value: "COMIDE",
+//         label: "LA CONGOLAISE DES MINES ET DE DEVEL",
+//       },
+//       {
+//         value: "FRONTIER",
+//         label: "KALONGWE MINING S.A",
+//       },
+//       {
+//         value: "METALKOL",
+//         label: "COMPAGNIE DE TRAITEMENT DES REJETS KINGYAMBO",
+//       },
+//     ],
+//   },
+//   {
+//     value: "South Africa",
+//     label: "South Africa",
+//     children: [
+//       {
+//         value: "MPC",
+//         label: "MINING PROGRESS COMPAGNY SARL",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Switzerland",
+//     label: "Switzerland",
+//     children: [
+//       {
+//         value: "KCC",
+//         label: "KAMOTO COPPER COMPANY SARL",
+//       },
+//       {
+//         value: "MUTANDA",
+//         label: "MUTANDA MINING",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Unknown",
+//     label: "Unknown",
+//     children: [
+//       {
+//         value: "AMICAL KAKANA",
+//         label: "AMICAL KAKANA MINING SPRL",
+//       },
+//       {
+//         value: "CONGO MOON",
+//         label: "CONGO MOON MINING",
+//       },
+//     ],
+//   },
+//   {
+//     value: "USA",
+//     label: "USA",
+//     children: [
+//       {
+//         value: "SABWE",
+//         label: "SABWE MINING SARLSABWE MINING SARL",
+//       },
+//     ],
+//   },
+// ];
+
+// export const IndustralProjectsNode = [
+//   {
+//     value: "Australia",
+//     label: "Australia",
+//     children: [
+//       {
+//         value: "SEK",
+//         label: "Societe D'Exploitation De Kipoi",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Canada",
+//     label: "Canada & China",
+//     children: [
+//       {
+//         value: "KAMOA",
+//         label: "Kamoa Copper SA",
+//       },
+//     ],
+//   },
+//   {
+//     value: "China",
+//     label: "China",
+//     children: [
+//       {
+//         value: "ANVIL",
+//         label: "Anvil Mining Congo SARL",
+//       },
+//       {
+//         value: "CCR",
+//         label: "Chengtun Congo Ressources SARL",
+//       },
+//       {
+//         value: "CDM",
+//         label: "Congo Dongfang International Mining",
+//       },
+//       {
+//         value: "CJCMC",
+//         label: "Congo Jinjun Cheng",
+//       },
+//       {
+//         value: "CNMC CONGO",
+//         label: "Societe Cnmc Congo Compagnie Minier",
+//       },
+//       {
+//         value: "COMIKA",
+//         label: "Compagnie Miniere De Kambove SPRL",
+//       },
+//       {
+//         value: "COMILU",
+//         label: "Compagnie Miniere De Luisha",
+//       },
+//       {
+//         value: "COMMUS",
+//         label: "La Compagnie Miniere De Musonoie Gl",
+//       },
+//       {
+//         value: "DIVINE LAND",
+//         label: "Divine Land Mining SARL",
+//       },
+//       {
+//         value: "EVERBRIGHT",
+//         label: "Everbright Mining SARL",
+//       },
+//       {
+//         value: "EXCELLEN",
+//         label: "Excelent Minerals SARL",
+//       },
+//       {
+//         value: "HANRUI METAL",
+//         label: "Hanuri Metal Congo",
+//       },
+//       {
+//         value: "HUACHIN MABENDE",
+//         label: "CNMC Huachin Mabende Mining SPRL",
+//       },
+//       {
+//         value: "HUACHIN METAL",
+//         label: "Huachin Metal Leach SPRL",
+//       },
+//       {
+//         value: "JXCOM",
+//         label: "Jin Xun Congo Mining SARL",
+//       },
+//       {
+//         value: "KAI PENG",
+//         label: "Societe Kai Peng Mining",
+//       },
+//       {
+//         value: "KAMBOVE MINING",
+//         label: "Kambove Mining SAS",
+//       },
+//       {
+//         value: "KFM",
+//         label: "Kisanfu Mining",
+//       },
+//       {
+//         value: "KICC",
+//         label: "Kinsenda Copper Company SARL",
+//       },
+//       {
+//         value: "LAMIKAL",
+//         label: "La Miniere De Kalunkundi",
+//       },
+//       {
+//         value: "LCS",
+//         label: "Lualaba Copper Smelter SAS",
+//       },
+//       {
+//         value: "LR SAS",
+//         label: "Luilu Ressources SAS",
+//       },
+//       {
+//         value: "MM",
+//         label: "Metal Mines SPRL",
+//       },
+//       {
+//         value: "MIKAS",
+//         label: "La Miniere De Kasombo",
+//       },
+//       {
+//         value: "MJM",
+//         label: "Macrolink Jiayuan Mining SPRL",
+//       },
+//       {
+//         value: "MKM SAS",
+//         label: "La Miniere De Kalunbwe Myunga",
+//       },
+//       {
+//         value: "MMG",
+//         label: "MMG Kinsevere SARL",
+//       },
+//       {
+//         value: "NEW MINERALS",
+//         label: "New Minerals",
+//       },
+//       {
+//         value: "RUASHI MINING",
+//         label: "Ruashi Mining SPRL",
+//       },
+//       {
+//         value: "SHITURU MINING",
+//         label: "Shituru Mining Corporation SPRL",
+//       },
+//       {
+//         value: "SICOMINES",
+//         label: "Sino Congolaise Des Mines SARL",
+//       },
+//       {
+//         value: "SOMIDEZ",
+//         label: "Societe Miniere De Deziwa SAS",
+//       },
+//       {
+//         value: "TCC",
+//         label: "Tengyuan Cobalt & Copper Resources",
+//       },
+//       {
+//         value: "TFM",
+//         label: "Tenke Fungurume Mining",
+//       },
+//       {
+//         value: "THOMAS",
+//         label: "Thomas Mining SARL",
+//       },
+//     ],
+//   },
+//   {
+//     value: "DR Congo",
+//     label: "DR Congo",
+//     children: [
+//       {
+//         value: "GCM",
+//         label: "GECAMINES",
+//       },
+//       {
+//         value: "KALONGWE",
+//         label: "Kalongwe Mining S.A",
+//       },
+//       {
+//         value: "MMT",
+//         label: "Mineral Metal Technology SARL",
+//       },
+//       {
+//         value: "STL",
+//         label: "Societe Pour Le Traitement Du Terril De Lubumbashi",
+//       },
+//     ],
+//   },
+//   {
+//     value: "India",
+//     label: "India",
+//     children: [
+//       {
+//         value: "CHEMAF",
+//         label: "Chemical Of Africa SPRL",
+//       },
+//       {
+//         value: "GOLDEN AFRICAN",
+//         label: "Golden Africa Resources SPRL",
+//       },
+//       {
+//         value: "KIMIN",
+//         label: "Kisanfu Mining SPRL",
+//       },
+//       {
+//         value: "OMR",
+//         label: "Om Metal Ressources SPRL",
+//       },
+//       {
+//         value: "RUBAMIN",
+//         label: "Rubamin SARL",
+//       },
+//       {
+//         value: "SOMIKA",
+//         label: "Societe Miniere Du Katanga",
+//       },
+//       {
+//         value: "KATANGA STRATEGIC",
+//         label: "Katanga Strategic Resources",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Kazakhstan",
+//     label: "Kazakhstan",
+//     children: [
+//       {
+//         value: "BOSS",
+//         label: "Boss Mining SPRL",
+//       },
+//       {
+//         value: "COMIDE",
+//         label: "La Congolaise Des Mines Et De Devel",
+//       },
+//       {
+//         value: "FRONTIER",
+//         label: "Kalongwe Mining S.A",
+//       },
+//       {
+//         value: "METALKOL",
+//         label: "Compagnie De Traitement Des Rejets KingyamBo",
+//       },
+//     ],
+//   },
+//   {
+//     value: "South Africa",
+//     label: "South Africa",
+//     children: [
+//       {
+//         value: "MPC",
+//         label: "Mining Progress Company SARL",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Switzerland",
+//     label: "Switzerland",
+//     children: [
+//       {
+//         value: "KCC",
+//         label: "Kamoto Copper Company SARL",
+//       },
+//       {
+//         value: "MUTANDA",
+//         label: "Mutanda Mining",
+//       },
+//     ],
+//   },
+//   {
+//     value: "Unknown",
+//     label: "Unknown",
+//     children: [
+//       {
+//         value: "AMICAL",
+//         label: "Amical Kakana Mining SPRL",
+//       },
+//       {
+//         value: "CONGO MOON",
+//         label: "Congo Moon Mining SARL",
+//       },
+
+//       {
+//         value: "SOCIETE_KASONTA",
+//         label: "SOCIETE MINIERE DE KASONTA",
+//       },
+//     ],
+//   },
+//   {
+//     value: "USA",
+//     label: "USA",
+//     children: [
+//       {
+//         value: "SABWE",
+//         label: "Sabwe Mining SARL",
+//       },
+//     ],
+//   },
+// ];
+
+// export const CheckAllIndustralProjects = [
+//   "SEK (Kipoi Mines)",
+//   "KAMOA-KAKULA",
+//   "ANVIL",
+//   "CCR",
+//   "CDM",
+//   "CJCMC",
+//   "CNMC CONGO",
+//   "COMIKA",
+//   "COMILU",
+//   "COMMUS",
+//   "DIVINE LAND",
+//   "EVERBRIGHT",
+//   "EXCELLEN",
+//   "HANRUI METAL",
+//   "HUACHIN MABENDE",
+//   "HUACHIN METAL",
+//   "JXCOM",
+//   "KAI PENG",
+//   "KAMBOVE MINING",
+//   "KFM",
+//   "KICC",
+//   "LAMIKAL",
+//   "LCS",
+//   "LR SAS",
+//   "MM",
+//   "MIKAS",
+//   "MJM",
+//   "MKM SAS",
+//   "MMG",
+//   "NEW MINERALS",
+//   "RUASHI MINING",
+//   "SHITURU MINING",
+//   "SICOMINES",
+//   "SOMIDEZ",
+//   "TCC",
+//   "TFM",
+//   "THOMAS",
+//   "GECAMINES",
+//   "KALONGWE",
+//   "MMT",
+//   "STL",
+//   "CHEMAF",
+//   "GOLDEN AFRICAN",
+//   "KIMIN",
+//   "OMR",
+//   "RUBAMIN",
+//   "SOMIKA",
+//   "KATANGA STRATEGIC",
+//   "BOSS MINING",
+//   "COMIDE",
+//   "FRONTIER",
+//   "METALKOL",
+//   "MPC",
+//   "KCC",
+//   "MUTANDA",
+//   "AMICAL KAKANA",
+//   "CONGO MOON",
+//   "SABWE",
+// ];

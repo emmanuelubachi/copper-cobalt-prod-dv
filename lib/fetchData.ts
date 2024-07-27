@@ -46,6 +46,7 @@ export async function fetchData(
   searchParams: SearchParams,
 ): Promise<{ projectInfo?: IndustralProjectName; errorType?: ErrorType }> {
   const props = await validateSearchParam(searchParams);
+
   if (props.errorType === "invalidParams") {
     return { errorType: "invalidParams" };
   }
@@ -60,7 +61,7 @@ export async function fetchData(
       errorType: undefined,
     };
   } catch (err) {
-    console.error("Error fetching project data:", err);
+    console.error("Error fetching Project Data:", err);
     return { errorType: "serverError" };
   }
 }

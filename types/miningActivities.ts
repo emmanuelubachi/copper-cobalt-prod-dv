@@ -18,6 +18,7 @@ export type ArtisanalSiteDetailsProps = {
 
 export type IndustralProjectDetailsProps = {
   "N°": string;
+  _project_id: string;
   Project_name: string;
   Short_name: string;
   Permit_ID: string;
@@ -45,7 +46,7 @@ export type IndustralProjectDetailsProps = {
 };
 
 export type MonthlyProductionData = {
-  short_name: string;
+  _project_id: string;
   month: string;
   quantity_tons: string;
   product: string;
@@ -59,7 +60,7 @@ export type TMonthlyProductionData = {
 };
 
 export type DestinationData = {
-  short_name: string;
+  _project_id: string;
   quantity_tons: string; //  Sum of dry_weight_decl
   destination: string;
 };

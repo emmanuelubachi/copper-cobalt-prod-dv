@@ -32,7 +32,7 @@ export default function LargeScreenDrawer() {
                   className="__button_pressed group absolute left-0 top-1/2 z-[60] -m-[25px] h-16 w-6 -translate-y-1/2 transform rounded-none rounded-l-md bg-background/70 p-0 shadow-md"
                   onClick={() => {
                     closeMapDetails();
-                    setSelectedSite(null);
+                    setSelectedSite(null); // Reset selected site (Map Marker active state)
                   }}
                 >
                   <ChevronRight className="h-6 w-6 text-foreground/60 group-hover:animate-[pulse_2s_infinite]" />
