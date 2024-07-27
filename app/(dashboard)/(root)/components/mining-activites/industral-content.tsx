@@ -82,32 +82,32 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
     TMonthlyProductionData[]
   >([]);
 
-  const [filteredDestinationData, setFilteredDestinationData] = useState<
-    DestinationData[]
-  >([]);
-  const [destinationData, setDestinationData] = useState<TDestinationData[]>(
-    [],
-  );
-  const [filteredCoDestinationData, setFilteredCoDestinationData] = useState<
-    DestinationData[]
-  >([]);
-  const [coDestinationData, setCoDestinationData] = useState<
-    TDestinationData[]
-  >([]);
+  // const [filteredDestinationData, setFilteredDestinationData] = useState<
+  //   DestinationData[]
+  // >([]);
+  // const [destinationData, setDestinationData] = useState<TDestinationData[]>(
+  //   [],
+  // );
+  // const [filteredCoDestinationData, setFilteredCoDestinationData] = useState<
+  //   DestinationData[]
+  // >([]);
+  // const [coDestinationData, setCoDestinationData] = useState<
+  //   TDestinationData[]
+  // >([]);
 
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
-        const csvData: MonthlyProductionData[] = await readCsvFile(
-          "data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv",
-        );
+        // const csvData: MonthlyProductionData[] = await readCsvFile(
+        //   "data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv",
+        // );
 
         // const csvData: MonthlyProductionData[] = "/data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv";
 
         // Filter data based on short_name
-        const filtered = csvData.filter(
-          (row) => row.short_name === data.Short_name,
-        );
+        // const filtered = csvData.filter(
+        //   (row) => row.short_name === data.Short_name,
+        // );
 
         // Filter data based on short_name
         const monthFiltered = montlyProductionData.filter(
@@ -128,47 +128,47 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       }
     };
 
-    const fetchDestinationData = async () => {
-      try {
-        const csvData: DestinationData[] = await readCsvFile(
-          "data/Industral projects 2023 copper destination - origin situation des.csv",
-        );
-        // Filter data based on short_name
-        const filtered = csvData.filter(
-          (row) => row.short_name === data.Short_name,
-        );
+    // const fetchDestinationData = async () => {
+    //   try {
+    //     const csvData: DestinationData[] = await readCsvFile(
+    //       "data/Industral projects 2023 copper destination - origin situation des.csv",
+    //     );
+    //     // Filter data based on short_name
+    //     const filtered = csvData.filter(
+    //       (row) => row.short_name === data.Short_name,
+    //     );
 
-        // console.log("filtered", filtered);
+    //     // console.log("filtered", filtered);
 
-        setDestinationData([]);
-        setFilteredDestinationData(filtered);
-      } catch (error) {
-        console.error("Error fetching and processing production data:", error);
-      }
-    };
+    //     setDestinationData([]);
+    //     setFilteredDestinationData(filtered);
+    //   } catch (error) {
+    //     console.error("Error fetching and processing production data:", error);
+    //   }
+    // };
 
-    const fetchCoDestinationData = async () => {
-      try {
-        const csvData: DestinationData[] = await readCsvFile(
-          "data/Industral projects 2023 cobalt destination - origin situation des.csv",
-        );
-        // Filter data based on short_name
-        const filtered = csvData.filter(
-          (row) => row.short_name === data.Short_name,
-        );
+    // const fetchCoDestinationData = async () => {
+    //   try {
+    //     const csvData: DestinationData[] = await readCsvFile(
+    //       "data/Industral projects 2023 cobalt destination - origin situation des.csv",
+    //     );
+    //     // Filter data based on short_name
+    //     const filtered = csvData.filter(
+    //       (row) => row.short_name === data.Short_name,
+    //     );
 
-        // console.log("filtered", filtered);
+    //     // console.log("filtered", filtered);
 
-        setCoDestinationData([]);
-        setFilteredCoDestinationData(filtered);
-      } catch (error) {
-        console.error("Error fetching and processing production data:", error);
-      }
-    };
+    //     setCoDestinationData([]);
+    //     setFilteredCoDestinationData(filtered);
+    //   } catch (error) {
+    //     console.error("Error fetching and processing production data:", error);
+    //   }
+    // };
 
     fetchMonthlyData();
-    fetchDestinationData();
-    fetchCoDestinationData();
+    // fetchDestinationData();
+    // fetchCoDestinationData();
   }, [data.Short_name]);
 
   // useEffect(() => {
@@ -179,26 +179,26 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   //   }
   // }, [filteredMonthlyData]);
 
-  useEffect(() => {
-    if (filteredDestinationData.length > 0) {
-      // transform data into required format
-      // const transformedData = transformDestinationData(filteredDestinationData);
-      const transformedData = transformSortTopDestination(
-        filteredDestinationData,
-      );
-      setDestinationData(transformedData);
-    }
-  }, [filteredDestinationData]);
+  // useEffect(() => {
+  //   if (filteredDestinationData.length > 0) {
+  //     // transform data into required format
+  //     // const transformedData = transformDestinationData(filteredDestinationData);
+  //     const transformedData = transformSortTopDestination(
+  //       filteredDestinationData,
+  //     );
+  //     setDestinationData(transformedData);
+  //   }
+  // }, [filteredDestinationData]);
 
-  useEffect(() => {
-    if (filteredCoDestinationData.length > 0) {
-      // transform data into required format
-      const transformedData = transformSortTopDestination(
-        filteredCoDestinationData,
-      );
-      setCoDestinationData(transformedData);
-    }
-  }, [filteredCoDestinationData]);
+  // useEffect(() => {
+  //   if (filteredCoDestinationData.length > 0) {
+  //     // transform data into required format
+  //     const transformedData = transformSortTopDestination(
+  //       filteredCoDestinationData,
+  //     );
+  //     setCoDestinationData(transformedData);
+  //   }
+  // }, [filteredCoDestinationData]);
 
   const monthlyProdChartConfig = {
     Cobalt: {
@@ -318,7 +318,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
               />
             )}
 
-            {coDestinationData.length > 0 && (
+            {/* {coDestinationData.length > 0 && (
               <CustomLabelBarChart
                 title="Top Destinations of Cobalt Production in 2023"
                 description="Quantity in Tonnes"
@@ -344,7 +344,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 yAxisLabelDataKey="Cobalt"
                 barLabelDataKey="label"
               />
-            )}
+            )} */}
           </div>
 
           {/* Mine Details */}
