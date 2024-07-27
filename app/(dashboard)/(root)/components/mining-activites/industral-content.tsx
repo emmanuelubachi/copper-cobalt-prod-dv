@@ -9,8 +9,6 @@ import useMapDetailsStore from "@/store/mapDetailsStore";
 import LinkButton from "@/components/m-ui/link-button";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 
-import { readCsvFile } from "@/lib/fetchCsvData";
-
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import {
   transformMonthlyData,
@@ -19,7 +17,8 @@ import {
 } from "@/lib/dataProcessing";
 
 import montlyProductionData from "@/data/map/Industral Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-// import montlyProductionData from "@/data/map/Industral projects 2023 cobalt destination - origin situation des.json";
+import cobaltDestinationData from "@/data/map/Industral projects 2023 cobalt destination - origin situation des.json";
+import cubaltDestinationData from "@/data/map/Industral projects 2023 copper destination - origin situation des.json";
 
 import {
   MonthlyProductionData,
@@ -74,101 +73,89 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const { closeMapDetails } = useMapDetailsStore();
   const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
   const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
+
+  const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
+  const [coDestinationData, setCoDestinationData] = useState<
+    TDestinationData[]
+  >([]);
+  const [cuDestinationData, setCuDestinationData] = useState<
+    TDestinationData[]
+  >([]);
+
   // const [filteredMonthlyData, setFilteredMonthlyData] = useState<
   //   MonthlyProductionData[]
   // >([]);
   // const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
-  const [newMonthlyData, setNewMonthlyData] = useState<
-    TMonthlyProductionData[]
-  >([]);
 
   // const [filteredDestinationData, setFilteredDestinationData] = useState<
   //   DestinationData[]
   // >([]);
-  // const [destinationData, setDestinationData] = useState<TDestinationData[]>(
-  //   [],
-  // );
+
   // const [filteredCoDestinationData, setFilteredCoDestinationData] = useState<
   //   DestinationData[]
-  // >([]);
-  // const [coDestinationData, setCoDestinationData] = useState<
-  //   TDestinationData[]
   // >([]);
 
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
-        // const csvData: MonthlyProductionData[] = await readCsvFile(
-        //   "data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv",
-        // );
-
-        // const csvData: MonthlyProductionData[] = "/data/Industral Projects Monthly cobalt-copper Production - origin Statistiques.csv";
-
         // Filter data based on short_name
-        // const filtered = csvData.filter(
-        //   (row) => row.short_name === data.Short_name,
-        // );
-
-        // Filter data based on short_name
-        const monthFiltered = montlyProductionData.filter(
+        const filtered = montlyProductionData.filter(
           (row) => row.short_name === data.Short_name,
         );
 
         // Process data for chart
-        const MonthlyProductionData = transformMonthlyData(monthFiltered);
+        const MonthlyProductionData = transformMonthlyData(filtered);
 
-        setNewMonthlyData(MonthlyProductionData);
-
-        // console.log("MonthlyProductionData", MonthlyProductionData);
-
-        // setMonthlyData([]);
-        // setFilteredMonthlyData(filtered);
+        setMonthlyData(MonthlyProductionData);
       } catch (error) {
-        console.error("Error fetching and processing production data:", error);
+        console.error(
+          "Error fetching and processing monthly industral projects production data:",
+          error,
+        );
       }
     };
 
-    // const fetchDestinationData = async () => {
-    //   try {
-    //     const csvData: DestinationData[] = await readCsvFile(
-    //       "data/Industral projects 2023 copper destination - origin situation des.csv",
-    //     );
-    //     // Filter data based on short_name
-    //     const filtered = csvData.filter(
-    //       (row) => row.short_name === data.Short_name,
-    //     );
+    const fetchCoDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = cobaltDestinationData.filter(
+          (row) => row.short_name === data.Short_name,
+        );
 
-    //     // console.log("filtered", filtered);
+        // Process data for chart
+        const CoDestinationData = transformSortTopDestination(filtered);
 
-    //     setDestinationData([]);
-    //     setFilteredDestinationData(filtered);
-    //   } catch (error) {
-    //     console.error("Error fetching and processing production data:", error);
-    //   }
-    // };
+        setCoDestinationData(CoDestinationData);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing co destination data:",
+          error,
+        );
+      }
+    };
 
-    // const fetchCoDestinationData = async () => {
-    //   try {
-    //     const csvData: DestinationData[] = await readCsvFile(
-    //       "data/Industral projects 2023 cobalt destination - origin situation des.csv",
-    //     );
-    //     // Filter data based on short_name
-    //     const filtered = csvData.filter(
-    //       (row) => row.short_name === data.Short_name,
-    //     );
+    const fetchCuDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = cubaltDestinationData.filter(
+          (row) => row.short_name === data.Short_name,
+        );
 
-    //     // console.log("filtered", filtered);
+        // Process data for chart
+        const CuDestinationData = transformSortTopDestination(filtered);
 
-    //     setCoDestinationData([]);
-    //     setFilteredCoDestinationData(filtered);
-    //   } catch (error) {
-    //     console.error("Error fetching and processing production data:", error);
-    //   }
-    // };
+        setCuDestinationData(CuDestinationData);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing cu destination data:",
+          error,
+        );
+      }
+    };
 
     fetchMonthlyData();
-    // fetchDestinationData();
-    // fetchCoDestinationData();
+    fetchCoDestinationData();
+    fetchCuDestinationData();
   }, [data.Short_name]);
 
   // useEffect(() => {
@@ -296,7 +283,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
               </div>
             )}
 
-            {/* {monthlyData.length > 0 && (
+            {monthlyData.length > 0 && (
               <MultipleBarChart
                 title="Production of Copper and Cobalt in 2023"
                 description="Quantity in Tonnes"
@@ -305,20 +292,9 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 firstDataKey="Cobalt"
                 secondDataKey="Copper"
               />
-            )} */}
-
-            {newMonthlyData.length > 0 && (
-              <MultipleBarChart
-                title="Production of Copper and Cobalt in 2023"
-                description="Quantity in Tonnes"
-                config={monthlyProdChartConfig}
-                chartData={newMonthlyData}
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-              />
             )}
 
-            {/* {coDestinationData.length > 0 && (
+            {coDestinationData.length > 0 && (
               <CustomLabelBarChart
                 title="Top Destinations of Cobalt Production in 2023"
                 description="Quantity in Tonnes"
@@ -332,19 +308,19 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
               />
             )}
 
-            {destinationData.length > 0 && (
+            {cuDestinationData.length > 0 && (
               <CustomLabelBarChart
                 title="Top Destinations of Copper Production in 2023"
                 description="Quantity in Tonnes"
                 config={cuDestChartConfig}
-                chartData={destinationData}
+                chartData={cuDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
                 barDataKey="quantity_tons"
                 yAxisLabelDataKey="Cobalt"
                 barLabelDataKey="label"
               />
-            )} */}
+            )}
           </div>
 
           {/* Mine Details */}
