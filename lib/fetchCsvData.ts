@@ -14,7 +14,6 @@ export async function readCsvFile(filename: string) {
     // );
 
     console.info("Reading file from: ", path.join(process.cwd(), filename));
-
     const csvData = await fs.readFile(
       path.join(process.cwd(), filename),
       "utf8",

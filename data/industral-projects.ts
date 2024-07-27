@@ -245,7 +245,7 @@ export const industralProjectName: IndustralProjectName = [
   },
 ];
 
-export const industralProjects = [
+export const obsolete_industralProjects = [
   {
     "N°": 1,
     "Project name": "KFM (Kisanfu Mining)",
