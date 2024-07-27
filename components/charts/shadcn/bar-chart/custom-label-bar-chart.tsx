@@ -1,6 +1,6 @@
 "use client";
+import { ReactNode } from "react";
 
-import { TrendingUp } from "lucide-react";
 import {
   Bar,
   BarChart,
@@ -25,15 +25,6 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-];
-
 type CustomLabelBarChartProps = {
   title: string;
   description: string;
@@ -44,6 +35,7 @@ type CustomLabelBarChartProps = {
   barDataKey: string;
   yAxisLabelDataKey: string;
   barLabelDataKey: string;
+  footNote?: ReactNode;
 };
 
 export default function CustomLabelBarChart({
@@ -109,14 +101,11 @@ export default function CustomLabelBarChart({
           </BarChart>
         </ChartContainer>
       </CardContent>
-      {/* <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter> */}
+      {props.footNote && (
+        <CardFooter className="flex-col items-start gap-2 text-sm">
+          {props.footNote}
+        </CardFooter>
+      )}
     </Card>
   );
 }

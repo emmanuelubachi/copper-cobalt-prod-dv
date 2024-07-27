@@ -22,13 +22,13 @@ const FilterDrawer = () => {
         <>
           {isMobile && (
             <div
-              className="fixed inset-0 z-[45] bg-black opacity-50"
+              className="fixed inset-0 z-[35] bg-black opacity-50"
               onClick={handleOverlayClick}
             />
           )}
 
           <motion.div
-            className="fixed left-0 top-0 z-50 h-screen overflow-hidden bg-background shadow-lg dark:bg-background sm:left-16 sm:py-10"
+            className="fixed left-0 top-0 z-40 h-screen overflow-hidden bg-background shadow-lg dark:bg-background sm:left-16 sm:py-10"
             initial="initial"
             animate="animate"
             exit="exit"

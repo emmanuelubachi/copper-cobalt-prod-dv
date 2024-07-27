@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from "react";
 
 import Map from "react-map-gl";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
 
 import useMapDetailsStore from "@/store/mapDetailsStore";
+import useFilterStore from "@/store/filterStore";
 
 import LinkButton from "@/components/m-ui/link-button";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
@@ -12,7 +13,7 @@ import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import {
   transformMonthlyData,
-  transformDestinationData,
+  // transformDestinationData,
   transformSortTopDestination,
 } from "@/lib/dataProcessing";
 
@@ -21,9 +22,7 @@ import cobaltDestinationData from "@/data/map/Industral projects 2023 cobalt des
 import cubaltDestinationData from "@/data/map/Industral projects 2023 copper destination - origin situation des.json";
 
 import {
-  MonthlyProductionData,
   TMonthlyProductionData,
-  DestinationData,
   TDestinationData,
 } from "@/types/miningActivities";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
@@ -71,6 +70,8 @@ const SiteMap = ({
 
 const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const { closeMapDetails } = useMapDetailsStore();
+  const { closeFilter } = useFilterStore();
+
   const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
   const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
 
@@ -81,19 +82,6 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const [cuDestinationData, setCuDestinationData] = useState<
     TDestinationData[]
   >([]);
-
-  // const [filteredMonthlyData, setFilteredMonthlyData] = useState<
-  //   MonthlyProductionData[]
-  // >([]);
-  // const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
-
-  // const [filteredDestinationData, setFilteredDestinationData] = useState<
-  //   DestinationData[]
-  // >([]);
-
-  // const [filteredCoDestinationData, setFilteredCoDestinationData] = useState<
-  //   DestinationData[]
-  // >([]);
 
   useEffect(() => {
     const fetchMonthlyData = async () => {
@@ -122,7 +110,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
           (row) => row.short_name === data.Short_name,
         );
 
-        // Process data for chart
+        // Process data for chart - sort for top destinations
         const CoDestinationData = transformSortTopDestination(filtered);
 
         setCoDestinationData(CoDestinationData);
@@ -141,7 +129,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
           (row) => row.short_name === data.Short_name,
         );
 
-        // Process data for chart
+        // Process data for chart - sort for top destinations
         const CuDestinationData = transformSortTopDestination(filtered);
 
         setCuDestinationData(CuDestinationData);
@@ -158,35 +146,6 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
     fetchCuDestinationData();
   }, [data.Short_name]);
 
-  // useEffect(() => {
-  //   if (filteredMonthlyData.length > 0) {
-  //     // transform data into required format
-  //     const transformedData = transformMonthlyData(filteredMonthlyData);
-  //     setMonthlyData(transformedData);
-  //   }
-  // }, [filteredMonthlyData]);
-
-  // useEffect(() => {
-  //   if (filteredDestinationData.length > 0) {
-  //     // transform data into required format
-  //     // const transformedData = transformDestinationData(filteredDestinationData);
-  //     const transformedData = transformSortTopDestination(
-  //       filteredDestinationData,
-  //     );
-  //     setDestinationData(transformedData);
-  //   }
-  // }, [filteredDestinationData]);
-
-  // useEffect(() => {
-  //   if (filteredCoDestinationData.length > 0) {
-  //     // transform data into required format
-  //     const transformedData = transformSortTopDestination(
-  //       filteredCoDestinationData,
-  //     );
-  //     setCoDestinationData(transformedData);
-  //   }
-  // }, [filteredCoDestinationData]);
-
   const monthlyProdChartConfig = {
     Cobalt: {
       label: "Cobalt",
@@ -200,7 +159,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
 
   const coDestChartConfig = {
     quantity_tons: {
-      label: `Quantity ${" "}`,
+      label: `Qty (T) ${" "}`,
       color: "hsl(var(--chart-2))",
     },
     label: {
@@ -210,7 +169,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
 
   const cuDestChartConfig = {
     quantity_tons: {
-      label: `Quantity ${" "}`,
+      label: `Qty (T) ${" "}`,
       color: "hsl(var(--chart-5))",
     },
     label: {
@@ -291,6 +250,17 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 chartData={monthlyData}
                 firstDataKey="Cobalt"
                 secondDataKey="Copper"
+                footNote={
+                  <>
+                    {/* <div className="flex gap-2 font-medium leading-none">
+                      Trending up by 5.2% this month{" "}
+                      <TrendingUp className="h-4 w-4" />
+                    </div> */}
+                    <div className="leading-none text-muted-foreground">
+                      Includes quantities both exported and sold locally.
+                    </div>
+                  </>
+                }
               />
             )}
 
@@ -305,6 +275,14 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 barDataKey="quantity_tons"
                 yAxisLabelDataKey="Cobalt"
                 barLabelDataKey="label"
+                footNote={
+                  <>
+                    <div className="leading-none text-muted-foreground">
+                      Showing top {coDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
+                    </div>
+                  </>
+                }
               />
             )}
 
@@ -319,6 +297,14 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 barDataKey="quantity_tons"
                 yAxisLabelDataKey="Cobalt"
                 barLabelDataKey="label"
+                footNote={
+                  <>
+                    <div className="leading-none text-muted-foreground">
+                      Showing top {cuDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
+                    </div>
+                  </>
+                }
               />
             )}
           </div>
@@ -419,7 +405,9 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
             href={`/projects?project_id=${data.Short_name}`}
             variant="default"
             size={"lg"}
-            onClick={closeMapDetails}
+            onClick={() => {
+              closeFilter(), closeMapDetails();
+            }}
           >
             View Project
             <ArrowUpRight className="h-4 w-4" />

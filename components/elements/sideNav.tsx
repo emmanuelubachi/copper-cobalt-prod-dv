@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 
+import useFilterStore from "@/store/filterStore";
+import useMapDetailsStore from "@/store/mapDetailsStore";
+
 import {
   Tooltip,
   TooltipContent,
@@ -17,9 +20,11 @@ import ModeToggle from "../mode-toggle";
 
 export default function SideNav() {
   const pathname = usePathname();
+  const { closeFilter } = useFilterStore();
+  const { closeMapDetails } = useMapDetailsStore();
 
   return (
-    <nav className="inset-y-0 left-0 z-40 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
+    <nav className="inset-y-0 left-0 z-50 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
       <div className="flex h-full w-full flex-col justify-between">
         <div className={`item-center flex flex-col gap-6 px-4 sm:py-2`}>
           <div className={`flex h-14 w-full items-center justify-center`}>
@@ -35,6 +40,9 @@ export default function SideNav() {
                 <TooltipTrigger asChild>
                   <Link
                     href={item.link}
+                    onClick={() => {
+                      closeFilter(), closeMapDetails();
+                    }}
                     className={`flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors hover:text-foreground md:text-sm ${
                       pathname === item.path
                         ? "bg-muted text-foreground"

@@ -4,7 +4,6 @@ import SideNav from "@/components/elements/sideNav";
 import BigSideNav from "@/components/elements/bigSideNav";
 import FilterDrawer from "@/components/elements/filterDrawer";
 import MobileNav from "@/components/elements/mobileNav";
-import MapDetailsDrawer from "./(root)/components/mapDetailsDrawer";
 import CombinedDrawer from "@/components/m-ui/combined-drawer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -22,10 +21,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           {children}
+
           <MobileNav />
         </div>
       </div>
-      {/* <MapDetailsDrawer /> */}
       <CombinedDrawer />
     </>
   );

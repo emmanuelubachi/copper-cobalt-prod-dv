@@ -1,6 +1,5 @@
 "use client";
-
-import { TrendingUp } from "lucide-react";
+import { ReactNode } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
@@ -27,6 +26,7 @@ type MultipleBarChartProps = {
   chartData: any;
   firstDataKey: string;
   secondDataKey: string;
+  footNote?: ReactNode;
 };
 
 export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
@@ -69,14 +69,11 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      {/* <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter> */}
+      {props.footNote && (
+        <CardFooter className="flex-col items-start gap-2 text-sm">
+          {props.footNote}
+        </CardFooter>
+      )}
     </Card>
   );
 }
