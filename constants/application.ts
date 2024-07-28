@@ -21,7 +21,7 @@ export const NAVLIST: NavItem[] = [
   {
     name: "Project",
     path: "/projects",
-    link: "/projects?project_id=anvil-mining",
+    link: "/projects?project_id=amical",
     icon: Pickaxe,
   },
   // {
