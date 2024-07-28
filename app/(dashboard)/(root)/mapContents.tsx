@@ -112,10 +112,10 @@ export default function MapContents({ reference }: MapContentsProps) {
 
         const timeoutId = setTimeout(() => {
           if (mapRef.current) {
-            // mapRef.current.on("load", handleZoom);
-            handleZoom();
+            mapRef.current.on("load", handleZoom);
+            // handleZoom();
           }
-        }, 600);
+        }, 1000);
 
         openMapDetails();
         setSelectedSite(selected_site_sParam);
