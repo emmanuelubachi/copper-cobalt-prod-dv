@@ -31,42 +31,44 @@ export default function ProjectFilter() {
           {data.length}
         </span>
       </div>
-      <Divider className="my-4 pr-2" />
-      <div className="mt-4 grid h-full grid-cols-1 gap-4 overflow-scroll px-2 pb-20 pr-2">
-        {data.map((member) => (
-          <Card
-            key={member["project_name"]}
-            className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["_project_id"] && "border border-primary dark:border-primary"}`}
-          >
-            <div className="flex items-center space-x-4">
-              <div className="truncate">
-                <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                  <Link
-                    href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
-                    className="focus:outline-none"
-                    onClick={closeFilter}
-                  >
-                    {/* Extend link to entire card */}
-                    <span className="absolute inset-0" aria-hidden={true} />
-                    {/* {member["short-name"]} */}
-                    <p className="line-clamp-2 truncate text-wrap pr-4 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                      {member["project_name"]}
-                    </p>
-                  </Link>
-                </p>
-                {/* <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+      <Divider className="" />
+      <div className="h-full pb-32">
+        <div className="mt-0 grid h-full grid-cols-1 gap-4 overflow-auto px-2 pb-40 pr-2">
+          {data.map((member) => (
+            <Card
+              key={member["project_name"]}
+              className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["_project_id"] && "border border-primary dark:border-primary"}`}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="truncate">
+                  <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+                    <Link
+                      href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
+                      className="focus:outline-none"
+                      onClick={closeFilter}
+                    >
+                      {/* Extend link to entire card */}
+                      <span className="absolute inset-0" aria-hidden={true} />
+                      {/* {member["short-name"]} */}
+                      <p className="line-clamp-2 truncate text-wrap pr-4 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+                        {member["project_name"]}
+                      </p>
+                    </Link>
+                  </p>
+                  {/* <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   {member["project-name"]}
                 </p> */}
+                </div>
               </div>
-            </div>
-            <span
-              className="pointer-events-none absolute right-4 top-4 text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content"
-              aria-hidden={true}
-            >
-              <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
-            </span>
-          </Card>
-        ))}
+              <span
+                className="pointer-events-none absolute right-4 top-4 text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content"
+                aria-hidden={true}
+              >
+                <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
+              </span>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
