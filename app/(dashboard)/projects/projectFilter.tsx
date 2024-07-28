@@ -22,7 +22,7 @@ export default function ProjectFilter() {
   const data = industralProjectName;
 
   return (
-    <div className="h-screen">
+    <div className="h-screen w-72">
       <div className="flex items-center space-x-2 px-2">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
@@ -33,7 +33,7 @@ export default function ProjectFilter() {
       </div>
       <Divider className="" />
       <div className="h-full pb-32">
-        <div className="mt-0 grid h-full grid-cols-1 gap-4 overflow-auto px-2 pb-40 pr-2">
+        <div className="mt-0 grid h-full grid-cols-1 gap-4 overflow-auto px-2 pb-32 pr-2 pt-1">
           {data.map((member) => (
             <Card
               key={member["project_name"]}
@@ -45,7 +45,7 @@ export default function ProjectFilter() {
                     <Link
                       href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
                       className="focus:outline-none"
-                      onClick={closeFilter}
+                      // onClick={closeFilter}
                     >
                       {/* Extend link to entire card */}
                       <span className="absolute inset-0" aria-hidden={true} />

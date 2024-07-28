@@ -8,7 +8,9 @@ import useMapDetailsStore from "@/store/mapDetailsStore";
 import useFilterStore from "@/store/filterStore";
 
 import LinkButton from "@/components/m-ui/link-button";
+
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
+import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import {
@@ -25,7 +27,6 @@ import {
   TMonthlyProductionData,
   TDestinationData,
 } from "@/types/miningActivities";
-import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 

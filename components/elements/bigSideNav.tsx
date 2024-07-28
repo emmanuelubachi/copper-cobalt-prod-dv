@@ -32,14 +32,14 @@ export default function BigSideNav() {
     theme === "dark" || (theme === "system" && systemTheme === "dark");
 
   return (
-    <header className="absolute left-0 top-4 z-10 w-full items-center">
+    <header className="absolute left-0 top-4 z-10 items-center">
       <div className="flex items-center gap-2">
         <Sheet>
           <SheetTrigger asChild>
             <Button
               size="icon"
               variant="secondary"
-              className="__button_pressed hidden h-9 w-6 rounded-none rounded-r-md bg-background pl-0 shadow-md sm:flex"
+              className="__button_pressed hidden h-9 w-4 rounded-none rounded-r-md bg-background pl-0 shadow-md sm:flex"
             >
               <ChevronRight className="h-4 w-4" />
               <span className="sr-only">Toggle Menu</span>

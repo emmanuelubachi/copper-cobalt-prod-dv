@@ -18,10 +18,16 @@ export const NAVLIST: NavItem[] = [
     link: "/production-overview",
     icon: LineChart,
   },
+  // {
+  //   name: "Project",
+  //   path: "/projects",
+  //   link: "/projects?project_id=amical",
+  //   icon: Pickaxe,
+  // },
   {
     name: "Project",
-    path: "/projects",
-    link: "/projects?project_id=amical",
+    path: "/companies",
+    link: "/companies",
     icon: Pickaxe,
   },
   // {
@@ -365,8 +371,8 @@ export const IndustralProjectsNode = [
         label: "Kamoto Copper Company SARL",
       },
       {
-        value: "mutanda",
-        label: "Mutanda Mining",
+        value: "mumi",
+        label: "Mutanda Mining SARL",
       },
     ],
   },
@@ -447,7 +453,7 @@ export const CheckAllIndustralProjects = [
   "mmt",
   "mpc",
   "msl",
-  "mutanda",
+  "mumi",
   "new_minerals",
   "omr",
   "ruashi",

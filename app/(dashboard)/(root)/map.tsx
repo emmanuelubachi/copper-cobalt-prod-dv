@@ -33,7 +33,9 @@ export default function MainMap({ geojsonData }: MapProps) {
   const { isMobile } = useDeviceType();
   const { theme, systemTheme } = useTheme();
   const mapRef = useRef<MapRef | null>(null);
-  const [mapStyle, setMapStyle] = useState("");
+  const [mapStyle, setMapStyle] = useState(
+    "mapbox://styles/mapbox/outdoors-v11",
+  );
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -64,13 +66,13 @@ export default function MainMap({ geojsonData }: MapProps) {
   } = useMapDetailsStore();
   const createQueryString = useUpdateSearchParams();
 
-  useEffect(() => {
-    if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
-      setMapStyle("mapbox://styles/mapbox/dark-v10");
-    } else {
-      setMapStyle("mapbox://styles/mapbox/outdoors-v11");
-    }
-  }, [theme, systemTheme]);
+  // useEffect(() => {
+  //   if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
+  //     setMapStyle("mapbox://styles/mapbox/dark-v10");
+  //   } else {
+  //     setMapStyle("mapbox://styles/mapbox/outdoors-v11");
+  //   }
+  // }, [theme, systemTheme]);
 
   // Trigger zoom-in animation on map load
   useEffect(() => {
@@ -93,8 +95,8 @@ export default function MainMap({ geojsonData }: MapProps) {
     const timeoutId = setTimeout(() => {
       if (mapRef.current) {
         // console.log("Attaching load event listener to the map.");
-        // mapRef.current.on("load", handleZoomIn);
-        handleZoomIn();
+        mapRef.current.on("load", handleZoomIn);
+        // handleZoomIn();
       } else {
         // console.log(
         //   "mapRef.current is null. Unable to attach load event listener.",

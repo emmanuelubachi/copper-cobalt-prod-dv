@@ -17,7 +17,7 @@ export default function GridList() {
   const { closeFilter } = useFilterStore();
 
   return (
-    <>
+    <section className="space-y-4">
       <div className="flex items-center space-x-2">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
@@ -26,22 +26,11 @@ export default function GridList() {
           {data.length}
         </span>
       </div>
-      <Divider className="my-4" />
-      {/* <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
-      <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* <Divider className="" /> */}
+      <div className="mt-2 grid grid-cols-2 gap-3 sm:mt-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
         {data.map((member) => (
-          <Card key={member["project_name"]} className="group">
+          <Card key={member["project_name"]} className="__button_pressed group">
             <div className="flex items-center space-x-4">
-              {/* <span
-                className={classNames(
-                  // member.bgColor,
-                  // member.textColor,
-                  "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-tremor-default font-medium",
-                )}
-                aria-hidden={true}
-              >
-                {member.Code}
-              </span> */}
               <div className="truncate">
                 <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
                   <Link
@@ -51,7 +40,7 @@ export default function GridList() {
                   >
                     {/* Extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
-                    {member["_project_id"]}
+                    {member["short_name"]}
                   </Link>
                 </p>
                 <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
@@ -68,6 +57,6 @@ export default function GridList() {
           </Card>
         ))}
       </div>
-    </>
+    </section>
   );
 }

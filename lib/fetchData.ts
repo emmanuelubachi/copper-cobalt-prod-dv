@@ -1,7 +1,7 @@
 // lib/fetchData.ts
 import * as z from "zod";
 import { industralProjectName } from "@/data/industral-projects";
-import { ErrorType, IndustralProjectName, SearchParams } from "@/types";
+import { ErrorType, ProjectInfo, SearchParams } from "@/types";
 
 // lib fetch local data ---------------------------------------------------------------
 type ValidatedProps = {
@@ -10,7 +10,7 @@ type ValidatedProps = {
 };
 
 const searchParamsSchema = z.object({
-  project_id: z.string().min(3),
+  project_id: z.string().min(2),
 });
 
 async function validateSearchParam(query: any): Promise<ValidatedProps> {
@@ -28,9 +28,7 @@ async function validateSearchParam(query: any): Promise<ValidatedProps> {
   return { projectId: project_id };
 }
 
-async function getProjectData(
-  projectId: string,
-): Promise<IndustralProjectName | null> {
+async function getProjectData(projectId: string): Promise<ProjectInfo | null> {
   const filteredData = industralProjectName.filter(
     (data) => data["_project_id"].toLowerCase().trim() === projectId,
   );
@@ -39,12 +37,12 @@ async function getProjectData(
     return null;
   }
 
-  return filteredData;
+  return filteredData[0];
 }
 
 export async function fetchData(
   searchParams: SearchParams,
-): Promise<{ projectInfo?: IndustralProjectName; errorType?: ErrorType }> {
+): Promise<{ projectInfo?: ProjectInfo; errorType?: ErrorType }> {
   const props = await validateSearchParam(searchParams);
 
   if (props.errorType === "invalidParams") {
