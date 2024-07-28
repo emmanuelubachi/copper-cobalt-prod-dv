@@ -4,6 +4,7 @@ import {
   DestinationData,
   TDestinationData,
 } from "@/types/miningActivities";
+import { YearlySummary } from "@/types/projects";
 
 export function transformMonthlyData(
   data: MonthlyProductionData[],
@@ -88,4 +89,36 @@ export function transformSortTopDestination(
         parseFloat(a["quantity_tons"].replace(/,/g, "")),
     )
     .slice(0, 5);
+}
+
+type MiningData = {
+  short_name: string;
+  type: string;
+  copper: string;
+  cobalt: string;
+  year: string;
+  [key: string]: any; // To handle any additional properties
+};
+
+export function calculateYearlySums(data: MiningData[]): YearlySummary[] {
+  const result: { [year: string]: YearlySummary } = {};
+
+  data.forEach((item) => {
+    const year = item.year;
+    const copper = parseFloat(item.copper);
+    const cobalt = parseFloat(item.cobalt);
+
+    if (!result[year]) {
+      result[year] = {
+        year: year,
+        totalCopper: 0,
+        totalCobalt: 0,
+      };
+    }
+
+    result[year].totalCopper += copper;
+    result[year].totalCobalt += cobalt;
+  });
+
+  return Object.values(result);
 }
