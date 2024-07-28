@@ -13,11 +13,11 @@ export default function ProjectFilter() {
 
   const project_id = searchParams.get("project_id");
 
-  useEffect(() => {
-    console.log("ProjectFilter component mounted");
-    console.log("searchParams:", searchParams);
-    console.log("project_id:", project_id);
-  }, [project_id, searchParams]);
+  // useEffect(() => {
+  //   console.log("ProjectFilter component mounted");
+  //   console.log("searchParams:", searchParams);
+  //   console.log("project_id:", project_id);
+  // }, [project_id, searchParams]);
 
   const data = industralProjectName;
 
@@ -41,7 +41,7 @@ export default function ProjectFilter() {
             >
               <div className="flex items-center space-x-4">
                 <div className="truncate">
-                  <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+                  <div className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
                     <Link
                       href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
                       className="focus:outline-none"
@@ -54,7 +54,7 @@ export default function ProjectFilter() {
                         {member["project_name"]}
                       </p>
                     </Link>
-                  </p>
+                  </div>
                   {/* <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   {member["project-name"]}
                 </p> */}
