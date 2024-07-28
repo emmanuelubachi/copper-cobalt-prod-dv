@@ -40,6 +40,12 @@ export type IndustralProjectName = {
   short_name: string;
 }[];
 
+export type ProjectInfo = {
+  _project_id: string;
+  project_name: string;
+  short_name: string;
+};
+
 export type ArtisanalSite = {
   longitude: number;
   latitude: number;
