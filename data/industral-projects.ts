@@ -182,6 +182,11 @@ export const industralProjectName: IndustralProjectName = [
     short_name: "LCS",
   },
   {
+    _project_id: "long_fei",
+    project_name: "Long Fei Mining",
+    short_name: "LONG FEI",
+  },
+  {
     _project_id: "lr_sas",
     project_name: "Luilu Ressources SAS",
     short_name: "LR SAS",
@@ -231,10 +236,15 @@ export const industralProjectName: IndustralProjectName = [
     project_name: "MSL",
     short_name: "MSL",
   },
+  // {
+  //   _project_id: "mutanda",
+  //   project_name: "Mutanda Mining",
+  //   short_name: "MUTANDA",
+  // },
   {
-    _project_id: "mutanda",
-    project_name: "Mutanda Mining",
-    short_name: "MUTANDA",
+    _project_id: "mumi",
+    project_name: "Mutanda Mining SARL",
+    short_name: "MUTANDA MINING",
   },
   {
     _project_id: "new_minerals",
@@ -316,16 +326,6 @@ export const industralProjectName: IndustralProjectName = [
     _project_id: "thomas",
     project_name: "Thomas Mining SARL",
     short_name: "THOMAS",
-  },
-  {
-    _project_id: "mumi",
-    project_name: "Mutanda Mining SARL",
-    short_name: "MUTANDA MINING",
-  },
-  {
-    _project_id: "long_fei",
-    project_name: "Long Fei Mining",
-    short_name: "LONG FEI",
   },
 ];
 
