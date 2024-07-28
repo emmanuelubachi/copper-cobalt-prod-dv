@@ -83,7 +83,7 @@ export const industralProjectName: IndustralProjectName = [
   },
   {
     _project_id: "excellen",
-    project_name: "Jin Xun Congo Mining SARL",
+    project_name: "Excellen Mining SARL",
     short_name: "EXCELLEN",
   },
   {
@@ -93,12 +93,12 @@ export const industralProjectName: IndustralProjectName = [
   },
   {
     _project_id: "gcm",
-    project_name: "Kisanfu Mining",
+    project_name: "La G\u00e9n\u00e9rale des Carri\u00e8res et des Mines",
     short_name: "GECAMINES",
   },
   {
     _project_id: "golden",
-    project_name: "Mineral Metal Technology SARL",
+    project_name: "Golden African Mining SPRL",
     short_name: "GOLDEN AFRICAN",
   },
   {
