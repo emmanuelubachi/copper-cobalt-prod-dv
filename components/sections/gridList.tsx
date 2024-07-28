@@ -30,7 +30,7 @@ export default function GridList() {
       {/* <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
       <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data.map((member) => (
-          <Card key={member["project-name"]} className="group">
+          <Card key={member["project_name"]} className="group">
             <div className="flex items-center space-x-4">
               {/* <span
                 className={classNames(
@@ -45,17 +45,17 @@ export default function GridList() {
               <div className="truncate">
                 <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
                   <Link
-                    href={`/projects?project_id=${member["short-name"].toLowerCase().trim()}`}
+                    href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
                     className="focus:outline-none"
                     onClick={closeFilter}
                   >
                     {/* Extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
-                    {member["short-name"]}
+                    {member["_project_id"]}
                   </Link>
                 </p>
                 <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                  {member["project-name"]}
+                  {member["project_name"]}
                 </p>
               </div>
             </div>

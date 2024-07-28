@@ -22,8 +22,8 @@ export default function ProjectFilter() {
   const data = industralProjectName;
 
   return (
-    <div className="px-2">
-      <div className="flex items-center space-x-2">
+    <div className="h-screen">
+      <div className="flex items-center space-x-2 px-2">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
         </h3>
@@ -32,17 +32,17 @@ export default function ProjectFilter() {
         </span>
       </div>
       <Divider className="my-4 pr-2" />
-      <div className="mt-4 grid grid-cols-1 gap-4 pb-4 pr-2">
+      <div className="mt-4 grid h-full grid-cols-1 gap-4 overflow-scroll px-2 pb-20 pr-2">
         {data.map((member) => (
           <Card
-            key={member["project-name"]}
-            className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["short-name"] && "border border-primary dark:border-primary"}`}
+            key={member["project_name"]}
+            className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["_project_id"] && "border border-primary dark:border-primary"}`}
           >
             <div className="flex items-center space-x-4">
               <div className="truncate">
                 <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
                   <Link
-                    href={`/projects?project_id=${member["short-name"].toLowerCase().trim()}`}
+                    href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
                     className="focus:outline-none"
                     onClick={closeFilter}
                   >
@@ -50,7 +50,7 @@ export default function ProjectFilter() {
                     <span className="absolute inset-0" aria-hidden={true} />
                     {/* {member["short-name"]} */}
                     <p className="line-clamp-2 truncate text-wrap pr-4 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                      {member["project-name"]}
+                      {member["project_name"]}
                     </p>
                   </Link>
                 </p>

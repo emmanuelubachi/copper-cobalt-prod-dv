@@ -32,7 +32,7 @@ async function getProjectData(
   projectId: string,
 ): Promise<IndustralProjectName | null> {
   const filteredData = industralProjectName.filter(
-    (data) => data["short-name"].toLowerCase().trim() === projectId,
+    (data) => data["_project_id"].toLowerCase().trim() === projectId,
   );
 
   if (filteredData.length === 0) {
