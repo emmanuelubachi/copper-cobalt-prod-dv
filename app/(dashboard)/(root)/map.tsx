@@ -323,12 +323,15 @@ export default function MainMap({ geojsonData }: MapProps) {
       <div className="absolute bottom-20 right-4 rounded-lg bg-background/40 p-2 sm:bottom-4">
         <div className="flex-wrap">
           {countriesWithColors.map(({ country, color }) => (
-            <div key={country} className="m-2 flex items-center space-x-2 p-1">
+            <div
+              key={country}
+              className="m-1 flex items-center space-x-2 p-0.5 lg:m-2 lg:p-1"
+            >
               <div
-                className="h-4 w-4 rounded-full"
+                className="h-3 w-3 rounded-full xl:h-4 xl:w-4"
                 style={{ backgroundColor: color }}
               ></div>
-              <span className="font-sans text-sm font-semibold text-foreground/80">
+              <span className="font-sans text-pxs font-semibold text-foreground/80 lg:text-sm">
                 {country}
               </span>
             </div>
