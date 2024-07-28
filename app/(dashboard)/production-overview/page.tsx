@@ -120,8 +120,8 @@ const Product = [
 export default function Dashboard() {
   const Company = sliceData(companyData, 9);
   return (
-    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:gap-4 sm:px-6 sm:py-4">
-      <header className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
+    <main className="mb-24 mt-0 grid items-start gap-4 p-4 sm:mb-20 sm:mt-0 sm:gap-4 sm:px-6 sm:py-3">
+      <header className="items-center justify-between gap-6 space-y-4 sm:ml-1 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
           Copper and Cobalt Production Overview
         </h1>

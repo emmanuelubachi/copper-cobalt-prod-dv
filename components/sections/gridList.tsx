@@ -17,8 +17,7 @@ export default function GridList() {
   const { closeFilter } = useFilterStore();
 
   return (
-    <main className="space-y-4">
-      <h1 className="text-center text-3xl font-bold">Select a project</h1>
+    <section className="space-y-4">
       <div className="flex items-center space-x-2">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
@@ -58,6 +57,6 @@ export default function GridList() {
           </Card>
         ))}
       </div>
-    </main>
+    </section>
   );
 }
