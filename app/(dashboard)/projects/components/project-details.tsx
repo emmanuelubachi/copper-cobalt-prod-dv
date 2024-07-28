@@ -69,7 +69,7 @@ export default function ProjectDetails({
     <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <header className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
-          {projectInfo[0]["project-name"]} Project
+          {projectInfo[0]["project_name"]}
         </h1>
         <div className="flex items-start">
           <ToggleGroup

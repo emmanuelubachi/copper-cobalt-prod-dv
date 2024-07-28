@@ -402,7 +402,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
         {/*Navigate to Project Page */}
         <div>
           <LinkButton
-            href={`/projects?project_id=${data.Short_name}`}
+            href={`/projects?project_id=${data._project_id}`}
             variant="default"
             size={"lg"}
             onClick={() => {
