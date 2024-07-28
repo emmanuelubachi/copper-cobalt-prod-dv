@@ -107,7 +107,7 @@ export const industralProjectName: IndustralProjectName = [
     short_name: "HANRUI METAL",
   },
   {
-    _project_id: "huachin metal",
+    _project_id: "huachin_metal",
     project_name: "Huachin Metal Leach SPRL",
     short_name: "HUACHIN METAL",
   },

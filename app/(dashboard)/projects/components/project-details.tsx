@@ -1,4 +1,6 @@
 "use client";
+import { useEffect, useState } from "react";
+
 import {
   ChevronLeft,
   ChevronRight,
@@ -12,7 +14,6 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -48,28 +49,72 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { ProjectInfo } from "@/types";
+import Treemap from "@/components/charts/treeMap";
+import { AreaChartRender } from "@/components/charts/areaChart";
+import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
+
 import {
   exportQuantityData,
   exportTransactionData,
   kpiCard,
   companyData,
 } from "@/data/chartData";
-
-import { IndustralProjectName } from "@/types";
-import Treemap from "@/components/charts/treeMap";
-import { AreaChartRender } from "@/components/charts/areaChart";
 import { Years } from "@/data/chartData";
+import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
+import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+
+import { transformMonthlyData } from "@/lib/dataProcessing";
+
+import { TMonthlyProductionData } from "@/types/miningActivities";
 
 export default function ProjectDetails({
   projectInfo,
 }: {
-  projectInfo: IndustralProjectName;
+  projectInfo: ProjectInfo;
 }) {
+  const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
+
+  const project_id = projectInfo._project_id;
+
+  useEffect(() => {
+    const fetchMonthlyData = async () => {
+      try {
+        // Filter data based on _project_id
+        const filtered = montlyProductionData.filter(
+          (row) => row._project_id === project_id,
+        );
+        // Process data for chart
+        const MonthlyProductionData = transformMonthlyData(filtered);
+        setMonthlyData(MonthlyProductionData);
+        console.log("MonthlyProductionData", MonthlyProductionData);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing monthly industral projects production data:",
+          error,
+        );
+      }
+    };
+
+    fetchMonthlyData();
+  }, [project_id]);
+
+  const monthlyProdChartConfig = {
+    Cobalt: {
+      label: "Cobalt",
+      color: "hsl(var(--chart-2))",
+    },
+    Copper: {
+      label: "Copper",
+      color: "hsl(var(--chart-5))",
+    },
+  };
   return (
     <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <header className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
-          {projectInfo[0]["project_name"]}
+          {projectInfo.project_name}
         </h1>
         <div className="flex items-start">
           {/* <ToggleGroup
@@ -247,7 +292,7 @@ export default function ProjectDetails({
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-3">
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-            {kpiCard.map((kpi) => (
+            {/* {kpiCard.map((kpi) => (
               <Card key={kpi.title} x-chunk="dashboard-01-chunk-0">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -268,136 +313,31 @@ export default function ProjectDetails({
                   />
                 </CardFooter>
               </Card>
-            ))}
+            ))} */}
           </div>
-
-          <Tabs defaultValue="quantity">
-            <div className="flex items-center">
-              <TabsList>
-                <TabsTrigger value="quantity">Quantity</TabsTrigger>
-                <TabsTrigger value="transaction">Transaction</TabsTrigger>
-              </TabsList>
-              <div className="ml-auto flex items-center gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="h-7 gap-1 text-sm"
-                >
-                  <File className="h-3.5 w-3.5" />
-                  <span className="sr-only sm:not-sr-only">Export</span>
-                </Button>
-              </div>
-            </div>
-
-            <TabsContent value="quantity">
-              <Card x-chunk="dashboard-01-chunk-4">
-                <CardHeader className="flex flex-row items-center">
-                  <div className="grid gap-2">
-                    <CardTitle>Export Trend</CardTitle>
-                    <CardDescription>
-                      Total quantity of exported products.
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-
-                <CardContent>
-                  <AreaChartRender
-                    data={exportQuantityData}
-                    valueFormatter="quantityFormatter"
-                  />
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="transaction">
-              <Card x-chunk="dashboard-05-chunk-3">
-                <CardHeader className="flex flex-row items-center">
-                  <div className="grid gap-2">
-                    <CardTitle>Export Trend</CardTitle>
-                    <CardDescription>
-                      Total value of exported products.
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <AreaChartRender
-                    data={exportTransactionData}
-                    valueFormatter={"currencyFormatter"}
-                  />
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-
-          <Tabs defaultValue="tree">
-            <div className="flex items-center">
-              <TabsList>
-                <TabsTrigger value="tree">Chart</TabsTrigger>
-                {/* <TabsTrigger value="table">Table</TabsTrigger> */}
-              </TabsList>
-
-              <div className="ml-auto flex items-center gap-2">
-                {/* <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="h-7 gap-1 text-sm"
-                    >
-                      <ListFilter className="h-3.5 w-3.5" />
-                      <span className="sr-only sm:not-sr-only">Filter</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuLabel>Filter by</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuCheckboxItem checked>
-                      Fulfilled
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>
-                      Declined
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>
-                      Refunded
-                    </DropdownMenuCheckboxItem>
-                  </DropdownMenuContent>
-                </DropdownMenu> */}
-
-                {/* <Button
-                  size="sm"
-                  variant="outline"
-                  className="h-7 gap-1 text-sm"
-                >
-                  <File className="h-3.5 w-3.5" />
-                  <span className="sr-only sm:not-sr-only">Export</span>
-                </Button> */}
-              </div>
-            </div>
-            <TabsContent value="tree">
-              <Card x-chunk="dashboard-05-chunk-3">
-                <CardHeader className="px-7">
-                  <CardTitle>Product Composition</CardTitle>
-                  <CardDescription>
-                    Recent orders from your store.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Treemap />
-                </CardContent>
-              </Card>
-            </TabsContent>
-            {/* <TabsContent value="table">
-              <Card x-chunk="dashboard-05-chunk-3">
-                <CardHeader className="px-7">
-                  <CardTitle>Orders</CardTitle>
-                  <CardDescription>
-                    Recent orders from your store.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent><DataTables /></CardContent>
-              </Card>
-            </TabsContent> */}
-          </Tabs>
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-2">
+            {monthlyData.length > 0 && (
+              <MultipleBarChart
+                title="Production of Copper and Cobalt in 2023"
+                description="Quantity in Tonnes"
+                config={monthlyProdChartConfig}
+                chartData={monthlyData}
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+                footNote={
+                  <>
+                    {/* <div className="flex gap-2 font-medium leading-none">
+                      Trending up by 5.2% this month{" "}
+                      <TrendingUp className="h-4 w-4" />
+                    </div> */}
+                    <div className="leading-none text-muted-foreground">
+                      Includes quantities both exported and sold locally.
+                    </div>
+                  </>
+                }
+              />
+            )}
+          </div>
         </div>
       </div>
     </main>

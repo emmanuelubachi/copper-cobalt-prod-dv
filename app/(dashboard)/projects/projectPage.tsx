@@ -6,11 +6,11 @@ import { useRouter } from "next/navigation";
 import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
 import ProjectDetails from "./components/project-details";
 
-import { IndustralProjectName, SearchParams, ErrorType } from "@/types";
+import { ProjectInfo, SearchParams, ErrorType } from "@/types";
 
 type PageProps = {
   searchParams: SearchParams;
-  projectInfo?: IndustralProjectName;
+  projectInfo?: ProjectInfo;
   errorType?: ErrorType;
 };
 
@@ -40,8 +40,10 @@ export default function ProjectPage({
     router.push(`/companies`);
   }
 
-  if (!projectInfo || projectInfo.length === 0) {
-    return <ErrorProjectNotFound />;
+  if (!projectInfo || projectInfo.project_name === "") {
+    // return <ErrorProjectNotFound />;
+    router.push(`/companies`);
+    return null;
   }
 
   return <ProjectDetails projectInfo={projectInfo} />;
