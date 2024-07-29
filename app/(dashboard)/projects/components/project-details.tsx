@@ -67,14 +67,25 @@ import cobaltDestinationData from "@/data/map/2023 cobalt production destination
 import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 
 import {
+  calculateDetailedYearlySums,
   calculateYearlySums,
+  transformDestinationData,
   transformMonthlyData,
+  transformSortTopDestination,
 } from "@/lib/dataProcessing";
 
-import { TMonthlyProductionData } from "@/types/miningActivities";
-import { monthlyProdChartConfig } from "@/constants/chart";
-import { YearlySummary } from "@/types/projects";
-import { StackedRadialChart } from "@/components/charts/shadcn/radial-chart/stacked-radial-chart";
+import {
+  coDestChartConfig,
+  cuDestChartConfig,
+  monthlyProdChartConfig,
+} from "@/constants/chart";
+
+import {
+  TDestinationData,
+  TMonthlyProductionData,
+} from "@/types/miningActivities";
+import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
+import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
 export default function ProjectDetails({
   projectInfo,
@@ -82,8 +93,16 @@ export default function ProjectDetails({
   projectInfo: ProjectInfo;
 }) {
   const [totalProd, setTotalProd] = useState<YearlySummary[]>([]);
-
+  const [totalProdDetails, setTotalProdDetails] = useState<
+    DetailedYearlySummary[]
+  >([]);
   const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
+  const [coDestinationData, setCoDestinationData] = useState<
+    TDestinationData[]
+  >([]);
+  const [cuDestinationData, setCuDestinationData] = useState<
+    TDestinationData[]
+  >([]);
 
   const project_id = projectInfo._project_id;
 
@@ -97,8 +116,12 @@ export default function ProjectDetails({
 
         // Process data for chart
         const totalProd = calculateYearlySums(filtered);
+        const totalProd2 = calculateDetailedYearlySums(filtered);
+
+        console.log("totalProd2", totalProd2);
 
         setTotalProd(totalProd);
+        setTotalProdDetails(totalProd2);
 
         // console.log("filtered", filtered);
       } catch (error) {
@@ -127,8 +150,48 @@ export default function ProjectDetails({
       }
     };
 
+    const fetchCoDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = cobaltDestinationData.filter(
+          (row) => row._project_id === project_id,
+        );
+
+        // Process data for chart - sort for top destinations
+        const CoDestinationData = transformDestinationData(filtered);
+
+        setCoDestinationData(CoDestinationData);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing co destination data:",
+          error,
+        );
+      }
+    };
+
+    const fetchCuDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = cubaltDestinationData.filter(
+          (row) => row._project_id === project_id,
+        );
+
+        // Process data for chart - sort for top destinations
+        const CuDestinationData = transformDestinationData(filtered);
+
+        setCuDestinationData(CuDestinationData);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing cu destination data:",
+          error,
+        );
+      }
+    };
+
     fetchTotalProductionData();
     fetchMonthlyData();
+    fetchCoDestinationData();
+    fetchCuDestinationData();
   }, [project_id]);
 
   return (
@@ -159,126 +222,116 @@ export default function ProjectDetails({
       </div>
 
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-        <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-3">
-          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
-            <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
-              <CardHeader>
-                <CardTitle>
-                  {totalProd.length > 0 && totalProd[0].year} Annual Production
-                </CardTitle>
-                <CardDescription>Quantity in Tonnes</CardDescription>
-              </CardHeader>
-              <Separator />
-              <CardContent className="mt-2">
-                <div className="flex flex-col gap-6">
-                  {totalProd.length > 0 && (
-                    <div className="space-y-2">
-                      <div className="">
-                        {totalProd[0].totalCobalt > 0 && (
-                          <div className="font-bold">
-                            <span className="text-h4 font-bold text-chart6">
-                              {totalProd[0].totalCobalt > 0 &&
-                                totalProd[0].totalCobalt
-                                  .toFixed(1)
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                              {" t"}
-                            </span>
-                            <span className="text-sm text-foreground/50">
-                              {" "}
-                              Total Cobalt
-                            </span>
-                          </div>
-                        )}
-                      </div>
+        <div className="grid auto-rows-max items-start gap-4 md:gap-6 lg:col-span-3">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            {totalProd.length > 0 && (
+              <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
+                <CardHeader>
+                  <CardTitle>
+                    {totalProd.length > 0 && totalProd[0].year} Annual
+                    Production
+                  </CardTitle>
+                  <CardDescription>Quantity in Tonnes</CardDescription>
+                </CardHeader>
+                <Separator />
+                <CardContent className="mt-2 lg:h-[330px]">
+                  <div className="flex flex-col gap-7">
+                    {totalProd[0].totalCobalt > 0 && (
+                      <div className="space-y-5">
+                        <div className="font-bold">
+                          <p className="text-h4 font-bold text-chart6">
+                            {totalProd[0].totalCobalt > 0 &&
+                              totalProd[0].totalCobalt
+                                .toFixed(1)
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                            {" t"}
+                          </p>
+                          <span className="text-sm text-foreground/50">
+                            {" "}
+                            Total Cobalt Production
+                          </span>
+                        </div>
 
-                      <div className="flex items-center space-x-20">
-                        {totalProd[0].totalCobalt > 0 && (
-                          <div className="font-bold">
-                            <p className="text-h6 font-bold text-foreground/80">
-                              {totalProd[0].totalCobalt > 0 &&
-                                totalProd[0].totalCobalt
+                        <div className="flex items-center justify-between pr-8">
+                          {totalProdDetails[0].totalCobaltExport > 0 && (
+                            <div className="font-bold">
+                              <p className="text-p font-bold text-foreground/80">
+                                {totalProdDetails[0].totalCobaltExport
                                   .toFixed(1)
                                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
-                            </p>
-                            <span className="text-pxs text-foreground/50">
-                              Co Exports
-                            </span>
-                          </div>
-                        )}
-                        {totalProd[0].totalCobalt > 0 && (
-                          <div className="font-bold">
-                            <p className="text-h6 font-bold text-foreground/80">
-                              {totalProd[0].totalCobalt > 0 &&
-                                totalProd[0].totalCobalt
-                                  .toFixed(1)
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
-                            </p>
-                            <span className="text-pxs font-bold text-foreground/50">
-                              Co Domestic Sales
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  {totalProd.length > 0 && (
-                    <div className="space-y-2">
-                      <div className="">
-                        {totalProd[0].totalCopper > 0 && (
-                          <div className="font-bold">
-                            {/* <p className="font-medium text-chart6">Cobalt:</p> */}
+                              </p>
+                              <span className="text-pxs text-foreground/50">
+                                Co Exports
+                              </span>
+                            </div>
+                          )}
+                          {totalProdDetails[0].totalCobaltLocal > 0 && (
+                            <div className="font-bold">
+                              <p className="text-p font-bold text-foreground/80">
+                                {totalProdDetails[0].totalCobaltLocal
 
-                            <span className="text-h4 font-bold text-chart5">
-                              {totalProd[0].totalCopper > 0 &&
-                                totalProd[0].totalCopper
                                   .toFixed(1)
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                              {" t"}
-                            </span>
-                            <span className="text-sm text-foreground/50">
-                              {" "}
-                              Total Copper
-                            </span>
-                          </div>
-                        )}
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                              </p>
+                              <span className="text-pxs font-bold text-foreground/50">
+                                Co Domestic Sales
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
+                    )}
+                    {totalProd[0].totalCopper > 0 && (
+                      <div className="space-y-5">
+                        <div className="font-bold">
+                          <p className="text-h4 font-bold text-chart5">
+                            {totalProd[0].totalCopper > 0 &&
+                              totalProd[0].totalCopper
+                                .toFixed(1)
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                            {" t"}
+                          </p>
+                          <span className="text-sm text-foreground/50">
+                            {" "}
+                            Total Copper Production
+                          </span>
+                        </div>
 
-                      <div className="flex items-center space-x-20">
-                        {totalProd[0].totalCopper > 0 && (
-                          <div className="font-bold">
-                            <p className="text-h6 font-bold text-foreground/80">
-                              {totalProd[0].totalCopper > 0 &&
-                                totalProd[0].totalCopper
+                        <div className="flex items-center justify-between pr-8">
+                          {totalProdDetails[0].totalCopperExport > 0 && (
+                            <div className="font-bold">
+                              <p className="text-p font-bold text-foreground/80">
+                                {totalProdDetails[0].totalCopperExport
                                   .toFixed(1)
                                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
-                            </p>
-                            <span className="text-pxs text-foreground/50">
-                              Cu Exports
-                            </span>
-                          </div>
-                        )}
-                        {totalProd[0].totalCopper > 0 && (
-                          <div className="font-bold">
-                            <p className="text-h6 font-bold text-foreground/80">
-                              {totalProd[0].totalCopper > 0 &&
-                                totalProd[0].totalCopper
+                              </p>
+                              <span className="text-pxs text-foreground/50">
+                                Cu Exports
+                              </span>
+                            </div>
+                          )}
+                          {totalProdDetails[0].totalCopperLocal > 0 && (
+                            <div className="font-bold">
+                              <p className="text-p font-bold text-foreground/80">
+                                {totalProdDetails[0].totalCopperLocal
                                   .toFixed(1)
                                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
-                            </p>
-                            <span className="text-pxs font-bold text-foreground/50">
-                              Cu Domestic Sales
-                            </span>
-                          </div>
-                        )}
+                              </p>
+                              <span className="text-pxs font-bold text-foreground/50">
+                                Cu Domestic Sales
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
 
             {monthlyData.length > 0 && (
-              <div className="h-56 xl:col-span-2">
+              <div className="shrink lg:col-span-2">
                 <MultipleBarChart
                   title="Production of Copper and Cobalt in 2023"
                   description="Quantity in Tonnes"
@@ -295,138 +348,54 @@ export default function ProjectDetails({
               </div>
             )}
           </div>
+
+          <div className="grid gap-4 md:gap-6 lg:grid-cols-2 xl:grid-cols-2">
+            {coDestinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Cobalt Production in 2023"
+                description="Quantity in Tonnes"
+                config={coDestChartConfig}
+                chartData={coDestinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                barDataKey="quantity_tons"
+                yAxisLabelDataKey="Cobalt"
+                barLabelDataKey="label"
+                footNote={
+                  <>
+                    <div className="leading-none text-muted-foreground">
+                      Showing top {coDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
+                    </div>
+                  </>
+                }
+              />
+            )}
+
+            {cuDestinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Copper Production in 2023"
+                description="Quantity in Tonnes"
+                config={cuDestChartConfig}
+                chartData={cuDestinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                barDataKey="quantity_tons"
+                yAxisLabelDataKey="Cobalt"
+                barLabelDataKey="label"
+                footNote={
+                  <>
+                    <div className="leading-none text-muted-foreground">
+                      Showing top {cuDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
+                    </div>
+                  </>
+                }
+              />
+            )}
+          </div>
         </div>
       </div>
     </main>
   );
 }
-
-// const DataTables = () => {
-//   return (
-//     <Table>
-//       <TableHeader>
-//         <TableRow>
-//           <TableHead>Customer</TableHead>
-//           <TableHead className="hidden sm:table-cell">Type</TableHead>
-//           <TableHead className="hidden sm:table-cell">Status</TableHead>
-//           <TableHead className="hidden md:table-cell">Date</TableHead>
-//           <TableHead className="text-right">Amount</TableHead>
-//         </TableRow>
-//       </TableHeader>
-//       <TableBody>
-//         <TableRow className="bg-accent">
-//           <TableCell>
-//             <div className="font-medium">Liam Johnson</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               liam@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Sale</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="secondary">
-//               Fulfilled
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-23</TableCell>
-//           <TableCell className="text-right">$250.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Olivia Smith</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               olivia@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Refund</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="outline">
-//               Declined
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-24</TableCell>
-//           <TableCell className="text-right">$150.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Noah Williams</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               noah@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Subscription</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="secondary">
-//               Fulfilled
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-25</TableCell>
-//           <TableCell className="text-right">$350.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Emma Brown</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               emma@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Sale</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="secondary">
-//               Fulfilled
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-26</TableCell>
-//           <TableCell className="text-right">$450.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Liam Johnson</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               liam@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Sale</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="secondary">
-//               Fulfilled
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-23</TableCell>
-//           <TableCell className="text-right">$250.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Olivia Smith</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               olivia@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Refund</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="outline">
-//               Declined
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-24</TableCell>
-//           <TableCell className="text-right">$150.00</TableCell>
-//         </TableRow>
-//         <TableRow>
-//           <TableCell>
-//             <div className="font-medium">Emma Brown</div>
-//             <div className="hidden text-sm text-muted-foreground md:inline">
-//               emma@example.com
-//             </div>
-//           </TableCell>
-//           <TableCell className="hidden sm:table-cell">Sale</TableCell>
-//           <TableCell className="hidden sm:table-cell">
-//             <Badge className="text-xs" variant="secondary">
-//               Fulfilled
-//             </Badge>
-//           </TableCell>
-//           <TableCell className="hidden md:table-cell">2023-06-26</TableCell>
-//           <TableCell className="text-right">$450.00</TableCell>
-//         </TableRow>
-//       </TableBody>
-//     </Table>
-//   );
-// };
