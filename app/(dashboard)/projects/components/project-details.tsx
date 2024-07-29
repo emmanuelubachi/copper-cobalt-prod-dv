@@ -63,7 +63,7 @@ import { Years } from "@/data/chartData";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 
 import {
   calculateDetailedYearlySums,
@@ -171,7 +171,7 @@ export default function ProjectDetails({
     const fetchCuDestinationData = async () => {
       try {
         // Filter data based on short_name
-        const filtered = cubaltDestinationData.filter(
+        const filtered = copperDestinationData.filter(
           (row) => row._project_id === project_id,
         );
 

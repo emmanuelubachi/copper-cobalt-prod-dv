@@ -5,6 +5,7 @@ import {
   TDestinationData,
 } from "@/types/miningActivities";
 import {
+  DestinationSummary,
   DetailedYearlySummary,
   ProjectSummary,
   YearlySummary,
@@ -187,4 +188,41 @@ export function calculateProjectSums(data: MiningData[]): ProjectSummary[] {
     totalCopper: result[projectId].totalCopper,
     totalCobalt: result[projectId].totalCobalt,
   }));
+}
+
+interface ShipmentData {
+  _project_id: string;
+  destination: string;
+  quantity_tons: string;
+}
+
+export function calculateDestinationSums(
+  data: ShipmentData[],
+  projectIdFilter?: string,
+): DestinationSummary[] {
+  const result: { [destination: string]: number } = {};
+
+  data.forEach((item) => {
+    if (!projectIdFilter || item._project_id === projectIdFilter) {
+      const destination = item.destination;
+      const quantityTons = parseFloat(item.quantity_tons);
+
+      if (!result[destination]) {
+        result[destination] = 0;
+      }
+
+      result[destination] += quantityTons;
+    }
+  });
+
+  return Object.keys(result)
+    .map((destination) => ({
+      destination: destination,
+      totalQuantityTons: result[destination].toFixed(1), // Keeping the precision
+    }))
+    .sort(
+      (a, b) =>
+        parseFloat(b.totalQuantityTons.replace(/,/g, "")) -
+        parseFloat(a.totalQuantityTons.replace(/,/g, "")),
+    );
 }

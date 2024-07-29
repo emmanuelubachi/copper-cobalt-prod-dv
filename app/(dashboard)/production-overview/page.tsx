@@ -2,13 +2,9 @@
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import Image from "next/image";
 
-import { ArrowUpRight, File, ListFilter, MoreHorizontal } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 import {
   Card,
@@ -18,47 +14,37 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+
 import { AreaChartRender } from "@/components/charts/areaChart";
-import { BarListChart } from "@/components/charts/barListChart";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 import {
   exportQuantityData,
   exportTransactionData,
   kpiData,
-  companyData,
 } from "@/data/chartData";
 
-import { classNames, sliceData } from "@/lib/utils";
-import { Years } from "@/data/chartData";
-
-import { currencyFormatter, quantityFormatter } from "@/lib/utils";
+// import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import BarChartRender from "@/components/charts/barChart";
 import { SparkAreaChart } from "@tremor/react";
 import BarChart from "@/components/charts/echarts/barChart";
+import { InteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
 
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import { ProjectSummary, YearlySummary } from "@/types/projects";
-import { calculateProjectSums } from "@/lib/dataProcessing";
-import { InteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
-import { totalXChartConfig } from "@/constants/chart";
+import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+
+import {
+  calculateDestinationSums,
+  calculateProjectSums,
+} from "@/lib/dataProcessing";
+import {
+  coDestSumChartConfig,
+  cuDestSumChartConfig,
+  totalXChartConfig,
+} from "@/constants/chart";
+
+import { DestinationSummary, ProjectSummary } from "@/types/projects";
+import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
 const chartdata = [
   {
@@ -119,17 +105,15 @@ const chartdata = [
   },
 ];
 
-const Product = [
-  { category: "all", labal: "All" },
-  { category: "copper", labal: "Copper" },
-  { category: "cobalt", labal: "Cobalt" },
-];
-
 export default function Dashboard() {
   const [totalProd, setTotalProd] = useState<ProjectSummary[]>([]);
   const [kpi, setKpi] = useState<typeof kpiData>([]);
+  const [coDestSum, setCoDestSum] = useState<DestinationSummary[]>([]);
+  const [cuDestSum, setCuDestSum] = useState<DestinationSummary[]>([]);
 
-  const Company = sliceData(companyData, 9);
+  // const [cuDestinationData, setCuDestinationData] = useState<
+  //   TDestinationData[]
+  // >([]);
 
   useEffect(() => {
     const fetchTotalProductionData = async () => {
@@ -139,12 +123,8 @@ export default function Dashboard() {
           (row) => row.type === "export",
         );
 
-        // console.log("exports", exports);
-
         // Process data
         const totalProd = calculateProjectSums(exports);
-
-        // console.log("totalProd", totalProd);
 
         setTotalProd(totalProd);
       } catch (error) {
@@ -155,10 +135,6 @@ export default function Dashboard() {
       }
     };
 
-    fetchTotalProductionData();
-  }, []);
-
-  useEffect(() => {
     const fetchkpiData = async () => {
       try {
         // Filter data based on _project_id
@@ -173,7 +149,40 @@ export default function Dashboard() {
       }
     };
 
+    const fetchCoDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = calculateDestinationSums(cobaltDestinationData);
+
+        // Process data for chart - sort for top destinations
+        setCoDestSum(filtered);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing co destination data:",
+          error,
+        );
+      }
+    };
+
+    const fetchCuDestinationData = async () => {
+      try {
+        // Filter data based on short_name
+        const filtered = calculateDestinationSums(copperDestinationData);
+
+        // Process data for chart - sort for top destinations
+        setCuDestSum(filtered);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing co destination data:",
+          error,
+        );
+      }
+    };
+
     fetchkpiData();
+    fetchTotalProductionData();
+    fetchCoDestinationData();
+    fetchCuDestinationData();
   }, []);
 
   return (
@@ -201,13 +210,13 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-h4 font-bold">{kpi.value}</div>
-                {/* <SparkAreaChart
+                <SparkAreaChart
                   data={chartdata}
                   categories={["Performance"]}
                   index={"date"}
                   colors={["emerald"]}
                   className="h-8 w-20 sm:h-10 sm:w-36"
-                /> */}
+                />
                 <p className="text-xs text-muted-foreground">
                   {kpi.description}
                 </p>
@@ -231,8 +240,50 @@ export default function Dashboard() {
             )}
 
             <section className="grid items-start gap-2 xl:col-span-2">
-              <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-3">
-                <Card x-chunk="dashboard-01-chunk-5" className="__card">
+              <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-2">
+                {coDestSum.length > 0 && (
+                  <CustomLabelBarChart
+                    title="Top Destinations of Cobalt Production in 2023"
+                    description="Quantity in Tonnes"
+                    config={coDestSumChartConfig}
+                    chartData={coDestSum}
+                    yAxisDataKey="destination"
+                    xAxisDataKey="totalQuantityTons"
+                    barDataKey="totalQuantityTons"
+                    yAxisLabelDataKey="Cobalt"
+                    barLabelDataKey="label"
+                    footNote={
+                      <>
+                        <div className="leading-none text-muted-foreground">
+                          Showing top destinations in 2023.
+                        </div>
+                      </>
+                    }
+                  />
+                )}
+
+                {coDestSum.length > 0 && (
+                  <CustomLabelBarChart
+                    title="Top Destinations of Copper Production in 2023"
+                    description="Quantity in Tonnes"
+                    config={cuDestSumChartConfig}
+                    chartData={cuDestSum}
+                    yAxisDataKey="destination"
+                    xAxisDataKey="totalQuantityTons"
+                    barDataKey="totalQuantityTons"
+                    yAxisLabelDataKey="Copper"
+                    barLabelDataKey="label"
+                    footNote={
+                      <>
+                        <div className="leading-none text-muted-foreground">
+                          Showing top destinations in 2023.
+                        </div>
+                      </>
+                    }
+                  />
+                )}
+
+                {/* <Card x-chunk="dashboard-01-chunk-5" className="__card">
                   <CardHeader className="min-h-14">
                     <CardTitle className="flex min-h-14 items-start pt-2">
                       Countries present in the copper and cobalt sector in the
@@ -242,9 +293,9 @@ export default function Dashboard() {
                   <CardContent className="grid gap-8">
                     <BarChart />
                   </CardContent>
-                </Card>
+                </Card> */}
 
-                <Card
+                {/* <Card
                   className="__card lg:col-span-2"
                   x-chunk="dashboard-01-chunk-4"
                 >
@@ -262,7 +313,7 @@ export default function Dashboard() {
                   <CardContent className="">
                     <BarChartRender data={chartdata} />
                   </CardContent>
-                </Card>
+                </Card> */}
               </div>
             </section>
           </div>

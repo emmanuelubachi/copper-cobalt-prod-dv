@@ -52,13 +52,16 @@ export default function CustomLabelBarChart({
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
-        <ChartContainer config={chartConfig}>
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-[250px] w-full"
+        >
           <BarChart
             accessibilityLayer
             data={chartData}
             layout="vertical"
             margin={{
-              right: 20,
+              right: 250,
               //   left: 96,
             }}
           >
@@ -70,7 +73,7 @@ export default function CustomLabelBarChart({
               tickMargin={10}
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
-              //   hide
+              hide
             />
             <XAxis dataKey={props.xAxisDataKey} type="number" hide />
             <ChartTooltip

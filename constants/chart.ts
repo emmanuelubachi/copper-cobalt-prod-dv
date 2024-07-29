@@ -42,3 +42,23 @@ export const totalXChartConfig = {
     color: "hsl(var(--chart-5))",
   },
 };
+
+export const coDestSumChartConfig = {
+  totalQuantityTons: {
+    label: `Qty (T) ${" "}`,
+    color: "hsl(var(--chart-6))",
+  },
+  label: {
+    color: "hsl(var(--background))",
+  },
+};
+
+export const cuDestSumChartConfig = {
+  totalQuantityTons: {
+    label: `Qty (T) ${" "}`,
+    color: "hsl(var(--chart-5))",
+  },
+  label: {
+    color: "hsl(var(--background))",
+  },
+};
