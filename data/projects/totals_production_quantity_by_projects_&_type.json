@@ -1,0 +1,682 @@
+[
+    {
+        "short_name": "ANVIL",
+        "type": "export",
+        "copper": "2906.045009",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "anvil"
+    },
+    {
+        "short_name": "BOSS MINING",
+        "type": "export",
+        "copper": "2648.626",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "boss"
+    },
+    {
+        "short_name": "CCR",
+        "type": "export",
+        "copper": "60144.169",
+        "cobalt": "2542.342756",
+        "year": "2023",
+        "_project_id": "ccr"
+    },
+    {
+        "short_name": "CMOC",
+        "type": "export",
+        "copper": "144588.529",
+        "cobalt": "29492.35593",
+        "year": "2023",
+        "_project_id": "cmoc"
+    },
+    {
+        "short_name": "COMMUS",
+        "type": "export",
+        "copper": "129150.8301",
+        "cobalt": "2179.727278",
+        "year": "2023",
+        "_project_id": "commus"
+    },
+    {
+        "short_name": "HMC",
+        "type": "export",
+        "copper": "31908.9966",
+        "cobalt": "1646.228887",
+        "year": "2023",
+        "_project_id": "hmc"
+    },
+    {
+        "short_name": "JXCOM SARL",
+        "type": "export",
+        "copper": "1965.63",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "jxcom"
+    },
+    {
+        "short_name": "KALONGWE",
+        "type": "export",
+        "copper": "35808.912",
+        "cobalt": "2929.315552",
+        "year": "2023",
+        "_project_id": "kalongwe"
+    },
+    {
+        "short_name": "KAMOA",
+        "type": "export",
+        "copper": "437313.6897",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kamoa"
+    },
+    {
+        "short_name": "KCC",
+        "type": "export",
+        "copper": "200291.7435",
+        "cobalt": "15954.71689",
+        "year": "2023",
+        "_project_id": "kcc"
+    },
+    {
+        "short_name": "KIMIN",
+        "type": "export",
+        "copper": "26296.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kimin"
+    },
+    {
+        "short_name": "LAMIKAL",
+        "type": "export",
+        "copper": "48257.676",
+        "cobalt": "4801.545414",
+        "year": "2023",
+        "_project_id": "lamikal"
+    },
+    {
+        "short_name": "LCS",
+        "type": "export",
+        "copper": "78467.69639",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "lcs"
+    },
+    {
+        "short_name": "LUILU RESSOURCES",
+        "type": "export",
+        "copper": "43128.878",
+        "cobalt": "2150.222792",
+        "year": "2023",
+        "_project_id": "lr_sas"
+    },
+    {
+        "short_name": "METALKOL",
+        "type": "export",
+        "copper": "99688.19",
+        "cobalt": "14712.76885",
+        "year": "2023",
+        "_project_id": "metalkol"
+    },
+    {
+        "short_name": "MKM",
+        "type": "export",
+        "copper": "18519.013",
+        "cobalt": "266.4051714",
+        "year": "2023",
+        "_project_id": "mkm"
+    },
+    {
+        "short_name": "MMT ",
+        "type": "export",
+        "copper": "15901.5",
+        "cobalt": "81.19796847",
+        "year": "2023",
+        "_project_id": "mmt"
+    },
+    {
+        "short_name": "MUMI",
+        "type": "export",
+        "copper": "33764.48469",
+        "cobalt": "7416.111372",
+        "year": "2023",
+        "_project_id": "mumi"
+    },
+    {
+        "short_name": "S M DEZIWA",
+        "type": "export",
+        "copper": "83507.836",
+        "cobalt": "6786.744542",
+        "year": "2023",
+        "_project_id": "somidez"
+    },
+    {
+        "short_name": "SCM",
+        "type": "export",
+        "copper": "206611.5937",
+        "cobalt": "5950.458196",
+        "year": "2023",
+        "_project_id": "sicomines"
+    },
+    {
+        "short_name": "TCC",
+        "type": "export",
+        "copper": "47241.212",
+        "cobalt": "1611.393233",
+        "year": "2023",
+        "_project_id": "tcc"
+    },
+    {
+        "short_name": "THOMAS",
+        "type": "export",
+        "copper": "29036.5815",
+        "cobalt": "2811.410516",
+        "year": "2023",
+        "_project_id": "thomas"
+    },
+    {
+        "short_name": "TFM",
+        "type": "export",
+        "copper": "360586.151",
+        "cobalt": "22813.27226",
+        "year": "2023",
+        "_project_id": "tfm"
+    },
+    {
+        "short_name": "AMICAL KAKANA MINING",
+        "type": "export",
+        "copper": "233.505",
+        "cobalt": "6.5835",
+        "year": "2023",
+        "_project_id": "amical"
+    },
+    {
+        "short_name": "ANVIL MINING",
+        "type": "export",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "anvil"
+    },
+    {
+        "short_name": "ANVIL MINING",
+        "type": "local",
+        "copper": "2942.1405",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "anvil"
+    },
+    {
+        "short_name": "BENCO TRADING END ENGINEERINS SARL",
+        "type": "local",
+        "copper": "201.7008",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "benco"
+    },
+    {
+        "short_name": "BOSS MINING",
+        "type": "export",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "boss"
+    },
+    {
+        "short_name": "BOSS MINING",
+        "type": "local",
+        "copper": "3772.232208",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "boss"
+    },
+    {
+        "short_name": "CDM",
+        "type": "export",
+        "copper": "49576.69596",
+        "cobalt": "1861.333062",
+        "year": "2023",
+        "_project_id": "cdm"
+    },
+    {
+        "short_name": "CDM",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "cdm"
+    },
+    {
+        "short_name": "CHEMAF",
+        "type": "export",
+        "copper": "15140.0",
+        "cobalt": "1536.63507",
+        "year": "2023",
+        "_project_id": "chemaf"
+    },
+    {
+        "short_name": "CHEMAF ",
+        "type": "local",
+        "copper": "11027.91939",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "chemaf"
+    },
+    {
+        "short_name": "CHEMAF SA",
+        "type": "export",
+        "copper": "1700.0",
+        "cobalt": "238.956825",
+        "year": "2023",
+        "_project_id": "chemaf"
+    },
+    {
+        "short_name": "CNMC CONGO COMPAGNIE",
+        "type": "export",
+        "copper": "17028.1944",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "cnmc"
+    },
+    {
+        "short_name": "CNMC CONGO COMPAGNIE",
+        "type": "local",
+        "copper": "6176.964942",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "cnmc"
+    },
+    {
+        "short_name": "CNMC HUACHIN MABENDE",
+        "type": "export",
+        "copper": "37413.0049",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "huachin_mabende"
+    },
+    {
+        "short_name": "COMIKA",
+        "type": "export",
+        "copper": "40282.95706",
+        "cobalt": "3142.942665",
+        "year": "2023",
+        "_project_id": "comika"
+    },
+    {
+        "short_name": "COMILU",
+        "type": "export",
+        "copper": "31946.08",
+        "cobalt": "496.595115",
+        "year": "2023",
+        "_project_id": "comilu"
+    },
+    {
+        "short_name": "COMILU",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "comilu"
+    },
+    {
+        "short_name": "CONGO JIN JU",
+        "type": "export",
+        "copper": "17703.786",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "cjcmc"
+    },
+    {
+        "short_name": "CONGO MOON MINING",
+        "type": "export",
+        "copper": "3410.565948",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "congo_moon"
+    },
+    {
+        "short_name": "DIVINE LAND MINING SARL",
+        "type": "export",
+        "copper": "12019.344",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "divine"
+    },
+    {
+        "short_name": "DIVINE LAND MINING",
+        "type": "local",
+        "copper": "2844.560367",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "divine"
+    },
+    {
+        "short_name": "EVERBRIGHT MINING",
+        "type": "export",
+        "copper": "6778.4904",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "everbright"
+    },
+    {
+        "short_name": "EXCELLEN MINERALS SARL",
+        "type": "export",
+        "copper": "35299.926",
+        "cobalt": "481.726095",
+        "year": "2023",
+        "_project_id": "excellen"
+    },
+    {
+        "short_name": "FRONTIER",
+        "type": "export",
+        "copper": "2339.0208",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "frontier"
+    },
+    {
+        "short_name": "FRONTIER",
+        "type": "local",
+        "copper": "100865.1744",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "frontier"
+    },
+    {
+        "short_name": "GCM",
+        "type": "export",
+        "copper": "6319.214",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "gcm"
+    },
+    {
+        "short_name": "GCM",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "gcm"
+    },
+    {
+        "short_name": "GOLDEN AFRICAN",
+        "type": "export",
+        "copper": "8360.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "golden"
+    },
+    {
+        "short_name": "GOLDEN AFRICAN ",
+        "type": "local",
+        "copper": "929.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "golden"
+    },
+    {
+        "short_name": "HUACHIN METAL LEACH",
+        "type": "export",
+        "copper": "21176.3837",
+        "cobalt": "335.321595",
+        "year": "2023",
+        "_project_id": "huachin_metal"
+    },
+    {
+        "short_name": "KAIPENG",
+        "type": "export",
+        "copper": "48722.563",
+        "cobalt": "9.949065",
+        "year": "2023",
+        "_project_id": "kaipeng"
+    },
+    {
+        "short_name": "KAMBOVE MINING SAS",
+        "type": "export",
+        "copper": "32862.211",
+        "cobalt": "901.1177624",
+        "year": "2023",
+        "_project_id": "kambove"
+    },
+    {
+        "short_name": "KANSONGA",
+        "type": "local",
+        "copper": "17047.77984",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kansonga"
+    },
+    {
+        "short_name": "KASTRO SARL",
+        "type": "export",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kastro"
+    },
+    {
+        "short_name": "KICC",
+        "type": "export",
+        "copper": "28137.69057",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kicc"
+    },
+    {
+        "short_name": "KICC",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "kicc"
+    },
+    {
+        "short_name": "LONG FEI",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "long_fei"
+    },
+    {
+        "short_name": "LUALABA MINING",
+        "type": "local",
+        "copper": "15560.1",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "lcs"
+    },
+    {
+        "short_name": "METAL MINES",
+        "type": "export",
+        "copper": "17050.83",
+        "cobalt": "1196.810682",
+        "year": "2023",
+        "_project_id": "mm"
+    },
+    {
+        "short_name": "MIKAS",
+        "type": "export",
+        "copper": "28103.4574",
+        "cobalt": "764.96337",
+        "year": "2023",
+        "_project_id": "mikas"
+    },
+    {
+        "short_name": "MJM",
+        "type": "export",
+        "copper": "13241.588",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mjm"
+    },
+    {
+        "short_name": "MM MINING",
+        "type": "local",
+        "copper": "653.60043",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mm"
+    },
+    {
+        "short_name": "MMG",
+        "type": "export",
+        "copper": "43138.116",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mmg"
+    },
+    {
+        "short_name": "MMG",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mmg"
+    },
+    {
+        "short_name": "MPC",
+        "type": "export",
+        "copper": "49.98",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mpc"
+    },
+    {
+        "short_name": "MPC",
+        "type": "local",
+        "copper": "124.2",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "mpc"
+    },
+    {
+        "short_name": "MSL",
+        "type": "local",
+        "copper": "363.527811",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "msl"
+    },
+    {
+        "short_name": "NEW MINERALS INVESTMENT",
+        "type": "export",
+        "copper": "30340.711",
+        "cobalt": "109.3626852",
+        "year": "2023",
+        "_project_id": "new_minerals"
+    },
+    {
+        "short_name": "OM METAL",
+        "type": "export",
+        "copper": "4567.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "omr"
+    },
+    {
+        "short_name": "RUASHI MINING",
+        "type": "export",
+        "copper": "26791.2",
+        "cobalt": "2204.849775",
+        "year": "2023",
+        "_project_id": "ruashi"
+    },
+    {
+        "short_name": "RUASHI MINING",
+        "type": "local",
+        "copper": "738.81617",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "ruashi"
+    },
+    {
+        "short_name": "RUBAMIN",
+        "type": "export",
+        "copper": "15942.29378",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "rubamin"
+    },
+    {
+        "short_name": "RUBAMIN",
+        "type": "local",
+        "copper": "92259.144",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "rubamin"
+    },
+    {
+        "short_name": "SABWE MINING SARL",
+        "type": "export",
+        "copper": "1500.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "sabwe"
+    },
+    {
+        "short_name": "SEK",
+        "type": "export",
+        "copper": "33054.87",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "sek"
+    },
+    {
+        "short_name": "SEK",
+        "type": "local",
+        "copper": "0.0",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "sek"
+    },
+    {
+        "short_name": "SEMHKAT",
+        "type": "local",
+        "copper": "517.5",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "semhkat"
+    },
+    {
+        "short_name": "SHITURU MINING",
+        "type": "export",
+        "copper": "33028.412",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "shituru"
+    },
+    {
+        "short_name": "SOCIETE MINIERE DE KASONTA",
+        "type": "local",
+        "copper": "2394.17028",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "societe_kasonta"
+    },
+    {
+        "short_name": "SOMIKA",
+        "type": "export",
+        "copper": "38310.0",
+        "cobalt": "49.55865",
+        "year": "2023",
+        "_project_id": "somika"
+    },
+    {
+        "short_name": "SOMIKA",
+        "type": "local",
+        "copper": "48126.25134",
+        "cobalt": "0.0",
+        "year": "2023",
+        "_project_id": "somika"
+    },
+    {
+        "short_name": "STL",
+        "type": "export",
+        "copper": "2719.80687",
+        "cobalt": "2357.165954",
+        "year": "2023",
+        "_project_id": "stl"
+    }
+]

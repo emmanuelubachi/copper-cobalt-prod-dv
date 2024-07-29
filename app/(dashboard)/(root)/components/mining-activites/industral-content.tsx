@@ -14,11 +14,13 @@ import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-lab
 
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import {
+  calculateYearlySums,
   transformMonthlyData,
   // transformDestinationData,
   transformSortTopDestination,
 } from "@/lib/dataProcessing";
 
+import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
@@ -27,6 +29,12 @@ import {
   TMonthlyProductionData,
   TDestinationData,
 } from "@/types/miningActivities";
+import { YearlySummary } from "@/types/projects";
+import {
+  coDestChartConfig,
+  cuDestChartConfig,
+  monthlyProdChartConfig,
+} from "@/constants/chart";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -76,6 +84,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   const latitude = parseFloat(data.latitude_longitude?.split(",")[0]);
   const longitude = parseFloat(data.latitude_longitude?.split(",")[1]);
 
+  const [totalProd, setTotalProd] = useState<YearlySummary[]>([]);
   const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
   const [coDestinationData, setCoDestinationData] = useState<
     TDestinationData[]
@@ -85,6 +94,25 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
   >([]);
 
   useEffect(() => {
+    const fetchTotalProductionData = async () => {
+      try {
+        // Filter data based on _project_id
+        const filtered = totalProductionData.filter(
+          (row) => row._project_id === data._project_id,
+        );
+
+        // Process data
+        const totalProd = calculateYearlySums(filtered);
+
+        setTotalProd(totalProd);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing total industral projects production data:",
+          error,
+        );
+      }
+    };
+
     const fetchMonthlyData = async () => {
       try {
         // Filter data based on _project_id
@@ -142,41 +170,11 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       }
     };
 
+    fetchTotalProductionData();
     fetchMonthlyData();
     fetchCoDestinationData();
     fetchCuDestinationData();
   }, [data._project_id]);
-
-  const monthlyProdChartConfig = {
-    Cobalt: {
-      label: "Cobalt",
-      color: "hsl(var(--chart-2))",
-    },
-    Copper: {
-      label: "Copper",
-      color: "hsl(var(--chart-5))",
-    },
-  };
-
-  const coDestChartConfig = {
-    quantity_tons: {
-      label: `Qty (T) ${" "}`,
-      color: "hsl(var(--chart-2))",
-    },
-    label: {
-      color: "hsl(var(--background))",
-    },
-  };
-
-  const cuDestChartConfig = {
-    quantity_tons: {
-      label: `Qty (T) ${" "}`,
-      color: "hsl(var(--chart-5))",
-    },
-    label: {
-      color: "hsl(var(--background))",
-    },
-  };
 
   return (
     <div className="mx-auto">
@@ -232,14 +230,34 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
 
           {/* Mining Details */}
           <div className="grid gap-4">
-            {data["Copper/Cobalt_annual_production_(2022)"] && (
+            {totalProd.length > 0 && (
               <div className="">
                 <span className="font-medium text-foreground/70">
-                  Annual Production 2022:
+                  Annual Production {totalProd.length > 0 && totalProd[0].year}:
                 </span>
-                <p className="text-xl font-bold text-blue-600">
-                  {data["Copper/Cobalt_annual_production_(2022)"]}
-                </p>
+                <div>
+                  <div className="flex gap-4 text-xl font-bold">
+                    {totalProd[0].totalCobalt > 0 && (
+                      <span className="text-chart6">
+                        {totalProd[0].totalCobalt > 0 &&
+                          totalProd[0].totalCobalt
+                            .toFixed(1)
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                            " tonnes Co"}
+                      </span>
+                    )}
+
+                    {totalProd[0].totalCopper > 0 && (
+                      <span className="text-chart5">
+                        {totalProd[0].totalCopper > 0 &&
+                          totalProd[0].totalCopper
+                            .toFixed(1)
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                            " tonnes Cu"}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
             )}
 

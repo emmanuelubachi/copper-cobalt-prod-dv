@@ -35,13 +35,16 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
   const chartData = props.chartData;
 
   return (
-    <Card className="m-0 border-none bg-muted/50 shadow-none">
+    <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
       <CardHeader className="border-b px-4">
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
-        <ChartContainer config={chartConfig}>
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-[250px] w-full"
+        >
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis

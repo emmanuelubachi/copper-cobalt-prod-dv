@@ -74,6 +74,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart1: "hsl(var(--chart-1))",
+        chart2: "hsl(var(--chart-2))",
+        chart3: "hsl(var(--chart-3))",
+        chart4: "hsl(var(--chart-4))",
+        chart5: "hsl(var(--chart-5))",
+        chart6: "hsl(var(--chart-6))",
+        chart7: "hsl(var(--chart-7))",
+        chart8: "hsl(var(--chart-8))",
+        chart9: "hsl(var(--chart-9))",
+        chart10: "hsl(var(--chart-10))",
         // light mode
         tremor: {
           brand: {

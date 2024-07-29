@@ -61,24 +61,54 @@ import {
   companyData,
 } from "@/data/chartData";
 import { Years } from "@/data/chartData";
+import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 
-import { transformMonthlyData } from "@/lib/dataProcessing";
+import {
+  calculateYearlySums,
+  transformMonthlyData,
+} from "@/lib/dataProcessing";
 
 import { TMonthlyProductionData } from "@/types/miningActivities";
+import { monthlyProdChartConfig } from "@/constants/chart";
+import { YearlySummary } from "@/types/projects";
+import { StackedRadialChart } from "@/components/charts/shadcn/radial-chart/stacked-radial-chart";
 
 export default function ProjectDetails({
   projectInfo,
 }: {
   projectInfo: ProjectInfo;
 }) {
+  const [totalProd, setTotalProd] = useState<YearlySummary[]>([]);
+
   const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
 
   const project_id = projectInfo._project_id;
 
   useEffect(() => {
+    const fetchTotalProductionData = async () => {
+      try {
+        // Filter data based on _project_id
+        const filtered = totalProductionData.filter(
+          (row) => row._project_id === project_id,
+        );
+
+        // Process data for chart
+        const totalProd = calculateYearlySums(filtered);
+
+        setTotalProd(totalProd);
+
+        // console.log("filtered", filtered);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing total industral projects production data:",
+          error,
+        );
+      }
+    };
+
     const fetchMonthlyData = async () => {
       try {
         // Filter data based on _project_id
@@ -87,8 +117,8 @@ export default function ProjectDetails({
         );
         // Process data for chart
         const MonthlyProductionData = transformMonthlyData(filtered);
+
         setMonthlyData(MonthlyProductionData);
-        console.log("MonthlyProductionData", MonthlyProductionData);
       } catch (error) {
         console.error(
           "Error fetching and processing monthly industral projects production data:",
@@ -97,22 +127,13 @@ export default function ProjectDetails({
       }
     };
 
+    fetchTotalProductionData();
     fetchMonthlyData();
   }, [project_id]);
 
-  const monthlyProdChartConfig = {
-    Cobalt: {
-      label: "Cobalt",
-      color: "hsl(var(--chart-2))",
-    },
-    Copper: {
-      label: "Copper",
-      color: "hsl(var(--chart-5))",
-    },
-  };
   return (
-    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
-      <header className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
+    <main className="mb-24 mt-10 items-start space-y-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
+      <div className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
           {projectInfo.project_name}
         </h1>
@@ -135,207 +156,143 @@ export default function ProjectDetails({
             ))}
           </ToggleGroup> */}
         </div>
-      </header>
-      {/* <div className="">
-        <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
-          <CardHeader className="flex flex-row items-start bg-muted/50">
-            <div className="grid gap-0.5">
-              <CardTitle className="group flex items-center gap-2 text-lg">
-                Order Oe31b70H
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="h-6 w-6 opacity-0 transition-opacity group-hover:opacity-100"
-                >
-                  <Copy className="h-3 w-3" />
-                  <span className="sr-only">Copy Order ID</span>
-                </Button>
-              </CardTitle>
-              <CardDescription>Date: November 23, 2023</CardDescription>
-            </div>
-            <div className="ml-auto flex items-center gap-1">
-              <Button size="sm" variant="outline" className="h-8 gap-1">
-                <Truck className="h-3.5 w-3.5" />
-                <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">
-                  Track Order
-                </span>
-              </Button>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button size="icon" variant="outline" className="h-8 w-8">
-                    <MoreVertical className="h-3.5 w-3.5" />
-                    <span className="sr-only">More</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem>Edit</DropdownMenuItem>
-                  <DropdownMenuItem>Export</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Trash</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          </CardHeader>
-          <CardContent className="p-6 text-sm">
-            <div className="grid gap-3">
-              <div className="font-semibold">Order Details</div>
-              <ul className="grid gap-3">
-                <li className="flex items-center justify-between">
-                  <span className="text-muted-foreground">
-                    Glimmer Lamps x <span>2</span>
-                  </span>
-                  <span>$250.00</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-muted-foreground">
-                    Aqua Filters x <span>1</span>
-                  </span>
-                  <span>$49.00</span>
-                </li>
-              </ul>
-              <Separator className="my-2" />
-              <ul className="grid gap-3">
-                <li className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Subtotal</span>
-                  <span>$299.00</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Shipping</span>
-                  <span>$5.00</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Tax</span>
-                  <span>$25.00</span>
-                </li>
-                <li className="flex items-center justify-between font-semibold">
-                  <span className="text-muted-foreground">Total</span>
-                  <span>$329.00</span>
-                </li>
-              </ul>
-            </div>
-            <Separator className="my-4" />
-            <div className="grid grid-cols-2 gap-4">
-              <div className="grid gap-3">
-                <div className="font-semibold">Shipping Information</div>
-                <address className="grid gap-0.5 not-italic text-muted-foreground">
-                  <span>Liam Johnson</span>
-                  <span>1234 Main St.</span>
-                  <span>Anytown, CA 12345</span>
-                </address>
-              </div>
-              <div className="grid auto-rows-max gap-3">
-                <div className="font-semibold">Billing Information</div>
-                <div className="text-muted-foreground">
-                  Same as shipping address
-                </div>
-              </div>
-            </div>
-            <Separator className="my-4" />
-            <div className="grid gap-3">
-              <div className="font-semibold">Customer Information</div>
-              <dl className="grid gap-3">
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">Customer</dt>
-                  <dd>Liam Johnson</dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">Email</dt>
-                  <dd>
-                    <a href="mailto:">liam@acme.com</a>
-                  </dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">Phone</dt>
-                  <dd>
-                    <a href="tel:">+1 234 567 890</a>
-                  </dd>
-                </div>
-              </dl>
-            </div>
-            <Separator className="my-4" />
-            <div className="grid gap-3">
-              <div className="font-semibold">Payment Information</div>
-              <dl className="grid gap-3">
-                <div className="flex items-center justify-between">
-                  <dt className="flex items-center gap-1 text-muted-foreground">
-                    <CreditCard className="h-4 w-4" />
-                    Visa
-                  </dt>
-                  <dd>**** **** **** 4532</dd>
-                </div>
-              </dl>
-            </div>
-          </CardContent>
-          <CardFooter className="flex flex-row items-center border-t bg-muted/50 px-6 py-3">
-            <div className="text-xs text-muted-foreground">
-              Updated <time dateTime="2023-11-23">November 23, 2023</time>
-            </div>
-            <Pagination className="ml-auto mr-0 w-auto">
-              <PaginationContent>
-                <PaginationItem>
-                  <Button size="icon" variant="outline" className="h-6 w-6">
-                    <ChevronLeft className="h-3.5 w-3.5" />
-                    <span className="sr-only">Previous Order</span>
-                  </Button>
-                </PaginationItem>
-                <PaginationItem>
-                  <Button size="icon" variant="outline" className="h-6 w-6">
-                    <ChevronRight className="h-3.5 w-3.5" />
-                    <span className="sr-only">Next Order</span>
-                  </Button>
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </CardFooter>
-        </Card>
-      </div> */}
+      </div>
+
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-3">
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-            {/* {kpiCard.map((kpi) => (
-              <Card key={kpi.title} x-chunk="dashboard-01-chunk-0">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium text-muted-foreground">
-                    {kpi.title}
-                  </CardTitle>
-                  {<kpi.icon className="h-6 w-6 text-muted-foreground" />}
-                </CardHeader>
-                <CardContent>
-                  <div className="text-h5 font-bold">{kpi.value}</div>
-                  <p className="text-xs text-muted-foreground">
-                    {kpi.description}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Progress
-                    value={kpi.process}
-                    aria-label={`${kpi.process}% increase`}
-                  />
-                </CardFooter>
-              </Card>
-            ))} */}
-          </div>
-          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-2">
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+            <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
+              <CardHeader>
+                <CardTitle>
+                  {totalProd.length > 0 && totalProd[0].year} Annual Production
+                </CardTitle>
+                <CardDescription>Quantity in Tonnes</CardDescription>
+              </CardHeader>
+              <Separator />
+              <CardContent className="mt-2">
+                <div className="flex flex-col gap-6">
+                  {totalProd.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="">
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <span className="text-h4 font-bold text-chart6">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                              {" t"}
+                            </span>
+                            <span className="text-sm text-foreground/50">
+                              {" "}
+                              Total Cobalt
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex items-center space-x-20">
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs text-foreground/50">
+                              Co Exports
+                            </span>
+                          </div>
+                        )}
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs font-bold text-foreground/50">
+                              Co Domestic Sales
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  {totalProd.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="">
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            {/* <p className="font-medium text-chart6">Cobalt:</p> */}
+
+                            <span className="text-h4 font-bold text-chart5">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                              {" t"}
+                            </span>
+                            <span className="text-sm text-foreground/50">
+                              {" "}
+                              Total Copper
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex items-center space-x-20">
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs text-foreground/50">
+                              Cu Exports
+                            </span>
+                          </div>
+                        )}
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs font-bold text-foreground/50">
+                              Cu Domestic Sales
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
             {monthlyData.length > 0 && (
-              <MultipleBarChart
-                title="Production of Copper and Cobalt in 2023"
-                description="Quantity in Tonnes"
-                config={monthlyProdChartConfig}
-                chartData={monthlyData}
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-                footNote={
-                  <>
-                    {/* <div className="flex gap-2 font-medium leading-none">
-                      Trending up by 5.2% this month{" "}
-                      <TrendingUp className="h-4 w-4" />
-                    </div> */}
+              <div className="h-56 xl:col-span-2">
+                <MultipleBarChart
+                  title="Production of Copper and Cobalt in 2023"
+                  description="Quantity in Tonnes"
+                  config={monthlyProdChartConfig}
+                  chartData={monthlyData}
+                  firstDataKey="Cobalt"
+                  secondDataKey="Copper"
+                  footNote={
                     <div className="leading-none text-muted-foreground">
                       Includes quantities both exported and sold locally.
                     </div>
-                  </>
-                }
-              />
+                  }
+                />
+              </div>
             )}
           </div>
         </div>

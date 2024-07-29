@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
@@ -21,7 +21,8 @@ export default function ProjectPage({
 }: PageProps) {
   const router = useRouter();
 
-  React.useEffect(() => {
+  // TODO: look into this later
+  useEffect(() => {
     if (errorType === "invalidParams" && !searchParams.project_id) {
       toast.info("Please select a valid Project");
       // TODO: update URL with default value of project_id
