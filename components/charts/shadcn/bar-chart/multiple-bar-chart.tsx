@@ -35,7 +35,7 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
   const chartData = props.chartData;
 
   return (
-    <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
+    <Card className="__card">
       <CardHeader className="border-b px-4">
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.description}</CardDescription>

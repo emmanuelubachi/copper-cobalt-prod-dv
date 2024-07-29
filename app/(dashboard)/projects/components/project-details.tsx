@@ -57,7 +57,6 @@ import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-
 import {
   exportQuantityData,
   exportTransactionData,
-  kpiCard,
   companyData,
 } from "@/data/chartData";
 import { Years } from "@/data/chartData";
@@ -225,7 +224,7 @@ export default function ProjectDetails({
         <div className="grid auto-rows-max items-start gap-4 md:gap-6 lg:col-span-3">
           <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {totalProd.length > 0 && (
-              <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
+              <Card className="__card">
                 <CardHeader>
                   <CardTitle>
                     {totalProd.length > 0 && totalProd[0].year} Annual

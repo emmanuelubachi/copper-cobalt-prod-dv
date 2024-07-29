@@ -11,3 +11,9 @@ export type DetailedYearlySummary = {
   totalCobaltExport: number;
   totalCobaltLocal: number;
 };
+
+export type ProjectSummary = {
+  _project_id: string;
+  totalCobalt: number;
+  totalCopper: number;
+};

@@ -106,6 +106,12 @@
   @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 dark:hover:bg-background data-[state=on]:dark:bg-muted/100;
 }
 
+.__card {
+  @apply m-0 border-none bg-background shadow-none dark:bg-muted/50;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
 .react-checkbox-tree {
   @apply !flex-col gap-1 p-2;
 }
