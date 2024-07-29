@@ -28,3 +28,17 @@ export const cuDestChartConfig = {
     color: "hsl(var(--background))",
   },
 };
+
+export const totalXChartConfig = {
+  views: {
+    label: "Volume",
+  },
+  totalCobalt: {
+    label: "Cobalt",
+    color: "hsl(var(--chart-6))",
+  },
+  totalCopper: {
+    label: "Copper",
+    color: "hsl(var(--chart-5))",
+  },
+};

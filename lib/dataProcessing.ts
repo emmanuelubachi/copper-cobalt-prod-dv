@@ -4,7 +4,11 @@ import {
   DestinationData,
   TDestinationData,
 } from "@/types/miningActivities";
-import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
+import {
+  DetailedYearlySummary,
+  ProjectSummary,
+  YearlySummary,
+} from "@/types/projects";
 
 export function transformMonthlyData(
   data: MonthlyProductionData[],
@@ -97,6 +101,7 @@ type MiningData = {
   copper: string;
   cobalt: string;
   year: string;
+  _project_id: string;
   [key: string]: any; // To handle any additional properties
 };
 
@@ -154,4 +159,32 @@ export function calculateDetailedYearlySums(
   });
 
   return Object.values(result);
+}
+
+export function calculateProjectSums(data: MiningData[]): ProjectSummary[] {
+  const result: {
+    [projectId: string]: { totalCopper: number; totalCobalt: number };
+  } = {};
+
+  data.forEach((item) => {
+    const projectId = item._project_id;
+    const copper = parseFloat(item.copper);
+    const cobalt = parseFloat(item.cobalt);
+
+    if (!result[projectId]) {
+      result[projectId] = {
+        totalCopper: 0,
+        totalCobalt: 0,
+      };
+    }
+
+    result[projectId].totalCopper += copper;
+    result[projectId].totalCobalt += cobalt;
+  });
+
+  return Object.keys(result).map((projectId) => ({
+    _project_id: projectId,
+    totalCopper: result[projectId].totalCopper,
+    totalCobalt: result[projectId].totalCobalt,
+  }));
 }

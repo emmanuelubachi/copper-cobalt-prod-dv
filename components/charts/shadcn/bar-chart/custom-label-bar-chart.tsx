@@ -46,7 +46,7 @@ export default function CustomLabelBarChart({
 
   const chartData = props.chartData;
   return (
-    <Card className="m-0 border-none bg-muted/50 shadow-none">
+    <Card className="__card">
       <CardHeader className="border-b px-4">
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
