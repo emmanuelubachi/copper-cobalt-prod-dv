@@ -212,7 +212,10 @@ export default function Dashboard() {
             </TabsContent>
 
             <TabsContent value="transaction">
-              <Card x-chunk="dashboard-05-chunk-3">
+              <Card
+                x-chunk="dashboard-05-chunk-3"
+                className="border-none bg-muted shadow-md dark:bg-muted/50"
+              >
                 <CardHeader className="flex flex-row items-center">
                   <div className="grid gap-2">
                     <CardTitle>Export Trend</CardTitle>
