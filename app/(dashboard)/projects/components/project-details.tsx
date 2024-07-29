@@ -57,7 +57,6 @@ import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-
 import {
   exportQuantityData,
   exportTransactionData,
-  kpiCard,
   companyData,
 } from "@/data/chartData";
 import { Years } from "@/data/chartData";
