@@ -125,7 +125,7 @@ export default function Dashboard() {
         <h1 className="text-h4 font-medium tracking-tight">
           Copper and Cobalt Production Overview
         </h1>
-        <div className="flex items-start">
+        {/* <div className="flex items-start">
           <ToggleGroup
             type="single"
             size={"sm"}
@@ -143,14 +143,18 @@ export default function Dashboard() {
               </ToggleGroupItem>
             ))}
           </ToggleGroup>
-        </div>
+        </div> */}
       </header>
 
       <div className="flex flex-1 flex-col gap-4 md:gap-8">
         {/* KPI Cards */}
         <section className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4 lg:gap-8">
           {kpiCard.map((kpi) => (
-            <Card key={kpi.title} x-chunk="dashboard-01-chunk-0">
+            <Card
+              key={kpi.title}
+              x-chunk="dashboard-01-chunk-0"
+              className="border-none bg-muted shadow-md dark:bg-muted/50"
+            >
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
                   {kpi.title}
@@ -185,7 +189,10 @@ export default function Dashboard() {
             </div>
 
             <TabsContent value="quantity">
-              <Card x-chunk="dashboard-01-chunk-4">
+              <Card
+                x-chunk="dashboard-01-chunk-4"
+                className="border-none bg-muted shadow-md dark:bg-muted/50"
+              >
                 <CardHeader className="flex flex-row items-center">
                   <div className="grid gap-2">
                     <CardTitle>Export Trend</CardTitle>
@@ -205,7 +212,10 @@ export default function Dashboard() {
             </TabsContent>
 
             <TabsContent value="transaction">
-              <Card x-chunk="dashboard-05-chunk-3">
+              <Card
+                x-chunk="dashboard-05-chunk-3"
+                className="border-none bg-muted shadow-md dark:bg-muted/50"
+              >
                 <CardHeader className="flex flex-row items-center">
                   <div className="grid gap-2">
                     <CardTitle>Export Trend</CardTitle>
@@ -239,7 +249,7 @@ export default function Dashboard() {
         {/* Countries/Projects */}
         <section className="grid gap-2">
           <div className="flex items-start">
-            <ToggleGroup
+            {/* <ToggleGroup
               type="single"
               size={"sm"}
               defaultValue="all"
@@ -255,11 +265,14 @@ export default function Dashboard() {
                   {product.labal}
                 </ToggleGroupItem>
               ))}
-            </ToggleGroup>
+            </ToggleGroup> */}
           </div>
 
           <div className="grid gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-            <Card x-chunk="dashboard-01-chunk-5">
+            <Card
+              x-chunk="dashboard-01-chunk-5"
+              className="border-none bg-muted shadow-md dark:bg-muted/50"
+            >
               <CardHeader className="min-h-14">
                 <CardTitle className="flex min-h-14 items-start pt-2">
                   Countries present in the copper and cobalt sector in the DRC
@@ -270,7 +283,10 @@ export default function Dashboard() {
               </CardContent>
             </Card>
 
-            <Card className="lg:col-span-2" x-chunk="dashboard-01-chunk-4">
+            <Card
+              className="border-none bg-muted shadow-md dark:bg-muted/50 lg:col-span-2"
+              x-chunk="dashboard-01-chunk-4"
+            >
               <CardHeader className="flex min-h-14 flex-row items-start">
                 <CardTitle className="flex min-h-14 items-start pt-2">
                   Shares of mining production by project groups
@@ -291,7 +307,7 @@ export default function Dashboard() {
 
         {/* Table */}
         {/* TODO: Make table responsive for Fold mobile devices */}
-        <section className="grid flex-1 items-start gap-4 md:gap-8">
+        {/* <section className="grid flex-1 items-start gap-4 md:gap-8">
           <Tabs defaultValue="all">
             <div className="flex items-center">
               <TabsList>
@@ -574,10 +590,10 @@ export default function Dashboard() {
               </Card>
             </TabsContent>
           </Tabs>
-        </section>
+        </section> */}
 
         {/* Projects/Companies */}
-        <section>
+        {/* <section>
           <Card
             className="lg:col-span-2 xl:col-span-1 xl:hidden"
             x-chunk="dashboard-01-chunk-5"
@@ -617,7 +633,7 @@ export default function Dashboard() {
               ))}
             </CardContent>
           </Card>
-        </section>
+        </section> */}
       </div>
     </main>
   );
