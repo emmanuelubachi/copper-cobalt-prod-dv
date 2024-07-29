@@ -74,6 +74,7 @@ import {
 import { TMonthlyProductionData } from "@/types/miningActivities";
 import { monthlyProdChartConfig } from "@/constants/chart";
 import { YearlySummary } from "@/types/projects";
+import { StackedRadialChart } from "@/components/charts/shadcn/radial-chart/stacked-radial-chart";
 
 export default function ProjectDetails({
   projectInfo,
@@ -131,7 +132,7 @@ export default function ProjectDetails({
   }, [project_id]);
 
   return (
-    <main className="mb-24 mt-10 grid items-start gap-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
+    <main className="mb-24 mt-10 items-start space-y-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
       <div className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
           {projectInfo.project_name}
@@ -156,55 +157,142 @@ export default function ProjectDetails({
           </ToggleGroup> */}
         </div>
       </div>
+
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-3">
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-            {/* {kpiCard.map((kpi) => (
-              <Card key={kpi.title} x-chunk="dashboard-01-chunk-0">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium text-muted-foreground">
-                    {kpi.title}
-                  </CardTitle>
-                  {<kpi.icon className="h-6 w-6 text-muted-foreground" />}
-                </CardHeader>
-                <CardContent>
-                  <div className="text-h5 font-bold">{kpi.value}</div>
-                  <p className="text-xs text-muted-foreground">
-                    {kpi.description}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Progress
-                    value={kpi.process}
-                    aria-label={`${kpi.process}% increase`}
-                  />
-                </CardFooter>
-              </Card>
-            ))} */}
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+            <Card className="m-0 border-none bg-muted shadow-none dark:bg-muted/50">
+              <CardHeader>
+                <CardTitle>
+                  {totalProd.length > 0 && totalProd[0].year} Annual Production
+                </CardTitle>
+                <CardDescription>Quantity in Tonnes</CardDescription>
+              </CardHeader>
+              <Separator />
+              <CardContent className="mt-2">
+                <div className="flex flex-col gap-6">
+                  {totalProd.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="">
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <span className="text-h4 font-bold text-chart6">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                              {" t"}
+                            </span>
+                            <span className="text-sm text-foreground/50">
+                              {" "}
+                              Total Cobalt
+                            </span>
+                          </div>
+                        )}
+                      </div>
 
-            {/* {totalProd.length > 0 && ()} */}
-          </div>
-          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-2">
+                      <div className="flex items-center space-x-20">
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs text-foreground/50">
+                              Co Exports
+                            </span>
+                          </div>
+                        )}
+                        {totalProd[0].totalCobalt > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCobalt > 0 &&
+                                totalProd[0].totalCobalt
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs font-bold text-foreground/50">
+                              Co Domestic Sales
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  {totalProd.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="">
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            {/* <p className="font-medium text-chart6">Cobalt:</p> */}
+
+                            <span className="text-h4 font-bold text-chart5">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                              {" t"}
+                            </span>
+                            <span className="text-sm text-foreground/50">
+                              {" "}
+                              Total Copper
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex items-center space-x-20">
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs text-foreground/50">
+                              Cu Exports
+                            </span>
+                          </div>
+                        )}
+                        {totalProd[0].totalCopper > 0 && (
+                          <div className="font-bold">
+                            <p className="text-h6 font-bold text-foreground/80">
+                              {totalProd[0].totalCopper > 0 &&
+                                totalProd[0].totalCopper
+                                  .toFixed(1)
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " t"}
+                            </p>
+                            <span className="text-pxs font-bold text-foreground/50">
+                              Cu Domestic Sales
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
             {monthlyData.length > 0 && (
-              <MultipleBarChart
-                title="Production of Copper and Cobalt in 2023"
-                description="Quantity in Tonnes"
-                config={monthlyProdChartConfig}
-                chartData={monthlyData}
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-                footNote={
-                  <>
-                    {/* <div className="flex gap-2 font-medium leading-none">
-                      Trending up by 5.2% this month{" "}
-                      <TrendingUp className="h-4 w-4" />
-                    </div> */}
+              <div className="h-56 xl:col-span-2">
+                <MultipleBarChart
+                  title="Production of Copper and Cobalt in 2023"
+                  description="Quantity in Tonnes"
+                  config={monthlyProdChartConfig}
+                  chartData={monthlyData}
+                  firstDataKey="Cobalt"
+                  secondDataKey="Copper"
+                  footNote={
                     <div className="leading-none text-muted-foreground">
                       Includes quantities both exported and sold locally.
                     </div>
-                  </>
-                }
-              />
+                  }
+                />
+              </div>
             )}
           </div>
         </div>
