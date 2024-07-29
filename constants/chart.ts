@@ -62,3 +62,14 @@ export const cuDestSumChartConfig = {
     color: "hsl(var(--background))",
   },
 };
+
+export const exportTrendChartConfig = {
+  Cobalt: {
+    label: "Cobalt",
+    color: "hsl(var(--chart-6))",
+  },
+  Copper: {
+    label: "Copper",
+    color: "hsl(var(--chart-5))",
+  },
+};

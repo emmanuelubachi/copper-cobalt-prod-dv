@@ -54,7 +54,7 @@ export function InteractiveBarChart({ ...props }: InteractiveBarChartProps) {
 
   return (
     <Card className="__card">
-      <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
+      <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 md:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
           <CardTitle>{props.title}</CardTitle>
           <CardDescription>{props.description}</CardDescription>

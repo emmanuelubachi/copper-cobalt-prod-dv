@@ -40,11 +40,13 @@ import {
 import {
   coDestSumChartConfig,
   cuDestSumChartConfig,
+  exportTrendChartConfig,
   totalXChartConfig,
 } from "@/constants/chart";
 
 import { DestinationSummary, ProjectSummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
+import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
 
 const chartdata = [
   {
@@ -186,7 +188,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-8 sm:px-6 sm:py-3">
+    <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
       <header className="items-center justify-between gap-6 space-y-4 sm:ml-1 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
           Copper and Cobalt Production Overview
@@ -195,13 +197,9 @@ export default function Dashboard() {
 
       <div className="flex flex-1 flex-col gap-4 md:gap-4">
         {/* KPI Cards */}
-        <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {kpi.map((kpi) => (
-            <Card
-              key={kpi.title}
-              x-chunk="dashboard-01-chunk-0"
-              className="__card"
-            >
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {kpi.map((kpi, index) => (
+            <Card key={index} x-chunk="dashboard-01-chunk-0" className="__card">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
                   {kpi.title}
@@ -210,110 +208,71 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-h4 font-bold">{kpi.value}</div>
-                <SparkAreaChart
-                  data={chartdata}
-                  categories={["Performance"]}
-                  index={"date"}
-                  colors={["emerald"]}
-                  className="h-8 w-20 sm:h-10 sm:w-36"
-                />
                 <p className="text-xs text-muted-foreground">
                   {kpi.description}
                 </p>
               </CardContent>
             </Card>
           ))}
-        </section>
+        </div>
 
         <div className="grid items-start gap-4 xl:grid-cols-3">
           {/* Countries/Projects */}
           <div className="space-y-4 xl:col-span-2">
-            {totalProd.length > 0 && (
-              <InteractiveBarChart
-                title="Exports of Cobalt and Copper by Projects"
-                description="2023 Production Volume(T)"
-                config={totalXChartConfig}
-                chartData={totalProd}
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-              />
-            )}
+            {/* {totalProd.length > 0 && ( */}
+            <InteractiveBarChart
+              title="Exports of Cobalt and Copper by Projects"
+              description="2023 Production Volume(T)"
+              config={totalXChartConfig}
+              chartData={totalProd}
+              firstDataKey="Cobalt"
+              secondDataKey="Copper"
+            />
+            {/* )} */}
 
             <section className="grid items-start gap-2 xl:col-span-2">
-              <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-2">
-                {coDestSum.length > 0 && (
-                  <CustomLabelBarChart
-                    title="Top Destinations of Cobalt Production in 2023"
-                    description="Quantity in Tonnes"
-                    config={coDestSumChartConfig}
-                    chartData={coDestSum}
-                    yAxisDataKey="destination"
-                    xAxisDataKey="totalQuantityTons"
-                    barDataKey="totalQuantityTons"
-                    yAxisLabelDataKey="Cobalt"
-                    barLabelDataKey="label"
-                    footNote={
-                      <>
-                        <div className="leading-none text-muted-foreground">
-                          Showing top destinations in 2023.
-                        </div>
-                      </>
-                    }
-                  />
-                )}
+              <div className="grid gap-4 lg:grid-cols-2">
+                {/* {coDestSum.length > 0 && ( */}
+                <CustomLabelBarChart
+                  title="Top Destinations of Cobalt Production in 2023"
+                  description="Quantity in Tonnes"
+                  config={coDestSumChartConfig}
+                  chartData={coDestSum}
+                  yAxisDataKey="destination"
+                  xAxisDataKey="totalQuantityTons"
+                  barDataKey="totalQuantityTons"
+                  yAxisLabelDataKey="Cobalt"
+                  barLabelDataKey="label"
+                  footNote={
+                    <>
+                      <div className="leading-none text-muted-foreground">
+                        Showing top destinations in 2023.
+                      </div>
+                    </>
+                  }
+                />
+                {/* )} */}
 
-                {coDestSum.length > 0 && (
-                  <CustomLabelBarChart
-                    title="Top Destinations of Copper Production in 2023"
-                    description="Quantity in Tonnes"
-                    config={cuDestSumChartConfig}
-                    chartData={cuDestSum}
-                    yAxisDataKey="destination"
-                    xAxisDataKey="totalQuantityTons"
-                    barDataKey="totalQuantityTons"
-                    yAxisLabelDataKey="Copper"
-                    barLabelDataKey="label"
-                    footNote={
-                      <>
-                        <div className="leading-none text-muted-foreground">
-                          Showing top destinations in 2023.
-                        </div>
-                      </>
-                    }
-                  />
-                )}
-
-                {/* <Card x-chunk="dashboard-01-chunk-5" className="__card">
-                  <CardHeader className="min-h-14">
-                    <CardTitle className="flex min-h-14 items-start pt-2">
-                      Countries present in the copper and cobalt sector in the
-                      DRC
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="grid gap-8">
-                    <BarChart />
-                  </CardContent>
-                </Card> */}
-
-                {/* <Card
-                  className="__card lg:col-span-2"
-                  x-chunk="dashboard-01-chunk-4"
-                >
-                  <CardHeader className="flex min-h-14 flex-row items-start">
-                    <CardTitle className="flex min-h-14 items-start pt-2">
-                      Shares of mining production by project groups
-                    </CardTitle>
-                    <Button asChild size="sm" className="ml-auto hidden gap-1">
-                      <Link href="#">
-                        View All
-                        <ArrowUpRight className="h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardHeader>
-                  <CardContent className="">
-                    <BarChartRender data={chartdata} />
-                  </CardContent>
-                </Card> */}
+                {/* {coDestSum.length > 0 && ( */}
+                <CustomLabelBarChart
+                  title="Top Destinations of Copper Production in 2023"
+                  description="Quantity in Tonnes"
+                  config={cuDestSumChartConfig}
+                  chartData={cuDestSum}
+                  yAxisDataKey="destination"
+                  xAxisDataKey="totalQuantityTons"
+                  barDataKey="totalQuantityTons"
+                  yAxisLabelDataKey="Copper"
+                  barLabelDataKey="label"
+                  footNote={
+                    <>
+                      <div className="leading-none text-muted-foreground">
+                        Showing top destinations in 2023.
+                      </div>
+                    </>
+                  }
+                />
+                {/* )} */}
               </div>
             </section>
           </div>
@@ -330,6 +289,22 @@ export default function Dashboard() {
 
             {/* <TabsContent value="quantity"> */}
             <Card className="__card">
+              <LegendAreaChart
+                title="Export Trend"
+                description="Total quantity of exported products."
+                config={exportTrendChartConfig}
+                chartData={exportQuantityData}
+                xAxisDataKey="date"
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+                formatter="quantityFormatter"
+                // footNote={
+                //   <div className="leading-none text-muted-foreground">
+                //     Includes quantities both exported and sold locally.
+                //   </div>
+                // }
+              />
+              {/* <Card className="__card">
               <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">
                   <CardTitle>Export Trend</CardTitle>
@@ -345,11 +320,22 @@ export default function Dashboard() {
                   valueFormatter="quantityFormatter"
                 />
               </CardContent>
-            </Card>
-            {/* </TabsContent> */}
+            </Card> */}
+              {/* </TabsContent> */}
 
-            {/* <TabsContent value="transaction"> */}
-            <Card className="__card">
+              {/* <TabsContent value="transaction"> */}
+              <LegendAreaChart
+                title="Export Trend"
+                description="Total quantity of exported products."
+                config={exportTrendChartConfig}
+                chartData={exportTransactionData}
+                xAxisDataKey="date"
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+                formatter="quantityFormatter"
+              />
+            </Card>
+            {/* <Card className="__card">
               <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">
                   <CardTitle>Export Trend</CardTitle>
@@ -364,7 +350,7 @@ export default function Dashboard() {
                   valueFormatter={"currencyFormatter"}
                 />
               </CardContent>
-            </Card>
+            </Card> */}
             {/* </TabsContent> */}
             {/* </Tabs> */}
 
