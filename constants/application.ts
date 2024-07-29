@@ -1,4 +1,4 @@
-import { LineChart, Map, Pickaxe, Ship } from "lucide-react";
+import { LineChart, Map, Pickaxe, Building } from "lucide-react";
 import { NavItem } from "@/types";
 import {
   IndustralProjectDetailsProps,
@@ -18,18 +18,19 @@ export const NAVLIST: NavItem[] = [
     link: "/production-overview",
     icon: LineChart,
   },
-  // {
-  //   name: "Project",
-  //   path: "/projects",
-  //   link: "/projects?project_id=amical",
-  //   icon: Pickaxe,
-  // },
   {
     name: "Project",
-    path: "/companies",
-    link: "/companies",
+    path: "/projects",
+    link: "/projects?project_id=ccr",
     icon: Pickaxe,
   },
+  {
+    name: "Companies",
+    path: "/companies",
+    link: "/companies",
+    icon: Building,
+  },
+
   // {
   //   name: "Exports",
   //   path: "/export-flow",

@@ -17,3 +17,8 @@ export type ProjectSummary = {
   totalCobalt: number;
   totalCopper: number;
 };
+
+export type DestinationSummary = {
+  destination: string;
+  totalQuantityTons: string;
+};
