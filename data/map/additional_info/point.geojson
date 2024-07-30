@@ -1,0 +1,87 @@
+{
+	"type": "FeatureCollection",
+	"name": "point",
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Lobito Port",
+				"corridor_name": "Beira Lobito Corridor (or Lobito Corridor)",
+				"country": "Angola",
+				"province": "Benguela",
+				"description": "The port of Lobito is located on the Angolan coast. It links the copper belt's raw material producers to international markets, and is an excellent location for imported raw materials and petroleum products. The consortium formed by CITIC Construction Co. Ltd and Shandong Port Group Co. Ltd, both state-owned by China, won the international tender to operate the port's container and general cargo terminal for the next 20 years.",
+				"products_transported": "Sugar; Copper; Salted fish; Building equipments; Crude oil; Oil"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [13.549564, -12.349856]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Walvis Bay Port",
+				"corridor_name": "Trans-Caprivi Corridor (TCC) (or Walvis Bay-Ndola-Lubumbashi Development Corridor (WBNLDC))",
+				"country": "Namibia",
+				"province": "Erongo",
+				"description": "The port of Walvis Bay is Namibia's largest commercial port. Strategically located midway along the Namibian coast, with direct access to major shipping routes, Walvis Bay is a natural gateway for international trade. In 1994, the port was taken over by the public sector, but continuous improvements and investments have been made to date. It has 11 berths.",
+				"products_transported": "Salt; Oil; Diamond; Cuivre; Lead; Uranium; Fish; Lithium"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [14.497661, -22.950454]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Durban Port",
+				"corridor_name": "North-South Corridor",
+				"country": "South Africa",
+				"province": "KwaZulu-Natal",
+				"description": "The Port of Durban is the busiest maritime terminal in sub-Saharan Africa. Its economy is diversified, with very active sectors in manufacturing, transport, government, finance and tourism.  It has 59 berths. It is the port through which the bulk of Congolese mining production passes. It is also home to the warehouses of mining traders such as Access World, which store copper and cobalt from the Democratic Republic of Congo, among other products.",
+				"products_transported": "Spare parts for vehicles; cereals; fruits; paper; Timber; machines; huile; Fish; Rice; sugar; Wheat; spath fluor; Chemicals; engrais; carbonate de soude; Coal; Copper, Cobalt"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [31.020914, -29.881583]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Dar es Salaam Port",
+				"corridor_name": "Central Development Corridor",
+				"country": "Tanzania",
+				"province": "Dar es Salaam",
+				"description": "The port of Dar es Salaam is the largest and most important in Tanzania. It handles over 90% of the country's freight. It is an important gateway for landlocked countries such as Rwanda, Burundi, the Democratic Republic of Congo, Zambia, Malawi and Uganda. Some of the country's minerals transit through this port on their way to Asia.",
+				"products_transported": "Sugar; Rice; Coffee; Tea; Corn; Cassava; Tobago; Sisal; Textiles; Fish; Spare parts for vehicles; Mining products"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [39.292902, -6.834285]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Beira Port",
+				"corridor_name": "Beira Lobito Corridor (or Lobito Corridor)",
+				"country": "Mozambique",
+				"province": "Sofala",
+				"description": "The port of Beira is the second largest in Mozambique. It occupies a strategic position, serving some of Southern Africa's landlocked countries, such as Zimbabwe, Malawi, Zambia, Botswana and the Democratic Republic of Congo. It has 11 berths. It is also home to the warehouses of mining traders such as Access World, who store copper and cobalt from the Democratic Republic of Congo, among other products.",
+				"products_transported": "Crude oil; Fertilizers; Wheat; Agriculture equipment; Textiles; Palm oil; Mining products"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [34.834946, -19.819509]
+			}
+		}
+	]
+}

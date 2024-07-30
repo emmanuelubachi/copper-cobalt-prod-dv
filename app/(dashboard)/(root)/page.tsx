@@ -18,6 +18,18 @@ export default async function Page() {
     "data/map/democratic_republic_of_the_congo_mining_permits.geojson",
   );
 
+  const intRoutes = readGeoJsonFile(
+    "/data/map/additional_info/lineFiltered.geojson",
+  );
+
+  const borderPosts = readGeoJsonFile(
+    "/data/map/additional_info/posts.geojson",
+  );
+
+  const exportPorts = readGeoJsonFile(
+    "/data/map/additional_info/point.geojson",
+  );
+
   // convert csv data to geojson
   let geojsonData: GeoJSONFeatureCollection = await new Promise(
     (resolve, reject) => {
@@ -44,7 +56,12 @@ export default async function Page() {
 
   return (
     <main className="relative h-screen sm:mb-0 sm:ml-0 sm:pr-16">
-      <MainMap geojsonData={geojsonData} />
+      <MainMap
+        geojsonData={geojsonData}
+        intRoutesData={intRoutes}
+        // borderPostsData={borderPosts}
+        // exportPorts={exportPorts}
+      />
     </main>
   );
 }

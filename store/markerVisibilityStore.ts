@@ -3,7 +3,10 @@ import { create } from "zustand";
 type MarkerVisibilityState = {
   isActiveSiteMarkersVisible: boolean;
   isInactiveSiteMarkersVisible: boolean;
-  showProcessingEntiteMarkers: boolean;
+  isProcessingEntiteMarkerVisible: boolean;
+  isInternationalRouteVisible: boolean;
+  isBorderPostVisible: boolean;
+  isExportPortVisible: boolean;
 };
 
 type MarkerVisibilityActions = {
@@ -16,6 +19,14 @@ type MarkerVisibilityActions = {
   closeInactiveSiteMarkers: () => void;
 
   toggleProcessingEntiteMarkers: () => void;
+
+  toggleInternationalRoute: () => void;
+  showInterationalRoute: () => void;
+  hideInternationalRoute: () => void;
+
+  toggleBorderPost: () => void;
+
+  toggleExportPort: () => void;
 };
 
 const useMarkerVisibilityStore = create<
@@ -40,10 +51,33 @@ const useMarkerVisibilityStore = create<
   closeInactiveSiteMarkers: () => set({ isInactiveSiteMarkersVisible: false }),
 
   // processing entities
-  showProcessingEntiteMarkers: false,
+  isProcessingEntiteMarkerVisible: false,
   toggleProcessingEntiteMarkers: () =>
     set((state) => ({
-      showProcessingEntiteMarkers: !state.showProcessingEntiteMarkers,
+      isProcessingEntiteMarkerVisible: !state.isProcessingEntiteMarkerVisible,
+    })),
+
+  // international routes
+  isInternationalRouteVisible: false,
+  toggleInternationalRoute: () =>
+    set((state) => ({
+      isInternationalRouteVisible: !state.isInternationalRouteVisible,
+    })),
+  showInterationalRoute: () => set({ isInternationalRouteVisible: true }),
+  hideInternationalRoute: () => set({ isInternationalRouteVisible: false }),
+
+  // border posts
+  isBorderPostVisible: false,
+  toggleBorderPost: () =>
+    set((state) => ({
+      isBorderPostVisible: !state.isBorderPostVisible,
+    })),
+
+  // export port
+  isExportPortVisible: false,
+  toggleExportPort: () =>
+    set((state) => ({
+      isExportPortVisible: !state.isExportPortVisible,
     })),
 }));
 

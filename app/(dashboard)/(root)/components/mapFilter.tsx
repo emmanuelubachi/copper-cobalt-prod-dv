@@ -4,7 +4,12 @@ import {
   ArtisanalSites,
   IndustralProjects,
 } from "./mining-activites/mining-activities-filter";
-import { ProcessingEntities } from "./additional-information/AdditionalInformation";
+import {
+  BorderPosts,
+  ExportPorts,
+  InternationalRoutes,
+  ProcessingEntities,
+} from "./additional-information/additional-info-filter";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
@@ -51,9 +56,21 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
 
       <TabsContent
         value="additional-information"
-        className="mt-0 h-full gap-8 space-y-8 overflow-y-auto px-4 pb-5 sm:mt-5 sm:px-5"
+        className="mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 sm:mt-5 sm:space-y-8 sm:px-5"
+
+        // className="mt-0 h-full gap-8 space-y-8 overflow-y-auto px-4 pb-5 sm:mt-5 sm:px-5"
       >
+        <div>
+          <h6 className="text-h6 font-bold">Additional Information</h6>
+          <p className="text-xs italic text-foreground/40">
+            Beatae quia excepturi dignissimos autem natus inventore quas amet
+            praesentium earum iste, perspiciatis dolores, ea ipsam.
+          </p>
+        </div>
         <ProcessingEntities />
+        <InternationalRoutes />
+        <BorderPosts />
+        <ExportPorts />
       </TabsContent>
     </Tabs>
   );
