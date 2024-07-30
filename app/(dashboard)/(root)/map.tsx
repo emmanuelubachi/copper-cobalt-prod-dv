@@ -45,7 +45,7 @@ export default function MainMap({
     "mapbox://styles/mapbox/outdoors-v11",
   );
   const [intRoute, setIntRoute] = useState<any>([]);
-  const [borderPost, setBorderPost] = useState<any>([]);
+  const [borderPost, setBorderPost] = useState<any>(null);
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -81,19 +81,28 @@ export default function MainMap({
     isExportPortVisible,
   } = useMarkerVisibilityStore();
 
-  useEffect(() => {
-    if (mapRef.current) {
-      mapRef.current.on("load", () => {
-        setIntRoute(intRoutesData);
-        // setBorderPost(borderPostsData);
-      });
-    }
-  });
+  const InternationalRoutesData = intRoutesData;
+
+  // useEffect(() => {
+  //   if (mapRef.current) {
+  //     mapRef.current.on("load", () => {
+  //       setIntRoute(InternationalRoutesData);
+  //       // setBorderPost(borderPostsData);
+  //     });
+  //   }
+  // });
 
   useEffect(() => {
-    console.log("border", isBorderPostVisible);
-    console.log("export", isExportPortVisible);
-  }, [isBorderPostVisible, isExportPortVisible]);
+    if (isInternationalRouteVisible) {
+      setIntRoute(InternationalRoutesData);
+    }
+  }, [isInternationalRouteVisible, InternationalRoutesData]);
+
+  useEffect(() => {
+    // console.log("border", isBorderPostVisible);
+    // console.log("export", isExportPortVisible);
+    console.log("intData", InternationalRoutesData);
+  }, [isBorderPostVisible, isExportPortVisible, InternationalRoutesData]);
 
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
