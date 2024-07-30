@@ -7,6 +7,7 @@ import useMapDetailsStore from "@/store/mapDetailsStore";
 import { RiMapPin2Fill } from "@remixicon/react";
 import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mining-activites/artisanal-content";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
@@ -52,7 +53,7 @@ export default function MapContents({ reference }: MapContentsProps) {
   const {
     isActiveSiteMarkersVisible,
     isInactiveSiteMarkersVisible,
-    showProcessingEntiteMarkers,
+    isProcessingEntiteMarkerVisible,
     showActiveSiteMarkers,
     showInactiveSiteMarkers,
   } = useMarkerVisibilityStore();
@@ -65,13 +66,6 @@ export default function MapContents({ reference }: MapContentsProps) {
   useEffect(() => {
     async function getData() {
       try {
-        // using tinybird api ----------------------------------------------
-
-        // const active_sites_data = await fetchTinybirdData(ACTIVE_SITES_API_URL);
-        // const inactive_sites_data = await fetchTinybirdData(
-        //   INACTIVE_SITES_API_URL,
-        // );
-
         // using local data ------------------------------------------------
         const active_sites_data = active_sites.data;
         const inactive_sites_data = inactive_sites.data;
@@ -113,7 +107,6 @@ export default function MapContents({ reference }: MapContentsProps) {
         const timeoutId = setTimeout(() => {
           if (mapRef.current) {
             mapRef.current.on("load", handleZoom);
-            // handleZoom();
           }
         }, 1000);
 
@@ -262,7 +255,7 @@ export default function MapContents({ reference }: MapContentsProps) {
           </Marker>
         ))}
 
-      {showProcessingEntiteMarkers &&
+      {isProcessingEntiteMarkerVisible &&
         processingEntities.map((site, index) => (
           <Marker
             key={`inactive-${index}`}

@@ -19,14 +19,22 @@ import { GeoJSONFeatureCollection } from "@/types/geojson";
 import { IndustralProjectDetailsProps } from "@/types/miningActivities";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { parseCoordinates } from "@/lib/geojsonProcessing";
+import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
+  intRoutesData: any;
+  // borderPostsData: any;
+  // exportPorts: any;
 };
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-export default function MainMap({ geojsonData }: MapProps) {
+export default function MainMap({
+  geojsonData,
+  intRoutesData,
+  // borderPostsData,
+}: MapProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -36,6 +44,8 @@ export default function MainMap({ geojsonData }: MapProps) {
   const [mapStyle, setMapStyle] = useState(
     "mapbox://styles/mapbox/outdoors-v11",
   );
+  const [intRoute, setIntRoute] = useState<any>([]);
+  const [borderPost, setBorderPost] = useState<any>([]);
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -65,13 +75,43 @@ export default function MainMap({ geojsonData }: MapProps) {
     setMapDetailsContent,
   } = useMapDetailsStore();
   const createQueryString = useUpdateSearchParams();
+  const {
+    isInternationalRouteVisible,
+    isBorderPostVisible,
+    isExportPortVisible,
+  } = useMarkerVisibilityStore();
+
+  useEffect(() => {
+    if (mapRef.current) {
+      mapRef.current.on("load", () => {
+        setIntRoute(intRoutesData);
+        // setBorderPost(borderPostsData);
+      });
+    }
+  });
+
+  useEffect(() => {
+    console.log("border", isBorderPostVisible);
+    console.log("export", isExportPortVisible);
+  }, [isBorderPostVisible, isExportPortVisible]);
 
   // useEffect(() => {
-  //   if (theme === "dark" || (theme === "system" && systemTheme === "dark")) {
-  //     setMapStyle("mapbox://styles/mapbox/dark-v10");
-  //   } else {
-  //     setMapStyle("mapbox://styles/mapbox/outdoors-v11");
-  //   }
+  //   const timeout = setTimeout(() => {
+  //     if (mapRef.current) {
+  //       mapRef.current.on("load", () => {
+  //         if (
+  //           theme === "dark" ||
+  //           (theme === "system" && systemTheme === "dark")
+  //         ) {
+  //           setMapStyle("mapbox://styles/mapbox/dark-v10");
+  //         } else {
+  //           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
+  //         }
+  //       });
+  //     }
+  //   }, 1000); // 1 second delay
+
+  //   return () => clearTimeout(timeout);
   // }, [theme, systemTheme]);
 
   // Trigger zoom-in animation on map load
@@ -94,13 +134,7 @@ export default function MainMap({ geojsonData }: MapProps) {
 
     const timeoutId = setTimeout(() => {
       if (mapRef.current) {
-        // console.log("Attaching load event listener to the map.");
         mapRef.current.on("load", handleZoomIn);
-        // handleZoomIn();
-      } else {
-        // console.log(
-        //   "mapRef.current is null. Unable to attach load event listener.",
-        // );
       }
     }, 500); // 1 second delay
 
@@ -301,6 +335,65 @@ export default function MainMap({ geojsonData }: MapProps) {
           />
         </Source>
       )}
+
+      {isInternationalRouteVisible && (
+        <Source id="intRoute" type="geojson" data={intRoute}>
+          <Layer
+            id="intRoute"
+            type="line"
+            paint={{
+              "line-color": [
+                "match",
+                ["get", "infrastructure_type"],
+                "Route",
+                "#1761A8",
+                "#F05624",
+              ],
+              "line-width": ["interpolate", ["linear"], ["zoom"], 0, 2, 22, 9],
+            }}
+            // interactive={true}
+          />
+        </Source>
+      )}
+
+      {borderPost && (
+        <Source id="borderPost" type="geojson" data={borderPost}>
+          <Layer
+            id="borderPost"
+            type="symbol"
+            source="posts"
+            layout={{
+              visibility: "none",
+              "icon-image": "posts", // reference the image
+              "icon-size": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                3,
+                0.15,
+                21,
+                0.45,
+              ],
+              "icon-allow-overlap": true,
+              "icon-ignore-placement": true,
+              "text-allow-overlap": true,
+            }}
+            paint={{
+              "icon-opacity": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                2,
+                0.5,
+                5,
+                1,
+              ],
+            }}
+            interactive={true}
+          />
+        </Source>
+      )}
+
       {hoveredFeature && (
         <div
           style={{
