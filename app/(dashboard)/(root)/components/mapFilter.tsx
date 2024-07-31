@@ -10,6 +10,7 @@ import {
   InternationalRoutes,
   ProcessingEntities,
 } from "./additional-information/additional-info-filter";
+import { Separator } from "@/components/ui/separator";
 
 type MapFilterProps = {
   defaultValue: "mining-activities" | "additional-information";
@@ -41,7 +42,7 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
 
       <TabsContent
         value="mining-activities"
-        className="scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 sm:mt-5 sm:space-y-8 sm:px-5"
+        className="mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted sm:mt-5 sm:space-y-8 sm:px-5"
       >
         <div>
           <h6 className="text-h6 font-bold">Mining Activities</h6>
@@ -69,9 +70,17 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
         </div>
         <div className="grid gap-2">
           <ProcessingEntities />
-          <InternationalRoutes />
-          <BorderPosts />
-          <ExportPorts />
+
+          <Separator className="my-4" />
+
+          <div className="grid gap-2">
+            <h6 className="text-p font-semibold">Geographical Information</h6>
+            <BorderPosts />
+            <InternationalRoutes />
+            <ExportPorts />
+          </div>
+          <Separator className="my-4" />
+          <Separator className="my-4" />
         </div>
       </TabsContent>
     </Tabs>
