@@ -218,6 +218,7 @@ const config = {
     require("tailwindcss-animate"),
     require("@headlessui/tailwindcss"),
     require("@tailwindcss/forms"),
+    require("tailwind-scrollbar"),
   ],
 } satisfies Config;
 
