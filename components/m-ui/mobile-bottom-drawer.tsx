@@ -57,7 +57,7 @@ export default function MobileBottomDrawer() {
     <AnimatePresence>
       {isMapDetailsOpen && (
         <motion.div
-          className="fixed bottom-0 left-0 right-0 z-50"
+          className="fixed bottom-0 left-0 right-0 z-[32]"
           style={{ height }}
           drag="y"
           dragConstraints={{ top: -window.innerHeight * 0.4, bottom: 0 }}
