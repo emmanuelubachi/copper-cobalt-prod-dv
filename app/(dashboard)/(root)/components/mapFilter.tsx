@@ -19,7 +19,7 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
   return (
     <Tabs
       defaultValue={defaultValue}
-      className="sm:80 w-72 overflow-hidden pb-16 xl:w-96"
+      className="w-72 overflow-hidden pb-16 sm:w-80"
     >
       <div className="px-2 py-3 sm:px-3 sm:py-1">
         <TabsList className="grid w-full grid-cols-2">
@@ -41,7 +41,7 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
 
       <TabsContent
         value="mining-activities"
-        className="mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 sm:mt-5 sm:space-y-8 sm:px-5"
+        className="scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent mt-0 h-full gap-8 space-y-6 overflow-y-auto px-4 pb-5 sm:mt-5 sm:space-y-8 sm:px-5"
       >
         <div>
           <h6 className="text-h6 font-bold">Mining Activities</h6>
@@ -67,10 +67,12 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
             praesentium earum iste, perspiciatis dolores, ea ipsam.
           </p>
         </div>
-        <ProcessingEntities />
-        <InternationalRoutes />
-        <BorderPosts />
-        <ExportPorts />
+        <div className="grid gap-2">
+          <ProcessingEntities />
+          <InternationalRoutes />
+          <BorderPosts />
+          <ExportPorts />
+        </div>
       </TabsContent>
     </Tabs>
   );

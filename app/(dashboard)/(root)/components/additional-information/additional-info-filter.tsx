@@ -8,25 +8,28 @@ export function ProcessingEntities() {
   const { isProcessingEntiteMarkerVisible, toggleProcessingEntiteMarkers } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-green-500 bg-muted px-4 py-3 transition-colors duration-300">
       <div>
-        <h6 className="text-p font-semibold">Processing Entities</h6>
-        <p className="text-xs italic text-foreground/40">
-          Autem natus inventore quas amet praesentium earum iste, perspiciatis
-          dolores, ea ipsam.
-        </p>
+        <h6 className="text-xs font-medium">Processing Entities</h6>
       </div>
       <div className="flex gap-2">
-        <Button
-          onClick={toggleProcessingEntiteMarkers}
-          className={`__button_pressed w-full rounded-full px-4 py-2 ${
+        <Toggle
+          pressed={isProcessingEntiteMarkerVisible}
+          onPressedChange={toggleProcessingEntiteMarkers}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isProcessingEntiteMarkerVisible
-              ? "bg-green-500/80 hover:bg-green-500/90 dark:bg-green-600 dark:hover:bg-green-600/90"
-              : "bg-accent text-green-500 ring-2 ring-green-500 hover:bg-accent hover:ring-green-500/90"
+              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
-          Processing Entities
-        </Button>
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isProcessingEntiteMarkerVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
+        </Toggle>
       </div>
     </div>
   );
@@ -36,17 +39,27 @@ export function InternationalRoutes() {
   const { isInternationalRouteVisible, toggleInternationalRoute } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-blue-500 bg-muted px-4 py-3 transition-colors duration-300">
       <div>
-        <h6 className="text-p font-semibold">International Routes</h6>
+        <h6 className="text-xs font-medium">International Routes</h6>
       </div>
       <div className="flex gap-2">
         <Toggle
-          variant={"outline"}
-          onClick={toggleInternationalRoute}
-          className={`__button_pressed h-14 text-wrap rounded-lg px-4 py-2 data-[state=on]:bg-primary/20`}
+          pressed={isInternationalRouteVisible}
+          onPressedChange={toggleInternationalRoute}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
+            isInternationalRouteVisible
+              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
+          }`}
         >
-          International Routes
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isInternationalRouteVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
         </Toggle>
       </div>
     </div>
@@ -56,21 +69,28 @@ export function InternationalRoutes() {
 export function BorderPosts() {
   const { isBorderPostVisible, toggleBorderPost } = useMarkerVisibilityStore();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-orange-500 bg-muted px-4 py-3 transition-colors duration-300">
       <div>
-        <h6 className="text-p font-semibold">Boreder Posts</h6>
+        <h6 className="text-xs font-medium">Boreder Posts</h6>
       </div>
       <div className="flex gap-2">
-        <Button
-          onClick={toggleBorderPost}
-          className={`__button_pressed w-full rounded-full px-4 py-2 ${
+        <Toggle
+          pressed={isBorderPostVisible}
+          onPressedChange={toggleBorderPost}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isBorderPostVisible
-              ? "bg-orange-500/80 hover:bg-orange-500/90 dark:bg-orange-600 dark:hover:bg-orange-600/90"
-              : "bg-accent text-orange-500 ring-2 ring-orange-500 hover:bg-accent hover:ring-orange-500/90"
+              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
-          Border Posts
-        </Button>
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isBorderPostVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
+        </Toggle>
       </div>
     </div>
   );
@@ -79,20 +99,27 @@ export function BorderPosts() {
 export function ExportPorts() {
   const { isExportPortVisible, toggleExportPort } = useMarkerVisibilityStore();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-yellow-500 bg-muted px-4 py-3 transition-colors duration-300">
       <div>
-        <h6 className="text-p font-semibold">Export Ports</h6>
+        <h6 className="text-xs font-medium">Export Ports</h6>
       </div>
       <div className="flex gap-2">
         <Toggle
-          onClick={toggleExportPort}
-          className={`__button_pressed w-full rounded-full px-4 py-2 ${
+          pressed={isExportPortVisible}
+          onPressedChange={toggleExportPort}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isExportPortVisible
-              ? "bg-red-500/80 hover:bg-red-500/90 dark:bg-red-600 dark:hover:bg-orange-600/90"
-              : "bg-accent text-red-500 ring-2 ring-red-500 hover:bg-accent hover:ring-orange-500/90"
+              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
-          Export Ports
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isExportPortVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
         </Toggle>
       </div>
     </div>

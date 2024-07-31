@@ -66,7 +66,7 @@ export function ArtisanalSites() {
                   createQueryString("active_site", new_active_site.toString()),
               );
           }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-accent px-2 py-1 text-sm text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:text-cyan-600 hover:ring-cyan-600 data-[state=on]:bg-cyan-500 data-[state=on]:text-background data-[state=on]:hover:bg-cyan-600"
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-sm text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:ring-cyan-600 data-[state=on]:bg-cyan-500 data-[state=on]:text-background data-[state=on]:hover:bg-cyan-600 data-[state=off]:hover:text-cyan-600 data-[state=on]:hover:text-background dark:text-cyan-400 data-[state=on]:dark:text-background"
         >
           Active Sites
         </Toggle>
@@ -86,7 +86,7 @@ export function ArtisanalSites() {
                   ),
               );
           }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-accent px-2 py-1 text-sm text-neutral-500 ring-2 ring-neutral-400 hover:bg-accent hover:text-neutral-500 hover:ring-neutral-500 data-[state=on]:bg-neutral-400 data-[state=on]:text-background data-[state=on]:hover:bg-neutral-500 dark:text-neutral-400 data-[state=on]:dark:text-background"
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-sm text-yellow-500 ring-2 ring-yellow-400 hover:bg-accent hover:ring-yellow-500 data-[state=on]:bg-yellow-400 data-[state=on]:text-background data-[state=on]:hover:bg-yellow-500 data-[state=off]:hover:text-yellow-500 data-[state=on]:hover:text-background dark:text-yellow-400 data-[state=on]:dark:text-background"
         >
           Inactive Sites
         </Toggle>
