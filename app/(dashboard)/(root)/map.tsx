@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Map, {
   MapRef,
   Source,
+  Marker,
   Layer,
   AttributionControl,
   NavigationControl,
@@ -16,16 +17,19 @@ import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
 import { IndustrialProjectsContent } from "./components/mining-activites/industral-content";
 import { GeoJSONFeatureCollection } from "@/types/geojson";
-import { IndustralProjectDetailsProps } from "@/types/miningActivities";
+import { GeoJSONExportPort, IndustralProjectDetailsProps } from "@/types/map";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { parseCoordinates } from "@/lib/geojsonProcessing";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
+import { feature } from "@turf/turf";
+import { RiMapPin2Fill } from "@remixicon/react";
+import { BorderPost } from "@/types/map";
 
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
   intRoutesData: any;
-  // borderPostsData: any;
-  // exportPorts: any;
+  borderPostsData: BorderPost;
+  exportPortsData: any;
 };
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -33,7 +37,8 @@ const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 export default function MainMap({
   geojsonData,
   intRoutesData,
-  // borderPostsData,
+  borderPostsData,
+  exportPortsData,
 }: MapProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -44,8 +49,11 @@ export default function MainMap({
   const [mapStyle, setMapStyle] = useState(
     "mapbox://styles/mapbox/outdoors-v11",
   );
+
+  const [borderPosts, setBorderPosts] = useState<BorderPost>();
   const [intRoute, setIntRoute] = useState<any>([]);
-  const [borderPost, setBorderPost] = useState<any>(null);
+  const [exportPorts, setExportPorts] = useState<GeoJSONExportPort>();
+
   const [viewState, setViewState] = useState(
     isMobile
       ? {
@@ -81,28 +89,32 @@ export default function MainMap({
     isExportPortVisible,
   } = useMarkerVisibilityStore();
 
+  const BorderPostData = borderPostsData;
   const InternationalRoutesData = intRoutesData;
+  const ExportPortData = exportPortsData;
+
+  useEffect(() => {
+    setBorderPosts(BorderPostData);
+    setIntRoute(InternationalRoutesData);
+    setExportPorts(ExportPortData);
+  }, [BorderPostData, InternationalRoutesData, ExportPortData]);
 
   // useEffect(() => {
-  //   if (mapRef.current) {
-  //     mapRef.current.on("load", () => {
-  //       setIntRoute(InternationalRoutesData);
-  //       // setBorderPost(borderPostsData);
-  //     });
+  //   if (isInternationalRouteVisible) {
+  //     setIntRoute(InternationalRoutesData);
   //   }
-  // });
+  // }, [isInternationalRouteVisible, InternationalRoutesData]);
 
-  useEffect(() => {
-    if (isInternationalRouteVisible) {
-      setIntRoute(InternationalRoutesData);
-    }
-  }, [isInternationalRouteVisible, InternationalRoutesData]);
+  // useEffect(() => {
+  //   if (isBorderPostVisible) {
+  //     setBorderPosts(BorderPostData);
+  //   }
+  // }, [isBorderPostVisible, BorderPostData]);
 
-  useEffect(() => {
-    // console.log("border", isBorderPostVisible);
-    // console.log("export", isExportPortVisible);
-    console.log("intData", InternationalRoutesData);
-  }, [isBorderPostVisible, isExportPortVisible, InternationalRoutesData]);
+  // useEffect(() => {
+  //   console.log("border", BorderPostData);
+  //   // console.log("export", isExportPortVisible);
+  // }, [BorderPostData, isExportPortVisible, isBorderPostVisible]);
 
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
@@ -124,6 +136,7 @@ export default function MainMap({
   // }, [theme, systemTheme]);
 
   // Trigger zoom-in animation on map load
+
   useEffect(() => {
     const handleZoomIn = () => {
       if (mapRef.current) {
@@ -244,6 +257,7 @@ export default function MainMap({
     { country: "suisse", color: "#FB9635" },
     { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
   ];
+
   const countriesWithColors = [
     { country: "Australia", color: "#546475" },
     { country: "Canada", color: "#13B8B1" },
@@ -345,6 +359,18 @@ export default function MainMap({
         </Source>
       )}
 
+      {isBorderPostVisible &&
+        borderPosts &&
+        borderPosts.features.map((feature: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={feature.geometry.coordinates[0]}
+            latitude={feature.geometry.coordinates[1]}
+            color="#F97316"
+            style={{ cursor: "pointer" }}
+          ></Marker>
+        ))}
+
       {isInternationalRouteVisible && (
         <Source id="intRoute" type="geojson" data={intRoute}>
           <Layer
@@ -360,48 +386,21 @@ export default function MainMap({
               ],
               "line-width": ["interpolate", ["linear"], ["zoom"], 0, 2, 22, 9],
             }}
-            // interactive={true}
           />
         </Source>
       )}
 
-      {borderPost && (
-        <Source id="borderPost" type="geojson" data={borderPost}>
-          <Layer
-            id="borderPost"
-            type="symbol"
-            source="posts"
-            layout={{
-              visibility: "none",
-              "icon-image": "posts", // reference the image
-              "icon-size": [
-                "interpolate",
-                ["linear"],
-                ["zoom"],
-                3,
-                0.15,
-                21,
-                0.45,
-              ],
-              "icon-allow-overlap": true,
-              "icon-ignore-placement": true,
-              "text-allow-overlap": true,
-            }}
-            paint={{
-              "icon-opacity": [
-                "interpolate",
-                ["linear"],
-                ["zoom"],
-                2,
-                0.5,
-                5,
-                1,
-              ],
-            }}
-            interactive={true}
-          />
-        </Source>
-      )}
+      {isExportPortVisible &&
+        exportPorts &&
+        exportPorts.features.map((feature: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={feature.geometry.coordinates[0]}
+            latitude={feature.geometry.coordinates[1]}
+            color="#5E8199"
+            style={{ cursor: "pointer" }}
+          ></Marker>
+        ))}
 
       {hoveredFeature && (
         <div
@@ -421,7 +420,9 @@ export default function MainMap({
           <div>{hoveredFeature.feature.properties.Project_name}</div>
         </div>
       )}
+
       <MapContents reference={mapRef} />
+
       <div className="absolute bottom-20 right-4 rounded-lg bg-background/40 p-2 sm:bottom-4">
         <div className="flex-wrap">
           {countriesWithColors.map(({ country, color }) => (

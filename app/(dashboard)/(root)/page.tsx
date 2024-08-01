@@ -59,8 +59,8 @@ export default async function Page() {
       <MainMap
         geojsonData={geojsonData}
         intRoutesData={intRoutes}
-        // borderPostsData={borderPosts}
-        // exportPorts={exportPorts}
+        borderPostsData={borderPosts}
+        exportPortsData={exportPorts}
       />
     </main>
   );
