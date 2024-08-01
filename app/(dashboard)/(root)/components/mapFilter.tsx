@@ -6,9 +6,11 @@ import {
 } from "./mining-activites/mining-activities-filter";
 import {
   BorderPosts,
+  EnvironmantalImpact,
   ExportPorts,
   InternationalRoutes,
   ProcessingEntities,
+  SocioEconomic,
 } from "./additional-information/additional-info-filter";
 import { Separator } from "@/components/ui/separator";
 
@@ -68,10 +70,10 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
             praesentium earum iste, perspiciatis dolores, ea ipsam.
           </p>
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-4">
           <ProcessingEntities />
 
-          <Separator className="my-4" />
+          <Separator className="" />
 
           <div className="grid gap-2">
             <h6 className="text-p font-semibold">Geographical Information</h6>
@@ -79,8 +81,10 @@ export default function MapFilter({ defaultValue }: MapFilterProps) {
             <InternationalRoutes />
             <ExportPorts />
           </div>
-          <Separator className="my-4" />
-          <Separator className="my-4" />
+          <Separator className="" />
+          <SocioEconomic />
+          <Separator className="" />
+          <EnvironmantalImpact />
         </div>
       </TabsContent>
     </Tabs>

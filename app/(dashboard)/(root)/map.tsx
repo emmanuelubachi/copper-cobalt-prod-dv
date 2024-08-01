@@ -25,6 +25,9 @@ import { feature } from "@turf/turf";
 import { RiMapPin2Fill } from "@remixicon/react";
 import { BorderPost } from "@/types/map";
 
+import socioEconomicData from "@/data/map/additional_info/socio_economic_impact.json";
+import environmantalImpactData from "@/data/map/additional_info/environmental_impact.json";
+
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
   intRoutesData: any;
@@ -53,6 +56,8 @@ export default function MainMap({
   const [borderPosts, setBorderPosts] = useState<BorderPost>();
   const [intRoute, setIntRoute] = useState<any>([]);
   const [exportPorts, setExportPorts] = useState<GeoJSONExportPort>();
+  const [socioEconomics, setSocioEconomicData] = useState<any>();
+  const [environmentalImpacts, setEnvironmantalImpactData] = useState<any>();
 
   const [viewState, setViewState] = useState(
     isMobile
@@ -87,17 +92,29 @@ export default function MainMap({
     isInternationalRouteVisible,
     isBorderPostVisible,
     isExportPortVisible,
+    isSocioEconomicVisible,
+    isEnvironmentalImpactVisible,
   } = useMarkerVisibilityStore();
 
   const BorderPostData = borderPostsData;
   const InternationalRoutesData = intRoutesData;
   const ExportPortData = exportPortsData;
+  const SociaImapctData = socioEconomicData;
+  const EnvironmentalImpactData = environmantalImpactData;
 
   useEffect(() => {
     setBorderPosts(BorderPostData);
     setIntRoute(InternationalRoutesData);
     setExportPorts(ExportPortData);
-  }, [BorderPostData, InternationalRoutesData, ExportPortData]);
+    setSocioEconomicData(SociaImapctData);
+    setEnvironmantalImpactData(EnvironmentalImpactData);
+  }, [
+    BorderPostData,
+    InternationalRoutesData,
+    ExportPortData,
+    SociaImapctData,
+    EnvironmentalImpactData,
+  ]);
 
   // useEffect(() => {
   //   if (isInternationalRouteVisible) {
@@ -392,7 +409,7 @@ export default function MainMap({
 
       {isExportPortVisible &&
         exportPorts &&
-        exportPorts.features.map((feature: any, index: number) => (
+        exportPorts.features.map((feature, index: number) => (
           <Marker
             key={index}
             longitude={feature.geometry.coordinates[0]}
@@ -401,6 +418,28 @@ export default function MainMap({
             style={{ cursor: "pointer" }}
           ></Marker>
         ))}
+
+      {isSocioEconomicVisible &&
+        socioEconomics.map((socioEconomicData: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={socioEconomicData.longitude}
+            latitude={socioEconomicData.latitude}
+            color="#84cc16"
+          ></Marker>
+        ))}
+
+      {isEnvironmentalImpactVisible &&
+        environmentalImpacts.map(
+          (environmentalImpactData: any, index: number) => (
+            <Marker
+              key={index}
+              longitude={environmentalImpactData.longitude}
+              latitude={environmentalImpactData.latitude}
+              color="red"
+            ></Marker>
+          ),
+        )}
 
       {hoveredFeature && (
         <div
@@ -417,7 +456,17 @@ export default function MainMap({
             color: "black",
           }}
         >
-          <div>{hoveredFeature.feature.properties.Project_name}</div>
+          <div className="space-y-1">
+            <p className="xs font-bold">
+              {hoveredFeature.feature.properties.Project_name}
+            </p>
+            <p className="xs font-medium text-black/60">
+              Nationality:{" "}
+              <span className="text-black">
+                {hoveredFeature.feature.properties.Nationality}
+              </span>
+            </p>
+          </div>
         </div>
       )}
 

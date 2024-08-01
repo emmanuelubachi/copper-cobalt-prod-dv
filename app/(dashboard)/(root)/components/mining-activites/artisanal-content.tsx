@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Map from "react-map-gl";
 import { active_sites, inactive_sites } from "@/data/mapData";
 import { ArticanalsiteDetailsLabels } from "@/constants/application";
-import { ArtisanalSiteDetailsProps } from "@/types/miningActivities";
+import { ArtisanalSiteDetailsProps } from "@/types/map";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -58,7 +58,7 @@ const ArtisanalSiteDetails = ({
       <h2 className="text-xl font-bold">{site.site_name}</h2>
       <div className="mb-4 flex shrink grow flex-col space-y-4 rounded-lg border p-2 shadow-lg">
         {ArticanalsiteDetailsLabels.map(({ key, label }) => (
-          <p key={key}>
+          <p key={key as string}>
             <span className="font-semibold">{label}:</span> {site[key] ?? "N/A"}
           </p>
         ))}
