@@ -50,9 +50,9 @@ export function ArtisanalSites() {
   }, [inactive_site_sParams, showInactiveSiteButton, showInactiveSiteMarkers]);
 
   return (
-    <div className="flex w-full flex-col gap-4">
+    <div className="flex w-full flex-col gap-2">
       <h6 className="text-p font-semibold">Artisanal Mining Sites</h6>
-      <div className="flex gap-3 px-1">
+      {/* <div className="flex gap-3 px-0">
         <Toggle
           size="sm"
           pressed={isActiveSitesButtonVisible}
@@ -66,10 +66,11 @@ export function ArtisanalSites() {
                   createQueryString("active_site", new_active_site.toString()),
               );
           }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-sm text-cyan-500 ring-2 ring-cyan-500 hover:bg-accent hover:ring-cyan-600 data-[state=on]:bg-cyan-500 data-[state=on]:text-background data-[state=on]:hover:bg-cyan-600 data-[state=off]:hover:text-cyan-600 data-[state=on]:hover:text-background dark:text-cyan-400 data-[state=on]:dark:text-background"
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-xs text-cyan-500 ring-1 ring-cyan-500 data-[state=on]:bg-cyan-500 data-[state=on]:text-background hover:bg-cyan-500/10 hover:ring-cyan-600 data-[state=on]:hover:bg-cyan-600 data-[state=off]:hover:text-cyan-600 data-[state=on]:hover:text-background dark:text-cyan-400 data-[state=on]:dark:text-background"
         >
           Active Sites
         </Toggle>
+
         <Toggle
           size="sm"
           pressed={isInactiveSitesButtonVisible}
@@ -86,10 +87,84 @@ export function ArtisanalSites() {
                   ),
               );
           }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-sm text-yellow-500 ring-2 ring-yellow-400 hover:bg-accent hover:ring-yellow-500 data-[state=on]:bg-yellow-400 data-[state=on]:text-background data-[state=on]:hover:bg-yellow-500 data-[state=off]:hover:text-yellow-500 data-[state=on]:hover:text-background dark:text-yellow-400 data-[state=on]:dark:text-background"
+          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-xs text-neutral-400 ring-1 ring-neutral-300 data-[state=on]:bg-neutral-300 data-[state=on]:text-background hover:bg-accent hover:ring-neutral-400 data-[state=on]:hover:bg-neutral-400 data-[state=off]:hover:text-neutral-500 data-[state=on]:hover:text-background dark:text-neutral-400 data-[state=on]:dark:text-background data-[state=off]:dark:ring-neutral-400"
         >
           Inactive Sites
         </Toggle>
+      </div> */}
+
+      <div className="__toggle_container border-cyan-500">
+        <div>
+          <h6 className="text-xs font-medium">Active Sites</h6>
+        </div>
+        <div className="flex gap-2">
+          <Toggle
+            pressed={isActiveSitesButtonVisible}
+            onPressedChange={() => {
+              const new_active_site = !isActiveSitesButtonVisible;
+              toggleActiveSiteButton();
+              toggleActiveSiteMarkers(),
+                router.push(
+                  pathname +
+                    "?" +
+                    createQueryString(
+                      "active_site",
+                      new_active_site.toString(),
+                    ),
+                );
+            }}
+            className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
+              isActiveSitesButtonVisible
+                ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
+                : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
+            }`}
+          >
+            <span
+              className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+                isActiveSitesButtonVisible
+                  ? "translate-x-2 dark:bg-black"
+                  : "-translate-x-2"
+              }`}
+            />
+          </Toggle>
+        </div>
+      </div>
+
+      <div className="__toggle_container border-neutral-500">
+        <div>
+          <h6 className="text-xs font-medium">Inactive Sites</h6>
+        </div>
+        <div className="flex gap-2">
+          <Toggle
+            pressed={isInactiveSitesButtonVisible}
+            onPressedChange={() => {
+              const new_inactive_site = !isInactiveSitesButtonVisible;
+              toggleInactiveSiteButton();
+              toggleInactiveSiteMarkers(),
+                router.push(
+                  pathname +
+                    "?" +
+                    createQueryString(
+                      "inactive_site",
+                      new_inactive_site.toString(),
+                    ),
+                );
+            }}
+            className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
+              isInactiveSitesButtonVisible
+                ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
+                : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
+            }`}
+          >
+            <span
+              className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+                isInactiveSitesButtonVisible
+                  ? "translate-x-2 dark:bg-black"
+                  : "-translate-x-2"
+              }`}
+            />
+          </Toggle>
+        </div>
       </div>
     </div>
   );
@@ -97,7 +172,7 @@ export function ArtisanalSites() {
 
 export function IndustralProjects() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2">
       <h6 className="text-p font-semibold">Industral Projects</h6>
       <CheckBoxTreeWithFilter nodes={nodes} expandedNodes={expanded} />
     </div>

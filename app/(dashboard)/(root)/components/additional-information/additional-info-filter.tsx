@@ -8,7 +8,7 @@ export function ProcessingEntities() {
   const { isProcessingEntiteMarkerVisible, toggleProcessingEntiteMarkers } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-teal-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-teal-500">
       <div>
         <h6 className="text-xs font-medium">Processing Entities</h6>
       </div>
@@ -39,7 +39,7 @@ export function InternationalRoutes() {
   const { isInternationalRouteVisible, toggleInternationalRoute } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-blue-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-blue-500">
       <div>
         <h6 className="text-xs font-medium">International Routes</h6>
       </div>
@@ -69,7 +69,7 @@ export function InternationalRoutes() {
 export function BorderPosts() {
   const { isBorderPostVisible, toggleBorderPost } = useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-orange-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-orange-500">
       <div>
         <h6 className="text-xs font-medium">Boreder Posts</h6>
       </div>
@@ -99,7 +99,7 @@ export function BorderPosts() {
 export function ExportPorts() {
   const { isExportPortVisible, toggleExportPort } = useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-slate-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-slate-500">
       <div>
         <h6 className="text-xs font-medium">Export Ports</h6>
       </div>
@@ -130,7 +130,7 @@ export function SocioEconomic() {
   const { isSocioEconomicVisible, toggleSocioEconomic } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-lime-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-lime-500">
       <div>
         <h6 className="text-xs font-medium">Socio Economic Projects</h6>
       </div>
@@ -161,7 +161,7 @@ export function EnvironmantalImpact() {
   const { isEnvironmentalImpactVisible, toggleEnvironmentalImpact } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-red-500 bg-muted/80 px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-red-500">
       <div>
         <h6 className="text-xs font-medium">Environmantal Impact</h6>
       </div>

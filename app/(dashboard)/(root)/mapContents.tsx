@@ -249,7 +249,7 @@ export default function MapContents({ reference }: MapContentsProps) {
               className={`${
                 selectedSite === site.site_name
                   ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                  : "h-8 w-8 fill-neutral-500 stroke-neutral-600 dark:fill-neutral-400 dark:stroke-neutral-500"
+                  : "h-8 w-8 fill-neutral-300 stroke-neutral-400 dark:fill-neutral-400 dark:stroke-neutral-500"
               }`}
             />
           </Marker>

@@ -77,10 +77,10 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
 
   const icons = {
     check: (
-      <Check className="h-4 w-4 rounded-[2px] bg-red-500 text-background" />
+      <Check className="h-4 w-4 rounded-[2px] bg-primary text-background" />
     ),
     uncheck: <Square className="h-4 w-4 text-muted-foreground" />,
-    halfCheck: <CheckSquare className="h-4 w-4 text-red-300" />,
+    halfCheck: <CheckSquare className="h-4 w-4 text-primary/35" />,
     expandClose: <ChevronRight className="h-4 w-4" />,
     expandOpen: <ChevronDown className="h-4 w-4" />,
     parentClose: null,
@@ -90,49 +90,51 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   };
 
   return (
-    <div className="mb-2 flex w-full flex-col gap-2">
+    <div className="mb-2 flex w-full flex-col gap-4">
       <div className="group relative flex-1 md:grow-0">
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
           type="search"
           placeholder="Search..."
-          className="custom-search w-full rounded-2xl bg-muted pl-8 focus:border-0"
+          className="custom-search w-full rounded-xl bg-muted pl-8 focus:border-0"
           value={filterText}
           onChange={onFilterChange}
         />
       </div>
-      <div className="w-full">
-        <div className="flex items-center justify-end gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-fit gap-1"
-            onClick={() => setCheckedLayers(CheckAllIndustralProjects)}
-          >
-            <CheckCheck className="h-4 w-4 text-primary" />
-            Select All
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-fit gap-1"
-            onClick={() => setCheckedLayers([])}
-          >
-            <FilterX className="h-4 w-4 text-primary" />
-            Clear All
-          </Button>
+      <div className="space-y-2">
+        <div className="w-full">
+          <div className="flex items-center justify-end gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-fit gap-1"
+              onClick={() => setCheckedLayers(CheckAllIndustralProjects)}
+            >
+              Select All
+              <CheckCheck className="h-4 w-4 text-primary/80" />
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-fit gap-1"
+              onClick={() => setCheckedLayers([])}
+            >
+              Clear All
+              <FilterX className="h-4 w-4 text-primary/80" />
+            </Button>
+          </div>
         </div>
-      </div>
-      <div className="overflow-y-auto">
-        <CheckboxTree
-          checked={checkedLayers}
-          expanded={expanded}
-          nodes={filteredNodes}
-          onCheck={onCheck}
-          onExpand={onExpand}
-          icons={icons}
-          showNodeIcon={false}
-        />
+        <div>
+          <CheckboxTree
+            checked={checkedLayers}
+            expanded={expanded}
+            nodes={filteredNodes}
+            onCheck={onCheck}
+            onExpand={onExpand}
+            icons={icons}
+            showNodeIcon={false}
+          />
+        </div>
       </div>
     </div>
   );
