@@ -3,7 +3,7 @@ import { NavItem } from "@/types";
 import {
   IndustralProjectDetailsProps,
   ArtisanalSiteDetailsProps,
-} from "@/types/miningActivities";
+} from "@/types/map";
 
 export const NAVLIST: NavItem[] = [
   {
