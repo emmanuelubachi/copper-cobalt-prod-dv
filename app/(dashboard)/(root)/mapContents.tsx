@@ -7,6 +7,7 @@ import useMapDetailsStore from "@/store/mapDetailsStore";
 import { RiMapPin2Fill } from "@remixicon/react";
 import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+import Supercluster, { AnyProps, PointFeature } from "supercluster";
 
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mining-activites/artisanal-content";
@@ -42,6 +43,9 @@ export default function MapContents({ reference }: MapContentsProps) {
   const [processingEntities, setProcessingEntities] = useState<
     ProcessingEntities[]
   >([]);
+  const [clusters, setClusters] = useState<any[]>([]);
+  const [supercluster, setSupercluster] = useState<Supercluster | null>(null);
+  const [zoom, setZoom] = useState(10);
 
   const {
     openMapDetails,
@@ -80,6 +84,48 @@ export default function MapContents({ reference }: MapContentsProps) {
     }
     getData();
   }, []);
+
+  useEffect(() => {
+    if (mapRef.current) {
+      mapRef.current.on("move", () => {
+        setZoom(mapRef.current?.getZoom() || 3);
+      });
+    }
+  }, [mapRef]);
+
+  useEffect(() => {
+    const points: PointFeature<AnyProps>[] = processingEntities.map((site) => ({
+      type: "Feature",
+      properties: {
+        cluster: false,
+        ...site,
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [parseFloat(site.longitude), parseFloat(site.latitude)],
+      },
+    }));
+
+    // Create supercluster instance
+    const index = new Supercluster({
+      radius: 40,
+      maxZoom: 16,
+    });
+
+    index.load(points);
+    setSupercluster(index);
+
+    if (mapRef.current) {
+      const bounds = mapRef.current.getBounds().toArray().flat() as [
+        number,
+        number,
+        number,
+        number,
+      ];
+      const clusters = index.getClusters(bounds, Math.floor(zoom));
+      setClusters(clusters);
+    }
+  }, [processingEntities, zoom, mapRef]);
 
   // Set selected site on page load by searchParam
   useEffect(() => {
@@ -191,10 +237,13 @@ export default function MapContents({ reference }: MapContentsProps) {
       setSelectedSite(null);
 
       if (mapRef.current) {
+        const mapzoom = mapRef.current.getZoom();
+        const newzoom = mapzoom > 10 ? mapzoom + 0.5 : 10;
+
         mapRef.current.flyTo({
           center: [longitude, latitude],
           duration: 1500,
-          zoom: 10,
+          zoom: newzoom,
         });
       }
     },
@@ -256,32 +305,80 @@ export default function MapContents({ reference }: MapContentsProps) {
         ))}
 
       {isProcessingEntiteMarkerVisible &&
-        processingEntities.map((site, index) => (
-          <Marker
-            key={`inactive-${index}`}
-            longitude={parseFloat(site.longitude)}
-            latitude={parseFloat(site.latitude)}
-            anchor="bottom"
-            color={"rgb(22 163 74)"}
-            style={{ cursor: "pointer" }}
-            onClick={(e) => {
-              e.originalEvent.stopPropagation();
-              handleProcessingEntityClick(
-                site,
-                parseFloat(site.latitude),
-                parseFloat(site.longitude),
-              );
-            }}
-          >
-            <RiMapPin2Fill
-              className={`${
-                selectedSite === site.project_name
-                  ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                  : "h-8 w-8 fill-teal-700 stroke-teal-50 dark:fill-teal-500 dark:stroke-teal-700"
-              }`}
-            />
-          </Marker>
-        ))}
+        clusters.map((cluster, index) => {
+          const [longitude, latitude] = cluster.geometry.coordinates;
+          const { cluster: isCluster, point_count: pointCount } =
+            cluster.properties;
+
+          if (isCluster) {
+            return (
+              <Marker
+                key={`cluster-${index}`}
+                longitude={longitude}
+                latitude={latitude}
+                anchor="bottom"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  const expansionZoom = Math.min(
+                    supercluster?.getClusterExpansionZoom(cluster.id) || 16,
+                    20,
+                  );
+
+                  if (mapRef.current) {
+                    mapRef.current.flyTo({
+                      center: [longitude, latitude],
+                      duration: 1000,
+                      zoom: expansionZoom,
+                    });
+                  }
+                }}
+              >
+                <div className="rounded-full bg-teal-500/50 p-2">
+                  <div
+                    className="bg-teal-500 p-3 text-sm font-bold text-white dark:text-black"
+                    style={{
+                      width: `${10 + (pointCount / 100) * 20}px`,
+                      height: `${10 + (pointCount / 100) * 20}px`,
+                      borderRadius: "50%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {pointCount}
+                  </div>
+                </div>
+              </Marker>
+            );
+          }
+
+          return (
+            <Marker
+              key={`processing-${index}`}
+              longitude={parseFloat(cluster.properties.longitude)}
+              latitude={parseFloat(cluster.properties.latitude)}
+              anchor="bottom"
+              color={"rgba(20 184 166)"}
+              style={{ cursor: "pointer" }}
+              onClick={(e) => {
+                e.originalEvent.stopPropagation();
+                handleProcessingEntityClick(
+                  cluster.properties,
+                  parseFloat(cluster.properties.latitude),
+                  parseFloat(cluster.properties.longitude),
+                );
+              }}
+            >
+              {/* <RiMapPin2Fill
+                className={`${
+                  selectedSite === cluster.properties.project_name
+                    ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
+                    : "h-8 w-8 fill-teal-700 stroke-teal-50 dark:fill-teal-500 dark:stroke-teal-700"
+                }`}
+              /> */}
+            </Marker>
+          );
+        })}
 
       {popupInfo && (
         <Popup

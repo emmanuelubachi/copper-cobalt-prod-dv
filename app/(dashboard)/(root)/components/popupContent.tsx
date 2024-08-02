@@ -1,5 +1,7 @@
 import React from "react";
 import { ProcessingEntities } from "@/types";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export const PopupContent: React.FC<ProcessingEntities> = ({
   project_name,
@@ -16,22 +18,18 @@ export const PopupContent: React.FC<ProcessingEntities> = ({
   sources,
 }) => {
   return (
-    <div className="w-auto rounded-lg p-4">
-      <h2 className="mb-2 text-lg font-bold text-black">{project_name}</h2>
-      <ul className="space-y-3 text-sm text-black">
+    <div className="p-2">
+      <h4 className="mb-2 text-p font-bold text-black">{project_name}</h4>
+      <ul className="space-y-1 text-sm font-medium text-black">
         {characteristics && (
           <li>
-            <span className="font-semibold text-neutral-600">
-              Characteristics:
-            </span>
+            <span className="text-black/70">Characteristics:</span>
             <p className="text-sm font-medium">{characteristics}</p>
           </li>
         )}
         {annual_production && (
           <li>
-            <span className="font-semibold text-neutral-600">
-              Annual Production:
-            </span>
+            <span className="text-black/70">Annual Production:</span>
             <p className="text-xl font-bold text-blue-600">
               {annual_production}
             </p>
@@ -39,48 +37,33 @@ export const PopupContent: React.FC<ProcessingEntities> = ({
         )}
         {owners_shareholders && (
           <li>
-            <span className="font-semibold text-neutral-600">
-              Owners/Shareholders:
-            </span>
+            <span className="text-black/70">Owners/Shareholders:</span>
             <p className="font-medium">{owners_shareholders}</p>
           </li>
         )}
         {nationality && (
           <li>
-            <span className="font-semibold text-neutral-600">Nationality:</span>{" "}
-            {nationality}
+            <span className="text-black/70">Nationality:</span> {nationality}
           </li>
         )}
         <li>
-          <span className="font-semibold text-neutral-600">Coordinates:</span>{" "}
+          <span className="text-black/70">Coordinates:</span>{" "}
           {geographic_coordinates}
         </li>
-        {/* <li>
-            <span className="font-semibold">Lat/Long:</span>
-            <p>{latitude_longitude}</p>
-          </li> */}
-        {/* <li>
-            <span className="font-semibold">Longitude:</span> {longitude}
+        {sources && (
+          <li className="flex gap-1">
+            <span className="font-semibold">Sources:</span>
+            <Link
+              href={sources}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-500 underline"
+            >
+              Link
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
           </li>
-          <li>
-            <span className="font-semibold">Latitude:</span> {latitude}
-          </li> */}
-
-        {/* {iso3 && (
-            <li>
-              <span className="font-semibold">ISO3:</span> {iso3}
-            </li>
-          )} */}
-        {/* {affiliation && (
-            <li>
-              <span className="font-semibold">Affiliation:</span> {affiliation}
-            </li>
-          )} */}
-        {/* {sources && (
-            <li>
-              <span className="font-semibold">Sources:</span> {sources}
-            </li>
-          )} */}
+        )}
       </ul>
     </div>
   );

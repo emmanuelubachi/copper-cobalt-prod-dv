@@ -1,17 +1,22 @@
 "use client";
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
+
 import { useTheme } from "next-themes";
 import Map, {
   MapRef,
   Source,
   Marker,
   Layer,
+  Popup,
   AttributionControl,
   NavigationControl,
   FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import Supercluster, { AnyProps, PointFeature } from "supercluster";
+
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import useDeviceType from "@/hooks/useDeviceType";
 import MapContents from "./mapContents";
@@ -21,12 +26,12 @@ import { GeoJSONExportPort, IndustralProjectDetailsProps } from "@/types/map";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { parseCoordinates } from "@/lib/geojsonProcessing";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
-import { feature } from "@turf/turf";
-import { RiMapPin2Fill } from "@remixicon/react";
 import { BorderPost } from "@/types/map";
 
 import socioEconomicData from "@/data/map/additional_info/socio_economic_impact.json";
 import environmantalImpactData from "@/data/map/additional_info/environmental_impact.json";
+import { countriesWithColors } from "@/constants/application";
+import { ArrowUpRight } from "lucide-react";
 
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
@@ -34,6 +39,18 @@ type MapProps = {
   borderPostsData: BorderPost;
   exportPortsData: any;
 };
+
+interface SocioEconomicDataProps {
+  _project_id: string;
+  project_name: string;
+  socio_economic_infrastructure: string;
+  geographical_coordinates: string;
+  latitude_longitude: string;
+  longitude: string;
+  latitude: string;
+  province: string;
+  sources: string;
+}
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -45,7 +62,6 @@ export default function MainMap({
 }: MapProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const { isMobile } = useDeviceType();
   const { theme, systemTheme } = useTheme();
   const mapRef = useRef<MapRef | null>(null);
@@ -56,8 +72,13 @@ export default function MainMap({
   const [borderPosts, setBorderPosts] = useState<BorderPost>();
   const [intRoute, setIntRoute] = useState<any>([]);
   const [exportPorts, setExportPorts] = useState<GeoJSONExportPort>();
-  const [socioEconomics, setSocioEconomicData] = useState<any>();
+  const [socioEconomics, setSocioEconomicData] =
+    useState<SocioEconomicDataProps[]>();
   const [environmentalImpacts, setEnvironmantalImpactData] = useState<any>();
+
+  const [clusters, setClusters] = useState<any[]>([]);
+  const [supercluster, setSupercluster] = useState<Supercluster | null>(null);
+  const [selectedMarker, setSelectedMarker] = useState<any>(null);
 
   const [viewState, setViewState] = useState(
     isMobile
@@ -81,6 +102,7 @@ export default function MainMap({
     x: number;
     y: number;
   } | null>(null);
+
   const {
     checkedLayers,
     openMapDetails,
@@ -116,44 +138,7 @@ export default function MainMap({
     EnvironmentalImpactData,
   ]);
 
-  // useEffect(() => {
-  //   if (isInternationalRouteVisible) {
-  //     setIntRoute(InternationalRoutesData);
-  //   }
-  // }, [isInternationalRouteVisible, InternationalRoutesData]);
-
-  // useEffect(() => {
-  //   if (isBorderPostVisible) {
-  //     setBorderPosts(BorderPostData);
-  //   }
-  // }, [isBorderPostVisible, BorderPostData]);
-
-  // useEffect(() => {
-  //   console.log("border", BorderPostData);
-  //   // console.log("export", isExportPortVisible);
-  // }, [BorderPostData, isExportPortVisible, isBorderPostVisible]);
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     if (mapRef.current) {
-  //       mapRef.current.on("load", () => {
-  //         if (
-  //           theme === "dark" ||
-  //           (theme === "system" && systemTheme === "dark")
-  //         ) {
-  //           setMapStyle("mapbox://styles/mapbox/dark-v10");
-  //         } else {
-  //           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
-  //         }
-  //       });
-  //     }
-  //   }, 1000); // 1 second delay
-
-  //   return () => clearTimeout(timeout);
-  // }, [theme, systemTheme]);
-
   // Trigger zoom-in animation on map load
-
   useEffect(() => {
     const handleZoomIn = () => {
       if (mapRef.current) {
@@ -180,6 +165,13 @@ export default function MainMap({
     return () => clearTimeout(timeoutId);
   }, [isMobile]);
 
+  const filteredGeojsonData = {
+    ...geojsonData,
+    features: geojsonData.features.filter((feature) =>
+      checkedLayers.includes(feature.properties._project_id),
+    ),
+  };
+
   const onHover = useCallback((event: any) => {
     const {
       features,
@@ -202,13 +194,6 @@ export default function MainMap({
       mapRef.current.getCanvas().style.cursor = "";
     }
   }, []);
-
-  const filteredGeojsonData = {
-    ...geojsonData,
-    features: geojsonData.features.filter((feature) =>
-      checkedLayers.includes(feature.properties._project_id),
-    ),
-  };
 
   const onClick = useCallback(
     (event: any) => {
@@ -264,27 +249,48 @@ export default function MainMap({
     ],
   );
 
-  const fr_countriesWithColors = [
-    { country: "australie", color: "#546475" },
-    { country: "canada", color: "#13B8B1" },
-    { country: "chine", color: "#F16067" },
-    { country: "rdcongo", color: "#ADBCDD" },
-    { country: "inde", color: "#ECC0A7" },
-    { country: "kazakhstan", color: "#A28882" },
-    { country: "suisse", color: "#FB9635" },
-    { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
-  ];
+  useEffect(() => {
+    if (socioEconomics) {
+      const points: PointFeature<AnyProps>[] = socioEconomics.map((data) => ({
+        type: "Feature",
+        properties: {
+          cluster: false,
+          ...data,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [parseFloat(data.longitude), parseFloat(data.latitude)],
+        },
+      }));
 
-  const countriesWithColors = [
-    { country: "Australia", color: "#546475" },
-    { country: "Canada", color: "#13B8B1" },
-    { country: "China", color: "#F16067" },
-    { country: "DR Congo", color: "#ADBCDD" },
-    { country: "India", color: "#ECC0A7" },
-    { country: "Kazakhstan", color: "#A28882" },
-    { country: "Switzerland", color: "#FB9635" },
-    { country: "Unknown", color: "#033550" }, // Placeholder for the unmatched color
-  ];
+      const index = new Supercluster({
+        radius: 40,
+        maxZoom: 16,
+      });
+
+      index.load(points);
+      setSupercluster(index);
+    }
+  }, [socioEconomics]);
+
+  const updateClusters = useCallback(() => {
+    if (!mapRef.current || !supercluster) return;
+
+    const bounds = mapRef.current.getMap().getBounds().toArray().flat() as [
+      number,
+      number,
+      number,
+      number,
+    ];
+    const zoom = Math.floor(viewState.zoom);
+
+    const clusters = supercluster.getClusters(bounds, zoom);
+    setClusters(clusters);
+  }, [supercluster, viewState]);
+
+  useEffect(() => {
+    updateClusters();
+  }, [updateClusters, viewState]);
 
   return (
     <Map
@@ -376,18 +382,6 @@ export default function MainMap({
         </Source>
       )}
 
-      {isBorderPostVisible &&
-        borderPosts &&
-        borderPosts.features.map((feature: any, index: number) => (
-          <Marker
-            key={index}
-            longitude={feature.geometry.coordinates[0]}
-            latitude={feature.geometry.coordinates[1]}
-            color="#F97316"
-            style={{ cursor: "pointer" }}
-          ></Marker>
-        ))}
-
       {isInternationalRouteVisible && (
         <Source id="intRoute" type="geojson" data={intRoute}>
           <Layer
@@ -407,6 +401,18 @@ export default function MainMap({
         </Source>
       )}
 
+      {isBorderPostVisible &&
+        borderPosts &&
+        borderPosts.features.map((feature: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={feature.geometry.coordinates[0]}
+            latitude={feature.geometry.coordinates[1]}
+            color="#F97316"
+            style={{ cursor: "pointer" }}
+          ></Marker>
+        ))}
+
       {isExportPortVisible &&
         exportPorts &&
         exportPorts.features.map((feature, index: number) => (
@@ -420,14 +426,81 @@ export default function MainMap({
         ))}
 
       {isSocioEconomicVisible &&
-        socioEconomics.map((socioEconomicData: any, index: number) => (
-          <Marker
-            key={index}
-            longitude={socioEconomicData.longitude}
-            latitude={socioEconomicData.latitude}
-            color="#84cc16"
-          ></Marker>
-        ))}
+        clusters.map((cluster) => {
+          const [longitude, latitude] = cluster.geometry.coordinates;
+          const { cluster: isCluster, point_count: pointCount } =
+            cluster.properties;
+
+          if (isCluster) {
+            return (
+              <Marker
+                key={`cluster-${cluster.id}`}
+                longitude={longitude}
+                latitude={latitude}
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  const expansionZoom = Math.min(
+                    supercluster?.getClusterExpansionZoom(cluster.id) || 16,
+                    20,
+                  );
+                  if (mapRef.current) {
+                    mapRef.current.flyTo({
+                      center: [longitude, latitude],
+                      duration: 1000,
+                      zoom: expansionZoom,
+                    });
+                  }
+                  // setViewState({
+                  //   ...viewState,
+                  //   longitude,
+                  //   latitude,
+                  //   zoom: expansionZoom,
+                  // });
+                }}
+              >
+                <div className="rounded-full bg-lime-500/50 p-2">
+                  <div
+                    className="bg-lime-500 p-3 text-sm font-bold text-white dark:text-black"
+                    style={{
+                      width: `${10 + (pointCount / 100) * 20}px`,
+                      height: `${10 + (pointCount / 100) * 20}px`,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {pointCount}
+                  </div>
+                </div>
+              </Marker>
+            );
+          }
+
+          return (
+            <Marker
+              key={`point-${cluster.properties._project_id}`}
+              longitude={longitude}
+              latitude={latitude}
+              style={{ cursor: "pointer" }}
+              color="#84cc16"
+              onClick={(e) => {
+                e.originalEvent.stopPropagation();
+                setSelectedMarker(cluster);
+                if (mapRef.current) {
+                  const mapzoom = mapRef.current.getZoom();
+                  const newzoom = mapzoom > 10 ? mapzoom + 0.5 : 10;
+
+                  mapRef.current.flyTo({
+                    center: [longitude, latitude],
+                    duration: 1500,
+                    zoom: newzoom,
+                  });
+                }
+              }}
+            ></Marker>
+          );
+        })}
 
       {isEnvironmentalImpactVisible &&
         environmentalImpacts.map(
@@ -440,6 +513,61 @@ export default function MainMap({
             ></Marker>
           ),
         )}
+
+      {selectedMarker && (
+        <Popup
+          longitude={selectedMarker.geometry.coordinates[0]}
+          latitude={selectedMarker.geometry.coordinates[1]}
+          anchor="top"
+          onClose={() => setSelectedMarker(null)}
+          // closeOnClick={false}
+          style={{
+            fontFamily: "var(--font-sans)",
+            minWidth: "20rem",
+            maxWidth: "24rem",
+            borderRadius: 50,
+          }}
+        >
+          <div className="p-2">
+            {selectedMarker.properties.project_name && (
+              <h4 className="mb-2 text-p font-bold text-black">
+                {selectedMarker.properties.project_name}
+              </h4>
+            )}
+
+            <div className="space-y-1 text-sm font-medium text-black">
+              {selectedMarker.properties.socio_economic_infrastructure && (
+                <p>
+                  <span className="text-black/70">Infrastructure:</span>{" "}
+                  {selectedMarker.properties.socio_economic_infrastructure}
+                </p>
+              )}
+
+              {selectedMarker.properties.province && (
+                <p>
+                  <span className="text-black/70">Province:</span>{" "}
+                  {selectedMarker.properties.province}
+                </p>
+              )}
+
+              {selectedMarker.properties.sources && (
+                <div className="flex gap-1">
+                  <span className="text-black/70">Sources: </span>
+                  <Link
+                    href={selectedMarker.properties.sources}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-blue-500 underline"
+                  >
+                    Link
+                    <ArrowUpRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </Popup>
+      )}
 
       {hoveredFeature && (
         <div
@@ -493,3 +621,74 @@ export default function MainMap({
     </Map>
   );
 }
+
+{
+  /* {isSocioEconomicVisible &&
+        socioEconomics &&
+        socioEconomics.map((socioEconomicData: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={socioEconomicData.longitude}
+            latitude={socioEconomicData.latitude}
+            color="#84cc16"
+          ></Marker>
+        ))} */
+}
+
+// const CustomClusterMarker = ({
+//   longitude,
+//   latitude,
+//   pointCount,
+// }: {
+//   longitude: number;
+//   latitude: number;
+//   pointCount: number;
+// }) => (
+//   <Marker longitude={longitude} latitude={latitude}>
+//     <div
+//       style={{
+//         backgroundColor: "#84cc16",
+//         width: `${10 + (pointCount / 100) * 20}px`,
+//         height: `${10 + (pointCount / 100) * 20}px`,
+//         borderRadius: "50%",
+//         display: "flex",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         color: "#fff",
+//         fontSize: "12px",
+//       }}
+//     >
+//       {pointCount}
+//     </div>
+//   </Marker>
+// );
+
+// useEffect(() => {
+//   const timeout = setTimeout(() => {
+//     if (mapRef.current) {
+//       mapRef.current.on("load", () => {
+//         if (
+//           theme === "dark" ||
+//           (theme === "system" && systemTheme === "dark")
+//         ) {
+//           setMapStyle("mapbox://styles/mapbox/dark-v10");
+//         } else {
+//           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
+//         }
+//       });
+//     }
+//   }, 1000); // 1 second delay
+
+//   return () => clearTimeout(timeout);
+// }, [theme, systemTheme]);
+
+// const fr_countriesWithColors = [
+//   { country: "australie", color: "#546475" },
+//   { country: "canada", color: "#13B8B1" },
+//   { country: "chine", color: "#F16067" },
+//   { country: "rdcongo", color: "#ADBCDD" },
+//   { country: "inde", color: "#ECC0A7" },
+//   { country: "kazakhstan", color: "#A28882" },
+//   { country: "suisse", color: "#FB9635" },
+//   { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
+// ];
