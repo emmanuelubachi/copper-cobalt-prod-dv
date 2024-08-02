@@ -1,0 +1,178 @@
+[
+    {
+        "_project_id": "tfm",
+        "project_name": "Tenke Fungurume Mining",
+        "socio_economic_infrastructure": "TFM Health Center",
+        "geographical_coordinates": "10\u00b0 22' 11.9994\" S, 26\u00b0 10' 47.9994\" E",
+        "latitude_longitude": "-10.370000, 26.180000",
+        "longitude": "26.18",
+        "latitude": "-10.37",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "tfm",
+        "project_name": "Tenke Fungurume Mining",
+        "socio_economic_infrastructure": "Construction of the Tukankamane Institute",
+        "geographical_coordinates": "10\u00b0 36' 35.9994\" S, 26\u00b0 10' 47.9994\" E",
+        "latitude_longitude": "-10.610000, 26.180000",
+        "longitude": "26.18",
+        "latitude": "-10.61",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "tfm",
+        "project_name": "Tenke Fungurume Mining",
+        "socio_economic_infrastructure": "Construction of the Lupeto Institute",
+        "geographical_coordinates": "10\u00b0 37' 11.9994\" S, 26\u00b0 19' 47.9994\" E",
+        "latitude_longitude": "-10.620000, 26.330000",
+        "longitude": "26.33",
+        "latitude": "-10.62",
+        "province": "Lualaba",
+        "sources": "https://congomines.org:443/drc_companies/12-tenke-fungurume-mining"
+    },
+    {
+        "_project_id": "commus",
+        "project_name": "COMMUS (Compagnie Mini\u00e8re de Musonoie Global SAS)",
+        "socio_economic_infrastructure": "Rehabilitation Mutoshi Bridge",
+        "geographical_coordinates": "10\u00b0 24' 0\"S,25\u00b0 15' 0\"E",
+        "latitude_longitude": "-10.400000, 25.250000",
+        "longitude": "25.25",
+        "latitude": "-10.4",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "sicomines",
+        "project_name": "Sino-Congolaise des mines",
+        "socio_economic_infrastructure": "Construction of the Busanga dam in Lualaba",
+        "geographical_coordinates": "10\u00b05_25.44_S 25\u00b023_35.16_E",
+        "latitude_longitude": "-10.0904, 25.3931",
+        "longitude": "25.3931",
+        "latitude": "-10.0904",
+        "province": "Lualaba",
+        "sources": "https://zoom-eco.net/a-la-une/rdc-infrastructures-le-barrage-de-busanga-construit-par-sicomines-enfin-operationnel/"
+    },
+    {
+        "_project_id": "sicomines",
+        "project_name": "Sino-Congolaise des mines",
+        "socio_economic_infrastructure": "Construction of the Kabulungu dike",
+        "geographical_coordinates": "10\u00b0 27' 36\"S,25\u00b0 13' 48\"E",
+        "latitude_longitude": "-10.460000, 25.230000",
+        "longitude": "25.23",
+        "latitude": "-10.46",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "sicomines",
+        "project_name": "Sino-Congolaise des mines",
+        "socio_economic_infrastructure": "Construction of a 15 /0.4kv-500kva substation at Kolwezi",
+        "geographical_coordinates": "10\u00b0 26' 59.9994\"S, 25\u00b0 13' 48\" E",
+        "latitude_longitude": "-10.450000, 25.230000",
+        "longitude": "25.23",
+        "latitude": "-10.45",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "mumi",
+        "project_name": "Mutanda Mining SARL",
+        "socio_economic_infrastructure": "Rehabilitation of the Kolwezi Public Prosecutor's Office",
+        "geographical_coordinates": "10\u00b0 25' 47.9994\"S, 25\u00b0 16' 48\"E",
+        "latitude_longitude": "-10.430000, 25.280000",
+        "longitude": "25.28",
+        "latitude": "-10.43",
+        "province": "Lualaba",
+        "sources": "https://congomines.org:443/drc_companies/100-mutanda-ya-mukonkota-mining"
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Rehabilitation of NZILO School",
+        "geographical_coordinates": "10\u00b0 18' 36\"S, 25\u00b0 16' 48\"E",
+        "latitude_longitude": "-10.310000, 25.280000",
+        "longitude": "25.28",
+        "latitude": "-10.31",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Construction of the Lualaba bridge",
+        "geographical_coordinates": "10\u00b0 28' 12\" S, 25\u00b0 26' 24\" E",
+        "latitude_longitude": "-10.470000, 25.440000",
+        "longitude": "25.44",
+        "latitude": "-10.47",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Water supply in Luilu",
+        "geographical_coordinates": "10\u00b0 24' 0\" S, 25\u00b0 15' 0\" E",
+        "latitude_longitude": "-10.400000, 25.250000",
+        "longitude": "25.25",
+        "latitude": "-10.4",
+        "province": "Lualaba",
+        "sources": "https://fr.allafrica.com/stories/200610200294.html"
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Rehabilitation of NZILO School",
+        "geographical_coordinates": "10\u00b0 18' 36\" S, 25\u00b0 16' 48\" E",
+        "latitude_longitude": "-10.310000, 25.280000",
+        "longitude": "25.28",
+        "latitude": "-10.31",
+        "province": "Lualaba",
+        "sources": "https://congomines.org:443/drc_companies/6-kamoto-copper-company"
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Ecole Kamanyola (Chemin\u00e9e)",
+        "geographical_coordinates": "10\u00b0 26' 23.9994\" S, 25\u00b0 18' 0\" E",
+        "latitude_longitude": "-10.440000, 25.300000",
+        "longitude": "25.3",
+        "latitude": "-10.44",
+        "province": "Lualaba",
+        "sources": "https://congomines.org:443/drc_companies/6-kamoto-copper-company"
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Rehabilitation of ITMA School",
+        "geographical_coordinates": "10\u00b0 25' 47.9994\" S, 25\u00b0 17' 23.9994\" E",
+        "latitude_longitude": "-10.430000, 25.290000",
+        "longitude": "25.29",
+        "latitude": "-10.43",
+        "province": "Lualaba",
+        "sources": "https://congomines.org:443/drc_companies/6-kamoto-copper-company"
+    },
+    {
+        "_project_id": "kcc",
+        "project_name": "Kamoto Copper Company",
+        "socio_economic_infrastructure": "Construction of Kolwezi University",
+        "geographical_coordinates": "10\u00b0 28' 12\" S, 25\u00b0 19' 47.9994\" E",
+        "latitude_longitude": "-10.470000, 25.330000",
+        "longitude": "25.33",
+        "latitude": "-10.47",
+        "province": "Lualaba",
+        "sources": ""
+    },
+    {
+        "_project_id": "frontier",
+        "project_name": "Frontier Mine",
+        "socio_economic_infrastructure": "Construction of SAKANYA School",
+        "geographical_coordinates": "12\u00b0 27' 36\"S, 28\u00b0 20' 23.9994\"E",
+        "latitude_longitude": "-12.460000, 28.340000",
+        "longitude": "28.34",
+        "latitude": "-12.46",
+        "province": "Haut Katanga",
+        "sources": ""
+    }
+]

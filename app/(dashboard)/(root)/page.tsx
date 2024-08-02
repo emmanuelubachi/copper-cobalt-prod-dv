@@ -55,12 +55,12 @@ export default async function Page() {
   geojsonData = filterOutPoints(geojsonData);
 
   return (
-    <main className="relative h-screen sm:mb-0 sm:ml-0 sm:pr-16">
+    <main className="relative h-dvh sm:mb-0 sm:ml-0 sm:pr-16">
       <MainMap
         geojsonData={geojsonData}
         intRoutesData={intRoutes}
-        // borderPostsData={borderPosts}
-        // exportPorts={exportPorts}
+        borderPostsData={borderPosts}
+        exportPortsData={exportPorts}
       />
     </main>
   );

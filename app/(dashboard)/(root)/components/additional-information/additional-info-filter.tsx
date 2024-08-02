@@ -8,7 +8,7 @@ export function ProcessingEntities() {
   const { isProcessingEntiteMarkerVisible, toggleProcessingEntiteMarkers } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-green-500 bg-muted px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-teal-500">
       <div>
         <h6 className="text-xs font-medium">Processing Entities</h6>
       </div>
@@ -18,7 +18,7 @@ export function ProcessingEntities() {
           onPressedChange={toggleProcessingEntiteMarkers}
           className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isProcessingEntiteMarkerVisible
-              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
               : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
@@ -39,7 +39,7 @@ export function InternationalRoutes() {
   const { isInternationalRouteVisible, toggleInternationalRoute } =
     useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-blue-500 bg-muted px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-blue-500">
       <div>
         <h6 className="text-xs font-medium">International Routes</h6>
       </div>
@@ -49,7 +49,7 @@ export function InternationalRoutes() {
           onPressedChange={toggleInternationalRoute}
           className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isInternationalRouteVisible
-              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
               : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
@@ -69,7 +69,7 @@ export function InternationalRoutes() {
 export function BorderPosts() {
   const { isBorderPostVisible, toggleBorderPost } = useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-orange-500 bg-muted px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-orange-500">
       <div>
         <h6 className="text-xs font-medium">Boreder Posts</h6>
       </div>
@@ -79,7 +79,7 @@ export function BorderPosts() {
           onPressedChange={toggleBorderPost}
           className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isBorderPostVisible
-              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
               : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
@@ -99,7 +99,7 @@ export function BorderPosts() {
 export function ExportPorts() {
   const { isExportPortVisible, toggleExportPort } = useMarkerVisibilityStore();
   return (
-    <div className="flex items-center justify-between gap-4 rounded-r-lg border-l-4 border-yellow-500 bg-muted px-4 py-3 transition-colors duration-300">
+    <div className="__toggle_container border-slate-500">
       <div>
         <h6 className="text-xs font-medium">Export Ports</h6>
       </div>
@@ -109,13 +109,75 @@ export function ExportPorts() {
           onPressedChange={toggleExportPort}
           className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
             isExportPortVisible
-              ? "hover:bg-cyan-500 data-[state=on]:bg-cyan-500"
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
               : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
           }`}
         >
           <span
             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
               isExportPortVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
+        </Toggle>
+      </div>
+    </div>
+  );
+}
+
+export function SocioEconomic() {
+  const { isSocioEconomicVisible, toggleSocioEconomic } =
+    useMarkerVisibilityStore();
+  return (
+    <div className="__toggle_container border-lime-500">
+      <div>
+        <h6 className="text-xs font-medium">Socio Economic Projects</h6>
+      </div>
+      <div className="flex gap-2">
+        <Toggle
+          pressed={isSocioEconomicVisible}
+          onPressedChange={toggleSocioEconomic}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
+            isSocioEconomicVisible
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
+          }`}
+        >
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isSocioEconomicVisible
+                ? "translate-x-2 dark:bg-black"
+                : "-translate-x-2"
+            }`}
+          />
+        </Toggle>
+      </div>
+    </div>
+  );
+}
+
+export function EnvironmantalImpact() {
+  const { isEnvironmentalImpactVisible, toggleEnvironmentalImpact } =
+    useMarkerVisibilityStore();
+  return (
+    <div className="__toggle_container border-red-500">
+      <div>
+        <h6 className="text-xs font-medium">Environmantal Impact</h6>
+      </div>
+      <div className="flex gap-2">
+        <Toggle
+          pressed={isEnvironmentalImpactVisible}
+          onPressedChange={toggleEnvironmentalImpact}
+          className={`group relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300 ${
+            isEnvironmentalImpactVisible
+              ? "data-[state=on]:bg-cyan-500 hover:bg-cyan-500"
+              : "bg-neutral-400/50 hover:bg-neutral-400 dark:bg-transparent dark:ring-1 dark:ring-neutral-400/50 dark:hover:bg-neutral-400/40"
+          }`}
+        >
+          <span
+            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-all duration-300 group-hover:scale-125 ${
+              isEnvironmentalImpactVisible
                 ? "translate-x-2 dark:bg-black"
                 : "-translate-x-2"
             }`}

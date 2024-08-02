@@ -7,6 +7,8 @@ type MarkerVisibilityState = {
   isInternationalRouteVisible: boolean;
   isBorderPostVisible: boolean;
   isExportPortVisible: boolean;
+  isSocioEconomicVisible: boolean;
+  isEnvironmentalImpactVisible: boolean;
 };
 
 type MarkerVisibilityActions = {
@@ -27,6 +29,10 @@ type MarkerVisibilityActions = {
   toggleBorderPost: () => void;
 
   toggleExportPort: () => void;
+
+  toggleSocioEconomic: () => void;
+
+  toggleEnvironmentalImpact: () => void;
 };
 
 const useMarkerVisibilityStore = create<
@@ -78,6 +84,20 @@ const useMarkerVisibilityStore = create<
   toggleExportPort: () =>
     set((state) => ({
       isExportPortVisible: !state.isExportPortVisible,
+    })),
+
+  // socio economic
+  isSocioEconomicVisible: false,
+  toggleSocioEconomic: () =>
+    set((state) => ({
+      isSocioEconomicVisible: !state.isSocioEconomicVisible,
+    })),
+
+  // environmental impact
+  isEnvironmentalImpactVisible: false,
+  toggleEnvironmentalImpact: () =>
+    set((state) => ({
+      isEnvironmentalImpactVisible: !state.isEnvironmentalImpactVisible,
     })),
 }));
 

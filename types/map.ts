@@ -70,3 +70,55 @@ export type TDestinationData = {
   quantity_tons: string;
   label: string;
 };
+
+// ----------------------------------------Additional Information Markers
+
+type CRS = {
+  type: "name";
+  properties: {
+    name: string;
+  };
+};
+
+type Geometry = {
+  type: "Point";
+  coordinates: [number, number];
+};
+
+type Feature = {
+  type: "Feature";
+  properties: {
+    country: string;
+    project_name: string;
+    description: string;
+    infrastructure_development_type: string;
+  };
+  geometry: Geometry;
+};
+
+type xFeature = {
+  type: "Feature";
+  properties: {
+    name: string;
+    corridor_name: string;
+    country: string;
+    province: string;
+    description: string;
+    products_transported: string;
+  };
+  geometry: Geometry;
+};
+
+export type BorderPost = {
+  type: "FeatureCollection";
+  name: string;
+  crs: CRS;
+  features: Feature[];
+};
+
+export type GeoJSONExportPort = {
+  type: "FeatureCollection";
+  name: string;
+  crs: CRS;
+  features: xFeature[];
+};

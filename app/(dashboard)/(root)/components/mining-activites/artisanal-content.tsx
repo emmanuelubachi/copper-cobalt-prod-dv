@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Map from "react-map-gl";
 import { active_sites, inactive_sites } from "@/data/mapData";
 import { ArticanalsiteDetailsLabels } from "@/constants/application";
-import { ArtisanalSiteDetailsProps } from "@/types/miningActivities";
+import { ArtisanalSiteDetailsProps } from "@/types/map";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -47,21 +47,136 @@ const SiteMap = ({
 };
 
 const ArtisanalSiteDetails = ({
-  site,
+  data,
   className,
 }: {
-  site: ArtisanalSiteDetailsProps;
+  data: ArtisanalSiteDetailsProps;
   className?: string;
 }) => {
   return (
-    <div className={`grid gap-2 ${className}`}>
-      <h2 className="text-xl font-bold">{site.site_name}</h2>
-      <div className="mb-4 flex shrink grow flex-col space-y-4 rounded-lg border p-2 shadow-lg">
-        {ArticanalsiteDetailsLabels.map(({ key, label }) => (
-          <p key={key}>
+    <div className={`grid gap-4 p-4 sm:p-6 ${className}`}>
+      <h2 className="text-xl font-medium">{data.site_name}</h2>
+
+      <div className="mb-4 flex shrink grow flex-col space-y-6 text-sm font-medium text-foreground">
+        {/* <div className="mb-4 flex shrink grow flex-col space-y-4 rounded-lg border p-2 shadow-lg"> */}
+
+        <div className="grid gap-2">
+          {data.province__territory && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Province/Territory:{" "}
+                </span>
+                <span>{data.province__territory}</span>
+              </p>
+            </div>
+          )}
+
+          {/* {data.location_origin && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Location Origin:{" "}
+                </span>
+                <span>{data.location_origin}</span>
+              </p>
+            </div>
+          )} */}
+
+          {data.cooperative_in_charge && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Cooperative in charge:{" "}
+                </span>
+                <span>{data.cooperative_in_charge}</span>
+              </p>
+            </div>
+          )}
+
+          {data.minerals_extracted && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Minerals extracted:{" "}
+                </span>
+                <span>{data.minerals_extracted}</span>
+              </p>
+            </div>
+          )}
+
+          {data.point_of_sale__purchasing_station && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Point of sale/Purchasing station:{" "}
+                </span>
+                <span>{data.point_of_sale__purchasing_station}</span>
+              </p>
+            </div>
+          )}
+
+          {data.status_in_2023 && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Status in 2023:{" "}
+                </span>
+                <span>{data.status_in_2023}</span>
+              </p>
+            </div>
+          )}
+
+          {/* {data.employees && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Employees:{" "}
+                </span>
+                <span>{data.employees}</span>
+              </p>
+            </div>
+          )}
+
+          {data.geom && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Geographical :{" "}
+                </span>
+                <span>{data.geom}</span>
+              </p>
+            </div>
+          )}
+
+          {data.cooperative_in_charge && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Cooperative in charge:{" "}
+                </span>
+                <span>{data.cooperative_in_charge}</span>
+              </p>
+            </div>
+          )}
+
+          {data.cooperative_in_charge && (
+            <div>
+              <p>
+                <span className="font-medium text-foreground/70">
+                  Cooperative in charge:{" "}
+                </span>
+                <span>{data.cooperative_in_charge}</span>
+              </p>
+            </div>
+          )} */}
+        </div>
+
+        {/* {ArticanalsiteDetailsLabels.map(({ key, label }) => (
+          <p key={key as string}>
             <span className="font-semibold">{label}:</span> {site[key] ?? "N/A"}
           </p>
-        ))}
+        ))} */}
       </div>
     </div>
   );
@@ -89,8 +204,8 @@ export function ArtisanalSiteContent({ site_name }: { site_name: string }) {
         site_longitude={artisanal_site_details?.longitude}
       />
       <ArtisanalSiteDetails
-        className="p-4 sm:p-6"
-        site={artisanal_site_details as ArtisanalSiteDetailsProps}
+        data={artisanal_site_details as ArtisanalSiteDetailsProps}
+        // className="p-4 sm:p-6"
       />
     </div>
   );

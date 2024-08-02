@@ -48,65 +48,6 @@ import { DestinationSummary, ProjectSummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
 
-const chartdata = [
-  {
-    name: "A",
-    "Number of threatened species": 2488,
-  },
-  {
-    name: "B",
-    "Number of threatened species": 1445,
-  },
-  {
-    name: "C",
-    "Number of threatened species": 743,
-  },
-  {
-    name: "D",
-    "Number of threatened species": 281,
-  },
-  {
-    name: "E",
-    "Number of threatened species": 251,
-  },
-  {
-    name: "F",
-    "Number of threatened species": 232,
-  },
-  {
-    name: "G",
-    "Number of threatened species": 198,
-  },
-  {
-    name: "H",
-    "Number of threatened species": 248,
-  },
-  {
-    name: "I",
-    "Number of threatened species": 145,
-  },
-  {
-    name: "J",
-    "Number of threatened species": 74,
-  },
-  {
-    name: "K",
-    "Number of threatened species": 81,
-  },
-  {
-    name: "L",
-    "Number of threatened species": 51,
-  },
-  {
-    name: "M",
-    "Number of threatened species": 22,
-  },
-  {
-    name: "N",
-    "Number of threatened species": 98,
-  },
-];
-
 export default function Dashboard() {
   const [totalProd, setTotalProd] = useState<ProjectSummary[]>([]);
   const [kpi, setKpi] = useState<typeof kpiData>([]);

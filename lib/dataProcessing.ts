@@ -3,7 +3,7 @@ import {
   TMonthlyProductionData,
   DestinationData,
   TDestinationData,
-} from "@/types/miningActivities";
+} from "@/types/map";
 import {
   DestinationSummary,
   DetailedYearlySummary,

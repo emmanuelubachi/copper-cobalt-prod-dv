@@ -79,10 +79,7 @@ import {
   monthlyProdChartConfig,
 } from "@/constants/chart";
 
-import {
-  TDestinationData,
-  TMonthlyProductionData,
-} from "@/types/miningActivities";
+import { TDestinationData, TMonthlyProductionData } from "@/types/map";
 import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
