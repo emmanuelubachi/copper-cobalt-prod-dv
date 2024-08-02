@@ -12,7 +12,7 @@ import LinkButton from "@/components/m-ui/link-button";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 
-import { IndustralProjectDetailsProps } from "@/types/miningActivities";
+import { IndustralProjectDetailsProps } from "@/types/map";
 import {
   calculateYearlySums,
   transformMonthlyData,
@@ -25,10 +25,7 @@ import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly co
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import cubaltDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 
-import {
-  TMonthlyProductionData,
-  TDestinationData,
-} from "@/types/miningActivities";
+import { TMonthlyProductionData, TDestinationData } from "@/types/map";
 import { YearlySummary } from "@/types/projects";
 import {
   coDestChartConfig,
@@ -182,7 +179,7 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
       <div className={`grid gap-4 p-4 sm:p-6`}>
         <h2 className="text-xl font-medium">{data.Project_name}</h2>
 
-        <div className="mb-4 flex shrink grow flex-col space-y-6 p-1 text-sm font-medium text-foreground">
+        <div className="mb-4 flex shrink grow flex-col space-y-6 text-sm font-medium text-foreground">
           {/* Geographical Details */}
           <div className="grid gap-2">
             {data.Nationality && (
