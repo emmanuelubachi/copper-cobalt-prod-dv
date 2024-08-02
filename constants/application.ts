@@ -473,6 +473,17 @@ export const CheckAllIndustralProjects = [
   "thomas",
 ];
 
+export const countriesWithColors = [
+  { country: "Australia", color: "#546475" },
+  { country: "Canada", color: "#13B8B1" },
+  { country: "China", color: "#F16067" },
+  { country: "DR Congo", color: "#ADBCDD" },
+  { country: "India", color: "#ECC0A7" },
+  { country: "Kazakhstan", color: "#A28882" },
+  { country: "Switzerland", color: "#FB9635" },
+  { country: "Unknown", color: "#033550" }, // Placeholder for the unmatched color
+];
+
 // export const IndustralProjectsNode = [
 //   {
 //     value: "Australia",

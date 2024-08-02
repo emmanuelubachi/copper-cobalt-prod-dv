@@ -27,6 +27,7 @@ import { BorderPost } from "@/types/map";
 
 import socioEconomicData from "@/data/map/additional_info/socio_economic_impact.json";
 import environmantalImpactData from "@/data/map/additional_info/environmental_impact.json";
+import { countriesWithColors } from "@/constants/application";
 
 type MapProps = {
   geojsonData: GeoJSONFeatureCollection;
@@ -116,44 +117,7 @@ export default function MainMap({
     EnvironmentalImpactData,
   ]);
 
-  // useEffect(() => {
-  //   if (isInternationalRouteVisible) {
-  //     setIntRoute(InternationalRoutesData);
-  //   }
-  // }, [isInternationalRouteVisible, InternationalRoutesData]);
-
-  // useEffect(() => {
-  //   if (isBorderPostVisible) {
-  //     setBorderPosts(BorderPostData);
-  //   }
-  // }, [isBorderPostVisible, BorderPostData]);
-
-  // useEffect(() => {
-  //   console.log("border", BorderPostData);
-  //   // console.log("export", isExportPortVisible);
-  // }, [BorderPostData, isExportPortVisible, isBorderPostVisible]);
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     if (mapRef.current) {
-  //       mapRef.current.on("load", () => {
-  //         if (
-  //           theme === "dark" ||
-  //           (theme === "system" && systemTheme === "dark")
-  //         ) {
-  //           setMapStyle("mapbox://styles/mapbox/dark-v10");
-  //         } else {
-  //           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
-  //         }
-  //       });
-  //     }
-  //   }, 1000); // 1 second delay
-
-  //   return () => clearTimeout(timeout);
-  // }, [theme, systemTheme]);
-
   // Trigger zoom-in animation on map load
-
   useEffect(() => {
     const handleZoomIn = () => {
       if (mapRef.current) {
@@ -264,28 +228,6 @@ export default function MainMap({
     ],
   );
 
-  const fr_countriesWithColors = [
-    { country: "australie", color: "#546475" },
-    { country: "canada", color: "#13B8B1" },
-    { country: "chine", color: "#F16067" },
-    { country: "rdcongo", color: "#ADBCDD" },
-    { country: "inde", color: "#ECC0A7" },
-    { country: "kazakhstan", color: "#A28882" },
-    { country: "suisse", color: "#FB9635" },
-    { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
-  ];
-
-  const countriesWithColors = [
-    { country: "Australia", color: "#546475" },
-    { country: "Canada", color: "#13B8B1" },
-    { country: "China", color: "#F16067" },
-    { country: "DR Congo", color: "#ADBCDD" },
-    { country: "India", color: "#ECC0A7" },
-    { country: "Kazakhstan", color: "#A28882" },
-    { country: "Switzerland", color: "#FB9635" },
-    { country: "Unknown", color: "#033550" }, // Placeholder for the unmatched color
-  ];
-
   return (
     <Map
       ref={mapRef}
@@ -376,18 +318,6 @@ export default function MainMap({
         </Source>
       )}
 
-      {isBorderPostVisible &&
-        borderPosts &&
-        borderPosts.features.map((feature: any, index: number) => (
-          <Marker
-            key={index}
-            longitude={feature.geometry.coordinates[0]}
-            latitude={feature.geometry.coordinates[1]}
-            color="#F97316"
-            style={{ cursor: "pointer" }}
-          ></Marker>
-        ))}
-
       {isInternationalRouteVisible && (
         <Source id="intRoute" type="geojson" data={intRoute}>
           <Layer
@@ -406,6 +336,18 @@ export default function MainMap({
           />
         </Source>
       )}
+
+      {isBorderPostVisible &&
+        borderPosts &&
+        borderPosts.features.map((feature: any, index: number) => (
+          <Marker
+            key={index}
+            longitude={feature.geometry.coordinates[0]}
+            latitude={feature.geometry.coordinates[1]}
+            color="#F97316"
+            style={{ cursor: "pointer" }}
+          ></Marker>
+        ))}
 
       {isExportPortVisible &&
         exportPorts &&
@@ -493,3 +435,61 @@ export default function MainMap({
     </Map>
   );
 }
+
+const CustomClusterMarker = ({
+  longitude,
+  latitude,
+  pointCount,
+}: {
+  longitude: number;
+  latitude: number;
+  pointCount: number;
+}) => (
+  <Marker longitude={longitude} latitude={latitude}>
+    <div
+      style={{
+        backgroundColor: "#84cc16",
+        width: `${10 + (pointCount / 100) * 20}px`,
+        height: `${10 + (pointCount / 100) * 20}px`,
+        borderRadius: "50%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        fontSize: "12px",
+      }}
+    >
+      {pointCount}
+    </div>
+  </Marker>
+);
+
+// useEffect(() => {
+//   const timeout = setTimeout(() => {
+//     if (mapRef.current) {
+//       mapRef.current.on("load", () => {
+//         if (
+//           theme === "dark" ||
+//           (theme === "system" && systemTheme === "dark")
+//         ) {
+//           setMapStyle("mapbox://styles/mapbox/dark-v10");
+//         } else {
+//           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
+//         }
+//       });
+//     }
+//   }, 1000); // 1 second delay
+
+//   return () => clearTimeout(timeout);
+// }, [theme, systemTheme]);
+
+// const fr_countriesWithColors = [
+//   { country: "australie", color: "#546475" },
+//   { country: "canada", color: "#13B8B1" },
+//   { country: "chine", color: "#F16067" },
+//   { country: "rdcongo", color: "#ADBCDD" },
+//   { country: "inde", color: "#ECC0A7" },
+//   { country: "kazakhstan", color: "#A28882" },
+//   { country: "suisse", color: "#FB9635" },
+//   { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
+// ];
