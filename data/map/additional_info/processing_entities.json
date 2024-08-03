@@ -1,0 +1,256 @@
+{
+  "meta": [
+    {
+      "name": "project_name",
+      "type": "String"
+    },
+    {
+      "name": "geographic_coordinates",
+      "type": "String"
+    },
+    {
+      "name": "latitude_longitude",
+      "type": "String"
+    },
+    {
+      "name": "longitude",
+      "type": "String"
+    },
+    {
+      "name": "latitude",
+      "type": "String"
+    },
+    {
+      "name": "characteristics",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "annual_production",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "owners_shareholders",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "nationality",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "iso3",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "affiliation",
+      "type": "Nullable(String)"
+    },
+    {
+      "name": "sources",
+      "type": "Nullable(String)"
+    }
+  ],
+  "data": [
+    {
+      "project_name": "RUBAMIN CONGO",
+      "geographic_coordinates": "10° 35' 59.99\"S, 26° 44' 23.99\"E",
+      "latitude_longitude": "-10.599997, 26.739997",
+      "longitude": "26.739997",
+      "latitude": "-10.599997",
+      "characteristics": "Rubamin SARL, one of the first ISO 9001 and 14001 companies in the Democratic Republic of Congo (DRC), is part of an Indian multinational consortium that has been operating for over ten years in Likasi, in the copper-rich province of Haut-Katanga. Rubamin is established as one of the region's leading manufacturers of copper wafers.",
+      "annual_production": "13,212.01 tonnes Cu / 590.84 tonnes Co",
+      "owners_shareholders": null,
+      "nationality": "India",
+      "iso3": "IND",
+      "affiliation": null,
+      "sources": "https://www.rubamindrc.com"
+    },
+    {
+      "project_name": "Chengtun Congo Minerals SA (CCM)",
+      "geographic_coordinates": "10°37'19.030\" S, 25°28'23.831\" E",
+      "latitude_longitude": "-10.621952749999789, 25.473286464174663",
+      "longitude": "25.473286464174663",
+      "latitude": "-10.621952749999789",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": "Chengtun Mining Group",
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "Tengyan Cobalt and Copper Resources Ltd (TCC)",
+      "geographic_coordinates": "10° 38' 13\" S, 25° 28' 41\" E",
+      "latitude_longitude": "-10.636944, 25.478056",
+      "longitude": "25.478056",
+      "latitude": "-10.636944",
+      "characteristics": "TCC was originally a processing company that acquired a mining permit comprising 11 mining squares.",
+      "annual_production": "28,161.61 tonnes Cu / 1,955.75 tonnes Co",
+      "owners_shareholders": "Tengyuan Cobalt",
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "Usine KMT",
+      "geographic_coordinates": "10° 38' 24\"S,25° 25' 12\"E",
+      "latitude_longitude": "-10.640000, 25.420000",
+      "longitude": "25.420000",
+      "latitude": "-10.640000",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": null,
+      "nationality": null,
+      "iso3": null,
+      "affiliation": "Metalkor",
+      "sources": null
+    },
+    {
+      "project_name": "HANRUI METAL CONGO Sarl (HMC SARL)",
+      "geographic_coordinates": "10° 38' 34\"S 25° 28' 11\"E",
+      "latitude_longitude": "-10.642778, 25.469722",
+      "longitude": "25.469722",
+      "latitude": "-10.642778",
+      "characteristics": "Annual production capacity of 5,000 tonnes of cobalt cathodes (cobalt ≥99.80%) and 20,000 tonnes of copper cathodes (LME A grade copper)",
+      "annual_production": "27,069.61 tonnes Cu / 1,589.78 tonnes Co",
+      "owners_shareholders": "Hanrui Cobalt",
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "Thomas Mining",
+      "geographic_coordinates": "10° 40' 3\" S 25° 28' 59\"E",
+      "latitude_longitude": "-10.667500, 25.483056",
+      "longitude": "25.483056",
+      "latitude": "-10.667500",
+      "characteristics": null,
+      "annual_production": "12,414.30 tonnes Cu / 1,644.44 tonnes Co",
+      "owners_shareholders": null,
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "KTC Kamoto Concentrator",
+      "geographic_coordinates": "10° 41' 59.9994\"S,25° 23' 59.9994\"E",
+      "latitude_longitude": "-10.700000, 25.400000",
+      "longitude": "25.400000",
+      "latitude": "-10.700000",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": null,
+      "nationality": null,
+      "iso3": null,
+      "affiliation": "Kamoto Copper Mining",
+      "sources": null
+    },
+    {
+      "project_name": "Lualaba Copper Smelter (LCS SAS)",
+      "geographic_coordinates": "10°49.718' S, 25°41.545' E",
+      "latitude_longitude": "-10.828635, 25.692418",
+      "longitude": "25.692418",
+      "latitude": "-10.828635",
+      "characteristics": "The Lualaba Copper Smelter is the first large modern pyro-metallurgical copper refinery built in the Democratic Republic of the Congo. It is about 40 kilometers from Kamoa-Kakula, via the recently constructed bypass road reserved for this purpose.",
+      "annual_production": "67,679.86 tonnes Cu",
+      "owners_shareholders": "China Nonferrous Metal Mining (CNMC) (60%), Yunan Copper Mining (40%)",
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "HUACHIN METAL LEACH SPRL",
+      "geographic_coordinates": "11°0'1.012\" S, 26°42'29.784\" E",
+      "latitude_longitude": "-11.00028109228805, 26.708273526174345",
+      "longitude": "26.708273526174345",
+      "latitude": "-11.00028109228805",
+      "characteristics": null,
+      "annual_production": "23,939.79 tonnes Cu",
+      "owners_shareholders": "SINO-METAL LEACH/HUACHIN Sarl/Chebib Moukachar",
+      "nationality": "China/Lebanon",
+      "iso3": "CHN/LBN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "Congo Dongfang International Mining (CDM)",
+      "geographic_coordinates": "11° 35' 59.9994\"S, 27° 28' 48\"E",
+      "latitude_longitude": "-11.600000, 27.480000",
+      "longitude": "27.480000",
+      "latitude": "-11.600000",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": "Zhejiang Huayou Cobalt",
+      "nationality": "China",
+      "iso3": "CHN",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "CONGO LOYAL WILL MINING",
+      "geographic_coordinates": "11° 36' 35.9994\"S, 27° 30' 0\"E",
+      "latitude_longitude": "-11.610000, 27.500000",
+      "longitude": "27.500000",
+      "latitude": "-11.610000",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": null,
+      "nationality": null,
+      "iso3": null,
+      "affiliation": null,
+      "sources": "https://congomines.org/drc_companies/86-congo-loyal-will-mining"
+    },
+    {
+      "project_name": "OM METALS RESOURCES SPRL (OMR)",
+      "geographic_coordinates": "11°38'35.992\" S, 27°29'10.771\" E",
+      "latitude_longitude": "-11.6433312, 27.4863255",
+      "longitude": "27.4863255",
+      "latitude": "-11.6433312",
+      "characteristics": null,
+      "annual_production": "4,856.00 tonnes Cu",
+      "owners_shareholders": "JAIN RAKESH & ARUN KUMAR",
+      "nationality": "India",
+      "iso3": "IND",
+      "affiliation": null,
+      "sources": null
+    },
+    {
+      "project_name": "SOMIKA",
+      "geographic_coordinates": "11°42'20.628\" S, 27°25'3.274\" E",
+      "latitude_longitude": "-11.70573001785185, 27.417576020630154",
+      "longitude": "27.417576020630154",
+      "latitude": "-11.70573001785185",
+      "characteristics": "The Kipushi plant was commissioned in 2001, making it one of the first treatment plants in the country. Located in the city of Lubumbashi, the Somika Kipushi plant is a major producer of copper cathodes and cobalt (II) hydroxide. Copper and cobalt processing plant: This hydrometallurgical facility produces over 24,000 tonnes per year of copper cathodes and 3,000 tonnes per year of cobalt (II) hydroxide. Feed material for the spiral concentrates comes from our Lupoto DMS plant and from bottom ore from other captive mines owned by Somika.",
+      "annual_production": null,
+      "owners_shareholders": null,
+      "nationality": "India",
+      "iso3": "IND",
+      "affiliation": "Somika",
+      "sources": "https://www.somika.com/process_plants"
+    },
+    {
+      "project_name": "STL SA",
+      "geographic_coordinates": "11° 44' 24\"S,27° 29' 23.9994\"E",
+      "latitude_longitude": "-11.740000, 27.490000",
+      "longitude": "27.490000",
+      "latitude": "-11.740000",
+      "characteristics": null,
+      "annual_production": null,
+      "owners_shareholders": null,
+      "nationality": null,
+      "iso3": null,
+      "affiliation": null,
+      "sources": null
+    }
+  ],
+  "rows": 22,
+  "statistics": {
+    "elapsed": 0.026251245,
+    "rows_read": 22,
+    "bytes_read": 7385
+  }
+}

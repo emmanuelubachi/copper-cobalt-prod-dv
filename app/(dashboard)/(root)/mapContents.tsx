@@ -2,24 +2,21 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MapRef, Popup, Marker } from "react-map-gl";
+import Supercluster, { AnyProps, PointFeature } from "supercluster";
+
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import { RiMapPin2Fill } from "@remixicon/react";
 import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
-import Supercluster, { AnyProps, PointFeature } from "supercluster";
+
+// Import map data
+import active_sites from "@/data/map/mining_activities/active_sites.json";
+import inactive_sites from "@/data/map/mining_activities/inactive_sites.json";
+import processing_entities from "@/data/map/additional_info/processing_entities.json";
 
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mining-activites/artisanal-content";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
-
-// Import map data
-// TODO: use tinybird api or local data
-import {
-  active_sites,
-  inactive_sites,
-  processing_entities,
-} from "@/data/mapData";
 
 type MapContentsProps = {
   reference: React.RefObject<MapRef>;
@@ -43,8 +40,17 @@ export default function MapContents({ reference }: MapContentsProps) {
   const [processingEntities, setProcessingEntities] = useState<
     ProcessingEntities[]
   >([]);
-  const [clusters, setClusters] = useState<any[]>([]);
-  const [supercluster, setSupercluster] = useState<Supercluster | null>(null);
+
+  const [activeClusters, setActiveClusters] = useState<any[]>([]);
+  const [inactiveClusters, setInactiveClusters] = useState<any[]>([]);
+  const [processingClusters, setProcessingClusters] = useState<any[]>([]);
+
+  const [activeSupercluster, setActiveSupercluster] =
+    useState<Supercluster | null>(null);
+  const [inactiveSupercluster, setInactiveSupercluster] =
+    useState<Supercluster | null>(null);
+  const [processingSupercluster, setProcessingSupercluster] =
+    useState<Supercluster | null>(null);
   const [zoom, setZoom] = useState(10);
 
   const {
@@ -93,8 +99,17 @@ export default function MapContents({ reference }: MapContentsProps) {
     }
   }, [mapRef]);
 
+  const createSupercluster = (points: PointFeature<AnyProps>[]) => {
+    const index = new Supercluster({
+      radius: 40,
+      maxZoom: 16,
+    });
+    index.load(points);
+    return index;
+  };
+
   useEffect(() => {
-    const points: PointFeature<AnyProps>[] = processingEntities.map((site) => ({
+    const activePoints: PointFeature<AnyProps>[] = activeSites.map((site) => ({
       type: "Feature",
       properties: {
         cluster: false,
@@ -102,18 +117,45 @@ export default function MapContents({ reference }: MapContentsProps) {
       },
       geometry: {
         type: "Point",
-        coordinates: [parseFloat(site.longitude), parseFloat(site.latitude)],
+        coordinates: [site.longitude, site.latitude],
       },
     }));
 
-    // Create supercluster instance
-    const index = new Supercluster({
-      radius: 40,
-      maxZoom: 16,
-    });
+    const inactivePoints: PointFeature<AnyProps>[] = inactiveSites.map(
+      (site) => ({
+        type: "Feature",
+        properties: {
+          cluster: false,
+          ...site,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [site.longitude, site.latitude],
+        },
+      }),
+    );
 
-    index.load(points);
-    setSupercluster(index);
+    const processingPoints: PointFeature<AnyProps>[] = processingEntities.map(
+      (site) => ({
+        type: "Feature",
+        properties: {
+          cluster: false,
+          ...site,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [parseFloat(site.longitude), parseFloat(site.latitude)],
+        },
+      }),
+    );
+
+    const activeIndex = createSupercluster(activePoints);
+    const inactiveIndex = createSupercluster(inactivePoints);
+    const processingIndex = createSupercluster(processingPoints);
+
+    setActiveSupercluster(activeIndex);
+    setInactiveSupercluster(inactiveIndex);
+    setProcessingSupercluster(processingIndex);
 
     if (mapRef.current) {
       const bounds = mapRef.current.getBounds().toArray().flat() as [
@@ -122,10 +164,22 @@ export default function MapContents({ reference }: MapContentsProps) {
         number,
         number,
       ];
-      const clusters = index.getClusters(bounds, Math.floor(zoom));
-      setClusters(clusters);
+
+      const activeClusters = activeIndex.getClusters(bounds, Math.floor(zoom));
+      const inactiveClusters = inactiveIndex.getClusters(
+        bounds,
+        Math.floor(zoom),
+      );
+      const processingClusters = processingIndex.getClusters(
+        bounds,
+        Math.floor(zoom),
+      );
+
+      setActiveClusters(activeClusters);
+      setInactiveClusters(inactiveClusters);
+      setProcessingClusters(processingClusters);
     }
-  }, [processingEntities, zoom, mapRef]);
+  }, [activeSites, inactiveSites, processingEntities, zoom, mapRef]);
 
   // Set selected site on page load by searchParam
   useEffect(() => {
@@ -193,7 +247,9 @@ export default function MapContents({ reference }: MapContentsProps) {
   ]);
 
   const handleArtisanalSiteClick = useCallback(
-    (site_name: string, latitude: number, longitude: number) => {
+    (site: any, latitude: number, longitude: number) => {
+      console.log(site);
+      const site_name = site.site_name;
       router.push(
         pathname +
           "?" +
@@ -205,16 +261,20 @@ export default function MapContents({ reference }: MapContentsProps) {
       setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
       if (mapRef.current) {
+        const mapzoom = mapRef.current.getZoom();
+        const newzoom = mapzoom > 10 ? mapzoom + 0.5 : 10;
+        const newmobilezoom = mapzoom > 9 ? mapzoom + 0.5 : 9;
+
         isMobile
           ? mapRef.current.flyTo({
               center: [longitude, latitude - 0.1],
               duration: 1500,
-              zoom: 9,
+              zoom: newmobilezoom,
             })
           : mapRef.current.flyTo({
               center: [longitude, latitude],
               duration: 1500,
-              zoom: 10,
+              zoom: newzoom,
             });
       }
     },
@@ -250,135 +310,113 @@ export default function MapContents({ reference }: MapContentsProps) {
     [closeMapDetails, mapRef, setSelectedSite],
   );
 
+  const renderClusters = (
+    clusters: any[],
+    supercluster: Supercluster | null,
+    markercolor: string,
+    color: string,
+    background: string,
+    handleClick: any,
+  ) => {
+    return clusters.map((cluster, index) => {
+      const [longitude, latitude] = cluster.geometry.coordinates;
+      const { cluster: isCluster, point_count: pointCount } =
+        cluster.properties;
+
+      if (isCluster) {
+        return (
+          <Marker
+            key={`cluster-${index}`}
+            longitude={longitude}
+            latitude={latitude}
+            anchor="bottom"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              const expansionZoom = Math.min(
+                supercluster?.getClusterExpansionZoom(cluster.id) || 16,
+                20,
+              );
+
+              if (mapRef.current) {
+                mapRef.current.flyTo({
+                  center: [longitude, latitude],
+                  duration: 1000,
+                  zoom: expansionZoom,
+                });
+              }
+            }}
+          >
+            <div className={`rounded-full ${background} p-2`}>
+              <div
+                className={`${color} p-3 text-sm font-bold text-white dark:text-black`}
+                style={{
+                  width: `${10 + (pointCount / 15) * 20}px`,
+                  height: `${10 + (pointCount / 15) * 20}px`,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {pointCount}
+              </div>
+            </div>
+          </Marker>
+        );
+      }
+
+      return (
+        <Marker
+          key={`processing-${index}`}
+          longitude={parseFloat(cluster.properties.longitude)}
+          latitude={parseFloat(cluster.properties.latitude)}
+          anchor="bottom"
+          color={markercolor}
+          style={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.originalEvent.stopPropagation();
+            handleClick(
+              cluster.properties,
+              parseFloat(cluster.properties.latitude),
+              parseFloat(cluster.properties.longitude),
+            );
+          }}
+        ></Marker>
+      );
+    });
+  };
+
   return (
     <>
       {isActiveSiteMarkersVisible &&
-        activeSites.map((site, index) => (
-          <Marker
-            key={`active-${index}`}
-            longitude={site.longitude}
-            latitude={site.latitude}
-            anchor="bottom"
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              handleArtisanalSiteClick(
-                site.site_name,
-                site.latitude,
-                site.longitude,
-              )
-            }
-          >
-            <RiMapPin2Fill
-              className={` ${
-                selectedSite === site.site_name
-                  ? "dark:fill-red-70 h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                  : "h-8 w-8 fill-cyan-600 stroke-cyan-700 dark:fill-cyan-500 dark:stroke-cyan-600"
-              }`}
-            />
-          </Marker>
-        ))}
+        renderClusters(
+          activeClusters,
+          activeSupercluster,
+          "rgb(6 182 212)",
+          "bg-cyan-500",
+          "bg-cyan-500/50",
+          handleArtisanalSiteClick,
+        )}
 
       {isInactiveSiteMarkersVisible &&
-        inactiveSites.map((site, index) => (
-          <Marker
-            key={`inactive-${index}`}
-            longitude={site.longitude}
-            latitude={site.latitude}
-            anchor="bottom"
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              handleArtisanalSiteClick(
-                site.site_name,
-                site.latitude,
-                site.longitude,
-              )
-            }
-          >
-            <RiMapPin2Fill
-              className={`${
-                selectedSite === site.site_name
-                  ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                  : "h-8 w-8 fill-neutral-300 stroke-neutral-400 dark:fill-neutral-400 dark:stroke-neutral-500"
-              }`}
-            />
-          </Marker>
-        ))}
+        renderClusters(
+          inactiveClusters,
+          inactiveSupercluster,
+          "rgb(115 115 115)",
+          "bg-neutral-500",
+          "bg-neutral-500/50",
+          handleArtisanalSiteClick,
+        )}
 
       {isProcessingEntiteMarkerVisible &&
-        clusters.map((cluster, index) => {
-          const [longitude, latitude] = cluster.geometry.coordinates;
-          const { cluster: isCluster, point_count: pointCount } =
-            cluster.properties;
-
-          if (isCluster) {
-            return (
-              <Marker
-                key={`cluster-${index}`}
-                longitude={longitude}
-                latitude={latitude}
-                anchor="bottom"
-                style={{ cursor: "pointer" }}
-                onClick={() => {
-                  const expansionZoom = Math.min(
-                    supercluster?.getClusterExpansionZoom(cluster.id) || 16,
-                    20,
-                  );
-
-                  if (mapRef.current) {
-                    mapRef.current.flyTo({
-                      center: [longitude, latitude],
-                      duration: 1000,
-                      zoom: expansionZoom,
-                    });
-                  }
-                }}
-              >
-                <div className="rounded-full bg-teal-500/50 p-2">
-                  <div
-                    className="bg-teal-500 p-3 text-sm font-bold text-white dark:text-black"
-                    style={{
-                      width: `${10 + (pointCount / 100) * 20}px`,
-                      height: `${10 + (pointCount / 100) * 20}px`,
-                      borderRadius: "50%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    {pointCount}
-                  </div>
-                </div>
-              </Marker>
-            );
-          }
-
-          return (
-            <Marker
-              key={`processing-${index}`}
-              longitude={parseFloat(cluster.properties.longitude)}
-              latitude={parseFloat(cluster.properties.latitude)}
-              anchor="bottom"
-              color={"rgba(20 184 166)"}
-              style={{ cursor: "pointer" }}
-              onClick={(e) => {
-                e.originalEvent.stopPropagation();
-                handleProcessingEntityClick(
-                  cluster.properties,
-                  parseFloat(cluster.properties.latitude),
-                  parseFloat(cluster.properties.longitude),
-                );
-              }}
-            >
-              {/* <RiMapPin2Fill
-                className={`${
-                  selectedSite === cluster.properties.project_name
-                    ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                    : "h-8 w-8 fill-teal-700 stroke-teal-50 dark:fill-teal-500 dark:stroke-teal-700"
-                }`}
-              /> */}
-            </Marker>
-          );
-        })}
+        renderClusters(
+          processingClusters,
+          processingSupercluster,
+          "rgb(20 184 166)",
+          "bg-teal-500",
+          "bg-teal-500/50",
+          handleProcessingEntityClick,
+        )}
 
       {popupInfo && (
         <Popup

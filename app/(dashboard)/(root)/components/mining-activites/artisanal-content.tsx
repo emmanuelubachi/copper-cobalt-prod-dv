@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Map from "react-map-gl";
-import { active_sites, inactive_sites } from "@/data/mapData";
-import { ArticanalsiteDetailsLabels } from "@/constants/application";
+
+import active_sites from "@/data/map/mining_activities/active_sites.json";
+import inactive_sites from "@/data/map/mining_activities/inactive_sites.json";
+
 import { ArtisanalSiteDetailsProps } from "@/types/map";
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -58,8 +60,6 @@ const ArtisanalSiteDetails = ({
       <h2 className="text-xl font-medium">{data.site_name}</h2>
 
       <div className="mb-4 flex shrink grow flex-col space-y-6 text-sm font-medium text-foreground">
-        {/* <div className="mb-4 flex shrink grow flex-col space-y-4 rounded-lg border p-2 shadow-lg"> */}
-
         <div className="grid gap-2">
           {data.province__territory && (
             <div>
@@ -126,57 +126,7 @@ const ArtisanalSiteDetails = ({
               </p>
             </div>
           )}
-
-          {/* {data.employees && (
-            <div>
-              <p>
-                <span className="font-medium text-foreground/70">
-                  Employees:{" "}
-                </span>
-                <span>{data.employees}</span>
-              </p>
-            </div>
-          )}
-
-          {data.geom && (
-            <div>
-              <p>
-                <span className="font-medium text-foreground/70">
-                  Geographical :{" "}
-                </span>
-                <span>{data.geom}</span>
-              </p>
-            </div>
-          )}
-
-          {data.cooperative_in_charge && (
-            <div>
-              <p>
-                <span className="font-medium text-foreground/70">
-                  Cooperative in charge:{" "}
-                </span>
-                <span>{data.cooperative_in_charge}</span>
-              </p>
-            </div>
-          )}
-
-          {data.cooperative_in_charge && (
-            <div>
-              <p>
-                <span className="font-medium text-foreground/70">
-                  Cooperative in charge:{" "}
-                </span>
-                <span>{data.cooperative_in_charge}</span>
-              </p>
-            </div>
-          )} */}
         </div>
-
-        {/* {ArticanalsiteDetailsLabels.map(({ key, label }) => (
-          <p key={key as string}>
-            <span className="font-semibold">{label}:</span> {site[key] ?? "N/A"}
-          </p>
-        ))} */}
       </div>
     </div>
   );
@@ -198,14 +148,13 @@ export function ArtisanalSiteContent({ site_name }: { site_name: string }) {
 
   return (
     <div className="mx-auto">
-      {/* <h1 className="text-3xl font-bold">selected site: {selectedSite}</h1> */}
       <SiteMap
         site_latitude={artisanal_site_details?.latitude}
         site_longitude={artisanal_site_details?.longitude}
       />
       <ArtisanalSiteDetails
         data={artisanal_site_details as ArtisanalSiteDetailsProps}
-        // className="p-4 sm:p-6"
+        className=""
       />
     </div>
   );
