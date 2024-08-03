@@ -22,7 +22,7 @@ export default function LargeScreenDrawer() {
     <>
       {mounted && (
         <div
-          className={`slide-right fixed bottom-0 z-[32] h-2/4 w-screen rounded-t-2xl bg-neutral-50 shadow-lg dark:bg-neutral-900 sm:right-0 sm:top-0 sm:h-screen sm:w-[25rem] sm:rounded-none xl:w-[30rem] ${isMapDetailsOpen ? "open" : ""}`}
+          className={`slide-right fixed bottom-0 z-[32] h-2/4 w-screen rounded-t-2xl bg-neutral-50 shadow-lg dark:bg-neutral-900 sm:right-0 sm:top-0 sm:h-screen sm:w-[25rem] sm:rounded-none 2xl:w-[30rem] ${isMapDetailsOpen ? "open" : ""}`}
         >
           <div className="flex h-full w-full">
             {isMapDetailsOpen && (

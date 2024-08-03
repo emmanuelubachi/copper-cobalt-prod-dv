@@ -200,6 +200,7 @@ export default function MainMap({
       const { point } = event;
       const features = mapRef.current?.queryRenderedFeatures(point);
       const clickedFeature = features && features[0];
+
       if (clickedFeature && clickedFeature.properties) {
         if (clickedFeature.properties.Code) {
           const site_name = clickedFeature.properties._project_id;
@@ -621,74 +622,3 @@ export default function MainMap({
     </Map>
   );
 }
-
-{
-  /* {isSocioEconomicVisible &&
-        socioEconomics &&
-        socioEconomics.map((socioEconomicData: any, index: number) => (
-          <Marker
-            key={index}
-            longitude={socioEconomicData.longitude}
-            latitude={socioEconomicData.latitude}
-            color="#84cc16"
-          ></Marker>
-        ))} */
-}
-
-// const CustomClusterMarker = ({
-//   longitude,
-//   latitude,
-//   pointCount,
-// }: {
-//   longitude: number;
-//   latitude: number;
-//   pointCount: number;
-// }) => (
-//   <Marker longitude={longitude} latitude={latitude}>
-//     <div
-//       style={{
-//         backgroundColor: "#84cc16",
-//         width: `${10 + (pointCount / 100) * 20}px`,
-//         height: `${10 + (pointCount / 100) * 20}px`,
-//         borderRadius: "50%",
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//         color: "#fff",
-//         fontSize: "12px",
-//       }}
-//     >
-//       {pointCount}
-//     </div>
-//   </Marker>
-// );
-
-// useEffect(() => {
-//   const timeout = setTimeout(() => {
-//     if (mapRef.current) {
-//       mapRef.current.on("load", () => {
-//         if (
-//           theme === "dark" ||
-//           (theme === "system" && systemTheme === "dark")
-//         ) {
-//           setMapStyle("mapbox://styles/mapbox/dark-v10");
-//         } else {
-//           setMapStyle("mapbox://styles/mapbox/outdoors-v11");
-//         }
-//       });
-//     }
-//   }, 1000); // 1 second delay
-
-//   return () => clearTimeout(timeout);
-// }, [theme, systemTheme]);
-
-// const fr_countriesWithColors = [
-//   { country: "australie", color: "#546475" },
-//   { country: "canada", color: "#13B8B1" },
-//   { country: "chine", color: "#F16067" },
-//   { country: "rdcongo", color: "#ADBCDD" },
-//   { country: "inde", color: "#ECC0A7" },
-//   { country: "kazakhstan", color: "#A28882" },
-//   { country: "suisse", color: "#FB9635" },
-//   { country: "unknown", color: "#033550" }, // Placeholder for the unmatched color
-// ];
