@@ -1,7 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Map from "react-map-gl";
-import { active_sites, inactive_sites } from "@/data/mapData";
+
+import active_sites from "@/data/map/mining_activities/active_sites.json";
+import inactive_sites from "@/data/map/mining_activities/inactive_sites.json";
+
 import { ArticanalsiteDetailsLabels } from "@/constants/application";
 import { ArtisanalSiteDetailsProps } from "@/types/map";
 

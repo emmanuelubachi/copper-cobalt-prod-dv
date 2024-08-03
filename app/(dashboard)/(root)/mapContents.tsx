@@ -2,24 +2,21 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MapRef, Popup, Marker } from "react-map-gl";
+import Supercluster, { AnyProps, PointFeature } from "supercluster";
+
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-import { RiMapPin2Fill } from "@remixicon/react";
 import useDeviceType from "@/hooks/useDeviceType";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
-import Supercluster, { AnyProps, PointFeature } from "supercluster";
+
+// Import map data
+import active_sites from "@/data/map/mining_activities/active_sites.json";
+import inactive_sites from "@/data/map/mining_activities/inactive_sites.json";
+import processing_entities from "@/data/map/additional_info/processing_entities.json";
 
 import { PopupContent } from "./components/popupContent";
 import { ArtisanalSiteContent } from "./components/mining-activites/artisanal-content";
 import { ArtisanalSite, ProcessingEntities } from "@/types";
-
-// Import map data
-// TODO: use tinybird api or local data
-import {
-  active_sites,
-  inactive_sites,
-  processing_entities,
-} from "@/data/mapData";
 
 type MapContentsProps = {
   reference: React.RefObject<MapRef>;
@@ -263,24 +260,28 @@ export default function MapContents({ reference }: MapContentsProps) {
       openMapDetails();
       setMapDetailsContent(<ArtisanalSiteContent site_name={site_name} />);
 
-      // if (mapRef.current) {
-      //   isMobile
-      //     ? mapRef.current.flyTo({
-      //         center: [longitude, latitude - 0.1],
-      //         duration: 1500,
-      //         zoom: 9,
-      //       })
-      //     : mapRef.current.flyTo({
-      //         center: [longitude, latitude],
-      //         duration: 1500,
-      //         zoom: 10,
-      //       });
-      // }
+      if (mapRef.current) {
+        const mapzoom = mapRef.current.getZoom();
+        const newzoom = mapzoom > 10 ? mapzoom + 0.5 : 10;
+        const newmobilezoom = mapzoom > 9 ? mapzoom + 0.5 : 9;
+
+        isMobile
+          ? mapRef.current.flyTo({
+              center: [longitude, latitude - 0.1],
+              duration: 1500,
+              zoom: newmobilezoom,
+            })
+          : mapRef.current.flyTo({
+              center: [longitude, latitude],
+              duration: 1500,
+              zoom: newzoom,
+            });
+      }
     },
     [
-      // mapRef,
+      mapRef,
       router,
-      // isMobile,
+      isMobile,
       pathname,
       openMapDetails,
       setSelectedSite,
@@ -349,8 +350,8 @@ export default function MapContents({ reference }: MapContentsProps) {
               <div
                 className={`${color} p-3 text-sm font-bold text-white dark:text-black`}
                 style={{
-                  width: `${10 + (pointCount / 100) * 20}px`,
-                  height: `${10 + (pointCount / 100) * 20}px`,
+                  width: `${10 + (pointCount / 15) * 20}px`,
+                  height: `${10 + (pointCount / 15) * 20}px`,
                   borderRadius: "50%",
                   display: "flex",
                   justifyContent: "center",
@@ -435,14 +436,4 @@ export default function MapContents({ reference }: MapContentsProps) {
       )}
     </>
   );
-}
-
-{
-  /* <RiMapPin2Fill
-                className={`${
-                  selectedSite === cluster.properties.project_name
-                    ? "h-12 w-12 animate-bounce fill-red-500 dark:fill-red-700"
-                    : "h-8 w-8 fill-teal-700 stroke-teal-50 dark:fill-teal-500 dark:stroke-teal-700"
-                }`}
-              /> */
 }
