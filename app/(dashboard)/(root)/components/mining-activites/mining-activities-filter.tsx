@@ -25,6 +25,7 @@ export function ArtisanalSites() {
     showInactiveSiteMarkers,
     toggleInactiveSiteMarkers,
   } = useMarkerVisibilityStore();
+
   const {
     isActiveSitesButtonVisible,
     toggleActiveSiteButton,

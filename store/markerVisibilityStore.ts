@@ -3,7 +3,9 @@ import { create } from "zustand";
 type MarkerVisibilityState = {
   isActiveSiteMarkersVisible: boolean;
   isInactiveSiteMarkersVisible: boolean;
+
   isProcessingEntiteMarkerVisible: boolean;
+
   isInternationalRouteVisible: boolean;
   isBorderPostVisible: boolean;
   isExportPortVisible: boolean;
@@ -39,7 +41,7 @@ const useMarkerVisibilityStore = create<
   MarkerVisibilityState & MarkerVisibilityActions
 >((set) => ({
   // active sites
-  isActiveSiteMarkersVisible: false,
+  isActiveSiteMarkersVisible: true,
   toggleActiveSiteMarkers: () =>
     set((state) => ({
       isActiveSiteMarkersVisible: !state.isActiveSiteMarkersVisible,
@@ -57,7 +59,7 @@ const useMarkerVisibilityStore = create<
   closeInactiveSiteMarkers: () => set({ isInactiveSiteMarkersVisible: false }),
 
   // processing entities
-  isProcessingEntiteMarkerVisible: false,
+  isProcessingEntiteMarkerVisible: true,
   toggleProcessingEntiteMarkers: () =>
     set((state) => ({
       isProcessingEntiteMarkerVisible: !state.isProcessingEntiteMarkerVisible,

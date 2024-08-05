@@ -1,15 +1,20 @@
+// used for map filter button search params state management
 import { create } from "zustand";
 
+// state
 type MapFilterState = {
   isActiveSitesButtonVisible: boolean;
   isInactiveSitesButtonVisible: boolean;
 };
 
+// action
 type MapFilterActions = {
+  // active buttons
   toggleActiveSiteButton: () => void;
   showActiveSiteButton: () => void;
   closeActiveSiteButton: () => void;
 
+  // inactive buttons
   toggleInactiveSiteButton: () => void;
   showInactiveSiteButton: () => void;
   closeInactiveSite: () => void;
@@ -17,7 +22,7 @@ type MapFilterActions = {
 
 const useMapFilterStore = create<MapFilterState & MapFilterActions>((set) => ({
   // initial state
-  isActiveSitesButtonVisible: false,
+  isActiveSitesButtonVisible: true,
   isInactiveSitesButtonVisible: false,
 
   // actions
