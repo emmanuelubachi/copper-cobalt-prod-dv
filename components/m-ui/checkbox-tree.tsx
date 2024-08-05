@@ -20,17 +20,14 @@ import { CheckAllIndustralProjects } from "@/constants/application";
 // Define props interface
 interface CheckBoxTreeWithFilterProps {
   nodes: Node[];
-  // checkedNodes: string[];
   expandedNodes: string[];
 }
 
 const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
   nodes,
-  // checkedNodes,
   expandedNodes,
 }) => {
   const { checkedLayers, setCheckedLayers } = useMapDetailsStore();
-  // const [checked, setChecked] = useState<string[]>(checkedNodes);
   const [expanded, setExpanded] = useState(expandedNodes);
   const [filterText, setFilterText] = useState("");
   const [filteredNodes, setFilteredNodes] = useState<Node[]>(nodes);
