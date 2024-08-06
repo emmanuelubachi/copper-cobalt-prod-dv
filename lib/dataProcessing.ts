@@ -10,6 +10,7 @@ import {
   ProjectSummary,
   YearlySummary,
 } from "@/types/projects";
+import { any } from "zod";
 
 export function transformMonthlyData(
   data: MonthlyProductionData[],
@@ -55,45 +56,129 @@ export function transformMonthlyData(
   return result.filter((monthData) => monthData.Cobalt || monthData.Copper);
 }
 
+// export function transformDestinationData(
+//   data: DestinationData[],
+// ): TDestinationData[] {
+//   return data
+//     .map((entry) => {
+//       const weight = parseFloat(entry["quantity_tons"]);
+//       const roundedWeight = weight.toFixed(1);
+//       return {
+//         destination: entry.destination,
+//         quantity_tons: roundedWeight.toLocaleString(),
+//         label: `${roundedWeight}T`,
+//       };
+//     })
+//     .sort(
+//       (a, b) =>
+//         parseFloat(b["quantity_tons"].replace(/,/g, "")) -
+//         parseFloat(a["quantity_tons"].replace(/,/g, "")),
+//     );
+// }
+
+interface AggregatedData {
+  [key: string]: {
+    destination: string;
+    quantity_tons: number;
+  };
+}
+
 export function transformDestinationData(
   data: DestinationData[],
 ): TDestinationData[] {
-  return data
-    .map((entry) => {
-      const weight = parseFloat(entry["quantity_tons"]);
-      const roundedWeight = weight.toFixed(1);
-      return {
-        destination: entry.destination,
-        quantity_tons: roundedWeight.toLocaleString(),
-        label: `${roundedWeight}T`,
-      };
-    })
-    .sort(
-      (a, b) =>
-        parseFloat(b["quantity_tons"].replace(/,/g, "")) -
-        parseFloat(a["quantity_tons"].replace(/,/g, "")),
-    );
+  // Step 1: Aggregate quantities based on _project_id and destination
+  const aggregatedData: AggregatedData = data.reduce(
+    (acc: AggregatedData, entry) => {
+      const key = `${entry._project_id}_${entry.destination}`;
+      if (!acc[key]) {
+        acc[key] = {
+          destination: entry.destination,
+          quantity_tons: 0,
+        };
+      }
+      acc[key].quantity_tons += parseFloat(entry.quantity_tons);
+      return acc;
+    },
+    {},
+  );
+
+  // Step 2: Transform aggregated data
+  const transformedData = Object.values(aggregatedData).map((entry) => {
+    const roundedWeight = entry.quantity_tons.toFixed(1);
+    return {
+      destination: entry.destination,
+      quantity_tons: roundedWeight.toLocaleString(),
+      label: `${roundedWeight}T`,
+    };
+  });
+
+  // Step 3: Sort the transformed data in descending order based on quantity_tons
+  return transformedData.sort(
+    (a, b) =>
+      parseFloat(b.quantity_tons.replace(/,/g, "")) -
+      parseFloat(a.quantity_tons.replace(/,/g, "")),
+  );
 }
+
+// export function transformSortTopDestination(
+//   data: DestinationData[],
+// ): TDestinationData[] {
+//   return data
+//     .map((entry) => {
+//       const weight = parseFloat(entry["quantity_tons"]);
+//       const roundedWeight = weight.toFixed(1);
+//       return {
+//         destination: entry.destination,
+//         quantity_tons: roundedWeight.toLocaleString(),
+//         label: `${roundedWeight}T`,
+//       };
+//     })
+//     .sort(
+//       (a, b) =>
+//         parseFloat(b["quantity_tons"].replace(/,/g, "")) -
+//         parseFloat(a["quantity_tons"].replace(/,/g, "")),
+//     )
+//     .slice(0, 5);
+// }
 
 export function transformSortTopDestination(
   data: DestinationData[],
 ): TDestinationData[] {
-  return data
-    .map((entry) => {
-      const weight = parseFloat(entry["quantity_tons"]);
-      const roundedWeight = weight.toFixed(1);
-      return {
-        destination: entry.destination,
-        quantity_tons: roundedWeight.toLocaleString(),
-        label: `${roundedWeight}T`,
-      };
-    })
-    .sort(
-      (a, b) =>
-        parseFloat(b["quantity_tons"].replace(/,/g, "")) -
-        parseFloat(a["quantity_tons"].replace(/,/g, "")),
-    )
-    .slice(0, 5);
+  // Step 1: Aggregate quantities based on _project_id and destination
+  const aggregatedData: AggregatedData = data.reduce(
+    (acc: AggregatedData, entry) => {
+      const key = `${entry._project_id}_${entry.destination}`;
+      if (!acc[key]) {
+        acc[key] = {
+          destination: entry.destination,
+          quantity_tons: 0,
+        };
+      }
+      acc[key].quantity_tons += parseFloat(entry.quantity_tons);
+      return acc;
+    },
+    {},
+  );
+
+  // Step 2: Transform aggregated data
+  const transformedData = Object.values(aggregatedData).map((entry) => {
+    const roundedWeight = entry.quantity_tons.toFixed(1);
+    return {
+      destination: entry.destination,
+      quantity_tons: roundedWeight.toLocaleString(),
+      label: `${roundedWeight}T`,
+    };
+  });
+
+  // Step 3: Sort the transformed data in descending order based on quantity_tons
+  const sortedData = transformedData.sort(
+    (a, b) =>
+      parseFloat(b.quantity_tons.replace(/,/g, "")) -
+      parseFloat(a.quantity_tons.replace(/,/g, "")),
+  );
+
+  // Step 4: Return the top 5 destinations
+  return sortedData.slice(0, 5);
 }
 
 type MiningData = {
