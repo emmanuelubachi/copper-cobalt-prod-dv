@@ -14,7 +14,7 @@ export const kpiData = [
     title: "Cobalt Transaction",
     description: "Total Cobalt Transaction (USD)",
     category: "cobalt",
-    value: "$8.6bn",
+    value: "$ - ",
     icon: DollarSign,
     process: 9,
     year: "2023",
@@ -34,7 +34,7 @@ export const kpiData = [
     title: "Copper Transaction",
     description: "Total Copper Transaction (USD)",
     category: "copper",
-    value: "$20.0bn",
+    value: "$ - ",
     icon: DollarSign,
     process: 50,
     year: "2023",
@@ -327,4 +327,4 @@ export const companyData = [
   },
 ];
 
-export const Years = ["2019", "2020", "2021", "2022", "2023"];
+export const Years = ["2022", "2023"];
