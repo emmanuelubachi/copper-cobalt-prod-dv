@@ -1,32 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
-
-import Link from "next/link";
-
-import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import { AreaChartRender } from "@/components/charts/areaChart";
+import { Card } from "@/components/ui/card";
 
 import {
   exportQuantityData,
   exportTransactionData,
   kpiData,
+  Years,
 } from "@/data/chartData";
 
 // import { currencyFormatter, quantityFormatter } from "@/lib/utils";
-import BarChartRender from "@/components/charts/barChart";
-import { SparkAreaChart } from "@tremor/react";
-import BarChart from "@/components/charts/echarts/barChart";
 import { InteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
 
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
@@ -47,16 +30,15 @@ import {
 import { DestinationSummary, ProjectSummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import ProductionKpi from "./components/production_kpi";
 
 export default function Dashboard() {
+  const [selectedYear, setSelectedYear] = useState<string>("2023");
   const [totalProd, setTotalProd] = useState<ProjectSummary[]>([]);
   const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coDestSum, setCoDestSum] = useState<DestinationSummary[]>([]);
   const [cuDestSum, setCuDestSum] = useState<DestinationSummary[]>([]);
-
-  // const [cuDestinationData, setCuDestinationData] = useState<
-  //   TDestinationData[]
-  // >([]);
 
   useEffect(() => {
     const fetchTotalProductionData = async () => {
@@ -81,7 +63,7 @@ export default function Dashboard() {
     const fetchkpiData = async () => {
       try {
         // Filter data based on _project_id
-        const filtered = kpiData.filter((row) => row.year === "2023");
+        const filtered = kpiData.filter((row) => row.year === selectedYear);
 
         setKpi(filtered);
       } catch (error) {
@@ -126,36 +108,42 @@ export default function Dashboard() {
     fetchTotalProductionData();
     fetchCoDestinationData();
     fetchCuDestinationData();
-  }, []);
+  }, [selectedYear]);
 
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
       <header className="items-center justify-between gap-6 space-y-4 sm:ml-1 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
-          Copper and Cobalt Production Overview
+          Copper and Cobalt Production Overview for {selectedYear}
         </h1>
+        <div className="flex items-start">
+          <ToggleGroup
+            type="single"
+            unselectable="off"
+            size={"sm"}
+            defaultValue={selectedYear}
+            onValueChange={(value) => {
+              if (value) setSelectedYear(value);
+            }}
+            className="rounded-md bg-accent p-1"
+          >
+            {Years.map((year) => (
+              <ToggleGroupItem
+                key={year}
+                value={year}
+                aria-label="Toggle bold"
+                className="data-[state=on]:bg-background"
+              >
+                {year}
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
+        </div>
       </header>
 
       <div className="flex flex-1 flex-col gap-4 md:gap-4">
         {/* KPI Cards */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {kpi.map((kpi, index) => (
-            <Card key={index} x-chunk="dashboard-01-chunk-0" className="__card">
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">
-                  {kpi.title}
-                </CardTitle>
-                {<kpi.icon className="h-6 w-6 text-muted-foreground" />}
-              </CardHeader>
-              <CardContent>
-                <div className="text-h4 font-bold">{kpi.value}</div>
-                <p className="text-xs text-muted-foreground">
-                  {kpi.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <ProductionKpi kpi={kpi} />
 
         <div className="grid items-start gap-4 xl:grid-cols-3">
           {/* Countries/Projects */}
