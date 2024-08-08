@@ -1,83 +1,83 @@
 import { DollarSign, Weight } from "lucide-react";
 
-export const kpiData = [
-  {
-    title: "Quantities Cobalt",
-    description: "Total Quantities Cobalt (T)",
-    category: "cobalt",
-    value: "139.8K",
-    icon: Weight,
-    process: 70,
-    year: "2023",
-  },
-  {
-    title: "Cobalt Transaction",
-    description: "Total Cobalt Transaction (USD)",
-    category: "cobalt",
-    value: "$ - ",
-    icon: DollarSign,
-    process: 9,
-    year: "2023",
-  },
-  {
-    title: "Quantities Copper",
-    // description: "+20.1% from last year. Total Quantities Copper (T)",
-    description: "Total Quantities Copper (T)",
+// export const kpiData = [
+//   {
+//     title: "Quantities Cobalt",
+//     description: "Total Quantities Cobalt (T)",
+//     category: "cobalt",
+//     value: "139.8K",
+//     icon: Weight,
+//     process: 70,
+//     year: "2023",
+//   },
+//   {
+//     title: "Cobalt Transaction",
+//     description: "Total Cobalt Transaction (USD)",
+//     category: "cobalt",
+//     value: "$ - ",
+//     icon: DollarSign,
+//     process: 9,
+//     year: "2023",
+//   },
+//   {
+//     title: "Quantities Copper",
+//     // description: "+20.1% from last year. Total Quantities Copper (T)",
+//     description: "Total Quantities Copper (T)",
 
-    category: "copper",
-    value: "2.8M",
-    icon: Weight,
-    process: 30,
-    year: "2023",
-  },
-  {
-    title: "Copper Transaction",
-    description: "Total Copper Transaction (USD)",
-    category: "copper",
-    value: "$ - ",
-    icon: DollarSign,
-    process: 50,
-    year: "2023",
-  },
-  {
-    title: "Quantities Cobalt",
-    description: "Total Quantities Cobalt (T)",
-    category: "cobalt",
-    value: "507.9K",
-    icon: Weight,
-    process: 70,
-    year: "2022",
-  },
-  {
-    title: "Cobalt Transaction",
-    description: "Total Cobalt Transaction (USD)",
-    category: "cobalt",
-    value: "$8.6bn",
-    icon: DollarSign,
-    process: 9,
-    year: "2022",
-  },
-  {
-    title: "Quantities Copper",
-    // description: "+20.1% from last year. Total Quantities Copper (T)",
-    description: "Total Quantities Copper (T)",
+//     category: "copper",
+//     value: "2.8M",
+//     icon: Weight,
+//     process: 30,
+//     year: "2023",
+//   },
+//   {
+//     title: "Copper Transaction",
+//     description: "Total Copper Transaction (USD)",
+//     category: "copper",
+//     value: "$ - ",
+//     icon: DollarSign,
+//     process: 50,
+//     year: "2023",
+//   },
+//   {
+//     title: "Quantities Cobalt",
+//     description: "Total Quantities Cobalt (T)",
+//     category: "cobalt",
+//     value: "507.9K",
+//     icon: Weight,
+//     process: 70,
+//     year: "2022",
+//   },
+//   {
+//     title: "Cobalt Transaction",
+//     description: "Total Cobalt Transaction (USD)",
+//     category: "cobalt",
+//     value: "$8.6bn",
+//     icon: DollarSign,
+//     process: 9,
+//     year: "2022",
+//   },
+//   {
+//     title: "Quantities Copper",
+//     // description: "+20.1% from last year. Total Quantities Copper (T)",
+//     description: "Total Quantities Copper (T)",
 
-    category: "copper",
-    value: "2.9M",
-    icon: Weight,
-    process: 30,
-    year: "2022",
-  },
-  {
-    title: "Copper Transaction",
-    description: "Total Copper Transaction (USD)",
-    category: "copper",
-    value: "$20.0bn",
-    icon: DollarSign,
-    process: 50,
-    year: "2022",
-  },
-];
+//     category: "copper",
+//     value: "2.9M",
+//     icon: Weight,
+//     process: 30,
+//     year: "2022",
+//   },
+//   {
+//     title: "Copper Transaction",
+//     description: "Total Copper Transaction (USD)",
+//     category: "copper",
+//     value: "$20.0bn",
+//     icon: DollarSign,
+//     process: 50,
+//     year: "2022",
+//   },
+// ];
 
 export const exportQuantityData = [
   {
@@ -327,4 +327,4 @@ export const companyData = [
   },
 ];
 
-export const Years = ["2022", "2023"];
+export const Years = ["2020", "2021", "2022", "2023"];
