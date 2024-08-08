@@ -35,7 +35,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import ProductionKpi from "./components/production_kpi";
 
 export default function Dashboard() {
-  const [selectedYear, setSelectedYear] = useState<string>("2023");
+  const [selectedYear, setSelectedYear] = useState<string>("2022");
   const [totalProd, setTotalProd] = useState<ProjectSummary[]>([]);
   const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coDestSum, setCoDestSum] = useState<DestinationSummary[]>([]);
