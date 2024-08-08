@@ -16,10 +16,30 @@ export function sliceData<T>(data: T[], count: number): T[] {
 }
 
 export function currencyFormatter(amount: number): string {
-  return `$${amount.toLocaleString("en-US")}`;
+  if (amount >= 1_000_000_000) {
+    return `$${(amount / 1_000_000_000).toFixed(1)}B`;
+  } else if (amount >= 1_000_000) {
+    return `$${(amount / 1_000_000).toFixed(1)}M`;
+  } else if (amount >= 1_000) {
+    return `$${(amount / 1_000).toFixed(1)}K`;
+  } else {
+    return `$${amount.toLocaleString("en-US")}`;
+  }
 }
 
 export function quantityFormatter(value: number): string {
+  if (value >= 1_000_000_000) {
+    return `${(value / 1_000_000_000).toFixed(1)}B`;
+  } else if (value >= 1_000_000) {
+    return `${(value / 1_000_000).toFixed(1)}M`;
+  } else if (value >= 1_000) {
+    return `${(value / 1_000).toFixed(1)}K`;
+  } else {
+    return value.toLocaleString();
+  }
+}
+
+export function quantityFormatterT(value: number): string {
   return `${value.toLocaleString()} T`;
 }
 

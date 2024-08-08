@@ -1,0 +1,110 @@
+[
+  {
+    "year": "2015",
+    "product": "Cobalt",
+    "quantity": "414920.0",
+    "transaction": "2419942993"
+  },
+  {
+    "year": "2015",
+    "product": "Copper",
+    "quantity": "1353554.2",
+    "transaction": "5627163582"
+  },
+  {
+    "year": "2016",
+    "product": "Cobalt",
+    "quantity": "295411.0",
+    "transaction": "1723290794"
+  },
+  {
+    "year": "2016",
+    "product": "Copper",
+    "quantity": "1541127.7",
+    "transaction": "4725181722"
+  },
+  {
+    "year": "2017",
+    "product": "Cobalt",
+    "quantity": "477498.4",
+    "transaction": "5192246291"
+  },
+  {
+    "year": "2017",
+    "product": "Copper",
+    "quantity": "1582860.9",
+    "transaction": "6185392644"
+  },
+  {
+    "year": "2018",
+    "product": "Cobalt",
+    "quantity": "639154.4",
+    "transaction": "10939815350"
+  },
+  {
+    "year": "2018",
+    "product": "Copper",
+    "quantity": "1834983.4",
+    "transaction": "8290721142"
+  },
+  {
+    "year": "2019",
+    "product": "Cobalt",
+    "quantity": "442123.6",
+    "transaction": "3810328864"
+  },
+  {
+    "year": "2019",
+    "product": "Copper",
+    "quantity": "1799693.4",
+    "transaction": "8066808373"
+  },
+  {
+    "year": "2020",
+    "product": "Cobalt",
+    "quantity": "383988.3",
+    "transaction": "3294665539"
+  },
+  {
+    "year": "2020",
+    "product": "Copper",
+    "quantity": "2009652.8",
+    "transaction": "10051289156"
+  },
+  {
+    "year": "2021",
+    "product": "Cobalt",
+    "quantity": "310833.4",
+    "transaction": "3859886811"
+  },
+  {
+    "year": "2021",
+    "product": "Copper",
+    "quantity": "1605089.4",
+    "transaction": "12487590161"
+  },
+  {
+    "year": "2022",
+    "product": "Cobalt",
+    "quantity": "507895.2",
+    "transaction": "8566100366"
+  },
+  {
+    "year": "2022",
+    "product": "Copper",
+    "quantity": "2897018.2",
+    "transaction": "19999495967"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "quantity": "139840.09",
+    "transaction": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "quantity": "2842021.88",
+    "transaction": "0"
+  }
+]
