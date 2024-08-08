@@ -5,13 +5,14 @@ import { Card } from "@/components/ui/card";
 import {
   exportQuantityData,
   exportTransactionData,
-  kpiData,
+  // kpiData,
   Years,
 } from "@/data/chartData";
 
 // import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import { InteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
 
+import kpiData from "@/data/overview/kpi_data.json";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
@@ -41,6 +42,20 @@ export default function Dashboard() {
   const [cuDestSum, setCuDestSum] = useState<DestinationSummary[]>([]);
 
   useEffect(() => {
+    const fetchkpiData = async () => {
+      try {
+        // Filter data based on _project_id
+        const filtered = kpiData.filter((row) => row.year === selectedYear);
+
+        setKpi(filtered);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing total industral projects production data:",
+          error,
+        );
+      }
+    };
+
     const fetchTotalProductionData = async () => {
       try {
         // Filter data based on _project_id
@@ -52,20 +67,6 @@ export default function Dashboard() {
         const totalProd = calculateProjectSums(exports);
 
         setTotalProd(totalProd);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing total industral projects production data:",
-          error,
-        );
-      }
-    };
-
-    const fetchkpiData = async () => {
-      try {
-        // Filter data based on _project_id
-        const filtered = kpiData.filter((row) => row.year === selectedYear);
-
-        setKpi(filtered);
       } catch (error) {
         console.error(
           "Error fetching and processing total industral projects production data:",
