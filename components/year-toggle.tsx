@@ -27,7 +27,7 @@ export default function YearToggle({
         <ToggleGroupItem
           key={year}
           value={year}
-          aria-label="Toggle bold"
+          aria-label={`Toggle year ${year}`}
           className="data-[state=on]:bg-background"
         >
           {year}
