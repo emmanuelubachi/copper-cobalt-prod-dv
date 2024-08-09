@@ -30,7 +30,7 @@ type kpiDataProp = {
   // process: number;
 }[];
 
-export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
+export default function KPI({ kpi }: { kpi: kpiDataProp }) {
   // const kpi1 = kpi[0];
   // const kpi2 = kpi[1];
   // const kpi3 = kpi[2];
@@ -38,9 +38,6 @@ export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
 
   const copperData = kpi.filter((row) => row.product === "Copper");
   const cobaltData = kpi.filter((row) => row.product === "Cobalt");
-
-  console.log("copperData", copperData);
-  // console.log("cobaltData", cobaltData);
 
   const data = [
     {
@@ -91,9 +88,10 @@ export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
               Cobalt
-            </CardTitle>
+            </h2>
+
             {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
           </CardHeader>
           <CardContent className="__card-content">
@@ -114,9 +112,9 @@ export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
               Cobalt
-            </CardTitle>
+            </h2>
             {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
           </CardHeader>
           <CardContent className="__card-content">
@@ -137,9 +135,9 @@ export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
       {copperData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
               Copper
-            </CardTitle>
+            </h2>
             {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
           </CardHeader>
           <CardContent className="__card-content">
@@ -160,9 +158,9 @@ export default function ProductionKpi({ kpi }: { kpi: kpiDataProp }) {
       {copperData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
               Copper
-            </CardTitle>
+            </h2>
             {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
           </CardHeader>
           <CardContent className="__card-content">

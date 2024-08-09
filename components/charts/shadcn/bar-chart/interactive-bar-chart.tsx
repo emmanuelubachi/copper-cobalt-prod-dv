@@ -31,6 +31,19 @@ type InteractiveBarChartProps = {
   footNote?: React.ReactNode;
 };
 
+type SInteractiveBarChartProps = {
+  title: string;
+  description: string;
+  config: ChartConfig;
+  chartData: {
+    exporter: string;
+    quantity: number;
+  }[];
+  xdataKey: string;
+  ydataKey: string;
+  footNote?: React.ReactNode;
+};
+
 export function InteractiveBarChart({ ...props }: InteractiveBarChartProps) {
   const chartConfig = props.config satisfies ChartConfig;
   const [activeChart, setActiveChart] =
@@ -112,6 +125,76 @@ export function InteractiveBarChart({ ...props }: InteractiveBarChartProps) {
               }
             />
             <Bar dataKey={activeChart} fill={`var(--color-${activeChart})`} />
+          </BarChart>
+        </ChartContainer>
+      </CardContent>
+    </Card>
+  );
+}
+
+export function SingleInteractiveBarChart({
+  ...props
+}: SInteractiveBarChartProps) {
+  const chartConfig = props.config satisfies ChartConfig;
+  // const [activeChart, setActiveChart] =
+  //   React.useState<keyof typeof chartConfig>("totalCopper");
+
+  const chartData = props.chartData;
+
+  const total = React.useMemo(
+    () => ({
+      quantity: chartData
+        .reduce((acc, curr) => acc + curr.quantity, 0)
+        .toFixed(0)
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+    }),
+    [chartData],
+  );
+
+  return (
+    <Card className="__card">
+      <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 md:flex-row">
+        <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
+          <CardTitle>{props.title}</CardTitle>
+          <CardDescription>{props.description}</CardDescription>
+        </div>
+      </CardHeader>
+      <CardContent className="px-2 sm:p-6">
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-[250px] w-full"
+        >
+          <BarChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey={props.xdataKey}
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={2}
+              tickFormatter={(value) => value.slice(0, 3)}
+              hide
+            />
+            <ChartTooltip
+              content={
+                <ChartTooltipContent
+                  className="w-[150px]"
+                  nameKey="views"
+                  labelFormatter={(value) => value.slice(0)}
+                />
+              }
+            />
+            <Bar
+              dataKey={props.ydataKey}
+              fill={`var(--color-${props.ydataKey})`}
+            />
           </BarChart>
         </ChartContainer>
       </CardContent>
