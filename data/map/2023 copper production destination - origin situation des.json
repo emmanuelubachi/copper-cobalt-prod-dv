@@ -26,7 +26,7 @@
   },
   {
     "_project_id": "ccr",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "1549.3589999999997"
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "_project_id": "hanrui_metal",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "334.10200000000003"
   },
   {
@@ -91,7 +91,7 @@
   },
   {
     "_project_id": "kamoa",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "3528.8883666"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "_project_id": "kcc",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "466.688"
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "_project_id": "kcc",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "1708.3529999999998"
   },
   {
@@ -246,12 +246,12 @@
   },
   {
     "_project_id": "metalkol",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "19325.809000000005"
   },
   {
     "_project_id": "metalkol",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "298.054"
   },
   {
@@ -261,7 +261,7 @@
   },
   {
     "_project_id": "metalkol",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "11183.477999999996"
   },
   {
@@ -316,12 +316,12 @@
   },
   {
     "_project_id": "mutanda",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "104.167"
   },
   {
     "_project_id": "mutanda",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "33.785"
   },
   {
@@ -331,7 +331,7 @@
   },
   {
     "_project_id": "mutanda",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "128.03199999999998"
   },
   {
@@ -346,7 +346,7 @@
   },
   {
     "_project_id": "somidez",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "quantity_tons": "4474.7300000000005"
   },
   {
