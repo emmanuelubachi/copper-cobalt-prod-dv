@@ -39,6 +39,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import KPI from "./components/kpi";
 import YearToggle from "@/components/year-toggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import BarChartRender from "@/components/charts/barChart";
 
 type xhistoryProps = {
   // year: string;
@@ -49,7 +50,7 @@ type xhistoryProps = {
 
 const coXhistoryChartConfig = {
   views: {
-    label: "Volume",
+    label: "Quantity",
   },
   quantity: {
     label: "Quantity",
@@ -59,7 +60,7 @@ const coXhistoryChartConfig = {
 
 const cuXhistoryChartConfig = {
   views: {
-    label: "Volume",
+    label: "Quantity",
   },
   quantity: {
     label: "Quantity",
@@ -182,6 +183,16 @@ export default function Dashboard() {
     fetchCuDestinationData();
   }, [selectedYear]);
 
+  // const chartConfig = {
+  //   yAxis: {
+  //     label: `Qty (T) ${" "}`,
+  //     color: "hsl(var(--chart-6))",
+  //   },
+  //   label: {
+  //     color: "hsl(var(--background))",
+  //   },
+  // }
+
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
       <header className="items-center justify-between gap-6 space-y-4 sm:ml-1 lg:flex lg:space-y-0">
@@ -213,7 +224,7 @@ export default function Dashboard() {
               <TabsContent value="cobalt">
                 <SingleInteractiveBarChart
                   title="Exports of Cobalt by Projects"
-                  description={`${selectedYear} Production Volume(T)`}
+                  description={`${selectedYear} Production Quantity(T)`}
                   config={coXhistoryChartConfig}
                   chartData={coXhistory}
                   xdataKey="exporter"
@@ -223,7 +234,7 @@ export default function Dashboard() {
               <TabsContent value="copper">
                 <SingleInteractiveBarChart
                   title="Exports of Copper by Projects"
-                  description={`${selectedYear} Production Volume(T)`}
+                  description={`${selectedYear} Production Quantity(T)`}
                   config={cuXhistoryChartConfig}
                   chartData={cuXhistory}
                   xdataKey="exporter"
@@ -242,9 +253,9 @@ export default function Dashboard() {
                   chartData={coDestSum}
                   yAxisDataKey="destination"
                   xAxisDataKey="totalQuantityTons"
-                  barDataKey="totalQuantityTons"
-                  yAxisLabelDataKey="Cobalt"
-                  barLabelDataKey="label"
+                  // barDataKey="totalQuantityTons"
+                  // yAxisLabelDataKey="Cobalt"
+                  // barLabelDataKey="label"
                   // footNote={
                   //   <>
                   //     <div className="leading-none text-muted-foreground">
@@ -254,6 +265,8 @@ export default function Dashboard() {
                   // }
                 />
 
+                {/* <BarChartRender chartData={cuDestSum} /> */}
+
                 <CustomLabelBarChart
                   title="Top Destinations of Copper Production in 2023"
                   description="Quantity in Tonnes"
@@ -261,9 +274,9 @@ export default function Dashboard() {
                   chartData={cuDestSum}
                   yAxisDataKey="destination"
                   xAxisDataKey="totalQuantityTons"
-                  barDataKey="totalQuantityTons"
-                  yAxisLabelDataKey="Copper"
-                  barLabelDataKey="label"
+                  // barDataKey="totalQuantityTons"
+                  // yAxisLabelDataKey="Copper"
+                  // barLabelDataKey="label"
                   // footNote={
                   //   <>
                   //     <div className="leading-none text-muted-foreground">

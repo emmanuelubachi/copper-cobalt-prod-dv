@@ -66,7 +66,7 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[284px] w-full"
+          className="aspect-auto h-[355px] w-full"
         >
           <AreaChart
             accessibilityLayer

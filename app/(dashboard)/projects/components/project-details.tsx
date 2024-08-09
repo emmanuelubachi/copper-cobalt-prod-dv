@@ -354,9 +354,9 @@ export default function ProjectDetails({
                 chartData={coDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                barDataKey="quantity_tons"
-                yAxisLabelDataKey="Cobalt"
-                barLabelDataKey="label"
+                // barDataKey="quantity_tons"
+                // yAxisLabelDataKey="Cobalt"
+                // barLabelDataKey="label"
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">
@@ -376,9 +376,9 @@ export default function ProjectDetails({
                 chartData={cuDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                barDataKey="quantity_tons"
-                yAxisLabelDataKey="Cobalt"
-                barLabelDataKey="label"
+                // barDataKey="quantity_tons"
+                // yAxisLabelDataKey="Cobalt"
+                // barLabelDataKey="label"
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">
