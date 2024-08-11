@@ -31,7 +31,7 @@
   },
   {
     "_project_id": "ccr",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "217.447"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "_project_id": "commus",
-    "destination": "GSM",
+    "destination": "China",
     "quantity_tons": "107.6"
   },
   {
     "_project_id": "commus",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "69.897"
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "_project_id": "hanrui_metal",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "54.61"
   },
   {
@@ -126,7 +126,7 @@
   },
   {
     "_project_id": "kcc",
-    "destination": "Glencore",
+    "destination": "Mozambique",
     "quantity_tons": "425.881"
   },
   {
@@ -171,7 +171,7 @@
   },
   {
     "_project_id": "kcc",
-    "destination": "Unknown",
+    "destination": "Tanzania",
     "quantity_tons": "1580.845"
   },
   {
@@ -221,12 +221,12 @@
   },
   {
     "_project_id": "lcs",
-    "destination": "Nypra",
+    "destination": "China",
     "quantity_tons": "29.262"
   },
   {
     "_project_id": "lcs",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "276.111"
   },
   {
@@ -271,7 +271,7 @@
   },
   {
     "_project_id": "metalkol",
-    "destination": "Unknown",
+    "destination": "Mozambique",
     "quantity_tons": "64.973"
   },
   {
@@ -281,7 +281,7 @@
   },
   {
     "_project_id": "mkm",
-    "destination": "Sanhe",
+    "destination": "China",
     "quantity_tons": "131.389"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "_project_id": "mkm",
-    "destination": "Unknown",
+    "destination": "Tanzania",
     "quantity_tons": "99.484"
   },
   {
@@ -361,7 +361,7 @@
   },
   {
     "_project_id": "sicomines",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "3005.042"
   },
   {
@@ -376,12 +376,12 @@
   },
   {
     "_project_id": "tcc",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "27.784"
   },
   {
     "_project_id": "thomas",
-    "destination": "Bridge",
+    "destination": "China",
     "quantity_tons": "62.587"
   },
   {

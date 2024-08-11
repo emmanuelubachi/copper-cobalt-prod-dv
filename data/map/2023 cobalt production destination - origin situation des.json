@@ -66,7 +66,7 @@
   },
   {
     "_project_id": "kcc",
-    "destination": "Unknown",
+    "destination": "Mozambique",
     "quantity_tons": "26.002"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "_project_id": "lr_sas",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "62.847"
   },
   {
@@ -111,7 +111,7 @@
   },
   {
     "_project_id": "metalkol",
-    "destination": "Ndola/Zambia",
+    "destination": "Zambia",
     "quantity_tons": "178.732"
   },
   {
@@ -121,7 +121,7 @@
   },
   {
     "_project_id": "metalkol",
-    "destination": "Unknown",
+    "destination": "South Africa",
     "quantity_tons": "263.956"
   },
   {
@@ -201,7 +201,7 @@
   },
   {
     "_project_id": "sicomines",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "543.2760000000001"
   },
   {
@@ -211,7 +211,7 @@
   },
   {
     "_project_id": "tcc",
-    "destination": "Unknown",
+    "destination": "China",
     "quantity_tons": "45.97767"
   },
   {
@@ -221,7 +221,7 @@
   },
   {
     "_project_id": "thomas",
-    "destination": "Hono",
+    "destination": "China",
     "quantity_tons": "92.32608"
   }
 ]
