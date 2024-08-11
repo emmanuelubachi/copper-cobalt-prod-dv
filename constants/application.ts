@@ -121,7 +121,7 @@ export const IndustralProjectsNode = [
   },
   {
     value: "Canada",
-    label: "Canada & China",
+    label: "Canada",
     children: [
       {
         value: "kamoa",
@@ -166,6 +166,10 @@ export const IndustralProjectsNode = [
         label: "La Compagnie Miniere De Musonoie Gl",
       },
       {
+        value: "congo_moon",
+        label: "Congo Moon Mining SARL",
+      },
+      {
         value: "divine",
         label: "Divine Land Mining SARL",
       },
@@ -198,8 +202,16 @@ export const IndustralProjectsNode = [
         label: "Societe Kai Peng Mining",
       },
       {
+        value: "kalongwe",
+        label: "Kalongwe Mining S.A",
+      },
+      {
         value: "kambove",
         label: "Kambove Mining SAS",
+      },
+      {
+        value: "kamoa_china",
+        label: "Kamoa Copper SA",
       },
       {
         value: "kfm",
@@ -242,12 +254,20 @@ export const IndustralProjectsNode = [
         label: "MMG Kinsevere SARL",
       },
       {
+        value: "mmt",
+        label: "Mineral Metal Technology SARL",
+      },
+      {
         value: "new_minerals",
         label: "New Minerals",
       },
       {
         value: "ruashi",
         label: "Ruashi Mining SPRL",
+      },
+      {
+        value: "sabwe",
+        label: "Sabwe Mining SARL",
       },
       {
         value: "shituru",
@@ -280,17 +300,14 @@ export const IndustralProjectsNode = [
     label: "DR Congo",
     children: [
       {
+        value: "amical",
+        label: "Amical Kakana Mining SPRL",
+      },
+      {
         value: "gcm",
         label: "GECAMINES",
       },
-      {
-        value: "kalongwe",
-        label: "Kalongwe Mining S.A",
-      },
-      {
-        value: "mmt",
-        label: "Mineral Metal Technology SARL",
-      },
+
       {
         value: "stl",
         label: "Societe Pour Le Traitement Du Terril De Lubumbashi",
@@ -377,34 +394,17 @@ export const IndustralProjectsNode = [
       },
     ],
   },
-  {
-    value: "Unknown",
-    label: "Unknown",
-    children: [
-      {
-        value: "amical",
-        label: "Amical Kakana Mining SPRL",
-      },
-      {
-        value: "congo_moon",
-        label: "Congo Moon Mining SARL",
-      },
-      {
-        value: "societe_kasonta",
-        label: "Societe Miniere De Kasonta",
-      },
-    ],
-  },
-  {
-    value: "USA",
-    label: "USA",
-    children: [
-      {
-        value: "sabwe",
-        label: "Sabwe Mining SARL",
-      },
-    ],
-  },
+  // {
+  //   value: "Unknown",
+  //   label: "Unknown",
+  //   children: [
+
+  //     {
+  //       value: "societe_kasonta",
+  //       label: "Societe Miniere De Kasonta",
+  //     },
+  //   ],
+  // },
 ];
 
 export const CheckAllIndustralProjects = [
