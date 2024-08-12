@@ -88,11 +88,11 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-chart6">
               Cobalt
             </h2>
 
-            {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
+            {/* {<Weight className="m-2 h-6 w-6 text-chart6/50" />} */}
           </CardHeader>
           <CardContent className="__card-content">
             <h3 className="text-h4 font-bold">
@@ -112,15 +112,14 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-chart6">
               Cobalt
             </h2>
-            {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
+            {/* {<DollarSign className="m-2 h-6 w-6 text-chart6/50" />} */}
           </CardHeader>
           <CardContent className="__card-content">
             <h3 className="text-h4 font-bold">
               {currencyFormatter(parseFloat(cobaltData[0].transaction))}{" "}
-              {/* <span className="text-h6 text-muted-foreground">Tonnes</span> */}
             </h3>
             {/* <KPIChart data={data} config={cobaltConfig} /> */}
             <p className="text-xs text-muted-foreground">
@@ -135,17 +134,17 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {copperData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-chart5">
               Copper
             </h2>
-            {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
+            {/* {<Weight className="m-2 h-6 w-6 text-chart5/50" />} */}
           </CardHeader>
           <CardContent className="__card-content">
             <h3 className="text-h4 font-bold">
               {quantityFormatter(parseFloat(copperData[0].quantity))}{" "}
               <span className="text-h6 text-muted-foreground">Tonnes</span>
             </h3>
-            {/* <KPIChart data={data} config={cobaltConfig} /> */}
+            {/* <KPIChart data={data} config={copperConfig} /> */}
             <p className="text-xs text-muted-foreground">
               Total Quantities Copper (T)
             </p>
@@ -158,17 +157,16 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {copperData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-medium leading-none tracking-tight text-muted-foreground">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-chart5">
               Copper
             </h2>
-            {<Weight className="m-2 h-6 w-6 text-muted-foreground" />}
+            {/* {<DollarSign className="m-2 h-6 w-6 text-muted-foreground" />} */}
           </CardHeader>
           <CardContent className="__card-content">
             <h3 className="text-h4 font-bold">
               {currencyFormatter(parseFloat(copperData[0].transaction))}{" "}
-              {/* <span className="text-h6 text-muted-foreground">Tonnes</span> */}
             </h3>
-            {/* <KPIChart data={data} config={cobaltConfig} /> */}
+            {/* <KPIChart data={data} config={copperConfig} /> */}
             <p className="text-xs text-muted-foreground">
               Total Cobalt Transaction (USD)
             </p>
