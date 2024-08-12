@@ -1,7 +1,5 @@
 "use client";
-
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
-
 import {
   ChartContainer,
   ChartTooltip,
@@ -14,9 +12,9 @@ export default function KPIChart({ data, config }: { data: any; config: any }) {
       <LineChart
         accessibilityLayer
         margin={{
-          left: 14,
-          right: 14,
-          top: 10,
+          left: 2,
+          right: 2,
+          top: 2,
         }}
         data={data}
       >
