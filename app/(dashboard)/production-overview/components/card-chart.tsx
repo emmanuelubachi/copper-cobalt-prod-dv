@@ -5,16 +5,29 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components//ui/chart";
+import { quantityFormatter } from "@/lib/utils";
 
-export default function KPIChart({ data, config }: { data: any; config: any }) {
+export default function KPIChart({
+  data,
+  config,
+  yAxis,
+}: {
+  data: any;
+  config: any;
+  yAxis: string;
+}) {
+  console.log("data", data);
+  console.log("config", config);
+  console.log("yAxis", yAxis);
   return (
     <ChartContainer config={config} className="max-h-32 w-full">
       <LineChart
         accessibilityLayer
         margin={{
-          left: 2,
-          right: 2,
-          top: 2,
+          left: 5,
+          right: 5,
+          top: 10,
+          bottom: 10,
         }}
         data={data}
       >
@@ -30,23 +43,23 @@ export default function KPIChart({ data, config }: { data: any; config: any }) {
           tickLine={false}
           axisLine={false}
           tickMargin={8}
+          hide={true}
           tickFormatter={(value) => {
             return new Date(value).toLocaleDateString("en-US", {
-              weekday: "short",
+              year: "numeric",
             });
           }}
-          hide
         />
         <Line
-          dataKey="resting"
+          dataKey={yAxis}
           type="natural"
-          fill="var(--color-resting)"
-          stroke="var(--color-resting)"
+          fill={`var(--color-${yAxis})`}
+          stroke={`var(--color-${yAxis})`}
           strokeWidth={2}
           dot={false}
           activeDot={{
-            fill: "var(--color-resting)",
-            stroke: "var(--color-resting)",
+            fill: `var(--color-${yAxis})`,
+            stroke: `var(--color-${yAxis})`,
             r: 4,
           }}
         />
@@ -56,11 +69,19 @@ export default function KPIChart({ data, config }: { data: any; config: any }) {
               indicator="line"
               labelFormatter={(value) => {
                 return new Date(value).toLocaleDateString("en-US", {
-                  day: "numeric",
-                  month: "long",
+                  // day: "numeric",
+                  // month: "long",
                   year: "numeric",
                 });
               }}
+              // formatter={(value, name) => {
+              //   return (
+              //     <div>
+              //       <span>{name}:</span>
+              //       {quantityFormatter(value)}
+              //     </div>
+              //   );
+              // }}
             />
           }
           cursor={false}
