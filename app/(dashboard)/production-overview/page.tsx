@@ -6,11 +6,7 @@ import ExportTrend from "./components/export-trend";
 import TopDestinations from "./components/top-destinations";
 import ProductionExports from "./components/production-exports";
 
-import {
-  Years,
-  exportQuantityData,
-  exportTransactionData,
-} from "@/data/chartData";
+import { Years } from "@/data/chartData";
 
 import kpiData from "@/data/overview/kpi_data.json";
 import trendData from "@/data/overview/kpitrend_year_data.json";
