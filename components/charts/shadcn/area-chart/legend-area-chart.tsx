@@ -105,7 +105,7 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
               <LabelList
                 position="top"
                 offset={12}
-                className="fill-foreground"
+                className="fill-muted-foreground"
                 fontSize={10}
                 dataKey={props.firstDataKey}
                 formatter={(value: number) => {
@@ -124,7 +124,7 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
               <LabelList
                 position="top"
                 offset={12}
-                className="fill-foreground"
+                className="fill-muted-foreground"
                 fontSize={10}
                 dataKey={props.secondDataKey}
                 formatter={(value: number) => numberFormatter(value)}

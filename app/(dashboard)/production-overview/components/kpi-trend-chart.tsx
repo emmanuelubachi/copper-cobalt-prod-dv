@@ -70,7 +70,7 @@ export default function KPIChart({
           <LabelList
             position="top"
             offset={12}
-            className="fill-foreground"
+            className="fill-muted-foreground"
             fontSize={10}
             dataKey="date"
             formatter={(value: keyof typeof config) => config[value]?.label}

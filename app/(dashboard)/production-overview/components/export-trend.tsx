@@ -22,7 +22,7 @@ export default function ExportTrend({
       <Card className="__card">
         <LegendAreaChart
           title="Export Trend"
-          description="Total quantity of exported products."
+          description="Annuel Quantity of Exported Products (tonnes)."
           config={exportTrendChartConfig}
           chartData={exportQuantityData}
           xAxisDataKey="date"
@@ -32,7 +32,7 @@ export default function ExportTrend({
 
         <LegendAreaChart
           title="Export Trend"
-          description="Total quantity of exported products."
+          description="Annual Transaction of Exported Products (USD)."
           config={exportTrendChartConfig}
           chartData={exportTransactionData}
           xAxisDataKey="date"
