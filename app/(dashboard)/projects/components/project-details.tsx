@@ -1,20 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  CreditCard,
-  File,
-  ListFilter,
-  MoreVertical,
-  Truck,
-} from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -23,62 +8,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/components/ui/pagination";
-import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import { ProjectInfo } from "@/types";
-import Treemap from "@/components/charts/treeMap";
-import { AreaChartRender } from "@/components/charts/areaChart";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
-
-import {
-  exportQuantityData,
-  exportTransactionData,
-  companyData,
-} from "@/data/chartData";
-import { Years } from "@/data/chartData";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
-
 import {
   calculateDetailedYearlySums,
   calculateYearlySums,
   transformDestinationData,
   transformMonthlyData,
-  transformSortTopDestination,
 } from "@/lib/dataProcessing";
-
 import {
   coDestChartConfig,
   cuDestChartConfig,
   monthlyProdChartConfig,
 } from "@/constants/chart";
-
 import { TDestinationData, TMonthlyProductionData } from "@/types/map";
 import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
