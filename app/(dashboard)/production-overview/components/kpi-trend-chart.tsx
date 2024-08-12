@@ -1,5 +1,12 @@
 "use client";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import {
+  CartesianGrid,
+  LabelList,
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+} from "recharts";
 import {
   ChartContainer,
   ChartTooltip,
@@ -16,17 +23,14 @@ export default function KPIChart({
   config: any;
   yAxis: string;
 }) {
-  console.log("data", data);
-  console.log("config", config);
-  console.log("yAxis", yAxis);
   return (
     <ChartContainer config={config} className="max-h-32 w-full">
       <LineChart
         accessibilityLayer
         margin={{
-          left: 5,
-          right: 5,
-          top: 10,
+          left: 12,
+          right: 12,
+          top: 20,
           bottom: 10,
         }}
         data={data}
@@ -56,13 +60,23 @@ export default function KPIChart({
           fill={`var(--color-${yAxis})`}
           stroke={`var(--color-${yAxis})`}
           strokeWidth={2}
-          dot={false}
+          dot={{ fill: `var(--color-${yAxis})` }}
           activeDot={{
             fill: `var(--color-${yAxis})`,
             stroke: `var(--color-${yAxis})`,
             r: 4,
           }}
-        />
+        >
+          {" "}
+          <LabelList
+            position="top"
+            offset={12}
+            className="fill-foreground"
+            fontSize={10}
+            dataKey="date"
+            formatter={(value: keyof typeof config) => config[value]?.label}
+          />
+        </Line>
         <ChartTooltip
           content={
             <ChartTooltipContent

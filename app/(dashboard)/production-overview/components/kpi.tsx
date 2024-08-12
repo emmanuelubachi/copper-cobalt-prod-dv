@@ -2,9 +2,9 @@
 import { useMemo } from "react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { DollarSign, Weight } from "lucide-react";
+import { DollarSign, DollarSignIcon, WeightIcon } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
-import KPIChart from "./card-chart";
+import KPIChart from "./kpi-trend-chart";
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import { kpiTrendProps } from "../page";
 
@@ -15,29 +15,42 @@ type kpiDataProp = {
   transaction: string;
 }[];
 
+const shownYears = {
+  2022: {
+    label: "2022",
+  },
+  2015: {
+    label: "2015",
+  },
+};
+
 const coQuantityConfig = {
   quantity: {
     label: "T",
     color: "hsl(var(--chart-6))",
   },
+  ...shownYears,
 };
 const coTransactionConfig = {
   transaction: {
     label: "$",
     color: "hsl(var(--chart-6))",
   },
+  ...shownYears,
 };
 const cuQuantityConfig = {
   quantity: {
     label: "T",
     color: "hsl(var(--chart-5))",
   },
+  ...shownYears,
 };
 const cuTransactionConfig = {
   transaction: {
     label: "$",
     color: "hsl(var(--chart-5))",
   },
+  ...shownYears,
 };
 
 export default function KPI({
@@ -106,15 +119,17 @@ export default function KPI({
     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
       {cobaltData.length > 0 ? (
         <Card className="__card">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-blue-700 dark:text-blue-400">
+          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
               Cobalt
             </h2>
 
-            {/* {<Weight className="m-2 h-6 w-6 text-chart6/50" />} */}
+            <div className="absolute right-4">
+              <WeightIcon className="h-8 w-8 rounded-full bg-chart6/80 fill-white stroke-chart6/80 p-1" />
+            </div>
           </CardHeader>
           <CardContent className="__card-content">
-            <h3 className="text-h4 font-bold">
+            <h3 className="text-h4 font-bold 2xl:text-h3">
               {quantityFormatter(parseFloat(cobaltData[0].quantity))}{" "}
               <span className="text-h6 text-muted-foreground">Tonnes</span>
             </h3>
@@ -124,7 +139,7 @@ export default function KPI({
               yAxis="quantity"
             />
             <p className="text-xs text-muted-foreground">
-              Total Quantities Cobalt (T)
+              Annual Cobalt Quantity (T)
             </p>
           </CardContent>
         </Card>
@@ -134,14 +149,16 @@ export default function KPI({
 
       {cobaltData.length > 0 ? (
         <Card className="__card">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-blue-700 dark:text-blue-400">
+          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
               Cobalt
             </h2>
-            {/* {<DollarSign className="m-2 h-6 w-6 text-chart6/50" />} */}
+            <div className="absolute right-4">
+              <DollarSign className="h-8 w-8 rounded-full bg-chart6/80 stroke-white p-1" />
+            </div>
           </CardHeader>
           <CardContent className="__card-content">
-            <h3 className="text-h4 font-bold">
+            <h3 className="text-h4 font-bold 2xl:text-h3">
               {currencyFormatter(parseFloat(cobaltData[0].transaction))}{" "}
             </h3>
             <KPIChart
@@ -150,7 +167,7 @@ export default function KPI({
               yAxis="transaction"
             />
             <p className="text-xs text-muted-foreground">
-              Total Cobalt Transaction (USD)
+              Annual Cobalt Transaction (USD)
             </p>
           </CardContent>
         </Card>
@@ -160,14 +177,16 @@ export default function KPI({
 
       {copperData.length > 0 ? (
         <Card className="__card">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-chart5">
+          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
               Copper
             </h2>
-            {/* {<Weight className="m-2 h-6 w-6 text-chart5/50" />} */}
+            <div className="absolute right-4">
+              <WeightIcon className="h-8 w-8 rounded-full bg-chart5/80 fill-white stroke-chart5/80 p-1" />
+            </div>
           </CardHeader>
           <CardContent className="__card-content">
-            <h3 className="text-h4 font-bold">
+            <h3 className="text-h4 font-bold 2xl:text-h3">
               {quantityFormatter(parseFloat(copperData[0].quantity))}{" "}
               <span className="text-h6 text-muted-foreground">Tonnes</span>
             </h3>
@@ -177,7 +196,7 @@ export default function KPI({
               yAxis="quantity"
             />
             <p className="text-xs text-muted-foreground">
-              Total Quantities Copper (T)
+              Annual Copper Quantity (T)
             </p>
           </CardContent>
         </Card>
@@ -187,14 +206,16 @@ export default function KPI({
 
       {copperData.length > 0 ? (
         <Card className="__card">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-chart5">
+          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
               Copper
             </h2>
-            {/* {<DollarSign className="m-2 h-6 w-6 text-muted-foreground" />} */}
+            <div className="absolute right-4">
+              <DollarSign className="h-8 w-8 rounded-full bg-chart5/80 stroke-white p-1" />
+            </div>
           </CardHeader>
           <CardContent className="__card-content">
-            <h3 className="text-h4 font-bold">
+            <h3 className="text-h4 font-bold 2xl:text-h3">
               {currencyFormatter(parseFloat(copperData[0].transaction))}{" "}
             </h3>
             <KPIChart
@@ -203,7 +224,7 @@ export default function KPI({
               yAxis="transaction"
             />
             <p className="text-xs text-muted-foreground">
-              Total Cobalt Transaction (USD)
+              Annual Cobalt Transaction (USD)
             </p>
           </CardContent>
         </Card>

@@ -40,7 +40,6 @@ export type OverviewDestinationSummary = {
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
-  const [kpiTrend, setKpiTrend] = useState<kpiTrendProps>([]);
   const [coXhistory, setCoXhistory] = useState<xhistoryProps[]>([]);
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);
   const [coDestSum, setCoDestSum] = useState<OverviewDestinationSummary[]>([]);
@@ -48,7 +47,7 @@ export default function Dashboard() {
 
   // Process kpiTrendData only once and reuse
   // Memoize processedKpiTrendData to avoid unnecessary recalculations
-  const processedKpiTrendData = useMemo(() => {
+  const processedKpiTrendData: kpiTrendProps = useMemo(() => {
     return kpiTrendData.map((row) => ({
       date: row.date,
       quantity: parseFloat(row.quantity),
@@ -170,7 +169,10 @@ export default function Dashboard() {
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
       <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white p-4 dark:bg-muted lg:sticky lg:top-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
-          Copper and Cobalt Production Overview for {selectedYear}
+          Copper and Cobalt Production Overview for{" "}
+          <span className="border-b-2 border-primary/50 font-black">
+            {selectedYear}
+          </span>
         </h1>
         <div className="flex items-start">
           <YearToggle
