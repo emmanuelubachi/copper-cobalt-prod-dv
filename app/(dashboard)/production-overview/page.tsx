@@ -7,8 +7,10 @@ import { Years } from "@/data/chartData";
 import kpiData from "@/data/overview/kpi_data.json";
 import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+import cobaltDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
+import copperDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
+// import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+// import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 import { exportQuantityData, exportTransactionData } from "@/data/chartData";
 import KPI from "./components/kpi";
 import TopDestinations from "./components/top-destinations";
@@ -42,13 +44,48 @@ const cuXhistoryChartConfig = {
   },
 };
 
+type OverviewDestinationSummary = {
+  short_destination: string;
+  long_destination: string;
+  quantity: number;
+  transaction: number;
+};
+
+function summarizeDestinations(
+  data: OverviewDestinationSummary[],
+  sortBy?: "quantity" | "transaction",
+): OverviewDestinationSummary[] {
+  const summaryMap = new Map<string, OverviewDestinationSummary>();
+
+  data.forEach((item) => {
+    const existing = summaryMap.get(item.short_destination);
+
+    if (existing) {
+      existing.quantity += item.quantity;
+      existing.transaction += item.transaction;
+    } else {
+      summaryMap.set(item.short_destination, { ...item });
+    }
+  });
+
+  let summarizedData = Array.from(summaryMap.values());
+
+  if (sortBy) {
+    summarizedData.sort((a, b) => b[sortBy] - a[sortBy]);
+  } else {
+    summarizedData.sort((a, b) => b.quantity - a.quantity);
+  }
+
+  return summarizedData;
+}
+
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coXhistory, setCoXhistory] = useState<xhistoryProps[]>([]);
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);
-  const [coDestSum, setCoDestSum] = useState<DestinationSummary[]>([]);
-  const [cuDestSum, setCuDestSum] = useState<DestinationSummary[]>([]);
+  const [coDestSum, setCoDestSum] = useState<OverviewDestinationSummary[]>([]);
+  const [cuDestSum, setCuDestSum] = useState<OverviewDestinationSummary[]>([]);
 
   useEffect(() => {
     const fetchkpiData = async () => {
@@ -100,32 +137,26 @@ export default function Dashboard() {
       }
     };
 
-    // const fetchTotalProductionData = async () => {
-    //   try {
-    //     // Filter data based on _project_id
-    //     const exports = totalProductionData.filter(
-    //       (row) => row.type === "export",
-    //     );
-
-    //     // Process data
-    //     const totalProd = calculateProjectSums(exports);
-
-    //     setTotalProd(totalProd);
-    //   } catch (error) {
-    //     console.error(
-    //       "Error fetching and processing total industral projects production data:",
-    //       error,
-    //     );
-    //   }
-    // };
-
     const fetchCoDestinationData = async () => {
       try {
-        // Filter data based on short_name
-        const filtered = calculateDestinationSums(cobaltDestinationData);
+        // Filter data
+        const filter1 = cobaltDestinationData.filter(
+          (row) => row.year === selectedYear,
+        );
 
-        // Process data for chart - sort for top destinations
-        setCoDestSum(filtered);
+        const filter2 = filter1.filter((row) => row.product === "Cobalt");
+
+        const filtered = filter2.map((row) => ({
+          short_destination: row.short_destination,
+          long_destination: row.long_destination,
+          quantity: parseFloat(row.quantity),
+          transaction: parseFloat(row.transaction),
+        }));
+
+        // Process data: sum by destination and sort for top quntity or transaction
+        const coDestData = summarizeDestinations(filtered);
+
+        setCoDestSum(coDestData);
       } catch (error) {
         console.error(
           "Error fetching and processing co destination data:",
@@ -136,11 +167,25 @@ export default function Dashboard() {
 
     const fetchCuDestinationData = async () => {
       try {
-        // Filter data based on short_name
-        const filtered = calculateDestinationSums(copperDestinationData);
+        // Filter data
+        const filter1 = cobaltDestinationData.filter(
+          (row) => row.year === selectedYear,
+        );
+
+        const filter2 = filter1.filter((row) => row.product === "Copper");
+
+        const filtered = filter2.map((row) => ({
+          short_destination: row.short_destination,
+          long_destination: row.long_destination,
+          quantity: parseFloat(row.quantity),
+          transaction: parseFloat(row.transaction),
+        }));
 
         // Process data for chart - sort for top destinations
-        setCuDestSum(filtered);
+
+        const cuDestData = summarizeDestinations(filtered);
+
+        setCuDestSum(cuDestData);
       } catch (error) {
         console.error(
           "Error fetching and processing co destination data:",
@@ -206,7 +251,11 @@ export default function Dashboard() {
             </Tabs>
 
             {/* Top Destinations Chart */}
-            <TopDestinations coDestSum={coDestSum} cuDestSum={cuDestSum} />
+            <TopDestinations
+              selectedYear={selectedYear}
+              coDestSum={coDestSum}
+              cuDestSum={cuDestSum}
+            />
           </div>
 
           {/* Eport Trend Cards */}

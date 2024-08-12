@@ -327,4 +327,4 @@ export const companyData = [
   },
 ];
 
-export const Years = ["2020", "2021", "2022", "2023"];
+export const Years = ["2018", "2019", "2020", "2021", "2022"];
