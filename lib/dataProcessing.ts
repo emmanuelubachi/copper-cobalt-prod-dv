@@ -294,3 +294,37 @@ export function summarizeDestinations(
 
   return summarizedData;
 }
+
+import {
+  InputData,
+  TransformedData,
+} from "@/app/(dashboard)/production-overview/page";
+export function transformTrendData(data: InputData): TransformedData {
+  const result: TransformedData = [];
+
+  data.forEach((item) => {
+    const { date, quantity, transaction, product } = item;
+    const existingEntry = result.find((entry) => entry.date === date);
+
+    // Determine the key (Cobalt or Copper) based on the product
+    const key = product as keyof Omit<TransformedData[0], "date">;
+
+    // Get the value from either quantity or transaction
+    const value = quantity
+      ? parseFloat(quantity)
+      : parseFloat(transaction || "0");
+
+    if (existingEntry) {
+      // Add the value to the existing entry
+      existingEntry[key] = value;
+    } else {
+      // Create a new entry
+      result.push({
+        date,
+        [key]: value,
+      });
+    }
+  });
+
+  return result;
+}
