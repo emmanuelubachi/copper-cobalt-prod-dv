@@ -1,48 +1,22 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Card } from "@/components/ui/card";
-
-import {
-  exportQuantityData,
-  exportTransactionData,
-  // kpiData,
-  Years,
-} from "@/data/chartData";
-
-// import { currencyFormatter, quantityFormatter } from "@/lib/utils";
-import {
-  InteractiveBarChart,
-  SingleInteractiveBarChart,
-} from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
-
+import YearToggle from "@/components/year-toggle";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SingleInteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
+import { Years } from "@/data/chartData";
 import kpiData from "@/data/overview/kpi_data.json";
 import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
 import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
-
-import {
-  calculateDestinationSums,
-  calculateProjectSums,
-} from "@/lib/dataProcessing";
-import {
-  coDestSumChartConfig,
-  cuDestSumChartConfig,
-  exportTrendChartConfig,
-  totalXChartConfig,
-} from "@/constants/chart";
-
-import { DestinationSummary, ProjectSummary } from "@/types/projects";
-import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
-import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { exportQuantityData, exportTransactionData } from "@/data/chartData";
 import KPI from "./components/kpi";
-import YearToggle from "@/components/year-toggle";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import BarChartRender from "@/components/charts/barChart";
+import TopDestinations from "./components/top-destinations";
+import ExportTrend from "./components/export-trend";
+import { calculateDestinationSums } from "@/lib/dataProcessing";
+import { DestinationSummary } from "@/types/projects";
 
 type xhistoryProps = {
-  // year: string;
   exporter: string;
   quantity: number;
   // transaction: string;
@@ -70,10 +44,9 @@ const cuXhistoryChartConfig = {
 
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
+  const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coXhistory, setCoXhistory] = useState<xhistoryProps[]>([]);
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);
-  // const [totalProd, setTotalProd] = useState<ProjectSummary[]>([]);
-  const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coDestSum, setCoDestSum] = useState<DestinationSummary[]>([]);
   const [cuDestSum, setCuDestSum] = useState<DestinationSummary[]>([]);
 
@@ -177,21 +150,10 @@ export default function Dashboard() {
     };
 
     fetchkpiData();
-    fetchHistoryByExporterData();
-    // fetchTotalProductionData();
     fetchCoDestinationData();
     fetchCuDestinationData();
+    fetchHistoryByExporterData();
   }, [selectedYear]);
-
-  // const chartConfig = {
-  //   yAxis: {
-  //     label: `Qty (T) ${" "}`,
-  //     color: "hsl(var(--chart-6))",
-  //   },
-  //   label: {
-  //     color: "hsl(var(--background))",
-  //   },
-  // }
 
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
@@ -244,82 +206,14 @@ export default function Dashboard() {
             </Tabs>
 
             {/* Top Destinations Chart */}
-            <section className="grid items-start gap-2 xl:col-span-2">
-              <div className="grid gap-4 lg:grid-cols-2">
-                <CustomLabelBarChart
-                  title="Top Destinations of Cobalt Production in 2023"
-                  description="Quantity in Tonnes"
-                  config={coDestSumChartConfig}
-                  chartData={coDestSum}
-                  yAxisDataKey="destination"
-                  xAxisDataKey="totalQuantityTons"
-                  // barDataKey="totalQuantityTons"
-                  // yAxisLabelDataKey="Cobalt"
-                  // barLabelDataKey="label"
-                  // footNote={
-                  //   <>
-                  //     <div className="leading-none text-muted-foreground">
-                  //       Showing top destinations in 2023.
-                  //     </div>
-                  //   </>
-                  // }
-                />
-
-                {/* <BarChartRender chartData={cuDestSum} /> */}
-
-                <CustomLabelBarChart
-                  title="Top Destinations of Copper Production in 2023"
-                  description="Quantity in Tonnes"
-                  config={cuDestSumChartConfig}
-                  chartData={cuDestSum}
-                  yAxisDataKey="destination"
-                  xAxisDataKey="totalQuantityTons"
-                  // barDataKey="totalQuantityTons"
-                  // yAxisLabelDataKey="Copper"
-                  // barLabelDataKey="label"
-                  // footNote={
-                  //   <>
-                  //     <div className="leading-none text-muted-foreground">
-                  //       Showing top destinations in 2023.
-                  //     </div>
-                  //   </>
-                  // }
-                />
-              </div>
-            </section>
+            <TopDestinations coDestSum={coDestSum} cuDestSum={cuDestSum} />
           </div>
 
           {/* Eport Trend Cards */}
-          <section className="space-y-4">
-            <Card className="__card">
-              <LegendAreaChart
-                title="Export Trend"
-                description="Total quantity of exported products."
-                config={exportTrendChartConfig}
-                chartData={exportQuantityData}
-                xAxisDataKey="date"
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-                formatter="quantityFormatter"
-                // footNote={
-                //   <div className="leading-none text-muted-foreground">
-                //     Includes quantities both exported and sold locally.
-                //   </div>
-                // }
-              />
-
-              <LegendAreaChart
-                title="Export Trend"
-                description="Total quantity of exported products."
-                config={exportTrendChartConfig}
-                chartData={exportTransactionData}
-                xAxisDataKey="date"
-                firstDataKey="Cobalt"
-                secondDataKey="Copper"
-                formatter="quantityFormatter"
-              />
-            </Card>
-          </section>
+          <ExportTrend
+            exportQuantityData={exportQuantityData}
+            exportTransactionData={exportTransactionData}
+          />
         </div>
       </div>
     </main>
