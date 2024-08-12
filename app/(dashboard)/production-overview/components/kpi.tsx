@@ -65,7 +65,7 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-chart6">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-blue-700 dark:text-blue-400">
               Cobalt
             </h2>
 
@@ -89,7 +89,7 @@ export default function KPI({ kpi }: { kpi: kpiDataProp }) {
       {cobaltData.length > 0 ? (
         <Card className="__card">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-chart6">
+            <h2 className="text-sm font-bold leading-none tracking-wider text-blue-700 dark:text-blue-400">
               Cobalt
             </h2>
             {/* {<DollarSign className="m-2 h-6 w-6 text-chart6/50" />} */}
