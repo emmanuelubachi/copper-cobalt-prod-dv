@@ -13,11 +13,14 @@ import {
 } from "@/data/chartData";
 
 import kpiData from "@/data/overview/kpi_data.json";
-import kpiTrendData from "@/data/overview/kpitrend_year_data.json";
+import trendData from "@/data/overview/kpitrend_year_data.json";
 import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
 import historyByDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
 
-import { summarizeDestinations } from "@/lib/dataProcessing";
+import {
+  summarizeDestinations,
+  transformTrendData,
+} from "@/lib/dataProcessing";
 
 export type kpiTrendProps = {
   date: string;
@@ -37,6 +40,31 @@ export type OverviewDestinationSummary = {
   transaction: number;
 };
 
+export type quantityTrendProps = {
+  date: string;
+  quantity: number;
+  product: string;
+}[];
+
+export type transactionTrendProps = {
+  date: string;
+  transaction: number;
+  product: string;
+}[];
+
+export type InputData = {
+  date: string;
+  quantity?: string;
+  transaction?: string;
+  product: string;
+}[];
+
+export type TransformedData = {
+  date: string;
+  Cobalt?: number;
+  Copper?: number;
+}[];
+
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
@@ -45,10 +73,9 @@ export default function Dashboard() {
   const [coDestSum, setCoDestSum] = useState<OverviewDestinationSummary[]>([]);
   const [cuDestSum, setCuDestSum] = useState<OverviewDestinationSummary[]>([]);
 
-  // Process kpiTrendData only once and reuse
   // Memoize processedKpiTrendData to avoid unnecessary recalculations
   const processedKpiTrendData: kpiTrendProps = useMemo(() => {
-    return kpiTrendData.map((row) => ({
+    return trendData.map((row) => ({
       date: row.date,
       quantity: parseFloat(row.quantity),
       transaction: parseFloat(row.transaction),
@@ -165,6 +192,26 @@ export default function Dashboard() {
     fetchHistoryByExporterData();
   }, [selectedYear]);
 
+  // Memoize quantityTrendData to avoid unnecessary recalculations
+  const quantityTrendData: TransformedData = useMemo(() => {
+    const data: InputData = trendData.map((row) => ({
+      date: row.date,
+      quantity: row.quantity,
+      product: row.product,
+    }));
+    return transformTrendData(data);
+  }, []);
+
+  // Memoize transactionTrendData to avoid unnecessary recalculations
+  const transactionTrendData: TransformedData = useMemo(() => {
+    const data: InputData = trendData.map((row) => ({
+      date: row.date,
+      transaction: row.transaction,
+      product: row.product,
+    }));
+    return transformTrendData(data);
+  }, []);
+
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
       <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white p-4 dark:bg-muted lg:sticky lg:top-4 lg:flex lg:space-y-0">
@@ -206,8 +253,8 @@ export default function Dashboard() {
 
           {/* Eport Trend Cards */}
           <ExportTrend
-            exportQuantityData={exportQuantityData}
-            exportTransactionData={exportTransactionData}
+            exportQuantityData={quantityTrendData}
+            exportTransactionData={transactionTrendData}
           />
         </div>
       </div>

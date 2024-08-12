@@ -1,6 +1,17 @@
 import { Card } from "@/components/ui/card";
 import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
-import { exportTrendChartConfig } from "@/constants/chart";
+// import { exportTrendChartConfig } from "@/constants/chart";
+
+export const exportTrendChartConfig = {
+  Cobalt: {
+    label: "CO",
+    color: "hsl(var(--chart-6))",
+  },
+  Copper: {
+    label: "CU",
+    color: "hsl(var(--chart-5))",
+  },
+};
 
 export default function ExportTrend({
   exportQuantityData,
@@ -17,7 +28,6 @@ export default function ExportTrend({
           xAxisDataKey="date"
           firstDataKey="Cobalt"
           secondDataKey="Copper"
-          formatter="quantityFormatter"
         />
 
         <LegendAreaChart
@@ -28,7 +38,6 @@ export default function ExportTrend({
           xAxisDataKey="date"
           firstDataKey="Cobalt"
           secondDataKey="Copper"
-          formatter="quantityFormatter"
         />
       </Card>
     </section>

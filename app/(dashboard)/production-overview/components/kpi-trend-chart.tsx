@@ -67,7 +67,6 @@ export default function KPIChart({
             r: 4,
           }}
         >
-          {" "}
           <LabelList
             position="top"
             offset={12}
