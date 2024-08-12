@@ -18,11 +18,11 @@ export default function ExportTrend({
   exportTransactionData,
 }: any) {
   return (
-    <section className="space-y-4">
+    <section className="space-y-4 xl:mt-4">
       <Card className="__card">
         <LegendAreaChart
-          title="Export Trend"
-          description="Annuel Quantity of Exported Products (tonnes)."
+          title="Exports Trend"
+          description="Annual Quantity of Exported Products (tonnes)."
           config={exportTrendChartConfig}
           chartData={exportQuantityData}
           xAxisDataKey="date"
@@ -31,7 +31,7 @@ export default function ExportTrend({
         />
 
         <LegendAreaChart
-          title="Export Trend"
+          title="  "
           description="Annual Transaction of Exported Products (USD)."
           config={exportTrendChartConfig}
           chartData={exportTransactionData}

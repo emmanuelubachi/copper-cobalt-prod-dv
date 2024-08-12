@@ -32,7 +32,7 @@ import {
 import { Divide } from "lucide-react";
 
 type LegendAreaChartProps = {
-  title: string;
+  title?: string;
   description: string;
   config: ChartConfig;
   chartData: any;
