@@ -10,7 +10,6 @@ import {
   ProjectSummary,
   YearlySummary,
 } from "@/types/projects";
-import { any } from "zod";
 
 export function transformMonthlyData(
   data: MonthlyProductionData[],
@@ -46,35 +45,11 @@ export function transformMonthlyData(
         targetMonth[product] += parseFloat(quantity_tons);
       }
     }
-    // if (targetMonth) {
-    //   targetMonth[product as keyof MonthData] += parseFloat(quantity_tons);
-    //   //   (targetMonth as MonthData)[product as keyof MonthData] ;
-    // }
   });
 
   // Remove months without any data for Cobalt or Copper
   return result.filter((monthData) => monthData.Cobalt || monthData.Copper);
 }
-
-// export function transformDestinationData(
-//   data: DestinationData[],
-// ): TDestinationData[] {
-//   return data
-//     .map((entry) => {
-//       const weight = parseFloat(entry["quantity_tons"]);
-//       const roundedWeight = weight.toFixed(1);
-//       return {
-//         destination: entry.destination,
-//         quantity_tons: roundedWeight.toLocaleString(),
-//         label: `${roundedWeight}T`,
-//       };
-//     })
-//     .sort(
-//       (a, b) =>
-//         parseFloat(b["quantity_tons"].replace(/,/g, "")) -
-//         parseFloat(a["quantity_tons"].replace(/,/g, "")),
-//     );
-// }
 
 interface AggregatedData {
   [key: string]: {
@@ -119,27 +94,6 @@ export function transformDestinationData(
       parseFloat(a.quantity_tons.replace(/,/g, "")),
   );
 }
-
-// export function transformSortTopDestination(
-//   data: DestinationData[],
-// ): TDestinationData[] {
-//   return data
-//     .map((entry) => {
-//       const weight = parseFloat(entry["quantity_tons"]);
-//       const roundedWeight = weight.toFixed(1);
-//       return {
-//         destination: entry.destination,
-//         quantity_tons: roundedWeight.toLocaleString(),
-//         label: `${roundedWeight}T`,
-//       };
-//     })
-//     .sort(
-//       (a, b) =>
-//         parseFloat(b["quantity_tons"].replace(/,/g, "")) -
-//         parseFloat(a["quantity_tons"].replace(/,/g, "")),
-//     )
-//     .slice(0, 5);
-// }
 
 export function transformSortTopDestination(
   data: DestinationData[],
@@ -310,4 +264,67 @@ export function calculateDestinationSums(
         parseFloat(b.totalQuantityTons.replace(/,/g, "")) -
         parseFloat(a.totalQuantityTons.replace(/,/g, "")),
     );
+}
+
+import { OverviewDestinationSummary } from "@/app/(dashboard)/production-overview/page";
+export function summarizeDestinations(
+  data: OverviewDestinationSummary[],
+  sortBy?: "quantity" | "transaction",
+): OverviewDestinationSummary[] {
+  const summaryMap = new Map<string, OverviewDestinationSummary>();
+
+  data.forEach((item) => {
+    const existing = summaryMap.get(item.short_destination);
+
+    if (existing) {
+      existing.quantity += item.quantity;
+      existing.transaction += item.transaction;
+    } else {
+      summaryMap.set(item.short_destination, { ...item });
+    }
+  });
+
+  let summarizedData = Array.from(summaryMap.values());
+
+  if (sortBy) {
+    summarizedData.sort((a, b) => b[sortBy] - a[sortBy]);
+  } else {
+    summarizedData.sort((a, b) => b.quantity - a.quantity);
+  }
+
+  return summarizedData;
+}
+
+import {
+  InputData,
+  TransformedData,
+} from "@/app/(dashboard)/production-overview/page";
+export function transformTrendData(data: InputData): TransformedData {
+  const result: TransformedData = [];
+
+  data.forEach((item) => {
+    const { date, quantity, transaction, product } = item;
+    const existingEntry = result.find((entry) => entry.date === date);
+
+    // Determine the key (Cobalt or Copper) based on the product
+    const key = product as keyof Omit<TransformedData[0], "date">;
+
+    // Get the value from either quantity or transaction
+    const value = quantity
+      ? parseFloat(quantity)
+      : parseFloat(transaction || "0");
+
+    if (existingEntry) {
+      // Add the value to the existing entry
+      existingEntry[key] = value;
+    } else {
+      // Create a new entry
+      result.push({
+        date,
+        [key]: value,
+      });
+    }
+  });
+
+  return result;
 }

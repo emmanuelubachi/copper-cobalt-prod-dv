@@ -79,151 +79,151 @@ import { DollarSign, Weight } from "lucide-react";
 //   },
 // ];
 
-export const exportQuantityData = [
-  {
-    date: "2010",
-    Copper: 2890,
-    Cobalt: 2338,
-  },
-  {
-    date: "2011",
-    Copper: 2756,
-    Cobalt: 2103,
-  },
-  {
-    date: "2012",
-    Copper: 3322,
-    Cobalt: 2194,
-  },
-  {
-    date: "2013",
-    Copper: 3470,
-    Cobalt: 2108,
-  },
-  {
-    date: "2014",
-    Copper: 3475,
-    Cobalt: 1812,
-  },
-  {
-    date: "2015",
-    Copper: 3129,
-    Cobalt: 1726,
-  },
-  {
-    date: "2016",
-    Copper: 3490,
-    Cobalt: 1982,
-  },
-  {
-    date: "2017",
-    Copper: 2903,
-    Cobalt: 2012,
-  },
-  {
-    date: "2018",
-    Copper: 2643,
-    Cobalt: 2342,
-  },
-  {
-    date: "2019",
-    Copper: 2837,
-    Cobalt: 2473,
-  },
-  {
-    date: "2020",
-    Copper: 2954,
-    Cobalt: 3848,
-  },
-  {
-    date: "2021",
-    Copper: 3239,
-    Cobalt: 3736,
-  },
-  {
-    date: "2022",
-    Copper: 3470,
-    Cobalt: 3859,
-  },
-  {
-    date: "2023",
-    Copper: 3475,
-    Cobalt: 3859,
-  },
-];
+// export const exportQuantityData = [
+//   {
+//     date: "2010",
+//     Copper: 2890,
+//     Cobalt: 2338,
+//   },
+//   {
+//     date: "2011",
+//     Copper: 2756,
+//     Cobalt: 2103,
+//   },
+//   {
+//     date: "2012",
+//     Copper: 3322,
+//     Cobalt: 2194,
+//   },
+//   {
+//     date: "2013",
+//     Copper: 3470,
+//     Cobalt: 2108,
+//   },
+//   {
+//     date: "2014",
+//     Copper: 3475,
+//     Cobalt: 1812,
+//   },
+//   {
+//     date: "2015",
+//     Copper: 3129,
+//     Cobalt: 1726,
+//   },
+//   {
+//     date: "2016",
+//     Copper: 3490,
+//     Cobalt: 1982,
+//   },
+//   {
+//     date: "2017",
+//     Copper: 2903,
+//     Cobalt: 2012,
+//   },
+//   {
+//     date: "2018",
+//     Copper: 2643,
+//     Cobalt: 2342,
+//   },
+//   {
+//     date: "2019",
+//     Copper: 2837,
+//     Cobalt: 2473,
+//   },
+//   {
+//     date: "2020",
+//     Copper: 2954,
+//     Cobalt: 3848,
+//   },
+//   {
+//     date: "2021",
+//     Copper: 3239,
+//     Cobalt: 3736,
+//   },
+//   {
+//     date: "2022",
+//     Copper: 3470,
+//     Cobalt: 3859,
+//   },
+//   {
+//     date: "2023",
+//     Copper: 3475,
+//     Cobalt: 3859,
+//   },
+// ];
 
-export const exportTransactionData = [
-  {
-    date: "2010",
-    Copper: 25890,
-    Cobalt: 23638,
-  },
-  {
-    date: "2011",
-    Copper: 28756,
-    Cobalt: 29103,
-  },
-  {
-    date: "2012",
-    Copper: 33322,
-    Cobalt: 22194,
-  },
-  {
-    date: "2013",
-    Copper: 33470,
-    Cobalt: 24108,
-  },
-  {
-    date: "2014",
-    Copper: 36475,
-    Cobalt: 18812,
-  },
-  {
-    date: "2015",
-    Copper: 34129,
-    Cobalt: 19726,
-  },
-  {
-    date: "2016",
-    Copper: 36490,
-    Cobalt: 17982,
-  },
-  {
-    date: "2017",
-    Copper: 23903,
-    Cobalt: 24012,
-  },
-  {
-    date: "2018",
-    Copper: 25643,
-    Cobalt: 26342,
-  },
-  {
-    date: "2019",
-    Copper: 22837,
-    Cobalt: 27473,
-  },
-  {
-    date: "2020",
-    Copper: 28954,
-    Cobalt: 34848,
-  },
-  {
-    date: "2021",
-    Copper: 31239,
-    Cobalt: 31736,
-  },
-  {
-    date: "2022",
-    Copper: 32470,
-    Cobalt: 33859,
-  },
-  {
-    date: "2023",
-    Copper: 34475,
-    Cobalt: 35859,
-  },
-];
+// export const exportTransactionData = [
+//   {
+//     date: "2010",
+//     Copper: 25890,
+//     Cobalt: 23638,
+//   },
+//   {
+//     date: "2011",
+//     Copper: 28756,
+//     Cobalt: 29103,
+//   },
+//   {
+//     date: "2012",
+//     Copper: 33322,
+//     Cobalt: 22194,
+//   },
+//   {
+//     date: "2013",
+//     Copper: 33470,
+//     Cobalt: 24108,
+//   },
+//   {
+//     date: "2014",
+//     Copper: 36475,
+//     Cobalt: 18812,
+//   },
+//   {
+//     date: "2015",
+//     Copper: 34129,
+//     Cobalt: 19726,
+//   },
+//   {
+//     date: "2016",
+//     Copper: 36490,
+//     Cobalt: 17982,
+//   },
+//   {
+//     date: "2017",
+//     Copper: 23903,
+//     Cobalt: 24012,
+//   },
+//   {
+//     date: "2018",
+//     Copper: 25643,
+//     Cobalt: 26342,
+//   },
+//   {
+//     date: "2019",
+//     Copper: 22837,
+//     Cobalt: 27473,
+//   },
+//   {
+//     date: "2020",
+//     Copper: 28954,
+//     Cobalt: 34848,
+//   },
+//   {
+//     date: "2021",
+//     Copper: 31239,
+//     Cobalt: 31736,
+//   },
+//   {
+//     date: "2022",
+//     Copper: 32470,
+//     Cobalt: 33859,
+//   },
+//   {
+//     date: "2023",
+//     Copper: 34475,
+//     Cobalt: 35859,
+//   },
+// ];
 
 export const companyData = [
   {

@@ -1,83 +1,65 @@
 "use client";
-import { useEffect, useState } from "react";
-import YearToggle from "@/components/year-toggle";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SingleInteractiveBarChart } from "@/components/charts/shadcn/bar-chart/interactive-bar-chart";
-import { Years } from "@/data/chartData";
-import kpiData from "@/data/overview/kpi_data.json";
-import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
-import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import cobaltDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
-import copperDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
-// import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-// import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
-import { exportQuantityData, exportTransactionData } from "@/data/chartData";
+import { useEffect, useMemo, useState } from "react";
 import KPI from "./components/kpi";
-import TopDestinations from "./components/top-destinations";
+import YearToggle from "@/components/year-toggle";
 import ExportTrend from "./components/export-trend";
-import { calculateDestinationSums } from "@/lib/dataProcessing";
-import { DestinationSummary } from "@/types/projects";
+import TopDestinations from "./components/top-destinations";
+import ProductionExports from "./components/production-exports";
 
+import { Years } from "@/data/chartData";
+
+import kpiData from "@/data/overview/kpi_data.json";
+import trendData from "@/data/overview/kpitrend_year_data.json";
+import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
+import historyByDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
+
+import {
+  summarizeDestinations,
+  transformTrendData,
+} from "@/lib/dataProcessing";
+
+export type kpiTrendProps = {
+  date: string;
+  quantity: number;
+  transaction: number;
+  product: string;
+}[];
 type xhistoryProps = {
   exporter: string;
   quantity: number;
-  // transaction: string;
 };
 
-const coXhistoryChartConfig = {
-  views: {
-    label: "Quantity",
-  },
-  quantity: {
-    label: "Quantity",
-    color: "hsl(var(--chart-6))",
-  },
-};
-
-const cuXhistoryChartConfig = {
-  views: {
-    label: "Quantity",
-  },
-  quantity: {
-    label: "Quantity",
-    color: "hsl(var(--chart-5))",
-  },
-};
-
-type OverviewDestinationSummary = {
+export type OverviewDestinationSummary = {
   short_destination: string;
   long_destination: string;
   quantity: number;
   transaction: number;
 };
 
-function summarizeDestinations(
-  data: OverviewDestinationSummary[],
-  sortBy?: "quantity" | "transaction",
-): OverviewDestinationSummary[] {
-  const summaryMap = new Map<string, OverviewDestinationSummary>();
+export type quantityTrendProps = {
+  date: string;
+  quantity: number;
+  product: string;
+}[];
 
-  data.forEach((item) => {
-    const existing = summaryMap.get(item.short_destination);
+export type transactionTrendProps = {
+  date: string;
+  transaction: number;
+  product: string;
+}[];
 
-    if (existing) {
-      existing.quantity += item.quantity;
-      existing.transaction += item.transaction;
-    } else {
-      summaryMap.set(item.short_destination, { ...item });
-    }
-  });
+export type InputData = {
+  date: string;
+  quantity?: string;
+  transaction?: string;
+  product: string;
+}[];
 
-  let summarizedData = Array.from(summaryMap.values());
-
-  if (sortBy) {
-    summarizedData.sort((a, b) => b[sortBy] - a[sortBy]);
-  } else {
-    summarizedData.sort((a, b) => b.quantity - a.quantity);
-  }
-
-  return summarizedData;
-}
+export type TransformedData = {
+  date: string;
+  Cobalt?: number;
+  Copper?: number;
+}[];
 
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
@@ -87,10 +69,20 @@ export default function Dashboard() {
   const [coDestSum, setCoDestSum] = useState<OverviewDestinationSummary[]>([]);
   const [cuDestSum, setCuDestSum] = useState<OverviewDestinationSummary[]>([]);
 
+  // Memoize processedKpiTrendData to avoid unnecessary recalculations
+  const processedKpiTrendData: kpiTrendProps = useMemo(() => {
+    return trendData.map((row) => ({
+      date: row.date,
+      quantity: parseFloat(row.quantity),
+      transaction: parseFloat(row.transaction),
+      product: row.product,
+    }));
+  }, []);
+
   useEffect(() => {
     const fetchkpiData = async () => {
       try {
-        // Filter data based on _project_id
+        // Filter kpi data by year
         const filtered = kpiData.filter((row) => row.year === selectedYear);
 
         setKpi(filtered);
@@ -110,28 +102,25 @@ export default function Dashboard() {
         );
 
         // Then filter data based on both product
-        const cofiltered: any = filteredhistory.filter(
-          (row) => row.product === "Cobalt",
-        );
-        const cufiltered: any = filteredhistory.filter(
-          (row) => row.product === "Copper",
-        );
+        const cofiltered: xhistoryProps[] = filteredhistory
+          .filter((row) => row.product === "Cobalt")
+          .map((row: any) => ({
+            exporter: row.exporter,
+            quantity: parseFloat(row.quantity),
+          }));
 
-        // Process each data
-        const codata: xhistoryProps[] = cofiltered.map((row: any) => ({
-          exporter: row.exporter,
-          quantity: parseFloat(row.quantity),
-        }));
-        const cudata: xhistoryProps[] = cufiltered.map((row: any) => ({
-          exporter: row.exporter,
-          quantity: parseFloat(row.quantity),
-        }));
+        const cufiltered: xhistoryProps[] = filteredhistory
+          .filter((row) => row.product === "Copper")
+          .map((row: any) => ({
+            exporter: row.exporter,
+            quantity: parseFloat(row.quantity),
+          }));
 
-        setCoXhistory(codata);
-        setCuXhistory(cudata);
+        setCoXhistory(cofiltered);
+        setCuXhistory(cufiltered);
       } catch (error) {
         console.error(
-          "Error fetching and processing total industral projects production data:",
+          "Error fetching and processing production exports by projects data:",
           error,
         );
       }
@@ -140,21 +129,21 @@ export default function Dashboard() {
     const fetchCoDestinationData = async () => {
       try {
         // Filter data
-        const filter1 = cobaltDestinationData.filter(
+        const filter1 = historyByDestinationData.filter(
           (row) => row.year === selectedYear,
         );
 
-        const filter2 = filter1.filter((row) => row.product === "Cobalt");
-
-        const filtered = filter2.map((row) => ({
-          short_destination: row.short_destination,
-          long_destination: row.long_destination,
-          quantity: parseFloat(row.quantity),
-          transaction: parseFloat(row.transaction),
-        }));
+        const filter2 = filter1
+          .filter((row) => row.product === "Cobalt")
+          .map((row) => ({
+            short_destination: row.short_destination,
+            long_destination: row.long_destination,
+            quantity: parseFloat(row.quantity),
+            transaction: parseFloat(row.transaction),
+          }));
 
         // Process data: sum by destination and sort for top quntity or transaction
-        const coDestData = summarizeDestinations(filtered);
+        const coDestData = summarizeDestinations(filter2);
 
         setCoDestSum(coDestData);
       } catch (error) {
@@ -168,27 +157,26 @@ export default function Dashboard() {
     const fetchCuDestinationData = async () => {
       try {
         // Filter data
-        const filter1 = cobaltDestinationData.filter(
+        const filter1 = historyByDestinationData.filter(
           (row) => row.year === selectedYear,
         );
 
-        const filter2 = filter1.filter((row) => row.product === "Copper");
-
-        const filtered = filter2.map((row) => ({
-          short_destination: row.short_destination,
-          long_destination: row.long_destination,
-          quantity: parseFloat(row.quantity),
-          transaction: parseFloat(row.transaction),
-        }));
+        const filter2 = filter1
+          .filter((row) => row.product === "Copper")
+          .map((row) => ({
+            short_destination: row.short_destination,
+            long_destination: row.long_destination,
+            quantity: parseFloat(row.quantity),
+            transaction: parseFloat(row.transaction),
+          }));
 
         // Process data for chart - sort for top destinations
-
-        const cuDestData = summarizeDestinations(filtered);
+        const cuDestData = summarizeDestinations(filter2);
 
         setCuDestSum(cuDestData);
       } catch (error) {
         console.error(
-          "Error fetching and processing co destination data:",
+          "Error fetching and processing cu destination data:",
           error,
         );
       }
@@ -200,11 +188,34 @@ export default function Dashboard() {
     fetchHistoryByExporterData();
   }, [selectedYear]);
 
+  // Memoize quantityTrendData to avoid unnecessary recalculations
+  const quantityTrendData: TransformedData = useMemo(() => {
+    const data: InputData = trendData.map((row) => ({
+      date: row.date,
+      quantity: row.quantity,
+      product: row.product,
+    }));
+    return transformTrendData(data);
+  }, []);
+
+  // Memoize transactionTrendData to avoid unnecessary recalculations
+  const transactionTrendData: TransformedData = useMemo(() => {
+    const data: InputData = trendData.map((row) => ({
+      date: row.date,
+      transaction: row.transaction,
+      product: row.product,
+    }));
+    return transformTrendData(data);
+  }, []);
+
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
-      <header className="items-center justify-between gap-6 space-y-4 sm:ml-1 lg:flex lg:space-y-0">
+      <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white p-4 dark:bg-muted lg:sticky lg:top-4 lg:flex lg:space-y-0">
         <h1 className="text-h4 font-medium tracking-tight">
-          Copper and Cobalt Production Overview for {selectedYear}
+          Copper and Cobalt Production Overview for{" "}
+          <span className="border-b-2 border-primary/50 font-black">
+            {selectedYear}
+          </span>
         </h1>
         <div className="flex items-start">
           <YearToggle
@@ -217,38 +228,16 @@ export default function Dashboard() {
 
       <div className="flex flex-1 flex-col gap-4 md:gap-4">
         {/* KPI Cards */}
-        <KPI kpi={kpi} />
+        <KPI kpi={kpi} kpiTrend={processedKpiTrendData} />
 
         <div className="grid items-start gap-4 xl:grid-cols-3">
           <div className="space-y-4 xl:col-span-2">
-            {/* Total Production Volume Chart */}
-
-            <Tabs defaultValue="cobalt">
-              <TabsList>
-                <TabsTrigger value="cobalt">Cobalt</TabsTrigger>
-                <TabsTrigger value="copper">Copper</TabsTrigger>
-              </TabsList>
-              <TabsContent value="cobalt">
-                <SingleInteractiveBarChart
-                  title="Exports of Cobalt by Projects"
-                  description={`${selectedYear} Production Quantity(T)`}
-                  config={coXhistoryChartConfig}
-                  chartData={coXhistory}
-                  xdataKey="exporter"
-                  ydataKey="quantity"
-                />
-              </TabsContent>
-              <TabsContent value="copper">
-                <SingleInteractiveBarChart
-                  title="Exports of Copper by Projects"
-                  description={`${selectedYear} Production Quantity(T)`}
-                  config={cuXhistoryChartConfig}
-                  chartData={cuXhistory}
-                  xdataKey="exporter"
-                  ydataKey="quantity"
-                />
-              </TabsContent>
-            </Tabs>
+            {/* Exports Production by Projects Chart */}
+            <ProductionExports
+              selectedYear={selectedYear}
+              coXhistory={coXhistory}
+              cuXhistory={cuXhistory}
+            />
 
             {/* Top Destinations Chart */}
             <TopDestinations
@@ -260,8 +249,8 @@ export default function Dashboard() {
 
           {/* Eport Trend Cards */}
           <ExportTrend
-            exportQuantityData={exportQuantityData}
-            exportTransactionData={exportTransactionData}
+            exportQuantityData={quantityTrendData}
+            exportTransactionData={transactionTrendData}
           />
         </div>
       </div>

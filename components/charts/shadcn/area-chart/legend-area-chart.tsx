@@ -1,12 +1,15 @@
 "use client";
-
 import { ReactNode } from "react";
-
-import { TrendingUp } from "lucide-react";
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  LabelList,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 import {
-  Card,
   CardContent,
   CardDescription,
   CardFooter,
@@ -21,28 +24,15 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig;
+import {
+  numberFormatter,
+  quantityFormatter,
+  quantityFormatterT,
+} from "@/lib/utils";
+import { Divide } from "lucide-react";
 
 type LegendAreaChartProps = {
-  title: string;
+  title?: string;
   description: string;
   config: ChartConfig;
   chartData: any;
@@ -50,7 +40,6 @@ type LegendAreaChartProps = {
   firstDataKey: string;
   secondDataKey: string;
   footNote?: ReactNode;
-  formatter: string;
 };
 
 export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
@@ -72,8 +61,9 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 12,
-              right: 12,
+              left: 16,
+              right: 16,
+              top: 20,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -83,8 +73,7 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
               axisLine={false}
               tickMargin={8}
               tickFormatter={(value) => {
-                const date = new Date(value);
-                return date.toLocaleDateString("en-US", {
+                return new Date(value).toLocaleDateString("en-US", {
                   year: "numeric",
                 });
               }}
@@ -95,11 +84,9 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
                 <ChartTooltipContent
                   indicator="line"
                   className="w-[150px]"
-                  // nameKey="views"
+                  nameKey={props.firstDataKey}
                   labelFormatter={(value) => {
                     return new Date(value).toLocaleDateString("en-US", {
-                      //   month: "short",
-                      //   day: "numeric",
                       year: "numeric",
                     });
                   }}
@@ -113,7 +100,19 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
               fillOpacity={0.3}
               stroke={`var(--color-${props.firstDataKey}`}
               stackId="a"
-            />
+              dot
+            >
+              <LabelList
+                position="top"
+                offset={12}
+                className="fill-muted-foreground"
+                fontSize={10}
+                dataKey={props.firstDataKey}
+                formatter={(value: number) => {
+                  return numberFormatter(value);
+                }}
+              />
+            </Area>
             <Area
               dataKey={props.secondDataKey}
               type="monotone"
@@ -121,7 +120,16 @@ export function LegendAreaChart({ ...props }: LegendAreaChartProps) {
               fillOpacity={0.3}
               stroke={`var(--color-${props.secondDataKey}`}
               stackId="b"
-            />
+            >
+              <LabelList
+                position="top"
+                offset={12}
+                className="fill-muted-foreground"
+                fontSize={10}
+                dataKey={props.secondDataKey}
+                formatter={(value: number) => numberFormatter(value)}
+              />
+            </Area>
             <ChartLegend content={<ChartLegendContent />} />
           </AreaChart>
         </ChartContainer>
