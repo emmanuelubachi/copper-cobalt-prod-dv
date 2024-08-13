@@ -12,11 +12,13 @@ import kpiData from "@/data/overview/kpi_data.json";
 import trendData from "@/data/overview/kpitrend_year_data.json";
 import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
 import historyByDestinationData from "@/data/overview/quantity-transaction_history_by_destination-country_2015-2022.json";
+import exporterShareData from "@/data/overview/exporters_share_table.json";
 
 import {
   summarizeDestinations,
   transformTrendData,
 } from "@/lib/dataProcessing";
+import ExportTable from "./components/export-table";
 
 export type kpiTrendProps = {
   date: string;
@@ -61,6 +63,15 @@ export type TransformedData = {
   Copper?: number;
 }[];
 
+export type xShareDataProps = {
+  product: string;
+  exporter: string;
+  quantity: number;
+  quantity_percent: number;
+  transaction: number;
+  transaction_percent: number;
+}[];
+
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
@@ -68,6 +79,7 @@ export default function Dashboard() {
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);
   const [coDestSum, setCoDestSum] = useState<OverviewDestinationSummary[]>([]);
   const [cuDestSum, setCuDestSum] = useState<OverviewDestinationSummary[]>([]);
+  const [xshareData, setXshareData] = useState<xShareDataProps>([]);
 
   // Memoize processedKpiTrendData to avoid unnecessary recalculations
   const processedKpiTrendData: kpiTrendProps = useMemo(() => {
@@ -182,10 +194,39 @@ export default function Dashboard() {
       }
     };
 
+    const fetchExporterShareData = async () => {
+      try {
+        const filtered = exporterShareData.filter(
+          (row) => row.year === selectedYear,
+        );
+
+        const data = filtered.map((row) => ({
+          product: row.product,
+          exporter: row.exporter,
+          quantity: parseFloat(row.quantity),
+          quantity_percent: parseFloat(
+            (parseFloat(row.quantity_percent) * 100).toFixed(2),
+          ),
+          transaction: parseInt(row.transaction),
+          transaction_percent: parseFloat(
+            (parseFloat(row.transaction_percent) * 100).toFixed(2),
+          ),
+        }));
+
+        setXshareData(data);
+      } catch (error) {
+        console.error(
+          "Error fetching and processing total industral projects production data:",
+          error,
+        );
+      }
+    };
+
     fetchkpiData();
     fetchCoDestinationData();
     fetchCuDestinationData();
     fetchHistoryByExporterData();
+    fetchExporterShareData();
   }, [selectedYear]);
 
   // Memoize quantityTrendData to avoid unnecessary recalculations
@@ -253,6 +294,8 @@ export default function Dashboard() {
             exportTransactionData={transactionTrendData}
           />
         </div>
+
+        <ExportTable data={xshareData} />
       </div>
     </main>
   );
