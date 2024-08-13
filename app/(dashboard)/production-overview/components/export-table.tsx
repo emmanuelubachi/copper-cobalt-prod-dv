@@ -43,7 +43,7 @@ import {
 export default function ExportTable({ data }: { data: xShareDataProps }) {
   const [selectedProduct, setSelectedProduct] = useState<string>("Cobalt");
   const [sortOption, setSortOption] =
-    useState<keyof xShareDataProps[number]>("transaction");
+    useState<keyof xShareDataProps[number]>("quantity");
   const [tableData, setTableData] = useState<xShareDataProps>(data);
 
   useEffect(() => {
