@@ -71,41 +71,337 @@ export const NATIONALITYLIST: string[] = [
 //   { key: "status_in_2023", label: "Status in 2023" },
 // ];
 
-export const IndustrialProjectDetailsLabels: {
-  key: keyof IndustralProjectDetailsProps;
-  label: string;
-}[] = [
-  { key: "N°", label: "Number" },
-  { key: "Project_name", label: "Project Name" },
-  { key: "Short_name", label: "Short Name" },
-  { key: "Permit_ID", label: "Permit ID" },
-  { key: "Code", label: "Code" },
-  { key: "Ownership", label: "Ownership" },
-  { key: "Nationality", label: "Nationality" },
+// export const IndustrialProjectDetailsLabels: {
+//   key: keyof IndustralProjectDetailsProps;
+//   label: string;
+// }[] = [
+//   { key: "N°", label: "Number" },
+//   { key: "Project_name", label: "Project Name" },
+//   { key: "Short_name", label: "Short Name" },
+//   { key: "Permit_ID", label: "Permit ID" },
+//   { key: "Code", label: "Code" },
+//   { key: "Ownership", label: "Ownership" },
+//   { key: "Nationality", label: "Nationality" },
+//   {
+//     key: "Copper/Cobalt_annual_production_(2022)",
+//     label: "Annual Production 2022",
+//   },
+//   { key: "ISO_A3", label: "ISO A3" },
+//   { key: "Province", label: "Province" },
+//   { key: "Geographical_coordinates", label: "Geographical Coordinates" },
+//   { key: "latitude_longitude", label: "Latitude, Longitude" },
+//   {
+//     key: "Geographical_description_project_description",
+//     label: "Geographical Description",
+//   },
+//   { key: "Project_size", label: "Project Size" },
+//   { key: "Deposit_size_(official_reserves)", label: "Deposit Size" },
+//   { key: "Mine_life/permit_validity", label: "Mine Life/Permit Validity" },
+//   { key: "Mine_type", label: "Mine Type" },
+//   { key: "Contract_type", label: "Contract Type" },
+//   { key: "Share_allocation", label: "Share Allocation" },
+//   { key: "Project_background", label: "Project Background" },
+//   { key: "Management", label: "Management" },
+//   { key: "NumberOfEmployees", label: "Number of Employees" },
+//   { key: "SourcesLinks", label: "Sources/Links" },
+//   { key: "Nat0", label: "Nationality 0" },
+//   { key: "Nat1", label: "Nationality 1" },
+// ];
+
+export const CompaniesList = [
   {
-    key: "Copper/Cobalt_annual_production_(2022)",
-    label: "Annual Production 2022",
+    value: "Australia",
+    label: "Australia",
+    flagCode: "AU",
+    children: [
+      {
+        value: "sek",
+        label: "Societe D'Exploitation De Kipoi",
+      },
+    ],
   },
-  { key: "ISO_A3", label: "ISO A3" },
-  { key: "Province", label: "Province" },
-  { key: "Geographical_coordinates", label: "Geographical Coordinates" },
-  { key: "latitude_longitude", label: "Latitude, Longitude" },
   {
-    key: "Geographical_description_project_description",
-    label: "Geographical Description",
+    value: "Canada",
+    label: "Canada",
+    flagCode: "CA",
+    children: [
+      {
+        value: "kamoa",
+        label: "Kamoa Copper SA",
+      },
+    ],
   },
-  { key: "Project_size", label: "Project Size" },
-  { key: "Deposit_size_(official_reserves)", label: "Deposit Size" },
-  { key: "Mine_life/permit_validity", label: "Mine Life/Permit Validity" },
-  { key: "Mine_type", label: "Mine Type" },
-  { key: "Contract_type", label: "Contract Type" },
-  { key: "Share_allocation", label: "Share Allocation" },
-  { key: "Project_background", label: "Project Background" },
-  { key: "Management", label: "Management" },
-  { key: "NumberOfEmployees", label: "Number of Employees" },
-  { key: "SourcesLinks", label: "Sources/Links" },
-  { key: "Nat0", label: "Nationality 0" },
-  { key: "Nat1", label: "Nationality 1" },
+  {
+    value: "China",
+    label: "China",
+    flagCode: "CN",
+    children: [
+      {
+        value: "anvil",
+        label: "Anvil Mining Congo SARL",
+      },
+      {
+        value: "ccr",
+        label: "Chengtun Congo Ressources SARL",
+      },
+      {
+        value: "cdm",
+        label: "Congo Dongfang International Mining",
+      },
+      {
+        value: "cjcmc",
+        label: "Congo Jinjun Cheng",
+      },
+      {
+        value: "cnmc",
+        label: "Societe Cnmc Congo Compagnie Minier",
+      },
+      {
+        value: "comika",
+        label: "Compagnie Miniere De Kambove SPRL",
+      },
+      {
+        value: "comilu",
+        label: "Compagnie Miniere De Luisha",
+      },
+      {
+        value: "commus",
+        label: "La Compagnie Miniere De Musonoie Gl",
+      },
+      {
+        value: "congo_moon",
+        label: "Congo Moon Mining SARL",
+      },
+      {
+        value: "divine",
+        label: "Divine Land Mining SARL",
+      },
+      {
+        value: "everbright",
+        label: "Everbright Mining SARL",
+      },
+      {
+        value: "excellen",
+        label: "Excelent Minerals SARL",
+      },
+      {
+        value: "hanrui_metal",
+        label: "Hanuri Metal Congo",
+      },
+      {
+        value: "huachin_mabende",
+        label: "CNMC Huachin Mabende Mining SPRL",
+      },
+      {
+        value: "huachin metal",
+        label: "Huachin Metal Leach SPRL",
+      },
+      {
+        value: "jxcom",
+        label: "Jin Xun Congo Mining SARL",
+      },
+      {
+        value: "kaipeng",
+        label: "Societe Kai Peng Mining",
+      },
+      {
+        value: "kalongwe",
+        label: "Kalongwe Mining S.A",
+      },
+      {
+        value: "kambove",
+        label: "Kambove Mining SAS",
+      },
+      {
+        value: "kamoa_china",
+        label: "Kamoa Copper SA",
+      },
+      {
+        value: "kfm",
+        label: "Kisanfu Mining",
+      },
+      {
+        value: "kicc",
+        label: "Kinsenda Copper Company SARL",
+      },
+      {
+        value: "lamikal",
+        label: "La Miniere De Kalunkundi",
+      },
+      {
+        value: "lcs",
+        label: "Lualaba Copper Smelter SAS",
+      },
+      {
+        value: "lr_sas",
+        label: "Luilu Ressources SAS",
+      },
+      {
+        value: "mm",
+        label: "Metal Mines SPRL",
+      },
+      {
+        value: "mikas",
+        label: "La Miniere De Kasombo",
+      },
+      {
+        value: "mjm",
+        label: "Macrolink Jiayuan Mining SPRL",
+      },
+      {
+        value: "mkm",
+        label: "La Miniere De Kalunbwe Myunga",
+      },
+      {
+        value: "mmg",
+        label: "MMG Kinsevere SARL",
+      },
+      {
+        value: "mmt",
+        label: "Mineral Metal Technology SARL",
+      },
+      {
+        value: "new_minerals",
+        label: "New Minerals",
+      },
+      {
+        value: "ruashi",
+        label: "Ruashi Mining SPRL",
+      },
+      {
+        value: "sabwe",
+        label: "Sabwe Mining SARL",
+      },
+      {
+        value: "shituru",
+        label: "Shituru Mining Corporation SPRL",
+      },
+      {
+        value: "sicomines",
+        label: "Sino Congolaise Des Mines SARL",
+      },
+      {
+        value: "somidez",
+        label: "Societe Miniere De Deziwa SAS",
+      },
+      {
+        value: "tcc",
+        label: "Tengyuan Cobalt & Copper Resources",
+      },
+      {
+        value: "tfm",
+        label: "Tenke Fungurume Mining",
+      },
+      {
+        value: "thomas",
+        label: "Thomas Mining SARL",
+      },
+    ],
+  },
+  {
+    value: "DR Congo",
+    label: "DR Congo",
+    flagCode: "CD",
+    children: [
+      {
+        value: "amical",
+        label: "Amical Kakana Mining SPRL",
+      },
+      {
+        value: "gcm",
+        label: "GECAMINES",
+      },
+
+      {
+        value: "stl",
+        label: "Societe Pour Le Traitement Du Terril De Lubumbashi",
+      },
+    ],
+  },
+  {
+    value: "India",
+    label: "India",
+    flagCode: "IN",
+    children: [
+      {
+        value: "chemaf",
+        label: "Chemical Of Africa SPRL",
+      },
+      {
+        value: "golden",
+        label: "Golden Africa Resources SPRL",
+      },
+      {
+        value: "kimin",
+        label: "Kisanfu Mining SPRL",
+      },
+      {
+        value: "omr",
+        label: "Om Metal Ressources SPRL",
+      },
+      {
+        value: "rubamin",
+        label: "Rubamin SARL",
+      },
+      {
+        value: "somika",
+        label: "Societe Miniere Du Katanga",
+      },
+      {
+        value: "kastro",
+        label: "Katanga Strategic Resources",
+      },
+    ],
+  },
+  {
+    value: "Kazakhstan",
+    label: "Kazakhstan",
+    flagCode: "KZ",
+    children: [
+      {
+        value: "boss",
+        label: "Boss Mining SPRL",
+      },
+      {
+        value: "comide",
+        label: "La Congolaise Des Mines Et De Devel",
+      },
+      {
+        value: "frontier",
+        label: "Kalongwe Mining S.A",
+      },
+      {
+        value: "metalkol",
+        label: "Compagnie De Traitement Des Rejets KingyamBo",
+      },
+    ],
+  },
+  {
+    value: "South Africa",
+    label: "South Africa",
+    flagCode: "ZA",
+    children: [
+      {
+        value: "mpc",
+        label: "Mining Progress Company SARL",
+      },
+    ],
+  },
+  {
+    value: "Switzerland",
+    label: "Switzerland",
+    flagCode: "CH",
+    children: [
+      {
+        value: "kcc",
+        label: "Kamoto Copper Company SARL",
+      },
+      {
+        value: "mumi",
+        label: "Mutanda Mining SARL",
+      },
+    ],
+  },
 ];
 
 export const IndustralProjectsNode = [

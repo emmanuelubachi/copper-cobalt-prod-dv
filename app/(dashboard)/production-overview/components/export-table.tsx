@@ -63,8 +63,6 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
     setTableData(tableData);
   }, [data, selectedProduct, sortOption]);
 
-  const products = ["Cobalt", "Copper"];
-
   return (
     <Card className="__card">
       <CardHeader>
