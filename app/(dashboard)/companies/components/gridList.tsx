@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
@@ -9,38 +11,82 @@ import useFilterStore from "@/store/filterStore";
 // import { industralProjectName } from "@/data/industral-projects";
 import { Separator } from "@/components/ui/separator";
 
+import Flags from "country-flag-icons/react/3x2";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+
 // function classNames(...classes: string[]): string {
 //   return classes.filter(Boolean).join(" ");
 // }
 
-export type IndustralProjectsNodeProps = {
+export type CompaniesListProps = {
   value: string;
   label: string;
+  flagCode: string;
   children: {
     value: string;
     label: string;
   }[];
 }[];
 
-export default function GridList({
-  data,
-}: {
-  data: IndustralProjectsNodeProps;
-}) {
+type FlagProps = {
+  countryCode: string;
+};
+
+const Flag = ({ countryCode }: FlagProps) => {
+  const FlagComponent = Flags[countryCode.toUpperCase() as keyof typeof Flags];
+  return <FlagComponent className="h-5 w-8 rounded-[5px]" />;
+};
+
+export default function GridList({ data }: { data: CompaniesListProps }) {
   const { closeFilter } = useFilterStore();
 
+  const [selectedGroup, setSelectedGroup] = React.useState("Country");
+
   return (
-    <section className="space-y-4">
+    <section className="space-y-2">
+      <div className="flex items-center justify-end space-x-2">
+        <h3 className="text-xs font-medium text-foreground/70">Group by:</h3>
+        <ToggleGroup
+          type="single"
+          unselectable="off"
+          size={"sm"}
+          defaultValue={selectedGroup}
+          onValueChange={(value) => {
+            if (value) setSelectedGroup(value);
+          }}
+          className="justify-end gap-0"
+        >
+          <ToggleGroupItem
+            value={"Country"}
+            aria-label={`Toggle product Cobalt`}
+            className="__button_pressed rounded-lg bg-chart6/10 px-3 text-chart6 transition-all duration-300 data-[state=on]:bg-chart6/20 data-[state=on]:font-black data-[state=on]:text-chart6 hover:bg-chart6/10 hover:text-chart6/80 dark:bg-background/15 dark:data-[state=on]:bg-chart6/10 dark:data-[state=on]:text-blue-400"
+          >
+            {"Country"}
+          </ToggleGroupItem>
+          {/* <ToggleGroupItem
+          value={"Company_Group"}
+          aria-label={`Toggle product Copper`}
+          className="__button_pressed rounded-none rounded-r-lg bg-chart5/20 px-3 text-chart5 transition-all duration-300 data-[state=on]:bg-chart5/30 data-[state=on]:font-black data-[state=on]:text-orange-600 hover:bg-chart5/20 hover:text-chart5/90 dark:bg-background/15 dark:data-[state=on]:bg-chart5/10 dark:data-[state=on]:text-orange-400"
+        >
+          {"Company Group"}
+        </ToggleGroupItem> */}
+        </ToggleGroup>
+      </div>
+
       <div className="mt-2 gap-3 space-y-6 sm:mt-4">
         {data.map((member) => (
           <>
             <div className="w-full" key={member.value}>
               <div className="flex items-center space-x-2">
-                <h2 className="px-2 text-h6 font-medium text-foreground">
-                  {member.label}
-                </h2>
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground">
-                  {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong"> */}
+                <div className="flex items-center">
+                  <Flag countryCode={member.flagCode} />
+                  <h2 className="px-2 text-h6 font-medium text-foreground">
+                    {member.label}
+                  </h2>
+                </div>
+
+                {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground"> */}
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
                   {member.children.length}
                 </span>
               </div>
