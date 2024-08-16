@@ -36,7 +36,7 @@ export default function GridList({
           <>
             <div className="w-full" key={member.value}>
               <div className="flex items-center space-x-2">
-                <h2 className="px-2 text-h6 font-medium text-foreground dark:text-primary/80">
+                <h2 className="px-2 text-h6 font-medium text-foreground">
                   {member.label}
                 </h2>
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
@@ -52,7 +52,7 @@ export default function GridList({
                     className="__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-background hover:dark:bg-muted"
                     onClick={closeFilter}
                   >
-                    <p className="truncate text-sm text-muted-foreground">
+                    <p className="truncate text-sm text-foreground">
                       {child.label}
                     </p>
 
