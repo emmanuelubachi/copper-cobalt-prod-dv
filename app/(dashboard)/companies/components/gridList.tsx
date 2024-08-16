@@ -2,16 +2,16 @@
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
-import { Card } from "@tremor/react";
+// import { Card } from "@tremor/react";
 import useFilterStore from "@/store/filterStore";
 
-import { companyData } from "@/data/chartData";
-import { industralProjectName } from "@/data/industral-projects";
+// import { companyData } from "@/data/chartData";
+// import { industralProjectName } from "@/data/industral-projects";
 import { Separator } from "@/components/ui/separator";
 
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes: string[]): string {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 export type IndustralProjectsNodeProps = {
   value: string;
@@ -36,16 +36,13 @@ export default function GridList({
           <>
             <div className="w-full" key={member.value}>
               <div className="flex items-center space-x-2">
-                <h2 className="px-2 text-h6 font-medium">{member.label}</h2>
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-tremor-background-subtle text-pxs font-medium text-tremor-content-strong dark:bg-dark-tremor-background-subtle dark:text-dark-tremor-content-strong">
+                <h2 className="px-2 text-h6 font-medium text-foreground">
+                  {member.label}
+                </h2>
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground">
+                  {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong"> */}
                   {member.children.length}
                 </span>
-
-                {/* <div className="flex items-center ">
-                <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                  Projects
-                </h3>
-              </div> */}
               </div>
 
               <div className="mt-2 grid grid-cols-2 gap-2 sm:mt-4 sm:grid-cols-2 sm:gap-1 sm:gap-x-4 lg:grid-cols-3 xl:grid-cols-4">
@@ -53,42 +50,20 @@ export default function GridList({
                   <Link
                     key={child.value}
                     href={`/projects?project_id=${child.value.toLowerCase().trim()}`}
-                    className="__button_pressed group relative rounded-md p-2 hover:bg-background"
+                    className="__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-background hover:dark:bg-muted"
                     onClick={closeFilter}
                   >
-                    <div className="flex items-center space-x-4">
-                      <div className="truncate">
-                        <p className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                          <>
-                            {/* Extend link to entire card */}
-                            {/* <span
-                              className="absolute inset-0"
-                              aria-hidden={true}
-                            /> */}
-                            {child.value.toLocaleUpperCase()}
-                          </>
-                        </p>
-                        <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                          {child.label}
-                        </p>
-                      </div>
-                    </div>
+                    <p className="truncate text-sm text-foreground/70">
+                      {child.label}
+                    </p>
+
                     <span
-                      className="pointer-events-none absolute right-4 top-4 hidden text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content lg:block"
+                      className="pointer-events-none hidden text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content lg:block"
                       aria-hidden={true}
                     >
                       <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
                     </span>
                   </Link>
-                  // <Card key={child.value} className="__card">
-                  //   <Link
-                  //     href={`/projects?project_id=${child.value.toLowerCase().trim()}`}
-                  //     className=""
-                  //     onClick={closeFilter}
-                  //   >
-                  //     <p className="text-sm">{child.label}</p>
-                  //   </Link>
-                  // </Card>
                 ))}
               </div>
             </div>

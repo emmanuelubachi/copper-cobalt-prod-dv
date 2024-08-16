@@ -28,7 +28,7 @@ export default function YearToggle({
           key={year}
           value={year}
           aria-label={`Toggle year ${year}`}
-          className="bg-accent px-3 text-foreground/80 ring-1 ring-neutral-200 data-[state=on]:bg-neutral-200 data-[state=on]:font-black data-[state=on]:text-foreground dark:bg-background/15 dark:ring-0 dark:data-[state=on]:bg-background"
+          className="__button_pressed bg-accent px-3 text-foreground/80 ring-1 ring-neutral-200 data-[state=on]:bg-neutral-200 data-[state=on]:font-black data-[state=on]:text-foreground dark:bg-background/15 dark:ring-0 dark:data-[state=on]:bg-background"
         >
           {year}
         </ToggleGroupItem>
