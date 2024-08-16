@@ -18,7 +18,7 @@ export default function ExportTrend({
   exportTransactionData,
 }: any) {
   return (
-    <section className="space-y-4 xl:mt-4">
+    <section className="space-y-4 xl:mt-0">
       <Card className="__card">
         <LegendAreaChart
           title="Exports Trend"

@@ -73,7 +73,7 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
               Share of exported copper and cobalt products by exporter.
             </CardDescription>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex flex-col gap-2 md:flex-row md:items-center">
             <ToggleGroup
               type="single"
               unselectable="off"

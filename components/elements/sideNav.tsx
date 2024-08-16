@@ -24,7 +24,7 @@ export default function SideNav() {
   const { closeMapDetails } = useMapDetailsStore();
 
   return (
-    <nav className="inset-y-0 left-0 z-50 hidden h-screen w-16 flex-col border-r bg-background sm:sticky sm:flex">
+    <nav className="inset-y-0 left-0 z-50 hidden h-screen w-16 flex-col bg-background shadow-lg sm:sticky sm:flex">
       <div className="flex h-full w-full flex-col justify-between">
         <div className={`item-center flex flex-col gap-6 px-4 sm:py-2`}>
           <div className={`flex h-14 w-full items-center justify-center`}>

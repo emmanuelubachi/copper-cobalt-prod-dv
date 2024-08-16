@@ -45,7 +45,10 @@ export default function BigSideNav() {
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="sm:max-w-xs">
+          <SheetContent
+            side="left"
+            className="border-none shadow-lg sm:max-w-xs"
+          >
             <nav className="grid gap-4 text-lg font-medium">
               <Link href="/">
                 {isDark ? (

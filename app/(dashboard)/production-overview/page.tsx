@@ -250,15 +250,16 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-6 sm:py-3">
-      <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white p-4 dark:bg-muted lg:sticky lg:top-4 lg:flex lg:space-y-0">
-        <h1 className="text-h4 font-medium tracking-tight">
+    <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-8 sm:py-3">
+      <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
+        {/* <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-4 lg:flex lg:space-y-0"> */}
+        <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
           Copper and Cobalt Production Overview for{" "}
           <span className="border-b-2 border-primary/50 font-black">
             {selectedYear}
           </span>
         </h1>
-        <div className="flex items-start">
+        <div className="flex items-center justify-center sm:items-start lg:justify-end">
           <YearToggle
             defaultValue={selectedYear}
             onChangeFunction={setSelectedYear}
@@ -267,11 +268,11 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <div className="flex flex-1 flex-col gap-4 md:gap-4">
+      <div className="flex flex-1 flex-col gap-4 md:gap-6">
         {/* KPI Cards */}
         <KPI kpi={kpi} kpiTrend={processedKpiTrendData} />
 
-        <div className="grid items-start gap-4 xl:grid-cols-3">
+        <div className="grid items-start gap-4 md:gap-6 xl:grid-cols-3">
           <div className="space-y-4 xl:col-span-2">
             {/* Exports Production by Projects Chart */}
             <ProductionExports
