@@ -39,7 +39,8 @@ export default function GridList({
                 <h2 className="px-2 text-h6 font-medium text-foreground">
                   {member.label}
                 </h2>
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground">
+                  {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong"> */}
                   {member.children.length}
                 </span>
               </div>
