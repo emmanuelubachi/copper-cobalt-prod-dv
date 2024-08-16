@@ -86,7 +86,7 @@ export default function GridList({ data }: { data: CompaniesListProps }) {
                 </div>
 
                 {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground"> */}
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-background text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
                   {member.children.length}
                 </span>
               </div>
@@ -96,7 +96,7 @@ export default function GridList({ data }: { data: CompaniesListProps }) {
                   <Link
                     key={child.value}
                     href={`/projects?project_id=${child.value.toLowerCase().trim()}`}
-                    className="__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-background hover:dark:bg-muted"
+                    className="__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-neutral-100 hover:dark:bg-muted"
                     onClick={closeFilter}
                   >
                     <p className="truncate text-sm text-foreground/70">
@@ -104,7 +104,7 @@ export default function GridList({ data }: { data: CompaniesListProps }) {
                     </p>
 
                     <span
-                      className="pointer-events-none hidden text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content lg:block"
+                      className="pointer-events-none hidden text-neutral-400 group-hover:text-foreground/70 dark:text-neutral-700 lg:block"
                       aria-hidden={true}
                     >
                       <ArrowUpRight className="h-4 w-4" aria-hidden={true} />

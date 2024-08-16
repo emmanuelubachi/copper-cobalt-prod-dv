@@ -112,7 +112,7 @@
 }
 
 .__card {
-  @apply m-0 border-none bg-background shadow-none dark:bg-muted/50;
+  @apply m-0 border-none bg-neutral-100 shadow-none dark:bg-muted/50;
 }
 
 /* ---------------------------------------------------------------------------------- */
