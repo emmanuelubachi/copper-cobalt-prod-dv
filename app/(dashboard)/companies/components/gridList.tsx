@@ -52,7 +52,7 @@ export default function GridList({
                     className="__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-background hover:dark:bg-muted"
                     onClick={closeFilter}
                   >
-                    <p className="truncate text-sm text-foreground">
+                    <p className="truncate text-sm text-foreground/70">
                       {child.label}
                     </p>
 
