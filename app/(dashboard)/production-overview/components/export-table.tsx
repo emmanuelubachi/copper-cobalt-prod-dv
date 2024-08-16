@@ -84,18 +84,22 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
               onValueChange={(value) => {
                 if (value) setSelectedProduct(value);
               }}
-              className="gap-2 rounded-md p-1"
+              className="gap-0"
             >
-              {products.map((product) => (
-                <ToggleGroupItem
-                  key={product}
-                  value={product}
-                  aria-label={`Toggle product ${product}`}
-                  className="bg-accent px-3 text-foreground/80 ring-1 ring-neutral-200 data-[state=on]:bg-neutral-200 data-[state=on]:font-black data-[state=on]:text-foreground dark:bg-background/15 dark:ring-0 dark:data-[state=on]:bg-background"
-                >
-                  {product}
-                </ToggleGroupItem>
-              ))}
+              <ToggleGroupItem
+                value={"Cobalt"}
+                aria-label={`Toggle product Cobalt`}
+                className="__button_pressed rounded-none rounded-l-lg bg-chart6/10 px-3 text-chart6 transition-all duration-300 data-[state=on]:bg-chart6/20 data-[state=on]:font-black data-[state=on]:text-chart6 hover:bg-chart6/10 hover:text-chart6/80 dark:bg-background/15 dark:data-[state=on]:bg-chart6/10 dark:data-[state=on]:text-blue-400"
+              >
+                {"Cobalt"}
+              </ToggleGroupItem>
+              <ToggleGroupItem
+                value={"Copper"}
+                aria-label={`Toggle product Copper`}
+                className="__button_pressed rounded-none rounded-r-lg bg-chart5/20 px-3 text-chart5 transition-all duration-300 data-[state=on]:bg-chart5/30 data-[state=on]:font-black data-[state=on]:text-orange-600 hover:bg-chart5/20 hover:text-chart5/90 dark:bg-background/15 dark:data-[state=on]:bg-chart5/10 dark:data-[state=on]:text-orange-400"
+              >
+                {"Copper"}
+              </ToggleGroupItem>
             </ToggleGroup>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -161,10 +165,10 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
 
                 <TableCell>
                   <Badge
-                    className={`bg hidden rounded-md xl:table-cell ${selectedProduct === "Cobalt" ? "bg-chart6 text-background" : "bg-chart5 text-background"}`}
+                    className={`hidden rounded-md border-transparent xl:table-cell ${product.product === "Cobalt" ? "bg-chart6/10 text-chart6 dark:text-blue-400" : "bg-chart5/10 text-orange-600 dark:text-orange-400"}`}
                     variant="outline"
                   >
-                    {selectedProduct}
+                    {product.product}
                   </Badge>
                 </TableCell>
               </TableRow>
