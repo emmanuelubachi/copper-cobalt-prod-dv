@@ -1,29 +1,17 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import useFilterStore from "@/store/filterStore";
-import { Card, Divider } from "@tremor/react";
-import { ArrowUpRight } from "lucide-react";
 import { industralProjectName } from "@/data/industral-projects";
+import { Separator } from "@/components/ui/separator";
 
 export default function ProjectFilter() {
   const searchParams = useSearchParams();
-  const { closeFilter } = useFilterStore();
-
   const project_id = searchParams.get("project_id");
-
-  // useEffect(() => {
-  //   console.log("ProjectFilter component mounted");
-  //   console.log("searchParams:", searchParams);
-  //   console.log("project_id:", project_id);
-  // }, [project_id, searchParams]);
-
   const data = industralProjectName;
 
   return (
-    <div className="h-screen w-72">
-      <div className="flex items-center space-x-2 px-2">
+    <div className="h-screen w-72 space-y-2">
+      <div className="flex items-center space-x-2 p-4">
         <h3 className="text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Projects
         </h3>
@@ -31,42 +19,28 @@ export default function ProjectFilter() {
           {data.length}
         </span>
       </div>
-      <Divider className="" />
+      <Separator />
       <div className="h-full pb-32">
-        <div className="mt-0 grid h-full grid-cols-1 gap-4 overflow-auto px-2 pb-32 pr-2 pt-1">
+        <div className="mt-0 grid h-full grid-cols-1 gap-1 overflow-auto px-2 pb-20 pr-2 pt-1">
           {data.map((member) => (
-            <Card
+            <div
               key={member["project_name"]}
-              className={`group px-6 py-4 hover:ring-neutral-500 dark:hover:ring-neutral-500 ${project_id === member["_project_id"] && "border border-primary dark:border-primary"}`}
+              className={`group rounded-md px-2 py-2 hover:bg-neutral-100 dark:hover:bg-muted ${project_id === member["_project_id"] && "bg-neutral-100 text-foreground dark:bg-muted dark:text-foreground"}`}
             >
               <div className="flex items-center space-x-4">
-                <div className="truncate">
-                  <div className="truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                    <Link
-                      href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
-                      className="focus:outline-none"
-                      // onClick={closeFilter}
-                    >
-                      {/* Extend link to entire card */}
-                      <span className="absolute inset-0" aria-hidden={true} />
-                      {/* {member["short-name"]} */}
-                      <p className="line-clamp-2 truncate text-wrap pr-4 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                        {member["project_name"]}
-                      </p>
-                    </Link>
-                  </div>
-                  {/* <p className="truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-                  {member["project-name"]}
-                </p> */}
+                <div
+                  className={`truncate text-xs font-medium ${project_id === member["_project_id"] ? "font-semibold text-foreground" : "text-foreground/70"}`}
+                >
+                  <Link
+                    href={`/projects?project_id=${member["_project_id"].toLowerCase().trim()}`}
+                    className="focus:outline-none"
+                  >
+                    {member["project_name"]}
+                    <p className="text- line-clamp-2 truncate text-wrap pr-4 text-xs dark:text-dark-tremor-content"></p>
+                  </Link>
                 </div>
               </div>
-              <span
-                className="pointer-events-none absolute right-4 top-4 text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content"
-                aria-hidden={true}
-              >
-                <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
-              </span>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
