@@ -138,11 +138,13 @@ export default function ProjectDetails({
   }, [project_id]);
 
   return (
-    <main className="mb-24 mt-10 items-start space-y-4 p-4 sm:mb-20 sm:mt-14 sm:px-6 sm:py-4">
-      <div className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
-        <h1 className="text-h4 font-medium tracking-tight">
+    <main className="mb-24 mt-0 items-start space-y-4 p-4 sm:mb-20 sm:mt-0 sm:px-8 sm:py-3">
+      <header>
+        <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
           {projectInfo.project_name}
         </h1>
+      </header>
+      <div className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
         <div className="flex items-start">
           {/* <ToggleGroup
             type="single"
