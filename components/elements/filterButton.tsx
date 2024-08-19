@@ -8,12 +8,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
 
 type FilterButtonProps = {
   content: ReactNode;
   label: string;
   type: "tooltip" | "button";
   tooltip?: string;
+  className?: string;
 };
 
 const FilterButton: React.FC<FilterButtonProps> = ({
@@ -21,6 +23,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({
   label,
   type,
   tooltip,
+  className,
 }) => {
   const { toggleFilter, setFilterContent } = useFilterStore();
 
@@ -36,7 +39,10 @@ const FilterButton: React.FC<FilterButtonProps> = ({
           <TooltipTrigger asChild>
             <Button
               variant="outline"
-              className="__muted __button_pressed gap-2 rounded-lg px-4"
+              className={cn(
+                className,
+                "__muted __button_pressed gap-2 rounded-lg px-4",
+              )}
               onClick={handleClick}
             >
               <span className="text-pxs sm:text-sm">{label}</span>
