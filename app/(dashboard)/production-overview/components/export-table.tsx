@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { MoreHorizontal, SortDesc } from "lucide-react";
+import { SortDesc } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -18,8 +17,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -33,12 +30,7 @@ import {
 
 import { xShareDataProps } from "../page";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import {
-  floatFormatter,
-  numberFormatter,
-  quantityFormatter,
-  quantityFormatterT,
-} from "@/lib/utils";
+import { floatFormatter, quantityFormatter } from "@/lib/utils";
 
 export default function ExportTable({ data }: { data: xShareDataProps }) {
   const [selectedProduct, setSelectedProduct] = useState<string>("Cobalt");
@@ -87,21 +79,26 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
               <ToggleGroupItem
                 value={"Cobalt"}
                 aria-label={`Toggle product Cobalt`}
-                className="__button_pressed rounded-none rounded-l-lg bg-chart6/10 px-3 text-chart6 transition-all duration-300 data-[state=on]:bg-chart6/20 data-[state=on]:font-black data-[state=on]:text-chart6 hover:bg-chart6/10 hover:text-chart6/80 dark:bg-background/15 dark:data-[state=on]:bg-chart6/10 dark:data-[state=on]:text-blue-400"
+                className="__button_pressed rounded-none rounded-l-md bg-background px-3 text-foreground/70 shadow-md transition-all duration-300 data-[state=on]:bg-chart6/20 data-[state=on]:font-black data-[state=on]:text-chart6 hover:bg-chart6/10 hover:text-foreground/90 data-[state=on]:hover:text-chart6 dark:bg-background/15 dark:data-[state=on]:bg-chart6/10 dark:data-[state=on]:text-blue-400 dark:data-[state=off]:hover:bg-muted"
               >
                 {"Cobalt"}
               </ToggleGroupItem>
               <ToggleGroupItem
                 value={"Copper"}
                 aria-label={`Toggle product Copper`}
-                className="__button_pressed rounded-none rounded-r-lg bg-chart5/20 px-3 text-chart5 transition-all duration-300 data-[state=on]:bg-chart5/30 data-[state=on]:font-black data-[state=on]:text-orange-600 hover:bg-chart5/20 hover:text-chart5/90 dark:bg-background/15 dark:data-[state=on]:bg-chart5/10 dark:data-[state=on]:text-orange-400"
+                className="__button_pressed rounded-none rounded-r-md bg-background px-3 text-foreground/70 shadow-md transition-all duration-300 data-[state=on]:bg-chart5/30 data-[state=on]:font-black data-[state=on]:text-orange-600 hover:bg-chart5/20 hover:text-foreground/90 data-[state=on]:hover:text-orange-600 dark:bg-background/15 dark:data-[state=on]:bg-chart5/10 dark:data-[state=on]:text-orange-400 dark:data-[state=off]:hover:bg-muted"
               >
                 {"Copper"}
               </ToggleGroupItem>
             </ToggleGroup>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button aria-haspopup="true" size="sm" variant="outline">
+                <Button
+                  aria-haspopup="true"
+                  size="sm"
+                  variant="outline"
+                  className="__button_pressed border-none text-foreground/70 shadow-md ring-0 transition-all duration-300 hover:bg-muted hover:text-foreground dark:bg-background/15 dark:hover:bg-muted dark:hover:text-foreground"
+                >
                   Sort by
                   <SortDesc className="h-4 w-4" />
                   <span className="sr-only">Sort by options</span>

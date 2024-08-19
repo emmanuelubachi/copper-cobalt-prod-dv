@@ -10,7 +10,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="flex bg-background dark:bg-neutral-900 sm:flex-row">
-        {/* <div className="flex bg-foreground/5 dark:bg-muted/40 sm:flex-row"> */}
         <aside>
           <SideNav />
           <FilterDrawer />
