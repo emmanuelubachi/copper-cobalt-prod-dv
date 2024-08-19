@@ -1,4 +1,4 @@
-import * as React from "react";
+import { Suspense } from "react";
 
 import { fetchData } from "@/lib/fetchData";
 import ProjectPage from "./projectPage";
@@ -12,5 +12,9 @@ export default async function Page({
 }) {
   const result = await fetchData(searchParams);
 
-  return <ProjectPage searchParams={searchParams} {...result} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectPage searchParams={searchParams} {...result} />
+    </Suspense>
+  );
 }
