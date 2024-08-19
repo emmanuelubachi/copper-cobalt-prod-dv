@@ -29,9 +29,20 @@ export default function ProductionExports({
 }: any) {
   return (
     <Tabs defaultValue="cobalt">
-      <TabsList>
-        <TabsTrigger value="cobalt">Cobalt</TabsTrigger>
-        <TabsTrigger value="copper">Copper</TabsTrigger>
+      <TabsList className="rounded-md bg-muted">
+        <TabsTrigger
+          value="cobalt"
+          className="__button_pressed rounded-md bg-muted text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
+        >
+          Cobalt
+        </TabsTrigger>
+        <TabsTrigger
+          value="copper"
+          className="__button_pressed rounded-md bg-muted text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
+        >
+          {" "}
+          Copper
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="cobalt">
         <SingleInteractiveBarChart

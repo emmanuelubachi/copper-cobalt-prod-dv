@@ -7,6 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import KPIChart from "./kpi-trend-chart";
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
 import { kpiTrendProps } from "../page";
+import useDeviceType from "@/hooks/useDeviceType";
 
 type kpiDataProp = {
   year: string;
@@ -60,6 +61,8 @@ export default function KPI({
   kpi: kpiDataProp;
   kpiTrend: kpiTrendProps;
 }) {
+  const { isMobile } = useDeviceType();
+
   // Memoize data processing to prevent unnecessary recalculations
   const cobaltData = useMemo(
     () => kpi.filter((row) => row.product === "Cobalt"),
@@ -118,27 +121,31 @@ export default function KPI({
   return (
     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
       {cobaltData.length > 0 ? (
-        <Card className="__card">
-          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
-              Cobalt
-            </h2>
-
-            <div className="absolute right-4">
-              <WeightIcon className="h-8 w-8 rounded-full bg-chart6/80 fill-white stroke-chart6/80 p-1" />
-            </div>
-          </CardHeader>
-          <CardContent className="__card-content">
+        <Card className="__card relative">
+          <CardHeader className="flex flex-col space-y-1 py-4">
             <h3 className="text-h4 font-bold 2xl:text-h3">
               {quantityFormatter(parseFloat(cobaltData[0].quantity))}{" "}
-              <span className="text-h6 text-muted-foreground">Tonnes</span>
+              <span className="text-pxs text-muted-foreground">
+                {isMobile ? "T" : "Tonnes"}
+              </span>
             </h3>
+
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+              Cobalt Quantity
+            </h2>
+          </CardHeader>
+
+          <div className="absolute right-5 top-6">
+            <WeightIcon className="h-8 w-8 rounded-full bg-chart6/80 fill-white stroke-chart6/80 p-1" />
+          </div>
+
+          <CardContent className="__card-content">
             <KPIChart
               data={cobaltQuantityTrend}
               config={coQuantityConfig}
               yAxis="quantity"
             />
-            <p className="text-xs text-muted-foreground">
+            <p className="text-pxs text-muted-foreground">
               Annual Cobalt Quantity (T)
             </p>
           </CardContent>
@@ -148,26 +155,28 @@ export default function KPI({
       )}
 
       {cobaltData.length > 0 ? (
-        <Card className="__card">
-          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
-              Cobalt
-            </h2>
-            <div className="absolute right-4">
-              <DollarSign className="h-8 w-8 rounded-full bg-chart6/80 stroke-white p-1" />
-            </div>
-          </CardHeader>
-          <CardContent className="__card-content">
+        <Card className="__card relative">
+          <CardHeader className="flex flex-col space-y-1 py-4">
             <h3 className="text-h4 font-bold 2xl:text-h3">
               {currencyFormatter(parseFloat(cobaltData[0].transaction))}{" "}
             </h3>
+
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+              Cobalt Transaction
+            </h2>
+          </CardHeader>
+          <div className="absolute right-5 top-6">
+            <DollarSign className="h-8 w-8 rounded-full bg-chart6/80 stroke-white p-1" />
+          </div>
+
+          <CardContent className="__card-content">
             <KPIChart
               data={cobaltTransactionTrend}
               config={coTransactionConfig}
               yAxis="transaction"
             />
-            <p className="text-xs text-muted-foreground">
-              Annual Cobalt Transaction (USD)
+            <p className="text-pxs text-muted-foreground">
+              Cobalt Transaction (USD)
             </p>
           </CardContent>
         </Card>
@@ -176,26 +185,31 @@ export default function KPI({
       )}
 
       {copperData.length > 0 ? (
-        <Card className="__card">
-          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
-              Copper
-            </h2>
-            <div className="absolute right-4">
-              <WeightIcon className="h-8 w-8 rounded-full bg-chart5/80 fill-white stroke-chart5/80 p-1" />
-            </div>
-          </CardHeader>
-          <CardContent className="__card-content">
+        <Card className="__card relative">
+          <CardHeader className="space-y-1 py-4">
             <h3 className="text-h4 font-bold 2xl:text-h3">
               {quantityFormatter(parseFloat(copperData[0].quantity))}{" "}
-              <span className="text-h6 text-muted-foreground">Tonnes</span>
+              <span className="text-pxs text-muted-foreground">
+                {isMobile ? "T" : "Tonnes"}
+              </span>
             </h3>
+
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+              Copper Quantity
+            </h2>
+          </CardHeader>
+
+          <div className="absolute right-5 top-6">
+            <WeightIcon className="h-8 w-8 rounded-full bg-chart5/80 fill-white stroke-chart5/80 p-1" />
+          </div>
+
+          <CardContent className="__card-content">
             <KPIChart
               data={copperQuantityTrend}
               config={cuQuantityConfig}
               yAxis="quantity"
             />
-            <p className="text-xs text-muted-foreground">
+            <p className="text-pxs text-muted-foreground">
               Annual Copper Quantity (T)
             </p>
           </CardContent>
@@ -205,26 +219,26 @@ export default function KPI({
       )}
 
       {copperData.length > 0 ? (
-        <Card className="__card">
-          <CardHeader className="relative flex flex-row items-center justify-between space-y-0 pb-2">
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
-              Copper
-            </h2>
-            <div className="absolute right-4">
-              <DollarSign className="h-8 w-8 rounded-full bg-chart5/80 stroke-white p-1" />
-            </div>
-          </CardHeader>
-          <CardContent className="__card-content">
+        <Card className="__card relative">
+          <CardHeader className="space-y-0 py-4">
             <h3 className="text-h4 font-bold 2xl:text-h3">
               {currencyFormatter(parseFloat(copperData[0].transaction))}{" "}
             </h3>
+            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+              Copper Transaction
+            </h2>
+          </CardHeader>
+          <div className="absolute right-5 top-6">
+            <DollarSign className="h-8 w-8 rounded-full bg-chart5/80 stroke-white p-1" />
+          </div>
+          <CardContent className="__card-content">
             <KPIChart
               data={copperTransactionTrend}
               config={cuTransactionConfig}
               yAxis="transaction"
             />
-            <p className="text-xs text-muted-foreground">
-              Annual Cobalt Transaction (USD)
+            <p className="text-pxs text-muted-foreground">
+              Cobalt Transaction (USD)
             </p>
           </CardContent>
         </Card>
@@ -234,4 +248,3 @@ export default function KPI({
     </div>
   );
 }
-//

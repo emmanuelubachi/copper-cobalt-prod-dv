@@ -252,7 +252,6 @@ export default function Dashboard() {
   return (
     <main className="mb-24 mt-0 grid items-start gap-6 p-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-8 sm:py-3">
       <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
-        {/* <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 rounded-lg bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-4 lg:flex lg:space-y-0"> */}
         <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
           Copper and Cobalt Production Overview for{" "}
           <span className="border-b-2 border-primary/50 font-black">
