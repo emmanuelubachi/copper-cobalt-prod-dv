@@ -145,35 +145,16 @@ export default function ProjectDetails({
         <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
           {projectInfo.project_name}
         </h1>
-        <FilterButton
-          content={<ProjectFilter />}
-          label="Projects"
-          type="tooltip"
-          tooltip="Select a project"
-        />
-      </header>
-
-      <div className="items-start justify-between gap-6 space-y-4 lg:flex lg:space-y-0">
-        <div className="flex items-start">
-          {/* <ToggleGroup
-            type="single"
-            size={"sm"}
-            defaultValue="2023"
-            className="rounded-md bg-accent p-1"
-          >
-            {Years.map((year) => (
-              <ToggleGroupItem
-                key={year}
-                value={year}
-                aria-label="Toggle bold"
-                className="data-[state=on]:bg-background"
-              >
-                {year}
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup> */}
+        <div className="xl:hidden">
+          <FilterButton
+            content={<ProjectFilter />}
+            label="Projects"
+            type="tooltip"
+            tooltip="Select a project"
+            className="hover:bg-neutral-200 hover:dark:bg-muted/50"
+          />
         </div>
-      </div>
+      </header>
 
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-6 lg:col-span-3">
@@ -312,9 +293,6 @@ export default function ProjectDetails({
                 chartData={coDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                // barDataKey="quantity_tons"
-                // yAxisLabelDataKey="Cobalt"
-                // barLabelDataKey="label"
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">
@@ -334,9 +312,6 @@ export default function ProjectDetails({
                 chartData={cuDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                // barDataKey="quantity_tons"
-                // yAxisLabelDataKey="Cobalt"
-                // barLabelDataKey="label"
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">
