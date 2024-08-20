@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { CopyIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,21 @@ export function ShareButton({ ...props }: ShareButtonProps) {
 
   const rootUrl = process.env.NEXT_PUBLIC_ROOT_URL;
   const link = `${rootUrl}${pathname}?${searchParams.toString()}`;
+
+  // State to handle copy feedback (e.g., showing "Copied!" message)
+  const [isCopied, setIsCopied] = useState(false);
+
+  // Function to copy the link to the clipboard
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(link);
+      setIsCopied(true);
+      // Reset the copied state after a short delay
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy: ", error);
+    }
+  };
 
   return (
     <Dialog>
@@ -73,16 +89,33 @@ export function ShareButton({ ...props }: ShareButtonProps) {
             </Label>
             <Input id="link" defaultValue={link} readOnly />
           </div>
-          <Button type="submit" size="sm" className="px-3">
+          <Button
+            type="submit"
+            size="sm"
+            className="px-3"
+            onClick={copyToClipboard}
+          >
             <span className="sr-only">Copy</span>
             <CopyIcon className="h-4 w-4" />
           </Button>
         </div>
+
+        {/* Feedback message */}
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Close
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Button type="button" variant="secondary">
+                Close
+              </Button>
+
+              <p
+                className={`text-sm text-green-600 transition-opacity duration-500 ${
+                  isCopied ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                Copied!
+              </p>
+            </div>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
