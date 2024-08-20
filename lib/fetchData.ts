@@ -1,6 +1,6 @@
 // lib/fetchData.ts
 import * as z from "zod";
-import { industralProjectName } from "@/data/industral-projects";
+import { industrialProjectName } from "@/data/industrial-projects";
 import { ErrorType, ProjectInfo, SearchParams } from "@/types";
 
 // lib fetch local data ---------------------------------------------------------------
@@ -29,7 +29,7 @@ async function validateSearchParam(query: any): Promise<ValidatedProps> {
 }
 
 async function getProjectData(projectId: string): Promise<ProjectInfo | null> {
-  const filteredData = industralProjectName.filter(
+  const filteredData = industrialProjectName.filter(
     (data) => data["_project_id"].toLowerCase().trim() === projectId,
   );
 

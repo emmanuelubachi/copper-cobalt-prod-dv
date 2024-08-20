@@ -34,7 +34,7 @@ export type OldProjectData = {
   }[];
 };
 
-export type IndustralProjectName = {
+export type IndustrialProjectName = {
   _project_id: string;
   project_name: string;
   short_name: string;
