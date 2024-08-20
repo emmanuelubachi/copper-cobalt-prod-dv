@@ -1,5 +1,6 @@
 import FilterButton from "@/components/elements/filterButton";
 import MapFilter from "./components/mapFilter";
+import { ShareButton } from "@/components/elements/shareButton";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,6 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           type="button"
         />
       </div>
+      <ShareButton className="absolute right-4 top-4 z-20 sm:right-7 sm:top-4" />
       {children}
     </main>
   );
