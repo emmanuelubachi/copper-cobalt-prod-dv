@@ -23,14 +23,15 @@ export default function YearToggle({
         onValueChange={(value) => {
           if (value) onChangeFunction(value);
         }}
-        className="gap-2 rounded-md bg-muted p-1"
+        className="gap-1 rounded-lg bg-muted p-0.5"
       >
         {years.map((year) => (
           <ToggleGroupItem
             key={year}
             value={year}
+            size="sm"
             aria-label={`Toggle year ${year}`}
-            className="__button_pressed rounded-md bg-neutral-100 px-3 text-foreground/80 ring-neutral-200 data-[state=on]:bg-white data-[state=on]:font-black data-[state=on]:text-foreground data-[state=on]:ring-1 dark:bg-muted/80 dark:ring-0 dark:data-[state=on]:bg-background"
+            className="__button_pressed rounded-md bg-neutral-100 px-2 py-0 text-xs text-foreground/80 ring-neutral-200 data-[state=on]:bg-white data-[state=on]:font-black data-[state=on]:text-foreground data-[state=on]:ring-1 dark:bg-muted/80 dark:ring-0 dark:data-[state=on]:bg-background"
           >
             {year}
           </ToggleGroupItem>
