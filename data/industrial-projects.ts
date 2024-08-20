@@ -1,6 +1,6 @@
-import { IndustralProjectName } from "@/types";
+import { IndustrialProjectName } from "@/types";
 
-export const industralProjectName: IndustralProjectName = [
+export const industrialProjectName: IndustrialProjectName = [
   {
     _project_id: "amical",
     project_name: "Amical Kakana Mining SPRL",

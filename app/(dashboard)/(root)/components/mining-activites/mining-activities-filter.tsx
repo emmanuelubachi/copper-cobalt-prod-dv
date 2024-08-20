@@ -53,47 +53,6 @@ export function ArtisanalSites() {
   return (
     <div className="flex w-full flex-col gap-2">
       <h6 className="text-p font-semibold">Artisanal Mining Sites</h6>
-      {/* <div className="flex gap-3 px-0">
-        <Toggle
-          size="sm"
-          pressed={isActiveSitesButtonVisible}
-          onPressedChange={() => {
-            const new_active_site = !isActiveSitesButtonVisible;
-            toggleActiveSiteButton();
-            toggleActiveSiteMarkers(),
-              router.push(
-                pathname +
-                  "?" +
-                  createQueryString("active_site", new_active_site.toString()),
-              );
-          }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-xs text-cyan-500 ring-1 ring-cyan-500 data-[state=on]:bg-cyan-500 data-[state=on]:text-background hover:bg-cyan-500/10 hover:ring-cyan-600 data-[state=on]:hover:bg-cyan-600 data-[state=off]:hover:text-cyan-600 data-[state=on]:hover:text-background dark:text-cyan-400 data-[state=on]:dark:text-background"
-        >
-          Active Sites
-        </Toggle>
-
-        <Toggle
-          size="sm"
-          pressed={isInactiveSitesButtonVisible}
-          onPressedChange={() => {
-            const new_inactive_site = !isInactiveSitesButtonVisible;
-            toggleInactiveSiteButton();
-            toggleInactiveSiteMarkers(),
-              router.push(
-                pathname +
-                  "?" +
-                  createQueryString(
-                    "inactive_site",
-                    new_inactive_site.toString(),
-                  ),
-              );
-          }}
-          className="__button_pressed data-[state=on]:__button_pressed w-full rounded-lg bg-transparent px-2 py-1 text-xs text-neutral-400 ring-1 ring-neutral-300 data-[state=on]:bg-neutral-300 data-[state=on]:text-background hover:bg-accent hover:ring-neutral-400 data-[state=on]:hover:bg-neutral-400 data-[state=off]:hover:text-neutral-500 data-[state=on]:hover:text-background dark:text-neutral-400 data-[state=on]:dark:text-background data-[state=off]:dark:ring-neutral-400"
-        >
-          Inactive Sites
-        </Toggle>
-      </div> */}
-
       <div className="__toggle_container border-cyan-500">
         <div>
           <h6 className="text-xs font-medium">Active Sites</h6>

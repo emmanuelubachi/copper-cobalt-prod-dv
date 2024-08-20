@@ -30,7 +30,8 @@ import { TDestinationData, TMonthlyProductionData } from "@/types/map";
 import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 import FilterButton from "@/components/elements/filterButton";
-import ProjectFilter from "../projectFilter";
+import ProjectFilter from "./project-filter";
+import { ShareButton } from "@/components/elements/shareButton";
 
 export default function ProjectDetails({
   projectInfo,
@@ -140,19 +141,22 @@ export default function ProjectDetails({
   }, [project_id]);
 
   return (
-    <main className="mb-24 mt-0 items-start space-y-4 p-4 sm:mb-20 sm:mt-0 sm:px-8 sm:py-3">
-      <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
+    <main className="mb-24 items-start space-y-4 p-4 sm:mb-20 sm:px-8 sm:py-3">
+      <header className="left-0 right-0 top-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
         <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
           {projectInfo.project_name}
         </h1>
-        <div className="xl:hidden">
-          <FilterButton
-            content={<ProjectFilter />}
-            label="Projects"
-            type="tooltip"
-            tooltip="Select a project"
-            className="hover:bg-neutral-200 hover:dark:bg-muted/50"
-          />
+        <div className="flex items-center justify-end gap-1">
+          <div className="">
+            <FilterButton
+              content={<ProjectFilter />}
+              label="Projects"
+              type="tooltip"
+              tooltip="Select a project"
+              className=""
+            />
+          </div>
+          <ShareButton />
         </div>
       </header>
 
