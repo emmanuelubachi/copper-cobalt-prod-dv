@@ -19,6 +19,7 @@ import {
   transformTrendData,
 } from "@/lib/dataProcessing";
 import ExportTable from "./components/export-table";
+import { ShareButton } from "@/components/elements/shareButton";
 
 export type kpiTrendProps = {
   date: string;
@@ -259,11 +260,14 @@ export default function Dashboard() {
           </span>
         </h1>
         <div className="flex items-center justify-center sm:items-start lg:justify-end">
-          <YearToggle
-            defaultValue={selectedYear}
-            onChangeFunction={setSelectedYear}
-            years={Years}
-          />
+          <div className="flex items-center gap-2">
+            <YearToggle
+              defaultValue={selectedYear}
+              onChangeFunction={setSelectedYear}
+              years={Years}
+            />
+            <ShareButton />
+          </div>
         </div>
       </header>
 
