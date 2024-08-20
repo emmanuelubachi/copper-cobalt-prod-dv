@@ -34,8 +34,8 @@ export function ShareButton({ ...props }: ShareButtonProps) {
   const searchParams = useSearchParams();
 
   const rootUrl = process.env.NEXT_PUBLIC_ROOT_URL;
-
   const link = `${rootUrl}${pathname}?${searchParams.toString()}`;
+
   return (
     <Dialog>
       <TooltipProvider>
