@@ -35,7 +35,15 @@ export function ShareButton({ ...props }: ShareButtonProps) {
   const searchParams = useSearchParams();
 
   const rootUrl = process.env.NEXT_PUBLIC_ROOT_URL;
-  const link = `${rootUrl}${pathname}?${searchParams.toString()}`;
+
+  let url;
+  if (searchParams.toString() === "") {
+    url = `${rootUrl}${pathname}`;
+  } else {
+    url = `${rootUrl}${pathname}?${searchParams.toString()}`;
+  }
+
+  const link = url;
 
   // State to handle copy feedback (e.g., showing "Copied!" message)
   const [isCopied, setIsCopied] = useState(false);
