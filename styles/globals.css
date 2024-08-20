@@ -111,6 +111,10 @@
   @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 data-[state=on]:dark:bg-muted/100 dark:hover:bg-background;
 }
 
+.__button_style {
+  @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground hover:bg-neutral-200 dark:bg-muted/100 data-[state=on]:dark:bg-muted/100 dark:hover:bg-background hover:dark:bg-muted/50;
+}
+
 .__card {
   @apply m-0 border-none bg-neutral-100 shadow-none dark:bg-muted/50;
 }

@@ -41,14 +41,14 @@ const FilterButton: React.FC<FilterButtonProps> = ({
               variant="outline"
               className={cn(
                 className,
-                "__muted __button_pressed gap-2 rounded-lg px-4",
+                "__button_style __button_pressed gap-2 rounded-lg px-4",
               )}
               onClick={handleClick}
             >
               <span className="text-pxs sm:text-sm">{label}</span>
             </Button>
           </TooltipTrigger>
-          <TooltipContent side="right">{tooltip}</TooltipContent>
+          <TooltipContent side="top">{tooltip}</TooltipContent>
         </Tooltip>
       </TooltipProvider>
     );
