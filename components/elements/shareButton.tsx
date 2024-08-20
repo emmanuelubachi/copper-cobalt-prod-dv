@@ -32,7 +32,10 @@ export function ShareButton({ ...props }: ShareButtonProps) {
   const { tooltip = "Share Page", className } = props;
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const link = `${pathname}?${searchParams.toString()}`;
+
+  const rootUrl = process.env.NEXT_PUBLIC_ROOT_URL;
+
+  const link = `${rootUrl}${pathname}?${searchParams.toString()}`;
   return (
     <Dialog>
       <TooltipProvider>
