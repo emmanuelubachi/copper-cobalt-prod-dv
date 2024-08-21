@@ -68,14 +68,14 @@ export function ShareButton({ ...props }: ShareButtonProps) {
             <DialogTrigger asChild>
               <Button
                 variant="outline"
-                size="icon"
+                size="lg"
                 className={cn(
                   className,
-                  "__button_style __button_pressed gap-2 rounded-lg",
+                  "__button_style __button_pressed gap-2 rounded-lg p-3",
                 )}
               >
                 <span className="sr-only">Share</span>
-                <Share2Icon className="h-4 w-4" />
+                <Share2Icon className="h-5 w-5" />
               </Button>
             </DialogTrigger>
           </TooltipTrigger>
