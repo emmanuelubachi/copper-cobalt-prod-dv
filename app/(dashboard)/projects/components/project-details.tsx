@@ -144,7 +144,7 @@ export default function ProjectDetails({
     <main className="mb-24 items-start space-y-4 p-4 sm:mb-20 sm:px-8 sm:py-3">
       <header className="left-0 right-0 top-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
         <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
-          {projectInfo.project_name}
+          Export Composition
         </h1>
         <div className="flex items-center justify-end gap-1">
           <div className="">
@@ -159,7 +159,9 @@ export default function ProjectDetails({
           <ShareButton />
         </div>
       </header>
-
+      <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
+        {projectInfo.project_name}
+      </h2>
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-6 lg:col-span-3">
           <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">

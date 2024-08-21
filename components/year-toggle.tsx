@@ -14,7 +14,7 @@ export default function YearToggle({
 }: YearToggleProps) {
   return (
     <div className="flex items-center gap-2">
-      <h3 className="text-pxs text-foreground/70">Year:</h3>
+      {/* <h3 className="text-pxs text-foreground/70">Year:</h3> */}
       <ToggleGroup
         type="single"
         unselectable="off"
@@ -23,7 +23,7 @@ export default function YearToggle({
         onValueChange={(value) => {
           if (value) onChangeFunction(value);
         }}
-        className="gap-1 rounded-lg bg-muted p-0.5"
+        className="gap-1 rounded-lg bg-muted p-1"
       >
         {years.map((year) => (
           <ToggleGroupItem

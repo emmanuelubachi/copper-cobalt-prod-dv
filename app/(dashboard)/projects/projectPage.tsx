@@ -2,10 +2,8 @@
 import React, { useEffect } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-
-import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
+// import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
 import ProjectDetails from "./components/project-details";
-
 import { ProjectInfo, SearchParams, ErrorType } from "@/types";
 
 type PageProps = {

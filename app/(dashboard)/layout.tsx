@@ -16,9 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </aside>
 
         <div className="flex min-h-screen w-screen flex-col">
-          <div className="fixed z-10">
-            <BigSideNav />
-          </div>
+          <div className="fixed z-10">{/* <BigSideNav /> */}</div>
 
           <div className="">{children}</div>
 
