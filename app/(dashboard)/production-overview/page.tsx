@@ -251,7 +251,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <main className="mb-24 mt-0 grid items-start gap-6 px-4 sm:mb-20 sm:mt-0 sm:gap-6 sm:px-8">
+    <main className="mb-24 mt-0 grid items-start gap-6 px-4 sm:mb-8 sm:mt-0 sm:gap-6 sm:px-8">
       <header className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:sticky lg:top-0 lg:flex lg:space-y-0">
         <h1 className="text-center text-h5 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h5">
           Copper and Cobalt Production Overview for{" "}

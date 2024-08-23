@@ -147,16 +147,25 @@ export default function ProjectDetails({
 
   return (
     <section className="space-y-4">
-      <div className="flex items-center justify-between space-x-2">
+      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
         <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
           {projectInfo.project_name}
         </h2>
-        <div className="hidden lg:block">
+        <div className="flex items-center justify-center gap-2 sm:items-start lg:justify-end">
           <YearToggle
             defaultValue={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
           />
+          {/* <div>
+            <FilterButton
+              content={<ProjectFilter />}
+              label="Projects"
+              type="tooltip"
+              tooltip="Select a project"
+              className=""
+            />
+          </div> */}
         </div>
       </div>
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">

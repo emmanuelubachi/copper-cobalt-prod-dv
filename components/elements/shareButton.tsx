@@ -68,10 +68,10 @@ export function ShareButton({ ...props }: ShareButtonProps) {
             <DialogTrigger asChild>
               <Button
                 variant="outline"
-                size="lg"
+                size="icon"
                 className={cn(
                   className,
-                  "__button_style __button_pressed gap-2 rounded-lg p-3",
+                  "__button_pressed __muted __button_shadow gap-2 rounded-full",
                 )}
               >
                 <span className="sr-only">Share</span>

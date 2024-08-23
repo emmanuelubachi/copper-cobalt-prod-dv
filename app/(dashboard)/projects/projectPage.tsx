@@ -14,9 +14,7 @@ import {
 import FilterButton from "@/components/elements/filterButton";
 import ProjectFilter from "./components/project-filter";
 import { ShareButton } from "@/components/elements/shareButton";
-
-import { Years } from "@/data/chartData";
-import YearToggle from "@/components/year-toggle";
+import ProjectComparison from "./components/project-comparison";
 
 type PageProps = {
   searchParams: SearchParams;
@@ -30,7 +28,6 @@ export default function ProjectPage({
   errorType,
 }: PageProps) {
   const router = useRouter();
-  const [selectedYear, setSelectedYear] = useState<string>("2022");
 
   // TODO: look into this later
   useEffect(() => {
@@ -68,7 +65,7 @@ export default function ProjectPage({
             <TabsTrigger value="comparison">Project Comparison</TabsTrigger>
           </TabsList>
 
-          <div className="flex items-center justify-end gap-1">
+          <div className="flex items-center justify-end gap-1 sm:gap-2">
             <div>
               <FilterButton
                 content={<ProjectFilter />}
@@ -82,25 +79,12 @@ export default function ProjectPage({
           </div>
         </header>
 
-        <div className="mb-24 items-start space-y-4 p-4 sm:mb-20 sm:px-8 sm:py-3">
+        <div className="mb-24 items-start space-y-4 p-4 sm:mb-0 sm:p-8">
           <TabsContent value="flow">
             <ProjectDetails projectInfo={projectInfo} />
           </TabsContent>
           <TabsContent value="comparison">
-            <section className="space-y-4">
-              <div className="flex items-center justify-between space-x-2">
-                <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
-                  {projectInfo.project_name}
-                </h2>
-                <div className="hidden lg:block">
-                  <YearToggle
-                    defaultValue={selectedYear}
-                    onChangeFunction={setSelectedYear}
-                    years={Years}
-                  />
-                </div>
-              </div>
-            </section>
+            <ProjectComparison projectInfo={projectInfo} />
           </TabsContent>
         </div>
       </Tabs>
