@@ -62,7 +62,7 @@ export default function ProjectPage({
   return (
     <main>
       <Tabs defaultValue="flow" className="">
-        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted pr-4 shadow-sm dark:bg-background sm:pr-8">
+        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/50 pr-4 backdrop-blur-md dark:bg-background/50 sm:pr-8 md:shadow-sm">
           <TabsList>
             <TabsTrigger value="flow">Export Flow</TabsTrigger>
             <TabsTrigger value="comparison">Project Comparison</TabsTrigger>
