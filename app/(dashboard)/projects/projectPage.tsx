@@ -15,6 +15,7 @@ import FilterButton from "@/components/elements/filterButton";
 import ProjectFilter from "./components/project-filter";
 import { ShareButton } from "@/components/elements/shareButton";
 import ProjectComparison from "./components/project-comparison";
+import { ShipIcon, GitCompareArrows } from "lucide-react";
 
 type PageProps = {
   searchParams: SearchParams;
@@ -61,8 +62,18 @@ export default function ProjectPage({
       <Tabs defaultValue="flow" className="">
         <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/50 pr-4 backdrop-blur-md dark:bg-background/50 sm:pr-8 md:shadow-sm">
           <TabsList>
-            <TabsTrigger value="flow">Export Flow</TabsTrigger>
-            <TabsTrigger value="comparison">Project Comparison</TabsTrigger>
+            <TabsTrigger value="flow">
+              <div className="flex items-center gap-2 text-xs">
+                <ShipIcon className="h-4 w-4" />
+                Exports
+              </div>
+            </TabsTrigger>
+            <TabsTrigger value="comparison">
+              <div className="flex items-center gap-2 text-xs">
+                <GitCompareArrows className="h-4 w-4" />
+                Comparison
+              </div>
+            </TabsTrigger>
           </TabsList>
 
           <div className="flex items-center justify-end gap-1 sm:gap-2">
@@ -72,14 +83,14 @@ export default function ProjectPage({
                 label="Projects"
                 type="tooltip"
                 tooltip="Select a project"
-                className=""
+                className="text-xs"
               />
             </div>
-            <ShareButton />
+            <ShareButton className="hidden sm:block" />
           </div>
         </header>
 
-        <div className="mb-24 items-start space-y-4 p-4 sm:mb-0 sm:p-8">
+        <div className="mb-24 items-start space-y-4 px-4 sm:mb-0 sm:px-8 sm:pb-8">
           <TabsContent value="flow">
             <ProjectDetails projectInfo={projectInfo} />
           </TabsContent>

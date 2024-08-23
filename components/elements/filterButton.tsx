@@ -16,6 +16,14 @@ type FilterButtonProps = {
   type: "tooltip" | "button";
   tooltip?: string;
   className?: string;
+  variant?:
+    | "default"
+    | "outline"
+    | "secondary"
+    | "destructive"
+    | "ghost"
+    | "link";
+  size?: "sm" | "default" | "lg" | "icon" | null | undefined;
 };
 
 const FilterButton: React.FC<FilterButtonProps> = ({
@@ -24,6 +32,8 @@ const FilterButton: React.FC<FilterButtonProps> = ({
   type,
   tooltip,
   className,
+  variant = "default",
+  size = "default",
 }) => {
   const { toggleFilter, setFilterContent } = useFilterStore();
 
@@ -38,7 +48,8 @@ const FilterButton: React.FC<FilterButtonProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant="default"
+              variant={variant}
+              size={size}
               className={cn(
                 className,
                 "__button_pressed __button_shadow gap-2 rounded-lg px-4",

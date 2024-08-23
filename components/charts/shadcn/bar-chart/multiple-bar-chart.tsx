@@ -1,6 +1,7 @@
 "use client";
 import { ReactNode } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { cn } from "@/lib/utils";
 
 import {
   Card,
@@ -27,6 +28,7 @@ type MultipleBarChartProps = {
   firstDataKey: string;
   secondDataKey: string;
   footNote?: ReactNode;
+  classname?: string;
 };
 
 export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
@@ -43,7 +45,7 @@ export default function MultipleBarChart({ ...props }: MultipleBarChartProps) {
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className={cn("aspect-auto h-[250px] w-full", props.classname)}
         >
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
