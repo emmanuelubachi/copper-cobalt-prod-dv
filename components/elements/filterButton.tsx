@@ -38,10 +38,10 @@ const FilterButton: React.FC<FilterButtonProps> = ({
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant="outline"
+              variant="default"
               className={cn(
                 className,
-                "__button_style __button_pressed gap-2 rounded-lg px-4",
+                "__button_pressed __button_shadow gap-2 rounded-lg px-4",
               )}
               onClick={handleClick}
             >
@@ -57,7 +57,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({
   return (
     <Button
       variant="outline"
-      className="__muted __button_pressed gap-2 rounded-lg px-4"
+      className="__muted __button_shadow __button_pressed gap-2 rounded-lg px-4"
       onClick={handleClick}
     >
       <span className="text-pxs sm:text-sm">{label}</span>

@@ -32,6 +32,9 @@ import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-lab
 import FilterButton from "@/components/elements/filterButton";
 import ProjectFilter from "./project-filter";
 import { ShareButton } from "@/components/elements/shareButton";
+import YearToggle from "@/components/year-toggle";
+
+import { Years } from "@/data/chartData";
 
 export default function ProjectDetails({
   projectInfo,
@@ -49,6 +52,8 @@ export default function ProjectDetails({
   const [cuDestinationData, setCuDestinationData] = useState<
     TDestinationData[]
   >([]);
+
+  const [selectedYear, setSelectedYear] = useState<string>("2022");
 
   const project_id = projectInfo._project_id;
 
@@ -141,13 +146,18 @@ export default function ProjectDetails({
   }, [project_id]);
 
   return (
-    <main className="mb-24 items-start space-y-4 p-4 sm:mb-20 sm:px-8 sm:py-3">
-      <header className="left-0 right-0 top-0 z-20 items-center justify-between gap-6 space-y-4 bg-white py-4 dark:bg-neutral-900 lg:sticky lg:top-0 lg:flex lg:space-y-0">
-        <h1 className="text-center text-h4 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h4">
-          Export Composition
-        </h1>
-        <div className="flex items-center justify-end gap-1">
-          <div className="">
+    <section className="space-y-4">
+      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
+        <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
+          {projectInfo.project_name}
+        </h2>
+        <div className="flex items-center justify-center gap-2 sm:items-start lg:justify-end">
+          <YearToggle
+            defaultValue={selectedYear}
+            onChangeFunction={setSelectedYear}
+            years={Years}
+          />
+          {/* <div>
             <FilterButton
               content={<ProjectFilter />}
               label="Projects"
@@ -155,13 +165,9 @@ export default function ProjectDetails({
               tooltip="Select a project"
               className=""
             />
-          </div>
-          <ShareButton />
+          </div> */}
         </div>
-      </header>
-      <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
-        {projectInfo.project_name}
-      </h2>
+      </div>
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start gap-4 md:gap-6 lg:col-span-3">
           <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
@@ -331,6 +337,6 @@ export default function ProjectDetails({
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
