@@ -16,6 +16,7 @@ import ProjectFilter from "./components/project-filter";
 import { ShareButton } from "@/components/elements/shareButton";
 import ProjectComparison from "./components/project-comparison";
 import { ShipIcon, GitCompareArrows } from "lucide-react";
+import useDeviceType from "@/hooks/useDeviceType";
 
 type PageProps = {
   searchParams: SearchParams;
@@ -29,6 +30,7 @@ export default function ProjectPage({
   errorType,
 }: PageProps) {
   const router = useRouter();
+  const { isMobile } = useDeviceType();
 
   // TODO: look into this later
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function ProjectPage({
   return (
     <main>
       <Tabs defaultValue="flow" className="">
-        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/50 pr-4 backdrop-blur-md dark:bg-background/50 sm:pr-8 md:shadow-sm">
+        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/70 pr-4 backdrop-blur-md dark:bg-background/70 sm:pr-8 md:shadow-sm">
           <TabsList>
             <TabsTrigger value="flow">
               <div className="flex items-center gap-2 text-xs">
@@ -78,15 +80,26 @@ export default function ProjectPage({
 
           <div className="flex items-center justify-end gap-1 sm:gap-2">
             <div>
-              <FilterButton
-                content={<ProjectFilter />}
-                label="Projects"
-                type="tooltip"
-                tooltip="Select a project"
-                className="text-xs"
-              />
+              {isMobile ? (
+                <FilterButton
+                  content={<ProjectFilter />}
+                  label="Projects"
+                  type="tooltip"
+                  tooltip="Select a project"
+                  className="!rounded-full text-xs transition-all duration-300"
+                  size={"icon"}
+                />
+              ) : (
+                <FilterButton
+                  content={<ProjectFilter />}
+                  label="Projects"
+                  type="tooltip"
+                  tooltip="Select a project"
+                  className="text-xs"
+                />
+              )}
             </div>
-            <ShareButton className="hidden sm:block" />
+            <ShareButton />
           </div>
         </header>
 

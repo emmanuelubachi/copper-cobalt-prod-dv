@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { Filter } from "lucide-react";
 
 type FilterButtonProps = {
   content: ReactNode;
@@ -52,11 +53,14 @@ const FilterButton: React.FC<FilterButtonProps> = ({
               size={size}
               className={cn(
                 className,
-                "__button_pressed __button_shadow gap-2 rounded-lg px-4",
+                "__button_pressed __button_shadow gap-2 rounded-lg",
               )}
               onClick={handleClick}
             >
-              <span className="text-pxs sm:text-sm">{label}</span>
+              <Filter className="h-4 w-4" />
+              <span className="hidden text-pxs sm:inline sm:text-sm">
+                {label}
+              </span>
             </Button>
           </TooltipTrigger>
           <TooltipContent side="top">{tooltip}</TooltipContent>
