@@ -65,15 +65,19 @@ const CustomizedContent = ({
         y={y}
         width={width}
         height={height}
+        className="stroke-muted dark:bg-neutral-900/10"
         style={{
           fill:
             depth < 2
               ? COLORS[Math.floor((index / root.children.length) * 6)]
               : "#ffffff00",
-          stroke: "#fff",
-          strokeWidth: 1 / (depth + 1e-10),
+          strokeWidth: 0.5 / (depth + 1e-10),
           strokeOpacity: 0.5 / (depth + 1e-10),
+          border: 0,
+          background: "transparent",
         }}
+        rx={6} // This adds the border-radius to the corners
+        ry={6} // This adds the border-radius to the corners
       />
       {depth === 1 && (
         <>
@@ -86,15 +90,6 @@ const CustomizedContent = ({
           >
             {name}
           </text>
-          {/* <text
-            x={x + 4}
-            y={y + 18}
-            fill="#fff"
-            fontSize={16}
-            fillOpacity={0.9}
-          >
-            {index + 1}
-          </text> */}
         </>
       )}
     </g>
@@ -127,19 +122,18 @@ export default function TreeMapChart({ ...props }: TreeMapChartProps) {
         <ChartContainer
           config={chartConfig}
           className={cn(
-            "aspect-auto h-[420px] w-[98%] rounded-lg",
+            "aspect-auto h-[420px] w-[98%] overflow-hidden rounded-lg",
             props.classname,
           )}
         >
           <ResponsiveContainer>
             <Treemap
               nameKey="name"
-              width={400}
-              height={400}
               data={props.chartData}
               dataKey="size"
-              stroke="#fff"
-              fill="#8884d8"
+              animationDuration={300}
+              className="stroke-foreground"
+              border-radius="10px"
               content={<CustomizedContent />}
             >
               <Tooltip content={<TooltipContent />} />
