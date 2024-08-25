@@ -67,13 +67,13 @@ export default function ProjectPage({
             <TabsTrigger value="flow">
               <div className="flex items-center gap-2 text-xs">
                 <ShipIcon className="h-4 w-4" />
-                Exports
+                Export Overview
               </div>
             </TabsTrigger>
             <TabsTrigger value="comparison">
               <div className="flex items-center gap-2 text-xs">
                 <GitCompareArrows className="h-4 w-4" />
-                Comparison
+                Export Flows
               </div>
             </TabsTrigger>
           </TabsList>
