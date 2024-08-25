@@ -1,0 +1,48 @@
+"use client";
+import React from "react";
+import ReactEcharts from "echarts-for-react";
+
+export default function SankeyChart({ data }: any) {
+  console.log(data);
+  return (
+    <ReactEcharts
+      style={{ height: "1100px", width: "100%" }}
+      option={{
+        tooltip: {
+          trigger: "item",
+        },
+        height: 1000,
+
+        series: [
+          {
+            type: "sankey",
+            layout: "none",
+            height: 1000,
+            emphasis: {
+              focus: "adjacency",
+            },
+            left: 50.0,
+            top: 20.0,
+            right: 150.0,
+            bottom: 25.0,
+            data: data[0].data,
+            links: data[1].links,
+          },
+        ],
+        lineStyle: {
+          color: "source",
+          curveness: 0.5,
+        },
+        itemStyle: {
+          color: "#1f77b4",
+          borderColor: "#1f77b4",
+        },
+        label: {
+          color: "rgba(0,0,0,0.7)",
+          fontFamily: "Arial",
+          fontSize: 10,
+        },
+      }}
+    />
+  );
+}

@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode } from "react";
-import { Treemap, ResponsiveContainer, Tooltip } from "recharts";
+import { Treemap, ResponsiveContainer, Tooltip, Legend } from "recharts";
 import { cn } from "@/lib/utils";
 
 import {
@@ -11,14 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 
 type TreeMapChartProps = {
   title: string;
@@ -96,6 +89,28 @@ const CustomizedContent = ({
   );
 };
 
+// // Custom Legend Component
+// const CustomLegend = ({ payload }: any) => {
+//   return (
+//     <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
+//       {payload.map((entry, index) => (
+//         <div key={`item-${index}`} style={{ marginRight: 20 }}>
+//           <span
+//             style={{
+//               display: "inline-block",
+//               width: 12,
+//               height: 12,
+//               backgroundColor: entry.color,
+//               marginRight: 6,
+//             }}
+//           ></span>
+//           {entry.name}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
 const TooltipContent = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
@@ -118,7 +133,7 @@ export default function TreeMapChart({ ...props }: TreeMapChartProps) {
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex items-center justify-center px-4 pt-4 sm:px-6 sm:pb-8 sm:pt-6">
+      <CardContent className="flex justify-center px-4 pt-4 sm:px-6 sm:pb-8 sm:pt-6">
         <ChartContainer
           config={chartConfig}
           className={cn(
@@ -140,6 +155,7 @@ export default function TreeMapChart({ ...props }: TreeMapChartProps) {
             </Treemap>
           </ResponsiveContainer>
         </ChartContainer>
+        {/* <CustomLegend payload={props.chartData} /> */}
       </CardContent>
       {props.footNote && (
         <CardFooter className="flex-col items-start gap-2 text-sm">
