@@ -52,6 +52,14 @@ const buttonVariants = cva(
   },
 );
 
+/**
+ * A button that is also a link. Supports various sizes and variants.
+ *
+ * @example
+ * <LinkButton href="#" size="lg" variant="secondary">
+ *   Learn More
+ * </LinkButton>
+ */
 export default function LinkButton(props: LinkButtonProps) {
   const variant = props.variant;
   const size = props.size;

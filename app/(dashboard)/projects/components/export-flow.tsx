@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Years } from "@/data/chartData";
 import YearToggle from "@/components/year-toggle";
@@ -1255,18 +1256,14 @@ const data = [
   },
 ];
 
-export default function ExportFlow({
-  projectInfo,
-}: {
-  projectInfo: ProjectInfo;
-}) {
+export default function ExportFlow() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
 
   return (
     <section className="space-y-4">
-      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:sticky lg:top-0 lg:flex lg:space-y-0">
+      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
         <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
-          {projectInfo.project_name}
+          Export Flow
         </h2>
         {/* <div className="flex items-center justify-center sm:items-start lg:justify-end">
           <YearToggle
