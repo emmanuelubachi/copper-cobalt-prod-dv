@@ -1,23 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-// import ErrorProjectNotFound from "@/components/error-pages/projectNotFound";
 import ProjectDetails from "./components/project-details";
 import { ProjectInfo, SearchParams, ErrorType } from "@/types";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/custom-tabs";
-import FilterButton from "@/components/elements/filterButton";
-import ProjectFilter from "./components/project-filter";
-import { ShareButton } from "@/components/elements/shareButton";
-import ProjectComparison from "./components/project-comparison";
-import { ShipIcon, GitCompareArrows } from "lucide-react";
-import useDeviceType from "@/hooks/useDeviceType";
-import ExportFlow from "./components/export-flow";
 
 type PageProps = {
   searchParams: SearchParams;
@@ -31,7 +17,6 @@ export default function ProjectPage({
   errorType,
 }: PageProps) {
   const router = useRouter();
-  const { isMobile } = useDeviceType();
 
   // TODO: look into this later
   useEffect(() => {
@@ -96,5 +81,3 @@ export default function ProjectPage({
   //   </main>
   // );
 }
-
-// px-4 sm:px-8

@@ -2,18 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-
 import useFilterStore from "@/store/filterStore";
 import useMapDetailsStore from "@/store/mapDetailsStore";
-
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import { NAVLIST } from "@/constants/application";
 import { CGSPRedSvgIcon } from "../svg/cdsp_logo";
 import ModeToggle from "../mode-toggle";

@@ -4,11 +4,8 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { ProjectInfo } from "@/types";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
