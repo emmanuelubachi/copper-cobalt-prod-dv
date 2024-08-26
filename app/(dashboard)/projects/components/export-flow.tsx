@@ -1,10 +1,8 @@
+"use client";
 import React, { useState } from "react";
-import { Years } from "@/data/chartData";
-import YearToggle from "@/components/year-toggle";
-import { ProjectInfo } from "@/types";
+import ProductToggle from "@/components/product-toggle";
 import SankeyChart from "@/components/charts/echarts/sankey";
 import { CardContent, Card, CardHeader } from "@/components/ui/card";
-import ProductToggle from "@/components/product-toggle";
 
 const data = [
   {
@@ -1255,28 +1253,17 @@ const data = [
   },
 ];
 
-export default function ExportFlow({
-  projectInfo,
-}: {
-  projectInfo: ProjectInfo;
-}) {
+export default function ExportFlow() {
   const [selectedYear, setSelectedYear] = useState<string>("2022");
 
   return (
     <section className="space-y-4">
-      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:sticky lg:top-0 lg:flex lg:space-y-0">
+      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
         <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
-          {projectInfo.project_name}
+          Export Flow
         </h2>
-        {/* <div className="flex items-center justify-center sm:items-start lg:justify-end">
-          <YearToggle
-            defaultValue={selectedYear}
-            onChangeFunction={setSelectedYear}
-            years={Years}
-          />
-        </div> */}
       </div>
-      {/* <div className="h-[1000px]"> */}
+
       <Card className="__card">
         <CardHeader>
           <div className="flex items-center justify-center sm:items-start lg:justify-end">
@@ -1287,8 +1274,6 @@ export default function ExportFlow({
           <SankeyChart data={data} />
         </CardContent>
       </Card>
-
-      {/* </div> */}
     </section>
   );
 }

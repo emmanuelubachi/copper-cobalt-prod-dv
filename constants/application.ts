@@ -776,8 +776,8 @@ export const countriesWithColors = [
   { country: "DR Congo", color: "#ADBCDD" },
   { country: "India", color: "#ECC0A7" },
   { country: "Kazakhstan", color: "#A28882" },
+  { country: "South Africa", color: "#033550" },
   { country: "Switzerland", color: "#FB9635" },
-  { country: "Unknown", color: "#033550" }, // Placeholder for the unmatched color
 ];
 
 // export const CheckAllIndustralProjects = [

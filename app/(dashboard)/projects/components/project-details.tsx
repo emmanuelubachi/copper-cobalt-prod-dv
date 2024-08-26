@@ -4,11 +4,8 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { ProjectInfo } from "@/types";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
@@ -33,12 +30,17 @@ import YearToggle from "@/components/year-toggle";
 import { Years } from "@/data/chartData";
 import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
 import { ChartConfig } from "@/components/ui/chart";
+import FilterButton from "@/components/elements/filterButton";
+import ProjectFilter from "./project-filter";
+import useDeviceType from "@/hooks/useDeviceType";
 
 export default function ProjectDetails({
   projectInfo,
 }: {
   projectInfo: ProjectInfo;
 }) {
+  const { isMobile } = useDeviceType();
+
   const [totalProd, setTotalProd] = useState<YearlySummary[]>([]);
   const [totalProdDetails, setTotalProdDetails] = useState<
     DetailedYearlySummary[]
@@ -311,6 +313,26 @@ export default function ProjectDetails({
             onChangeFunction={setSelectedYear}
             years={Years}
           />
+          <div>
+            {isMobile ? (
+              <FilterButton
+                content={<ProjectFilter />}
+                label="Projects"
+                type="tooltip"
+                tooltip="Select a project"
+                className="!rounded-full text-xs transition-all duration-300"
+                size={"icon"}
+              />
+            ) : (
+              <FilterButton
+                content={<ProjectFilter />}
+                label="Projects"
+                type="tooltip"
+                tooltip="Select a project"
+                className="text-xs"
+              />
+            )}
+          </div>
         </div>
       </div>
 
