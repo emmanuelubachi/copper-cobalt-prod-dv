@@ -63,7 +63,7 @@ export default function ProjectPage({
   return (
     <main>
       <Tabs defaultValue="overview" className="">
-        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/70 pr-4 backdrop-blur-md dark:bg-background/70 sm:pr-8 md:shadow-sm">
+        <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/90 pr-4 backdrop-blur-sm dark:bg-background/70 sm:pr-8 md:shadow-sm">
           <TabsList>
             <TabsTrigger value="overview">
               <div className="flex items-center gap-2 text-xs">
