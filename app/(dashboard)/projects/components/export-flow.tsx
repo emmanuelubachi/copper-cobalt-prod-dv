@@ -3,6 +3,8 @@ import { Years } from "@/data/chartData";
 import YearToggle from "@/components/year-toggle";
 import { ProjectInfo } from "@/types";
 import SankeyChart from "@/components/charts/echarts/sankey";
+import { CardContent, Card, CardHeader } from "@/components/ui/card";
+import ProductToggle from "@/components/product-toggle";
 
 const data = [
   {
@@ -1266,16 +1268,26 @@ export default function ExportFlow({
         <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
           {projectInfo.project_name}
         </h2>
-        <div className="flex items-center justify-center sm:items-start lg:justify-end">
+        {/* <div className="flex items-center justify-center sm:items-start lg:justify-end">
           <YearToggle
             defaultValue={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
           />
-        </div>
+        </div> */}
       </div>
       {/* <div className="h-[1000px]"> */}
-      <SankeyChart data={data} />
+      <Card className="__card">
+        <CardHeader>
+          <div className="flex items-center justify-center sm:items-start lg:justify-end">
+            <ProductToggle defaultValue={"Cobalt"} onValueChange={() => {}} />
+          </div>
+        </CardHeader>
+        <CardContent className="">
+          <SankeyChart data={data} />
+        </CardContent>
+      </Card>
+
       {/* </div> */}
     </section>
   );
