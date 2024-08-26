@@ -26,13 +26,13 @@ export default function ProjectNavigation() {
     <div className="inline-flex items-center justify-center bg-transparent text-muted-foreground">
       {navlist.map((item, index) => (
         <Link
-          href={item.href}
           key={index}
+          href={item.href}
           className={`inline-flex h-16 items-center justify-center whitespace-nowrap px-4 text-sm font-medium text-foreground outline-none ring-offset-background transition-all hover:bg-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:dark:bg-neutral-800/15 sm:px-8 md:text-p ${pathname === item.path && "border-t-4 border-t-primary bg-background font-semibold text-primary dark:bg-neutral-900 dark:text-primary"}`}
         >
           <div className="flex items-center gap-2 text-xs">
             <item.icon className="h-4 w-4" />
-            Export Overview
+            {item.name}
           </div>
         </Link>
       ))}
