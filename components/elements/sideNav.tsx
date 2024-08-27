@@ -41,7 +41,7 @@ export default function SideNav() {
                     }}
                     className={`flex h-9 w-9 items-center justify-center rounded-lg p-2 transition-colors hover:text-foreground md:text-sm ${
                       pathname === item.path
-                        ? "bg-muted text-primary"
+                        ? "bg-neutral-100 text-primary hover:text-primary dark:bg-muted"
                         : "text-muted-foreground"
                     }`}
                   >
