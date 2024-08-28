@@ -111,8 +111,12 @@
   @apply bg-muted/70 data-[state=on]:bg-muted/70 data-[state=on]:text-accent-foreground dark:bg-muted/100 data-[state=on]:dark:bg-muted/100 dark:hover:bg-background;
 }
 
+.__dark-muted {
+  @apply dark:bg-muted/100 data-[state=on]:dark:bg-muted/100;
+}
+
 .__button_shadow {
-  @apply shadow-lg;
+  @apply shadow-lg dark:shadow-primary/5;
 }
 
 .__button_style {
