@@ -71,7 +71,7 @@ export function ShareButton({ ...props }: ShareButtonProps) {
                 size="icon"
                 className={cn(
                   className,
-                  "__button_pressed __muted __button_shadow gap-2 rounded-full",
+                  "__button_pressed __button_shadow __dark-muted gap-2 rounded-full border-none transition-colors hover:text-primary dark:text-foreground/70 dark:hover:text-foreground",
                 )}
               >
                 <span className="sr-only">Share</span>
@@ -87,7 +87,7 @@ export function ShareButton({ ...props }: ShareButtonProps) {
         <DialogHeader>
           <DialogTitle>Share link</DialogTitle>
           <DialogDescription>
-            Anyone who has this link will be able to view this.
+            Anyone who has this link will be able to view this page.
           </DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">

@@ -31,7 +31,7 @@ export default function YearToggle({
             value={year}
             size="sm"
             aria-label={`Toggle year ${year}`}
-            className="__button_pressed rounded-md bg-transparent px-2 py-0 text-xs text-foreground/80 data-[state=on]:bg-primary data-[state=on]:font-black data-[state=on]:text-white data-[state=on]:ring-1 data-[state=on]:ring-neutral-200 dark:bg-muted/80 dark:ring-0 dark:data-[state=on]:bg-background"
+            className="__button_pressed rounded-md bg-transparent px-2 py-0 text-xs text-foreground/70 data-[state=on]:bg-primary data-[state=on]:font-black data-[state=on]:text-white data-[state=on]:ring-1 data-[state=on]:ring-neutral-200 hover:data-[state=on]:bg-primary data-[state=off]:hover:text-primary data-[state=on]:hover:text-white dark:bg-muted/80 dark:ring-0 dark:data-[state=on]:bg-background data-[state=off]:dark:hover:text-foreground"
           >
             {year}
           </ToggleGroupItem>
