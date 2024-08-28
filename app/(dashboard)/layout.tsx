@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <BigSideNav />
           </div>
 
-          <div className="">{children}</div>
+          <div>{children}</div>
 
           <MobileNav />
         </div>

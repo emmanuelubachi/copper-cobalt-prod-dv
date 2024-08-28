@@ -9,12 +9,14 @@ type PageProps = {
   searchParams: SearchParams;
   projectInfo?: ProjectInfo;
   errorType?: ErrorType;
+  jsonData?: any[];
 };
 
 export default function ProjectPage({
   searchParams,
   projectInfo,
   errorType,
+  jsonData,
 }: PageProps) {
   const router = useRouter();
 
@@ -44,7 +46,9 @@ export default function ProjectPage({
     return null;
   }
 
-  return <ProjectDetails projectInfo={projectInfo} />;
+  const data = jsonData?.find((d) => d._project_id === projectInfo._project_id);
+
+  return <ProjectDetails projectInfo={projectInfo} projectData={data} />;
   // return (
   //   <main>
   //     <Tabs defaultValue="overview" className="">

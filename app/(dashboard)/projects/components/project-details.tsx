@@ -23,7 +23,11 @@ import {
   cuDestChartConfig,
   monthlyProdChartConfig,
 } from "@/constants/chart";
-import { TDestinationData, TMonthlyProductionData } from "@/types/map";
+import {
+  IndustralProjectDetailsProps,
+  TDestinationData,
+  TMonthlyProductionData,
+} from "@/types/map";
 import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 import YearToggle from "@/components/year-toggle";
@@ -36,8 +40,10 @@ import useDeviceType from "@/hooks/useDeviceType";
 
 export default function ProjectDetails({
   projectInfo,
+  projectData,
 }: {
   projectInfo: ProjectInfo;
+  projectData?: IndustralProjectDetailsProps;
 }) {
   const { isMobile } = useDeviceType();
 
@@ -69,12 +75,8 @@ export default function ProjectDetails({
         const totalProd = calculateYearlySums(filtered);
         const totalProd2 = calculateDetailedYearlySums(filtered);
 
-        console.log("totalProd2", totalProd2);
-
         setTotalProd(totalProd);
         setTotalProdDetails(totalProd2);
-
-        // console.log("filtered", filtered);
       } catch (error) {
         console.error(
           "Error fetching and processing total industral projects production data:",
@@ -306,7 +308,10 @@ export default function ProjectDetails({
 
   return (
     <section className="space-y-2">
-      <div className="left-0 right-0 z-20 items-center justify-end gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
+      <div className="left-0 right-0 z-20 flex flex-col-reverse items-center gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 sm:justify-between lg:flex-row lg:space-y-0">
+        <h2 className="text-start text-h5 font-medium tracking-tight">
+          {projectInfo.project_name}
+        </h2>
         <div className="flex items-center justify-end gap-2">
           <YearToggle
             defaultValue={selectedYear}
@@ -339,29 +344,58 @@ export default function ProjectDetails({
       {/* Charts */}
       <div className="space-y-4">
         <div className="grid items-start gap-4 xl:grid-cols-3">
-          {/* Total production */}
+          {/* Project Info and Treemap */}
           <div className="space-y-4 xl:col-span-2">
             {totalProd.length > 0 && (
               <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
                 <CardContent className="space-y-4 px-0 lg:pt-2">
-                  <CardTitle className="text-start text-h5 font-medium tracking-tight">
+                  {/* <CardTitle className="text-start text-h5 font-medium tracking-tight">
                     {projectInfo.project_name}
-                  </CardTitle>
+                  </CardTitle> */}
 
                   <div className="grid gap-2 lg:grid-cols-2">
-                    <h3 className="text-start text-p font-medium tracking-tight">
-                      {projectInfo.project_name}
-                    </h3>
+                    {/* Project Info */}
+
+                    <div className="flex flex-col flex-wrap gap-2 text-start text-p tracking-tight text-muted-foreground">
+                      <h4 className="font-semibold leading-none">
+                        Nationality:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Nationality}
+                        </span>
+                      </h4>
+
+                      <h4 className="font-semibold leading-none">
+                        Province:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Province}
+                        </span>
+                      </h4>
+
+                      <h4 className="font-semibold leading-none">
+                        Coordinates:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Geographical_coordinates}
+                        </span>
+                      </h4>
+                      <h4 className="font-semibold leading-none">
+                        Ownership:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Ownership}
+                        </span>
+                      </h4>
+                    </div>
+
+                    {/* Annual Exports */}
                     <div className="space-y-2">
                       <div>
-                        <CardTitle>
+                        <h4 className="font-semibold leading-none tracking-tight">
                           {totalProd.length > 0 && totalProd[0].year} Annual
-                          Production
-                        </CardTitle>
-                        <CardDescription>
+                          Exports
+                        </h4>
+                        {/* <CardDescription>
                           Total Production including quantity sold locally and
                           exported
-                        </CardDescription>
+                        </CardDescription> */}
                       </div>
 
                       <div className="flex gap-10">
