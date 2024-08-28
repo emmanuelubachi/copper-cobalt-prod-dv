@@ -71,7 +71,7 @@ export function ShareButton({ ...props }: ShareButtonProps) {
                 size="icon"
                 className={cn(
                   className,
-                  "__button_pressed __button_shadow __dark-muted gap-2 rounded-full border-none transition-colors hover:text-primary dark:text-muted-foreground dark:hover:text-foreground",
+                  "__button_pressed __button_shadow __dark-muted gap-2 rounded-full border-none transition-colors hover:text-primary dark:text-foreground/70 dark:hover:text-foreground",
                 )}
               >
                 <span className="sr-only">Share</span>

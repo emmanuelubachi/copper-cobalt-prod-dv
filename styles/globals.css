@@ -116,7 +116,7 @@
 }
 
 .__button_shadow {
-  @apply shadow-lg dark:shadow-primary/5;
+  @apply shadow-lg;
 }
 
 .__button_style {
