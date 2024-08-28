@@ -308,7 +308,10 @@ export default function ProjectDetails({
 
   return (
     <section className="space-y-2">
-      <div className="left-0 right-0 z-20 items-center justify-end gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
+      <div className="left-0 right-0 z-20 flex flex-col-reverse items-center gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 sm:justify-between lg:flex-row lg:space-y-0">
+        <h2 className="text-start text-h5 font-medium tracking-tight">
+          {projectInfo.project_name}
+        </h2>
         <div className="flex items-center justify-end gap-2">
           <YearToggle
             defaultValue={selectedYear}
@@ -341,14 +344,14 @@ export default function ProjectDetails({
       {/* Charts */}
       <div className="space-y-4">
         <div className="grid items-start gap-4 xl:grid-cols-3">
-          {/* Total production */}
+          {/* Project Info and Treemap */}
           <div className="space-y-4 xl:col-span-2">
             {totalProd.length > 0 && (
               <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
                 <CardContent className="space-y-4 px-0 lg:pt-2">
-                  <CardTitle className="text-start text-h5 font-medium tracking-tight">
+                  {/* <CardTitle className="text-start text-h5 font-medium tracking-tight">
                     {projectInfo.project_name}
-                  </CardTitle>
+                  </CardTitle> */}
 
                   <div className="grid gap-2 lg:grid-cols-2">
                     {/* Project Info */}

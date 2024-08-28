@@ -32,7 +32,7 @@ export default function ProjectNavigation() {
         >
           <div className="flex items-center gap-2 text-xs">
             <item.icon className="h-4 w-4" />
-            {item.name}
+            <h1>{item.name}</h1>
           </div>
         </Link>
       ))}
