@@ -23,7 +23,11 @@ import {
   cuDestChartConfig,
   monthlyProdChartConfig,
 } from "@/constants/chart";
-import { TDestinationData, TMonthlyProductionData } from "@/types/map";
+import {
+  IndustralProjectDetailsProps,
+  TDestinationData,
+  TMonthlyProductionData,
+} from "@/types/map";
 import { DetailedYearlySummary, YearlySummary } from "@/types/projects";
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
 import YearToggle from "@/components/year-toggle";
@@ -36,8 +40,10 @@ import useDeviceType from "@/hooks/useDeviceType";
 
 export default function ProjectDetails({
   projectInfo,
+  projectData,
 }: {
   projectInfo: ProjectInfo;
+  projectData?: IndustralProjectDetailsProps;
 }) {
   const { isMobile } = useDeviceType();
 
@@ -69,12 +75,8 @@ export default function ProjectDetails({
         const totalProd = calculateYearlySums(filtered);
         const totalProd2 = calculateDetailedYearlySums(filtered);
 
-        console.log("totalProd2", totalProd2);
-
         setTotalProd(totalProd);
         setTotalProdDetails(totalProd2);
-
-        // console.log("filtered", filtered);
       } catch (error) {
         console.error(
           "Error fetching and processing total industral projects production data:",
@@ -349,19 +351,48 @@ export default function ProjectDetails({
                   </CardTitle>
 
                   <div className="grid gap-2 lg:grid-cols-2">
-                    <h3 className="text-start text-p font-medium tracking-tight">
-                      {projectInfo.project_name}
-                    </h3>
+                    {/* Project Info */}
+
+                    <div className="flex flex-col flex-wrap gap-2 text-start text-p tracking-tight text-muted-foreground">
+                      <h4 className="font-semibold leading-none">
+                        Nationality:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Nationality}
+                        </span>
+                      </h4>
+
+                      <h4 className="font-semibold leading-none">
+                        Province:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Province}
+                        </span>
+                      </h4>
+
+                      <h4 className="font-semibold leading-none">
+                        Coordinates:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Geographical_coordinates}
+                        </span>
+                      </h4>
+                      <h4 className="font-semibold leading-none">
+                        Ownership:{" "}
+                        <span className="font-medium text-foreground">
+                          {projectData && projectData.Ownership}
+                        </span>
+                      </h4>
+                    </div>
+
+                    {/* Annual Exports */}
                     <div className="space-y-2">
                       <div>
-                        <CardTitle>
+                        <h4 className="font-semibold leading-none tracking-tight">
                           {totalProd.length > 0 && totalProd[0].year} Annual
-                          Production
-                        </CardTitle>
-                        <CardDescription>
+                          Exports
+                        </h4>
+                        {/* <CardDescription>
                           Total Production including quantity sold locally and
                           exported
-                        </CardDescription>
+                        </CardDescription> */}
                       </div>
 
                       <div className="flex gap-10">
