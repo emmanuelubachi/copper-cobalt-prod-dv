@@ -45,7 +45,7 @@ export default function SearchBarDialog({
     .filter((country) => country.children.length > 0);
 
   return (
-    <div className="relative w-full max-w-sm">
+    <div className="relative ml-auto w-full max-w-lg">
       <Button
         variant="outline"
         size="lg"
