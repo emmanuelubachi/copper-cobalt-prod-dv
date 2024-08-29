@@ -1,23 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { ProjectInfo } from "@/types";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
-import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
-import {
-  calculateDetailedYearlySums,
-  calculateYearlySums,
-  transformDestinationData,
-  transformMonthlyData,
-} from "@/lib/dataProcessing";
+
 import {
   coDestChartConfig,
   cuDestChartConfig,
@@ -36,17 +22,28 @@ import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
 import { ChartConfig } from "@/components/ui/chart";
 import useDeviceType from "@/hooks/useDeviceType";
 import SearchBarDialog from "@/components/elements/searchBar";
-import { CompaniesList } from "@/constants/application";
+import { CompaniesList, TreemapData } from "@/constants/application";
+import { treeMapChartConfig } from "@/constants/chart";
+import {
+  calculateDetailedYearlySums,
+  calculateYearlySums,
+  transformDestinationData,
+  transformMonthlyData,
+} from "@/lib/dataProcessing";
 
 export default function ProjectDetails({
   projectInfo,
   projectData,
+  productData,
+  productionYears,
+  totalProductionData,
 }: {
   projectInfo: ProjectInfo;
-  projectData?: IndustralProjectDetailsProps;
+  projectData: IndustralProjectDetailsProps;
+  productData: any[];
+  productionYears: string[];
+  totalProductionData: any[];
 }) {
-  const { isMobile } = useDeviceType();
-
   const [totalProd, setTotalProd] = useState<YearlySummary[]>([]);
   const [totalProdDetails, setTotalProdDetails] = useState<
     DetailedYearlySummary[]
@@ -59,9 +56,25 @@ export default function ProjectDetails({
     TDestinationData[]
   >([]);
 
-  const [selectedYear, setSelectedYear] = useState<string>("2022");
-
   const project_id = projectInfo._project_id;
+
+  const maxYear =
+    productionYears.length > 0
+      ? Math.max(...productionYears.map(Number)).toString()
+      : undefined;
+
+  // Manage the selected year in state
+  const [selectedYear, setSelectedYear] = useState<string | undefined>(maxYear);
+
+  // Update the selected year when productionYears or maxYear changes
+  useEffect(() => {
+    // Determine the maximum year from productionYears
+    const maxYear =
+      productionYears.length > 0
+        ? Math.max(...productionYears.map(Number)).toString()
+        : undefined;
+    setSelectedYear(maxYear);
+  }, [productionYears, project_id]);
 
   useEffect(() => {
     const fetchTotalProductionData = async () => {
@@ -85,226 +98,77 @@ export default function ProjectDetails({
       }
     };
 
-    const fetchMonthlyData = async () => {
-      try {
-        // Filter data based on _project_id
-        const filtered = montlyProductionData.filter(
-          (row) => row._project_id === project_id,
-        );
-        // Process data for chart
-        const MonthlyProductionData = transformMonthlyData(filtered);
+    //   const fetchMonthlyData = async () => {
+    //     try {
+    //       // Filter data based on _project_id
+    //       const filtered = montlyProductionData.filter(
+    //         (row) => row._project_id === project_id,
+    //       );
+    //       // Process data for chart
+    //       const MonthlyProductionData = transformMonthlyData(filtered);
 
-        setMonthlyData(MonthlyProductionData);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing monthly industral projects production data:",
-          error,
-        );
-      }
-    };
+    //       setMonthlyData(MonthlyProductionData);
+    //     } catch (error) {
+    //       console.error(
+    //         "Error fetching and processing monthly industral projects production data:",
+    //         error,
+    //       );
+    //     }
+    //   };
 
-    const fetchCoDestinationData = async () => {
-      try {
-        // Filter data based on short_name
-        const filtered = cobaltDestinationData.filter(
-          (row) => row._project_id === project_id,
-        );
+    //   const fetchCoDestinationData = async () => {
+    //     try {
+    //       // Filter data based on short_name
+    //       const filtered = cobaltDestinationData.filter(
+    //         (row) => row._project_id === project_id,
+    //       );
 
-        // Process data for chart - sort for top destinations
-        const CoDestinationData = transformDestinationData(filtered);
+    //       // Process data for chart - sort for top destinations
+    //       const CoDestinationData = transformDestinationData(filtered);
 
-        setCoDestinationData(CoDestinationData);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing co destination data:",
-          error,
-        );
-      }
-    };
+    //       setCoDestinationData(CoDestinationData);
+    //     } catch (error) {
+    //       console.error(
+    //         "Error fetching and processing co destination data:",
+    //         error,
+    //       );
+    //     }
+    //   };
 
-    const fetchCuDestinationData = async () => {
-      try {
-        // Filter data based on short_name
-        const filtered = copperDestinationData.filter(
-          (row) => row._project_id === project_id,
-        );
+    //   const fetchCuDestinationData = async () => {
+    //     try {
+    //       // Filter data based on short_name
+    //       const filtered = copperDestinationData.filter(
+    //         (row) => row._project_id === project_id,
+    //       );
 
-        // Process data for chart - sort for top destinations
-        const CuDestinationData = transformDestinationData(filtered);
+    //       // Process data for chart - sort for top destinations
+    //       const CuDestinationData = transformDestinationData(filtered);
 
-        setCuDestinationData(CuDestinationData);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing cu destination data:",
-          error,
-        );
-      }
-    };
+    //       setCuDestinationData(CuDestinationData);
+    //     } catch (error) {
+    //       console.error(
+    //         "Error fetching and processing cu destination data:",
+    //         error,
+    //       );
+    //     }
+    //   };
 
     fetchTotalProductionData();
-    fetchMonthlyData();
-    fetchCoDestinationData();
-    fetchCuDestinationData();
-  }, [project_id]);
+    //   fetchMonthlyData();
+    //   fetchCoDestinationData();
+    //   fetchCuDestinationData();
+  }, [project_id, totalProductionData]);
 
-  const treeMapChartConfig: ChartConfig = {
-    Metals: {
-      label: "Metals",
-      color: "hsl(var(--chart-1))",
-    },
-    Cobalt: {
-      label: "Cobalt",
-      color: "hsl(var(--chart-2))",
-    },
-    Copper: {
-      label: "Copper",
-      color: "hsl(var(--chart-3))",
-    },
-    Gold: {
-      label: "Gold",
-      color: "hsl(var(--chart-4))",
-    },
-    Silver: {
-      label: "Silver",
-      color: "hsl(var(--chart-5))",
-    },
-    Platinum: {
-      label: "Platinum",
-      color: "hsl(var(--chart-6))",
-    },
-  };
-  const data = [
-    {
-      name: "Metals",
-      children: [
-        { name: "Axes", size: 1302 },
-        { name: "Axis", size: 24593 },
-        { name: "AxisGridLine", size: 652 },
-        { name: "AxisLabel", size: 636 },
-        { name: "CartesianAxes", size: 6703 },
-      ],
-    },
-    {
-      name: "Cobalt",
-      children: [
-        { name: "AnchorControl", size: 2138 },
-        { name: "ClickControl", size: 3824 },
-        { name: "Control", size: 1353 },
-        { name: "ControlList", size: 4665 },
-        { name: "DragControl", size: 2649 },
-        { name: "ExpandControl", size: 2832 },
-        { name: "HoverControl", size: 4896 },
-        { name: "IControl", size: 763 },
-        { name: "PanZoomControl", size: 5222 },
-        { name: "SelectionControl", size: 7862 },
-        { name: "TooltipControl", size: 8435 },
-      ],
-    },
-    {
-      name: "Copper",
-      children: [
-        { name: "Data", size: 20544 },
-        { name: "DataList", size: 19788 },
-        { name: "DataSprite", size: 10349 },
-        { name: "EdgeSprite", size: 3301 },
-        { name: "NodeSprite", size: 19382 },
-        {
-          name: "render",
-          children: [
-            { name: "ArrowType", size: 698 },
-            { name: "EdgeRenderer", size: 5569 },
-            { name: "IRenderer", size: 353 },
-            { name: "ShapeRenderer", size: 2247 },
-          ],
-        },
-        { name: "ScaleBinding", size: 11275 },
-        { name: "Tree", size: 7147 },
-        { name: "TreeBuilder", size: 9930 },
-      ],
-    },
-    {
-      name: "Platinum",
-      children: [
-        { name: "DataEvent", size: 7313 },
-        { name: "SelectionEvent", size: 6880 },
-        { name: "TooltipEvent", size: 3701 },
-        { name: "VisualizationEvent", size: 2117 },
-      ],
-    },
-    {
-      name: "Silver",
-      children: [
-        { name: "Legend", size: 20859 },
-        { name: "LegendItem", size: 4614 },
-        { name: "LegendRange", size: 10530 },
-      ],
-    },
-    {
-      name: "Gold",
-      children: [
-        {
-          name: "distortion",
-          children: [
-            { name: "BifocalDistortion", size: 4461 },
-            { name: "Distortion", size: 6314 },
-            { name: "FisheyeDistortion", size: 3444 },
-          ],
-        },
-        {
-          name: "encoder",
-          children: [
-            { name: "ColorEncoder", size: 3179 },
-            { name: "Encoder", size: 4060 },
-            { name: "PropertyEncoder", size: 4138 },
-            { name: "ShapeEncoder", size: 1690 },
-            { name: "SizeEncoder", size: 1830 },
-          ],
-        },
-        {
-          name: "filter",
-          children: [
-            { name: "FisheyeTreeFilter", size: 5219 },
-            { name: "GraphDistanceFilter", size: 3165 },
-            { name: "VisibilityFilter", size: 3509 },
-          ],
-        },
-        { name: "IOperator", size: 1286 },
-        {
-          name: "label",
-          children: [
-            { name: "Labeler", size: 9956 },
-            { name: "RadialLabeler", size: 3899 },
-            { name: "StackedAreaLabeler", size: 3202 },
-          ],
-        },
-        {
-          name: "layout",
-          children: [
-            { name: "AxisLayout", size: 6725 },
-            { name: "BundledEdgeRouter", size: 3727 },
-            { name: "CircleLayout", size: 9317 },
-            { name: "CirclePackingLayout", size: 12003 },
-            { name: "DendrogramLayout", size: 4853 },
-            { name: "ForceDirectedLayout", size: 8411 },
-            { name: "IcicleTreeLayout", size: 4864 },
-            { name: "IndentedTreeLayout", size: 3174 },
-            { name: "Layout", size: 7881 },
-            { name: "NodeLinkTreeLayout", size: 12870 },
-            { name: "PieLayout", size: 2728 },
-            { name: "RadialTreeLayout", size: 12348 },
-            { name: "RandomLayout", size: 870 },
-            { name: "StackedAreaLayout", size: 9121 },
-            { name: "TreeMapLayout", size: 9191 },
-          ],
-        },
-        { name: "Operator", size: 2490 },
-        { name: "OperatorList", size: 5248 },
-        { name: "OperatorSequence", size: 4190 },
-        { name: "OperatorSwitch", size: 2581 },
-        { name: "SortOperator", size: 2023 },
-      ],
-    },
-  ];
+  const products = productData
+    .filter((d) => d.year === selectedYear)
+    .map((d) => ({
+      name: d.concentration,
+      size: parseInt(d.quantity),
+      transaction: parseInt(d.transaction),
+    }));
+
+  console.log("products", products);
 
   return (
     <section className="space-y-0">
@@ -315,9 +179,10 @@ export default function ProjectDetails({
         <div className="ml-auto flex w-full flex-col items-center justify-end gap-2 md:w-fit md:flex-row">
           <SearchBarDialog data={CompaniesList} />
           <YearToggle
-            defaultValue={selectedYear}
+            value={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
+            dynamicYears={productionYears}
           />
         </div>
       </div>
@@ -413,12 +278,15 @@ export default function ProjectDetails({
             )}
 
             {/* Product Composition */}
-            <TreeMapChart
-              title="Production of Copper and Cobalt in 2023"
-              description="Quantity in Tonnes"
-              config={treeMapChartConfig}
-              chartData={data}
-            />
+            {products.length > 0 && (
+              <TreeMapChart
+                title={`Product Composition in ${selectedYear}`}
+                description="Quantity in Tonnes"
+                config={treeMapChartConfig}
+                // chartData={TreemapData}
+                chartData={products}
+              />
+            )}
           </div>
 
           {/* Monthly Production */}

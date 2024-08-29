@@ -62,3 +62,30 @@ export const cuDestSumChartConfig = {
     color: "hsl(var(--background))",
   },
 };
+
+export const treeMapChartConfig = {
+  Metals: {
+    label: "Metals",
+    color: "hsl(var(--chart-1))",
+  },
+  Cobalt: {
+    label: "Cobalt",
+    color: "hsl(var(--chart-2))",
+  },
+  Copper: {
+    label: "Copper",
+    color: "hsl(var(--chart-3))",
+  },
+  Gold: {
+    label: "Gold",
+    color: "hsl(var(--chart-4))",
+  },
+  Silver: {
+    label: "Silver",
+    color: "hsl(var(--chart-5))",
+  },
+  Platinum: {
+    label: "Platinum",
+    color: "hsl(var(--chart-6))",
+  },
+};
