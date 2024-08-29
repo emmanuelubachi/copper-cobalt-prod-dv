@@ -67,7 +67,7 @@ export default function SearchBarDialog({
               onChange={(e) => setSearch(e.target.value)}
               className="mb-4 w-full rounded-xl bg-muted pl-8 focus:border-0"
             />
-            <ScrollArea className="h-full pb-10">
+            <ScrollArea className="h-full pb-10 pr-2">
               {filteredCompanies.map((country) => (
                 <div key={country.value} className="mb-6">
                   <h3 className="mb-2 flex items-center text-lg font-semibold">
