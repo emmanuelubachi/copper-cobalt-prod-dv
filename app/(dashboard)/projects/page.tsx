@@ -6,7 +6,7 @@ import { PageLoadingFallback } from "@/components/loading";
 
 import { fetchData } from "@/lib/fetchData";
 import { readCsvFile } from "@/lib/readFiles";
-import IndustralProjectsData from "@/data/projects/industrial_projects.json";
+import IndustrialProjectsData from "@/data/projects/industrial_projects.json";
 
 import { SearchParams } from "@/types";
 
@@ -30,7 +30,7 @@ export default async function Page({
       <ProjectPage
         searchParams={searchParams}
         {...result}
-        jsonData={IndustralProjectsData}
+        jsonData={IndustrialProjectsData}
       />
     </Suspense>
   );
