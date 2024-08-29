@@ -37,6 +37,7 @@ import { ChartConfig } from "@/components/ui/chart";
 import FilterButton from "@/components/elements/filterButton";
 import ProjectFilter from "./project-filter";
 import useDeviceType from "@/hooks/useDeviceType";
+import SearchBarDialog from "@/components/elements/searchBar";
 
 export default function ProjectDetails({
   projectInfo,
@@ -313,12 +314,13 @@ export default function ProjectDetails({
           {projectInfo.project_name}
         </h2>
         <div className="flex items-center justify-end gap-2">
+          <SearchBarDialog />
           <YearToggle
             defaultValue={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
           />
-          <div>
+          {/* <div>
             {isMobile ? (
               <FilterButton
                 content={<ProjectFilter />}
@@ -337,7 +339,7 @@ export default function ProjectDetails({
                 className="text-xs"
               />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
