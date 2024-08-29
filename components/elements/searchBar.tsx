@@ -87,7 +87,9 @@ export default function SearchBarDialog({
                         className={`__button_pressed group relative flex items-center justify-between rounded-md p-2 hover:bg-neutral-100 hover:dark:bg-muted ${project_id === child.value && "bg-neutral-100 text-foreground dark:bg-muted dark:text-foreground"}`}
                         onClick={() => setOpen(false)}
                       >
-                        <p className="truncate text-sm text-foreground/70">
+                        <p
+                          className={`truncate text-sm ${project_id === child.value ? "font-semibold text-foreground" : "text-foreground/70"}`}
+                        >
                           {child.label}
                         </p>
                       </Link>
