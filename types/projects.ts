@@ -22,3 +22,13 @@ export type DestinationSummary = {
   destination: string;
   totalQuantityTons: string;
 };
+
+export type CompaniesListProps = {
+  value: string;
+  label: string;
+  flagCode: string;
+  children: {
+    value: string;
+    label: string;
+  }[];
+}[];

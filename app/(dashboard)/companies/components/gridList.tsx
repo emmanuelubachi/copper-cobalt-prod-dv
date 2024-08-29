@@ -1,32 +1,14 @@
 "use client";
 import React from "react";
-
 import Link from "next/link";
-
+import Flags from "country-flag-icons/react/3x2";
 import { ArrowUpRight } from "lucide-react";
-// import { Card } from "@tremor/react";
+
 import useFilterStore from "@/store/filterStore";
 
-// import { companyData } from "@/data/chartData";
-// import { industralProjectName } from "@/data/industral-projects";
 import { Separator } from "@/components/ui/separator";
-
-import Flags from "country-flag-icons/react/3x2";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
-// function classNames(...classes: string[]): string {
-//   return classes.filter(Boolean).join(" ");
-// }
-
-export type CompaniesListProps = {
-  value: string;
-  label: string;
-  flagCode: string;
-  children: {
-    value: string;
-    label: string;
-  }[];
-}[];
+import { CompaniesListProps } from "@/types/projects";
 
 type FlagProps = {
   countryCode: string;
@@ -63,13 +45,6 @@ export default function GridList({ data }: { data: CompaniesListProps }) {
           >
             {"Country"}
           </ToggleGroupItem>
-          {/* <ToggleGroupItem
-          value={"Company_Group"}
-          aria-label={`Toggle product Copper`}
-          className="__button_pressed rounded-none rounded-r-lg bg-chart5/20 px-3 text-chart5 transition-all duration-300 data-[state=on]:bg-chart5/30 data-[state=on]:font-black data-[state=on]:text-orange-600 hover:bg-chart5/20 hover:text-chart5/90 dark:bg-background/15 dark:data-[state=on]:bg-chart5/10 dark:data-[state=on]:text-orange-400"
-        >
-          {"Company Group"}
-        </ToggleGroupItem> */}
         </ToggleGroup>
       </div>
 
@@ -85,7 +60,6 @@ export default function GridList({ data }: { data: CompaniesListProps }) {
                   </h2>
                 </div>
 
-                {/* <span className="inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-primary/10 text-pxs font-medium text-foreground"> */}
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 text-pxs font-medium text-tremor-content-strong dark:bg-muted dark:text-dark-tremor-content-strong">
                   {member.children.length}
                 </span>

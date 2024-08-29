@@ -93,7 +93,7 @@ const CheckBoxTreeWithFilter: React.FC<CheckBoxTreeWithFilterProps> = ({
         <Input
           type="search"
           placeholder="Search..."
-          className="custom-search w-full rounded-xl bg-muted pl-8 focus:border-0"
+          className="w-full rounded-xl bg-muted pl-8 focus:border-0"
           value={filterText}
           onChange={onFilterChange}
         />
