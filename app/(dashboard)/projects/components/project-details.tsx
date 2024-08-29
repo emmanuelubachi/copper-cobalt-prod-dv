@@ -34,10 +34,9 @@ import YearToggle from "@/components/year-toggle";
 import { Years } from "@/data/chartData";
 import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
 import { ChartConfig } from "@/components/ui/chart";
-import FilterButton from "@/components/elements/filterButton";
-import ProjectFilter from "./project-filter";
 import useDeviceType from "@/hooks/useDeviceType";
 import SearchBarDialog from "@/components/elements/searchBar";
+import { CompaniesList } from "@/constants/application";
 
 export default function ProjectDetails({
   projectInfo,
@@ -314,32 +313,12 @@ export default function ProjectDetails({
           {projectInfo.project_name}
         </h2>
         <div className="flex items-center justify-end gap-2">
-          <SearchBarDialog />
+          <SearchBarDialog data={CompaniesList} />
           <YearToggle
             defaultValue={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
           />
-          {/* <div>
-            {isMobile ? (
-              <FilterButton
-                content={<ProjectFilter />}
-                label="Projects"
-                type="tooltip"
-                tooltip="Select a project"
-                className="!rounded-full text-xs transition-all duration-300"
-                size={"icon"}
-              />
-            ) : (
-              <FilterButton
-                content={<ProjectFilter />}
-                label="Projects"
-                type="tooltip"
-                tooltip="Select a project"
-                className="text-xs"
-              />
-            )}
-          </div> */}
         </div>
       </div>
 
@@ -351,13 +330,8 @@ export default function ProjectDetails({
             {totalProd.length > 0 && (
               <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
                 <CardContent className="space-y-4 px-0 lg:pt-2">
-                  {/* <CardTitle className="text-start text-h5 font-medium tracking-tight">
-                    {projectInfo.project_name}
-                  </CardTitle> */}
-
                   <div className="grid gap-2 lg:grid-cols-2">
                     {/* Project Info */}
-
                     <div className="flex flex-col flex-wrap gap-2 text-start text-p tracking-tight text-muted-foreground">
                       <h4 className="font-semibold leading-none">
                         Nationality:{" "}

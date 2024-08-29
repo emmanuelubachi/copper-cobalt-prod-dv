@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { CompaniesList } from "@/constants/application";
+import { CompaniesListProps } from "@/types/projects";
 
 type FlagProps = {
   countryCode: string;
@@ -25,18 +25,24 @@ const Flag = ({ countryCode }: FlagProps) => {
   return <FlagComponent className="h-5 w-8 rounded-[5px]" />;
 };
 
-export default function SearchBarDialog() {
+export default function SearchBarDialog({
+  data,
+}: {
+  data: CompaniesListProps;
+}) {
   const searchParams = useSearchParams();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const project_id = searchParams.get("project_id");
 
-  const filteredCompanies = CompaniesList.map((country) => ({
-    ...country,
-    children: country.children.filter((company) =>
-      company.label.toLowerCase().includes(search.toLowerCase()),
-    ),
-  })).filter((country) => country.children.length > 0);
+  const filteredCompanies = data
+    .map((country) => ({
+      ...country,
+      children: country.children.filter((company) =>
+        company.label.toLowerCase().includes(search.toLowerCase()),
+      ),
+    }))
+    .filter((country) => country.children.length > 0);
 
   return (
     <div className="relative w-full max-w-sm">
