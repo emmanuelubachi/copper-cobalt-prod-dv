@@ -1,19 +1,22 @@
 import React from "react";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
+import { cn } from "@/lib/utils";
 
 type YearToggleProps = {
   defaultValue: string;
   onChangeFunction: (value: string) => void;
   years: string[];
+  className?: string;
 };
 
 export default function YearToggle({
   defaultValue,
   onChangeFunction,
   years,
+  className,
 }: YearToggleProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex w-full items-center justify-end gap-2">
       {/* <h3 className="text-pxs text-foreground/70">Year:</h3> */}
       <ToggleGroup
         type="single"
@@ -23,7 +26,9 @@ export default function YearToggle({
         onValueChange={(value) => {
           if (value) onChangeFunction(value);
         }}
-        className="__button_shadow gap-1 rounded-lg bg-muted p-1"
+        className={cn("__button_shadow gap-1 rounded-lg bg-muted p-1", {
+          className,
+        })}
       >
         {years.map((year) => (
           <ToggleGroupItem

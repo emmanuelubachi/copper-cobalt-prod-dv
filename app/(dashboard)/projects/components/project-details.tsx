@@ -307,12 +307,12 @@ export default function ProjectDetails({
   ];
 
   return (
-    <section className="space-y-2">
-      <div className="left-0 right-0 z-20 flex flex-col-reverse items-center gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 sm:justify-between lg:flex-row lg:space-y-0">
+    <section className="space-y-0">
+      <div className="left-0 right-0 z-20 flex w-full flex-col-reverse gap-4 space-y-2 bg-background/50 py-2 backdrop-blur-md dark:bg-neutral-900/50 sm:justify-between sm:py-4 lg:flex-row lg:space-y-0">
         <h2 className="text-start text-h5 font-medium tracking-tight">
           {projectInfo.project_name}
         </h2>
-        <div className="flex items-center justify-end gap-2">
+        <div className="ml-auto flex w-full flex-col items-center justify-end gap-2 md:w-fit md:flex-row">
           <SearchBarDialog data={CompaniesList} />
           <YearToggle
             defaultValue={selectedYear}
@@ -330,30 +330,30 @@ export default function ProjectDetails({
             {totalProd.length > 0 && (
               <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
                 <CardContent className="space-y-4 px-0 lg:pt-2">
-                  <div className="grid gap-2 lg:grid-cols-2">
+                  <div className="grid gap-8 lg:grid-cols-2">
                     {/* Project Info */}
-                    <div className="flex flex-col flex-wrap gap-2 text-start text-p tracking-tight text-muted-foreground">
-                      <h4 className="font-semibold leading-none">
+                    <div className="flex flex-col flex-wrap gap-2 text-start text-sm tracking-tight text-muted-foreground sm:text-p">
+                      <h4 className="leading-none">
                         Nationality:{" "}
                         <span className="font-medium text-foreground">
                           {projectData && projectData.Nationality}
                         </span>
                       </h4>
 
-                      <h4 className="font-semibold leading-none">
+                      <h4 className="leading-none">
                         Province:{" "}
                         <span className="font-medium text-foreground">
                           {projectData && projectData.Province}
                         </span>
                       </h4>
 
-                      <h4 className="font-semibold leading-none">
+                      <h4 className="leading-none">
                         Coordinates:{" "}
                         <span className="font-medium text-foreground">
                           {projectData && projectData.Geographical_coordinates}
                         </span>
                       </h4>
-                      <h4 className="font-semibold leading-none">
+                      <h4 className="leading-none">
                         Ownership:{" "}
                         <span className="font-medium text-foreground">
                           {projectData && projectData.Ownership}
@@ -368,10 +368,6 @@ export default function ProjectDetails({
                           {totalProd.length > 0 && totalProd[0].year} Annual
                           Exports
                         </h4>
-                        {/* <CardDescription>
-                          Total Production including quantity sold locally and
-                          exported
-                        </CardDescription> */}
                       </div>
 
                       <div className="flex gap-10">
@@ -390,36 +386,6 @@ export default function ProjectDetails({
                                 Production
                               </p>
                             </div>
-
-                            {/* <div className="flex items-center justify-between pr-8">
-                              {totalProdDetails[0].totalCobaltExport > 0 && (
-                                <div className="font-bold">
-                                  <p className="text-p font-bold text-foreground/80">
-                                    {totalProdDetails[0].totalCobaltExport
-                                      .toFixed(1)
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-                                      " t"}
-                                  </p>
-                                  <span className="text-pxs text-foreground/50">
-                                    Co Exports
-                                  </span>
-                                </div>
-                              )}
-                              {totalProdDetails[0].totalCobaltLocal > 0 && (
-                                <div className="font-bold">
-                                  <p className="text-p font-bold text-foreground/80">
-                                    {totalProdDetails[0].totalCobaltLocal
-
-                                      .toFixed(1)
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-                                      " t"}
-                                  </p>
-                                  <span className="text-pxs font-bold text-foreground/50">
-                                    Co Domestic Sales
-                                  </span>
-                                </div>
-                              )}
-                            </div> */}
                           </div>
                         )}
                         {totalProd[0].totalCopper > 0 && (
@@ -437,35 +403,6 @@ export default function ProjectDetails({
                                 Production
                               </p>
                             </div>
-
-                            {/* <div className="flex items-center justify-between pr-8">
-                              {totalProdDetails[0].totalCopperExport > 0 && (
-                                <div className="font-bold">
-                                  <p className="text-p font-bold text-foreground/80">
-                                    {totalProdDetails[0].totalCopperExport
-                                      .toFixed(1)
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-                                      " t"}
-                                  </p>
-                                  <span className="text-pxs text-foreground/50">
-                                    Cu Exports
-                                  </span>
-                                </div>
-                              )}
-                              {totalProdDetails[0].totalCopperLocal > 0 && (
-                                <div className="font-bold">
-                                  <p className="text-p font-bold text-foreground/80">
-                                    {totalProdDetails[0].totalCopperLocal
-                                      .toFixed(1)
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-                                      " t"}
-                                  </p>
-                                  <span className="text-pxs font-bold text-foreground/50">
-                                    Cu Domestic Sales
-                                  </span>
-                                </div>
-                              )}
-                            </div> */}
                           </div>
                         )}
                       </div>
