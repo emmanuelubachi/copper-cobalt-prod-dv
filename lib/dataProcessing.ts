@@ -373,3 +373,56 @@ export function calculateProductSummary(data: ProductData[]): ProductSummary[] {
     totalTransaction: summaryMap[product].totalTransaction,
   }));
 }
+
+interface ProdDesInputData {
+  destination: string;
+  product: string;
+  quantity: number;
+  transaction: number;
+}
+
+interface ProdDesTransformedData {
+  destination: string;
+  cobalt: number;
+  copper: number;
+}
+
+/**
+ * This function takes an array of InputData objects and returns an array of
+ * TransformedData objects, which contain the total quantity of cobalt and copper
+ * for each destination in the input array.
+ *
+ * @param {ProdDesInputData[]} data - The array of InputData objects to be transformed.
+ * @returns {ProdDesTransformedData[]} - An array of TransformedData objects, each containing
+ * the total quantity of cobalt and copper for a destination.
+ */
+export function transformProdDesData(
+  data: ProdDesInputData[],
+): ProdDesTransformedData[] {
+  const resultMap: { [key: string]: { cobalt: number; copper: number } } = {};
+
+  data.forEach((item) => {
+    const { destination, product, quantity } = item;
+
+    if (!resultMap[destination]) {
+      resultMap[destination] = { cobalt: 0, copper: 0 };
+    }
+
+    if (product.toLowerCase() === "cobalt") {
+      resultMap[destination].cobalt += quantity;
+    } else if (product.toLowerCase() === "copper") {
+      resultMap[destination].copper += quantity;
+    }
+  });
+
+  const transformedData = Object.keys(resultMap).map((destination) => ({
+    destination,
+    cobalt: resultMap[destination].cobalt,
+    copper: resultMap[destination].copper,
+  }));
+
+  // Sort the transformed data by the total value (cobalt + copper) in descending order
+  return transformedData.sort(
+    (a, b) => b.cobalt + b.copper - (a.cobalt + a.copper),
+  );
+}

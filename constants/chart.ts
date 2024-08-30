@@ -89,3 +89,14 @@ export const treeMapChartConfig = {
     color: "hsl(var(--chart-6))",
   },
 };
+
+export const chartConfig = {
+  cobalt: {
+    label: "Cobalt",
+    color: "hsl(var(--chart-6))",
+  },
+  copper: {
+    label: "Copper",
+    color: "hsl(var(--chart-5))",
+  },
+};

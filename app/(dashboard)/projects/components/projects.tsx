@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import MultipleBarChart from "@/components/charts/shadcn/bar-chart/multiple-bar-chart";
 
 import {
+  chartConfig,
   coDestChartConfig,
   cuDestChartConfig,
   monthlyProdChartConfig,
@@ -32,9 +33,12 @@ import {
   calculateYearlySums,
   transformDestinationData,
   transformMonthlyData,
+  transformProdDesData,
 } from "@/lib/dataProcessing";
 import ProjectDetails from "./project-details";
 import { ProjectInfo } from "@/types";
+import MixedBarChart from "@/components/charts/shadcn/bar-chart/mixed-bar-chart";
+import SiteMap from "./map";
 
 export default function Projects({
   projectInfo,
@@ -54,12 +58,12 @@ export default function Projects({
   copperDestinationData: any[];
 }) {
   const [monthlyData, setMonthlyData] = useState<TMonthlyProductionData[]>([]);
-  const [coDestinationData, setCoDestinationData] = useState<
-    TDestinationData[]
-  >([]);
-  const [cuDestinationData, setCuDestinationData] = useState<
-    TDestinationData[]
-  >([]);
+  // const [coDestinationData, setCoDestinationData] = useState<
+  //   TDestinationData[]
+  // >([]);
+  // const [cuDestinationData, setCuDestinationData] = useState<
+  //   TDestinationData[]
+  // >([]);
 
   const project_id = projectInfo._project_id;
 
@@ -98,46 +102,46 @@ export default function Projects({
         );
       }
     };
-    const fetchCoDestinationData = async () => {
-      try {
-        // Filter data based on short_name
-        const filtered = cobaltDestinationData.filter(
-          (row) => row._project_id === project_id,
-        );
-        // Process data for chart - sort for top destinations
-        const CoDestinationData = transformDestinationData(filtered);
-        setCoDestinationData(CoDestinationData);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing co destination data:",
-          error,
-        );
-      }
-    };
-    const fetchCuDestinationData = async () => {
-      try {
-        // Filter data based on short_name
-        const filtered = copperDestinationData.filter(
-          (row) => row._project_id === project_id,
-        );
-        // Process data for chart - sort for top destinations
-        const CuDestinationData = transformDestinationData(filtered);
-        setCuDestinationData(CuDestinationData);
-      } catch (error) {
-        console.error(
-          "Error fetching and processing cu destination data:",
-          error,
-        );
-      }
-    };
+    // const fetchCoDestinationData = async () => {
+    //   try {
+    //     // Filter data based on short_name
+    //     const filtered = cobaltDestinationData.filter(
+    //       (row) => row._project_id === project_id,
+    //     );
+    //     // Process data for chart - sort for top destinations
+    //     const CoDestinationData = transformDestinationData(filtered);
+    //     setCoDestinationData(CoDestinationData);
+    //   } catch (error) {
+    //     console.error(
+    //       "Error fetching and processing co destination data:",
+    //       error,
+    //     );
+    //   }
+    // };
+    // const fetchCuDestinationData = async () => {
+    //   try {
+    //     // Filter data based on short_name
+    //     const filtered = copperDestinationData.filter(
+    //       (row) => row._project_id === project_id,
+    //     );
+    //     // Process data for chart - sort for top destinations
+    //     const CuDestinationData = transformDestinationData(filtered);
+    //     setCuDestinationData(CuDestinationData);
+    //   } catch (error) {
+    //     console.error(
+    //       "Error fetching and processing cu destination data:",
+    //       error,
+    //     );
+    //   }
+    // };
     fetchMonthlyData();
-    fetchCoDestinationData();
-    fetchCuDestinationData();
+    // fetchCoDestinationData();
+    // fetchCuDestinationData();
   }, [
     project_id,
     montlyProductionData,
-    cobaltDestinationData,
-    copperDestinationData,
+    // cobaltDestinationData,
+    // copperDestinationData,
   ]);
 
   const products = productData
@@ -148,6 +152,18 @@ export default function Projects({
       quantity: parseInt(d.quantity),
       transaction: parseInt(d.transaction),
     }));
+
+  const destinationData = productData
+    .filter((d) => d.year === selectedYear)
+    .map((d) => ({
+      destination: d.destination,
+      product: d.product,
+      quantity: parseInt(d.quantity),
+      transaction: parseInt(d.transaction),
+    }));
+
+  // console.log("destinationData", destinationData);
+  console.log("Transformed", transformProdDesData(destinationData));
 
   return (
     <section className="space-y-0">
@@ -193,84 +209,103 @@ export default function Projects({
             )}
           </div>
 
-          {/* Monthly Production */}
+          {/* Destination */}
           <div className="grid grid-cols-1 gap-4">
-            {monthlyData.length > 0 && (
-              <div className="">
-                <MultipleBarChart
-                  title="Production of Copper and Cobalt in 2023"
-                  description="Quantity in Tonnes"
-                  config={monthlyProdChartConfig}
-                  chartData={monthlyData}
-                  firstDataKey="Cobalt"
-                  secondDataKey="Copper"
-                  classname="h-[189px]"
-                  footNote={
-                    <div className="leading-none text-muted-foreground">
-                      Includes quantities both exported and sold locally.
-                    </div>
-                  }
+            {destinationData.length > 0 &&
+              projectData.latitude &&
+              projectData.longitude && (
+                <SiteMap
+                  site_latitude={parseFloat(projectData.latitude)}
+                  site_longitude={parseFloat(projectData.longitude)}
                 />
-              </div>
-            )}
-            {monthlyData.length > 0 && (
-              <div className="">
-                <MultipleBarChart
-                  title="Production of Copper and Cobalt in 2023"
-                  description="Quantity in Tonnes"
-                  config={monthlyProdChartConfig}
-                  chartData={monthlyData}
-                  firstDataKey="Cobalt"
-                  secondDataKey="Copper"
-                  classname="h-[189px]"
-                  footNote={
+              )}
+
+            {/* {coDestinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Cobalt Production in 2023"
+                description="Quantity in Tonnes"
+                config={coDestChartConfig}
+                chartData={coDestinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                className="h-[200px]"
+                footNote={
+                  <>
                     <div className="leading-none text-muted-foreground">
-                      Includes quantities both exported and sold locally.
+                      Showing top {coDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
                     </div>
-                  }
-                />
-              </div>
+                  </>
+                }
+              />
+            )} */}
+            {destinationData.length > 0 && (
+              <MixedBarChart
+                title={`Top Destinations of ${projectInfo.project_name} Exports in ${selectedYear}`}
+                description="Quantity in Tonnes"
+                config={chartConfig}
+                chartData={transformProdDesData(destinationData)}
+              />
             )}
+
+            {/* {cuDestinationData.length > 0 && (
+              <CustomLabelBarChart
+                title="Top Destinations of Copper Production in 2023"
+                description="Quantity in Tonnes"
+                config={cuDestChartConfig}
+                chartData={cuDestinationData}
+                yAxisDataKey="destination"
+                xAxisDataKey="quantity_tons"
+                className="h-[200px]"
+                footNote={
+                  <>
+                    <div className="leading-none text-muted-foreground">
+                      Showing top {cuDestinationData.length > 4 ? 5 : ""}{" "}
+                      destinations in 2023.
+                    </div>
+                  </>
+                }
+              />
+            )} */}
           </div>
         </div>
-        {/* Destination */}
+        {/* Monthly Production */}
         <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-2">
-          {coDestinationData.length > 0 && (
-            <CustomLabelBarChart
-              title="Top Destinations of Cobalt Production in 2023"
-              description="Quantity in Tonnes"
-              config={coDestChartConfig}
-              chartData={coDestinationData}
-              yAxisDataKey="destination"
-              xAxisDataKey="quantity_tons"
-              footNote={
-                <>
+          {monthlyData.length > 0 && (
+            <div className="">
+              <MultipleBarChart
+                title="Production of Copper and Cobalt in 2023"
+                description="Quantity in Tonnes"
+                config={monthlyProdChartConfig}
+                chartData={monthlyData}
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+                classname="h-[189px]"
+                footNote={
                   <div className="leading-none text-muted-foreground">
-                    Showing top {coDestinationData.length > 4 ? 5 : ""}{" "}
-                    destinations in 2023.
+                    Includes quantities both exported and sold locally.
                   </div>
-                </>
-              }
-            />
+                }
+              />
+            </div>
           )}
-
-          {cuDestinationData.length > 0 && (
-            <CustomLabelBarChart
-              title="Top Destinations of Copper Production in 2023"
-              description="Quantity in Tonnes"
-              config={cuDestChartConfig}
-              chartData={cuDestinationData}
-              yAxisDataKey="destination"
-              xAxisDataKey="quantity_tons"
-              footNote={
-                <>
+          {monthlyData.length > 0 && (
+            <div className="">
+              <MultipleBarChart
+                title="Production of Copper and Cobalt in 2023"
+                description="Quantity in Tonnes"
+                config={monthlyProdChartConfig}
+                chartData={monthlyData}
+                firstDataKey="Cobalt"
+                secondDataKey="Copper"
+                classname="h-[189px]"
+                footNote={
                   <div className="leading-none text-muted-foreground">
-                    Showing top {cuDestinationData.length > 4 ? 5 : ""}{" "}
-                    destinations in 2023.
+                    Includes quantities both exported and sold locally.
                   </div>
-                </>
-              }
-            />
+                }
+              />
+            </div>
           )}
         </div>
       </div>
