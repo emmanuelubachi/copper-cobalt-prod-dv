@@ -1,7 +1,17 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { calculateProductSummary } from "@/lib/dataProcessing";
 
-export default function ProjectDetails({ projectData, totalProd }: any) {
+export default function ProjectDetails({
+  projectData,
+  productData,
+  year,
+}: any) {
+  const totalExports = calculateProductSummary(productData);
+
+  const copperData = totalExports.filter((row) => row.product === "Copper");
+  const cobaltData = totalExports.filter((row) => row.product === "Cobalt");
+
   return (
     <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
       <CardContent className="space-y-4 px-0 lg:pt-2">
@@ -40,17 +50,17 @@ export default function ProjectDetails({ projectData, totalProd }: any) {
           <div className="space-y-2">
             <div>
               <h4 className="font-semibold leading-none tracking-tight">
-                {totalProd.length > 0 && totalProd[0].year} Annual Exports
+                {totalExports.length > 0 && `${year} Annual Exports`}
               </h4>
             </div>
 
             <div className="flex gap-10">
-              {totalProd[0].totalCobalt > 0 && (
+              {cobaltData.length > 0 && (
                 <div className="space-y-4">
                   <div className="border-l-4 border-chart6 pl-4 font-bold">
                     <p className="text-h5 font-bold text-foreground/90">
-                      {totalProd[0].totalCobalt > 0 &&
-                        totalProd[0].totalCobalt
+                      {cobaltData[0].totalQuantity > 0 &&
+                        cobaltData[0].totalQuantity
                           .toFixed(1)
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       {" t"}
@@ -61,12 +71,13 @@ export default function ProjectDetails({ projectData, totalProd }: any) {
                   </div>
                 </div>
               )}
-              {totalProd[0].totalCopper > 0 && (
+
+              {copperData.length > 0 && (
                 <div className="space-y-4">
                   <div className="border-l-4 border-chart5 pl-4 font-bold">
                     <p className="text-h5 font-bold text-foreground/90">
-                      {totalProd[0].totalCopper > 0 &&
-                        totalProd[0].totalCopper
+                      {copperData[0].totalQuantity > 0 &&
+                        copperData[0].totalQuantity
                           .toFixed(1)
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       {" t"}

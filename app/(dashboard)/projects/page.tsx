@@ -6,6 +6,7 @@ import ProjectDetails from "./components/project-details";
 import { SearchParams } from "@/types";
 import ErrorNotification from "@/components/elements/notification";
 import ProductCompositionData from "@/data/projects/product_composition.json";
+import ProductCompositionDestinationData from "@/data/projects/product_composition_destination.json";
 
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
 // import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
@@ -41,7 +42,7 @@ export default async function Page({
   );
 
   // Filter product composition data for the current project
-  const productData = ProductCompositionData.filter(
+  const productData = ProductCompositionDestinationData.filter(
     (d) => d._project_id === projectInfo._project_id,
   );
 

@@ -328,3 +328,48 @@ export function transformTrendData(data: InputData): TransformedData {
 
   return result;
 }
+
+interface ProductData {
+  product: string;
+  concentration: string;
+  quantity: number;
+  transaction: number;
+}
+
+interface ProductSummary {
+  product: string;
+  totalQuantity: number;
+  totalTransaction: number;
+}
+
+/**
+ * This function takes an array of ProductData objects and returns an array of
+ * ProductSummary objects, which contain the total quantity and total transaction
+ * for each product in the input array.
+ *
+ * @param {ProductData[]} data - The array of ProductData objects to be summarized.
+ * @returns {ProductSummary[]} - An array of ProductSummary objects, each containing
+ * the total quantity and total transaction for a product.
+ */
+export function calculateProductSummary(data: ProductData[]): ProductSummary[] {
+  const summaryMap: {
+    [key: string]: { totalQuantity: number; totalTransaction: number };
+  } = {};
+
+  data.forEach((item) => {
+    const { product, quantity, transaction } = item;
+
+    if (!summaryMap[product]) {
+      summaryMap[product] = { totalQuantity: 0, totalTransaction: 0 };
+    }
+
+    summaryMap[product].totalQuantity += quantity;
+    summaryMap[product].totalTransaction += transaction;
+  });
+
+  return Object.keys(summaryMap).map((product) => ({
+    product,
+    totalQuantity: summaryMap[product].totalQuantity,
+    totalTransaction: summaryMap[product].totalTransaction,
+  }));
+}
