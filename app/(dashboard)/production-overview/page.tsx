@@ -262,7 +262,7 @@ export default function Dashboard() {
         <div className="flex items-center justify-center sm:items-start lg:justify-end">
           <div className="flex items-center gap-2">
             <YearToggle
-              defaultValue={selectedYear}
+              value={selectedYear}
               onChangeFunction={setSelectedYear}
               years={Years}
             />

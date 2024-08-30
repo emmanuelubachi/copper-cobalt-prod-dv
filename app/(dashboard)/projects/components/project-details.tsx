@@ -182,6 +182,7 @@ export default function ProjectDetails({
             value={selectedYear}
             onChangeFunction={setSelectedYear}
             years={Years}
+            isDynamic
             dynamicYears={productionYears}
           />
         </div>
