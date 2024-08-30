@@ -241,7 +241,7 @@ export default function Projects({
             )} */}
             {destinationData.length > 0 && (
               <MixedBarChart
-                title={`Top Destinations of ${projectInfo.project_name} Production in ${selectedYear}`}
+                title={`Top Destinations of ${projectInfo.project_name} Exports in ${selectedYear}`}
                 description="Quantity in Tonnes"
                 config={chartConfig}
                 chartData={transformProdDesData(destinationData)}
