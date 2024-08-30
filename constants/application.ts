@@ -5,7 +5,7 @@ import {
   ArtisanalSiteDetailsProps,
 } from "@/types/map";
 
-export const defaultPRoject = "sek";
+export const defaultPRoject = "ruashi";
 
 export const NAVLIST: NavItem[] = [
   {

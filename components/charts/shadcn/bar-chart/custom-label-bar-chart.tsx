@@ -25,6 +25,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import {
+  cn,
   numberFormatter,
   quantityFormatter,
   quantityFormatterT,
@@ -37,10 +38,8 @@ type CustomLabelBarChartProps = {
   chartData: any;
   yAxisDataKey: string;
   xAxisDataKey: string;
-  // barDataKey: string;
-  // yAxisLabelDataKey: string;
-  // barLabelDataKey: string;
   footNote?: ReactNode;
+  className?: string;
 };
 
 export default function CustomLabelBarChart({
@@ -64,7 +63,7 @@ export default function CustomLabelBarChart({
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[384px] w-full"
+          className={cn("aspect-auto h-[384px] w-full", props.className)}
         >
           <BarChart
             accessibilityLayer
