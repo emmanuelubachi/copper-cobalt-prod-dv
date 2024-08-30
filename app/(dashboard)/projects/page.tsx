@@ -8,9 +8,9 @@ import ErrorNotification from "@/components/elements/notification";
 import ProductCompositionData from "@/data/projects/product_composition.json";
 
 import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+// import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
+// import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+// import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
 import { defaultPRoject } from "@/constants/application";
 import { ProjectDataProps } from "@/types/projects";
 
@@ -61,12 +61,5 @@ export default async function Page({
         totalProductionData={totalProductionData}
       />
     </>
-    // <Suspense fallback={<PageLoadingFallback />}>
-    //   <ProjectPage
-    //     searchParams={searchParams}
-    //     {...result}
-    //     projectsData={IndustrialProjectsData}
-    //   />
-    // </Suspense>
   );
 }
