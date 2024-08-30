@@ -1,7 +1,13 @@
 "use client";
 import { ReactNode } from "react";
 import { Treemap, ResponsiveContainer, Tooltip, Legend } from "recharts";
-import { cn } from "@/lib/utils";
+import {
+  cn,
+  currencyFormatter,
+  numberFormatter,
+  quantityFormatter,
+  quantityFormatterT,
+} from "@/lib/utils";
 
 import {
   Card,
@@ -12,6 +18,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+import { Value } from "@radix-ui/react-select";
 
 type TreeMapChartProps = {
   title: string;
@@ -50,6 +57,7 @@ const CustomizedContent = ({
   height,
   index,
   name,
+  value,
 }: any) => {
   return (
     <g>
@@ -78,10 +86,13 @@ const CustomizedContent = ({
             x={x + width / 2}
             y={y + height / 2 + 7}
             textAnchor="middle"
-            fill="#fff"
+            fill="#000"
             fontSize={14}
+            color="#000"
+            className="stroke-none font-medium"
           >
-            {name}
+            {quantityFormatter(value)}
+            {/* {name} */}
           </text>
         </>
       )}
@@ -113,10 +124,25 @@ const CustomizedContent = ({
 
 const TooltipContent = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
+    console.log("payload", payload);
     return (
-      <div className="treemap-custom-tooltip rounded-md bg-white p-2 dark:bg-black">
-        <p className="font-bold">{`${payload[0].payload.root.name}`}</p>
-        <p>{`${payload[0].payload.name} : ${payload[0].value}`}</p>
+      <div className="treemap-custom-tooltip rounded-md bg-white stroke-none p-2 dark:bg-black">
+        {/* <p className="text-foreground/70">{`${payload[0].payload.root.name}`}</p> */}
+        <p className="text-foreground/70">{`Product`}</p>
+
+        <p className="font-bold">{`${payload[0].payload.name}`}</p>
+        <p>
+          Quantity:{" "}
+          <span className="font-bold">
+            {quantityFormatterT(payload[0].value)}
+          </span>
+        </p>
+        <p>
+          Transaction:{" "}
+          <span className="font-bold">
+            {`${currencyFormatter(payload[0].payload.transaction)}`}
+          </span>
+        </p>
       </div>
     );
   }

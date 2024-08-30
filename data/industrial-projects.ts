@@ -273,7 +273,7 @@ export const industrialProjectName: IndustrialProjectName = [
   },
   {
     _project_id: "sek",
-    project_name: "Soci\u00e9t\u00e9 d'Exploitation de Kipoi",
+    project_name: "Kipoi Exploitation Company",
     short_name: "SEK",
   },
   {

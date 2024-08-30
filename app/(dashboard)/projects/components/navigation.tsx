@@ -3,11 +3,12 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GitCompareArrows, ShipIcon } from "lucide-react";
+import { defaultPRoject } from "@/constants/application";
 
 const navlist = [
   {
     name: "Export Overview",
-    href: "/projects?project_id=ccr",
+    href: `/projects?project_id=${defaultPRoject}`,
     path: "/projects",
     icon: ShipIcon,
   },
