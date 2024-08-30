@@ -2,16 +2,17 @@ import { fetchData } from "@/lib/fetchData";
 import IndustrialProjectsData from "@/data/projects/industrial_projects.json";
 
 import { redirect } from "next/navigation";
-import ProjectDetails from "./components/project-details";
+import Projects from "./components/projects";
 import { SearchParams } from "@/types";
 import ErrorNotification from "@/components/elements/notification";
 import ProductCompositionData from "@/data/projects/product_composition.json";
 import ProductCompositionDestinationData from "@/data/projects/product_composition_destination.json";
 
-import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-// import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-// import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-// import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+// import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
+import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
+import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
+import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+
 import { defaultPRoject } from "@/constants/application";
 import { ProjectDataProps } from "@/types/projects";
 
@@ -54,12 +55,14 @@ export default async function Page({
   return (
     <>
       <ErrorNotification errorType={errorType} />
-      <ProjectDetails
+      <Projects
         projectInfo={projectInfo}
         projectData={projectData as unknown as ProjectDataProps}
         productData={productData}
         productionYears={productionYears}
-        totalProductionData={totalProductionData}
+        montlyProductionData={montlyProductionData}
+        cobaltDestinationData={cobaltDestinationData}
+        copperDestinationData={copperDestinationData}
       />
     </>
   );
