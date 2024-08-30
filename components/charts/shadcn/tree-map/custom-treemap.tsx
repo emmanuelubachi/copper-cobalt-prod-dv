@@ -27,6 +27,8 @@ type TreeMapChartProps = {
   chartData: any;
   footNote?: ReactNode;
   classname?: string;
+  namekey?: string;
+  sizekey?: string;
 };
 
 // interface CustomizedContentProps {
@@ -124,13 +126,12 @@ const CustomizedContent = ({
 
 const TooltipContent = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
-    console.log("payload", payload);
     return (
       <div className="treemap-custom-tooltip rounded-md bg-white stroke-none p-2 dark:bg-black">
         {/* <p className="text-foreground/70">{`${payload[0].payload.root.name}`}</p> */}
         <p className="text-foreground/70">{`Product`}</p>
 
-        <p className="font-bold">{`${payload[0].payload.name}`}</p>
+        <p className="font-bold">{`${payload[0].name}`}</p>
         <p>
           Quantity:{" "}
           <span className="font-bold">
@@ -169,9 +170,9 @@ export default function TreeMapChart({ ...props }: TreeMapChartProps) {
         >
           <ResponsiveContainer>
             <Treemap
-              nameKey="name"
+              nameKey={props.namekey || "name"}
               data={props.chartData}
-              dataKey="size"
+              dataKey={props.sizekey || "size"}
               animationDuration={300}
               className="stroke-foreground"
               border-radius="10px"

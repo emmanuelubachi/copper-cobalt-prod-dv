@@ -168,12 +168,11 @@ export default function ProjectsPage({
   const products = productData
     .filter((d) => d.year === selectedYear)
     .map((d) => ({
-      name: d.concentration,
-      size: parseInt(d.quantity),
+      product: d.product,
+      concentration: d.concentration,
+      quantity: parseInt(d.quantity),
       transaction: parseInt(d.transaction),
     }));
-
-  console.log("products", products);
 
   return (
     <section className="space-y-0">
@@ -199,7 +198,12 @@ export default function ProjectsPage({
           {/* Project Info and Treemap */}
           <div className="space-y-4 xl:col-span-2">
             {totalProd.length > 0 && (
-              <ProjectDetails projectData={projectData} totalProd={totalProd} />
+              <ProjectDetails
+                projectData={projectData}
+                totalProd={totalProd}
+                productData={products}
+                year={selectedYear}
+              />
             )}
 
             {/* Product Composition */}
@@ -208,7 +212,8 @@ export default function ProjectsPage({
                 title={`Product Composition in ${selectedYear}`}
                 description="Quantity in Tonnes"
                 config={treeMapChartConfig}
-                // chartData={TreemapData}
+                namekey="concentration"
+                sizekey="quantity"
                 chartData={products}
               />
             )}
