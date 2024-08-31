@@ -3,7 +3,7 @@ import React from "react";
 import ReactEcharts from "echarts-for-react";
 
 export default function SankeyChart({ data }: any) {
-  console.log(data);
+  console.log("sankey data", data);
   return (
     <ReactEcharts
       style={{ height: "1100px", width: "100%" }}

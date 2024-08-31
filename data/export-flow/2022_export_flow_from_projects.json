@@ -1,0 +1,896 @@
+[
+    {
+        "product": "Cobalt",
+        "exporter": "METALKOL",
+        "importer": "ACCESS WORLD",
+        "quantity": "49387.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "ACCESS WORLD",
+        "quantity": "83730.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GOLDEN AFRICAN",
+        "importer": "AFRO GULF",
+        "quantity": "7748.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAMBOVE MINING",
+        "importer": "BGN INT",
+        "quantity": "12312.6"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "TFM",
+        "importer": "BRIDGE SHIPPING",
+        "quantity": "15914.3"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TFM",
+        "importer": "BRIDGE SHIPPING",
+        "quantity": "52101.6"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "CHALCO TRADING",
+        "quantity": "66.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMIKA",
+        "importer": "CHALCO TRADING",
+        "quantity": "18754.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LAMIKAL",
+        "importer": "CHALCO TRADING",
+        "quantity": "12722.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "CCR",
+        "importer": "CHENGTUN GLOBAL",
+        "quantity": "551.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CCR",
+        "importer": "CHENGTUN GLOBAL",
+        "quantity": "55231.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMILU",
+        "importer": "CHINA RAILWAY",
+        "quantity": "3788.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMILU",
+        "importer": "CHINA RAILWAY",
+        "quantity": "33660.5"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MKM SAS",
+        "importer": "CHINA RAILWAY",
+        "quantity": "2625.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MKM SAS",
+        "importer": "CHINA RAILWAY",
+        "quantity": "17723.4"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "SICOMINES",
+        "importer": "CHINA RAILWAY",
+        "quantity": "7578.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "SICOMINES",
+        "importer": "CHINA RAILWAY",
+        "quantity": "285493.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAMOA",
+        "importer": "CITIC METAL",
+        "quantity": "298277.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TFM",
+        "importer": "CMOC LIMITED",
+        "quantity": "637.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GECAMINES",
+        "importer": "DSA VENTURES LLC",
+        "quantity": "324.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "THOMAS",
+        "importer": "ESSENCE RESOURCES",
+        "quantity": "6521.9"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMIKA",
+        "importer": "GERALD METALS",
+        "quantity": "594.3"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUASHI MINING",
+        "importer": "GERALD METALS",
+        "quantity": "150.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "SEK",
+        "importer": "GERALD METALS",
+        "quantity": "37413.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "KCC",
+        "importer": "GLENCORE",
+        "quantity": "73628.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KCC",
+        "importer": "GLENCORE",
+        "quantity": "216865.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "GLENCORE",
+        "quantity": "153.9"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MUTANDA",
+        "importer": "GLENCORE",
+        "quantity": "38768.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MUTANDA",
+        "importer": "GLENCORE",
+        "quantity": "32632.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "GOLD MOUNTAINS",
+        "quantity": "605.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAMOA",
+        "importer": "GOLD MOUNTAINS",
+        "quantity": "296460.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMMUS",
+        "importer": "GOLDEN HARBOUR",
+        "quantity": "10432.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "GOLDEN HARBOUR",
+        "quantity": "3128.2"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "GRAND FUTURE",
+        "quantity": "2986.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "LAMIKAL",
+        "importer": "GRAND FUTURE",
+        "quantity": "2474.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "METALKOL",
+        "importer": "GRINDROD INTERMODAL",
+        "quantity": "5114.3"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN MABENDE",
+        "importer": "GUIXI LINGANG",
+        "quantity": "299.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "HANRUI METAL",
+        "importer": "HANRUI COBALT",
+        "quantity": "5911.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HANRUI METAL",
+        "importer": "HANRUI COBALT",
+        "quantity": "26351.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MM",
+        "importer": "HANRUI COBALT",
+        "quantity": "3962.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MM",
+        "importer": "HANRUI COBALT",
+        "quantity": "6770.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "HEBEI JIWU",
+        "quantity": "208.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMIKA",
+        "importer": "HEBEI JIWU",
+        "quantity": "2665.1"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "SHITURU MINING",
+        "importer": "HK PENGHE",
+        "quantity": "62.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "EXCELLEN",
+        "importer": "HONG KONG EXCELLEN MINING",
+        "quantity": "4928.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "EXCELLEN",
+        "importer": "HONG KONG EXCELLEN MINING",
+        "quantity": "38310.2"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "LR SAS",
+        "importer": "HONG KONG EXCELLEN MINING",
+        "quantity": "275.3"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LR SAS",
+        "importer": "HONG KONG EXCELLEN MINING",
+        "quantity": "11716.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CJCMC",
+        "importer": "HUACHIN",
+        "quantity": "687.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN MABENDE",
+        "importer": "HUACHIN",
+        "quantity": "2902.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MPC",
+        "importer": "HUACHIN",
+        "quantity": "8790.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "THOMAS",
+        "importer": "HUACHIN",
+        "quantity": "4632.6"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "CDM",
+        "importer": "HUAYOU",
+        "quantity": "5249.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CDM",
+        "importer": "HUAYOU",
+        "quantity": "74482.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GECAMINES",
+        "importer": "HUAYOU",
+        "quantity": "1805.5"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MIKAS",
+        "importer": "HUAYOU",
+        "quantity": "23736.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MIKAS",
+        "importer": "HUAYOU",
+        "quantity": "26537.5"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "STL",
+        "importer": "HUAYOU",
+        "quantity": "23814.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "FRONTIER",
+        "importer": "IMPALA TERMINALS",
+        "quantity": "20632.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GOLDEN AFRICAN",
+        "importer": "INLAND GLOBAL",
+        "quantity": "1962.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "INTERCONTINENTAL RESOURCES",
+        "quantity": "20807.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUASHI MINING",
+        "importer": "IXM",
+        "quantity": "2322.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "TFM",
+        "importer": "IXM",
+        "quantity": "33635.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TFM",
+        "importer": "IXM",
+        "quantity": "67465.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MJM",
+        "importer": "JIANA HK",
+        "quantity": "12901.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KICC",
+        "importer": "JINCHUAN GROUP",
+        "quantity": "9218.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUASHI MINING",
+        "importer": "JINCHUAN GROUP",
+        "quantity": "1007.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LCS",
+        "importer": "KINGSAIL",
+        "quantity": "63256.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "FRONTIER",
+        "importer": "KONKOLA COPPER",
+        "quantity": "26035.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MPC",
+        "importer": "LINK AFRICA",
+        "quantity": "7.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "KAI PENG",
+        "importer": "MAURITUIS NANKAI",
+        "quantity": "4302.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAI PENG",
+        "importer": "MAURITUIS NANKAI",
+        "quantity": "45372.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "THOMAS",
+        "importer": "MIND ID TRADING",
+        "quantity": "331.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "FRONTIER",
+        "importer": "MOPANI COPPER",
+        "quantity": "14385.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GECAMINES",
+        "importer": "MRI TRADE",
+        "quantity": "200.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "THOMAS",
+        "importer": "MRI TRADE",
+        "quantity": "3108.6"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "MM",
+        "importer": "NANJING HANRUI",
+        "quantity": "8701.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MM",
+        "importer": "NANJING HANRUI",
+        "quantity": "10213.5"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "CNMC CONGO",
+        "importer": "NEW SPREAD",
+        "quantity": "1173.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CNMC CONGO",
+        "importer": "NEW SPREAD",
+        "quantity": "17607.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN MABENDE",
+        "importer": "NEW SPREAD",
+        "quantity": "28936.2"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "HUACHIN METAL",
+        "importer": "NEW SPREAD",
+        "quantity": "1674.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN METAL",
+        "importer": "NEW SPREAD",
+        "quantity": "11770.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "KAMBOVE MINING",
+        "importer": "NEW SPREAD",
+        "quantity": "3364.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAMBOVE MINING",
+        "importer": "NEW SPREAD",
+        "quantity": "20011.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KICC",
+        "importer": "NEW SPREAD",
+        "quantity": "33835.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LCS",
+        "importer": "NEW SPREAD",
+        "quantity": "528.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "NEW MINERALS",
+        "importer": "NEW SPREAD",
+        "quantity": "434.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "SOMIDEZ",
+        "importer": "NEW SPREAD",
+        "quantity": "20523.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "SOMIDEZ",
+        "importer": "NEW SPREAD",
+        "quantity": "87228.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "NORIN",
+        "quantity": "9994.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMIKA",
+        "importer": "NORIN",
+        "quantity": "28392.4"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "LAMIKAL",
+        "importer": "NORIN",
+        "quantity": "13580.5"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LAMIKAL",
+        "importer": "NORIN",
+        "quantity": "36036.9"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUASHI MINING",
+        "importer": "NORIN",
+        "quantity": "158.3"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "OCTAGON COMMODITIES",
+        "quantity": "40846.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN METAL",
+        "importer": "OCTAGON COMMODITIES",
+        "quantity": "2587.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "OMR",
+        "importer": "OM METAL AND CHEMICALS FZC",
+        "quantity": "4953.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "PALSTAVE LIMITED",
+        "quantity": "136.1"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "SHITURU MINING",
+        "importer": "PENGXIN INTERNATIONAL GROUP",
+        "quantity": "5378.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "SHITURU MINING",
+        "importer": "PENGXIN INTERNATIONAL GROUP",
+        "quantity": "38369.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KICC",
+        "importer": "PGS LTD",
+        "quantity": "32.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "METALKOL",
+        "importer": "PGS LTD",
+        "quantity": "438.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "PGS LTD",
+        "quantity": "508.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "POLYTRA",
+        "quantity": "10905.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "CCR",
+        "importer": "PROSPEROUS ASCENT",
+        "quantity": "24400.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "RUASHI MINING",
+        "importer": "RAFFEMET PTE",
+        "quantity": "17231.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "FRONTIER",
+        "importer": "RELOAD LOGISTICS",
+        "quantity": "88022.8"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "METALKOL",
+        "importer": "RELOAD LOGISTICS",
+        "quantity": "16774.5"
+    },
+    {
+        "product": "Copper",
+        "exporter": "METALKOL",
+        "importer": "RELOAD LOGISTICS",
+        "quantity": "4734.5"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "TFM",
+        "importer": "RELOAD LOGISTICS",
+        "quantity": "34.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CJCMC",
+        "importer": "SAMSUNG",
+        "quantity": "14119.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "DIVINE LAND",
+        "importer": "SAMSUNG",
+        "quantity": "1856.9"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN MABENDE",
+        "importer": "SAMSUNG",
+        "quantity": "5964.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN METAL",
+        "importer": "SAMSUNG",
+        "quantity": "3374.2"
+    },
+    {
+        "product": "Copper",
+        "exporter": "NEW MINERALS",
+        "importer": "SAMSUNG",
+        "quantity": "204.4"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "CHEMAF",
+        "importer": "SHALINA RESOURCES",
+        "quantity": "13815.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "CHEMAF",
+        "importer": "SHALINA RESOURCES",
+        "quantity": "10524.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "SHANDONG HI-SPEED",
+        "quantity": "5202.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "SHANJING RUIPENG",
+        "quantity": "59605.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TFM",
+        "importer": "SMART LOGISTIC",
+        "quantity": "1761.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GECAMINES",
+        "importer": "SUB ROSA",
+        "quantity": "6560.7"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "COMIKA",
+        "importer": "SYLVERKEY DEVELOPMENT",
+        "quantity": "1388.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "ANVIL",
+        "importer": "TRAFIGURA",
+        "quantity": "11670.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMIKA",
+        "importer": "TRAFIGURA",
+        "quantity": "894.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "TRAFIGURA",
+        "quantity": "2527.1"
+    },
+    {
+        "product": "Copper",
+        "exporter": "DIVINE LAND",
+        "importer": "TRAFIGURA",
+        "quantity": "8571.9"
+    },
+    {
+        "product": "Copper",
+        "exporter": "GECAMINES",
+        "importer": "TRAFIGURA",
+        "quantity": "2579.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "HUACHIN METAL",
+        "importer": "TRAFIGURA",
+        "quantity": "5935.5"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KAMOA",
+        "importer": "TRAFIGURA",
+        "quantity": "79141.8"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KICC",
+        "importer": "TRAFIGURA",
+        "quantity": "28605.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "MMG",
+        "importer": "TRAFIGURA",
+        "quantity": "49837.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "NEW MINERALS",
+        "importer": "TRAFIGURA",
+        "quantity": "23910.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUASHI MINING",
+        "importer": "TRAFIGURA",
+        "quantity": "31689.4"
+    },
+    {
+        "product": "Copper",
+        "exporter": "THOMAS",
+        "importer": "TRAFIGURA",
+        "quantity": "2972.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "THOMAS",
+        "importer": "TRANSAMINE",
+        "quantity": "1538.6"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KATANGA STRATEGIC",
+        "importer": "TRASTEEL",
+        "quantity": "80.4"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "TCC",
+        "importer": "VICTOR INTERNATIONAL",
+        "quantity": "10078.7"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TCC",
+        "importer": "VICTOR INTERNATIONAL",
+        "quantity": "27669.9"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "KIMIN",
+        "importer": "VIN METAL",
+        "quantity": "11815.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "KIMIN",
+        "importer": "VIN METAL",
+        "quantity": "21696.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "SOMIKA",
+        "importer": "VIN METAL",
+        "quantity": "886.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "SOMIKA",
+        "importer": "VIN METAL",
+        "quantity": "33646.0"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "TFM",
+        "importer": "VS CARGO",
+        "quantity": "3244.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "TFM",
+        "importer": "VS CARGO",
+        "quantity": "4986.2"
+    },
+    {
+        "product": "Cobalt",
+        "exporter": "RUBAMIN",
+        "importer": "VULCANIS LLP",
+        "quantity": "3483.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "RUBAMIN",
+        "importer": "VULCANIS LLP",
+        "quantity": "15841.0"
+    },
+    {
+        "product": "Copper",
+        "exporter": "LCS",
+        "importer": "YUNNAM COPPER",
+        "quantity": "147.5"
+    },
+    {
+        "product": "Copper",
+        "exporter": "COMMUS",
+        "importer": "ZIJIN INTERNATIONAL",
+        "quantity": "19959.4"
+    }
+]
