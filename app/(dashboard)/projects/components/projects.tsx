@@ -92,7 +92,7 @@ export default function Projects({
       <div
         className={cn(
           "left-0 right-0 z-20 flex w-full flex-col-reverse gap-4 space-y-2 bg-background/50 py-2 backdrop-blur-md",
-          "dark:bg-neutral-900/50 sm:justify-between sm:py-4 lg:flex-row lg:space-y-0",
+          "top-0 dark:bg-neutral-900/50 sm:justify-between sm:py-4 lg:sticky lg:flex-row lg:space-y-0",
         )}
       >
         <h2 className="text-start text-h5 font-medium tracking-tight">
