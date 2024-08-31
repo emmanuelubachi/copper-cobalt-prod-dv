@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <BigSideNav />
           </div>
 
-          <div className="bg-gradient-to-tl from-red-200/50 via-blue-50/50 to-white dark:from-red-800/5 dark:via-blue-900/5 dark:to-neutral-900">
+          <div className="bg-gradient-to-tl from-red-500/5 via-blue-400/5 to-white dark:from-red-800/5 dark:via-blue-900/5 dark:to-neutral-900">
             {children}
           </div>
 

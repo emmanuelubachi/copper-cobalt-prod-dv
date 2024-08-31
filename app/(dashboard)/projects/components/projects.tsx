@@ -139,6 +139,7 @@ export default function Projects({
           {/* Destination */}
           <div className="grid grid-cols-1 gap-4">
             {destinationData.length > 0 &&
+              projectData &&
               projectData.latitude &&
               projectData.longitude && (
                 <SiteMap
