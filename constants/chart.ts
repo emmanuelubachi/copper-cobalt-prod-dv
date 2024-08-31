@@ -9,6 +9,20 @@ export const monthlyProdChartConfig = {
   },
 };
 
+export const coMonthlyXConfig = {
+  quantity: {
+    label: "Cobalt",
+    color: "hsl(var(--chart-6))",
+  },
+};
+
+export const cuMonthlyXConfig = {
+  quantity: {
+    label: "Copper",
+    color: "hsl(var(--chart-5))",
+  },
+};
+
 export const coDestChartConfig = {
   quantity_tons: {
     label: `Qty (T) ${" "}`,

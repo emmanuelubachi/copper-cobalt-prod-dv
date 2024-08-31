@@ -1,20 +1,17 @@
 import { fetchData } from "@/lib/fetchData";
-import IndustrialProjectsData from "@/data/projects/industrial_projects.json";
-
 import { redirect } from "next/navigation";
+
 import Projects from "./components/projects";
-import { SearchParams } from "@/types";
 import ErrorNotification from "@/components/elements/notification";
-import ProductCompositionData from "@/data/projects/product_composition.json";
+
+import IndustrialProjectsData from "@/data/projects/industrial_projects.json";
+import MonthlyExportsData from "@/data/projects/projects_monthly_exports.json";
 import ProductCompositionDestinationData from "@/data/projects/product_composition_destination.json";
 
-// import totalProductionData from "@/data/projects/totals_production_quantity_by_projects_&_type.json";
-import montlyProductionData from "@/data/map/2023 Industrial Projects Monthly cobalt-copper Production - origin Statistiques M.json";
-import cobaltDestinationData from "@/data/map/2023 cobalt production destination - origin situation des.json";
-import copperDestinationData from "@/data/map/2023 copper production destination - origin situation des.json";
+import { SearchParams } from "@/types";
+import { ProjectDataProps } from "@/types/projects";
 
 import { defaultPRoject } from "@/constants/application";
-import { ProjectDataProps } from "@/types/projects";
 
 export default async function Page({
   searchParams,
@@ -52,6 +49,11 @@ export default async function Page({
     new Set(productData.map((item) => item.year)),
   ).sort((a, b) => parseInt(a) - parseInt(b));
 
+  // Filter monthly export data for the current project
+  const monthlyExportsData = MonthlyExportsData.filter(
+    (d) => d._project_id === projectInfo._project_id,
+  );
+
   return (
     <>
       <ErrorNotification errorType={errorType} />
@@ -60,9 +62,7 @@ export default async function Page({
         projectData={projectData as unknown as ProjectDataProps}
         productData={productData}
         productionYears={productionYears}
-        montlyProductionData={montlyProductionData}
-        cobaltDestinationData={cobaltDestinationData}
-        copperDestinationData={copperDestinationData}
+        monthlyExportData={monthlyExportsData}
       />
     </>
   );

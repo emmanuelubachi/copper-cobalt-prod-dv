@@ -12,7 +12,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components//ui/chart";
-import { quantityFormatter } from "@/lib/utils";
 
 export default function KPIChart({
   data,

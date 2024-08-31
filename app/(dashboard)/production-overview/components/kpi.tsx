@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { DollarSign, DollarSignIcon, WeightIcon } from "lucide-react";
+import { DollarSign, WeightIcon } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import KPIChart from "./kpi-trend-chart";
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
