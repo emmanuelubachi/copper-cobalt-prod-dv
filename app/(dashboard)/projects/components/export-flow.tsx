@@ -1258,7 +1258,7 @@ export default function ExportFlow() {
 
   return (
     <section className="space-y-4">
-      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 bg-background/50 py-4 backdrop-blur-md dark:bg-neutral-900/50 lg:flex lg:space-y-0">
+      <div className="left-0 right-0 z-20 items-center justify-between gap-6 space-y-4 py-4 lg:flex lg:space-y-0">
         <h2 className="text-center text-h5 font-medium tracking-tight lg:text-start">
           Export Flow
         </h2>
