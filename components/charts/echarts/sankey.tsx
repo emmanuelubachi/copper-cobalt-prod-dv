@@ -1,8 +1,12 @@
 "use client";
 import React from "react";
 import ReactEcharts from "echarts-for-react";
+import { useTheme } from "next-themes";
 
 export default function SankeyChart({ data }: any) {
+  const { theme } = useTheme();
+  const isDarkMode = theme === "dark";
+
   console.log("sankey data", data);
   return (
     <ReactEcharts
@@ -38,7 +42,7 @@ export default function SankeyChart({ data }: any) {
           borderColor: "#1f77b4",
         },
         label: {
-          color: "rgba(0,0,0,0.7)",
+          color: isDarkMode ? "#ffffff" : "rgba(0,0,0,0.7)",
           fontFamily: "Arial",
           fontSize: 10,
         },
