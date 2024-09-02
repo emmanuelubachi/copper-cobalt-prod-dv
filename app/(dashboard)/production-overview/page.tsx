@@ -7,7 +7,6 @@ import TopDestinations from "./components/top-destinations";
 import ProductionExports from "./components/production-exports";
 
 import { Years } from "@/data/chartData";
-
 import kpiData from "@/data/overview/kpi_data.json";
 import trendData from "@/data/overview/kpitrend_year_data.json";
 import historyByExporterData from "@/data/overview/exports_history_by_exporter_data_2015-2022.json";
@@ -20,61 +19,17 @@ import {
 } from "@/lib/dataProcessing";
 import ExportTable from "./components/export-table";
 import { ShareButton } from "@/components/elements/shareButton";
-
-export type kpiTrendProps = {
-  date: string;
-  quantity: number;
-  transaction: number;
-  product: string;
-}[];
-type xhistoryProps = {
-  exporter: string;
-  quantity: number;
-};
-
-export type OverviewDestinationSummary = {
-  short_destination: string;
-  long_destination: string;
-  quantity: number;
-  transaction: number;
-};
-
-export type quantityTrendProps = {
-  date: string;
-  quantity: number;
-  product: string;
-}[];
-
-export type transactionTrendProps = {
-  date: string;
-  transaction: number;
-  product: string;
-}[];
-
-export type InputData = {
-  date: string;
-  quantity?: string;
-  transaction?: string;
-  product: string;
-}[];
-
-export type TransformedData = {
-  date: string;
-  Cobalt?: number;
-  Copper?: number;
-}[];
-
-export type xShareDataProps = {
-  product: string;
-  exporter: string;
-  quantity: number;
-  quantity_percent: number;
-  transaction: number;
-  transaction_percent: number;
-}[];
+import {
+  InputData,
+  kpiTrendProps,
+  OverviewDestinationSummary,
+  TransformedData,
+  xhistoryProps,
+  xShareDataProps,
+} from "@/types/overview";
 
 export default function Dashboard() {
-  const [selectedYear, setSelectedYear] = useState<string>("2022");
+  const [selectedYear, setSelectedYear] = useState<string>("2023");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coXhistory, setCoXhistory] = useState<xhistoryProps[]>([]);
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);

@@ -1,5 +1,5 @@
 import CustomLabelBarChart from "@/components/charts/shadcn/bar-chart/custom-label-bar-chart";
-// import { coDestSumChartConfig, cuDestSumChartConfig } from "@/constants/chart";
+
 const coDestSumChartConfig = {
   quantity: {
     label: `Qty (T) ${" "}`,
