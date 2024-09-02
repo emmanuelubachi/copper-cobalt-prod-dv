@@ -28,7 +28,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { xShareDataProps } from "../page";
+import { xShareDataProps } from "@/types/overview";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { floatFormatter, quantityFormatter } from "@/lib/utils";
 import ProductToggle from "@/components/product-toggle";

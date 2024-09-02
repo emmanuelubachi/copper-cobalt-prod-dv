@@ -1,12 +1,11 @@
 "use client";
 import { useMemo } from "react";
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { DollarSign, WeightIcon } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import KPIChart from "./kpi-trend-chart";
 import { currencyFormatter, quantityFormatter } from "@/lib/utils";
-import { kpiTrendProps } from "../page";
+import { kpiTrendProps } from "@/types/overview";
 import useDeviceType from "@/hooks/useDeviceType";
 
 type kpiDataProp = {
