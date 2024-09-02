@@ -29,7 +29,7 @@ import {
 } from "@/types/overview";
 
 export default function Dashboard() {
-  const [selectedYear, setSelectedYear] = useState<string>("2022");
+  const [selectedYear, setSelectedYear] = useState<string>("2023");
   const [kpi, setKpi] = useState<typeof kpiData>([]);
   const [coXhistory, setCoXhistory] = useState<xhistoryProps[]>([]);
   const [cuXhistory, setCuXhistory] = useState<xhistoryProps[]>([]);

@@ -94,5 +94,17 @@
     "quantity": "2897018.2",
     "transaction": "19999495967",
     "product": "Copper"
+  },
+  {
+    "date": "2023",
+    "quantity": "139840.09",
+    "transaction": "0",
+    "product": "Cobalt"
+  },
+  {
+    "date": "2023",
+    "quantity": "2842021.882",
+    "transaction": "0",
+    "product": "Copper"
   }
 ]

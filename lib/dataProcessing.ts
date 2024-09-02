@@ -266,7 +266,7 @@ export function calculateDestinationSums(
     );
 }
 
-import { OverviewDestinationSummary } from "@/app/(dashboard)/production-overview/page";
+import { OverviewDestinationSummary } from "@/types/overview";
 export function summarizeDestinations(
   data: OverviewDestinationSummary[],
   sortBy?: "quantity" | "transaction",
@@ -295,10 +295,7 @@ export function summarizeDestinations(
   return summarizedData;
 }
 
-import {
-  InputData,
-  TransformedData,
-} from "@/app/(dashboard)/production-overview/page";
+import { InputData, TransformedData } from "@/types/overview";
 export function transformTrendData(data: InputData): TransformedData {
   const result: TransformedData = [];
 
