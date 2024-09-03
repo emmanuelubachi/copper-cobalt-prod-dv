@@ -27,7 +27,7 @@ export default function SankeyChart({ data }: any) {
             },
             left: 50.0,
             top: 20.0,
-            right: 150.0,
+            right: 80.0,
             bottom: 25.0,
             data: data[0].data,
             links: data[1].links,
@@ -44,7 +44,7 @@ export default function SankeyChart({ data }: any) {
         label: {
           color: isDarkMode ? "#ffffff" : "rgba(0,0,0,0.7)",
           fontFamily: "Arial",
-          fontSize: 10,
+          fontSize: 8,
         },
       }}
     />
