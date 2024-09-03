@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import ProductToggle from "@/components/product-toggle";
 import SankeyChart from "@/components/charts/echarts/sankey";
 import { CardContent, Card, CardHeader } from "@/components/ui/card";
-import YearToggle from "@/components/year-toggle";
 
 export default function ExportFlow({
   data,

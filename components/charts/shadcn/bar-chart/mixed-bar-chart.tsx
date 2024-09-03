@@ -1,13 +1,11 @@
 "use client";
 
 import { ReactNode } from "react";
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, XAxis, YAxis } from "recharts";
 
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -18,14 +16,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-// const chartData = [
-//   { month: "South\u00A0Africa", cobalt: 186, copper: 80 },
-//   { month: "United\u00A0States", cobalt: 305, copper: 200 },
-//   { month: "Angola", cobalt: 237, copper: 120 },
-//   { month: "Tanzania", cobalt: 73, copper: 190 },
-//   { month: "Nigeria", cobalt: 209, copper: 130 },
-//   { month: "Botswana", cobalt: 214, copper: 140 },
-// ];
 
 type MixedBarChartProps = {
   title: string;

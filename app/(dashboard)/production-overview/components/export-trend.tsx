@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { LegendAreaChart } from "@/components/charts/shadcn/area-chart/legend-area-chart";
-// import { exportTrendChartConfig } from "@/constants/chart";
 
 export const exportTrendChartConfig = {
   Cobalt: {

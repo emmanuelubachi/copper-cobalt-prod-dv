@@ -13,7 +13,7 @@ import YearToggle from "@/components/year-toggle";
 import { Years } from "@/data/chartData";
 import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
 import SearchBarDialog from "@/components/elements/searchBar";
-import { CompaniesList, TreemapData } from "@/constants/application";
+import { CompaniesList } from "@/constants/application";
 import { treeMapChartConfig } from "@/constants/chart";
 import { transformProdDesData } from "@/lib/dataProcessing";
 import ProjectDetails from "./project-details";

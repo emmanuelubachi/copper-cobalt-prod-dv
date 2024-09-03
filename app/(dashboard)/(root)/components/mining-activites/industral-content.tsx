@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import Map from "react-map-gl";
-import { ArrowUpRight, TrendingUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import useMapDetailsStore from "@/store/mapDetailsStore";
 import useFilterStore from "@/store/filterStore";
@@ -16,7 +16,6 @@ import { IndustralProjectDetailsProps } from "@/types/map";
 import {
   calculateYearlySums,
   transformMonthlyData,
-  // transformDestinationData,
   transformSortTopDestination,
 } from "@/lib/dataProcessing";
 
