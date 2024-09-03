@@ -1,14 +1,7 @@
 "use client";
 import { ReactNode } from "react";
 
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  LabelList,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -24,12 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import {
-  cn,
-  numberFormatter,
-  quantityFormatter,
-  quantityFormatterT,
-} from "@/lib/utils";
+import { cn, numberFormatter } from "@/lib/utils";
 
 type CustomLabelBarChartProps = {
   title: string;

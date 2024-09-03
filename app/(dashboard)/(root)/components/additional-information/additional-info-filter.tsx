@@ -1,8 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import useMarkerVisibilityStore from "@/store/markerVisibilityStore";
 import { Toggle } from "@/components/ui/toggle";
-import { Map } from "lucide-react";
 
 export function ProcessingEntities() {
   const { isProcessingEntiteMarkerVisible, toggleProcessingEntiteMarkers } =

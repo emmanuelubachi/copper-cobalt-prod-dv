@@ -4,7 +4,6 @@ import { Treemap, ResponsiveContainer, Tooltip, Legend } from "recharts";
 import {
   cn,
   currencyFormatter,
-  numberFormatter,
   quantityFormatter,
   quantityFormatterT,
 } from "@/lib/utils";

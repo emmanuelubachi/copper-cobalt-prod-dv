@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Years } from "@/data/chartData";
-import YearToggle from "@/components/year-toggle";
+
 import { ProjectInfo } from "@/types";
 
 /**

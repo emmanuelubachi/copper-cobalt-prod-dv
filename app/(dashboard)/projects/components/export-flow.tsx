@@ -4,6 +4,11 @@ import ProductToggle from "@/components/product-toggle";
 import SankeyChart from "@/components/charts/echarts/sankey";
 import { CardContent, Card, CardHeader } from "@/components/ui/card";
 import YearToggle from "@/components/year-toggle";
+import useDeviceType from "@/hooks/useDeviceType";
+
+function shortenText(text: string): string {
+  return text.split(" ")[0];
+}
 
 export default function ExportFlow({
   data,
@@ -12,24 +17,27 @@ export default function ExportFlow({
   data: any[];
   data2: any[];
 }) {
-  const [selectedYear, setSelectedYear] = useState<string>("2022");
+  const { isMobile, isTablet } = useDeviceType();
+  const [selectedYear, setSelectedYear] = useState<string>("2023");
   const [selectedProduct, setSelectedProduct] = useState<string>("Cobalt");
 
   const years = ["2022", "2023"];
 
   const exportFlowData = data
+    .filter((d) => d.year === selectedYear)
     .filter((d) => d.product === selectedProduct)
     .map((d) => ({
-      source: d.exporter,
-      target: d.importer,
+      source: isTablet || isMobile ? d._project_id : d.project,
+      target: isTablet || isMobile ? shortenText(d.importer) : d.importer,
       value: parseFloat(d.quantity),
     }));
   // .sort((a, b) => b.value - a.value); // Sort by quantity descending
 
   const importerFlowData = data2
+    .filter((d) => d.year === selectedYear)
     .filter((d) => d.product === selectedProduct)
     .map((d) => ({
-      source: d.importer,
+      source: isTablet || isMobile ? shortenText(d.importer) : d.importer,
       target: d.destination,
       value: parseFloat(d.quantity),
     }))
@@ -87,11 +95,11 @@ export default function ExportFlow({
           {`${selectedYear} Export Flows`}
         </h2>
         <div>
-          {/* <YearToggle
+          <YearToggle
             years={years}
             value={selectedYear}
             onChangeFunction={setSelectedYear}
-          /> */}
+          />
         </div>
       </div>
 

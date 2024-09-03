@@ -24,12 +24,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import {
-  numberFormatter,
-  quantityFormatter,
-  quantityFormatterT,
-} from "@/lib/utils";
-import { Divide } from "lucide-react";
+import { numberFormatter } from "@/lib/utils";
 
 type LegendAreaChartProps = {
   title?: string;

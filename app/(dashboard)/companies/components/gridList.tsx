@@ -7,7 +7,6 @@ import { ArrowUpRight } from "lucide-react";
 import useFilterStore from "@/store/filterStore";
 
 import { Separator } from "@/components/ui/separator";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { CompaniesListProps } from "@/types/projects";
 
 type FlagProps = {
@@ -22,7 +21,7 @@ const Flag = ({ countryCode }: FlagProps) => {
 export default function GridList({ data }: { data: CompaniesListProps }) {
   const { closeFilter } = useFilterStore();
 
-  const [selectedGroup, setSelectedGroup] = React.useState("Country");
+  // const [selectedGroup, setSelectedGroup] = React.useState("Country");
 
   return (
     <div className="space-y-2">
