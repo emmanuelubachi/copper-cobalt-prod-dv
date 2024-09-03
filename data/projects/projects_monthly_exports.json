@@ -36246,5 +36246,6325 @@
     "product": "Copper",
     "quantity": "644.8",
     "transaction": "3643153.0"
+  },
+  {
+    "_project_id": "amical",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "112.0",
+    "transaction": "108842.72"
+  },
+  {
+    "_project_id": "amical",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "99.0",
+    "transaction": "260043.3"
+  },
+  {
+    "_project_id": "amical",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "400.0",
+    "transaction": "388000.0"
+  },
+  {
+    "_project_id": "anvil",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "954.379",
+    "transaction": "7849850.3821"
+  },
+  {
+    "_project_id": "anvil",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "477.812",
+    "transaction": "3755604.5845"
+  },
+  {
+    "_project_id": "anvil",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "355.41",
+    "transaction": "2730678.972"
+  },
+  {
+    "_project_id": "anvil",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "901.594",
+    "transaction": "7516180.2154"
+  },
+  {
+    "_project_id": "anvil",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "323.876",
+    "transaction": "2658152.1233"
+  },
+  {
+    "_project_id": "boss",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "475.93100000000004",
+    "transaction": "4204698.087"
+  },
+  {
+    "_project_id": "boss",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1520.808",
+    "transaction": "13617923.155"
+  },
+  {
+    "_project_id": "boss",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "651.887",
+    "transaction": "5746768.5191"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "545.704",
+    "transaction": "3097121.8186999997"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "4136.1269999999995",
+    "transaction": "36541358.4846"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "423.46299999999997",
+    "transaction": "2342530.9836"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "4724.373",
+    "transaction": "39885708.0278"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "194.954",
+    "transaction": "1251540.0254"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "5109.148",
+    "transaction": "41759518.9963"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "2768.886",
+    "transaction": "26888955.8739"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "5521.49",
+    "transaction": "49560397.3052"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "1863.793",
+    "transaction": "27510487.7883"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "5500.38",
+    "transaction": "45991337.6086"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "522.622",
+    "transaction": "2554665.8142"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3164.627",
+    "transaction": "26537169.5852"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "816.953",
+    "transaction": "4577396.473499999"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "5927.8279999999995",
+    "transaction": "48920052.6311"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "926.95",
+    "transaction": "5812823.732"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "5363.116",
+    "transaction": "48023485.9088"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "614.177",
+    "transaction": "3554947.7429"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "5050.664",
+    "transaction": "44524583.0533"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "723.8439999999999",
+    "transaction": "4643871.8511"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "4197.856",
+    "transaction": "33327786.2688"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "166.914",
+    "transaction": "1070836.6735"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "6980.908",
+    "transaction": "57733435.5326"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "423.516",
+    "transaction": "2716941.3170000003"
+  },
+  {
+    "_project_id": "ccr",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "4739.426",
+    "transaction": "39587287.9149"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "880.637",
+    "transaction": "3690849.1805000002"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "4124.377",
+    "transaction": "36437550.9953"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "976.923",
+    "transaction": "5196340.3836"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "5550.114",
+    "transaction": "46836634.9115"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "567.889",
+    "transaction": "3146835.3384"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3429.223",
+    "transaction": "28028685.6046"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "335.274",
+    "transaction": "2157065.7448"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "4272.727",
+    "transaction": "38351613.007"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "403.707",
+    "transaction": "2741837.4673"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2902.233",
+    "transaction": "23331497.0026"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "824.255",
+    "transaction": "3201326.5552"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "5517.807",
+    "transaction": "46269901.6685"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "841.619",
+    "transaction": "3855304.0888"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "4146.992",
+    "transaction": "34223507.649"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "288.81",
+    "transaction": "1414588.8587"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "4030.255",
+    "transaction": "36088582.9057"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "1042.287",
+    "transaction": "4638187.317600001"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "5790.414",
+    "transaction": "51055440.8822"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "5252.6482",
+    "transaction": "41702036.678"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "25.75",
+    "transaction": "136963.5548"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2123.546",
+    "transaction": "17562128.8952"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "303.786",
+    "transaction": "1615754.0618"
+  },
+  {
+    "_project_id": "cdm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2469.667",
+    "transaction": "20628535.7315"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "362.382",
+    "transaction": "2385267.901"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1630.0",
+    "transaction": "14400528.4"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "761.772",
+    "transaction": "4933540.8694"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "865.0",
+    "transaction": "7302797.100000001"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "838.445",
+    "transaction": "5382538.537"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1700.0",
+    "transaction": "13894916.0"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "512.785",
+    "transaction": "5068601.3100000005"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "855.0",
+    "transaction": "7674403.05"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "276.78999999999996",
+    "transaction": "2978807.682"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1260.0",
+    "transaction": "10535452.2"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "381.867",
+    "transaction": "1866630.9408"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1762.5",
+    "transaction": "14779549.5"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "217.949",
+    "transaction": "1517430.9"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1927.5",
+    "transaction": "15906905.774999999"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "210.12",
+    "transaction": "1317644.0341"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1165.0",
+    "transaction": "10431876.0"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "980.634",
+    "transaction": "6582880.327"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1295.0",
+    "transaction": "11416189.05"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "452.53599999999994",
+    "transaction": "3006980.6244"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "900.0",
+    "transaction": "7145316.0"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "796.248",
+    "transaction": "5232132.9576"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1660.0",
+    "transaction": "13728515.4"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "438.619",
+    "transaction": "2813829.925"
+  },
+  {
+    "_project_id": "chemaf",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1740.0",
+    "transaction": "14533802.4"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1063.444",
+    "transaction": "9395187.438099999"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1092.683",
+    "transaction": "9225019.9354"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "795.542",
+    "transaction": "6502346.6262"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1421.229",
+    "transaction": "12756823.5944"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2137.1530000000002",
+    "transaction": "17869740.6945"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1648.256",
+    "transaction": "13821549.5821"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1530.0149999999999",
+    "transaction": "12626617.0885"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1195.884",
+    "transaction": "10708423.6896"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1716.796",
+    "transaction": "15134569.6494"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "1493.5059999999999",
+    "transaction": "11857302.5753"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1512.197",
+    "transaction": "12506156.5077"
+  },
+  {
+    "_project_id": "cjcmc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2089.086",
+    "transaction": "17449633.9779"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1772.9279999999999",
+    "transaction": "15663251.543000001"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2374.158",
+    "transaction": "20043923.88"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1115.468",
+    "transaction": "9117255.3882"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1714.3329999999999",
+    "transaction": "15387698.718999999"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1262.182",
+    "transaction": "10553696.928"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1408.3490000000002",
+    "transaction": "11809795.0407"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1773.627",
+    "transaction": "14637051.9173"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1463.67",
+    "transaction": "13106302.641199999"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "305.991",
+    "transaction": "2697491.2"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "1820.8690000000001",
+    "transaction": "14456315.9987"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1547.252",
+    "transaction": "12796068.0185"
+  },
+  {
+    "_project_id": "cnmc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1466.806",
+    "transaction": "12251878.485"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "981.654",
+    "transaction": "6813444.0842"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3037.336",
+    "transaction": "26833891.6125"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "400.851",
+    "transaction": "2571715.7095999997"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3093.957",
+    "transaction": "26120855.732"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "716.546",
+    "transaction": "4599988.1925"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3538.058",
+    "transaction": "28918246.3016"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "1258.395",
+    "transaction": "14720328.2615"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "5996.118",
+    "transaction": "53820615.5182"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "671.867",
+    "transaction": "8263560.98"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1410.929",
+    "transaction": "11797440.505"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3350.998",
+    "transaction": "28092565.6741"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3258.837",
+    "transaction": "26979017.627499998"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "1984.522",
+    "transaction": "17283941.7755"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2960.995",
+    "transaction": "26513933.6272"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "548.589",
+    "transaction": "3720004.9688999997"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "784.251",
+    "transaction": "6913635.2728"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "1372.393",
+    "transaction": "8804655.2862"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3720.263",
+    "transaction": "29536060.8212"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "2184.87",
+    "transaction": "14017031.3007"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "5182.379",
+    "transaction": "42859258.9818"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "847.141",
+    "transaction": "5434581.4851"
+  },
+  {
+    "_project_id": "comika",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2878.275",
+    "transaction": "24041540.289"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "65.856",
+    "transaction": "473166.7987"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1450.545",
+    "transaction": "12815100.9014"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "400.139",
+    "transaction": "2860976.0331"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1981.124",
+    "transaction": "16725718.6158"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1946.554",
+    "transaction": "15910120.1866"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "306.344",
+    "transaction": "3624766.2457"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "3558.796",
+    "transaction": "31943432.6029"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2162.04",
+    "transaction": "18077832.5987"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2869.175",
+    "transaction": "24059639.1133"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2117.467",
+    "transaction": "17474629.3384"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "193.0",
+    "transaction": "1657853.8817"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2712.852",
+    "transaction": "24291961.9476"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2677.593",
+    "transaction": "23604562.0752"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2524.857",
+    "transaction": "20045445.6882"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4050.978",
+    "transaction": "33502357.7468"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "777.1",
+    "transaction": "6322004.2907"
+  },
+  {
+    "_project_id": "comilu",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "4188.909",
+    "transaction": "34988951.5386"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "92.219",
+    "transaction": "857602.3019000001"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "11182.3920074",
+    "transaction": "86715403.5724"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "1219.067",
+    "transaction": "10162827.7613"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "13313.7587878",
+    "transaction": "101068987.45561"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "807.519",
+    "transaction": "7111789.8379"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "12414.3922373",
+    "transaction": "79899019.2114"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "249.46800000000002",
+    "transaction": "3100590.2857999997"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "9217.3601186",
+    "transaction": "70734135.13578"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "547.339",
+    "transaction": "7360784.452"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "7592.96671209",
+    "transaction": "57364769.61859"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "1966.276",
+    "transaction": "13724954.7709"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "9357.1405163",
+    "transaction": "70491315.3767"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "122.388",
+    "transaction": "1068406.9627999999"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "12673.8779253",
+    "transaction": "89481344.1369"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "547.749",
+    "transaction": "5442256.76"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "16609.8262131",
+    "transaction": "122512203.99907"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "13182.627709800001",
+    "transaction": "101378242.7307"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "365.136",
+    "transaction": "3442122.4665"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "15567.0188029",
+    "transaction": "108566171.85719"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "838.764",
+    "transaction": "7786173.2512"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "9886.6187124",
+    "transaction": "65675850.23675"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "439.342",
+    "transaction": "4063345.8942"
+  },
+  {
+    "_project_id": "commus",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "11634.5322938",
+    "transaction": "83762201.0442"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1229.988",
+    "transaction": "10866550.384200001"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1392.988",
+    "transaction": "11760356.9083"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "929.0",
+    "transaction": "7593162.92"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "905.475",
+    "transaction": "8127462.1069"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "738.482",
+    "transaction": "6174795.0885"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1434.985",
+    "transaction": "12033152.8163"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "886.973",
+    "transaction": "7319842.2496"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1095.984",
+    "transaction": "9813879.1304"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "402.996",
+    "transaction": "3552647.5076"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "723.989",
+    "transaction": "5747922.427999999"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1462.488",
+    "transaction": "12095053.6338"
+  },
+  {
+    "_project_id": "divine",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "808.996",
+    "transaction": "6757347.3486"
+  },
+  {
+    "_project_id": "everbright",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "4631.5",
+    "transaction": "13298291.64"
+  },
+  {
+    "_project_id": "everbright",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "8578.8",
+    "transaction": "23538768.8"
+  },
+  {
+    "_project_id": "everbright",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2705.1",
+    "transaction": "7372236.081"
+  },
+  {
+    "_project_id": "everbright",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "109.4",
+    "transaction": "188084.856"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2603.52",
+    "transaction": "23001266.0738"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2628.936",
+    "transaction": "22194897.3375"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "361.92",
+    "transaction": "1926293.5037"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2482.588",
+    "transaction": "20291383.365"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2870.858",
+    "transaction": "25768563.030700002"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "3174.7929999999997",
+    "transaction": "26545936.425"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "4564.649",
+    "transaction": "38277138.0691"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1758.846",
+    "transaction": "14515070.088"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "3556.634",
+    "transaction": "31851553.174"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3446.386",
+    "transaction": "30381925.9571"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "465.991",
+    "transaction": "2478620.5746"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2257.786",
+    "transaction": "17935699.0174"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "367.471",
+    "transaction": "1954545.0016"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2531.929",
+    "transaction": "20939533.8973"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "494.885",
+    "transaction": "2632159.6961000003"
+  },
+  {
+    "_project_id": "excellen",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3258.886",
+    "transaction": "27220692.6254"
+  },
+  {
+    "_project_id": "frontier",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "5529.6",
+    "transaction": "10996273.15"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "570.984",
+    "transaction": "5044460.9251"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "369.06",
+    "transaction": "3115803.8126"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1239.0430000000001",
+    "transaction": "10127293.1797"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "844.587",
+    "transaction": "7580936.8987"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "272.131",
+    "transaction": "2275415.1927"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "204.037",
+    "transaction": "1710964.5053"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1205.826",
+    "transaction": "10104850.6371"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "262.331",
+    "transaction": "2349016.7064"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "283.976",
+    "transaction": "2503415.9855000004"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "276.099",
+    "transaction": "2192016.2247"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "392.491",
+    "transaction": "3245975.1426"
+  },
+  {
+    "_project_id": "gcm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "395.649",
+    "transaction": "3304761.1412"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "635.0",
+    "transaction": "5664085.55"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "394.0",
+    "transaction": "3326360.76"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "554.0",
+    "transaction": "4528107.92"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "750.0",
+    "transaction": "6731932.5"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "405.0",
+    "transaction": "3386395.35"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "820.0",
+    "transaction": "6876159.2"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "563.0",
+    "transaction": "4646219.43"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "730.0",
+    "transaction": "6536712.0"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "864.0",
+    "transaction": "7616669.76"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "908.0",
+    "transaction": "7208829.92"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "868.0",
+    "transaction": "7178524.92"
+  },
+  {
+    "_project_id": "golden",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "869.0",
+    "transaction": "7258548.44"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "1376.645",
+    "transaction": "7212087.8142"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2462.763",
+    "transaction": "21757723.0214"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "139.709",
+    "transaction": "896322.727"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2352.072",
+    "transaction": "19857461.9418"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "782.369",
+    "transaction": "5022549.5153"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2039.9959999999999",
+    "transaction": "16673866.5067"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "770.0740000000001",
+    "transaction": "5855263.1113"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2041.17",
+    "transaction": "18321358.2152"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "1559.169",
+    "transaction": "12549248.1811"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "3793.306",
+    "transaction": "31717781.5524"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "504.30156",
+    "transaction": "2825059.4231000002"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2039.484",
+    "transaction": "17102215.4519"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "439.356",
+    "transaction": "2272353.6081"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2005.121",
+    "transaction": "16547481.6154"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "558.113",
+    "transaction": "3230657.1925999997"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2814.67",
+    "transaction": "25203681.0458"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "790.8389999999999",
+    "transaction": "4225378.7546"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2400.255",
+    "transaction": "21159663.9754"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "55.884",
+    "transaction": "358527.7138"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2291.791",
+    "transaction": "18226479.6457"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4185.032",
+    "transaction": "34611009.7948"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "670.6030000000001",
+    "transaction": "4302054.6997"
+  },
+  {
+    "_project_id": "hmc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3452.153",
+    "transaction": "28835005.4925"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2996.954",
+    "transaction": "26477129.5633"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3623.0365",
+    "transaction": "30587630.5709"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2271.7165",
+    "transaction": "18567829.3789"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "3453.7489",
+    "transaction": "31000539.29"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2643.2237999999998",
+    "transaction": "22101236.5064"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3025.3903",
+    "transaction": "25369591.8847"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2585.5214",
+    "transaction": "21337299.7617"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "3678.7038000000002",
+    "transaction": "32940585.3053"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3213.6622",
+    "transaction": "28330328.353"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3043.4210000000003",
+    "transaction": "24162449.740000002"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2958.2832",
+    "transaction": "24465564.1387"
+  },
+  {
+    "_project_id": "huachin_mabende",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3085.0197",
+    "transaction": "25768429.149"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1651.2998",
+    "transaction": "14588705.3173"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1742.4912",
+    "transaction": "14711051.656299999"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "257.65999999999997",
+    "transaction": "1371377.079"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1317.405",
+    "transaction": "10767783.419100001"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1996.5837999999999",
+    "transaction": "17921156.496"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "186.84",
+    "transaction": "1149009.948"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1421.8229000000001",
+    "transaction": "11888529.524"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1450.6806000000001",
+    "transaction": "12164769.2118"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "277.912",
+    "transaction": "1216231.7255"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "836.6548",
+    "transaction": "6904585.768999999"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "365.762",
+    "transaction": "1628635.773"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2410.197",
+    "transaction": "21581868.016000003"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2588.9372",
+    "transaction": "22823008.8917"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "88.393",
+    "transaction": "470165.1337"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "1371.8700000000001",
+    "transaction": "10891605.1776"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2142.4872",
+    "transaction": "17718776.217"
+  },
+  {
+    "_project_id": "huachin_metal",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2263.9542",
+    "transaction": "18910266.0839"
+  },
+  {
+    "_project_id": "jxcom",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "576.251",
+    "transaction": "4709976.0238"
+  },
+  {
+    "_project_id": "jxcom",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "309.47299999999996",
+    "transaction": "2456980.4207"
+  },
+  {
+    "_project_id": "jxcom",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1023.607",
+    "transaction": "8465424.3747"
+  },
+  {
+    "_project_id": "jxcom",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "56.299",
+    "transaction": "470252.0352"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "4455.434",
+    "transaction": "39647172.6245"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2874.989",
+    "transaction": "24330108.5009"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2943.886",
+    "transaction": "24665374.276"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "3240.892",
+    "transaction": "29270561.1038"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "34.909",
+    "transaction": "214713.3899"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "4363.452",
+    "transaction": "38781499.9701"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3804.5",
+    "transaction": "32116785.4766"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "4219.508",
+    "transaction": "35900661.3637"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "4256.327",
+    "transaction": "38124663.1774"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "4595.534",
+    "transaction": "40523034.4708"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3533.984",
+    "transaction": "28858374.0128"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4403.052",
+    "transaction": "36475426.2124"
+  },
+  {
+    "_project_id": "kaipeng",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "5774.014",
+    "transaction": "48460989.1432"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "96.714",
+    "transaction": "854437.2415"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "1451.794",
+    "transaction": "9314106.1521"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2688.612",
+    "transaction": "22698714.3544"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "1050.675",
+    "transaction": "6744985.0548"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "4576.252",
+    "transaction": "37403904.1964"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "1690.781",
+    "transaction": "9585243.1555"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "4110.805",
+    "transaction": "34471401.9759"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "5222.503",
+    "transaction": "43099280.482"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "5157.294",
+    "transaction": "45464589.4142"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "3214.937",
+    "transaction": "20625653.3693"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "4552.8910000000005",
+    "transaction": "36146494.3416"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "1507.805",
+    "transaction": "9673322.1336"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4179.374",
+    "transaction": "34564217.0606"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "2713.634",
+    "transaction": "17408514.279600002"
+  },
+  {
+    "_project_id": "kalongwe",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "5569.769",
+    "transaction": "46522943.712400004"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3176.761",
+    "transaction": "28065666.8702"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "419.77599999999995",
+    "transaction": "3273461.1483"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1173.949",
+    "transaction": "9911111.3903"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "872.368",
+    "transaction": "7314692.2721"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2586.0550000000003",
+    "transaction": "21137068.821000002"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "434.666",
+    "transaction": "2464173.7135"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2375.317",
+    "transaction": "19918363.2214"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3434.148",
+    "transaction": "28340684.1254"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "5878.64",
+    "transaction": "52639694.015200004"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2894.79",
+    "transaction": "25519281.7761"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "389.933",
+    "transaction": "2680329.2541"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2157.806",
+    "transaction": "17131339.7078"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "954.348",
+    "transaction": "7420707.5341"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2338.55",
+    "transaction": "19340252.825"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "90.72570999999999",
+    "transaction": "807706.5607"
+  },
+  {
+    "_project_id": "kambove",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "6669.74",
+    "transaction": "55710737.4829"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "58810.7668861",
+    "transaction": "206133913.26891"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "62984.3809566",
+    "transaction": "209649457.86004"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "59564.3170294",
+    "transaction": "186323362.44175"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "51518.5168031",
+    "transaction": "173168528.53764"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "65372.2377583",
+    "transaction": "216886638.80817"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "48925.336679",
+    "transaction": "166245135.86448"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "64909.8090607",
+    "transaction": "216540270.5551"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "60872.6805104",
+    "transaction": "192244875.8509"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "68837.04631654",
+    "transaction": "230954045.80722"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "61558.6680378",
+    "transaction": "173744944.55452"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "67392.6093786",
+    "transaction": "207427551.74784"
+  },
+  {
+    "_project_id": "kamoa",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "46910.94479",
+    "transaction": "154172636.47851"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "3911.02487",
+    "transaction": "41470103.346599996"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "8124.9800000000005",
+    "transaction": "71737157.3395"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "2323.05092",
+    "transaction": "24003835.9286"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "11421.287",
+    "transaction": "96384450.5724"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "3957.09029",
+    "transaction": "39847123.9952"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "20309.202",
+    "transaction": "165996856.3663"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "4598.253",
+    "transaction": "70233338.3294"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "13566.866",
+    "transaction": "121736825.8288"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "5844.81",
+    "transaction": "90758503.0442"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "20922.875",
+    "transaction": "174945999.9895"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "3928.7126200000002",
+    "transaction": "36201022.4789"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "19046.009",
+    "transaction": "159563811.1711"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "3753.10184",
+    "transaction": "39490251.8795"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "20967.144",
+    "transaction": "173033662.2448"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "5078.73005",
+    "transaction": "59984078.3517"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "10522.439",
+    "transaction": "94177740.8525"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "960.967",
+    "transaction": "10483862.4458"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "16342.6854",
+    "transaction": "144070413.9857"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "5998.33555",
+    "transaction": "60609816.0836"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "15570.059",
+    "transaction": "123545919.6132"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "5297.79474",
+    "transaction": "53823538.22"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "23199.316",
+    "transaction": "191862751.192"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "3333.3455",
+    "transaction": "34604651.1284"
+  },
+  {
+    "_project_id": "kcc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "20859.629",
+    "transaction": "174235474.7226"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2520.0",
+    "transaction": "22263393.599999998"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "198.4528",
+    "transaction": "979879.4797"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2668.0",
+    "transaction": "22524696.72"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1578.0",
+    "transaction": "12897751.44"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1622.0",
+    "transaction": "14558926.02"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1834.0",
+    "transaction": "15334935.98"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "354.1746",
+    "transaction": "1490743.9194"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1604.0",
+    "transaction": "13450438.24"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3178.0",
+    "transaction": "26226794.58"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2468.0",
+    "transaction": "22099459.2"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1866.0",
+    "transaction": "16449890.94"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2986.0",
+    "transaction": "23706570.64"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1830.0",
+    "transaction": "15134447.700000001"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "554.5201999999999",
+    "transaction": "2949341.7677"
+  },
+  {
+    "_project_id": "kfm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2142.0",
+    "transaction": "17891611.92"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3837.584",
+    "transaction": "11251764.24701"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3433.299",
+    "transaction": "8817035.93912"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3585.942",
+    "transaction": "9456010.72257"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "7037.816",
+    "transaction": "20325859.74443"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "7057.607",
+    "transaction": "19863770.90598"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "5356.814",
+    "transaction": "13672370.10292"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "7814.214",
+    "transaction": "21118961.1655"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "7140.406",
+    "transaction": "20559952.88055"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "5013.155",
+    "transaction": "13794816.41792"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "4479.49",
+    "transaction": "11594555.13386"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "7901.744",
+    "transaction": "20707974.51035"
+  },
+  {
+    "_project_id": "kicc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "4202.1",
+    "transaction": "10986478.576"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "830.048",
+    "transaction": "9374664.266"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3286.817",
+    "transaction": "29037976.4142"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "153.955",
+    "transaction": "1451343.5888"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1327.391",
+    "transaction": "11206551.6135"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "622.22",
+    "transaction": "5869390.1102"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2508.5190000000002",
+    "transaction": "20503329.8756"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "1866.438",
+    "transaction": "32476643.676"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "5649.099",
+    "transaction": "50705804.206"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "418.35",
+    "transaction": "6517590.6376"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2236.389",
+    "transaction": "18699499.5323"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "1143.403",
+    "transaction": "9524704.6892"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2440.534",
+    "transaction": "20465244.2894"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "712.85",
+    "transaction": "6839089.3427"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2851.581",
+    "transaction": "23532985.8765"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "2225.921",
+    "transaction": "28561019.4466"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "4239.027",
+    "transaction": "37957943.3692"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "1861.938",
+    "transaction": "18365834.6892"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "4541.98",
+    "transaction": "40040233.4692"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "1592.3799999999999",
+    "transaction": "15114087.8522"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "5078.534",
+    "transaction": "40319700.2743"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "1084.232",
+    "transaction": "10220899.2825"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "7157.26",
+    "transaction": "59191900.078999996"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "1706.384",
+    "transaction": "16085094.722000001"
+  },
+  {
+    "_project_id": "lamikal",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "6507.946",
+    "transaction": "54359311.0318"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "6196.589",
+    "transaction": "50967484.124"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "5254.479",
+    "transaction": "41432342.956199996"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2679.332",
+    "transaction": "21032247.6411"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "6993.268",
+    "transaction": "58439749.0275"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "10841.468",
+    "transaction": "84395717.3861"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "5195.989",
+    "transaction": "40564859.369"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "5715.031",
+    "transaction": "43909611.366"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "6547.085",
+    "transaction": "54580077.8873"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "4472.331",
+    "transaction": "36705826.126"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "6075.55",
+    "transaction": "46325133.698"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "6245.101",
+    "transaction": "49603142.3843"
+  },
+  {
+    "_project_id": "lcs",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "4956.4",
+    "transaction": "39760194.7232"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "303.505",
+    "transaction": "1345408.6863000002"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3472.192",
+    "transaction": "30675705.2176"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "1469.955",
+    "transaction": "6538044.566"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3797.119",
+    "transaction": "32057329.0432"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "684.682",
+    "transaction": "3644171.4181999997"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3220.77",
+    "transaction": "26324899.1795"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "489.12800000000004",
+    "transaction": "3146920.7934999997"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "4205.61",
+    "transaction": "37749176.8545"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "648.39",
+    "transaction": "4386144.3813000005"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "3693.304",
+    "transaction": "30881450.5988"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "1159.805",
+    "transaction": "4428112.155"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "5111.325",
+    "transaction": "42861322.4673"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "714.561",
+    "transaction": "3127144.8230000003"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3575.559",
+    "transaction": "29507693.9589"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "545.664",
+    "transaction": "2672657.9067"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2980.052",
+    "transaction": "26684577.6292"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "1347.51",
+    "transaction": "6091985.987"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2300.855",
+    "transaction": "20283394.3281"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "1667.571",
+    "transaction": "8869862.2611"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "4392.033",
+    "transaction": "34869404.076"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "804.376",
+    "transaction": "4278454.0253"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "3693.977",
+    "transaction": "30549891.6459"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "923.5400000000001",
+    "transaction": "4912057.4801"
+  },
+  {
+    "_project_id": "lr_sas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2686.082",
+    "transaction": "22436198.285"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "3375.9767432",
+    "transaction": "35480704.2149"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "8065.236",
+    "transaction": "71253779.1865"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "4915.5639652",
+    "transaction": "49234566.7138"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "9199.377",
+    "transaction": "77666108.2986"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "3079.7223375",
+    "transaction": "31123338.8623"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "7115.9439999999995",
+    "transaction": "58162025.9643"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "3982.465",
+    "transaction": "60535454.0479"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "8498.852",
+    "transaction": "76284930.6573"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "4233.612",
+    "transaction": "67160424.25129999"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "7358.168",
+    "transaction": "61525100.9874"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "4538.7182102",
+    "transaction": "40494305.3095"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "10078.417",
+    "transaction": "84513170.457"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "4012.2267515",
+    "transaction": "40263534.4676"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "7204.518",
+    "transaction": "59456077.2906"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "3751.8833798",
+    "transaction": "43351850.5346"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "8105.063",
+    "transaction": "72575976.1252"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "5043.1686500000005",
+    "transaction": "53654668.4151"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "9198.857",
+    "transaction": "81093351.7786"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "3833.9211759",
+    "transaction": "39265222.2986"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "7687.912",
+    "transaction": "61036178.4656"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "4414.4711265",
+    "transaction": "45193874.4945"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "8816.357",
+    "transaction": "72912947.4985"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "3551.7333825",
+    "transaction": "35915918.4358"
+  },
+  {
+    "_project_id": "metalkol",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "8359.489",
+    "transaction": "69824805.3401"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "554.156",
+    "transaction": "2456518.1328"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3075.5874",
+    "transaction": "27171830.491499998"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "86.84",
+    "transaction": "461909.6888"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2182.6358",
+    "transaction": "18424151.132799998"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1366.3662",
+    "transaction": "11167966.8085"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "515.314",
+    "transaction": "3439912.2697"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "4080.8986",
+    "transaction": "36629778.553"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "349.036",
+    "transaction": "2790406.6965"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1327.804",
+    "transaction": "11102393.3121"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "80.706",
+    "transaction": "308133.8939"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1460.4002",
+    "transaction": "12246273.500599999"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "56.27",
+    "transaction": "246255.3576"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1777.334",
+    "transaction": "14667644.3413"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "708.523",
+    "transaction": "3593602.4716"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2594.788",
+    "transaction": "23234769.6672"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "280.631",
+    "transaction": "1268710.4381"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2373.6202",
+    "transaction": "20924842.6963"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2497.5638",
+    "transaction": "19828758.4237"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "3005.9956",
+    "transaction": "24860154.7514"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "52.606",
+    "transaction": "279796.9526"
+  },
+  {
+    "_project_id": "mikas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2291.4636",
+    "transaction": "19234910.497"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "669.6",
+    "transaction": "5915701.728"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1028.5",
+    "transaction": "8683150.32"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "779.0",
+    "transaction": "6367140.92"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1012.0",
+    "transaction": "9083620.92"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1477.988",
+    "transaction": "12358152.322"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1766.0",
+    "transaction": "14808898.96"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "842.0",
+    "transaction": "6948697.62"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1337.0",
+    "transaction": "11972032.8"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1173.0",
+    "transaction": "10340687.07"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "964.5",
+    "transaction": "7657396.98"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "718.0",
+    "transaction": "5942950.62"
+  },
+  {
+    "_project_id": "mjm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1515.0",
+    "transaction": "12654431.4"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1677.821",
+    "transaction": "14823011.6323"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1396.9389999999999",
+    "transaction": "11793713.3852"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1419.6970000000001",
+    "transaction": "11603865.0354"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "64.01934",
+    "transaction": "795684.1908"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1162.6000000000001",
+    "transaction": "10435392.9648"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "514.8297",
+    "transaction": "6727852.4377999995"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1224.843",
+    "transaction": "10241487.9996"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1777.949",
+    "transaction": "14909098.0164"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1161.4859999999999",
+    "transaction": "9585290.9784"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "289.38122999999996",
+    "transaction": "2738133.8797000004"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1263.161",
+    "transaction": "11310848.8592"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1615.953",
+    "transaction": "14245579.107"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2123.565",
+    "transaction": "16859492.1907"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2564.032",
+    "transaction": "21205031.8057"
+  },
+  {
+    "_project_id": "mkm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1130.967",
+    "transaction": "9446695.9196"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "221.2284",
+    "transaction": "1158991.2524"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1317.416",
+    "transaction": "11638948.7875"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "499.72499999999997",
+    "transaction": "2551760.7592"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1397.6109999999999",
+    "transaction": "11799386.7721"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1555.181",
+    "transaction": "12711240.8"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "360.7858",
+    "transaction": "2743238.4382"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1575.512",
+    "transaction": "14141653.9157"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "1281.402232",
+    "transaction": "10244311.098000001"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1235.124",
+    "transaction": "10327452.2729"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "416.607702",
+    "transaction": "1879800.6087"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1344.451",
+    "transaction": "11273982.0161"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "138.86777999999998",
+    "transaction": "718224.1582"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1429.747",
+    "transaction": "11799144.3903"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "332.9717",
+    "transaction": "1927420.0043"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1402.652",
+    "transaction": "12559907.069600001"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "250.21959999999999",
+    "transaction": "1336901.777"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1490.423",
+    "transaction": "13138958.0947"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "138.867894",
+    "transaction": "738642.6677999999"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "1253.853",
+    "transaction": "9954639.8919"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "332.768592",
+    "transaction": "1769986.1578"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1388.469",
+    "transaction": "11482902.439199999"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "221.891028",
+    "transaction": "1132971.7055"
+  },
+  {
+    "_project_id": "mm",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1457.336",
+    "transaction": "12172777.847"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3892.22",
+    "transaction": "34386518.190400004"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3467.502",
+    "transaction": "29274576.8869"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3253.098",
+    "transaction": "26589131.4401"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2403.601",
+    "transaction": "21574506.2527"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "3691.5950000000003",
+    "transaction": "30867160.8488"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3497.764",
+    "transaction": "29323794.6495"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3145.285",
+    "transaction": "25956810.443099998"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "4509.121",
+    "transaction": "40376473.0816"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3594.4069999999997",
+    "transaction": "31686818.4052"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3403.003",
+    "transaction": "27017257.5364"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "5033.842",
+    "transaction": "41630829.7692"
+  },
+  {
+    "_project_id": "mmg",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2960.934",
+    "transaction": "24731971.0779"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "736.379",
+    "transaction": "6505672.8242"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "264.629",
+    "transaction": "2633267.4588"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1401.313",
+    "transaction": "11830641.0552"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1691.2920000000001",
+    "transaction": "13823741.3363"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "862.601",
+    "transaction": "7742628.9423"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "543.341",
+    "transaction": "4543129.4708"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1448.012",
+    "transaction": "12142391.5067"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1051.248",
+    "transaction": "8675539.7573"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "836.0889999999999",
+    "transaction": "7486675.3414"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1265.528",
+    "transaction": "11156375.9824"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2490.389",
+    "transaction": "19771795.965"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2667.833",
+    "transaction": "22063485.8"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "92.37299999999999",
+    "transaction": "919121.6514000001"
+  },
+  {
+    "_project_id": "mmt",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "1000.9929999999999",
+    "transaction": "8361054.2904"
+  },
+  {
+    "_project_id": "mpc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "60.0",
+    "transaction": "337423.8"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "1904.11412",
+    "transaction": "17957765.472400002"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3290.974",
+    "transaction": "29074702.1788"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "1908.83157",
+    "transaction": "18802031.24"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2183.377",
+    "transaction": "18433247.6573"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "2029.253717",
+    "transaction": "19934819.1608"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1825.475",
+    "transaction": "14920483.402"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "123.97763",
+    "transaction": "1763423.7199"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1481.679",
+    "transaction": "13299417.3528"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "2534.21186",
+    "transaction": "34714954.889"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2710.403",
+    "transaction": "22662953.367799997"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "2521.24213",
+    "transaction": "21268996.0366"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2290.933",
+    "transaction": "19210756.1274"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "1952.99453",
+    "transaction": "19253373.8835"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3404.467",
+    "transaction": "28095738.4091"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "1835.9392",
+    "transaction": "19877144.3638"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "3078.238",
+    "transaction": "27563774.3462"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "1562.93877",
+    "transaction": "16002783.0229"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3203.3320000000003",
+    "transaction": "28239261.546099998"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "2964.16852",
+    "transaction": "29367001.1844"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3823.176",
+    "transaction": "30353111.8273"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "2701.71781",
+    "transaction": "26700186.3978"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2702.814",
+    "transaction": "22352785.3157"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "2142.53062",
+    "transaction": "21411389.3832"
+  },
+  {
+    "_project_id": "mumi",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3773.806",
+    "transaction": "31521695.8059"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1704.013",
+    "transaction": "15054409.5704"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2312.751",
+    "transaction": "19525492.8289"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "383.72871999999995",
+    "transaction": "2042368.3227"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2889.352",
+    "transaction": "23616060.785"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "3008.306",
+    "transaction": "27002283.907899998"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1872.399",
+    "transaction": "15656008.0671"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "3160.683",
+    "transaction": "26496830.2898"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2501.83",
+    "transaction": "20646627.2755"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2521.276",
+    "transaction": "22576524.5992"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1753.399",
+    "transaction": "15457246.6908"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2751.866",
+    "transaction": "21847724.6214"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2520.286",
+    "transaction": "20843244.0745"
+  },
+  {
+    "_project_id": "nmi",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3242.015",
+    "transaction": "27079773.2126"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "390.0",
+    "transaction": "3445525.2"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "250.0",
+    "transaction": "2110635.0"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "375.0",
+    "transaction": "3065055.0"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "510.0",
+    "transaction": "4577714.1"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "270.0",
+    "transaction": "2257596.9"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "315.0",
+    "transaction": "2641451.4"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "490.0",
+    "transaction": "4178894.1"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "240.0",
+    "transaction": "2149056.0"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "395.0",
+    "transaction": "3482158.05"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "540.0",
+    "transaction": "4287189.6"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "210.0",
+    "transaction": "1736739.9"
+  },
+  {
+    "_project_id": "omr",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "582.0",
+    "transaction": "4861306.32"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "1021.601",
+    "transaction": "6855581.8048"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2468.444",
+    "transaction": "21818271.7304"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "419.241",
+    "transaction": "2758263.7322"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2815.537",
+    "transaction": "23762043.4671"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "367.65500000000003",
+    "transaction": "2757301.6848999998"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2141.536",
+    "transaction": "17503801.6664"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1763.731",
+    "transaction": "15831090.7198"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2597.641",
+    "transaction": "21720097.2927"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "4916.843",
+    "transaction": "41056019.8123"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "350.316",
+    "transaction": "2351629.2703"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1501.931",
+    "transaction": "12581670.637"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1229.5720000000001",
+    "transaction": "11010079.5176"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "927.8340000000001",
+    "transaction": "6172097.2774"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "545.2040000000001",
+    "transaction": "4806294.9303"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "1952.145",
+    "transaction": "14551499.0146"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2351.98",
+    "transaction": "18672933.6969"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "1861.022",
+    "transaction": "13449498.2945"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4277.206",
+    "transaction": "35373306.2893"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "682.606",
+    "transaction": "4778782.773800001"
+  },
+  {
+    "_project_id": "ruashi",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "286.959",
+    "transaction": "2396899.6569"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "1256.932",
+    "transaction": "8495012.6298"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "1320.5410000000002",
+    "transaction": "8685066.7182"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1230.377",
+    "transaction": "8145735.5359"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2053.283",
+    "transaction": "14099011.4507"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1337.579",
+    "transaction": "8555850.825100001"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "1982.4360000000001",
+    "transaction": "12717227.8192"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1298.247",
+    "transaction": "8196157.8737"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "1551.967",
+    "transaction": "10631160.1861"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "1329.417",
+    "transaction": "8965609.2111"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "501.975",
+    "transaction": "3267966.8747"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "876.465",
+    "transaction": "5871307.566"
+  },
+  {
+    "_project_id": "rubamin",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2259.277",
+    "transaction": "15285680.7706"
+  },
+  {
+    "_project_id": "sabwe",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1500.0",
+    "transaction": "12260220.0"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2863.618",
+    "transaction": "25299148.6734"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2695.471",
+    "transaction": "22756621.7379"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2988.453",
+    "transaction": "24426060.8251"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2613.842",
+    "transaction": "23461610.5463"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2924.931",
+    "transaction": "24456722.8087"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2989.585",
+    "transaction": "25069344.3921"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2338.603",
+    "transaction": "19299578.5045"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2067.905",
+    "transaction": "18516848.534"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3059.861",
+    "transaction": "26974388.9907"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2793.606",
+    "transaction": "22179108.5001"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2664.571",
+    "transaction": "22036508.4374"
+  },
+  {
+    "_project_id": "sek",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "3086.795",
+    "transaction": "25783257.805"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "3689.907",
+    "transaction": "32764287.6671"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2438.422",
+    "transaction": "20586475.273199998"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3441.462",
+    "transaction": "28128720.8279"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "2643.0080000000003",
+    "transaction": "23723401.9381"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "3403.456",
+    "transaction": "28457895.2403"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "916.8100000000001",
+    "transaction": "7687965.2644"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2729.76",
+    "transaction": "22527644.6734"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2223.447",
+    "transaction": "19909633.8168"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "3490.619",
+    "transaction": "30771865.9506"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2582.268",
+    "transaction": "20501245.3969"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "2448.97",
+    "transaction": "20253447.2041"
+  },
+  {
+    "_project_id": "shituru",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2746.959",
+    "transaction": "22944689.2576"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "4194.882",
+    "transaction": "40572024.8258"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "33468.455",
+    "transaction": "295683090.0194"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "1706.145",
+    "transaction": "16083905.5331"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "9377.630000000001",
+    "transaction": "79171016.38"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "988.199",
+    "transaction": "5259619.1392"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "11572.152",
+    "transaction": "94584752.9251"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "171.358",
+    "transaction": "417603.1302"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "15900.556",
+    "transaction": "142721959.6155"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "588.8439999999999",
+    "transaction": "8423906.44"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "18905.847999999998",
+    "transaction": "136285773.0802"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "1401.612",
+    "transaction": "11675621.2707"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "20267.114",
+    "transaction": "169951100.475"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "700.739",
+    "transaction": "5041103.5371"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "15263.003",
+    "transaction": "125959611.189"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "7250.0",
+    "transaction": "77277560.39999999"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "22034.12467",
+    "transaction": "197302365.9366"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "14076.521",
+    "transaction": "124092837.7649"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "935.444",
+    "transaction": "4975655.868"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "28012.357",
+    "transaction": "222396825.189"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "1932.962",
+    "transaction": "10281372.2052"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "31442.293",
+    "transaction": "260033737.1418"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "35.899",
+    "transaction": "338399.1033"
+  },
+  {
+    "_project_id": "sicomines",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "17733.833",
+    "transaction": "148126450.932"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "8207.616",
+    "transaction": "72511660.92300001"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "4438.357",
+    "transaction": "39241351.2354"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "4239.876",
+    "transaction": "35795322.725"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "4072.009",
+    "transaction": "37377964.0516"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "5269.688",
+    "transaction": "43071689.4737"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "11700.553",
+    "transaction": "105023110.674"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "6046.391",
+    "transaction": "50556716.955"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "3138.958",
+    "transaction": "25402510.6293"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "7548.5650000000005",
+    "transaction": "63298944.7219"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "179.467",
+    "transaction": "1713609.437"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "6811.754",
+    "transaction": "56214749.179"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "8173.108",
+    "transaction": "73185278.276"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "6843.303",
+    "transaction": "60327753.493"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "2718.196",
+    "transaction": "24779074.4041"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "7914.658",
+    "transaction": "62836369.379"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "3429.838",
+    "transaction": "30903248.6977"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4342.161",
+    "transaction": "35910496.482"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "5121.989",
+    "transaction": "47233980.631"
+  },
+  {
+    "_project_id": "somidez",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "6406.302",
+    "transaction": "53510303.091"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2070.0",
+    "transaction": "18287849.7"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "5176.0",
+    "transaction": "43698812.026"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "3680.0",
+    "transaction": "30078438.46"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "3244.0",
+    "transaction": "29117852.04"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "4162.0",
+    "transaction": "34800601.74"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2472.0",
+    "transaction": "20729277.36"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "173.89",
+    "transaction": "760998.2848"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "2342.0",
+    "transaction": "19327782.7"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "3520.0",
+    "transaction": "31519508.139999997"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2280.0",
+    "transaction": "20099613.6"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "2484.0",
+    "transaction": "19721088.72"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "4312.0",
+    "transaction": "35661353.199999996"
+  },
+  {
+    "_project_id": "somika",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2568.0",
+    "transaction": "21450067.439999998"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2509.713",
+    "transaction": "7977398.83888"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2259.951",
+    "transaction": "7029558.06952"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1238.731",
+    "transaction": "3203468.99366"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "383.91200000000003",
+    "transaction": "1641135.8427"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "1552.56",
+    "transaction": "6831279.5257"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2196.529",
+    "transaction": "6163449.9537"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "1901.254",
+    "transaction": "5887670.299219999"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2246.89",
+    "transaction": "7731705.7723"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2411.129",
+    "transaction": "7774926.5734"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "699.522",
+    "transaction": "1792487.97604"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "1173.785",
+    "transaction": "3045027.16696"
+  },
+  {
+    "_project_id": "stl",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "508.38800000000003",
+    "transaction": "1322845.91144"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "1143.5773",
+    "transaction": "6490328.4694"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "4136.573",
+    "transaction": "36545298.7461"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "837.315292",
+    "transaction": "4597624.9082"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "3050.203",
+    "transaction": "25751460.8337"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "503.93708000000004",
+    "transaction": "2682169.3917"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "2296.512",
+    "transaction": "18770494.902000003"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Cobalt",
+    "quantity": "441.87003",
+    "transaction": "3639742.0598999998"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1814.435",
+    "transaction": "16286205.2606"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "721.16432",
+    "transaction": "6246497.9957"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2017.932",
+    "transaction": "16880951.4371"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "555.82029",
+    "transaction": "2716944.7395"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "7192.814",
+    "transaction": "60315773.3632"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "1066.35708",
+    "transaction": "5974810.2251"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3368.435",
+    "transaction": "27798380.3668"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "1265.90081",
+    "transaction": "7573285.2336"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "3334.1400000000003",
+    "transaction": "29855223.216799997"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "280.86917",
+    "transaction": "1625712.4933"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "4947.074",
+    "transaction": "43611376.0837"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "904.82424",
+    "transaction": "4812788.408"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "5041.955",
+    "transaction": "40029290.8147"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "253.5392",
+    "transaction": "1348568.0958"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "5321.923",
+    "transaction": "44013314.3756"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "547.20941",
+    "transaction": "2910457.6688"
+  },
+  {
+    "_project_id": "tcc",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "4719.216",
+    "transaction": "39418478.6374"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Cobalt",
+    "quantity": "1384.03307",
+    "transaction": "14873421.701299999"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Apr",
+    "product": "Copper",
+    "quantity": "2104.4900000000002",
+    "transaction": "18592495.7126"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "377.25368",
+    "transaction": "2420304.789"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "2080.502",
+    "transaction": "17564721.3555"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "1506.826",
+    "transaction": "9673323.1963"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "1958.674",
+    "transaction": "16009182.7651"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Feb",
+    "product": "Copper",
+    "quantity": "1898.81875",
+    "transaction": "17043626.2066"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Cobalt",
+    "quantity": "826.627",
+    "transaction": "13556021.498"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jan",
+    "product": "Copper",
+    "quantity": "2080.661",
+    "transaction": "17397384.5314"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "339.9674",
+    "transaction": "3146639.2558"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "2412.159",
+    "transaction": "20227304.0246"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "525.74592",
+    "transaction": "5577770.5322"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "3298.759",
+    "transaction": "27223371.5123"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Cobalt",
+    "quantity": "1742.152",
+    "transaction": "20686173.4747"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Mar",
+    "product": "Copper",
+    "quantity": "2199.76875",
+    "transaction": "19697609.2946"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "555.576",
+    "transaction": "6089006.29"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "2158.736",
+    "transaction": "19030531.4938"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "250.4036",
+    "transaction": "1606481.824"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "3231.913",
+    "transaction": "25658932.9656"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "247.00368",
+    "transaction": "1584651.9707"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "3151.357",
+    "transaction": "26062321.1482"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Cobalt",
+    "quantity": "309.11987999999997",
+    "transaction": "1983066.9298999999"
+  },
+  {
+    "_project_id": "thomas",
+    "year": "2023",
+    "month": "Sep",
+    "product": "Copper",
+    "quantity": "2021.923",
+    "transaction": "16888637.5564"
   }
 ]

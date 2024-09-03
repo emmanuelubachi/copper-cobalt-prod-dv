@@ -46,11 +46,11 @@ export const industrialProjectName: IndustrialProjectName = [
     project_name: "Soci\u00e9t\u00e9 CNMC Congo Compagnie Minier",
     short_name: "CNMC CONGO",
   },
-  // {
-  //   _project_id: "comide",
-  //   project_name: "La Congolaise des Mines et de D\u00e9veloppement",
-  //   short_name: "COMIDE",
-  // },
+  {
+    _project_id: "comide",
+    project_name: "La Congolaise des Mines et de D\u00e9veloppement",
+    short_name: "COMIDE",
+  },
   {
     _project_id: "comika",
     project_name: "Compagnie Mini\u00e8re de Kambove SPRL",
@@ -101,11 +101,11 @@ export const industrialProjectName: IndustrialProjectName = [
     project_name: "Golden African Mining SPRL",
     short_name: "GOLDEN AFRICAN",
   },
-  // {
-  //   _project_id: "hmc",
-  //   project_name: "Hanrui Metal Congo SARL",
-  //   short_name: "HANRUI METAL",
-  // },
+  {
+    _project_id: "hmc",
+    project_name: "Hanrui Metal Congo SARL",
+    short_name: "HANRUI METAL",
+  },
   {
     _project_id: "huachin_metal",
     project_name: "Huachin Metal Leach SPRL",
@@ -146,11 +146,11 @@ export const industrialProjectName: IndustrialProjectName = [
     project_name: "Kansonga",
     short_name: "KANSONGA",
   },
-  // {
-  //   _project_id: "kastro",
-  //   project_name: "Katanga Strategic Resources",
-  //   short_name: "KATANGA STRATEGIC",
-  // },
+  {
+    _project_id: "kastro",
+    project_name: "Katanga Strategic Resources",
+    short_name: "KATANGA STRATEGIC",
+  },
   {
     _project_id: "kcc",
     project_name: "Kamoto Copper Company SARL",
@@ -181,11 +181,11 @@ export const industrialProjectName: IndustrialProjectName = [
     project_name: "Lualaba Copper Smelter SAS",
     short_name: "LCS",
   },
-  // {
-  //   _project_id: "long_fei",
-  //   project_name: "Long Fei Mining",
-  //   short_name: "LONG FEI",
-  // },
+  {
+    _project_id: "long_fei",
+    project_name: "Long Fei Mining",
+    short_name: "LONG FEI",
+  },
   {
     _project_id: "lr_sas",
     project_name: "Luilu Ressources SAS",
@@ -236,11 +236,6 @@ export const industrialProjectName: IndustrialProjectName = [
     project_name: "MSL",
     short_name: "MSL",
   },
-  // {
-  //   _project_id: "mutanda",
-  //   project_name: "Mutanda Mining",
-  //   short_name: "MUTANDA",
-  // },
   {
     _project_id: "mumi",
     project_name: "Mutanda Mining SARL",
