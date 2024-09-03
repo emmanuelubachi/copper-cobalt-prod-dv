@@ -2860,5 +2860,743 @@
     "quantity_percent": "0.000",
     "transaction": "733510",
     "transaction_percent": "0.000"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "CHEMICAL OF AFRICA SPRL",
+    "quantity": "6230.147",
+    "transaction": "43086286.0083",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "CHENGTUN CONGO RESSOURCES SARL",
+    "quantity": "9991.776",
+    "transaction": "86022120.0941",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "COMPAGNIE DE TRAITEMENT DES REJETS KINGYAMBO",
+    "quantity": "48733.4627223",
+    "transaction": "541673862.0459",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "COMPAGNIE MINIERE DE KAMBOVE SPRL",
+    "quantity": "10966.828",
+    "transaction": "86229252.0442",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "COMPAGNIE MINIERE DE LUISHA",
+    "quantity": "1742.439",
+    "transaction": "14938767.2499",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "CONGO DONGFANG INTERNATIONAL MINING",
+    "quantity": "6490.937",
+    "transaction": "31795052.5515",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "EXCELLEN MINERALS",
+    "quantity": "1690.267",
+    "transaction": "8991618.776",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "HANRUI METAL CONGO SARL",
+    "quantity": "7647.06256",
+    "transaction": "48749502.7408",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "HUACHIN METAL LEACH SPRL",
+    "quantity": "1176.567",
+    "transaction": "5835419.659200001",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "KALONGWE MINING S.A",
+    "quantity": "11629.626",
+    "transaction": "73351824.1449",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "KAMBOVE MINING SAS",
+    "quantity": "3161.81671",
+    "transaction": "23961070.4828",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "KAMOTO COPPER COMPANY SARL",
+    "quantity": "48985.21638",
+    "transaction": "561510125.2319",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "KISANFU MINING",
+    "quantity": "1107.1476",
+    "transaction": "5419965.1668",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "LA  MINIERE  DE  KASOMBO",
+    "quantity": "2684.082",
+    "transaction": "14845245.9016",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "LA COMPAGNIE MINIERE DE MUSONOIE GL",
+    "quantity": "7195.267",
+    "transaction": "64120854.744500004",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "LA MINIERE DE KALUNBWE MYUNGA",
+    "quantity": "868.23027",
+    "transaction": "10261670.508299999",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "LA MINIERE DE KALUNKUNDI",
+    "quantity": "14218.119",
+    "transaction": "160400362.303",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "LUILU RESSOURCES SAS",
+    "quantity": "10758.687",
+    "transaction": "53440964.483500004",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "METAL MINES SPRL",
+    "quantity": "4195.335728",
+    "transaction": "26202248.627100002",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "MINERAL METAL TECHNOLOGY SARL",
+    "quantity": "357.002",
+    "transaction": "3552389.1102",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "MUTANDA MINING SARL",
+    "quantity": "24181.920477",
+    "transaction": "247053868.7543",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "NEW MINERALS INVESTMENT",
+    "quantity": "383.72871999999995",
+    "transaction": "2042368.3227",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "RUASHI MINING SPRL",
+    "quantity": "7582.42",
+    "transaction": "53674653.8525",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "SINO CONGOLAISE DES MINES SARL",
+    "quantity": "19906.084",
+    "transaction": "180346771.4526",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "SOCIETE KAI PENG MINING",
+    "quantity": "34.909",
+    "transaction": "214713.3899",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "SOCIETE MINIERE DE DEZIWA SAS",
+    "quantity": "23098.814",
+    "transaction": "206651739.0861",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "SOCIETE MINIERE DU KATANGA",
+    "quantity": "173.89",
+    "transaction": "760998.2848",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "TENGYUAN COBALT & COPPER RESOURCES",
+    "quantity": "8522.384222",
+    "transaction": "50618929.689",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Cobalt",
+    "exporter": "THOMAS MINING SARL",
+    "quantity": "8064.70823",
+    "transaction": "81196861.4619",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "AMICAL KAKANA MINING SPRL",
+    "quantity": "611.0",
+    "transaction": "756886.02",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "ANVIL MINING CONGO SARL",
+    "quantity": "3013.071",
+    "transaction": "24510466.2773",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "BOSS MINING SPRL",
+    "quantity": "2648.6259999999997",
+    "transaction": "23569389.7611",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "CHEMICAL OF AFRICA SPRL",
+    "quantity": "16760.0",
+    "transaction": "141750250.875",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "CHENGTUN CONGO RESSOURCES SARL",
+    "quantity": "60415.943",
+    "transaction": "512392121.3172",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "CNMC HUACHIN MABENDE MINING SPRL",
+    "quantity": "36578.6813",
+    "transaction": "311108613.6419",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "COMPAGNIE DE TRAITEMENT DES REJETS KINGYAMBO",
+    "quantity": "99688.19",
+    "transaction": "846304452.0497",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "COMPAGNIE MINIERE DE KAMBOVE SPRL",
+    "quantity": "39212.396",
+    "transaction": "332427061.9629",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "COMPAGNIE MINIERE DE LUISHA",
+    "quantity": "32240.89",
+    "transaction": "273439752.3535",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "CONGO DONGFANG INTERNATIONAL MINING",
+    "quantity": "49610.0032",
+    "transaction": "420516115.9311",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "CONGO JINJUN CHENG",
+    "quantity": "17695.791",
+    "transaction": "149853371.3591",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "DIVINE LAND MINING SARL",
+    "quantity": "12012.344",
+    "transaction": "101842172.5222",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "EVERBRIGHT MINING SARL",
+    "quantity": "16024.8",
+    "transaction": "44397381.377000004",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "EXCELLEN MINERALS",
+    "quantity": "35135.811",
+    "transaction": "298923659.0603",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "FRONTIER SPRL",
+    "quantity": "5529.6",
+    "transaction": "10996273.15",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "GOLDEN AFRICAN RESOURCES SPRL",
+    "quantity": "8360.0",
+    "transaction": "70958545.75",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "HANRUI METAL CONGO SARL",
+    "quantity": "31877.813000000002",
+    "transaction": "270013728.259",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "HUACHIN METAL LEACH SPRL",
+    "quantity": "21194.3837",
+    "transaction": "180872105.7797",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "JIN XUN CONGO MINING SARL",
+    "quantity": "1965.6299999999999",
+    "transaction": "16102632.8544",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KALONGWE MINING S.A",
+    "quantity": "36154.214",
+    "transaction": "301225982.779",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KAMBOVE MINING SAS",
+    "quantity": "32685.756",
+    "transaction": "277714200.2353",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KAMOA COPPER SA",
+    "quantity": "717657.31420654",
+    "transaction": "2333491361.77508",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KAMOTO COPPER COMPANY SARL",
+    "quantity": "200852.4914",
+    "transaction": "1691291063.8784",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KINSENDA COPPER COMPANY SARL",
+    "quantity": "66860.171",
+    "transaction": "182149550.34621",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "KISANFU MINING",
+    "quantity": "26296.0",
+    "transaction": "222538916.98",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LA  MINIERE  DE  KASOMBO",
+    "quantity": "28034.4574",
+    "transaction": "239493474.1754",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LA COMPAGNIE MINIERE DE MUSONOIE GL",
+    "quantity": "142632.51203679",
+    "transaction": "1037649644.37529",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LA GENERALE DES CARRIERES ET DES MI",
+    "quantity": "6316.214",
+    "transaction": "53554910.3516",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LA MINIERE DE KALUNBWE MYUNGA",
+    "quantity": "18519.013",
+    "transaction": "156459507.8943",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LA MINIERE DE KALUNKUNDI",
+    "quantity": "47825.077",
+    "transaction": "406020480.031",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LUALABA COPPER SMELTER SAS",
+    "quantity": "71172.623",
+    "transaction": "567716386.6887",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "LUILU RESSOURCES SAS",
+    "quantity": "43128.878",
+    "transaction": "364881043.284",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "MACROLINK JIAYUAN MINING SPRL",
+    "quantity": "13282.588",
+    "transaction": "112732861.66",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "METAL MINES SPRL",
+    "quantity": "16847.775",
+    "transaction": "143000994.297",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "MINERAL METAL TECHNOLOGY SARL",
+    "quantity": "15995.018",
+    "transaction": "134103132.272",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "MINING PROGRESS COMPAGNY SARL",
+    "quantity": "60.0",
+    "transaction": "337423.8",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "MMG KINSEVERE SARL",
+    "quantity": "42852.372",
+    "transaction": "363415848.5818",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "MUTANDA MINING SARL",
+    "quantity": "33768.674",
+    "transaction": "285727927.3364",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "NEW MINERALS INVESTMENT",
+    "quantity": "30238.176",
+    "transaction": "255802225.9231",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "OM METAL RESSOURCES SPRL",
+    "quantity": "4567.0",
+    "transaction": "38793321.57",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "RUASHI MINING SPRL",
+    "quantity": "26896.584",
+    "transaction": "226532509.4167",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "RUBAMIN SARL",
+    "quantity": "16998.496",
+    "transaction": "112915787.4611",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SABWE MINING SARLSABWE MINING SARL",
+    "quantity": "1500.0",
+    "transaction": "12260220.0",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SHITURU MINING CORPORATION SPRL",
+    "quantity": "32755.088",
+    "transaction": "278257272.5104",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SINO CONGOLAISE DES MINES SARL",
+    "quantity": "238053.88667",
+    "transaction": "1996309520.6485",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE CNMC CONGO COMPAGNIE MINIER",
+    "quantity": "18025.632999999998",
+    "transaction": "152520729.75959998",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE D'EXPLOITATION DE KIPOI",
+    "quantity": "33087.241",
+    "transaction": "280259199.7552",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE KAI PENG MINING",
+    "quantity": "48465.572",
+    "transaction": "417154650.3322",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE MINIERE DE DEZIWA SAS",
+    "quantity": "83503.975",
+    "transaction": "712242395.3726",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE MINIERE DU KATANGA",
+    "quantity": "38310.0",
+    "transaction": "324492245.126",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "SOCIETE POUR LE TRAITEMENT DU TERRIL DE LUBUMBASHI",
+    "quantity": "19082.364",
+    "transaction": "60400954.92352",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "TENGYUAN COBALT & COPPER RESOURCES",
+    "quantity": "47241.212",
+    "transaction": "399276248.0377",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
+  },
+  {
+    "year": "2023",
+    "product": "Copper",
+    "exporter": "THOMAS MINING SARL",
+    "quantity": "28597.7615",
+    "transaction": "241396118.5667",
+    "quantity_percent": "0",
+    "transaction_percent": "0"
   }
 ]
