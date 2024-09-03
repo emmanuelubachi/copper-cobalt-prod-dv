@@ -108,11 +108,11 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
             <TableRow>
               <TableHead>Exporter</TableHead>
               <TableHead>Quantity</TableHead>
-              <TableHead className="hidden md:table-cell">% Quantity</TableHead>
+              {/* <TableHead className="hidden md:table-cell">% Quantity</TableHead> */}
               <TableHead>Transaction</TableHead>
-              <TableHead className="hidden md:table-cell">
+              {/* <TableHead className="hidden md:table-cell">
                 % Transaction
-              </TableHead>
+              </TableHead> */}
               <TableHead className="hidden xl:table-cell">Product</TableHead>
             </TableRow>
           </TableHeader>
@@ -124,19 +124,19 @@ export default function ExportTable({ data }: { data: xShareDataProps }) {
                 </TableCell>
 
                 <TableCell>{quantityFormatter(product.quantity)}</TableCell>
-                <TableCell className="hidden text-xs md:table-cell">
+                {/* <TableCell className="hidden text-xs md:table-cell">
                   <Progress className="w-20" value={product.quantity_percent} />
                   {product.quantity_percent}%
-                </TableCell>
+                </TableCell> */}
                 <TableCell>{floatFormatter(product.transaction)}</TableCell>
-                <TableCell className="hidden text-xs md:table-cell">
+                {/* <TableCell className="hidden text-xs md:table-cell">
                   <Progress
                     slot="value"
                     className="w-20"
                     value={product.transaction_percent}
                   />
                   {product.transaction_percent}%
-                </TableCell>
+                </TableCell> */}
 
                 <TableCell>
                   <Badge
