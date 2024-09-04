@@ -92,7 +92,7 @@ export default function MainMap({
       : {
           longitude: 23.52741376552,
           latitude: -3.050471588628,
-          zoom: 3,
+          zoom: 4.3,
           bearing: 0,
           pitch: 0,
         },
