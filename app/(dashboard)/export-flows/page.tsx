@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     <main>
-      <header className="left-0 right-0 z-20 flex items-start justify-between gap-4 bg-background/50 px-2 py-4 backdrop-blur-md dark:bg-neutral-900/50 sm:px-8 sm:py-6">
+      <header className="__header flex items-center justify-between gap-4">
         <h1 className="text-center text-h5 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h5">
           Export Flows for{" "}
           <span className="border-b-2 border-primary/50 font-black">

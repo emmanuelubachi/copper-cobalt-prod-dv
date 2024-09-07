@@ -100,6 +100,8 @@
     --p: 1rem;
 
     --pxs: 0.7rem;
+
+    --pxxs: 0.5rem;
   }
 }
 
@@ -232,4 +234,8 @@
   margin-top: 2px;
   margin-right: 2px;
   padding: 4px 8px;
+}
+
+.__header {
+  @apply left-0 right-0 z-20 bg-background/50 px-2 py-4 backdrop-blur-md dark:bg-neutral-900/50 sm:px-8 sm:py-6;
 }
