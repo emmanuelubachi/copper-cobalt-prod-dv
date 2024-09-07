@@ -10,6 +10,15 @@ function shortenText(text: string): string {
   return text.split(" ")[0];
 }
 
+/**
+ * @function ExportFlow
+ * @description A component to display export flow data with Sankey chart.
+ * @param {object} props Component props.
+ * @param {any[]} props.data The export flow data.
+ * @param {any[]} props.data2 The export flow data for importers.
+ * @param {boolean} [props.hasYear=true] Whether the component should display year selection or not.
+ * @returns {ReactElement} The ExportFlow component.
+ */
 export default function ExportFlow({
   data,
   data2,
@@ -116,7 +125,7 @@ export default function ExportFlow({
       )}
 
       <Card className="__card">
-        <CardHeader>
+        <CardHeader className="p-2 sm:p-6">
           <div className="flex items-center justify-end">
             <ProductToggle
               defaultValue={selectedProduct}
@@ -124,7 +133,7 @@ export default function ExportFlow({
             />
           </div>
         </CardHeader>
-        <CardContent className="">
+        <CardContent className="p-2 sm:p-6">
           <SankeyChart data={sankeyData} />
         </CardContent>
       </Card>

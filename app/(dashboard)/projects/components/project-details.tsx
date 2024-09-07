@@ -12,11 +12,11 @@ export default function ProjectDetails({
   const cobaltData = totalExports.filter((row) => row.product === "Cobalt");
 
   return (
-    <Card className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
-      <CardContent className="space-y-4 px-0 lg:pt-2">
-        <div className="grid gap-8 lg:grid-cols-2">
+    <div className="shrink border-none bg-transparent shadow-none lg:col-span-2 lg:h-fit">
+      <div className="px-0 lg:pt-2">
+        <div className="grid gap-4 lg:grid-cols-2 lg:gap-8">
           {/* Project Info */}
-          <div className="flex flex-col flex-wrap gap-2 text-start text-sm tracking-tight text-muted-foreground sm:text-p">
+          <div className="flex flex-col flex-wrap gap-2 text-start text-xs tracking-tight text-muted-foreground sm:text-sm">
             <h4 className="leading-none">
               Nationality:{" "}
               <span className="font-medium text-foreground">
@@ -90,7 +90,7 @@ export default function ProjectDetails({
             </div>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

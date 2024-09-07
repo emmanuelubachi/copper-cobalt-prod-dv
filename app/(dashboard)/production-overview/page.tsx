@@ -235,7 +235,7 @@ export default function Dashboard() {
 
           <div className="grid items-start gap-4 md:gap-6 xl:grid-cols-3">
             <div className="space-y-4 xl:col-span-2">
-              {/* Exports Production by Projects Chart */}
+              {/* Exports of Product by Projects Chart */}
               <ProductionExports
                 selectedYear={selectedYear}
                 coXhistory={coXhistory}
