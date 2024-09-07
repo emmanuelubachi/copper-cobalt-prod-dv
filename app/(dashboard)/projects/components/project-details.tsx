@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { calculateProductSummary } from "@/lib/dataProcessing";
 
 export default function ProjectDetails({

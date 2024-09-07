@@ -31,7 +31,7 @@ export const NAVLIST: NavItem[] = [
   {
     name: "Project",
     path: "/projects",
-    link: `/projects?project_id=${defaultPRoject}`,
+    link: `/projects`,
     icon: Pickaxe,
   },
 

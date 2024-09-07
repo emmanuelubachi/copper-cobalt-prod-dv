@@ -1,17 +1,18 @@
 import { fetchData } from "@/lib/fetchData";
 import { redirect } from "next/navigation";
 
-import Projects from "./components/projects";
 import ErrorNotification from "@/components/elements/notification";
 
 import IndustrialProjectsData from "@/data/projects/industrial_projects.json";
-import MonthlyExportsData from "@/data/projects/projects_monthly_exports.json";
 import ProductCompositionDestinationData from "@/data/projects/product_composition_destination.json";
+import MonthlyExportsData from "@/data/projects/projects_monthly_exports.json";
+import ExportFlowFromProjData from "@/data/export-flow/export_flow_from_projects.json";
+import ExportFlowFromImportData from "@/data/export-flow/export_flow_from_importers.json";
 
 import { SearchParams } from "@/types";
-import { ProjectDataProps } from "@/types/projects";
 
 import { defaultPRoject } from "@/constants/application";
+import MainPage from "./components/main-page";
 
 export default async function Page({
   searchParams,
@@ -19,6 +20,9 @@ export default async function Page({
   searchParams: SearchParams;
 }) {
   const { projectInfo, errorType } = await fetchData(searchParams);
+  const { tab } = searchParams;
+
+  console.log("searchParams", tab);
 
   // Handle invalid parameters
   if (errorType === "invalidParams") {
@@ -54,16 +58,24 @@ export default async function Page({
     (d) => d._project_id === projectInfo._project_id,
   );
 
+  const exportFlowFromProjData = ExportFlowFromProjData.filter(
+    (d) => d._project_id === projectInfo._project_id,
+  );
+
   return (
-    <>
+    <main>
       <ErrorNotification errorType={errorType} />
-      <Projects
-        projectInfo={projectInfo}
-        projectData={projectData as unknown as ProjectDataProps}
-        productData={productData}
-        productionYears={productionYears}
-        monthlyExportData={monthlyExportsData}
+      <MainPage
+        {...{
+          projectInfo,
+          projectData,
+          productData,
+          productionYears,
+          monthlyExportsData,
+          exportFlowFromProjData,
+          ExportFlowFromImportData,
+        }}
       />
-    </>
+    </main>
   );
 }
