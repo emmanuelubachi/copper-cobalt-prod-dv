@@ -5,7 +5,7 @@ import { ShareButton } from "@/components/elements/shareButton";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main className="relative">
-      <div className="absolute left-4 top-4 z-20 space-x-2 sm:left-7 sm:top-4">
+      <div className="absolute left-2 top-4 z-20 space-x-1 sm:left-7 sm:top-4 sm:space-x-2">
         <FilterButton
           content={<MapFilter defaultValue="mining-activities" />}
           label="Mining Activities"
@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           type="button"
         />
       </div>
-      <ShareButton className="__muted absolute right-4 top-4 z-20 sm:right-7 sm:top-4" />
+      <ShareButton className="__muted absolute right-2 top-4 z-20 sm:right-7 sm:top-4" />
       {children}
     </main>
   );
