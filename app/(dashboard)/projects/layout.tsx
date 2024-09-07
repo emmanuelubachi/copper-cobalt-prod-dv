@@ -19,9 +19,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      <div className="mb-24 min-h-screen w-full items-start space-y-4 px-4 sm:mb-0 sm:px-8 sm:pb-8">
+      <section className="mb-24 min-h-screen w-full items-start space-y-4 px-4 sm:mb-0 sm:px-8 sm:pb-8">
         {children}
-      </div>
+      </section>
     </main>
   );
 }

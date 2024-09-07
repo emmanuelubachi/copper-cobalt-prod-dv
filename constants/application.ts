@@ -1,4 +1,10 @@
-import { LineChart, Map, Pickaxe, Building } from "lucide-react";
+import {
+  LineChart,
+  Map,
+  Pickaxe,
+  GitCompareArrows,
+  Building,
+} from "lucide-react";
 import { NavItem } from "@/types";
 
 export const defaultPRoject = "ruashi";
@@ -17,11 +23,18 @@ export const NAVLIST: NavItem[] = [
     icon: LineChart,
   },
   {
+    name: "Export Flows",
+    path: "/export-flows",
+    link: "/export-flows",
+    icon: GitCompareArrows,
+  },
+  {
     name: "Project",
     path: "/projects",
     link: `/projects?project_id=${defaultPRoject}`,
     icon: Pickaxe,
   },
+
   {
     name: "Companies",
     path: "/companies",
