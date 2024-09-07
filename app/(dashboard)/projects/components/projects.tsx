@@ -89,10 +89,10 @@ export default function Projects({
 
   return (
     <section className="space-y-0">
-      <div
+      <header
         className={cn(
-          "left-0 right-0 z-20 flex w-full flex-col-reverse gap-4 space-y-2 bg-background/50 py-2 backdrop-blur-md",
-          "top-0 dark:bg-neutral-900/50 sm:justify-between sm:py-4 lg:sticky lg:flex-row lg:space-y-0",
+          "left-0 right-0 z-20 flex w-full flex-col-reverse gap-4 space-y-2 bg-background/50 px-2 py-2 backdrop-blur-md",
+          "top-0 dark:bg-neutral-900/50 sm:justify-between sm:px-8 sm:py-4 lg:sticky lg:mb-4 lg:flex-row lg:space-y-0",
         )}
       >
         <h2 className="text-start text-h5 font-medium tracking-tight">
@@ -108,10 +108,10 @@ export default function Projects({
             dynamicYears={productionYears}
           />
         </div>
-      </div>
+      </header>
 
       {/* Charts */}
-      <div className="space-y-4">
+      <div className="mb-24 items-start space-y-4 px-2 sm:mb-0 sm:px-8 sm:pb-8">
         <div className="grid items-start gap-4 xl:grid-cols-3">
           {/* Project Info and Treemap */}
           <div className="space-y-4 xl:col-span-2">
