@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header
         className={cn(
           "left-0 right-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0",
-          "bg-muted/90 pr-4 backdrop-blur-sm dark:bg-background/70 sm:py-6 sm:pr-8 md:shadow-sm",
+          "bg-muted/90 pr-2 backdrop-blur-sm dark:bg-background/70 sm:py-6 sm:pr-8 md:shadow-sm",
         )}
       >
         <ProjectNavigation />
