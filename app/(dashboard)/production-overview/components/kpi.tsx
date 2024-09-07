@@ -230,7 +230,7 @@ export default function KPI({
           <div className="absolute right-5 top-6">
             <DollarSign className="h-8 w-8 rounded-full bg-chart5/80 stroke-white p-1" />
           </div>
-          <CardContent className="__card-content">
+          <CardContent className="">
             <KPIChart
               data={copperTransactionTrend}
               config={cuTransactionConfig}

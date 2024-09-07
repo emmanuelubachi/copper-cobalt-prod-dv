@@ -32,13 +32,13 @@ export default function ProductionExports({
       <TabsList className="rounded-md bg-muted">
         <TabsTrigger
           value="cobalt"
-          className="__button_pressed rounded-md bg-muted text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
+          className="__button_pressed rounded-md bg-muted text-sm text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
         >
           Cobalt
         </TabsTrigger>
         <TabsTrigger
           value="copper"
-          className="__button_pressed rounded-md bg-muted text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
+          className="__button_pressed rounded-md bg-muted text-sm text-foreground/70 ring-neutral-200 data-[state=active]:font-semibold"
         >
           {" "}
           Copper
