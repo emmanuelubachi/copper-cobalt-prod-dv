@@ -118,7 +118,7 @@ export default function KPI({
   );
 
   return (
-    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-4">
       {cobaltData.length > 0 ? (
         <Card className="__card relative">
           <CardHeader className="flex flex-col space-y-1 py-4">
@@ -129,7 +129,7 @@ export default function KPI({
               </span>
             </h3>
 
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+            <h2 className="text-xs font-bold leading-none tracking-wider text-foreground/60">
               Cobalt Quantity
             </h2>
           </CardHeader>
@@ -160,7 +160,7 @@ export default function KPI({
               {currencyFormatter(parseFloat(cobaltData[0].transaction))}{" "}
             </h3>
 
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+            <h2 className="text-xs font-bold leading-none tracking-wider text-foreground/60">
               Cobalt Transaction
             </h2>
           </CardHeader>
@@ -193,7 +193,7 @@ export default function KPI({
               </span>
             </h3>
 
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+            <h2 className="text-xs font-bold leading-none tracking-wider text-foreground/60">
               Copper Quantity
             </h2>
           </CardHeader>
@@ -223,7 +223,7 @@ export default function KPI({
             <h3 className="text-h4 font-bold 2xl:text-h3">
               {currencyFormatter(parseFloat(copperData[0].transaction))}{" "}
             </h3>
-            <h2 className="text-sm font-bold leading-none tracking-wider text-foreground/60">
+            <h2 className="text-xs font-bold leading-none tracking-wider text-foreground/60">
               Copper Transaction
             </h2>
           </CardHeader>
