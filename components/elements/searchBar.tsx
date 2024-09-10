@@ -31,7 +31,7 @@ export default function SearchBarDialog({
 }: {
   data: CompaniesListProps;
 }) {
-  const { isMobile } = useDeviceType();
+  const { isMobile, isTablet } = useDeviceType();
   const searchParams = useSearchParams();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -47,15 +47,15 @@ export default function SearchBarDialog({
     .filter((country) => country.children.length > 0);
 
   return (
-    <div className="relative ml-auto sm:w-full">
+    <div className="relative ml-auto lg:w-full">
       <Button
         variant="outline"
-        size={isMobile ? "icon" : "lg"}
-        className="__button_shadow __button_pressed __dark-muted rounded-full text-left font-normal sm:w-full sm:justify-start sm:rounded-md"
+        size={isMobile || isTablet ? "icon" : "default"}
+        className="__button_shadow __button_pressed __dark-muted rounded-full text-left font-normal lg:w-full lg:justify-start lg:rounded-md"
         onClick={() => setOpen(true)}
       >
         <Search className="h-5 w-5 text-primary" />
-        <span className="ml-2 hidden sm:block">Search companies...</span>
+        <span className="ml-2 hidden lg:block">Search companies...</span>
         <span className="sr-only">Search for companies</span>
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>

@@ -64,7 +64,7 @@ export default function MainPage({
           </TabsTrigger>
         </TabsList>
 
-        <div className="flex w-96 items-center justify-end gap-1 sm:gap-2">
+        <div className="flex w-full max-w-96 items-center justify-end gap-1 sm:gap-2">
           <SearchBarDialog data={CompaniesList} />
           <ShareButton />
         </div>

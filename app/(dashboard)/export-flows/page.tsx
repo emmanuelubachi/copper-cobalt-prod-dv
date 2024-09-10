@@ -24,7 +24,7 @@ export default function Page() {
   return (
     <main>
       <header className="__header flex items-center justify-between gap-4">
-        <h1 className="text-center text-h5 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h5">
+        <h1 className="text-center text-h6 font-medium tracking-tight lg:text-start lg:text-h5 xl:text-h5">
           Export Flows for{" "}
           <span className="border-b-2 border-primary/50 font-black">
             {selectedYear}
