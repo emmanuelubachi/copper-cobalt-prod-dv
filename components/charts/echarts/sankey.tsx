@@ -3,25 +3,43 @@ import React from "react";
 import ReactEcharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 
-export default function SankeyChart({ data }: any) {
+/**
+ * A Sankey chart component that renders a Sankey chart using the ECharts library.
+ *
+ * @param {Object} props Component props.
+ * @param {any} props.data The data to be rendered as a Sankey chart.
+ * @param {string} [props.height] The height of the chart in pixels.
+ * @returns {ReactElement} The Sankey chart component.
+ */
+export default function SankeyChart({
+  data,
+  height,
+}: {
+  data: any;
+  height: number;
+}) {
   const { theme, systemTheme } = useTheme();
   const isDarkMode =
     theme === "dark" || (theme === "system" && systemTheme === "dark");
 
   return (
     <ReactEcharts
-      style={{ height: "1100px", width: "100%" }}
+      style={{
+        height: `${height + 30 + "px"}`,
+        width: "100%",
+      }}
       option={{
         tooltip: {
           trigger: "item",
         },
-        height: 1000,
+
+        height: height,
 
         series: [
           {
             type: "sankey",
             layout: "none",
-            height: 1000,
+            height: height,
             emphasis: {
               focus: "adjacency",
             },

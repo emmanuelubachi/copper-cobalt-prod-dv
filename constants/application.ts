@@ -23,7 +23,7 @@ export const NAVLIST: NavItem[] = [
     icon: LineChart,
   },
   {
-    name: "Export Flows",
+    name: "Flows",
     path: "/export-flows",
     link: "/export-flows",
     icon: GitCompareArrows,

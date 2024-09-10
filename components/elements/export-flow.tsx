@@ -149,7 +149,7 @@ export default function ExportFlow({
           </div>
         </CardHeader>
         <CardContent className="p-2 sm:p-6">
-          <SankeyChart data={sankeyData} />
+          <SankeyChart data={sankeyData} height={isMobile ? 800 : 800} />
         </CardContent>
       </Card>
     </>
