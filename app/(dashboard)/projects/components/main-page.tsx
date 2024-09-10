@@ -26,7 +26,7 @@ export default function MainPage({
   productionYears,
   monthlyExportsData,
   exportFlowFromProjData,
-  ExportFlowFromImportData,
+  exportFlowFromImportData,
 }: any) {
   const router = useRouter();
   const pathname = usePathname();
@@ -87,7 +87,7 @@ export default function MainPage({
         <ExportFlow
           projectInfo={projectInfo}
           data={exportFlowFromProjData}
-          data2={ExportFlowFromImportData}
+          data2={exportFlowFromImportData}
         />
       </TabsContent>
       {/* </div> */}

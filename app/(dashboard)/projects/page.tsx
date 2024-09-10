@@ -59,6 +59,10 @@ export default async function Page({
     (d) => d._project_id === projectInfo._project_id,
   );
 
+  const exportFlowFromImportData = ExportFlowFromImportData.filter(
+    (d) => d._project_id === projectInfo._project_id,
+  );
+
   return (
     <main>
       <ErrorNotification errorType={errorType} />
@@ -70,7 +74,7 @@ export default async function Page({
           productionYears,
           monthlyExportsData,
           exportFlowFromProjData,
-          ExportFlowFromImportData,
+          exportFlowFromImportData,
         }}
       />
     </main>

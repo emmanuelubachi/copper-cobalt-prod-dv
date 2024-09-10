@@ -32,8 +32,8 @@ export default function ExportFlow({
   hasYear?: boolean;
 }) {
   const { isMobile, isTablet } = useDeviceType();
-  const [selectedYear, setSelectedYear] = useState<string>("2023");
-  const [selectedProduct, setSelectedProduct] = useState<string>("Cobalt");
+  const [selectedYear, setSelectedYear] = useState<string>("2022");
+  const [selectedProduct, setSelectedProduct] = useState<string>("Copper");
 
   const years = ["2022", "2023"];
 
@@ -118,7 +118,7 @@ export default function ExportFlow({
             {projectInfo?.project_name ? (
               <div>
                 <h2>{projectInfo?.project_name}</h2>
-                <h4 className="text-sm text-muted-foreground md:text-h6">
+                <h4 className="text-sm tracking-wider text-foreground/70 md:text-h6">
                   <span className="border-b-2 border-primary/50 font-black">
                     {selectedYear}
                   </span>{" "}
