@@ -20,9 +20,6 @@ export default async function Page({
   searchParams: SearchParams;
 }) {
   const { projectInfo, errorType } = await fetchData(searchParams);
-  const { tab } = searchParams;
-
-  console.log("searchParams", tab);
 
   // Handle invalid parameters
   if (errorType === "invalidParams") {

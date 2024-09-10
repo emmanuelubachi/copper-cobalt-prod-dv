@@ -61,72 +61,74 @@ export function ShareButton({ ...props }: ShareButtonProps) {
   };
 
   return (
-    <Dialog>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <DialogTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className={cn(
-                  className,
-                  "__button_pressed __button_shadow __dark-muted gap-2 rounded-full border-none transition-colors hover:text-primary dark:text-foreground/70 dark:hover:text-foreground",
-                )}
-              >
-                <span className="sr-only">Share</span>
-                <Share2Icon className="h-5 w-5" />
-              </Button>
-            </DialogTrigger>
-          </TooltipTrigger>
-          <TooltipContent side="top">{tooltip}</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+    <div className="z-[60]">
+      <Dialog>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <DialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className={cn(
+                    className,
+                    "__button_pressed __button_shadow __dark-muted rounded-full border-none transition-colors hover:text-primary dark:text-foreground/70 dark:hover:text-foreground",
+                  )}
+                >
+                  <span className="sr-only">Share</span>
+                  <Share2Icon className="h-5 w-5" />
+                </Button>
+              </DialogTrigger>
+            </TooltipTrigger>
+            <TooltipContent side="top">{tooltip}</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
 
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Share link</DialogTitle>
-          <DialogDescription>
-            Anyone who has this link will be able to view this page.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="flex items-center space-x-2">
-          <div className="grid flex-1 gap-2">
-            <Label htmlFor="link" className="sr-only">
-              Link
-            </Label>
-            <Input id="link" defaultValue={link} readOnly />
-          </div>
-          <Button
-            type="submit"
-            size="sm"
-            className="px-3"
-            onClick={copyToClipboard}
-          >
-            <span className="sr-only">Copy</span>
-            <CopyIcon className="h-4 w-4" />
-          </Button>
-        </div>
-
-        {/* Feedback message */}
-        <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <div className="flex items-center space-x-2">
-              <Button type="button" variant="secondary">
-                Close
-              </Button>
-
-              <p
-                className={`text-sm text-green-600 transition-opacity duration-500 ${
-                  isCopied ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                Copied!
-              </p>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Share link</DialogTitle>
+            <DialogDescription>
+              Anyone who has this link will be able to view this page.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex items-center space-x-2">
+            <div className="grid flex-1 gap-2">
+              <Label htmlFor="link" className="sr-only">
+                Link
+              </Label>
+              <Input id="link" defaultValue={link} readOnly />
             </div>
-          </DialogClose>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+            <Button
+              type="submit"
+              size="sm"
+              className="px-3"
+              onClick={copyToClipboard}
+            >
+              <span className="sr-only">Copy</span>
+              <CopyIcon className="h-4 w-4" />
+            </Button>
+          </div>
+
+          {/* Feedback message */}
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>
+              <div className="flex items-center space-x-2">
+                <Button type="button" variant="secondary">
+                  Close
+                </Button>
+
+                <p
+                  className={`text-sm text-green-600 transition-opacity duration-500 ${
+                    isCopied ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  Copied!
+                </p>
+              </div>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }

@@ -248,7 +248,6 @@ export default function MapContents({ reference }: MapContentsProps) {
 
   const handleArtisanalSiteClick = useCallback(
     (site: any, latitude: number, longitude: number) => {
-      console.log(site);
       const site_name = site.site_name;
       router.push(
         pathname +

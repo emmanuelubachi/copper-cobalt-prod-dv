@@ -4,10 +4,10 @@ import ReactEcharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 
 export default function SankeyChart({ data }: any) {
-  const { theme } = useTheme();
-  const isDarkMode = theme === "dark";
+  const { theme, systemTheme } = useTheme();
+  const isDarkMode =
+    theme === "dark" || (theme === "system" && systemTheme === "dark");
 
-  console.log("sankey data", data);
   return (
     <ReactEcharts
       style={{ height: "1100px", width: "100%" }}

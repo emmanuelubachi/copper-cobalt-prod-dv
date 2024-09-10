@@ -12,8 +12,6 @@ import { ProjectDataProps } from "@/types/projects";
 import YearToggle from "@/components/year-toggle";
 import { Years } from "@/data/chartData";
 import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
-import SearchBarDialog from "@/components/elements/searchBar";
-import { CompaniesList } from "@/constants/application";
 import { treeMapChartConfig } from "@/constants/chart";
 import { transformProdDesData } from "@/lib/dataProcessing";
 import ProjectDetails from "./project-details";
@@ -99,7 +97,6 @@ export default function Projects({
           {projectInfo.project_name}
         </h2>
         <div className="ml-auto flex w-full flex-col items-center justify-end gap-2 md:w-fit md:flex-row">
-          <SearchBarDialog data={CompaniesList} />
           <YearToggle
             value={selectedYear}
             onChangeFunction={setSelectedYear}
