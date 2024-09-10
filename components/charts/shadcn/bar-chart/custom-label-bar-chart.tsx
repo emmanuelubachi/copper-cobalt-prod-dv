@@ -40,8 +40,6 @@ export default function CustomLabelBarChart({
     ...chartData.map((item: any) => item[props.xAxisDataKey]),
   );
 
-  console.log("maxValue:", maxValue);
-
   return (
     <Card className="__card">
       <CardHeader className="border-b px-4">

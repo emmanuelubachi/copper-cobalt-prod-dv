@@ -2,7 +2,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { RiArrowLeftLine } from "@remixicon/react";
 import { ChevronLeft } from "lucide-react";
 
 export default function BackButton() {

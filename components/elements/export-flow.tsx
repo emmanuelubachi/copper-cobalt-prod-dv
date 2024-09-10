@@ -6,7 +6,6 @@ import { CardContent, Card, CardHeader } from "@/components/ui/card";
 import YearToggle from "@/components/year-toggle";
 import useDeviceType from "@/hooks/useDeviceType";
 import { ProjectInfo } from "@/types";
-import { Divide } from "lucide-react";
 
 function shortenText(text: string): string {
   return text.split(" ")[0];

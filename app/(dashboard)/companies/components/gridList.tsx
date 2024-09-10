@@ -21,32 +21,8 @@ const Flag = ({ countryCode }: FlagProps) => {
 export default function GridList({ data }: { data: CompaniesListProps }) {
   const { closeFilter } = useFilterStore();
 
-  // const [selectedGroup, setSelectedGroup] = React.useState("Country");
-
   return (
     <div className="space-y-2">
-      {/* <div className="flex items-center justify-end space-x-2">
-        <h3 className="text-xs font-medium text-foreground/70">Group by:</h3>
-        <ToggleGroup
-          type="single"
-          unselectable="off"
-          size={"sm"}
-          defaultValue={selectedGroup}
-          onValueChange={(value) => {
-            if (value) setSelectedGroup(value);
-          }}
-          className="justify-end gap-0"
-        >
-          <ToggleGroupItem
-            value={"Country"}
-            aria-label={`Toggle product Cobalt`}
-            className="__button_pressed rounded-lg bg-chart6/10 px-3 text-chart6 transition-all duration-300 data-[state=on]:bg-chart6/20 data-[state=on]:font-black data-[state=on]:text-chart6 hover:bg-chart6/10 hover:text-chart6/80 dark:bg-background/15 dark:data-[state=on]:bg-chart6/10 dark:data-[state=on]:text-blue-400"
-          >
-            {"Country"}
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </div> */}
-
       <div className="mt-2 gap-3 space-y-6 sm:mt-4">
         {data.map((member) => (
           <>
