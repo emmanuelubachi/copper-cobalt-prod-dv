@@ -16,6 +16,8 @@ import ExportFlow from "@/components/elements/export-flow";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 
 import { usePathname, useSearchParams } from "next/navigation";
+import SearchBarDialog from "@/components/elements/searchBar";
+import { CompaniesList } from "@/constants/application";
 
 export default function MainPage({
   projectInfo,
@@ -34,7 +36,7 @@ export default function MainPage({
 
   return (
     <Tabs defaultValue={tab || "overview"} className="">
-      <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/90 pr-4 backdrop-blur-sm dark:bg-background/70 sm:pr-8 md:shadow-sm">
+      <header className="sticky left-0 right-0 top-0 z-20 flex h-16 items-center justify-between gap-6 space-y-0 bg-muted/90 pr-4 backdrop-blur-lg dark:bg-background/70 sm:pr-8 md:shadow-sm">
         <TabsList>
           <TabsTrigger
             value="overview"
@@ -62,7 +64,8 @@ export default function MainPage({
           </TabsTrigger>
         </TabsList>
 
-        <div className="flex items-center justify-end gap-1 sm:gap-2">
+        <div className="flex w-96 items-center justify-end gap-1 sm:gap-2">
+          <SearchBarDialog data={CompaniesList} />
           <ShareButton />
         </div>
       </header>
@@ -82,6 +85,7 @@ export default function MainPage({
         className="mb-24 items-start space-y-4 px-2 sm:mb-0 sm:px-8 sm:pb-8"
       >
         <ExportFlow
+          projectInfo={projectInfo}
           data={exportFlowFromProjData}
           data2={ExportFlowFromImportData}
         />

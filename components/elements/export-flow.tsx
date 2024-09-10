@@ -5,6 +5,8 @@ import SankeyChart from "@/components/charts/echarts/sankey";
 import { CardContent, Card, CardHeader } from "@/components/ui/card";
 import YearToggle from "@/components/year-toggle";
 import useDeviceType from "@/hooks/useDeviceType";
+import { ProjectInfo } from "@/types";
+import { Divide } from "lucide-react";
 
 function shortenText(text: string): string {
   return text.split(" ")[0];
@@ -20,10 +22,12 @@ function shortenText(text: string): string {
  * @returns {ReactElement} The ExportFlow component.
  */
 export default function ExportFlow({
+  projectInfo,
   data,
   data2,
   hasYear = true,
 }: {
+  projectInfo?: ProjectInfo;
   data: any[];
   data2: any[];
   hasYear?: boolean;
@@ -111,9 +115,21 @@ export default function ExportFlow({
     <>
       {hasYear && (
         <div className="z-20 flex items-center justify-between gap-6 space-y-4 py-4 lg:space-y-0">
-          <h2 className="text-start text-h5 font-medium tracking-tight">
-            {`${selectedYear} Export Flows`}
-          </h2>
+          <div className="text-start text-h5 font-medium tracking-tight">
+            {projectInfo?.project_name ? (
+              <div>
+                <h2>{projectInfo?.project_name}</h2>
+                <h4 className="text-sm text-muted-foreground md:text-h6">
+                  <span className="border-b-2 border-primary/50 font-black">
+                    {selectedYear}
+                  </span>{" "}
+                  Export Flows
+                </h4>
+              </div>
+            ) : (
+              <h2>{selectedProduct} Export Flows</h2>
+            )}
+          </div>
           <div>
             <YearToggle
               years={years}

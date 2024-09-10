@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CompaniesListProps } from "@/types/projects";
+import useDeviceType from "@/hooks/useDeviceType";
 
 type FlagProps = {
   countryCode: string;
@@ -30,6 +31,7 @@ export default function SearchBarDialog({
 }: {
   data: CompaniesListProps;
 }) {
+  const { isMobile } = useDeviceType();
   const searchParams = useSearchParams();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -45,15 +47,16 @@ export default function SearchBarDialog({
     .filter((country) => country.children.length > 0);
 
   return (
-    <div className="relative ml-auto w-full max-w-lg">
+    <div className="relative ml-auto sm:w-full">
       <Button
         variant="outline"
-        size="lg"
-        className="w-full justify-start bg-muted text-left font-normal"
+        size={isMobile ? "icon" : "lg"}
+        className="__button_shadow __button_pressed __dark-muted rounded-full text-left font-normal sm:w-full sm:justify-start sm:rounded-md"
         onClick={() => setOpen(true)}
       >
-        <Search className="mr-2 h-4 w-4" />
-        <span>Search companies...</span>
+        <Search className="h-5 w-5 text-primary" />
+        <span className="ml-2 hidden sm:block">Search companies...</span>
+        <span className="sr-only">Search for companies</span>
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="flex h-[80vh] flex-col sm:max-w-[850px]">
