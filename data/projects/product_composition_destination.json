@@ -6,7 +6,7 @@
     "quantity": "2700.0",
     "transaction": "2762548",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -16,7 +16,7 @@
     "quantity": "175.0",
     "transaction": "164178",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -26,7 +26,7 @@
     "quantity": "448.0",
     "transaction": "359607",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -36,7 +36,7 @@
     "quantity": "3050.0",
     "transaction": "2641999",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -46,7 +46,7 @@
     "quantity": "4825.0",
     "transaction": "6341056",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -56,7 +56,7 @@
     "quantity": "75.0",
     "transaction": "58725",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -466,7 +466,7 @@
     "quantity": "10426.0",
     "transaction": "16656800",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -486,7 +486,7 @@
     "quantity": "3489.0",
     "transaction": "4311300",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -536,7 +536,7 @@
     "quantity": "7388.6",
     "transaction": "18223323",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -566,7 +566,7 @@
     "quantity": "46.8",
     "transaction": "79475",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -656,7 +656,7 @@
     "quantity": "45.0",
     "transaction": "70110",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -686,7 +686,7 @@
     "quantity": "402.5",
     "transaction": "966000",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -716,7 +716,7 @@
     "quantity": "102.5",
     "transaction": "348500",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -736,7 +736,7 @@
     "quantity": "18788.5",
     "transaction": "23518575",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -796,7 +796,7 @@
     "quantity": "6781.5",
     "transaction": "11660650",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -846,7 +846,7 @@
     "quantity": "33.8",
     "transaction": "121500",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -866,7 +866,7 @@
     "quantity": "33.8",
     "transaction": "138375",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -876,7 +876,7 @@
     "quantity": "68.8",
     "transaction": "282000",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -886,7 +886,7 @@
     "quantity": "33.8",
     "transaction": "151875",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -906,7 +906,7 @@
     "quantity": "12179.0",
     "transaction": "67262870",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -936,7 +936,7 @@
     "quantity": "2991.0",
     "transaction": "14033975",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "boss"
   },
   {
@@ -1426,7 +1426,7 @@
     "quantity": "308.6",
     "transaction": "4600449",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "chengtun_congo"
   },
   {
@@ -2156,7 +2156,7 @@
     "quantity": "168.8",
     "transaction": "3179946",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2186,7 +2186,7 @@
     "quantity": "102.9",
     "transaction": "1128686",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2196,7 +2196,7 @@
     "quantity": "3522.6",
     "transaction": "63954346",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2216,7 +2216,7 @@
     "quantity": "42829.9",
     "transaction": "372507261",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2246,7 +2246,7 @@
     "quantity": "6654.9",
     "transaction": "66198311",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2286,7 +2286,7 @@
     "quantity": "12748.1",
     "transaction": "91334572",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2326,7 +2326,7 @@
     "quantity": "35552.4",
     "transaction": "330181441",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2386,7 +2386,7 @@
     "quantity": "33.6",
     "transaction": "512027",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2396,7 +2396,7 @@
     "quantity": "134.8",
     "transaction": "3188226",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2406,7 +2406,7 @@
     "quantity": "135.2",
     "transaction": "2730916",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2416,7 +2416,7 @@
     "quantity": "67.0",
     "transaction": "1001462",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2426,7 +2426,7 @@
     "quantity": "100.4",
     "transaction": "1501152",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2436,7 +2436,7 @@
     "quantity": "7496.3",
     "transaction": "130819550",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2466,7 +2466,7 @@
     "quantity": "135.1",
     "transaction": "2730642",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2476,7 +2476,7 @@
     "quantity": "168.3",
     "transaction": "2803061",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2486,7 +2486,7 @@
     "quantity": "23063.1",
     "transaction": "456175649",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2516,7 +2516,7 @@
     "quantity": "5078.8",
     "transaction": "113303388",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2546,7 +2546,7 @@
     "quantity": "302.2",
     "transaction": "6627320",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2586,7 +2586,7 @@
     "quantity": "7108.0",
     "transaction": "70353099",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2606,7 +2606,7 @@
     "quantity": "19065.8",
     "transaction": "178374245",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2626,7 +2626,7 @@
     "quantity": "10322.6",
     "transaction": "115941463",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2646,7 +2646,7 @@
     "quantity": "2653.3",
     "transaction": "27814734",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2666,7 +2666,7 @@
     "quantity": "22937.8",
     "transaction": "369752558",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2686,7 +2686,7 @@
     "quantity": "608.0",
     "transaction": "12553646",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2706,7 +2706,7 @@
     "quantity": "13729.7",
     "transaction": "331285584",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -2726,7 +2726,7 @@
     "quantity": "707.0",
     "transaction": "18555915",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ctrk"
   },
   {
@@ -3276,7 +3276,7 @@
     "quantity": "13454.2",
     "transaction": "82229665",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3286,7 +3286,7 @@
     "quantity": "4738.7",
     "transaction": "28715247",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3296,7 +3296,7 @@
     "quantity": "678.4",
     "transaction": "542720",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3326,7 +3326,7 @@
     "quantity": "6655.5",
     "transaction": "42073696",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3336,7 +3336,7 @@
     "quantity": "9435.9",
     "transaction": "52888076",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3346,7 +3346,7 @@
     "quantity": "20675.6",
     "transaction": "95657607",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3356,7 +3356,7 @@
     "quantity": "21494.5",
     "transaction": "117844259",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3366,7 +3366,7 @@
     "quantity": "14759.6",
     "transaction": "93024750",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -3376,7 +3376,7 @@
     "quantity": "1109.8",
     "transaction": "6659010",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -4136,7 +4136,7 @@
     "quantity": "514.3",
     "transaction": "2444812",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cimc"
   },
   {
@@ -4156,7 +4156,7 @@
     "quantity": "815.7",
     "transaction": "3643973",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cimc"
   },
   {
@@ -4266,7 +4266,7 @@
     "quantity": "678.3",
     "transaction": "3987952",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cjcmc"
   },
   {
@@ -4306,7 +4306,7 @@
     "quantity": "59.7",
     "transaction": "370388",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cjcmc"
   },
   {
@@ -4446,7 +4446,7 @@
     "quantity": "98.3",
     "transaction": "580535",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cjcmc"
   },
   {
@@ -4476,7 +4476,7 @@
     "quantity": "323.6",
     "transaction": "1871523",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "cjcmc"
   },
   {
@@ -4706,7 +4706,7 @@
     "quantity": "487.0",
     "transaction": "2308700",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "dragon"
   },
   {
@@ -5156,7 +5156,7 @@
     "quantity": "90.5",
     "transaction": "1512000",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "golden"
   },
   {
@@ -5906,7 +5906,7 @@
     "quantity": "31.4",
     "transaction": "74552",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -5946,7 +5946,7 @@
     "quantity": "267.1",
     "transaction": "674382",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -5986,7 +5986,7 @@
     "quantity": "68.8",
     "transaction": "168170",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -6026,7 +6026,7 @@
     "quantity": "1758.4",
     "transaction": "4184551",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -6066,7 +6066,7 @@
     "quantity": "28079.1",
     "transaction": "71047709",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -6106,7 +6106,7 @@
     "quantity": "14602.7",
     "transaction": "41189648",
     "product": "Copper",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "kamoa"
   },
   {
@@ -6316,7 +6316,7 @@
     "quantity": "1102.1",
     "transaction": "6966203",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6356,7 +6356,7 @@
     "quantity": "138.9",
     "transaction": "854433",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6386,7 +6386,7 @@
     "quantity": "13871.5",
     "transaction": "91774925",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6406,7 +6406,7 @@
     "quantity": "5706.9",
     "transaction": "53800249",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6436,7 +6436,7 @@
     "quantity": "33.7",
     "transaction": "181835",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6446,7 +6446,7 @@
     "quantity": "21.5",
     "transaction": "107435",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6476,7 +6476,7 @@
     "quantity": "189.3",
     "transaction": "2571839",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6506,7 +6506,7 @@
     "quantity": "257.8",
     "transaction": "4599565",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6546,7 +6546,7 @@
     "quantity": "25.0",
     "transaction": "663250",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6576,7 +6576,7 @@
     "quantity": "31.6",
     "transaction": "839409",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6586,7 +6586,7 @@
     "quantity": "8.3",
     "transaction": "784024",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6596,7 +6596,7 @@
     "quantity": "67.6",
     "transaction": "585220",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6616,7 +6616,7 @@
     "quantity": "185.8",
     "transaction": "1042219",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6636,7 +6636,7 @@
     "quantity": "14.8",
     "transaction": "74165",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6656,7 +6656,7 @@
     "quantity": "565.8",
     "transaction": "5612647",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6696,7 +6696,7 @@
     "quantity": "102.5",
     "transaction": "608947",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6736,7 +6736,7 @@
     "quantity": "16144.9",
     "transaction": "95447656",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6766,7 +6766,7 @@
     "quantity": "8.6",
     "transaction": "43140",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6776,7 +6776,7 @@
     "quantity": "1.0",
     "transaction": "6825",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6796,7 +6796,7 @@
     "quantity": "9194.6",
     "transaction": "61997735",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6846,7 +6846,7 @@
     "quantity": "2313.7",
     "transaction": "22497312",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6896,7 +6896,7 @@
     "quantity": "206.7",
     "transaction": "1184098",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6916,7 +6916,7 @@
     "quantity": "11458.3",
     "transaction": "95248464",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6956,7 +6956,7 @@
     "quantity": "265.2",
     "transaction": "1414160",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6966,7 +6966,7 @@
     "quantity": "24.6",
     "transaction": "122750",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6976,7 +6976,7 @@
     "quantity": "26073.4",
     "transaction": "632661984",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -6986,7 +6986,7 @@
     "quantity": "30.5",
     "transaction": "522196",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7006,7 +7006,7 @@
     "quantity": "496.5",
     "transaction": "8366034",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7026,7 +7026,7 @@
     "quantity": "1762.3",
     "transaction": "30252343",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7046,7 +7046,7 @@
     "quantity": "193.2",
     "transaction": "5412781",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7056,7 +7056,7 @@
     "quantity": "1026.4",
     "transaction": "19004319",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7076,7 +7076,7 @@
     "quantity": "8664.2",
     "transaction": "171432529",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7106,7 +7106,7 @@
     "quantity": "16298.1",
     "transaction": "293916480",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7126,7 +7126,7 @@
     "quantity": "1723.2",
     "transaction": "9065756",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7166,7 +7166,7 @@
     "quantity": "22269.6",
     "transaction": "459232013",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7176,7 +7176,7 @@
     "quantity": "10406.3",
     "transaction": "81473907",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7206,7 +7206,7 @@
     "quantity": "12897.5",
     "transaction": "113145079",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7236,7 +7236,7 @@
     "quantity": "8905.0",
     "transaction": "110607178",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7266,7 +7266,7 @@
     "quantity": "11934.5",
     "transaction": "283369967",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7286,7 +7286,7 @@
     "quantity": "33226.3",
     "transaction": "362801046",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7316,7 +7316,7 @@
     "quantity": "23638.3",
     "transaction": "357118251",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7356,7 +7356,7 @@
     "quantity": "1464.6",
     "transaction": "28932215",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7376,7 +7376,7 @@
     "quantity": "5923.4",
     "transaction": "137096155",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7396,7 +7396,7 @@
     "quantity": "306.6",
     "transaction": "1829222",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7416,7 +7416,7 @@
     "quantity": "776.4",
     "transaction": "5209848",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7436,7 +7436,7 @@
     "quantity": "478.1",
     "transaction": "4367993",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7456,7 +7456,7 @@
     "quantity": "147.7",
     "transaction": "916262",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7476,7 +7476,7 @@
     "quantity": "161.3",
     "transaction": "1016512",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7506,7 +7506,7 @@
     "quantity": "67.8",
     "transaction": "664022",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7526,7 +7526,7 @@
     "quantity": "30.1",
     "transaction": "180390",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -7536,7 +7536,7 @@
     "quantity": "132.6",
     "transaction": "689354",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "katanga_metals"
   },
   {
@@ -7556,7 +7556,7 @@
     "quantity": "99.3",
     "transaction": "483651",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "katanga_metals"
   },
   {
@@ -7576,7 +7576,7 @@
     "quantity": "264.5",
     "transaction": "1340569",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "katanga_metals"
   },
   {
@@ -7646,7 +7646,7 @@
     "quantity": "299.1",
     "transaction": "1722050",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "katanga_metals"
   },
   {
@@ -7676,7 +7676,7 @@
     "quantity": "497.9",
     "transaction": "2891898",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "katanga_metals"
   },
   {
@@ -8356,7 +8356,7 @@
     "quantity": "1336.3",
     "transaction": "3074971",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -8376,7 +8376,7 @@
     "quantity": "2327.2",
     "transaction": "4920669",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -8406,7 +8406,7 @@
     "quantity": "7893.4",
     "transaction": "18146469",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -8436,7 +8436,7 @@
     "quantity": "1310.7",
     "transaction": "3035672",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comilu"
   },
   {
@@ -9106,7 +9106,7 @@
     "quantity": "141.0",
     "transaction": "866511",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9136,7 +9136,7 @@
     "quantity": "664.0",
     "transaction": "2712040",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9146,7 +9146,7 @@
     "quantity": "288.0",
     "transaction": "1111680",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9166,7 +9166,7 @@
     "quantity": "442.0",
     "transaction": "2028560",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9186,7 +9186,7 @@
     "quantity": "499.7",
     "transaction": "2247638",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9196,7 +9196,7 @@
     "quantity": "930.8",
     "transaction": "5121173",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9206,7 +9206,7 @@
     "quantity": "433.0",
     "transaction": "2692809",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9216,7 +9216,7 @@
     "quantity": "250.0",
     "transaction": "1464441",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9226,7 +9226,7 @@
     "quantity": "123.8",
     "transaction": "957829",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9236,7 +9236,7 @@
     "quantity": "2712.6",
     "transaction": "16759134",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9246,7 +9246,7 @@
     "quantity": "3205.4",
     "transaction": "20119768",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9256,7 +9256,7 @@
     "quantity": "30.0",
     "transaction": "262807",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9266,7 +9266,7 @@
     "quantity": "170.4",
     "transaction": "190609",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9286,7 +9286,7 @@
     "quantity": "90.0",
     "transaction": "1135731",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9296,7 +9296,7 @@
     "quantity": "179.1",
     "transaction": "4011231",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9316,7 +9316,7 @@
     "quantity": "30.0",
     "transaction": "703500",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9326,7 +9326,7 @@
     "quantity": "50.0",
     "transaction": "890000",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9336,7 +9336,7 @@
     "quantity": "120.0",
     "transaction": "2689200",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9356,7 +9356,7 @@
     "quantity": "70.0",
     "transaction": "2160200",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9406,7 +9406,7 @@
     "quantity": "50.0",
     "transaction": "1177931",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9416,7 +9416,7 @@
     "quantity": "10.0",
     "transaction": "90100",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9426,7 +9426,7 @@
     "quantity": "100.0",
     "transaction": "2433500",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9436,7 +9436,7 @@
     "quantity": "10.0",
     "transaction": "115100",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9446,7 +9446,7 @@
     "quantity": "110.0",
     "transaction": "1700520",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9456,7 +9456,7 @@
     "quantity": "10.0",
     "transaction": "415643",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9466,7 +9466,7 @@
     "quantity": "120.0",
     "transaction": "3194173",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9486,7 +9486,7 @@
     "quantity": "138.0",
     "transaction": "890120",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9516,7 +9516,7 @@
     "quantity": "627.7",
     "transaction": "3842001",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9526,7 +9526,7 @@
     "quantity": "221.0",
     "transaction": "1360985",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9536,7 +9536,7 @@
     "quantity": "1107.8",
     "transaction": "6873460",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9586,7 +9586,7 @@
     "quantity": "7821.0",
     "transaction": "47121950",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9596,7 +9596,7 @@
     "quantity": "13549.5",
     "transaction": "73079737",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9616,7 +9616,7 @@
     "quantity": "9722.7",
     "transaction": "48159193",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9626,7 +9626,7 @@
     "quantity": "10760.9",
     "transaction": "64839979",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9646,7 +9646,7 @@
     "quantity": "4356.6",
     "transaction": "30236826",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9666,7 +9666,7 @@
     "quantity": "2514.2",
     "transaction": "14696954",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9676,7 +9676,7 @@
     "quantity": "12007.6",
     "transaction": "72949210",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9786,7 +9786,7 @@
     "quantity": "420.1",
     "transaction": "1656677",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9806,7 +9806,7 @@
     "quantity": "326.0",
     "transaction": "1173135",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9826,7 +9826,7 @@
     "quantity": "460.0",
     "transaction": "1820112",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -9876,7 +9876,7 @@
     "quantity": "1053.7",
     "transaction": "6319124",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -9936,7 +9936,7 @@
     "quantity": "2138.9",
     "transaction": "12472456",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -9986,7 +9986,7 @@
     "quantity": "21138.1",
     "transaction": "116030590",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -9996,7 +9996,7 @@
     "quantity": "19370.6",
     "transaction": "87771294",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10006,7 +10006,7 @@
     "quantity": "24824.4",
     "transaction": "135717919",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10126,7 +10126,7 @@
     "quantity": "1977.6",
     "transaction": "9946703",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10136,7 +10136,7 @@
     "quantity": "648.7",
     "transaction": "2526547",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10146,7 +10146,7 @@
     "quantity": "203.8",
     "transaction": "2324785",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10156,7 +10156,7 @@
     "quantity": "34.0",
     "transaction": "804629",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10166,7 +10166,7 @@
     "quantity": "135.8",
     "transaction": "1013262",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10176,7 +10176,7 @@
     "quantity": "2207.7",
     "transaction": "13653351",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10186,7 +10186,7 @@
     "quantity": "4442.3",
     "transaction": "61449347",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10196,7 +10196,7 @@
     "quantity": "2548.3",
     "transaction": "59257919",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10226,7 +10226,7 @@
     "quantity": "2144.2",
     "transaction": "37505303",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10246,7 +10246,7 @@
     "quantity": "3788.1",
     "transaction": "31130110",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kalumbwe_myunga"
   },
   {
@@ -10636,7 +10636,7 @@
     "quantity": "384.0",
     "transaction": "676800",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "luisha_mining"
   },
   {
@@ -10656,7 +10656,7 @@
     "quantity": "99.0",
     "transaction": "445504",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "luisha_mining"
   },
   {
@@ -11556,7 +11556,7 @@
     "quantity": "67.1",
     "transaction": "377717",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mmg"
   },
   {
@@ -11656,7 +11656,7 @@
     "quantity": "37645.6",
     "transaction": "233303831",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11696,7 +11696,7 @@
     "quantity": "13604.0",
     "transaction": "83757808",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11746,7 +11746,7 @@
     "quantity": "34.6",
     "transaction": "179723",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11756,7 +11756,7 @@
     "quantity": "1911.9",
     "transaction": "12625925",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11766,7 +11766,7 @@
     "quantity": "31.0",
     "transaction": "207617",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11786,7 +11786,7 @@
     "quantity": "106.1",
     "transaction": "1117362",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11816,7 +11816,7 @@
     "quantity": "11414.0",
     "transaction": "70265712",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11846,7 +11846,7 @@
     "quantity": "78683.6",
     "transaction": "468277329",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11876,7 +11876,7 @@
     "quantity": "176936.8",
     "transaction": "872382625",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11896,7 +11896,7 @@
     "quantity": "154949.0",
     "transaction": "940998238",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11916,7 +11916,7 @@
     "quantity": "89611.1",
     "transaction": "614246484",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11946,7 +11946,7 @@
     "quantity": "539.4",
     "transaction": "3090445",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11966,7 +11966,7 @@
     "quantity": "862.1",
     "transaction": "7995728",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -11996,7 +11996,7 @@
     "quantity": "291.5",
     "transaction": "3021517",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12006,7 +12006,7 @@
     "quantity": "13801.8",
     "transaction": "104201287",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12016,7 +12016,7 @@
     "quantity": "114835.4",
     "transaction": "1640141790",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12036,7 +12036,7 @@
     "quantity": "67873.2",
     "transaction": "1544965328",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12046,7 +12046,7 @@
     "quantity": "1111.0",
     "transaction": "14516209",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12066,7 +12066,7 @@
     "quantity": "2940.7",
     "transaction": "43926473",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12086,7 +12086,7 @@
     "quantity": "5599.9",
     "transaction": "45998313",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12096,7 +12096,7 @@
     "quantity": "15432.9",
     "transaction": "260855935",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12106,7 +12106,7 @@
     "quantity": "33.7",
     "transaction": "791556",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12116,7 +12116,7 @@
     "quantity": "5766.1",
     "transaction": "108771382",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12136,7 +12136,7 @@
     "quantity": "3056.2",
     "transaction": "80054112",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12156,7 +12156,7 @@
     "quantity": "62.2",
     "transaction": "803944",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12166,7 +12166,7 @@
     "quantity": "82966.6",
     "transaction": "1540877931",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12176,7 +12176,7 @@
     "quantity": "128424.4",
     "transaction": "1231999524",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12196,7 +12196,7 @@
     "quantity": "6060.0",
     "transaction": "82757845",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12206,7 +12206,7 @@
     "quantity": "491.4",
     "transaction": "6211580",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12226,7 +12226,7 @@
     "quantity": "33.9",
     "transaction": "568982",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12236,7 +12236,7 @@
     "quantity": "1498.0",
     "transaction": "27473453",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12246,7 +12246,7 @@
     "quantity": "3564.9",
     "transaction": "84361588",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12266,7 +12266,7 @@
     "quantity": "34.7",
     "transaction": "278783",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12276,7 +12276,7 @@
     "quantity": "2619.7",
     "transaction": "15297764",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12296,7 +12296,7 @@
     "quantity": "1583.5",
     "transaction": "10060548",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12316,7 +12316,7 @@
     "quantity": "159.3",
     "transaction": "987866",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12336,7 +12336,7 @@
     "quantity": "94310.2",
     "transaction": "720437865",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12356,7 +12356,7 @@
     "quantity": "75139.7",
     "transaction": "485816906",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12366,7 +12366,7 @@
     "quantity": "96.5",
     "transaction": "570966",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12386,7 +12386,7 @@
     "quantity": "27.5",
     "transaction": "166814",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12396,7 +12396,7 @@
     "quantity": "18386.0",
     "transaction": "84815801",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12406,7 +12406,7 @@
     "quantity": "12842.5",
     "transaction": "67001060",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -12526,7 +12526,7 @@
     "quantity": "646.0",
     "transaction": "4082134",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12536,7 +12536,7 @@
     "quantity": "254.0",
     "transaction": "1582137",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12556,7 +12556,7 @@
     "quantity": "33.0",
     "transaction": "620400",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12566,7 +12566,7 @@
     "quantity": "887.0",
     "transaction": "4265766",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12606,7 +12606,7 @@
     "quantity": "2166.0",
     "transaction": "13643681",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12616,7 +12616,7 @@
     "quantity": "2966.0",
     "transaction": "20098028",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12636,7 +12636,7 @@
     "quantity": "725.0",
     "transaction": "4290500",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12686,7 +12686,7 @@
     "quantity": "102.0",
     "transaction": "552330",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "omr"
   },
   {
@@ -12756,7 +12756,7 @@
     "quantity": "81.9",
     "transaction": "363855",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ruashi"
   },
   {
@@ -12836,7 +12836,7 @@
     "quantity": "4862.8",
     "transaction": "23265965",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ruashi"
   },
   {
@@ -12896,7 +12896,7 @@
     "quantity": "31.9",
     "transaction": "224461",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ruashi"
   },
   {
@@ -13176,7 +13176,7 @@
     "quantity": "169.0",
     "transaction": "976820",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ruashi"
   },
   {
@@ -13326,7 +13326,7 @@
     "quantity": "841.4",
     "transaction": "5045155",
     "product": "Cobalt",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -13356,7 +13356,7 @@
     "quantity": "250.1",
     "transaction": "1995185",
     "product": "Cobalt",
-    "destination": "North Korea",
+    "destination": "North\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -13416,7 +13416,7 @@
     "quantity": "837.0",
     "transaction": "7377822",
     "product": "Cobalt",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -13426,7 +13426,7 @@
     "quantity": "768.5",
     "transaction": "6667963",
     "product": "Cobalt",
-    "destination": "North Korea",
+    "destination": "North\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -13456,7 +13456,7 @@
     "quantity": "1067.5",
     "transaction": "13061209",
     "product": "Cobalt",
-    "destination": "North Korea",
+    "destination": "North\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -14136,7 +14136,7 @@
     "quantity": "13179.6",
     "transaction": "19922899",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sicomines"
   },
   {
@@ -14166,7 +14166,7 @@
     "quantity": "27442.0",
     "transaction": "42376541",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sicomines"
   },
   {
@@ -14376,7 +14376,7 @@
     "quantity": "55742.7",
     "transaction": "249476769",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sicomines"
   },
   {
@@ -14386,7 +14386,7 @@
     "quantity": "27209.6",
     "transaction": "151604453",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sicomines"
   },
   {
@@ -14506,7 +14506,7 @@
     "quantity": "135.4",
     "transaction": "1922851",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sicomines"
   },
   {
@@ -14656,7 +14656,7 @@
     "quantity": "23749.5",
     "transaction": "132378913",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sek"
   },
   {
@@ -14696,7 +14696,7 @@
     "quantity": "23573.5",
     "transaction": "114373048",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sek"
   },
   {
@@ -14706,7 +14706,7 @@
     "quantity": "10751.0",
     "transaction": "63416406",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "sek"
   },
   {
@@ -15256,7 +15256,7 @@
     "quantity": "102.0",
     "transaction": "540600",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "semhkat"
   },
   {
@@ -15296,7 +15296,7 @@
     "quantity": "2448.0",
     "transaction": "11547942",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "semhkat"
   },
   {
@@ -15316,7 +15316,7 @@
     "quantity": "1190.0",
     "transaction": "6511000",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "semhkat"
   },
   {
@@ -15366,7 +15366,7 @@
     "quantity": "104.0",
     "transaction": "551200",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "semhkat"
   },
   {
@@ -15506,7 +15506,7 @@
     "quantity": "65.0",
     "transaction": "640250",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "semhkat"
   },
   {
@@ -15826,7 +15826,7 @@
     "quantity": "65361.9",
     "transaction": "404860898",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15836,7 +15836,7 @@
     "quantity": "23848.1",
     "transaction": "146378457",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15866,7 +15866,7 @@
     "quantity": "5230.7",
     "transaction": "67070212",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15926,7 +15926,7 @@
     "quantity": "94340.8",
     "transaction": "586437894",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15936,7 +15936,7 @@
     "quantity": "204695.4",
     "transaction": "1075137610",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15946,7 +15946,7 @@
     "quantity": "214531.8",
     "transaction": "935327213",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15956,7 +15956,7 @@
     "quantity": "214306.4",
     "transaction": "1181298437",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15966,7 +15966,7 @@
     "quantity": "104132.4",
     "transaction": "662118229",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15976,7 +15976,7 @@
     "quantity": "49642.7",
     "transaction": "289280656",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -15986,7 +15986,7 @@
     "quantity": "7384.7",
     "transaction": "45512475",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16046,7 +16046,7 @@
     "quantity": "32.2",
     "transaction": "263017",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16056,7 +16056,7 @@
     "quantity": "33.5",
     "transaction": "462215",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16066,7 +16066,7 @@
     "quantity": "302.2",
     "transaction": "1356439",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16076,7 +16076,7 @@
     "quantity": "632.7",
     "transaction": "5510711",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16086,7 +16086,7 @@
     "quantity": "62.8",
     "transaction": "1004799",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16096,7 +16096,7 @@
     "quantity": "4705.4",
     "transaction": "35069465",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16106,7 +16106,7 @@
     "quantity": "14121.4",
     "transaction": "93612666",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16116,7 +16116,7 @@
     "quantity": "54350.9",
     "transaction": "788869613",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16126,7 +16126,7 @@
     "quantity": "45334.7",
     "transaction": "1073606853",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16186,7 +16186,7 @@
     "quantity": "43285.9",
     "transaction": "378473169",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16206,7 +16206,7 @@
     "quantity": "57010.7",
     "transaction": "418437819",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16216,7 +16216,7 @@
     "quantity": "53346.1",
     "transaction": "938085338",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16226,7 +16226,7 @@
     "quantity": "36035.6",
     "transaction": "942972646",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16276,7 +16276,7 @@
     "quantity": "37417.3",
     "transaction": "380281873",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16286,7 +16286,7 @@
     "quantity": "22920.6",
     "transaction": "187640230",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16296,7 +16296,7 @@
     "quantity": "3706.8",
     "transaction": "56535889",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16306,7 +16306,7 @@
     "quantity": "1138.7",
     "transaction": "33241831",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16316,7 +16316,7 @@
     "quantity": "68.0",
     "transaction": "801517",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16386,7 +16386,7 @@
     "quantity": "59880.7",
     "transaction": "1102064508",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16396,7 +16396,7 @@
     "quantity": "45789.8",
     "transaction": "454851168",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16436,7 +16436,7 @@
     "quantity": "120.9",
     "transaction": "1103560",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16496,7 +16496,7 @@
     "quantity": "18533.7",
     "transaction": "446258384",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16506,7 +16506,7 @@
     "quantity": "8728.4",
     "transaction": "105085079",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16556,7 +16556,7 @@
     "quantity": "2891.7",
     "transaction": "32202480",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16646,7 +16646,7 @@
     "quantity": "0.1",
     "transaction": "20",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16656,7 +16656,7 @@
     "quantity": "34.5",
     "transaction": "668652",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "tfm"
   },
   {
@@ -16977,7 +16977,7 @@
     "quantity": "512.0",
     "transaction": "496842.72",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "amical"
   },
   {
@@ -17047,7 +17047,7 @@
     "quantity": "408.496",
     "transaction": "2777691.4948",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ccr"
   },
   {
@@ -17067,7 +17067,7 @@
     "quantity": "1549.359",
     "transaction": "13873580.2296",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ccr"
   },
   {
@@ -17117,7 +17117,7 @@
     "quantity": "65.974",
     "transaction": "453494.0604",
     "product": "Cobalt",
-    "destination": "United Arab Emirates",
+    "destination": "UAE",
     "_project_id": "chemaf"
   },
   {
@@ -17137,7 +17137,7 @@
     "quantity": "200.0",
     "transaction": "1587848.0",
     "product": "Copper",
-    "destination": "United Arab Emirates",
+    "destination": "UAE",
     "_project_id": "chemaf"
   },
   {
@@ -17227,7 +17227,7 @@
     "quantity": "113.579",
     "transaction": "728665.9609",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "comika"
   },
   {
@@ -17437,7 +17437,7 @@
     "quantity": "4238.985",
     "transaction": "36342413.67",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "gcm"
   },
   {
@@ -17517,7 +17517,7 @@
     "quantity": "334.10200000000003",
     "transaction": "2945306.2497",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "hmc"
   },
   {
@@ -17717,7 +17717,7 @@
     "quantity": "414.88599999999997",
     "transaction": "3458716.3899999997",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kamoa"
   },
   {
@@ -17747,7 +17747,7 @@
     "quantity": "3114.0023666",
     "transaction": "8583681.9865",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kamoa"
   },
   {
@@ -17787,7 +17787,7 @@
     "quantity": "13429.60555",
     "transaction": "157725048.6392",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -17857,7 +17857,7 @@
     "quantity": "2141.529",
     "transaction": "18105419.1225",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -17907,7 +17907,7 @@
     "quantity": "33.512",
     "transaction": "242939.0986",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "kcc"
   },
   {
@@ -18097,7 +18097,7 @@
     "quantity": "24533.9696039",
     "transaction": "284743216.119",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "metalkol"
   },
   {
@@ -18137,7 +18137,7 @@
     "quantity": "30872.314000000002",
     "transaction": "263104913.5211",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "metalkol"
   },
   {
@@ -18227,7 +18227,7 @@
     "quantity": "160.56833",
     "transaction": "2057397.2539",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mkm"
   },
   {
@@ -18337,7 +18337,7 @@
     "quantity": "624.865",
     "transaction": "5366158.691",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mmg"
   },
   {
@@ -18407,7 +18407,7 @@
     "quantity": "10599.58522",
     "transaction": "104215858.98020001",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -18437,7 +18437,7 @@
     "quantity": "232.199",
     "transaction": "1975240.5603999998",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -18457,7 +18457,7 @@
     "quantity": "33.785",
     "transaction": "276141.0218",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "mumi"
   },
   {
@@ -18547,7 +18547,7 @@
     "quantity": "55.177",
     "transaction": "379272.9038",
     "product": "Cobalt",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "ruashi"
   },
   {
@@ -18557,7 +18557,7 @@
     "quantity": "2118.962",
     "transaction": "14257401.837",
     "product": "Cobalt",
-    "destination": "South Korea",
+    "destination": "South\u00A0Korea",
     "_project_id": "ruashi"
   },
   {
@@ -18577,7 +18577,7 @@
     "quantity": "198.66400000000002",
     "transaction": "1365566.6705",
     "product": "Cobalt",
-    "destination": "United Arab Emirates",
+    "destination": "UAE",
     "_project_id": "ruashi"
   },
   {
@@ -18707,7 +18707,7 @@
     "quantity": "4474.73",
     "transaction": "39334616.023",
     "product": "Copper",
-    "destination": "South Africa",
+    "destination": "South\u00A0Africa",
     "_project_id": "somidez"
   },
   {
@@ -18767,7 +18767,7 @@
     "quantity": "462.0",
     "transaction": "3800714.1799999997",
     "product": "Copper",
-    "destination": "United Arab Emirates",
+    "destination": "UAE",
     "_project_id": "somika"
   },
   {

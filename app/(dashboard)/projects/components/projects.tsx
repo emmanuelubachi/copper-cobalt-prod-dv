@@ -13,12 +13,17 @@ import YearToggle from "@/components/year-toggle";
 import { Years } from "@/data/chartData";
 import TreeMapChart from "@/components/charts/shadcn/tree-map/custom-treemap";
 import { treeMapChartConfig } from "@/constants/chart";
-import { transformProdDesData } from "@/lib/dataProcessing";
+import {
+  groupByProductAndConcentration,
+  sortDataByMonth,
+  transformProdDesData,
+} from "@/lib/dataProcessing";
 import ProjectDetails from "./project-details";
 import { ProjectInfo } from "@/types";
 import MixedBarChart from "@/components/charts/shadcn/bar-chart/mixed-bar-chart";
 import SiteMap from "./map";
 import { cn } from "@/lib/utils";
+import useDeviceType from "@/hooks/useDeviceType";
 
 export default function Projects({
   projectInfo,
@@ -34,6 +39,7 @@ export default function Projects({
   monthlyExportData: any[];
 }) {
   const project_id = projectInfo._project_id;
+  const { isMobile } = useDeviceType();
 
   const maxYear =
     productionYears.length > 0
@@ -57,8 +63,8 @@ export default function Projects({
   const products = productData
     .filter((d) => d.year === selectedYear)
     .map((d) => ({
-      product: d.product,
-      concentration: d.concentration,
+      product: d.product as string,
+      concentration: d.concentration as string,
       quantity: parseInt(d.quantity),
       transaction: parseInt(d.transaction),
     }))
@@ -83,10 +89,16 @@ export default function Projects({
       quantity: parseInt(d.quantity),
     }));
 
-  const coMontlyExports = monthlyExports.filter((d) => d.product === "Cobalt");
-  const cuMontlyExports = monthlyExports.filter((d) => d.product === "Copper");
+  const maxMonthlyExport = Math.max(...monthlyExports.map((d) => d.quantity));
 
-  console.log("products data", products);
+  const coMontlyExports = sortDataByMonth(
+    monthlyExports.filter((d) => d.product === "Cobalt"),
+  );
+  const cuMontlyExports = sortDataByMonth(
+    monthlyExports.filter((d) => d.product === "Copper"),
+  );
+
+  console.log("products", groupByProductAndConcentration(products));
 
   return (
     <section className="space-y-0">
@@ -111,7 +123,7 @@ export default function Projects({
       </header>
 
       {/* Charts */}
-      <div className="mb-24 items-start space-y-4 px-2 sm:mb-0 sm:px-8 sm:pb-8">
+      <div className="mb-24 items-start space-y-4 px-2 pb-24 sm:mb-0 sm:px-8 sm:pb-8">
         <div className="grid items-start gap-4 xl:grid-cols-3">
           {/* Project Info and Treemap */}
           <div className="space-y-4 xl:col-span-2">
@@ -131,14 +143,15 @@ export default function Projects({
                 config={treeMapChartConfig}
                 namekey="concentration"
                 sizekey="quantity"
-                chartData={products}
+                chartData={groupByProductAndConcentration(products)}
               />
             )}
           </div>
 
           {/* Destination */}
           <div className="grid grid-cols-1 gap-4">
-            {destinationData.length > 0 &&
+            {!isMobile &&
+              destinationData.length > 0 &&
               projectData &&
               projectData.latitude &&
               projectData.longitude && (
@@ -168,12 +181,8 @@ export default function Projects({
                 config={coMonthlyXConfig}
                 chartData={coMontlyExports}
                 firstDataKey="quantity"
-                classname="h-[189px]"
-                // footNote={
-                //   <div className="leading-none text-muted-foreground">
-                //     Includes quantities both exported and sold locally.
-                //   </div>
-                // }
+                classname="h-64"
+                domain={[0, maxMonthlyExport]}
               />
             </div>
           )}
@@ -185,7 +194,8 @@ export default function Projects({
                 config={cuMonthlyXConfig}
                 chartData={cuMontlyExports}
                 firstDataKey="quantity"
-                classname="h-[189px]"
+                classname="h-64"
+                domain={[0, maxMonthlyExport]}
                 // footNote={
                 //   <div className="leading-none text-muted-foreground">
                 //     Includes quantities both exported and sold locally.

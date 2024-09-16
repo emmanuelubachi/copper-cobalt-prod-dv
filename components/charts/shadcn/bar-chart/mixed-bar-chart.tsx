@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { Bar, BarChart, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -16,6 +16,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { formatNumberWithCommas } from "@/lib/utils";
 
 type MixedBarChartProps = {
   title: string;
@@ -41,7 +42,7 @@ export default function MixedBarChart({ ...props }: MixedBarChartProps) {
             data={props.chartData}
             layout="vertical"
             margin={{
-              right: 30,
+              right: 45,
               left: 30,
             }}
           >
@@ -68,13 +69,35 @@ export default function MixedBarChart({ ...props }: MixedBarChartProps) {
               layout="vertical"
               radius={5}
               fill={`var(--color-copper`}
-            />
+            >
+              <LabelList
+                dataKey="copper"
+                position="right"
+                fill="white"
+                formatter={(value: number) => {
+                  if (value) {
+                    return `${formatNumberWithCommas(value)}\u00A0t`;
+                  }
+                }}
+              />
+            </Bar>
             <Bar
               dataKey="cobalt"
               layout="vertical"
               radius={5}
               fill={`var(--color-cobalt)`}
-            />
+            >
+              <LabelList
+                dataKey="cobalt"
+                position="right"
+                fill="white"
+                formatter={(value: number) => {
+                  if (value) {
+                    return `${formatNumberWithCommas(value)}\u00A0t`;
+                  }
+                }}
+              />
+            </Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
