@@ -18821,6 +18821,36 @@
     "_project_id": "tcc"
   },
   {
+    "project": "TENKE FUNGURUME MINING",
+    "year": "2023",
+    "concentration": "Cobalt hydroxide",
+    "quantity": "103213.286",
+    "transaction": "941522097.9400000572",
+    "product": "Cobalt",
+    "destination": "China",
+    "_project_id": "tfm"
+  },
+  {
+    "project": "TENKE FUNGURUME MINING",
+    "year": "2023",
+    "concentration": "Cobalt hydroxide",
+    "quantity": "102.058",
+    "transaction": "930930.23",
+    "product": "Cobalt",
+    "destination": "Singapore",
+    "_project_id": "tfm"
+  },
+  {
+    "project": "TENKE FUNGURUME MINING",
+    "year": "2023",
+    "concentration": "Electrolytic copper",
+    "quantity": "467175.77",
+    "transaction": "3940904508.2100000381",
+    "product": "Copper",
+    "destination": "China",
+    "_project_id": "tfm"
+  },
+  {
     "project": "THOMAS MINING SARL",
     "year": "2023",
     "concentration": "Cobalt Hydroxide",
@@ -18859,35 +18889,5 @@
     "product": "Copper",
     "destination": "Switzerland",
     "_project_id": "thomas"
-  },
-  {
-    "project": "TENKE FUNGURUME MINING",
-    "year": "2023",
-    "concentration": "Cobalt hydroxide",
-    "quantity": "103213.286",
-    "transaction": "941522097.9400000572",
-    "product": "Cobalt",
-    "destination": "China",
-    "_project_id": "tfm"
-  },
-  {
-    "project": "TENKE FUNGURUME MINING",
-    "year": "2023",
-    "concentration": "Cobalt hydroxide",
-    "quantity": "102.058",
-    "transaction": "930930.23",
-    "product": "Cobalt",
-    "destination": "Singapore",
-    "_project_id": "tfm"
-  },
-  {
-    "project": "TENKE FUNGURUME MINING",
-    "year": "2023",
-    "concentration": "Electrolytic copper",
-    "quantity": "467175.77",
-    "transaction": "3940904508.2100000381",
-    "product": "Copper",
-    "destination": "China",
-    "_project_id": "tfm"
   }
 ]

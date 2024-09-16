@@ -42566,5 +42566,117 @@
     "product": "Copper",
     "quantity": "2021.923",
     "transaction": "16888637.5564"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Cobalt",
+    "quantity": "29616.652000000002",
+    "transaction": "276782870.02"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Aug",
+    "product": "Copper",
+    "quantity": "118968.368",
+    "transaction": "1011658442.12"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Cobalt",
+    "quantity": "7718.427",
+    "transaction": "66009503.08"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Dec",
+    "product": "Copper",
+    "quantity": "41193.092",
+    "transaction": "343701705.63"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Cobalt",
+    "quantity": "17037.906",
+    "transaction": "152643535.82"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Jul",
+    "product": "Copper",
+    "quantity": "89315.744",
+    "transaction": "753169024.16"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Cobalt",
+    "quantity": "10094.811",
+    "transaction": "95871352.98"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Jun",
+    "product": "Copper",
+    "quantity": "60195.824",
+    "transaction": "502951005.52"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "May",
+    "product": "Cobalt",
+    "quantity": "4504.373",
+    "transaction": "43997847.76"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "May",
+    "product": "Copper",
+    "quantity": "68096.684",
+    "transaction": "600264731.09"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Cobalt",
+    "quantity": "14062.223",
+    "transaction": "124737709.55"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Nov",
+    "product": "Copper",
+    "quantity": "46834.287",
+    "transaction": "377067533.0"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Cobalt",
+    "quantity": "20280.952",
+    "transaction": "182410208.96"
+  },
+  {
+    "_project_id": "tfm",
+    "year": "2023",
+    "month": "Oct",
+    "product": "Copper",
+    "quantity": "42571.771",
+    "transaction": "352092066.69"
   }
 ]
