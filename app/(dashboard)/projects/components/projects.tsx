@@ -61,7 +61,8 @@ export default function Projects({
       concentration: d.concentration,
       quantity: parseInt(d.quantity),
       transaction: parseInt(d.transaction),
-    }));
+    }))
+    .sort((a, b) => b.quantity - a.quantity);
 
   // Filter and transform destination data for the selected year
   const destinationData = productData
@@ -84,6 +85,8 @@ export default function Projects({
 
   const coMontlyExports = monthlyExports.filter((d) => d.product === "Cobalt");
   const cuMontlyExports = monthlyExports.filter((d) => d.product === "Copper");
+
+  console.log("products data", products);
 
   return (
     <section className="space-y-0">

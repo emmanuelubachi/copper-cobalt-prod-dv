@@ -17,7 +17,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
-import { Value } from "@radix-ui/react-select";
 
 type TreeMapChartProps = {
   title: string;
@@ -30,16 +29,6 @@ type TreeMapChartProps = {
   sizekey?: string;
 };
 
-// interface CustomizedContentProps {
-//   root: any;
-//   depth: number;
-//   x: number;
-//   y: number;
-//   width: number;
-//   height: number;
-//   index: number;
-//   name: string;
-// }
 const COLORS = [
   "#8889DD",
   "#9597E4",
