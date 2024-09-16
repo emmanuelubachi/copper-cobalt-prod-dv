@@ -11,6 +11,13 @@ import {
   YearlySummary,
 } from "@/types/projects";
 
+/**
+ * Transforms the given monthly production data into a format that is easier to
+ * consume for the charts and tables.
+ *
+ * @param data - The monthly production data.
+ * @returns An array of objects with the month and Cobalt and Copper quantities.
+ */
 export function transformMonthlyData(
   data: MonthlyProductionData[],
 ): TMonthlyProductionData[] {
@@ -422,4 +429,78 @@ export function transformProdDesData(
   return transformedData.sort(
     (a, b) => b.cobalt + b.copper - (a.cobalt + a.copper),
   );
+}
+
+type MonthlyData = {
+  product: string;
+  month: string;
+  quantity: number;
+};
+
+/**
+ * Sorts an array of MonthlyData objects by the month in ascending order.
+ * The sort order is based on the monthOrder array, which is a list of
+ * all 12 months in a year, in order.
+ *
+ * @param {MonthlyData[]} data - The array of MonthlyData objects to be sorted.
+ * @returns {MonthlyData[]} - The sorted array of MonthlyData objects.
+ */
+export function sortDataByMonth(data: MonthlyData[]): MonthlyData[] {
+  const monthOrder = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  return data.sort(
+    (a, b) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month),
+  );
+}
+
+type ProductionData = {
+  product: string;
+  concentration: string;
+  quantity: number;
+  transaction: number;
+};
+
+type GroupedData = {
+  product: string;
+  concentration: string;
+  quantity: number;
+  transaction: number;
+};
+
+export function groupByProductAndConcentration(
+  data: ProductionData[],
+): GroupedData[] {
+  const groupedMap = new Map<string, GroupedData>();
+
+  data.forEach((item) => {
+    const key = `${item.product}-${item.concentration}`;
+
+    if (groupedMap.has(key)) {
+      const existing = groupedMap.get(key)!;
+      existing.quantity += item.quantity;
+      existing.transaction += item.transaction;
+    } else {
+      groupedMap.set(key, {
+        product: item.product,
+        concentration: item.concentration,
+        quantity: item.quantity,
+        transaction: item.transaction,
+      });
+    }
+  });
+
+  return Array.from(groupedMap.values());
 }
