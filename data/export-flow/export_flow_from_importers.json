@@ -2097,6 +2097,302 @@
   },
   {
     "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Access World Warehouse",
+    "destination": "China",
+    "quantity": "10127.762"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "African Inland Container Depot",
+    "destination": "China",
+    "quantity": "6647.843"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Alistair Corsair Warehouse",
+    "destination": "China",
+    "quantity": "1001.489"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Alistair FFT Warehouse",
+    "destination": "China",
+    "quantity": "874.581"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Bidvest SACD Warehouse",
+    "destination": "China",
+    "quantity": "66.241"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "C-Steinweg Bridge Warehouse",
+    "destination": "China",
+    "quantity": "2866.068"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "CMOC Limited",
+    "destination": "China",
+    "quantity": "14398.284"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "DSM MCCL Warehouse",
+    "destination": "China",
+    "quantity": "2503.76"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Galco VS-Cargo Warehouse",
+    "destination": "China",
+    "quantity": "3547.128"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Not Available",
+    "destination": "China",
+    "quantity": "61151.684"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Not Available",
+    "destination": "Singapore",
+    "quantity": "102.05799999999999"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Cobalt",
+    "importer": "Tenke Fungurume Mining",
+    "destination": "China",
+    "quantity": "28.446"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "AGL (Bollore) Warehouse",
+    "destination": "China",
+    "quantity": "191.27100000000002"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Access World Warehouse",
+    "destination": "China",
+    "quantity": "5513.817"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "African Inland Container Depot",
+    "destination": "China",
+    "quantity": "387.91700000000003"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "C-Steinweg Bridge Warehouse",
+    "destination": "China",
+    "quantity": "8406.218"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "CACC Warehouse",
+    "destination": "China",
+    "quantity": "65.43299999999999"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "CMOC Limited",
+    "destination": "China",
+    "quantity": "64644.259"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "CMOC Limited Reload Logistics",
+    "destination": "China",
+    "quantity": "3273.686"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "CMOC Limited Reload Ndola Warehouse",
+    "destination": "China",
+    "quantity": "70.12"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "CMOC Limited iClearXpress",
+    "destination": "China",
+    "quantity": "106.16499999999999"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "DSM MCCL Warehouse",
+    "destination": "China",
+    "quantity": "6066.157"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Galco VS-Cargo Warehouse",
+    "destination": "China",
+    "quantity": "2243.878"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "IBLT Warehouse",
+    "destination": "China",
+    "quantity": "441.092"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Impala Warehouse",
+    "destination": "China",
+    "quantity": "6303.747"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Inara Investments Limited",
+    "destination": "China",
+    "quantity": "34.866"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Inara Investments Limited Ndola",
+    "destination": "China",
+    "quantity": "2001.982"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Inara Investments Limited Ndola CMOC",
+    "destination": "China",
+    "quantity": "141.035"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Inara Investments Limited Ndola Plot 5219",
+    "destination": "China",
+    "quantity": "35.163"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Not Available",
+    "destination": "China",
+    "quantity": "336576.62"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Reload Logistics Warehouse",
+    "destination": "China",
+    "quantity": "35.653"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Reload Ndola Warehouse",
+    "destination": "China",
+    "quantity": "1023.735"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Reload Warehouse",
+    "destination": "China",
+    "quantity": "124.299"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "SLS Warehouse",
+    "destination": "China",
+    "quantity": "21528.353"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "Steinweg Bridge Warehouse",
+    "destination": "China",
+    "quantity": "175.535"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "VS-Cargo Warehouse",
+    "destination": "China",
+    "quantity": "607.11"
+  },
+  {
+    "year": "2023",
+    "_project_id": "tfm",
+    "product": "Copper",
+    "importer": "iClearXpress Limited",
+    "destination": "China",
+    "quantity": "7177.659"
+  },
+  {
+    "year": "2023",
     "_project_id": "thomas",
     "product": "Cobalt",
     "importer": "Unknown",
