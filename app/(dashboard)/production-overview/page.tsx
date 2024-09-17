@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import KPI from "./components/kpi";
 import YearToggle from "@/components/year-toggle";
 import ExportTrend from "./components/export-trend";
@@ -27,6 +27,7 @@ import {
   xhistoryProps,
   xShareDataProps,
 } from "@/types/overview";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState<string>("2023");
@@ -222,7 +223,11 @@ export default function Dashboard() {
               years={Years}
             />
             <div>
-              <ShareButton />
+              <Suspense
+                fallback={<Skeleton className="h-12 w-12 rounded-full" />}
+              >
+                <ShareButton />
+              </Suspense>
             </div>
           </div>
         </div>

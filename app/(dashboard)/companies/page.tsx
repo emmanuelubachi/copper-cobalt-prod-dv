@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import GridList from "@/app/(dashboard)/companies/components/gridList";
 import { CompaniesList } from "@/constants/application";
 import { ShareButton } from "@/components/elements/shareButton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Page() {
   return (
@@ -12,7 +13,9 @@ export default function Page() {
           Mining Companies in the Democratic Republic of the Congo
         </h1>
         <div className="flex justify-end">
-          <ShareButton />
+          <Suspense fallback={<Skeleton className="h-12 w-12 rounded-full" />}>
+            <ShareButton />
+          </Suspense>
         </div>
       </header>
 
