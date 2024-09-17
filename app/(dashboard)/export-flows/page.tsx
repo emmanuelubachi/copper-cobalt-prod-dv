@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import YearToggle from "@/components/year-toggle";
 import ExportFlow from "@/components/elements/export-flow";
@@ -7,6 +7,7 @@ import { ShareButton } from "@/components/elements/shareButton";
 
 import ExportFlowFromProjData from "@/data/export-flow/export_flow_from_projects.json";
 import ExportFlowFromImportData from "@/data/export-flow/export_flow_from_importers.json";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Years = ["2022", "2023"];
 
@@ -38,7 +39,11 @@ export default function Page() {
               years={Years}
             />
             <div>
-              <ShareButton />
+              <Suspense
+                fallback={<Skeleton className="h-12 w-12 rounded-full" />}
+              >
+                <ShareButton />
+              </Suspense>
             </div>
           </div>
         </div>
