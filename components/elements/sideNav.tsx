@@ -39,7 +39,7 @@ export default function SideNav() {
                     onClick={() => {
                       closeFilter(), closeMapDetails();
                     }}
-                    className={`flex h-9 w-9 items-center justify-center rounded-md p-2 transition-colors md:text-sm ${
+                    className={`__button_pressed flex h-9 w-9 items-center justify-center rounded-md p-2 transition-colors md:text-sm ${
                       pathname === item.path
                         ? "bg-primary/10 text-primary shadow-lg hover:text-primary dark:bg-muted dark:shadow-primary/10"
                         : "text-muted-foreground hover:text-primary/70 dark:hover:text-foreground"

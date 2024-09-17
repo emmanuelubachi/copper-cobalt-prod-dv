@@ -73,7 +73,7 @@ export default function BigSideNav() {
               {NAVLIST.map((item) => (
                 <Link key={item.name} href={item.link}>
                   <SheetClose
-                    className={`flex w-full items-center gap-4 rounded-lg p-2 px-2.5 hover:text-foreground ${
+                    className={`__button_pressed flex w-full items-center gap-4 rounded-lg p-2 px-2.5 hover:text-foreground ${
                       pathname === item.path
                         ? "bg-muted text-foreground"
                         : "text-muted-foreground"
