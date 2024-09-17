@@ -39,7 +39,7 @@ export default function BigSideNav() {
             <Button
               size="icon"
               variant="secondary"
-              className="__button_pressed absolute left-0 top-14 z-10 hidden h-9 w-4 rounded-none rounded-r-md bg-background pl-0 shadow-md sm:flex"
+              className="__button_pressed absolute left-0 top-20 z-50 hidden h-9 w-4 rounded-none rounded-r-md bg-background pl-0 shadow-md sm:block"
             >
               <ChevronRight className="h-4 w-4" />
               <span className="sr-only">Toggle Menu</span>

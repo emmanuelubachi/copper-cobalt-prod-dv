@@ -126,7 +126,7 @@ export default function Projects({
       <div className="mb-24 items-start space-y-4 px-2 pb-24 sm:mb-0 sm:px-8 sm:pb-8">
         <div className="grid items-start gap-4 xl:grid-cols-3">
           {/* Project Info and Treemap */}
-          <div className="space-y-4 xl:col-span-2">
+          <div className="space-y-8 xl:col-span-2 xl:space-y-8">
             {products.length > 0 && (
               <ProjectDetails
                 projectData={projectData}

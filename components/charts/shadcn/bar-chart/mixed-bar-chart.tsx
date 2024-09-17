@@ -30,7 +30,7 @@ export default function MixedBarChart({ ...props }: MixedBarChartProps) {
   const chartConfig = props.config satisfies ChartConfig;
 
   return (
-    <Card className="border-none shadow-none dark:bg-neutral-900">
+    <Card className="border-none shadow-none dark:bg-neutral-900/50">
       <CardHeader className="border-b px-4">
         <CardTitle>{props.title}</CardTitle>
         {/* <CardDescription>{props.description}</CardDescription> */}

@@ -18,6 +18,7 @@ function shortenText(text: string): string {
  * @param {any[]} props.data The export flow data.
  * @param {any[]} props.data2 The export flow data for importers.
  * @param {boolean} [props.hasYear=true] Whether the component should display year selection or not.
+ * @param {{mobile: number; others: number}} [props.chartHeight={mobile: 1000, others: 1400}] The height of the Sankey chart.
  * @returns {ReactElement} The ExportFlow component.
  */
 export default function ExportFlow({
@@ -25,11 +26,13 @@ export default function ExportFlow({
   data,
   data2,
   hasYear = true,
+  chartHeight = { mobile: 1000, others: 1400 },
 }: {
   projectInfo?: ProjectInfo;
   data: any[];
   data2: any[];
   hasYear?: boolean;
+  chartHeight?: { mobile: number; others: number };
 }) {
   const { isMobile, isTablet } = useDeviceType();
   const [selectedYear, setSelectedYear] = useState<string>("2022");
@@ -149,7 +152,10 @@ export default function ExportFlow({
           </div>
         </CardHeader>
         <CardContent className="p-2 sm:p-6">
-          <SankeyChart data={sankeyData} height={isMobile ? 800 : 800} />
+          <SankeyChart
+            data={sankeyData}
+            height={isMobile ? chartHeight.mobile : chartHeight.others}
+          />
         </CardContent>
       </Card>
     </>

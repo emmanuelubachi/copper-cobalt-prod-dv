@@ -88,6 +88,7 @@ export default function MainPage({
           projectInfo={projectInfo}
           data={exportFlowFromProjData}
           data2={exportFlowFromImportData}
+          chartHeight={{ mobile: 800, others: 800 }}
         />
       </TabsContent>
       {/* </div> */}

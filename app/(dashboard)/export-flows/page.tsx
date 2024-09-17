@@ -11,7 +11,7 @@ import ExportFlowFromImportData from "@/data/export-flow/export_flow_from_import
 const Years = ["2022", "2023"];
 
 export default function Page() {
-  const [selectedYear, setSelectedYear] = useState<string>("2023");
+  const [selectedYear, setSelectedYear] = useState<string>("2022");
 
   const exportFromProjData = ExportFlowFromProjData.filter(
     (data) => data.year === selectedYear,
