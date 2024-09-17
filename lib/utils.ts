@@ -35,7 +35,7 @@ export function quantityFormatter(value: number): string {
   } else if (value >= 1_000) {
     return `${(value / 1_000).toFixed(1)}K`;
   } else {
-    return value.toLocaleString();
+    return value.toFixed(1).toLocaleString();
   }
 }
 
@@ -47,7 +47,7 @@ export function numberFormatter(value: number): string {
   } else if (value >= 1_000) {
     return `${(value / 1_000).toFixed(0)}K`;
   } else {
-    return value.toLocaleString();
+    return value.toFixed(0).toLocaleString();
   }
 }
 

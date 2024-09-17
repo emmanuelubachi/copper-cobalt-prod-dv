@@ -26,11 +26,27 @@ import cubaltDestinationData from "@/data/map/2023 copper production destination
 
 import { TMonthlyProductionData, TDestinationData } from "@/types/map";
 import { YearlySummary } from "@/types/projects";
-import {
-  coDestChartConfig,
-  cuDestChartConfig,
-  monthlyProdChartConfig,
-} from "@/constants/chart";
+import { monthlyProdChartConfig } from "@/constants/chart";
+
+const coDestChartConfig = {
+  quantity_tons: {
+    label: `Qty (T) ${" "}`,
+    color: "hsl(var(--chart-6))",
+  },
+  label: {
+    color: "hsl(var(--background))",
+  },
+};
+
+const cuDestChartConfig = {
+  quantity_tons: {
+    label: `Qty (T) ${" "}`,
+    color: "hsl(var(--chart-5))",
+  },
+  label: {
+    color: "hsl(var(--background))",
+  },
+};
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -259,23 +275,12 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
 
             {monthlyData.length > 0 && (
               <MultipleBarChart
-                title="Production of Copper and Cobalt in 2023"
+                title="Exports of Copper and Cobalt in 2023"
                 description="Quantity in Tonnes"
                 config={monthlyProdChartConfig}
                 chartData={monthlyData}
                 firstDataKey="Cobalt"
                 secondDataKey="Copper"
-                footNote={
-                  <>
-                    {/* <div className="flex gap-2 font-medium leading-none">
-                      Trending up by 5.2% this month{" "}
-                      <TrendingUp className="h-4 w-4" />
-                    </div> */}
-                    <div className="leading-none text-muted-foreground">
-                      Includes quantities both exported and sold locally.
-                    </div>
-                  </>
-                }
               />
             )}
 
@@ -287,9 +292,10 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 chartData={coDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                // barDataKey="quantity_tons"
-                // yAxisLabelDataKey="Cobalt"
-                // barLabelDataKey="label"
+                className="h-[200px]"
+                maxValue={Math.max(
+                  ...coDestinationData.map((d) => d.quantity_tons),
+                )}
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">
@@ -309,9 +315,10 @@ const SiteDetails = ({ data }: { data: IndustralProjectDetailsProps }) => {
                 chartData={cuDestinationData}
                 yAxisDataKey="destination"
                 xAxisDataKey="quantity_tons"
-                // barDataKey="quantity_tons"
-                // yAxisLabelDataKey="Cobalt"
-                // barLabelDataKey="label"
+                className="h-[200px]"
+                maxValue={Math.max(
+                  ...cuDestinationData.map((d) => d.quantity_tons),
+                )}
                 footNote={
                   <>
                     <div className="leading-none text-muted-foreground">

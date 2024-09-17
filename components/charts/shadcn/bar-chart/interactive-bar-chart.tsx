@@ -1,7 +1,15 @@
 "use client";
 
 import * as React from "react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  LabelList,
+  XAxis,
+  YAxis,
+} from "recharts";
+import useDeviceType from "@/hooks/useDeviceType";
 
 import {
   Card,
@@ -16,6 +24,27 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { numberFormatter, quantityFormatter } from "@/lib/utils";
+
+const CustomizedAxisTick = (props: any) => {
+  const { x, y, payload } = props;
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={4}
+        textAnchor="end"
+        // fill="#666"
+        fontSize={8}
+        transform="rotate(-45)" // Rotate the text
+      >
+        {payload.value.slice(0, 6)}
+      </text>
+    </g>
+  );
+};
 
 type InteractiveBarChartProps = {
   title: string;
@@ -136,20 +165,8 @@ export function SingleInteractiveBarChart({
   ...props
 }: SInteractiveBarChartProps) {
   const chartConfig = props.config satisfies ChartConfig;
-  // const [activeChart, setActiveChart] =
-  //   React.useState<keyof typeof chartConfig>("totalCopper");
-
   const chartData = props.chartData;
-
-  const total = React.useMemo(
-    () => ({
-      quantity: chartData
-        .reduce((acc, curr) => acc + curr.quantity, 0)
-        .toFixed(0)
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-    }),
-    [chartData],
-  );
+  const { isMobile } = useDeviceType();
 
   return (
     <Card className="__card">
@@ -168,19 +185,27 @@ export function SingleInteractiveBarChart({
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 12,
-              right: 12,
+              left: 8,
+              right: 8,
+              top: 8,
+              bottom: 8,
             }}
           >
             <CartesianGrid vertical={false} />
+            <YAxis
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={(value) => `${quantityFormatter(value)}\u00a0t`}
+            />
             <XAxis
               dataKey={props.xdataKey}
               tickLine={false}
               axisLine={false}
-              tickMargin={8}
-              minTickGap={2}
-              tickFormatter={(value) => value.slice(0, 3)}
-              hide
+              tickMargin={0}
+              minTickGap={0}
+              tick={isMobile ? <> </> : <CustomizedAxisTick />}
+              tickFormatter={(value) => value.slice(0, 1)}
             />
             <ChartTooltip
               content={
@@ -188,13 +213,46 @@ export function SingleInteractiveBarChart({
                   className="w-[150px]"
                   nameKey="views"
                   labelFormatter={(value) => value.slice(0)}
+                  formatter={(value, name) => (
+                    <>
+                      <div className="flex min-w-[130px] items-center gap-1 text-xs text-muted-foreground">
+                        <div
+                          className="h-2.5 w-2.5 shrink-0 rounded-[2px] bg-[--color-bg]"
+                          style={
+                            {
+                              "--color-bg": `var(--color-${name})`,
+                            } as React.CSSProperties
+                          }
+                        />
+                        {chartConfig[name as keyof typeof chartConfig]?.label ||
+                          name}
+                        <div className="ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums text-foreground">
+                          {quantityFormatter(parseFloat(value as string))}
+                        </div>
+                      </div>
+                    </>
+                  )}
                 />
               }
             />
             <Bar
               dataKey={props.ydataKey}
               fill={`var(--color-${props.ydataKey})`}
-            />
+              // onClick={(e) => console.log(e)}
+            >
+              <LabelList
+                dataKey={props.ydataKey}
+                position="top"
+                className="truncate fill-foreground/80 text-2xs"
+                formatter={(value: number) => {
+                  if (props.chartData.length < 35) {
+                    return numberFormatter(value);
+                  } else if (value > 45000) {
+                    return numberFormatter(value);
+                  }
+                }}
+              />
+            </Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
