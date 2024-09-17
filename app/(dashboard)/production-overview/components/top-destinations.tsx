@@ -26,6 +26,25 @@ export default function TopDestinations({
   cuDestSum,
 }: any) {
   const year = selectedYear;
+  const maxValue = Math.max(
+    ...coDestSum.map((item: any) => item.quantity),
+    ...cuDestSum.map((item: any) => item.quantity),
+  );
+
+  const coDestData = coDestSum.map((item: any) => {
+    return {
+      ...item,
+      quantity: item.quantity.toFixed(1),
+    };
+  });
+
+  const cuDestData = cuDestSum.map((item: any) => {
+    return {
+      ...item,
+      quantity: item.quantity.toFixed(1),
+    };
+  });
+
   return (
     <section className="grid items-start gap-2 xl:col-span-2">
       <div className="grid gap-4 lg:grid-cols-2">
@@ -33,18 +52,22 @@ export default function TopDestinations({
           title={`Top Destinations of Cobalt Production in ${year}`}
           description="Quantity in Tonnes"
           config={coDestSumChartConfig}
-          chartData={coDestSum}
+          chartData={coDestData}
           yAxisDataKey="short_destination"
           xAxisDataKey="quantity"
+          maxValue={maxValue}
+          className="h-[384px]"
         />
 
         <CustomLabelBarChart
           title={`Top Destinations of Copper Production in ${year}`}
           description="Quantity in Tonnes"
           config={cuDestSumChartConfig}
-          chartData={cuDestSum}
+          chartData={cuDestData}
           yAxisDataKey="short_destination"
           xAxisDataKey="quantity"
+          maxValue={maxValue}
+          className="h-[384px]"
         />
       </div>
     </section>

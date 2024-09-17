@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { useRouter } from "next/navigation";
 
 import {
@@ -18,6 +18,7 @@ import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import { usePathname, useSearchParams } from "next/navigation";
 import SearchBarDialog from "@/components/elements/searchBar";
 import { CompaniesList } from "@/constants/application";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function MainPage({
   projectInfo,
@@ -66,7 +67,9 @@ export default function MainPage({
 
         <div className="flex w-full max-w-96 items-center justify-end gap-1 sm:gap-2">
           <SearchBarDialog data={CompaniesList} />
-          <ShareButton />
+          <Suspense fallback={<Skeleton className="h-12 w-12 rounded-full" />}>
+            <ShareButton />
+          </Suspense>
         </div>
       </header>
 

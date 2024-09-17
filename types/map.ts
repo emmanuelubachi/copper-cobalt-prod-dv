@@ -67,7 +67,7 @@ export type DestinationData = {
 
 export type TDestinationData = {
   destination: string;
-  quantity_tons: string;
+  quantity_tons: number;
   label: string;
 };
 

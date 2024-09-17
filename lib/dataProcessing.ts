@@ -89,17 +89,15 @@ export function transformDestinationData(
     const roundedWeight = entry.quantity_tons.toFixed(1);
     return {
       destination: entry.destination,
-      quantity_tons: roundedWeight.toLocaleString(),
+      quantity_tons: parseFloat(
+        roundedWeight.toLocaleString().replace(/,/g, ""),
+      ),
       label: `${roundedWeight}T`,
     };
   });
 
   // Step 3: Sort the transformed data in descending order based on quantity_tons
-  return transformedData.sort(
-    (a, b) =>
-      parseFloat(b.quantity_tons.replace(/,/g, "")) -
-      parseFloat(a.quantity_tons.replace(/,/g, "")),
-  );
+  return transformedData.sort((a, b) => b.quantity_tons - a.quantity_tons);
 }
 
 export function transformSortTopDestination(
@@ -126,16 +124,16 @@ export function transformSortTopDestination(
     const roundedWeight = entry.quantity_tons.toFixed(1);
     return {
       destination: entry.destination,
-      quantity_tons: roundedWeight.toLocaleString(),
+      quantity_tons: parseFloat(
+        roundedWeight.toLocaleString().replace(/,/g, ""),
+      ),
       label: `${roundedWeight}T`,
     };
   });
 
   // Step 3: Sort the transformed data in descending order based on quantity_tons
   const sortedData = transformedData.sort(
-    (a, b) =>
-      parseFloat(b.quantity_tons.replace(/,/g, "")) -
-      parseFloat(a.quantity_tons.replace(/,/g, "")),
+    (a, b) => b.quantity_tons - a.quantity_tons,
   );
 
   // Step 4: Return the top 5 destinations

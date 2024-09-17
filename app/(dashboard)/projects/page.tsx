@@ -13,6 +13,8 @@ import { SearchParams } from "@/types";
 
 import { defaultPRoject } from "@/constants/application";
 import MainPage from "./components/main-page";
+import { Suspense } from "react";
+import { PageLoadingFallback } from "@/components/loading";
 
 export default async function Page({
   searchParams,
@@ -66,17 +68,19 @@ export default async function Page({
   return (
     <main>
       <ErrorNotification errorType={errorType} />
-      <MainPage
-        {...{
-          projectInfo,
-          projectData,
-          productData,
-          productionYears,
-          monthlyExportsData,
-          exportFlowFromProjData,
-          exportFlowFromImportData,
-        }}
-      />
+      <Suspense fallback={<PageLoadingFallback />}>
+        <MainPage
+          {...{
+            projectInfo,
+            projectData,
+            productData,
+            productionYears,
+            monthlyExportsData,
+            exportFlowFromProjData,
+            exportFlowFromImportData,
+          }}
+        />
+      </Suspense>
     </main>
   );
 }

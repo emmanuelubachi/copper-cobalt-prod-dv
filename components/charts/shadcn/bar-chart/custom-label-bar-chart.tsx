@@ -17,7 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { cn, numberFormatter } from "@/lib/utils";
+import { cn, numberFormatter, quantityFormatter } from "@/lib/utils";
 
 type CustomLabelBarChartProps = {
   title: string;
@@ -28,6 +28,7 @@ type CustomLabelBarChartProps = {
   xAxisDataKey: string;
   footNote?: ReactNode;
   className?: string;
+  maxValue: number;
 };
 
 export default function CustomLabelBarChart({
@@ -36,9 +37,9 @@ export default function CustomLabelBarChart({
   const chartConfig = props.config satisfies ChartConfig;
   const chartData = props.chartData;
 
-  const maxValue = Math.max(
-    ...chartData.map((item: any) => item[props.xAxisDataKey]),
-  );
+  // const maxValue = Math.max(
+  //   ...chartData.map((item: any) => item[props.xAxisDataKey]),
+  // );
 
   return (
     <Card className="__card">
@@ -49,13 +50,12 @@ export default function CustomLabelBarChart({
       <CardContent className="px-4 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className={cn("aspect-auto h-[384px] w-full", props.className)}
+          className={cn("aspect-auto w-full", props.className)}
         >
           <BarChart
             accessibilityLayer
             data={chartData}
             layout="vertical"
-            // margin={{ right: 30, left: 20, bottom: 5 }}
             margin={{
               right: 50,
               left: 98,
@@ -76,7 +76,7 @@ export default function CustomLabelBarChart({
               dataKey={props.xAxisDataKey}
               type="number"
               tickFormatter={numberFormatter}
-              domain={[0, maxValue]}
+              domain={[0, props.maxValue]}
             />
             <ChartTooltip
               cursor={false}
@@ -84,7 +84,6 @@ export default function CustomLabelBarChart({
                 <ChartTooltipContent
                   indicator="line"
                   cursor={false}
-                  // label={props.yAxisLabelDataKey}
                   formatter={(value, name) => (
                     <>
                       <div className="flex min-w-[130px] items-center gap-1 text-xs text-muted-foreground">
@@ -99,7 +98,7 @@ export default function CustomLabelBarChart({
                         {chartConfig[name as keyof typeof chartConfig]?.label ||
                           name}
                         <div className="ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums text-foreground">
-                          {numberFormatter(parseFloat(value as string))}
+                          {parseFloat(value as string).toLocaleString()}
                         </div>
                       </div>
                     </>
@@ -128,7 +127,7 @@ export default function CustomLabelBarChart({
                 offset={8}
                 className="truncate fill-foreground/80"
                 fontSize={12}
-                formatter={numberFormatter}
+                formatter={(value: any) => quantityFormatter(parseFloat(value))}
               />
             </Bar>
           </BarChart>

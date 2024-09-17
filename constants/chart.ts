@@ -23,25 +23,25 @@ export const cuMonthlyXConfig = {
   },
 };
 
-export const coDestChartConfig = {
-  quantity_tons: {
-    label: `Qty (T) ${" "}`,
-    color: "hsl(var(--chart-6))",
-  },
-  label: {
-    color: "hsl(var(--background))",
-  },
-};
+// export const coDestChartConfig = {
+//   quantity_tons: {
+//     label: `Qty (T) ${" "}`,
+//     color: "hsl(var(--chart-6))",
+//   },
+//   label: {
+//     color: "hsl(var(--background))",
+//   },
+// };
 
-export const cuDestChartConfig = {
-  quantity_tons: {
-    label: `Qty (T) ${" "}`,
-    color: "hsl(var(--chart-5))",
-  },
-  label: {
-    color: "hsl(var(--background))",
-  },
-};
+// export const cuDestChartConfig = {
+//   quantity_tons: {
+//     label: `Qty (T) ${" "}`,
+//     color: "hsl(var(--chart-5))",
+//   },
+//   label: {
+//     color: "hsl(var(--background))",
+//   },
+// };
 
 export const totalXChartConfig = {
   views: {
